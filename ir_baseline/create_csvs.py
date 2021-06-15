@@ -1,4 +1,5 @@
 import argparse
+import collections
 import sys
 
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
@@ -14,23 +15,66 @@ parser.add_argument('-m',
                     help='which IR model to prepare for')
 
 
-PAIRS_PER_FILE = 50 # What actually is thiis?
+POS = "1_more_relevant"
+NEG = "2_more_relevant"
+FIELDS = "id label text".split()
+RowTuple = collections.namedtuple('RowTuple', FIELDS)
+
+PAIRS_PER_FILE = 20 # What actually is this?
 
 class Model(object):
   rank = 'rank'
   rankprob = 'rankprob'
   ALL = [rank, rankprob]
 
-def rank_process():
-  pass
+def rank_process(offset, rebuttal_sentence, review_sentences):
+  examples =  []
+  for i, (review_sentence, score) in enumerate(review_sentences):
+    examples.append(
+        RowTuple(offset + i, ' [SEP] '.join(
+            [rebuttal_sentence, review_sentence]), score)._asdict())
+  return examples
 
-def rankprob_process():
-  pass
+
+def rankprob_process(offset, rebuttal_sentence, review_sentences):
+  examples =  []
+  d1s = review_sentences[:SAMPLES_PER_SENTENCE[Models.rankprob]/2]
+  d2s = review_sentences[SAMPLES_PER_SENTENCE[Models.rankprob]/2:]
+  index = offset
+
+  for d1, score_1 in d1s:
+    for d2, score_2 in d2s:
+      if score_1 > score_2:
+        label = POS
+      else:
+        label = NEG
+      examples.append(
+      RowTuple(
+        index, ' [SEP] '.join([rebuttal_sentence, d1, d2]), label
+      )._asdict())
+      index += 1
+  return examples
+
 
 FUNC_MAP = {
   Model.rank: rank_process,
   Model.rankprob : rankprob_process
 }
+
+SAMPLES_PER_SENTENCE = {
+  Models.rank: 10,
+  Models.rankprob: 20
+}
+
+def get_samples(filename, process_fn, samples_per_sentence):
+  with open(filename, 'r') as f:
+    obj = json.load(f)
+  # for each rebuttal sentence
+    # sample some review sentences
+    # get the scores
+    # create torchtext examples
+
+
 
 
 def main():
@@ -50,8 +94,9 @@ def main():
       this_file_filenames = all_filenames[
           input_file_start_index:input_file_start_index + PAIRS_PER_FILE]
 
+      sample_collector = []
       for filename in this_file_filenames:
-        samples = get_samples(filename, FUNC_MAP[args.mode])
+        sample_collector += get_samples(filename, FUNC_MAP[args.model])
 
       sample_builder = {"train":[], "dev":[]}
       for filename in this_file_filenames:
