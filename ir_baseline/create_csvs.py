@@ -1,6 +1,14 @@
 import argparse
 import collections
+import csv
+import glob
+import json
+import numpy as np
+import random
 import sys
+import tqdm
+
+from transformers import BertTokenizer
 
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-d',
@@ -31,15 +39,18 @@ def rank_process(offset, rebuttal_sentence, review_sentences):
   examples =  []
   for i, (review_sentence, score) in enumerate(review_sentences):
     examples.append(
-        RowTuple(offset + i, ' [SEP] '.join(
-            [rebuttal_sentence, review_sentence]), score)._asdict())
+        RowTuple(offset + i, 
+        score, 
+        ' [SEP] '.join(
+            [rebuttal_sentence, review_sentence]).replace('\0', ""))._asdict())
   return examples
 
 
 def rankprob_process(offset, rebuttal_sentence, review_sentences):
   examples =  []
-  d1s = review_sentences[:SAMPLES_PER_SENTENCE[Models.rankprob]/2]
-  d2s = review_sentences[SAMPLES_PER_SENTENCE[Models.rankprob]/2:]
+  split = int(SAMPLES_PER_SENTENCE[Model.rankprob]/2)
+  d1s = review_sentences[:split]
+  d2s = review_sentences[split:]
   index = offset
 
   for d1, score_1 in d1s:
@@ -50,7 +61,8 @@ def rankprob_process(offset, rebuttal_sentence, review_sentences):
         label = NEG
       examples.append(
       RowTuple(
-        index, ' [SEP] '.join([rebuttal_sentence, d1, d2]), label
+        index, label,
+        ' [SEP] '.join([rebuttal_sentence, d1, d2]).replace('\0', "")
       )._asdict())
       index += 1
   return examples
@@ -62,20 +74,51 @@ FUNC_MAP = {
 }
 
 SAMPLES_PER_SENTENCE = {
-  Models.rank: 10,
-  Models.rankprob: 20
+  Model.rank: 10,
+  Model.rankprob: 6
 }
 
-def get_samples(filename, process_fn, samples_per_sentence):
+def get_samples(filename, process_fn, samples_per_sentence, offset):
   with open(filename, 'r') as f:
     obj = json.load(f)
-  # for each rebuttal sentence
-    # sample some review sentences
-    # get the scores
-    # create torchtext examples
+
+  scores = np.array(obj["scores"])
+  review_len = len(obj["review"])
+
+  examples = []
+
+  for reb_i, reb_sentence in enumerate(obj["rebuttal"]):
+    rev_indices = random.choices(range(review_len),
+        k=samples_per_sentence)
+    rev_sentences = [
+      (obj["review"][idx], scores[reb_i][idx]) for idx in rev_indices
+    ]
+    examples += process_fn(offset + len(examples), reb_sentence, rev_sentences)
+
+  return examples
+
+TOKENIZER = BertTokenizer.from_pretrained('bert-base-uncased')
+
+def build_overall_vocab(sentences):
+  vocab = collections.Counter()
+  for sent in sentences:
+    tokens = TOKENIZER.tokenize(sent)
+    vocab.update(tokens)
+
+  fake_sentences = []
+  vocab = list(sorted(vocab.keys()))
+  for start_index in range(0, len(vocab), 100):
+    fake_sentences.append(" ".join(vocab[start_index:start_index +
+      100]).replace('\0', ""))
+  return fake_sentences
 
 
-
+def write_csv(filename, dict_rows, fields):
+  with open(filename, 'w') as f:
+    writer = csv.DictWriter(f, fields)
+    writer.writeheader()
+    for row in dict_rows:
+      writer.writerow(row)
 
 def main():
 
@@ -83,65 +126,55 @@ def main():
   assert args.model in Model.ALL
 
 
+  all_sentences = []
+
   for subset in "train dev".split():
 
+    subset_collector = []
+
     all_filenames = list(sorted(glob.glob("/".join(
-        [args.datadir, subset, "*.json"]))))
+        [args.datadir , "traindev_"+ subset + "*.json"]))
+    ))
 
     for batch_i, input_file_start_index in enumerate(
-      tqdm(range(0, len(all_filenames), PAIRS_PER_FILE))):
+      tqdm.tqdm(range(0, len(all_filenames), PAIRS_PER_FILE))):
 
       this_file_filenames = all_filenames[
           input_file_start_index:input_file_start_index + PAIRS_PER_FILE]
 
       sample_collector = []
       for filename in this_file_filenames:
-        sample_collector += get_samples(filename, FUNC_MAP[args.model])
 
-      sample_builder = {"train":[], "dev":[]}
-      for filename in this_file_filenames:
-        subset = "train" if bernoulli(TRAIN_FRAC) else "dev"
         with open(filename, 'r') as f:
-          data_obj = json.load(f)
+          k = json.load(f)
+          all_sentences += k["review"]
+          all_sentences += k["rebuttal"]
+        
+        sample_collector += get_samples(filename, FUNC_MAP[args.model],
+        SAMPLES_PER_SENTENCE[args.model], len(sample_collector))
 
-        overall_builders["d"] += data_obj["review"]
-        overall_builders["q"] += data_obj["rebuttal"]
-        sample_builder[subset] += sample_things(data_obj)
-
-      for subset, examples in sample_builder.items():
-        output_file = "".join([
-          args.datadir, "batch_", str(batch_i), "_", subset,  ".csv"])
-        with open(output_file, 'w') as g:
-          writer = csv.DictWriter(g, FIELDS)
-          writer.writeheader()
-          for i, example in enumerate(examples):
-            writer.writerow(example)
-
-
-    fake_sentences = {}
-    for builder_type in ["d", "q"]:
-      fake_sentences[builder_type] = build_overall_vocab(
-        overall_builders[builder_type])
+      output_file = "".join([
+          args.datadir, subset, "_", args.model, "_batch_", str(batch_i),  ".csv"])
+      write_csv(output_file, sample_collector, FIELDS)
+      subset_collector += sample_collector
+    subset_file = args.datadir + args.model + "_" + subset + "_all.csv"
+    write_csv(subset_file, subset_collector[:1000], FIELDS)
 
 
-    stop_len = max([len(fake_sentences["q"]), len(fake_sentences["d"])])
-    with open(args.datadir + "/overall_dummy_vocabber.csv", 'w') as h:
-      writer = csv.DictWriter(h, FIELDS)
-      writer.writeheader()
-      for i, (d1, d2, q, label) in enumerate(
-          zip(*[
-              itertools.cycle(x) for x in [
-                  fake_sentences["d"], fake_sentences["d"],
-                  fake_sentences["q"], [POS, NEG]
-              ]
-          ])):
-        if i == stop_len:
-          break
-        writer.writerow(
-            {"id": i,
-              "text": " [SEP] ".join([d1, d2, q]),
-              "label": label})
+  labels = {
+    Model.rank: [0.0, 0.5],
+    Model.rankprob: [POS, NEG]
+  }
+
+  fake_sentences = build_overall_vocab(all_sentences)
+  for model in Model.ALL:
+    dummy_filename = args.datadir + "/" + model + "_overall_dummy_vocabber.csv"
+    fake_examples = [
+    {"id": i, "text": sentence, "label":labels[model][i%2]} for i, sentence in
+    enumerate(fake_sentences)
+    ]
+    write_csv(dummy_filename, fake_examples, FIELDS)
 
 
 if __name__ == "__main__":
-  pass
+  main()
