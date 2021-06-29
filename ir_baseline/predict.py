@@ -23,40 +23,17 @@ parser.add_argument('-d',
                     type=str,
                     help='path to data file containing score jsons')
 
-
-def predict_sentiment(model_name, model, tokenizer, metadata, sentence, device):
-    model.eval()
-    tokens = tokenizer.tokenize(sentence)
-    tokens = tokens[:metadata.max_input_length-2]
-    indexed = [metadata.init_token_idx] + tokenizer.convert_tokens_to_ids(tokens) + [metadata.eos_token_idx]
-    tensor = torch.LongTensor(indexed).to(device)
-    tensor = tensor.unsqueeze(0)
-    if model_name == classification_lib.Model.rankprob:
-      return torch.argmax(torch.sigmoid(model(tensor))).item()
-    else:
-     return model(tensor).item()
-
-def get_bert_ranks(scores):
-  sentence_scores = [sum(scores[i].values()) for i in range(len(scores))]
-  scores_in_order = sorted(sentence_scores)
-  score_to_rank = {}
-  for score in scores_in_order:
-    for i, x in enumerate(scores_in_order):
-      if x == score:
-        score_to_rank[score] = i + 1
-        break
-  return [score_to_rank[score] for score in sentence_scores]
-
-
 STEMMER = PorterStemmer()
 STOPWORDS = stopwords.words('english')
 
 
 def preprocess(sentence):
   return [
-      STEMMER.stem(word).lower() for word in sentence.split()
+      STEMMER.stem(word).lower()
+      for word in sentence.split()
       if word.lower() not in STOPWORDS
   ]
+
 
 def mean(l):
   if not l:
@@ -65,93 +42,136 @@ def mean(l):
     return sum(l) / len(l)
 
 
-Result = collections.namedtuple("Result", ("review_id rebuttal_idx "
-    "actual_alignment rank_mrr rankprob_mrr bm25_mrr").split())
+Result = collections.namedtuple(
+    "Result", ("review_id rebuttal_idx "
+               "actual_alignment rank_mrr rankprob_mrr bm25_mrr").split())
 
 
-def get_rank_scores(model_name, model, tokenizer, metadata, query,
-    device):
-    bert_scores = {}
+def get_prediction(model, sentence, dataset_tools, prediction_getter):
+
+  tokenizer = dataset_tools.tokenizer
+  model.eval()
+  tokens = tokenizer.tokenize(sentence)
+  tokens = tokens[:dataset_tools.metadata.max_input_length - 2]
+  indexed = [dataset_tools.metadata.init_token_idx
+            ] + tokenizer.convert_tokens_to_ids(tokens) + [
+                dataset_tools.metadata.eos_token_idx
+            ]
+  tensor = torch.LongTensor(indexed).to(dataset_tools.device)
+  tensor = tensor.unsqueeze(0)
+  return prediction_getter(model(tensor))
+
+
+# === Getting ranks ===
+
+
+def get_bm25_ranks(review_sentences, rebuttal_sentences):
+  tokenized_corpus = [preprocess(sent) for sent in review_sentences]
+  model = BM25Okapi(tokenized_corpus)
+  rebuttal_ranks = []
+  for reb_i, query in enumerate(rebuttal_sentences):
+    preprocessed_query = preprocess(query)
+    ranked = model.get_top_n(preprocessed_query, tokenized_corpus,
+                             len(review_sentences))
+    bm25_ranks = []
+    for tokenized_sent in tokenized_corpus:
+      bm25_ranks.append(ranked.index(tokenized_sent) + 1)
+    rebuttal_ranks.append(bm25_ranks)
+
+  assert len(rebuttal_ranks) == len(rebuttal_sentences)
+  assert all(len(i) == len(review_sentences) for i in rebuttal_ranks)
+  return rebuttal_ranks
+
+
+def convert_scores_to_ranks(scores):
+  re_sorted = list(
+      sorted(list(enumerate(scores)), key=lambda x: x[1], reverse=True))
+  ordered_indices = list(x[0] for x in re_sorted)
+  assert sorted(ordered_indices) == list(range(len(scores)))
+  ranks = list(ordered_indices.index(i) + 1 for i in range(len(scores)))
+  print(ranks)
+  print(len(scores))
+  print("*")
+  return ranks
+
+
+def get_mrr_from_ranks(ranks, label_indices):
+  print("Ranks", ranks)
+  print(len(label_indices))
+  print(label_indices)
+  print()
+  return mean([1 / ranks[i] for i in label_indices])
+
+
+def convert_scores_to_mrrs(scores_list, alignment_labels):
+  individual_mrr_list = []
+  for scores, label_list in zip(scores_list, alignment_labels):
+    print("S", scores)
+    print("LL", label_list)
+    if not label_list:
+      continue
+    individual_mrr_list.append(
+          get_mrr_from_ranks(convert_scores_to_ranks(scores), label_list))
+  return mean(individual_mrr_list)
+
+
+def process_rank_model(review_sentences, rebuttal_sentences, alignment_labels,
+                       model, dataset_tools):
+  bert_scores = collections.defaultdict(list)
+  prediction_getter = classification_lib.PREDICTION_GETTER[
+      classification_lib.Model.rank]
+  for j, query in enumerate(rebuttal_sentences):
     for i, doc in enumerate(review_sentences):
       example = " [SEP] ".join([doc, query])
-      bert_scores[i] = predict_sentiment(
-        model_name, model, tokenizer, metadata, example, device)
-    return bert_scores
-
-
-def get_rankprob_scores(model_name, model, tokenizer, metadata, query,
-    device):
-    bert_scores = collections.defaultdict(dict)
-    for i, d1 in enumerate(review_sentences):
-      for j, d2 in enumerate(review_sentences):
-        example = " [SEP] ".join([d1, d2, query])
-        bert_scores[i][j] = predict_sentiment(
-          model_name, model, tokenizer, metadata, example, device)
-
-    return bert_scores
+      bert_scores[j].append(
+          get_prediction(model, example, dataset_tools, prediction_getter))
+  score_list = []
+  for i in range(len(rebuttal_sentences)):
+    score_list.append(bert_scores[i])
+  return convert_scores_to_mrrs(score_list, alignment_labels)
 
 
 def main():
 
   args = parser.parse_args()
 
+  # Set up tools for model
   tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
   device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   metadata = classification_lib.TokenizerMetadata(tokenizer)
+  dataset_tools = classification_lib.DatasetTools(tokenizer, device, metadata,
+                                                  None)
 
+  # Set up models
   models = {}
   for model_name in classification_lib.Model.ALL:
-    bertmodel = classification_lib.BERTGRUClassifier(
-        device, model_name).to(device)
+    bertmodel = classification_lib.BERTGRUClassifier(device,
+                                                     model_name).to(device)
     bertmodel.load_state_dict(
-      torch.load(classification_lib.get_checkpoint_name(model_name)))
+        torch.load(classification_lib.get_checkpoint_name(model_name)))
     models[model_name] = bertmodel
 
   results = []
-  for filename in tqdm(glob.glob("0517_split_2/test/*")): 
+  for filename in tqdm(glob.glob("0517_split_2/test/*")):
+
+    # Read in data and labels
     with open(filename, 'r') as f:
       obj = json.load(f)
     review_sentences = [sent["sentence"] for sent in obj["review"]]
     if len(review_sentences) > 20:
       continue
     rebuttal_sentences = [sent["sentence"] for sent in obj["rebuttal"]]
-    alignment_labels = [x["labels"]["alignments"]
-                        for x in obj["rebuttallabels"]]
+    alignment_labels = [
+        x["labels"]["alignments"] for x in obj["rebuttallabels"]
+    ]
 
+    assert len(rebuttal_sentences) == len(alignment_labels)
 
-    # BM 25 ranking
-    tokenized_corpus = [preprocess(sent) for sent in review_sentences]
-    model = BM25Okapi(tokenized_corpus)
-    for reb_i, (query, labels) in enumerate(
-          zip(rebuttal_sentences, alignment_labels)):
-      if not labels:
-        continue
-      else:
-        preprocessed_query = preprocess(query)
-        ranked = model.get_top_n(preprocessed_query, tokenized_corpus,
-                  len(review_sentences))
-        bert_scores = get_bert_scores(model_name,models[model_name], tokenizer,
-        metadata, example, device)
-        bm25_ranks = []
-        for tokenized_sent in tokenized_corpus:
-          bm25_ranks.append(ranked.index(tokenized_sent) + 1)
-          top_sentences = get_bert_ranks(bert_scores)
-
-      rrs = {"bm25":[], "ws":[]}
-      if labels:
-        for i in labels:
-          rrs["bm25"].append(1/bm25_ranks[i])
-          rrs["ws"].append(1/top_sentences[i])
-
-      results.append(Result(
-        obj["metadata"]["review"],
-        reb_i,
-        "|".join(str(i) for i in labels),
-        mean(rrs["ws"]),
-        mean(rrs["bm25"]),
-      )._asdict())
-      print(results[-1])
-
+    bm25_ranks = get_bm25_ranks(review_sentences, rebuttal_sentences)
+    rank_model_ranks = process_rank_model(review_sentences, rebuttal_sentences,
+                                          alignment_labels,
+                                          models[classification_lib.Model.rank],
+                                          dataset_tools)
 
   pd.DataFrame.from_dict(results).to_csv("mrr_results_small.csv")
 

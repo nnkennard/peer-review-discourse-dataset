@@ -144,8 +144,8 @@ def build_fake_sentences(vocab):
   toks = list(vocab.keys())
   fake_sentences = []
   for start_index in range(0, len(toks), 100):
-    fake_sentences.append(" ".join(toks[start_index:start_index +
-                                         100]).replace('\0', ""))
+    fake_sentences.append(" ".join(toks[start_index:start_index + 100]).replace(
+        '\0', ""))
   return fake_sentences
 
 
