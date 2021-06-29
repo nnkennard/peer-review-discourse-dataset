@@ -17,7 +17,7 @@ import classification_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-d',
                     '--datadir',
-                    default="data/data_0.1.3/ws/",
+                    default="data/ws/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-m',
@@ -27,21 +27,14 @@ parser.add_argument('-m',
                     help='which model to train')
 
 
-class Model(object):
-  rank = "rank"
-  rankprob = "rankprob"
-  ALL = [rank, rankprob]
-
 
 def make_fields(model, tokenizer):
   RAW = data.RawField()
   TEXT = generate_text_field(tokenizer)
-  if model == Model.rank:
+  if model == classification_lib.Model.rank:
     LABEL = data.Field(sequential=False, use_vocab=False, dtype=torch.float)
-    print("Making float label for rank")
   else:
     LABEL = data.LabelField(dtype=torch.long, use_vocab=True)
-    print("Making long label for rankprob")
 
   return {
       "index": ("index", RAW),
@@ -96,52 +89,68 @@ def get_dataset_tools(data_dir, model):
   return classification_lib.DatasetTools(tokenizer, device, metadata, fields)
 
 
-def build_iterators(data_dir, train_file_name, dataset_tools, batch_size):
+def build_iterators(data_dir,
+                    train_file_name,
+                    dataset_tools,
+                    batch_size,
+                    make_valid=False):
+  if make_valid:
+    iterator_input = data.TabularDataset.splits(
+        path=data_dir,
+        train=train_file_name,
+        validation=train_file_name.replace("train_", "dev_"),
+        format='json',
+        skip_header=True,
+        fields=dataset_tools.field_map)
+  else:
+    iterator_input = data.TabularDataset.splits(path=data_dir,
+                                           train=train_file_name,
+                                           format='json',
+                                           skip_header=True,
+                                           fields=dataset_tools.field_map)
 
-  train_obj, valid_obj = data.TabularDataset.splits(
-      path=data_dir,
-      train=train_file_name,
-      validation=train_file_name.replace("train_", "dev_"),
-      format='json',
-      skip_header=True,
-      fields=dataset_tools.field_map)
 
-  return data.BucketIterator.splits((train_obj, valid_obj),
+  return data.BucketIterator.splits(iterator_input,
                                     batch_size=batch_size,
                                     device=dataset_tools.device,
                                     sort_key=lambda x: x.index,
                                     sort_within_batch=False)
 
-
 def main():
 
   args = parser.parse_args()
 
+  assert args.model in classification_lib.Model.ALL
   dataset_tools = get_dataset_tools(args.datadir, args.model)
 
   model = classification_lib.BERTGRUClassifier(
       dataset_tools.device, args.model).to(dataset_tools.device)
   optimizer = optim.Adam(model.parameters())
-  if args.model == Model.rank:
+  if args.model == classification_lib.Model.rank:
     criterion = nn.MSELoss()
   else:
     criterion = nn.CrossEntropyLoss()
 
-  all_train_iterator, all_valid_iterator, = build_iterators(
-      args.datadir, "train_" + args.model + "_batch_0.jsonl", dataset_tools,
-      classification_lib.Hyperparams.batch_size)
+  model_save_name  = classification_lib.get_checkpoint_name(args.model)
 
-  model_save_name = "ws_ir_model.pt"
+
+  all_train_iterator, all_valid_iterator, = build_iterators(
+      args.datadir,
+      "train_" + args.model + "_batch_0.jsonl",
+      dataset_tools,
+      classification_lib.Hyperparams.batch_size,
+      make_valid=True)
+
   best_valid_loss = float('inf')
   best_valid_epoch = None
 
   patience = 5
 
-  glob_getter = args.datadir + "/train_" + args.model + "*.jsonl"
+  glob_getter = args.datadir + "/train_" + args.model + "_*.jsonl"
 
   metric_map = {
-    "rank": classification_lib.my_mse,
-    "rankprob": classification_lib.binary_accuracy
+      "rank": classification_lib.my_mse,
+      "rankprob": classification_lib.binary_accuracy
   }
 
   for epoch in range(100):
@@ -150,29 +159,24 @@ def main():
         continue
       train_file_name = train_file.split('/')[-1]
 
-      train_iterator, valid_iterator, = build_iterators(
+      train_iterator, = build_iterators(
           args.datadir, train_file_name, dataset_tools,
-          classification_lib.Hyperparams.batch_size)
+          classification_lib.Hyperparams.batch_size, make_valid=False)
 
-      this_epoch_data = classification_lib.do_epoch(model, train_iterator,
-                                                    criterion,
-                                                    metric_map[args.model],
-                                                    lambda x: x.label, 2,
-                                                    optimizer, valid_iterator)
+      this_epoch_data = classification_lib.do_epoch(
+          model, train_iterator, criterion, metric_map[args.model],
+          lambda x: x.label, 2, optimizer, all_valid_iterator)
 
     this_epoch_data = classification_lib.do_epoch(model,
                                                   all_train_iterator,
                                                   criterion,
+                                                  metric_map[args.model],
                                                   lambda x: x.label,
                                                   2,
                                                   optimizer,
                                                   all_valid_iterator,
                                                   eval_both=True)
     classification_lib.report_epoch(epoch, this_epoch_data)
-    #this_epoch_data = classification_lib.do_epoch(
-    #  model, all_train_iterator, criterion, lambda x:x.label, 2,
-    #  optimizer, all_valid_iterator, eval_both=True)
-    #classification_lib.report_epoch(epoch, this_epoch_data)
 
     if this_epoch_data.val_loss < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
@@ -186,3 +190,4 @@ def main():
 
 if __name__ == "__main__":
   main()
+
