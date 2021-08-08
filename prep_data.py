@@ -189,12 +189,17 @@ def process_annotations(comment_pair_map, annotation_collectors):
           build_annotation(extra_annotation, comment_pair_map[review_id])
           for extra_annotation in other_annotations
       ]
+  return final_annotation_list, extra_annotation_list
+
 
 def main():
   comment_pair_map = get_text()
   annotation_collectors = collect_annotations()
-  #filter_annotations(annotation_collectors)
-  process_annotations(comment_pair_map, annotation_collectors)
+  final_annotations, extra_annotations = process_annotations(
+    comment_pair_map, annotation_collectors)
+  for final_annotation in final_annotations.items():
+    print(final_annotation)
+
 
 
 if __name__ == "__main__":
