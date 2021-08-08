@@ -75,6 +75,8 @@ def get_final_review_labels(details):
 
 def build_review_sentences(filtered_sentences, review_text, merge_prev):
   filtered_sentence_map = build_filtered_sentence_map(filtered_sentences)
+
+  post_merge_mapping = []
   
   final_sentence_list = []
   for i, (sentence_text, merge_prev_val) in enumerate(zip(review_text,
@@ -84,12 +86,15 @@ def build_review_sentences(filtered_sentences, review_text, merge_prev):
       coarse, fine, asp, pol = get_final_review_labels(details)
       final_sentence_list.append(dpl.ReviewSentence( details["review_id"],
       details["review_sentence_index"], sentence_text, coarse, fine, asp, pol))
+      post_merge_mapping.append(details["review_sentence_index"])
     else:
       old = final_sentence_list.pop(-1)
       final_sentence_list.append(dpl.ReviewSentence(
         old.review_id, old.sentence_index, old.text.rstrip() + " " +
         sentence_text.lstrip(), old.coarse, old.fine, old.asp, old.pol
       ))
+      post_merge_mapping.append(post_merge_mapping[-1])
+  return final_sentence_list, post_merge_mapping
 
 
 def get_review_sentences(annotation_collection, review_text, merge_prev):
@@ -113,7 +118,7 @@ def get_review_sentences(annotation_collection, review_text, merge_prev):
     return build_review_sentences(refiltered_sentences, review_text, merge_prev)
 
 
-def get_rebuttal_sentences(annotation_collection, rebuttal_text):
+def get_rebuttal_sentences(annotation_collection, post_merge_map, rebuttal_text):
   final_rebuttal_sentences = []
   review_id = None  # fix
   rebuttal_id = None  # fix
@@ -121,8 +126,9 @@ def get_rebuttal_sentences(annotation_collection, rebuttal_text):
                                                 dpl.AnnotationTypes.reb_sent_ann):
     index = sentence["fields"]["rebuttal_sentence_index"]
     aligned_indices = [
-        i
-        for i, val in enumerate(sentence["fields"]["aligned_review_sentences"])
+        post_merge_map[i]
+        for i, val in
+        enumerate(json.loads(sentence["fields"]["aligned_review_sentences"]))
         if val
     ]
     final_rebuttal_sentences.append(
@@ -143,13 +149,14 @@ def build_annotation(annotation_collection,
   merge_prev = json.loads(annotation_collection.annotations[
       dpl.AnnotationTypes.rev_ann][0]["fields"]["errors"])["merge_prev"]
   try:
-    review_sentences = get_review_sentences(annotation_collection,
+    review_sentences, post_merge_map = get_review_sentences(annotation_collection,
                                                text_and_metadata[dpl.REVIEW],
                                                merge_prev)
   except dpl.NoLabelError:
     logging.info("No label fail here.")
     return None
   rebuttal_sentences = get_rebuttal_sentences(annotation_collection,
+                                              post_merge_map,
                                               text_and_metadata[dpl.REBUTTAL])
   return dpl.Annotation(metadata, review_sentences, rebuttal_sentences)
 
