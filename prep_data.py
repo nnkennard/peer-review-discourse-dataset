@@ -158,7 +158,7 @@ def build_annotation(annotation_collection,
   rebuttal_sentences = get_rebuttal_sentences(annotation_collection,
                                               post_merge_map,
                                               text_and_metadata[dpl.REBUTTAL])
-  return dpl.Annotation(metadata, review_sentences, rebuttal_sentences)
+  return dpl.Annotation(review_sentences, rebuttal_sentences, metadata)
 
 
 def pick_best_annotation(valid_annotations):
@@ -197,8 +197,14 @@ def main():
   annotation_collectors = collect_annotations()
   final_annotations, extra_annotations = process_annotations(
     comment_pair_map, annotation_collectors)
-  for final_annotation in final_annotations.items():
-    print(final_annotation)
+  for final_annotation in final_annotations:
+    final_annotation.write_to_dir("final_dataset/")
+  for extra_annotation in extra_annotations:
+    if extra_annotation is None:
+      continue
+    extra_annotation.write_to_dir("extra_annotations/")
+
+
 
 
 
