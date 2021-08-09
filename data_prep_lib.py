@@ -1,6 +1,7 @@
 import collections
 import json
 import logging
+import yaml
 
 logging.basicConfig(filename="log_prep_data.log")
 logger = logging.getLogger()
@@ -12,6 +13,17 @@ REVIEW_ID, INITIALS = "review_id initials".split()
 REVIEW, REBUTTAL, METADATA = "review rebuttal metadata".split()
 META_FIELDS_TO_EXTRACT = 'forum_id review_id rebuttal_id title reviewer'.split()
 PERMALINK_FORMAT = "https://openreview.net/forum?id={0}&noteId={1}"
+
+class ServerModels(object):
+  example = "example"
+  sentence = "sentence"
+
+class AnnotationFields(object):
+  sentence_index = "sentence_index"
+  comment_id = "comment_id"
+  text = "text"
+  review_id = "review_id"
+  rebuttal_id = "rebuttal_id"
 
 class AnnotationTypes(object):
   rev_ann = "reviewannotation"
@@ -26,6 +38,9 @@ RebuttalSentence = collections.namedtuple(
     "RebuttalSentence",
     "review_id rebuttal_id sentence_index text coarse fine alignment alignment_type"
     .split())
+
+with open("label_map.yaml") as stream:
+  LABEL_MAP = yaml.safe_load(stream)
 
 class Annotation(object):
 

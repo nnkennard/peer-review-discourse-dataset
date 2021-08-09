@@ -1,25 +1,44 @@
+"""Convert the outputs form the annotation server into a cleaned dataset."""
+
 import collections
 import json
+import logging
 import tqdm
 
-import logging
-
 import data_prep_lib as dpl
+from data_prep_lib import AnnotationFields as FIELDS
+
+def get_fields(dataset_row):
+  return dataset_row["fields"]
+
 
 def get_text():
+  """Get text for all reviews and rebuttals from server dataset dump.
+
+    Args:
+      text_dump_path: Path to json dump of text
+      TODO: Add this as a proper parameter
+
+    Returns:
+      comment_pair_map: A map from review ids to details for the
+      review-rebuttal pair. Details are in a dict including review text,
+      rebuttal text and metadata.
+  """
   with open("final_data_dump/orda_text_0415.json", 'r') as f:
     j = json.load(f)
 
+  # Builds sentence map for all comments in server database
   sentence_map = collections.defaultdict(list)
-  for sentence in j["sentence"]:
-    fields = sentence["fields"]
-    assert fields["sentence_index"] == len(sentence_map[fields["comment_id"]])
-    sentence_map[fields["comment_id"]].append(fields["text"])
+  for sentence in j[dpl.ServerModels.sentence]:
+    fields = get_fields(sentence)
+    assert fields[FIELDS.sentence_index] == len(
+      sentence_map[fields[FIELDS.comment_id]])
+    sentence_map[fields[FIELDS.comment_id]].append(fields[FIELDS.text])
 
   comment_pair_map = {}
-  for example in j["example"]:
-    fields = example["fields"]
-    review_id, rebuttal_id = fields["review_id"], fields["rebuttal_id"]
+  for example in j[dpl.ServerModels.example]:
+    fields = get_fields(example)
+    review_id, rebuttal_id = fields[FIELDS.review_id], fields[FIELDS.rebuttal_id]
     comment_pair_map[review_id] = {
         dpl.REVIEW: sentence_map[review_id],
         dpl.REBUTTAL: sentence_map[rebuttal_id],
@@ -30,24 +49,45 @@ def get_text():
 
 
 def collect_annotations():
+  """Collect all annotations relevant to a particular review-rebuttal pair.
+    Annotations are collected for one annotator at a time, and include review
+    sentence annotations, rebuttal sentence annotations, and overall review
+    annotations.
 
+    Args:
+      annotation_dump_path: Path to json dump of annotations
+      TODO: Add as a proper parameter
+
+    Returns:
+      Map (actually nested dictionary) from (review_id, annotator) to
+      data_prep_lib.AnnotationCollector of relevant annotations.
+
+  """
   with open("final_data_dump/orda_annotations_0516.json", 'r') as f:
     annotations_from_file = json.load(f)
 
   annotation_collectors = collections.defaultdict(dict)
 
   for annot in dpl.AnnotationTypes.ALL:
+    # TODO: Remove this row if adding filtering
     sorted_rows = sorted(annotations_from_file[annot], key=lambda x: x["pk"])
     for row in sorted_rows:
       rev_id, annotator = dpl.get_key_from_annotation(row)
+      # Start a collector if necessary
       if annotator not in annotation_collectors[rev_id]:
         annotation_collectors[rev_id][annotator] = dpl.AnnotationCollector(
             rev_id, annotator)
       annotation_collectors[rev_id][annotator].annotations[annot].append(row)
+
+  # TODO: filter everything before returning
   return annotation_collectors
 
 
 def build_filtered_sentence_map(filtered_sentences):
+  """Remap sentence annotations to map from index
+
+    TODO: Fold this into filtering once filtering is added to collection?
+  """
   sentence_map = {}
   for sentence in filtered_sentences:
     all_together_dict = sentence["fields"]
@@ -60,6 +100,7 @@ def build_filtered_sentence_map(filtered_sentences):
   return sentence_map
 
 def get_final_review_labels(details):
+  """Convert review labels to uniform format."""
   asp = details.get('asp', None)
   pol = details.get('pol', None)
   coarse = details.get('arg', None)
@@ -69,6 +110,8 @@ def get_final_review_labels(details):
     fine = "Request." + details['req']
   else:
     fine = None
+
+  print("\n".join([str(i) for i in (coarse, fine, asp, pol)]))
 
   return coarse, fine, asp, pol
 
@@ -131,6 +174,8 @@ def get_rebuttal_sentences(annotation_collection, post_merge_map, rebuttal_text)
         enumerate(json.loads(sentence["fields"]["aligned_review_sentences"]))
         if val
     ]
+    print(sentence["fields"]["relation_label"])
+    print(sentence["fields"]["alignment_category"])
     final_rebuttal_sentences.append(
         dpl.RebuttalSentence(review_id, rebuttal_id, index, rebuttal_text[index],
                          None, sentence["fields"]["relation_label"],
