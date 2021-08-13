@@ -36,23 +36,30 @@ ReviewSentence = collections.namedtuple(
     "review_id sentence_index text coarse fine asp pol".split())
 RebuttalSentence = collections.namedtuple(
     "RebuttalSentence",
-    "review_id rebuttal_id sentence_index text coarse fine alignment alignment_type"
+    "review_id rebuttal_id sentence_index text coarse fine alignment"
     .split())
 
 with open("label_map.yaml") as stream:
-  LABEL_MAP = yaml.safe_load(stream)
+  map_of_maps = yaml.safe_load(stream)
+  LABEL_MAP, REBUTTAL_FINE_TO_COARSE, CONTEXT_TYPE_MAP = [
+  map_of_maps[key] for key in
+  "label_name_map rebuttal_fine_to_coarse rebuttal_alignment_type".split()]
 
 class Annotation(object):
 
-  def __init__(self, review_sentences, rebuttal_sentences, meta, is_main=True):
+  def __init__(self, review_sentences, rebuttal_sentences, meta):
     self.meta = meta
     self.review_sentences = review_sentences
     self.rebuttal_sentences = rebuttal_sentences
-    self.is_main = is_main
 
-  def write_to_dir(self, dir_name):
-    name_builder = self.meta["review_id"]
-    if not self.is_main:
+  def write_to_dir(self, dir_name, add_annotator_name=False):
+    try:
+      name_builder = "".join([SUBSET_MAP[self.meta["forum_id"]],
+                             "/", self.meta["review_id"]])
+    except KeyError:
+      logging.info("What is this, forum not present")
+      return
+    if add_annotator_name:
       name_builder += "." + self.meta["annotator"]
 
     filename = "".join([dir_name, "/", name_builder, ".json"])
@@ -68,6 +75,9 @@ class Annotation(object):
             sent._asdict() for sent in self.rebuttal_sentences
         ]
     })
+
+FrozenAnnotationCollection = collections.namedtuple(
+"FrozenAnnotationCollection", "review_id annotator review_annotation annotations".split())
 
 class AnnotationCollector(object):
 
@@ -89,7 +99,32 @@ class AnnotationCollector(object):
                                                   self.annotator,
                                                   annotation_type))
         return False
+    if len(self.annotations[AnnotationTypes.rev_ann]) > 1:
+      return False
     return True
+
+  def get_review_annotation(self):
+    return sorted(self.annotations[AnnotationTypes.rev_ann],
+                             key=lambda x: x["pk"])[-1]
+
+  def filter_annotations_for_latest(self, annotation_type):
+    final_annotations = {}
+    key = TYPE_TO_KEY_MAP[annotation_type]
+    for annotation in sorted(self.annotations[annotation_type],
+                             key=lambda x: x["pk"]):
+      final_annotations[annotation["fields"][key]] = annotation
+    return tuple(final_annotations[k] for k in sorted(final_annotations.keys()))
+
+
+  def freeze(self):
+    if self.is_valid():
+      annotation_map_builder = {k:self.filter_annotations_for_latest(k) for k in [
+      AnnotationTypes.rev_sent_ann, AnnotationTypes.reb_sent_ann]}
+      return FrozenAnnotationCollection(self.review_id, self.annotator,
+      self.get_review_annotation(),
+      annotation_map_builder)
+    else:
+      return None
 
   def __repr__(self):
     return "\n".join([
@@ -103,6 +138,9 @@ class AnnotationCollector(object):
 
 with open('annomap.json', 'r') as f:
   ANONYMIZER = json.load(f)
+
+with open('subset_map.json', 'r') as f:
+  SUBSET_MAP = json.load(f)
 
 TYPE_TO_KEY_MAP = {
     AnnotationTypes.rev_sent_ann: "review_sentence_index",
@@ -147,14 +185,48 @@ def clean_review_sentence_dict(rev_sent_dict):
       new_map[k] = v
   return new_map
 
+def clean_review_label(review_sentence_row):
+  pass
 
-def filter_annotations_for_latest(annotation_collection, annotation_type):
-  final_annotations = {}
-  key = TYPE_TO_KEY_MAP[annotation_type]
-  for annotation in sorted(annotation_collection.annotations[annotation_type],
-                           key=lambda x: x["pk"]):
-    final_annotations[annotation["fields"][key]] = annotation
-  final_list = [final_annotations[k] for k in sorted(final_annotations.keys())]
-  return final_list
 
+Alignment = collections.namedtuple("Alignment",
+  "category aligned_indices".split())
+
+def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
+  index, aligned_array, raw_label, raw_category =  [get_fields(rebuttal_sentence_row)[key]
+          for key in ["rebuttal_sentence_index",
+                      "aligned_review_sentences", "relation_label",
+                      "alignment_category"]]
+  aligned_indices = [
+        merge_map[i]
+        for i, val in
+        enumerate(json.loads(aligned_array))
+        if val
+    ]
+
+  alignment = None
+
+  if aligned_indices == list(range(len(aligned_indices))):
+    alignment = Alignment("context_global", None)
+  elif not aligned_indices:
+    assert False
+  else:
+    category = CONTEXT_TYPE_MAP[raw_category]
+    if category == "context_error" or not raw_category:
+      logging.info("Error in rebuttal -- no category")
+      return None
+    if category == "context_sentences":
+      alignment = Alignment(category, aligned_indices)
+    else:
+      alignment = Alignment(category, None)
+
+  assert alignment is not None
+
+  label = LABEL_MAP[raw_label]
+  coarse = REBUTTAL_FINE_TO_COARSE[label]
+  return index, label, coarse, alignment
+
+
+def get_fields(dataset_row):
+  return dataset_row["fields"]
 

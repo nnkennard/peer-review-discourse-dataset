@@ -3,13 +3,11 @@
 import collections
 import json
 import logging
+import os
 import tqdm
 
 import data_prep_lib as dpl
 from data_prep_lib import AnnotationFields as FIELDS
-
-def get_fields(dataset_row):
-  return dataset_row["fields"]
 
 
 def get_text():
@@ -30,14 +28,14 @@ def get_text():
   # Builds sentence map for all comments in server database
   sentence_map = collections.defaultdict(list)
   for sentence in j[dpl.ServerModels.sentence]:
-    fields = get_fields(sentence)
+    fields = dpl.get_fields(sentence)
     assert fields[FIELDS.sentence_index] == len(
       sentence_map[fields[FIELDS.comment_id]])
     sentence_map[fields[FIELDS.comment_id]].append(fields[FIELDS.text])
 
   comment_pair_map = {}
   for example in j[dpl.ServerModels.example]:
-    fields = get_fields(example)
+    fields = dpl.get_fields(example)
     review_id, rebuttal_id = fields[FIELDS.review_id], fields[FIELDS.rebuttal_id]
     comment_pair_map[review_id] = {
         dpl.REVIEW: sentence_map[review_id],
@@ -60,7 +58,7 @@ def collect_annotations():
 
     Returns:
       Map (actually nested dictionary) from (review_id, annotator) to
-      data_prep_lib.AnnotationCollector of relevant annotations.
+      data_prep_lib.FrozenAnnotationCollector of relevant annotations.
 
   """
   with open("final_data_dump/orda_annotations_0516.json", 'r') as f:
@@ -69,9 +67,7 @@ def collect_annotations():
   annotation_collectors = collections.defaultdict(dict)
 
   for annot in dpl.AnnotationTypes.ALL:
-    # TODO: Remove this row if adding filtering
-    sorted_rows = sorted(annotations_from_file[annot], key=lambda x: x["pk"])
-    for row in sorted_rows:
+    for row in annotations_from_file[annot]:
       rev_id, annotator = dpl.get_key_from_annotation(row)
       # Start a collector if necessary
       if annotator not in annotation_collectors[rev_id]:
@@ -79,8 +75,12 @@ def collect_annotations():
             rev_id, annotator)
       annotation_collectors[rev_id][annotator].annotations[annot].append(row)
 
-  # TODO: filter everything before returning
-  return annotation_collectors
+  frozen_annotation_collectors = collections.defaultdict(dict)
+  for k1, v1 in annotation_collectors.items():
+    for k2, v2 in v1.items():
+      frozen_annotation_collectors[k1][k2] = v2.freeze()
+
+  return frozen_annotation_collectors
 
 
 def build_filtered_sentence_map(filtered_sentences):
@@ -110,43 +110,27 @@ def get_final_review_labels(details):
     fine = "Request." + details['req']
   else:
     fine = None
-
-  print("\n".join([str(i) for i in (coarse, fine, asp, pol)]))
-
-  return coarse, fine, asp, pol
+  return (dpl.LABEL_MAP[label] for label in [coarse, fine, asp, pol])
 
 
-def build_review_sentences(filtered_sentences, review_text, merge_prev):
-  filtered_sentence_map = build_filtered_sentence_map(filtered_sentences)
+def get_review_sentences(annotation_collector, review_text, merge_prev):
+  """Convert annotations into final dataset format.
+    Args:
+      filtered_sentences: final sentences TODO: filtering should be happening
+      automatically, earlier
+      review_text: list of sentences in the review text
+      merge_prev: list of {0,1} values to indicate whether a sentence should be
+      merged with the prior sentence.
 
-  post_merge_mapping = []
-  
-  final_sentence_list = []
-  for i, (sentence_text, merge_prev_val) in enumerate(zip(review_text,
-    merge_prev)):
-    if not merge_prev_val:
-      details = filtered_sentence_map[i]
-      coarse, fine, asp, pol = get_final_review_labels(details)
-      final_sentence_list.append(dpl.ReviewSentence( details["review_id"],
-      details["review_sentence_index"], sentence_text, coarse, fine, asp, pol))
-      post_merge_mapping.append(details["review_sentence_index"])
-    else:
-      old = final_sentence_list.pop(-1)
-      final_sentence_list.append(dpl.ReviewSentence(
-        old.review_id, old.sentence_index, old.text.rstrip() + " " +
-        sentence_text.lstrip(), old.coarse, old.fine, old.asp, old.pol
-      ))
-      post_merge_mapping.append(post_merge_mapping[-1])
-  return final_sentence_list, post_merge_mapping
-
-
-def get_review_sentences(annotation_collection, review_text, merge_prev):
+    Returns:
+      final_sentence_list: list of sentences in ReviewSentence format
+      post_merge_mapping: mapping from original sentence indices to post-merge
+      indices
+  """
   final_review_sentences = []
-  filtered_sentences = dpl.filter_annotations_for_latest(
-      annotation_collection, dpl.AnnotationTypes.rev_sent_ann)
-  if len(filtered_sentences) == len(review_text) - sum(merge_prev):
-    return build_review_sentences(filtered_sentences, review_text, merge_prev)
-  else:
+  filtered_sentences = annotation_collector.annotations[
+    dpl.AnnotationTypes.rev_sent_ann]
+  if not (len(filtered_sentences) == len(review_text) - sum(merge_prev)):
     refiltered_sentences = []
     for sentence in filtered_sentences:
       index = sentence["fields"]["review_sentence_index"]
@@ -154,87 +138,130 @@ def get_review_sentences(annotation_collection, review_text, merge_prev):
         if dpl.recursive_json_load(sentence["fields"]["labels"]):
           # This should not be empty...
           logging.info("Extra labels in sentence to be merged, index {0}; review_id {1}; annotator {2}".format(index,
-          annotation_collection.review_id, annotation_collection.annotator))
+          annotation_collector.review_id, annotation_collector.annotator))
       else:
         refiltered_sentences.append(sentence)
     assert len(refiltered_sentences) == len(review_text) - sum(merge_prev)
-    return build_review_sentences(refiltered_sentences, review_text, merge_prev)
+    filtered_sentences = refiltered_sentences
+
+  filtered_sentence_map = build_filtered_sentence_map(filtered_sentences)
+
+  post_merge_mapping = []
+  final_sentence_list = []
+
+  #TODO change the name 'details' here to something uniform everywhere
+
+  for i, (sentence_text, merge_prev_val) in enumerate(zip(review_text,
+    merge_prev)):
+    if not merge_prev_val: # Just a normal sentence
+      details = filtered_sentence_map[i]
+      coarse, fine, asp, pol = get_final_review_labels(details)
+      final_sentence_list.append(dpl.ReviewSentence( details["review_id"],
+      details["review_sentence_index"], sentence_text, coarse, fine, asp, pol))
+      post_merge_mapping.append(details["review_sentence_index"])
+    else:
+      # Should merge with previous sentence. This sentence should have no-op
+      # labels, so we can use the labels from the previous sentence and just
+      # tack on the text from the current sentence to the old sentence.
+      
+      # TODO: add an assert here to make sure there is no required stuff in the
+      # label
+
+      old = final_sentence_list.pop(-1)
+      merged_sentence = old.text.rstrip() + " " + sentence_text.lstrip()
+      final_sentence_list.append(dpl.ReviewSentence(
+        old.review_id, old.sentence_index, merged_sentence,
+        old.coarse, old.fine, old.asp, old.pol
+      ))
+      post_merge_mapping.append(post_merge_mapping[-1])
+
+  return final_sentence_list, post_merge_mapping
 
 
-def get_rebuttal_sentences(annotation_collection, post_merge_map, rebuttal_text):
+def get_rebuttal_sentences(annotation_collector, post_merge_map, rebuttal_text):
   final_rebuttal_sentences = []
-  review_id = None  # fix
-  rebuttal_id = None  # fix
-  for sentence in dpl.filter_annotations_for_latest(annotation_collection,
-                                                dpl.AnnotationTypes.reb_sent_ann):
-    index = sentence["fields"]["rebuttal_sentence_index"]
-    aligned_indices = [
-        post_merge_map[i]
-        for i, val in
-        enumerate(json.loads(sentence["fields"]["aligned_review_sentences"]))
-        if val
-    ]
-    print(sentence["fields"]["relation_label"])
-    print(sentence["fields"]["alignment_category"])
+  review_id = None  # TODO fix
+  rebuttal_id = None  # TODO fix
+  for sentence in annotation_collector.annotations[
+                                            dpl.AnnotationTypes.reb_sent_ann]:
+    index, label, coarse, alignment = dpl.clean_rebuttal_label(
+      sentence, post_merge_map)
+    
     final_rebuttal_sentences.append(
         dpl.RebuttalSentence(review_id, rebuttal_id, index, rebuttal_text[index],
-                         None, sentence["fields"]["relation_label"],
-                         aligned_indices,
-                         sentence["fields"]["alignment_category"]))
+                         coarse, label,
+                         alignment))
   return final_rebuttal_sentences
 
 
-def build_annotation(annotation_collection,
+def build_annotation(annotation_collector,
                      text_and_metadata,
                      other_annotators=[]):
   metadata = text_and_metadata[dpl.METADATA]
-  metadata["annotator"] = annotation_collection.annotator
+  metadata["annotator"] = annotation_collector.annotator
   metadata["other_annotators"] = other_annotators
 
-  merge_prev = json.loads(annotation_collection.annotations[
-      dpl.AnnotationTypes.rev_ann][0]["fields"]["errors"])["merge_prev"]
+  merge_prev = json.loads(dpl.get_fields(
+    annotation_collector.review_annotation)["errors"])["merge_prev"]
+
   try:
-    review_sentences, post_merge_map = get_review_sentences(annotation_collection,
+    review_sentences, post_merge_map = get_review_sentences(annotation_collector,
                                                text_and_metadata[dpl.REVIEW],
                                                merge_prev)
   except dpl.NoLabelError:
     logging.info("No label fail here.")
     return None
-  rebuttal_sentences = get_rebuttal_sentences(annotation_collection,
+  rebuttal_sentences = get_rebuttal_sentences(annotation_collector,
                                               post_merge_map,
                                               text_and_metadata[dpl.REBUTTAL])
   return dpl.Annotation(review_sentences, rebuttal_sentences, metadata)
 
-
-def pick_best_annotation(valid_annotations):
+def order_annotations_by_preference(collector_dict):
+  valid_annotations = {
+        collector.annotator: collector
+        for collector in collector_dict.values()
+        if collector is not None
+    }
+  ordered_annotators = []
   for best_annotator in dpl.preferred_annotators:
     if best_annotator in valid_annotations:
-      return (valid_annotations[best_annotator], [
-          annotation for annotator, annotation in valid_annotations.items()
-          if not annotator == best_annotator
-      ])
-  assert False  # Iterating through all possible annotators, we should never reach here.
+      ordered_annotators.append(valid_annotations[best_annotator])
+  return ordered_annotators
+
 
 def process_annotations(comment_pair_map, annotation_collectors):
   extra_annotation_list = []
   final_annotation_list = []
 
   for review_id, collector_dict in tqdm.tqdm(annotation_collectors.items()):
-    valid_annotations = {
-        collector.annotator: collector
-        for collector in collector_dict.values()
-        if collector.is_valid()
-    }
-    if valid_annotations:
-      main_annotation, other_annotations = pick_best_annotation(valid_annotations)
-      final_annotation_list.append(
-          build_annotation(main_annotation, comment_pair_map[review_id],
-                           [oa.annotator for oa in other_annotations]))
-      extra_annotation_list += [
-          build_annotation(extra_annotation, comment_pair_map[review_id])
-          for extra_annotation in other_annotations
-      ]
+    if review_id == "example_review":
+      continue
+    ordered_annotations = order_annotations_by_preference(collector_dict)
+    annotation_found_for_this_review = False
+    for annotation in ordered_annotations:
+      maybe_processed_annotation = build_annotation(
+      annotation, comment_pair_map[review_id])
+      if maybe_processed_annotation is None:
+        logging.log("This one didn't work!")
+      else:
+        if annotation_found_for_this_review:
+          extra_annotation_list.append(maybe_processed_annotation)
+        else:
+          final_annotation_list.append(maybe_processed_annotation)
+          annotation_found_for_this_review = True
+
   return final_annotation_list, extra_annotation_list
+
+def write_annotations_to_dir(annotations, dir_name, append_annotator=False):
+  for subdir in ["", "train", "dev", "test"]:
+    subdir_name = dir_name + "/" + subdir
+    if not os.path.exists(subdir_name):
+      os.makedirs(subdir_name)
+
+  for annotation in annotations:
+    if annotation is None:
+      continue
+    annotation.write_to_dir(dir_name, append_annotator)
 
 
 def main():
@@ -242,13 +269,9 @@ def main():
   annotation_collectors = collect_annotations()
   final_annotations, extra_annotations = process_annotations(
     comment_pair_map, annotation_collectors)
-  for final_annotation in final_annotations:
-    final_annotation.write_to_dir("final_dataset/")
-  for extra_annotation in extra_annotations:
-    if extra_annotation is None:
-      continue
-    extra_annotation.write_to_dir("extra_annotations/")
-
+  write_annotations_to_dir(final_annotations, "final_dataset/")
+  write_annotations_to_dir(extra_annotations, "extra_annotations/",
+  append_annotator=True)
 
 
 
