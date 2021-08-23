@@ -9,7 +9,6 @@ logger.setLevel(logging.DEBUG)
 
 # Constants for later
 
-REVIEW_ID, INITIALS = "review_id initials".split()
 REVIEW, REBUTTAL, METADATA = "review rebuttal metadata".split()
 META_FIELDS_TO_EXTRACT = 'forum_id review_id rebuttal_id title reviewer'.split()
 PERMALINK_FORMAT = "https://openreview.net/forum?id={0}&noteId={1}"
@@ -26,13 +25,6 @@ class AnnotationFields(object):
   text = "text"
   review_id = "review_id"
   rebuttal_id = "rebuttal_id"
-
-
-class AnnotationTypes(object):
-  rev_ann = "reviewannotation"
-  rev_sent_ann = "reviewsentenceannotation"
-  reb_sent_ann = "rebuttalsentenceannotation"
-  ALL = [rev_ann, rev_sent_ann, reb_sent_ann]
 
 
 ReviewSentence = collections.namedtuple(
@@ -62,7 +54,8 @@ class Annotation(object):
       name_builder = "".join(
           [SUBSET_MAP[self.meta["forum_id"]], "/", self.meta["review_id"]])
     except KeyError:
-      logging.info("{0}\tForum not in train-test split".format(self.meta["review_id"]))
+      logging.info("{0}\tForum not in train-test split".format(
+          self.meta["review_id"]))
       return
     if add_annotator_name:
       name_builder += "." + self.meta["annotator"]
@@ -82,94 +75,14 @@ class Annotation(object):
     })
 
 
-FrozenAnnotationCollection = collections.namedtuple(
-    "FrozenAnnotationCollection",
-    "review_id annotator review_annotation review_sentences rebuttal_sentences".
-    split())
-
-
-class AnnotationCollector(object):
-
-  def __init__(self, review_id, annotator):
-    self.review_id = review_id
-    self.annotator = annotator
-    self.annotations = {
-        annotation_type: [] for annotation_type in AnnotationTypes.ALL
-    }
-
-  def is_valid(self):
-    if self.review_id == 'example_review':
-      logging.info("example_review {0} -- skipping".format(
-          self.annotator))
-      return False
-    for annotation_type, annotation_list in self.annotations.items():
-      if not annotation_list:
-        logging.info("{0} {1} -- no annotations of type {2}".format(self.review_id,
-                                                  self.annotator,
-                                                  annotation_type))
-        return False
-    if len(self.annotations[AnnotationTypes.rev_ann]) > 1:
-      return False
-    return True
-
-  def get_review_annotation(self):
-    return sorted(self.annotations[AnnotationTypes.rev_ann],
-                  key=lambda x: x["pk"])[-1]
-
-  def filter_annotations_for_latest(self, annotation_type):
-    final_annotations = {}
-    key = TYPE_TO_KEY_MAP[annotation_type]
-    for annotation in sorted(self.annotations[annotation_type],
-                             key=lambda x: x["pk"]):
-      final_annotations[annotation["fields"][key]] = annotation
-    return tuple(final_annotations[k] for k in sorted(final_annotations.keys()))
-
-  def freeze(self):
-    if self.is_valid():
-      annotation_map_builder = {
-          k: self.filter_annotations_for_latest(k)
-          for k in [AnnotationTypes.rev_sent_ann, AnnotationTypes.reb_sent_ann]
-      }
-      return FrozenAnnotationCollection(
-          self.review_id,
-          self.annotator,
-          self.get_review_annotation(),
-          annotation_map_builder[AnnotationTypes.rev_sent_ann],
-          annotation_map_builder[AnnotationTypes.reb_sent_ann],
-      )
-    else:
-      logging.info("{0} {1} -- some kind of error; returning None".format(
-          self.review_id, self.annotator))
-      return None
-
-  def __repr__(self):
-    return "\n".join([
-        "Annotation collector for {0} annotated by {1}".format(
-            self.review_id, self.annotator)
-    ] + [
-        "{0} : {1}".format(ann_type, len(anns))
-        for ann_type, anns in self.annotations.items()
-    ] + [""])
-
-
-with open('annomap.json', 'r') as f:
-  ANONYMIZER = json.load(f)
-
 with open('subset_map.json', 'r') as f:
   SUBSET_MAP = json.load(f)
 
-TYPE_TO_KEY_MAP = {
-    AnnotationTypes.rev_sent_ann: "review_sentence_index",
-    AnnotationTypes.reb_sent_ann: "rebuttal_sentence_index",
-}
-
-preferred_annotators = ["anno{0}".format(i) for i in range(20)]  # TODO: Fix this!!
+preferred_annotators = ["anno{0}".format(i) for i in range(20)
+                       ]  # TODO: Fix this!!
+                       
 
 # Utilities
-
-
-def get_key_from_annotation(ann):
-  return ann["fields"][REVIEW_ID], ANONYMIZER[ann["fields"][INITIALS]]
 
 
 def metadata_formatter(fields):
@@ -273,4 +186,3 @@ def build_filtered_sentence_map(filtered_sentences):
       all_together_dict.update(maybe_labels["0"])
     sentence_map[all_together_dict["review_sentence_index"]] = all_together_dict
   return sentence_map
-
