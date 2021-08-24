@@ -171,18 +171,18 @@ def get_fields(dataset_row):
   return dataset_row["fields"]
 
 
-def build_filtered_sentence_map(filtered_sentences):
-  """Remap sentence annotations to map from index
-
-    TODO: Fold this into filtering once filtering is added to collection?
-  """
-  sentence_map = {}
-  for sentence in filtered_sentences:
-    all_together_dict = sentence["fields"]
-    maybe_labels = recursive_json_load(all_together_dict["labels"])
-    if "0" not in maybe_labels:
-      raise NoLabelError
-    else:
-      all_together_dict.update(maybe_labels["0"])
-    sentence_map[all_together_dict["review_sentence_index"]] = all_together_dict
-  return sentence_map
+#def build_filtered_sentence_map(filtered_sentences):
+#  """Remap sentence annotations to map from index
+#
+#    TODO: Fold this into filtering once filtering is added to collection?
+#  """
+#  sentence_map = {}
+#  for sentence in filtered_sentences:
+#    all_together_dict = sentence["fields"]
+#    maybe_labels = recursive_json_load(all_together_dict["labels"])
+#    if "0" not in maybe_labels:
+#      raise NoLabelError
+#    else:
+#      all_together_dict.update(maybe_labels["0"])
+#    sentence_map[all_together_dict["review_sentence_index"]] = all_together_dict
+#  return sentence_map
