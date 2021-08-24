@@ -36,9 +36,9 @@ RebuttalSentence = collections.namedtuple(
 
 with open("label_map.yaml") as stream:
   map_of_maps = yaml.safe_load(stream)
-  LABEL_MAP, REBUTTAL_FINE_TO_COARSE, CONTEXT_TYPE_MAP = [
+  LABEL_MAP, REBUTTAL_FINE_TO_COARSE, CONTEXT_TYPE_MAP, preferred_annotators = [
       map_of_maps[key] for key in
-      "label_name_map rebuttal_fine_to_coarse rebuttal_alignment_type".split()
+      "label_name_map rebuttal_fine_to_coarse rebuttal_alignment_type preferred_annotators".split()
   ]
 
 
@@ -78,8 +78,6 @@ class Annotation(object):
 with open('subset_map.json', 'r') as f:
   SUBSET_MAP = json.load(f)
 
-preferred_annotators = ["anno{0}".format(i) for i in range(20)
-                       ]  # TODO: Fix this!!
                        
 
 # Utilities

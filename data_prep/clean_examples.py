@@ -148,6 +148,10 @@ def main():
 
   final_annotations, extra_annotations = process_all_annotations(
       annotation_collections, text_map)
+
+  for i in final_annotations:
+    print(i.meta["annotator"])
+
   write_annotations_to_dir(final_annotations, "final_dataset/")
   write_annotations_to_dir(extra_annotations,
                              "extra_annotations/",
