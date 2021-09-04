@@ -4,11 +4,7 @@ import argparse
 import collections
 import json
 import torch
-import torch.optim as optim
-from torchtext.legacy import data
 from transformers import BertTokenizer
-from transformers import BertModel
-import torch.nn as nn
 from tqdm import tqdm
 
 from nltk.corpus import stopwords
@@ -35,6 +31,18 @@ def preprocess(sentence):
   ]
 
 
+def convert_scores_to_ranks(scores):
+  re_sorted = list(
+      sorted(list(enumerate(scores)), key=lambda x: x[1], reverse=True))
+  ordered_indices = list(x[0] for x in re_sorted)
+  assert sorted(ordered_indices) == list(range(len(scores)))
+  ranks = list(ordered_indices.index(i) + 1 for i in range(len(scores)))
+  return ranks
+
+test_scores = [5, 10, 1, 2.5]
+assert convert_scores_to_ranks(test_scores) == [2, 1, 4, 3]
+
+
 def mean(l):
   if not l:
     return None
@@ -42,9 +50,33 @@ def mean(l):
     return sum(l) / len(l)
 
 
-Result = collections.namedtuple(
-    "Result", ("review_id rebuttal_idx "
-               "actual_alignment rank_mrr rankprob_mrr bm25_mrr").split())
+def get_mrr_from_ranks(ranks, label_indices):
+  return mean([1 / ranks[i] for i in label_indices])
+
+
+def convert_rank_lists_to_mrr(review_sentences, rebuttal_sentences, rank_lists,
+                              true_labels):
+  assert len(rank_lists) == len(rebuttal_sentences)
+  assert all(len(i) == len(review_sentences) for i in rank_lists)
+  assert len(true_labels) == len(rebuttal_sentences)
+  assert all(max(i) < len(review_sentences) for i in true_labels if i)
+  assert all(max(i) <= len(review_sentences) for i in rank_lists if i)
+  mrr_list = []
+  error_list = []
+  for i, (rank_list, label_list) in enumerate(zip(rank_lists, true_labels)):
+    if not label_list:
+      continue
+    mrr = get_mrr_from_ranks(rank_list, label_list)
+    mrr_list.append(mrr)
+    error_list.append((i, mrr, rank_list[:len(label_list)], label_list))
+  return error_list, mean(list(i for i in mrr_list if i is not None))
+
+
+MRRResult = collections.namedtuple("MRRResult",
+    "review_id model rebuttal_idx mrr top_ranked_indices actual_labels")
+
+Result = collections.namedtuple("Result", ("review_id "
+               "rank_mrr rankprob_mrr bm25_mrr").split())
 
 
 def get_prediction(model, sentence, dataset_tools, prediction_getter):
@@ -65,7 +97,7 @@ def get_prediction(model, sentence, dataset_tools, prediction_getter):
 # === Getting ranks ===
 
 
-def get_bm25_ranks(review_sentences, rebuttal_sentences):
+def process_bm25_model(review_sentences, rebuttal_sentences, alignment_labels):
   tokenized_corpus = [preprocess(sent) for sent in review_sentences]
   model = BM25Okapi(tokenized_corpus)
   rebuttal_ranks = []
@@ -80,39 +112,10 @@ def get_bm25_ranks(review_sentences, rebuttal_sentences):
 
   assert len(rebuttal_ranks) == len(rebuttal_sentences)
   assert all(len(i) == len(review_sentences) for i in rebuttal_ranks)
-  return rebuttal_ranks
 
+  return convert_rank_lists_to_mrr(review_sentences, rebuttal_sentences,
+                                         rebuttal_ranks, alignment_labels)
 
-def convert_scores_to_ranks(scores):
-  re_sorted = list(
-      sorted(list(enumerate(scores)), key=lambda x: x[1], reverse=True))
-  ordered_indices = list(x[0] for x in re_sorted)
-  assert sorted(ordered_indices) == list(range(len(scores)))
-  ranks = list(ordered_indices.index(i) + 1 for i in range(len(scores)))
-  print(ranks)
-  print(len(scores))
-  print("*")
-  return ranks
-
-
-def get_mrr_from_ranks(ranks, label_indices):
-  print("Ranks", ranks)
-  print(len(label_indices))
-  print(label_indices)
-  print()
-  return mean([1 / ranks[i] for i in label_indices])
-
-
-def convert_scores_to_mrrs(scores_list, alignment_labels):
-  individual_mrr_list = []
-  for scores, label_list in zip(scores_list, alignment_labels):
-    print("S", scores)
-    print("LL", label_list)
-    if not label_list:
-      continue
-    individual_mrr_list.append(
-          get_mrr_from_ranks(convert_scores_to_ranks(scores), label_list))
-  return mean(individual_mrr_list)
 
 
 def process_rank_model(review_sentences, rebuttal_sentences, alignment_labels,
@@ -122,13 +125,18 @@ def process_rank_model(review_sentences, rebuttal_sentences, alignment_labels,
       classification_lib.Model.rank]
   for j, query in enumerate(rebuttal_sentences):
     for i, doc in enumerate(review_sentences):
-      example = " [SEP] ".join([doc, query])
+      example = " [SEP] ".join([query, doc])
       bert_scores[j].append(
           get_prediction(model, example, dataset_tools, prediction_getter))
   score_list = []
   for i in range(len(rebuttal_sentences)):
     score_list.append(bert_scores[i])
-  return convert_scores_to_mrrs(score_list, alignment_labels)
+  rank_lists = list(convert_scores_to_ranks(i) for i in score_list)
+  return convert_rank_lists_to_mrr(review_sentences, rebuttal_sentences,
+  rank_lists, alignment_labels)
+
+def convert_error_list(review_id, model, errors):
+    return [MRRResult(review_id, model, *i)._asdict()  for i in errors]
 
 
 def main():
@@ -152,28 +160,55 @@ def main():
     models[model_name] = bertmodel
 
   results = []
-  for filename in tqdm(glob.glob("0517_split_2/test/*")):
+  error_analysis_info = []
+  for filename in tqdm(glob.glob("0517_split_2/dev/*")):
 
     # Read in data and labels
     with open(filename, 'r') as f:
       obj = json.load(f)
+
+    review_id = obj["metadata"]["review"]
+
     review_sentences = [sent["sentence"] for sent in obj["review"]]
-    if len(review_sentences) > 20:
+    if len(review_sentences) > 50:
       continue
     rebuttal_sentences = [sent["sentence"] for sent in obj["rebuttal"]]
     alignment_labels = [
         x["labels"]["alignments"] for x in obj["rebuttallabels"]
     ]
 
+    #review_sentences = ["A sentence", "Another sentence",
+    #"Yet another sentence, following the other two",
+    #"A final sentence to round out the text"]
+    #rebuttal_sentences = list(review_sentences)
+    #review_id = "test_id"
+
+    #alignment_labels = [[0], [1], [2], [3]]
+
     assert len(rebuttal_sentences) == len(alignment_labels)
 
-    bm25_ranks = get_bm25_ranks(review_sentences, rebuttal_sentences)
-    rank_model_ranks = process_rank_model(review_sentences, rebuttal_sentences,
-                                          alignment_labels,
-                                          models[classification_lib.Model.rank],
-                                          dataset_tools)
+    individual_mrrs, bm25_mrr = process_bm25_model(review_sentences, rebuttal_sentences,
+    alignment_labels)
+    error_analysis_info += convert_error_list(review_id, "bm25",  individual_mrrs)
+    individual_mrrs, rank_model_mrr = process_rank_model(review_sentences, rebuttal_sentences,
+                                        alignment_labels,
+                                        models[classification_lib.Model.rank],
+                                        dataset_tools)
+    error_analysis_info += convert_error_list(review_id, "rank", individual_mrrs)
+    results.append(Result(review_id, rank_model_mrr, None, bm25_mrr)._asdict())
 
-  pd.DataFrame.from_dict(results).to_csv("mrr_results_small.csv")
+    #break
+
+
+  with open("mrr_errors_all.csv", 'w') as f:
+    for err in error_analysis_info:
+      f.write(json.dumps(err) + "\n")
+
+  with open("mrr_results_all.csv", 'w') as f:
+    for res in results:
+      f.write(json.dumps(res) + "\n")
+
+
 
 
 if __name__ == "__main__":
