@@ -2,13 +2,14 @@ import argparse
 import collections
 import json
 import logging
+import tqdm
 
 import data_prep_lib as dpl
 from data_prep_lib import AnnotationFields as FIELDS
 
 parser = argparse.ArgumentParser(
     description=
-    "Convert the outputs form the annotation server into a cleaned dataset.")
+    "")
 parser.add_argument('-t',
                     '--text_dump',
                     default="../final_data_dump/orda_text_0415.json",
@@ -17,7 +18,6 @@ parser.add_argument('-t',
 parser.add_argument(
     '-a',
     '--annotation_dump',
-    #default="../final_data_dump/orda_annotations_0516.json",
     default="../final_data_dump/orda_annotations_0820.json",
     type=str,
     help='path to annotation dump from annotation server')
@@ -79,11 +79,16 @@ def get_text(text_dump_path, review_ids):
     sentence_map[fields[FIELDS.comment_id]].append(fields[FIELDS.text])
 
   comment_pair_map = {}
-  for example in j[dpl.ServerModels.example]:
+
+  examples = [example
+      for example in j[dpl.ServerModels.example]
+      if example["fields"]["review_id"] in review_ids]
+
+  for example in tqdm.tqdm(examples):
     fields = dpl.get_fields(example)
     review_id, rebuttal_id = fields[FIELDS.review_id], fields[
         FIELDS.rebuttal_id]
-    if review_id not in review_ids:
+    if review_id not in review_ids or review_id == "example_review":
       continue
     comment_pair_map[review_id] = {
         dpl.REVIEW: sentence_map[review_id],
@@ -138,7 +143,6 @@ class AnnotationCollector(object):
       else:
         all_together_dict.update(maybe_labels["0"])
       sentence_map[all_together_dict["review_sentence_index"]] = all_together_dict
-    print(sentence_map.keys())
     return sentence_map
 
   def freeze(self):

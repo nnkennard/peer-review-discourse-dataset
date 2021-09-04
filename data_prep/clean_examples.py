@@ -86,11 +86,10 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text, mer
   return final_rebuttal_sentences
 
 
-
-
 def process_annotation(annotation, text):
   metadata = dict(text[dpl.METADATA])
   metadata["annotator"] = annotation["annotator"]
+  #metadata["rating"] = get_rating()
   merge_prev = json.loads(
       dpl.get_fields(annotation["review_annotation"])["errors"])["merge_prev"]
 
@@ -148,6 +147,7 @@ def main():
 
   final_annotations, extra_annotations = process_all_annotations(
       annotation_collections, text_map)
+
   write_annotations_to_dir(final_annotations, "final_dataset/")
   write_annotations_to_dir(extra_annotations,
                              "extra_annotations/",
