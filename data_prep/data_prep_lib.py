@@ -2,6 +2,7 @@ import collections
 import json
 import logging
 import yaml
+import openreview
 
 logging.basicConfig(filename="log_prep_data.log")
 logger = logging.getLogger()
@@ -82,9 +83,19 @@ with open('subset_map.json', 'r') as f:
 
 # Utilities
 
+GUEST_CLIENT = openreview.Client(baseurl='https://api.openreview.net')
+
+def get_rating(forum_id, review_id):
+  notes = GUEST_CLIENT.get_notes(forum=forum_id)
+  for note in notes:
+    if note.id == review_id:
+      return int(note.content["rating"].split(":")[0])
+  assert False
+
 
 def metadata_formatter(fields):
   metadata = {k: v for k, v in fields.items() if k in META_FIELDS_TO_EXTRACT}
+  metadata["rating"] = get_rating(metadata["forum_id"], metadata["review_id"])
   if fields["dataset"].startswith("traindev"):
     metadata["conference"] = "ICLR2019"
   else:
@@ -168,19 +179,3 @@ def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
 def get_fields(dataset_row):
   return dataset_row["fields"]
 
-
-#def build_filtered_sentence_map(filtered_sentences):
-#  """Remap sentence annotations to map from index
-#
-#    TODO: Fold this into filtering once filtering is added to collection?
-#  """
-#  sentence_map = {}
-#  for sentence in filtered_sentences:
-#    all_together_dict = sentence["fields"]
-#    maybe_labels = recursive_json_load(all_together_dict["labels"])
-#    if "0" not in maybe_labels:
-#      raise NoLabelError
-#    else:
-#      all_together_dict.update(maybe_labels["0"])
-#    sentence_map[all_together_dict["review_sentence_index"]] = all_together_dict
-#  return sentence_map
