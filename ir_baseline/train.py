@@ -17,7 +17,7 @@ import classification_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="rank_model_input/",
+                    default="score_model_input/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d',

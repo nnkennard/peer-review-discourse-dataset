@@ -102,8 +102,8 @@ def train_or_evaluate(model,
         optimizer.zero_grad()
 
       predictions = model(batch.text).squeeze(1)
-      #loss = CRITERION(predictions, batch.label)
-      loss = my_mse(predictions, batch.label)
+      loss = CRITERION(predictions, batch.label)
+      #loss = my_mse(predictions, batch.label)
 
       if is_train:
         loss.backward()
