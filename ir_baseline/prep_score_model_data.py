@@ -29,28 +29,33 @@ def preprocess(sentence):
 
 
 Example = collections.namedtuple(
-    "Example", "review_sentence rebuttal_sentence score".split())
+    "Example", "identifier review_sentence rebuttal_sentence score".split())
 
 
 def preprocess_sentences(sentences):
   return zip(*[(preprocess(sentence["text"]), sentence["text"])
                for sentence in sentences])
 
+def identifier_maker(review_id, review_index, rebuttal_index):
+  return "{0}_{1}_{2}".format(review_id, review_index, rebuttal_index)
 
-def make_pair_examples(review_sentences, rebuttal_sentences):
+def make_pair_examples(review_id, review_sentences, rebuttal_sentences):
   corpus, review_texts = preprocess_sentences(review_sentences)
   preprocessed_queries, query_texts = preprocess_sentences(rebuttal_sentences)
   model = rank_bm25.BM25Okapi(corpus)
 
   examples = []
+  identifiers = []
 
   for i, preprocessed_query in enumerate(preprocessed_queries):
     scores = model.get_scores(preprocessed_query)
     assert len(scores) == len(review_sentences)
     for j, score in enumerate(scores):
-      examples.append(Example(review_texts[j], query_texts[i], score))
-
-  return examples
+      identifier = identifier_maker(review_id, j, i)
+      examples.append(Example(identifier,
+      review_texts[j], query_texts[i], score))
+      identifiers.append(identifier)
+  return examples, identifiers
 
 
 def make_text_example(index, example):
@@ -63,34 +68,66 @@ def make_text_example(index, example):
           example.score
   })
 
+def get_vocab_from_examples(examples):
+  tokens = set()
+  for example in examples:
+    for sentence in [example.review_sentence, example.rebuttal_sentence]:
+      tokens.update(set(nltk.word_tokenize(sentence)))
+  return tokens
+
+def get_matches_from_obj(obj):
+  matches = []
+  review_id = obj["metadata"]["review_id"]
+  for j, rebuttal_sentence in enumerate(obj["rebuttal_sentences"]):
+    alignment_type, maybe_context = rebuttal_sentence["alignment"]
+    if alignment_type == "context_sentences":
+      for aligned_sentence in set(maybe_context):
+        matches.append((review_id, j, aligned_sentence))
+  return matches
+
 
 def main():
 
   args = parser.parse_args()
-
-
+  overall_tokens = set()
+  example_identifiers = []
+  true_matches = {}
 
   for subset in "train dev test".split():
 
     all_filenames = glob.glob(args.input_dir + "/" + subset + "/*")
     chunk_size = int(len(all_filenames)/9)
+    true_match_builder = []
 
-    for i, offset in tqdm.tqdm(enumerate(range(0, len(all_filenames),
+    for batch_index, offset in tqdm.tqdm(enumerate(range(0, len(all_filenames),
     chunk_size))):
       subset_examples = []
       filenames = all_filenames[offset:offset+chunk_size]
-      print(len(filenames))
       for filename in filenames:
         with open(filename, 'r') as f:
           obj = json.load(f)
-          subset_examples += make_pair_examples(obj["review_sentences"],
+          true_match_builder += get_matches_from_obj(obj)
+          review_id = obj["metadata"]["review_id"]
+          examples, identifiers = make_pair_examples(review_id,
+                                                obj["review_sentences"],
                                                 obj["rebuttal_sentences"])
+          subset_examples += examples
+          example_identifiers += identifiers
+      overall_tokens.update(get_vocab_from_examples(subset_examples))
+      true_matches[subset] = true_match_builder
 
-      with open("score_model_input/" + subset + "_{0}.jsonl".format(i), 'w') as f:
+      with open("score_model_input/" + subset + "_{0}.jsonl".format(batch_index), 'w') as f:
         f.write("\n".join([
-            make_text_example(i, example)
-            for i, example in enumerate(subset_examples)
+            make_text_example(example_identifiers.index(example.identifier), example)
+            for example in subset_examples
         ]))
+
+
+  with open("score_model_input/metadata.json", 'w') as f:
+    json.dump({
+      "example_identifiers": example_identifiers,
+      "true_matches":true_matches
+    }, f)
 
 
 if __name__ == "__main__":

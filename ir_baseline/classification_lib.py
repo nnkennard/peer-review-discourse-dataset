@@ -86,6 +86,7 @@ def train_or_evaluate(model,
   epoch_loss = 0.0
   epoch_acc = 0.0
   example_counter = 0
+  score_map = {}
 
   if is_train:
     model.train()
@@ -97,13 +98,16 @@ def train_or_evaluate(model,
 
   with context:
     for batch in iterator:
+
       example_counter += len(batch)
       if is_train:
         optimizer.zero_grad()
 
       predictions = model(batch.text).squeeze(1)
       loss = CRITERION(predictions, batch.label)
-      #loss = my_mse(predictions, batch.label)
+
+      score_map.update({index:score.item() for index, score in zip(batch.index,
+      predictions)})
 
       if is_train:
         loss.backward()
@@ -112,18 +116,23 @@ def train_or_evaluate(model,
       epoch_loss += loss.item() * len(predictions)
 
   assert example_counter
-  return epoch_loss / example_counter
+  return epoch_loss / example_counter, score_map
 
 
 class EpochData(object):
 
-  def __init__(self, start_time, end_time, train_mse, val_mse):
+  def __init__(self, start_time, end_time, train_mse, val_mse, train_score_map,
+  valid_score_map):
     self.train_mse = train_mse
     self.val_mse = val_mse
 
     elapsed_time = end_time - start_time
     self.elapsed_mins = int(elapsed_time / 60)
     self.elapsed_secs = int(elapsed_time - (self.elapsed_mins * 60))
+
+    self.train_score_map = train_score_map
+    self.valid_score_map = valid_score_map
+
 
 
 def do_epoch(model,
@@ -137,19 +146,20 @@ def do_epoch(model,
     train_set_mode = "evaluate"
   else:
     train_set_mode = "train"
-  train_mse = train_or_evaluate(model, train_iterator,
+  train_mse, train_score_map = train_or_evaluate(model, train_iterator,
                                             train_set_mode, optimizer)
-  valid_mse = train_or_evaluate(model, valid_iterator,
+  valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
                                             "evaluate")
   end_time = time.time()
-  return EpochData(start_time, end_time, train_mse, valid_mse)
+  return EpochData(start_time, end_time, train_mse, valid_mse, train_score_map,
+  valid_score_map)
 
 
 def report_epoch(epoch, epoch_data):
   print((f'Epoch: {epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
          f'{epoch_data.elapsed_secs}s\n'
          f'\tTrain MSE: {epoch_data.train_mse:.3f} | '
-         f'\t Val. MSE: {epoch_data.val_mse:.3f} |  Val. Acc: '))
+         f'\t Val. MSE: {epoch_data.val_mse:.3f}'))
  
 
 class BERTRegresser(nn.Module):

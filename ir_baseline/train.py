@@ -1,4 +1,6 @@
 import argparse
+import collections
+import json
 import random
 
 from comet_ml import Experiment
@@ -71,7 +73,7 @@ def build_iterators(data_dir,
   if debug:
     train_file_name = "train_head.jsonl"
   else:
-    train_file_name = "train.jsonl"
+    train_file_name = "train_0.jsonl"
   train_dataset, dev_dataset = data.TabularDataset.splits(
         path=data_dir,
         train=train_file_name,
@@ -88,6 +90,60 @@ def build_iterators(data_dir,
                                     sort_key=lambda x: x.index,
                                     sort_within_batch=False)
 
+def get_match_map():
+  with open("score_model_input/metadata.json", 'r') as f:
+    metadata = json.load(f)
+
+  example_identifiers = metadata["example_identifiers"]
+  true_match_map = collections.defaultdict(list)
+  for subset, matches in metadata["true_matches"].items():
+    for review_id, rebuttal_index, review_index in matches:
+      true_match_map[(review_id, rebuttal_index)].append(review_index)
+
+  return example_identifiers, true_match_map
+
+def get_index_to_rank_map(score_map):
+  sorted_scores = sorted(score_map.values(), reverse=True)
+  index_to_rank_map = {}
+  for index, score in score_map.items():
+    index_to_rank_map[int(index)] = sorted_scores.index(score) + 1
+  return index_to_rank_map
+
+def mean(l):
+  if not l:
+    return None
+  return sum(l)/len(l)
+
+
+def get_mrrs(epoch_data, example_identifiers, true_match_map):
+
+  prediction_maps = collections.defaultdict(lambda:
+  collections.defaultdict(list))
+  for index, predicted_score in epoch_data.train_score_map.items():
+    example_identifier = example_identifiers[index]
+    review_id, rev_index_str, reb_index_str = example_identifier.rsplit("_", 2)
+    prediction_maps[(review_id, int(reb_index_str))][rev_index_str] = predicted_score
+
+  for k in sorted(prediction_maps.keys()):
+    v = prediction_maps[k]
+    print(k, len(v))
+
+  mrr_accumulator = []
+  for key, score_map in prediction_maps.items():
+    index_to_rank_map = get_index_to_rank_map(score_map)
+    print(true_match_map[key])
+    print(index_to_rank_map)
+    if true_match_map[key]:
+      rrs = []
+      for k in true_match_map[key]:
+        if k in index_to_rank_map:
+          rrs.append(1.0/index_to_rank_map[k])
+      mrr_accumulator.append(mean(rrs))
+
+  return mean(list(i for i in mrr_accumulator if i is not None))
+
+
+
 def main():
 
   args = parser.parse_args()
@@ -97,6 +153,9 @@ def main():
   model = classification_lib.BERTRegresser(
       dataset_tools.device).to(dataset_tools.device)
   optimizer = optim.Adam(model.parameters())
+
+
+  example_identifiers, true_match_map = get_match_map()
 
   model_save_name = classification_lib.get_checkpoint_name()
 
@@ -130,6 +189,9 @@ def main():
     experiment.log_metric("Batch val MSE", this_epoch_data.val_mse,
     step=epoch)
 
+    experiment.log_metric("Train MRR", 
+    get_mrrs(this_epoch_data, example_identifiers, true_match_map), step=epoch)
+
     if this_epoch_data.val_mse < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
       best_valid_loss = this_epoch_data.val_mse
@@ -142,4 +204,3 @@ def main():
 
 if __name__ == "__main__":
   main()
-
