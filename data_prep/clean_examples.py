@@ -27,7 +27,7 @@ def process_review_sentences(review_sentence_annotations, review_text,
     for str_index in sorted(review_sentence_annotations.keys()):
       sentence = review_sentence_annotations[str_index]
       if merge_prev[int(str_index)]:
-        # TODO: W are not keeping this! make sure we get the text elsewhere
+        # TODO: We are not keeping this! make sure we get the text elsewhere
         if dpl.recursive_json_load(sentence["labels"]):
           # This is expected to be empty
           # TODO: Log this exception
@@ -68,7 +68,8 @@ def process_review_sentences(review_sentence_annotations, review_text,
   return final_sentence_list, original_index_to_merged_index
 
 
-def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text, merge_map):
+def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
+    merge_map):
   final_rebuttal_sentences = []
 
   (review_id, rebuttal_id), = set([
@@ -80,9 +81,19 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text, mer
     index, label, coarse, alignment = dpl.clean_rebuttal_label(
         sentence, merge_map)
 
+    #if dpl.recursive_json_load(sentence["fields"]["errors"])["merge_prev"]:
+    #  assert final_rebuttal_sentences
+    #  if (label == final_rebuttal_sentences[-1].fine and
+    #      alignment == final_rebuttal_sentences[-1].alignment):
+    #    old_sentence = 
+
     final_rebuttal_sentences.append(
         dpl.RebuttalSentence(review_id, rebuttal_id, index,
                              rebuttal_text[index], coarse, label, alignment))
+    prev_sentence = sentence
+
+
+    #print(coarse + "\t" + label + "\t" + rebuttal_text[index])
   return final_rebuttal_sentences
 
 
@@ -148,11 +159,31 @@ def main():
   final_annotations, extra_annotations = process_all_annotations(
       annotation_collections, text_map)
 
+  rev_lens = []
+  reb_lens = []
+  for i in final_annotations:
+    rev_lens.append(len(i.review_sentences))
+    reb_lens.append(len(i.rebuttal_sentences))
+
+  #print(sum(rev_lens)/len(rev_lens))
+  #print(sum(reb_lens)/len(reb_lens))
+
   write_annotations_to_dir(final_annotations, "final_dataset/")
   write_annotations_to_dir(extra_annotations,
                              "extra_annotations/",
                              append_annotator=True)
 
+  for annotation in final_annotations:
+    break
+    review_id = annotation.meta["review_id"]
+    for sentence in annotation.review_sentences:
+      print("\t".join(["review", review_id, sentence.coarse,
+      sentence.fine, sentence.asp, sentence.pol, sentence.text,
+      str(len(sentence.text))] ))
+
+    for sentence in annotation.rebuttal_sentences:
+      print("\t".join(["rebuttal", review_id, sentence.coarse,
+      sentence.fine, "", "", sentence.text, str(len(sentence.text))]))
 
 
 

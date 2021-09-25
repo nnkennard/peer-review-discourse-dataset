@@ -79,8 +79,6 @@ class Annotation(object):
 with open('subset_map.json', 'r') as f:
   SUBSET_MAP = json.load(f)
 
-                       
-
 # Utilities
 
 GUEST_CLIENT = openreview.Client(baseurl='https://api.openreview.net')
@@ -144,7 +142,24 @@ def clean_review_label(review_sentence_row):
 
 Alignment = collections.namedtuple("Alignment",
                                    "category aligned_indices".split())
+RebuttalDetails = collections.namedtuple("RebuttalDetails",
+                  "is_empty request_out_of_scope manuscript_change".split())
 
+REBUTTAL_DETAILS_MAP = {
+
+  "rebuttal_by-cr_manu_No": ("rebuttal_by-cr", RebuttalDetails(False, False, None)),
+  "rebuttal_by-cr_manu_Yes": ("rebuttal_by-cr", RebuttalDetails(False, True, None)),
+  "rebuttal_reject-request_scope_No": ("rebuttal_reject-request", RebuttalDetails(False, None, None)),
+  "rebuttal_reject-request_scope_Yes":  ("rebuttal_reject-request", RebuttalDetails(False, None, None)),
+  "rebuttal_done_manu_No":  ("rebuttal_done", RebuttalDetails(False, None, None)),
+  "rebuttal_done_manu_Yes":  ("rebuttal_done", RebuttalDetails(False, None, None)),
+}
+
+def build_rebuttal_details_from_label(label):
+  if "_No" not in label and "_Yes" not in label:
+    return label, RebuttalDetails(True, None, None)
+  else:
+    return REBUTTAL_DETAILS_MAP[label]
 
 def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
   index, aligned_array, raw_label, raw_category = [
@@ -154,24 +169,29 @@ def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
       ]
   ]
 
-  label = LABEL_MAP[raw_label]
+  #print(raw_category)
+
+  label, details = build_rebuttal_details_from_label(LABEL_MAP[raw_label])
   coarse = REBUTTAL_FINE_TO_COARSE[label]
 
   aligned_indices = [
       merge_map[i] for i, val in enumerate(json.loads(aligned_array)) if val
   ]
 
+  alignment_category = CONTEXT_TYPE_MAP[raw_category]
+
   if aligned_indices == list(range(len(aligned_indices))):
-    alignment = Alignment("context_global", None)
+    if alignment_category == "context_sentences":
+      alignment_category = "context_error"
+    alignment = Alignment(alignment_category, None)
   elif not aligned_indices:
     assert False
   else:
     assert aligned_indices
-    category = CONTEXT_TYPE_MAP[raw_category]
-    if category == "context_sentences":
-      alignment = Alignment(category, aligned_indices)
+    if alignment_category == "context_sentences":
+      alignment = Alignment(alignment_category, aligned_indices)
     else:
-      alignment = Alignment(category, None)
+      alignment = Alignment(alignment_category, None)
 
   return index, label, coarse, alignment
 

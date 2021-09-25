@@ -1,0 +1,234 @@
+label_descriptions:
+  asp_clarity:
+    domain: review
+    category: aspect
+    nice_name: Clarity
+    description: 'Is the paper clear, well-written and well-structured?'
+  asp_meaningful-comparison:
+    domain: review
+    category: aspect
+    nice_name: Meaningful Comparison
+    description: Are the comparisons to prior work sufficient and fair?
+  asp_motivation-impact:
+    domain: review
+    category: aspect
+    nice_name: Motivation/Impact
+    description: Does the paper address an important problem?
+  asp_originality:
+    domain: review
+    category: aspect
+    nice_name: Originality
+    description: 'Are there new topics, technique, methodology, or insights?'
+  asp_replicability:
+    domain: review
+    category: aspect
+    nice_name: Replicability
+    description: Is it easy to reproduce and verify the correctness of the results?
+  asp_soundness-correctness:
+    domain: review
+    category: aspect
+    nice_name: Soundness/Correctness
+    description: Is the approach sound? Are the claims supported?
+  asp_substance:
+    domain: review
+    category: aspect
+    nice_name: Substance
+    description: Are there substantial experiments and/or detailed analyses?
+  arg_evaluative:
+    domain: review
+    category: review_function
+    nice_name: Evaluative
+    description: A subjective judgement of an Aspect of the paper
+  arg_fact:
+    domain: review
+    category: review_function
+    nice_name: Fact
+    description: 'An objective truth, typically used to support a claim'
+  arg_other:
+    domain: review
+    category: review_function
+    nice_name: Other
+    description: '???'
+  arg_request:
+    domain: review
+    category: review_function
+    nice_name: Request
+    description: A request for information or change in regards to the paper
+  arg_social:
+    domain: review
+    category: review_function
+    nice_name: Social
+    description: Non-substantive text typically governed by social conventions
+  arg_structuring:
+    domain: review
+    category: review_function
+    nice_name: Structuring
+    description: Text used to organize an argument
+  pol_positive:
+    domain: review
+    category: polarity
+    nice_name: Positive
+    description: Positively describes an aspect of the paper (reason to accept)
+  pol_negative:
+    domain: review
+    category: polarity
+    nice_name: Negative
+    description: Negatively describes an aspect of the paper (reason to reject)
+  pol_neutral:
+    domain: review
+    category: polarity
+    nice_name: Neutral
+    description: Does not commit to being positive or negative
+  arg-structuring_heading:
+    domain: review
+    category: sub_struct
+    nice_name: Heading
+    description: Text used to organize sections of the review
+  arg-structuring_quote:
+    domain: review
+    category: sub_struct
+    nice_name: Quote
+    description: A quote from the manuscript text
+  arg-structuring_summary:
+    domain: review
+    category: sub_struct
+    nice_name: Summary
+    description: Reviewer's summary of the manuscript
+  arg-request_clarification:
+    domain: review
+    category: sub_request
+    nice_name: Clarification
+    description: Request to clarify of the meaning of some text (question)
+  arg-request_edit:
+    domain: review
+    category: sub_request
+    nice_name: Edit
+    description: Request to edit the text in the manuscript
+  arg-request_experiment:
+    domain: review
+    category: sub_request
+    nice_name: Experiment
+    description: Request for additional experiments or results
+  arg-request_explanation:
+    domain: review
+    category: sub_request
+    nice_name: Explanation
+    description: Request to explain of scientific choices (question)
+  arg-request_result:
+    domain: review
+    category: sub_request
+    nice_name: Result
+    description: '???'
+  arg-request_typo:
+    domain: review
+    category: sub_request
+    nice_name: Typo
+    description: Request to fix a typo in the manuscript
+
+  rebuttal_accept-praise:
+    domain: rebuttal
+    category: concur
+    nice_name: "Accept praise"
+    description: ""
+    reply-to: arg_evaluative
+  rebuttal_answer:
+    domain: rebuttal
+    category: concur
+    nice_name: "Answer"
+    description: "Answer a question"
+    reply-to: arg_request
+  rebuttal_by-cr:
+    domain: rebuttal
+    category: concur
+    nice_name: "Task will be done"
+    description: "Change promised by camera ready deadline"
+    reply-to: arg_request
+  rebuttal_concede-criticism:
+    domain: rebuttal
+    category: concur
+    nice_name: "Concede criticism"
+    description: "Concede the validity of a negative evaluative statement"
+    reply-to: arg_evaluative
+  rebuttal_contradict-assertion:
+    domain: rebuttal
+    category: dispute
+    nice_name: "Contradict assertion"
+    description: "Contradict a statement presented as a fact"
+    reply-to: arg_fact
+  rebuttal_done:
+    domain: rebuttal
+    category: concur
+    nice_name: "Task has been done"
+    description: "Claim that a requested task has been completed"
+    reply-to: arg_request
+  rebuttal_followup:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "Followup question"
+    description: "Clarification question addressed to the reviewer"
+    reply-to: "-"
+  rebuttal_future:
+    domain: rebuttal
+    category: concur
+    nice_name: "Accept for future work"
+    description: "Express approval for a suggestion, but for future work"
+    reply-to: arg_request
+  rebuttal_mitigate-criticism:
+    domain: rebuttal
+    category: dispute
+    nice_name: "Mitigate criticism"
+    description: "Mitigate the importance of a negative evaluative statement"
+    reply-to: arg_evaluative
+  rebuttal_none:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "None"
+    description: "???"
+    reply-to: "-"
+  rebuttal_other:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "Other"
+    description: "???"
+    reply-to: "-"
+  rebuttal_refute-question:
+    domain: rebuttal
+    category: dispute
+    nice_name: "Refute question"
+    description: "Reject the validity of a question"
+    reply-to: arg_request
+  rebuttal_reject-criticism:
+    domain: rebuttal
+    category: dispute
+    nice_name: "Reject criticism"
+    description: "Reject the validity of a negative evaluative statement"
+    reply-to: arg_evaluative
+  rebuttal_social:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "Social"
+    description: "Non-substantive text typically governed by social conventions"
+    reply-to: "-"
+  rebuttal_structuring:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "Structuring"
+    description: "Text used to organize sections of the review"
+    reply-to: "-"
+  rebuttal_summary:
+    domain: rebuttal
+    category: nonarg
+    nice_name: "Summary"
+    description: "Summary of the rebuttal text"
+    reply-to: "-"
+
+
+category_names:
+  sub_struct: "Struct."
+  sub_request: "Request"
+  aspect: Aspect
+  review_function: "Review function"
+  polarity: Polarity
+  concur: Concur
+  dispute: Dispute
+  nonarg: Non-argumentative
