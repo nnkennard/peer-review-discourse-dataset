@@ -1,4 +1,6 @@
 import collections
+import glob
+import json
 import sys
 import yaml
 
@@ -9,12 +11,12 @@ TABLE_START_CLOSE = r"""}
 \toprule
 """
 TABLE_END = r"""
-\\ \bottomrule
+\bottomrule
 \end{tabular}
 \end{table*}
 """
 
-def rebuttal_description_table(info, category_names):
+def rebuttal_description_table(info, category_namesi, overall_counts):
   rows = collections.defaultdict(list)
   arg_names = {"-":"-"}
   for label, label_info in info.items():
@@ -23,87 +25,48 @@ def rebuttal_description_table(info, category_names):
         arg_names[label] = label_info["nice_name"]
       continue
     rows[label_info["category"]].append(
-        (label_info["nice_name"], label_info["reply-to"]))
+        (label, label_info["nice_name"], label_info["description"],
+        label_info["reply-to"]))
 
-  print(arg_names)
+  relevant_counts = {}
+  for row in sum(rows.values(), []):
+    relevant_counts[row[0]] = overall_counts[row[0]]
+  percentages = {}
+  for k, v in relevant_counts.items():
+    percentages[k] = v/sum(relevant_counts.values())
 
-  for k, v in rows.items():
-    print(k)
-    for i in v:
-      print(i)
-
-  table_string = ""
+  table_string = "Category & & Label & Description & Reply to & Percentage \\\\ \n \\midrule \n"
 
   for category, category_rows in rows.items():
     this_category_num_rows = len(category_rows)
-    first_row = category_rows.pop(0)
-    table_string += "".join([
-          r"\multicolumn{2}{c}{\multirow{",
-          str(this_category_num_rows), r"}{*}{\rotatebox[origin=c]{90}{",
-          category_names[category], r"}}} & ", first_row[0], r" & ",
-          arg_names[first_row[1]],
-          r" \\", '\n'
-      ])
-    for row in category_rows:
+    for row in sorted(category_rows, key=lambda x:percentages[x[0]], reverse=True):
       table_string += "".join(
-            ["& ", row[0], r" & ", arg_names[row[1]], r" \\", '\n'])
+            ["& & ", row[1], r" & ", row[2], " & ", arg_names[row[3]], " & ",
+            "{:.2%}".format(percentages[row[0]]).replace("%", "\\%"),  r" \\", '\n'])
 
-  return build_booktabs_table(table_string, 5)
+  return build_booktabs_table(table_string, 6)
 
-def review_description_table(info, category_names):
+def review_description_table(info, category_names, overall_counts,
+  num_review_sentences):
   rows = collections.defaultdict(list)
   for label, label_info in info.items():
     if label_info["domain"] == "rebuttal":
       continue
     rows[label_info["category"]].append(
-        (label_info["nice_name"], label_info["description"]))
+        (label_info["nice_name"], label_info["description"],
+        overall_counts[label]
+        ))
 
   table_string = ""
-  sub_started = False
 
   for category, category_rows in rows.items():
-    this_category_num_rows = len(category_rows)
-    first_row = category_rows.pop(0)
-    if 'sub' not in category:
-      table_string += "".join([
-          r"\multicolumn{2}{c}{\multirow{",
-          str(this_category_num_rows), r"}{*}{\rotatebox[origin=c]{90}{",
-          category_names[category], r"}}} & ", first_row[0], r" & ", first_row[1],
-          r" \\", '\n'
-      ])
-      for row in category_rows:
-        table_string += "".join(
-            [" & & ", row[0], r" & ", row[1], r" \\", '\n'])
-    else:
-      if sub_started:
-        table_string += "".join([
-          r" & \multirow{",
-          str(this_category_num_rows), r"}{*}{\rotatebox[origin=c]{90}{",
-          category_names[category], r"}} & ", first_row[0], r" & ", first_row[1],
-          r" \\", '\n'
-      ])
-      else:
-         table_string += "".join([
-          r"\multirow{8}{*}{\rotatebox[origin=c]{90}{Subtypes}} & ",
-          r"\multirow{",
-          str(this_category_num_rows), r"}{*}{\rotatebox[origin=c]{90}{",
-          category_names[category], r"}} & ", first_row[0], r" & ", first_row[1],
-          r" \\", '\n'
-      ])
-         sub_started = True
-      for row in category_rows:
-        table_string += "".join(
-            [" & & ", row[0], r" & ", row[1], r" \\", '\n'])
-
-    if category == "sub_request":
-      break
-    if sub_started:
-      table_string += r"\cmidrule(lr){2-4}" + "\n"
-    else:
-      table_string += r"\cmidrule(lr){1-4}" + "\n"
-
-
-  return build_booktabs_table(table_string, 4)
+   for row in sorted(category_rows, reverse=True, key=lambda x:x[-1]):
+      table_string += "".join(
+          [" & & ", row[0], r" & ", row[1], " & ",
+          "{:.2%}".format(row[2]/num_review_sentences).replace("%", "\\%"),
+          r" \\", '\n'])
+    
+  return build_booktabs_table(table_string, 5)
 
 
 def build_booktabs_table(table_content, num_cols):
@@ -112,10 +75,41 @@ def build_booktabs_table(table_content, num_cols):
 
 def main():
 
+  dataset_dir = "../data_prep/final_dataset/"
+
+  SUBSETS = "train dev test".split()
+
+  datasets = collections.defaultdict(list)
+
+  for subset in SUBSETS:
+      for filename in glob.glob(dataset_dir + subset + "/*"):
+          with open(filename, 'r') as f:
+              datasets[subset].append(json.load(f))
+
+  all_pairs = sum(datasets.values(), [])
+
+  overall_counts = collections.Counter()
+  num_review_sentences = 0
+  for pair in all_pairs:
+    num_review_sentences += len(pair["review_sentences"])
+    for sentence in pair["review_sentences"]:
+      for key in "coarse fine pol asp".split():
+        overall_counts[sentence[key]] += 1
+    for sentence in pair["rebuttal_sentences"]:
+      for key in "coarse fine".split():
+        overall_counts[sentence[key]] += 1
+
+
   with open("manuscript-lookups.yaml", 'r') as f:
     k = yaml.safe_load(f)
-    p = review_description_table(k["label_descriptions"], k["category_names"])
-    p = rebuttal_description_table(k["label_descriptions"], k["category_names"])
+    p = review_description_table(k["label_descriptions"], k["category_names"],
+    overall_counts, num_review_sentences)
+    print(p)
+
+    print()
+
+    p = rebuttal_description_table(k["label_descriptions"],
+    k["category_names"], overall_counts)
     print(p)
 
 
