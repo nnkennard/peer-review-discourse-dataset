@@ -50,6 +50,9 @@ def review_description_table(info, category_names, overall_counts,
   num_review_sentences):
   rows = collections.defaultdict(list)
   for label, label_info in info.items():
+    if label in ["arg_other", "arg-request_result"]:
+      print(label)
+      continue
     if label_info["domain"] == "rebuttal":
       continue
     rows[label_info["category"]].append(
