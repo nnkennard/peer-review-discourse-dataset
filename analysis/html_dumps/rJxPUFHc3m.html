@@ -1,0 +1,494 @@
+
+<HTML>
+   <head>
+      <title> Review-rebuttal alignment viewer </title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+   </head>
+   <body>
+ <div class="container">
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 0<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_global<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 <b>Dear Reviewer:</b> Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 1<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_global<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: <b>Thank you for your valuable comments.</b> We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 2<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. <b>The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time?</b> I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. <b>We have addressed typos in the revision accordingly.</b> And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 3<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_in-rebuttal<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. <b>And please find our response as follows.</b> -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 4<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. <b>The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time?</b> I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. <b>-  Can you be more specific about the gains in training versus inference time?</b> We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 5<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. <b>The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time?</b> I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? <b>We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time.</b> According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 6<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. <b>The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time?</b> I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. <b>According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one.</b> - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 7<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. <b>You motivate some of the work by the fact that the experts have overlapping outputs.</b> <b>Maybe in section 3.7 you can address how often that occurs as well?</b> Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. <b>- You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well?</b> Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 8<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. <b>You motivate some of the work by the fact that the experts have overlapping outputs.</b> <b>Maybe in section 3.7 you can address how often that occurs as well?</b> Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? <b>Thanks for the suggestion.</b> We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 9<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. <b>You motivate some of the work by the fact that the experts have overlapping outputs.</b> <b>Maybe in section 3.7 you can address how often that occurs as well?</b> Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. <b>We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b).</b> We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 10<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. <b>You motivate some of the work by the fact that the experts have overlapping outputs.</b> <b>Maybe in section 3.7 you can address how often that occurs as well?</b> Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). <b>We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping.</b> - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 11<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: <b>- it wasn't clear how the sparsity percentage on page 3 was defined?</b> - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. <b>- It wasn't clear how the sparsity percentage on page 3 was defined?</b> Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 12<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: <b>- it wasn't clear how the sparsity percentage on page 3 was defined?</b> - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? <b>Sorry for the possible confusion.</b> The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 13<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: <b>- it wasn't clear how the sparsity percentage on page 3 was defined?</b> - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. <b>The sparsity in page 3 means the percentage of pruned words.</b> We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 14<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: <b>- it wasn't clear how the sparsity percentage on page 3 was defined?</b> - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. <b>We have added more clarifications in the revised version.</b> - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 15<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? <b>- can you motivate why you are not using perplexity in section 3.2?</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. <b>- Can you motivate why you are not using perplexity in section 3.2?</b> We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 16<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? <b>- can you motivate why you are not using perplexity in section 3.2?</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? <b>We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]).</b> Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 17<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? <b>- can you motivate why you are not using perplexity in section 3.2?</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). <b>Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval.</b> For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 18<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? <b>- can you motivate why you are not using perplexity in section 3.2?</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. <b>For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k)</b> , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 19<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? <b>- can you motivate why you are not using perplexity in section 3.2?</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) <b>, it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval.</b> [1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference<br/><b>Rebuttal index</b>: 20<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_in-rebuttal<br /> <br/>In this paper the authors introduce a new technique for softmax inference. In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert. Then, given the expert, output a particular category. The first level of sparsity comes from the first expert. The second level of sparsity comes from every expert only outputting a limited set of output categories. The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. "search right" -> "search for the right", "predict next word" -> "predict the next word", ...) In section 3, can you be more specific about the gains in training versus inference time? I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well. You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Nits: - it wasn't clear how the sparsity percentage on page 3 was defined? - can you motivate why you are not using perplexity in section 3.2? 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 Dear Reviewer: Thank you for your valuable comments. We have addressed typos in the revision accordingly. And please find our response as follows. -  Can you be more specific about the gains in training versus inference time? We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time. According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one. - You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well? Thanks for the suggestion. We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b). We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping. - It wasn't clear how the sparsity percentage on page 3 was defined? Sorry for the possible confusion. The sparsity in page 3 means the percentage of pruned words. We have added more clarifications in the revised version. - Can you motivate why you are not using perplexity in section 3.2? We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]). Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval. For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldnt be retrieved by top-k for any reasonably small k) , it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval. <b>[1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+</div>
+   </body>
+</HTML>

@@ -1,0 +1,126 @@
+
+<HTML>
+   <head>
+      <title> Review-rebuttal alignment viewer </title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+   </head>
+   <body>
+ <div class="container">
+
+ <h1 class="subtitle"> <b>Title</b>: Mathematical Reasoning in Latent Space<br/><b>Rebuttal index</b>: 0<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_global<br /> <br/>= Summary Embeddings of mathematical theorems and rewrite rules are presented. An in-depth analysis of the resulting embeddings is presented, showing that a network can learn to "apply" embedded rewrite rules to embedded theorems, yielding results that are similar to the embedding of the rewritten theorem. [i.e., app'(emb(thm), emb(rule)) is near to emb(app(thm, rule))] This is an interesting property for the application of deep learning to automated theorem proving, though not directly a breakthrough result. = Strong/Weak Points + Simply a cute result, showing that proof search can remain in embedding space for a limited time horizon without having to switch back into the theorem prover environment. + Nicely designed experiments testing this (somewhat surprising) property empirically - Missed opportunity of better analysis of which theorem/rewrite rule properties are more likely to fail - Writing sometimes a bit overcomplicated (e.g., Sect. 4.5 could just be a figure of a commuting diagram and two sentences...) - Architecture choice unclear: Why are $\sigma$ and $\omega$ separate networks. This is discussed on p4, but it's unclear to me how keeping $\sigma$ separate is benefitial for the analysis, and this is not picked up again explicitly again? = Recommendation Overall, this is a nice, somewhat surprising result. The writing and experiments could use some improvement, but I believe that the majority of the ICLR audience would enjoy seeing this result (even though it would have no impact on most people's research) = Detailed Comments - page 4, Sect. 4.4: Architecture of $\alpha$ would be nice (more than a linear layer?) - page 5, paragraph 3: "we from some" -> "we start from some" - p6par1: "much cheaper then computing" -> than - p6par6: "on formulas that with" -> no that - p6par7: "measure how rate" -> "measure the rate" - p8par1: "approximate embedding $\alpha(e(\gamma'(...)))$ - $e$ is undefined and should probably be $e'$ (this is also the case in the caption of Fig. 5), and $c'$ should probably be included as well. However, I don't understand the use of $\alpha$ here. If Fig. 4 is following Fig. 3 in considering $p(c(\gamma(T), \pi(P)))$, then Fig. 4 should plot the performance of, e.g., $p(c(e'(c'(\gamma'(T_{i-1}), \pi'(P_{i-1}))), \pi(P_i)))$ (i.e., $p$ applied to approximate embedding of $T_i$ and ("true") embedding of $P_i$). I believe that's what "Pred (One Step)" expresses, but it would maybe be generally helpful to be more precise about the notation in Sect. 6. 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 <b>We thank the reviewer for the great feedback.</b> We have simplified the architecture described in the paper by combining the networks $\sigma$ and $\omega$, and included the results from this architecture as well, producing a more robust architecture that performs better for multiple rewrite steps (while keeping the original, more complicated solution as one of the baselines). As suggested, we have added further analysis of failure cases. We also corrected the typos and clarified the definitions of True, Pred (One Step) and Pred (Multi Step) variants. We are very grateful for the review that helped to improve the paper significantly. 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Mathematical Reasoning in Latent Space<br/><b>Rebuttal index</b>: 1<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>= Summary Embeddings of mathematical theorems and rewrite rules are presented. An in-depth analysis of the resulting embeddings is presented, showing that a network can learn to "apply" embedded rewrite rules to embedded theorems, yielding results that are similar to the embedding of the rewritten theorem. [i.e., app'(emb(thm), emb(rule)) is near to emb(app(thm, rule))] This is an interesting property for the application of deep learning to automated theorem proving, though not directly a breakthrough result. = Strong/Weak Points + Simply a cute result, showing that proof search can remain in embedding space for a limited time horizon without having to switch back into the theorem prover environment. + Nicely designed experiments testing this (somewhat surprising) property empirically - Missed opportunity of better analysis of which theorem/rewrite rule properties are more likely to fail - Writing sometimes a bit overcomplicated (e.g., Sect. 4.5 could just be a figure of a commuting diagram and two sentences...) <b>- Architecture choice unclear: Why are $\sigma$ and $\omega$ separate networks.</b> <b>This is discussed on p4, but it's unclear to me how keeping $\sigma$ separate is benefitial for the analysis, and this is not picked up again explicitly again?</b> = Recommendation Overall, this is a nice, somewhat surprising result. The writing and experiments could use some improvement, but I believe that the majority of the ICLR audience would enjoy seeing this result (even though it would have no impact on most people's research) = Detailed Comments - page 4, Sect. 4.4: Architecture of $\alpha$ would be nice (more than a linear layer?) - page 5, paragraph 3: "we from some" -> "we start from some" - p6par1: "much cheaper then computing" -> than - p6par6: "on formulas that with" -> no that - p6par7: "measure how rate" -> "measure the rate" - p8par1: "approximate embedding $\alpha(e(\gamma'(...)))$ - $e$ is undefined and should probably be $e'$ (this is also the case in the caption of Fig. 5), and $c'$ should probably be included as well. However, I don't understand the use of $\alpha$ here. If Fig. 4 is following Fig. 3 in considering $p(c(\gamma(T), \pi(P)))$, then Fig. 4 should plot the performance of, e.g., $p(c(e'(c'(\gamma'(T_{i-1}), \pi'(P_{i-1}))), \pi(P_i)))$ (i.e., $p$ applied to approximate embedding of $T_i$ and ("true") embedding of $P_i$). I believe that's what "Pred (One Step)" expresses, but it would maybe be generally helpful to be more precise about the notation in Sect. 6. 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 We thank the reviewer for the great feedback. <b>We have simplified the architecture described in the paper by combining the networks $\sigma$ and $\omega$, and included the results from this architecture as well, producing a more robust architecture that performs better for multiple rewrite steps (while keeping the original, more complicated solution as one of the baselines).</b> As suggested, we have added further analysis of failure cases. We also corrected the typos and clarified the definitions of True, Pred (One Step) and Pred (Multi Step) variants. We are very grateful for the review that helped to improve the paper significantly. 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Mathematical Reasoning in Latent Space<br/><b>Rebuttal index</b>: 2<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_sentences<br /> <br/>= Summary Embeddings of mathematical theorems and rewrite rules are presented. An in-depth analysis of the resulting embeddings is presented, showing that a network can learn to "apply" embedded rewrite rules to embedded theorems, yielding results that are similar to the embedding of the rewritten theorem. [i.e., app'(emb(thm), emb(rule)) is near to emb(app(thm, rule))] This is an interesting property for the application of deep learning to automated theorem proving, though not directly a breakthrough result. = Strong/Weak Points + Simply a cute result, showing that proof search can remain in embedding space for a limited time horizon without having to switch back into the theorem prover environment. + Nicely designed experiments testing this (somewhat surprising) property empirically <b>- Missed opportunity of better analysis of which theorem/rewrite rule properties are more likely to fail</b> - Writing sometimes a bit overcomplicated (e.g., Sect. 4.5 could just be a figure of a commuting diagram and two sentences...) - Architecture choice unclear: Why are $\sigma$ and $\omega$ separate networks. This is discussed on p4, but it's unclear to me how keeping $\sigma$ separate is benefitial for the analysis, and this is not picked up again explicitly again? = Recommendation Overall, this is a nice, somewhat surprising result. The writing and experiments could use some improvement, but I believe that the majority of the ICLR audience would enjoy seeing this result (even though it would have no impact on most people's research) = Detailed Comments - page 4, Sect. 4.4: Architecture of $\alpha$ would be nice (more than a linear layer?) - page 5, paragraph 3: "we from some" -> "we start from some" - p6par1: "much cheaper then computing" -> than - p6par6: "on formulas that with" -> no that - p6par7: "measure how rate" -> "measure the rate" - p8par1: "approximate embedding $\alpha(e(\gamma'(...)))$ - $e$ is undefined and should probably be $e'$ (this is also the case in the caption of Fig. 5), and $c'$ should probably be included as well. However, I don't understand the use of $\alpha$ here. If Fig. 4 is following Fig. 3 in considering $p(c(\gamma(T), \pi(P)))$, then Fig. 4 should plot the performance of, e.g., $p(c(e'(c'(\gamma'(T_{i-1}), \pi'(P_{i-1}))), \pi(P_i)))$ (i.e., $p$ applied to approximate embedding of $T_i$ and ("true") embedding of $P_i$). I believe that's what "Pred (One Step)" expresses, but it would maybe be generally helpful to be more precise about the notation in Sect. 6. 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 We thank the reviewer for the great feedback. We have simplified the architecture described in the paper by combining the networks $\sigma$ and $\omega$, and included the results from this architecture as well, producing a more robust architecture that performs better for multiple rewrite steps (while keeping the original, more complicated solution as one of the baselines). <b>As suggested, we have added further analysis of failure cases.</b> We also corrected the typos and clarified the definitions of True, Pred (One Step) and Pred (Multi Step) variants. We are very grateful for the review that helped to improve the paper significantly. 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Mathematical Reasoning in Latent Space<br/><b>Rebuttal index</b>: 3<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_global<br /> <br/>= Summary Embeddings of mathematical theorems and rewrite rules are presented. An in-depth analysis of the resulting embeddings is presented, showing that a network can learn to "apply" embedded rewrite rules to embedded theorems, yielding results that are similar to the embedding of the rewritten theorem. [i.e., app'(emb(thm), emb(rule)) is near to emb(app(thm, rule))] This is an interesting property for the application of deep learning to automated theorem proving, though not directly a breakthrough result. = Strong/Weak Points + Simply a cute result, showing that proof search can remain in embedding space for a limited time horizon without having to switch back into the theorem prover environment. + Nicely designed experiments testing this (somewhat surprising) property empirically - Missed opportunity of better analysis of which theorem/rewrite rule properties are more likely to fail - Writing sometimes a bit overcomplicated (e.g., Sect. 4.5 could just be a figure of a commuting diagram and two sentences...) - Architecture choice unclear: Why are $\sigma$ and $\omega$ separate networks. This is discussed on p4, but it's unclear to me how keeping $\sigma$ separate is benefitial for the analysis, and this is not picked up again explicitly again? = Recommendation Overall, this is a nice, somewhat surprising result. The writing and experiments could use some improvement, but I believe that the majority of the ICLR audience would enjoy seeing this result (even though it would have no impact on most people's research) = Detailed Comments - page 4, Sect. 4.4: Architecture of $\alpha$ would be nice (more than a linear layer?) - page 5, paragraph 3: "we from some" -> "we start from some" - p6par1: "much cheaper then computing" -> than - p6par6: "on formulas that with" -> no that - p6par7: "measure how rate" -> "measure the rate" - p8par1: "approximate embedding $\alpha(e(\gamma'(...)))$ - $e$ is undefined and should probably be $e'$ (this is also the case in the caption of Fig. 5), and $c'$ should probably be included as well. However, I don't understand the use of $\alpha$ here. If Fig. 4 is following Fig. 3 in considering $p(c(\gamma(T), \pi(P)))$, then Fig. 4 should plot the performance of, e.g., $p(c(e'(c'(\gamma'(T_{i-1}), \pi'(P_{i-1}))), \pi(P_i)))$ (i.e., $p$ applied to approximate embedding of $T_i$ and ("true") embedding of $P_i$). I believe that's what "Pred (One Step)" expresses, but it would maybe be generally helpful to be more precise about the notation in Sect. 6. 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 We thank the reviewer for the great feedback. We have simplified the architecture described in the paper by combining the networks $\sigma$ and $\omega$, and included the results from this architecture as well, producing a more robust architecture that performs better for multiple rewrite steps (while keeping the original, more complicated solution as one of the baselines). As suggested, we have added further analysis of failure cases. <b>We also corrected the typos and clarified the definitions of True, Pred (One Step) and Pred (Multi Step) variants.</b> We are very grateful for the review that helped to improve the paper significantly. 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+ <h1 class="subtitle"> <b>Title</b>: Mathematical Reasoning in Latent Space<br/><b>Rebuttal index</b>: 4<br> </h1>
+ <div class="columns">
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                <b>Context type</b>: context_global<br /> <br/>= Summary Embeddings of mathematical theorems and rewrite rules are presented. An in-depth analysis of the resulting embeddings is presented, showing that a network can learn to "apply" embedded rewrite rules to embedded theorems, yielding results that are similar to the embedding of the rewritten theorem. [i.e., app'(emb(thm), emb(rule)) is near to emb(app(thm, rule))] This is an interesting property for the application of deep learning to automated theorem proving, though not directly a breakthrough result. = Strong/Weak Points + Simply a cute result, showing that proof search can remain in embedding space for a limited time horizon without having to switch back into the theorem prover environment. + Nicely designed experiments testing this (somewhat surprising) property empirically - Missed opportunity of better analysis of which theorem/rewrite rule properties are more likely to fail - Writing sometimes a bit overcomplicated (e.g., Sect. 4.5 could just be a figure of a commuting diagram and two sentences...) - Architecture choice unclear: Why are $\sigma$ and $\omega$ separate networks. This is discussed on p4, but it's unclear to me how keeping $\sigma$ separate is benefitial for the analysis, and this is not picked up again explicitly again? = Recommendation Overall, this is a nice, somewhat surprising result. The writing and experiments could use some improvement, but I believe that the majority of the ICLR audience would enjoy seeing this result (even though it would have no impact on most people's research) = Detailed Comments - page 4, Sect. 4.4: Architecture of $\alpha$ would be nice (more than a linear layer?) - page 5, paragraph 3: "we from some" -> "we start from some" - p6par1: "much cheaper then computing" -> than - p6par6: "on formulas that with" -> no that - p6par7: "measure how rate" -> "measure the rate" - p8par1: "approximate embedding $\alpha(e(\gamma'(...)))$ - $e$ is undefined and should probably be $e'$ (this is also the case in the caption of Fig. 5), and $c'$ should probably be included as well. However, I don't understand the use of $\alpha$ here. If Fig. 4 is following Fig. 3 in considering $p(c(\gamma(T), \pi(P)))$, then Fig. 4 should plot the performance of, e.g., $p(c(e'(c'(\gamma'(T_{i-1}), \pi'(P_{i-1}))), \pi(P_i)))$ (i.e., $p$ applied to approximate embedding of $T_i$ and ("true") embedding of $P_i$). I believe that's what "Pred (One Step)" expresses, but it would maybe be generally helpful to be more precise about the notation in Sect. 6. 
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="column">
+       <div class="card">
+          <div class="card-content">
+             <div class="content">
+                 We thank the reviewer for the great feedback. We have simplified the architecture described in the paper by combining the networks $\sigma$ and $\omega$, and included the results from this architecture as well, producing a more robust architecture that performs better for multiple rewrite steps (while keeping the original, more complicated solution as one of the baselines). As suggested, we have added further analysis of failure cases. We also corrected the typos and clarified the definitions of True, Pred (One Step) and Pred (Multi Step) variants. <b>We are very grateful for the review that helped to improve the paper significantly.</b> 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+</div>
+   </body>
+</HTML>
