@@ -1,11 +1,7 @@
-import torch
-
 import time
-import numpy as np
-
+import torch
 import torch.nn as nn
-from torchtext.legacy import data
-from transformers import BertTokenizer
+#from transformers import BertTokenizer
 from transformers import BertModel
 from contextlib import nullcontext
 
@@ -61,23 +57,40 @@ class DatasetTools(object):
     self.fields = fields
 
 
-def my_mse(preds, y):
-  k = torch.mean((preds - y)**2)
-  return k
+def get_checkpoint_name():
+  return "ws_ir_model_rank.pt"
 
 
-def loss_acc_wrapper(predictions, labels, criterion, metric):
+def do_epoch(model,
+             train_iterator,
+             optimizer,
+             valid_iterator,
+             loss,
+             eval_both=False):
 
-  return criterion(predictions, labels), metric(predictions, labels)
+  start_time = time.time()
+  if eval_both:
+    train_set_mode = "evaluate"
+  else:
+    train_set_mode = "train"
+  train_mse, train_score_map = train_or_evaluate(model, train_iterator,
+                                                 train_set_mode, loss,
+                                                 optimizer)
+  valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
+                                                 "evaluate", loss)
+  end_time = time.time()
+  return EpochData(start_time, end_time, train_mse, valid_mse, train_score_map,
+                   valid_score_map)
 
 
-CRITERION = nn.MSELoss()
+def report_epoch(epoch, epoch_data):
+  print((f'Epoch: {epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
+         f'{epoch_data.elapsed_secs}s\n'
+         f'\tTrain MSE: {epoch_data.train_mse:.3f} | '
+         f'\t Val. MSE: {epoch_data.val_mse:.3f}'))
 
 
-def train_or_evaluate(model,
-                      iterator,
-                      mode,
-                      optimizer=None):
+def train_or_evaluate(model, iterator, mode, loss_fn, optimizer=None):
   assert mode in "train evaluate".split()
 
   is_train = mode == "train"
@@ -103,11 +116,14 @@ def train_or_evaluate(model,
         optimizer.zero_grad()
 
       #predictions = model(batch.text).squeeze(1)
-      predictions = model(batch.review_text, batch.rebuttal_text).squeeze(1)
-      loss = CRITERION(predictions, batch.label)
-      
-      score_map.update({index:score.item() for index, score in zip(batch.index,
-      predictions)})
+      predictions = model(batch).squeeze(1)
+      loss = loss_fn(predictions, batch.score)
+
+
+      score_map.update({
+          index: score.item()
+          for index, score in zip(batch.overall_index, predictions)
+      })
 
       if is_train:
         loss.backward()
@@ -122,7 +138,7 @@ def train_or_evaluate(model,
 class EpochData(object):
 
   def __init__(self, start_time, end_time, train_mse, val_mse, train_score_map,
-  valid_score_map):
+               valid_score_map):
     self.train_mse = train_mse
     self.val_mse = val_mse
 
@@ -134,34 +150,6 @@ class EpochData(object):
     self.valid_score_map = valid_score_map
 
 
-
-def do_epoch(model,
-             train_iterator,
-             optimizer,
-             valid_iterator,
-             eval_both=False):
-
-  start_time = time.time()
-  if eval_both:
-    train_set_mode = "evaluate"
-  else:
-    train_set_mode = "train"
-  train_mse, train_score_map = train_or_evaluate(model, train_iterator,
-                                            train_set_mode, optimizer)
-  valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
-                                            "evaluate")
-  end_time = time.time()
-  return EpochData(start_time, end_time, train_mse, valid_mse, train_score_map,
-  valid_score_map)
-
-
-def report_epoch(epoch, epoch_data):
-  print((f'Epoch: {epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
-         f'{epoch_data.elapsed_secs}s\n'
-         f'\tTrain MSE: {epoch_data.train_mse:.3f} | '
-         f'\t Val. MSE: {epoch_data.val_mse:.3f}'))
- 
-
 class BERTRegresser(nn.Module):
 
   def __init__(self, device):
@@ -172,8 +160,7 @@ class BERTRegresser(nn.Module):
     self.device = device
 
     self.dropout = nn.Dropout(Hyperparams.dropout)
-    self.out = nn.Linear(
-        768, 1)
+    self.out = nn.Linear(768, 1)
 
   def forward(self, text):
     with torch.no_grad():
@@ -181,8 +168,7 @@ class BERTRegresser(nn.Module):
     return self.out(self.dropout(embedded))
 
 
-
-class BERTClassifier(nn.Module):
+class BERT2TRegresser(nn.Module):
 
   def __init__(self, device):
 
@@ -192,16 +178,10 @@ class BERTClassifier(nn.Module):
     self.device = device
 
     self.dropout = nn.Dropout(Hyperparams.dropout)
-    self.out = nn.Linear(
-        2*768, 1)
+    self.out = nn.Linear(768, 1)
 
-  def forward(self, review_text, rebuttal_text):
+  def forward(self, batch):
     with torch.no_grad():
-      review_embedded = self.bert(review_text)[0][:, 0]
-      rebuttal_embedded = self.bert(rebuttal_text)[0][:, 0]
-      concatenated = torch.cat([review_embedded, rebuttal_embedded], axis=1)
-    return self.out(self.dropout(concatenated))
-
-def get_checkpoint_name():
-  return "ws_ir_model_rank.pt"
-
+      embedded_review = self.bert(batch.review_sentence)[0][:, 0]
+      embedded_rebuttal = self.bert(batch.rebuttal_sentence)[0][:, 0]
+    return self.out(self.dropout(embedded_review))
