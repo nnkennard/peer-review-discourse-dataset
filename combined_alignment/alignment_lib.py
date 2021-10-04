@@ -57,8 +57,8 @@ class DatasetTools(object):
     self.fields = fields
 
 
-def get_checkpoint_name():
-  return "ws_ir_model_rank.pt"
+def get_checkpoint_name(repr_choice, task_choice):
+  return "".join(["checkpoints/", repr_choice, "_", task_choice, ".pt"])
 
 
 def do_epoch(model,
@@ -66,6 +66,7 @@ def do_epoch(model,
              optimizer,
              valid_iterator,
              loss,
+             label_getter,
              eval_both=False):
 
   start_time = time.time()
@@ -75,9 +76,10 @@ def do_epoch(model,
     train_set_mode = "train"
   train_mse, train_score_map = train_or_evaluate(model, train_iterator,
                                                  train_set_mode, loss,
+                                                 label_getter,
                                                  optimizer)
   valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
-                                                 "evaluate", loss)
+                                                 "evaluate", loss, label_getter)
   end_time = time.time()
   return EpochData(start_time, end_time, train_mse, valid_mse, train_score_map,
                    valid_score_map)
@@ -90,7 +92,7 @@ def report_epoch(epoch, epoch_data):
          f'\t Val. MSE: {epoch_data.val_mse:.3f}'))
 
 
-def train_or_evaluate(model, iterator, mode, loss_fn, optimizer=None):
+def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=None):
   assert mode in "train evaluate".split()
 
   is_train = mode == "train"
@@ -108,6 +110,11 @@ def train_or_evaluate(model, iterator, mode, loss_fn, optimizer=None):
     model.eval()
     context = torch.no_grad()
 
+  #if type(loss) == nn.BCEWithLogitsLoss:
+  #  pass
+    
+
+
   with context:
     for batch in iterator:
 
@@ -115,9 +122,8 @@ def train_or_evaluate(model, iterator, mode, loss_fn, optimizer=None):
       if is_train:
         optimizer.zero_grad()
 
-      #predictions = model(batch.text).squeeze(1)
       predictions = model(batch).squeeze(1)
-      loss = loss_fn(predictions, batch.score)
+      loss = loss_fn(predictions, label_getter(batch))
 
 
       score_map.update({
@@ -150,37 +156,31 @@ class EpochData(object):
     self.valid_score_map = valid_score_map
 
 
-class BERTRegresser(nn.Module):
+class BERTAlignmentModel(nn.Module):
 
-  def __init__(self, device):
-
-    super().__init__()
-
-    self.bert = BertModel.from_pretrained('bert-base-uncased')
-    self.device = device
-
-    self.dropout = nn.Dropout(Hyperparams.dropout)
-    self.out = nn.Linear(768, 1)
-
-  def forward(self, text):
-    with torch.no_grad():
-      embedded = self.bert(text)[0][:, 0]
-    return self.out(self.dropout(embedded))
-
-
-class BERT2TRegresser(nn.Module):
-
-  def __init__(self, device):
+  def __init__(self, repr_type):
 
     super().__init__()
 
-    self.bert = BertModel.from_pretrained('bert-base-uncased')
-    self.device = device
+    if repr_type == "cat":
+      self.actual_forward = self._forward_cat
+    else:
+      assert repr_type == "2t"
+      self.actual_forward = self._forward_2tower
 
+    self.bert = BertModel.from_pretrained('bert-base-uncased')
     self.dropout = nn.Dropout(Hyperparams.dropout)
     self.out = nn.Linear(768, 1)
 
   def forward(self, batch):
+    return self.actual_forward(batch)
+
+  def _forward_cat(self, batch):
+    with torch.no_grad():
+      embedded = self.bert(batch.both_sentences)[0][:, 0]
+    return self.out(self.dropout(embedded))
+
+  def _forward_2tower(self, batch):
     with torch.no_grad():
       embedded_review = self.bert(batch.review_sentence)[0][:, 0]
       embedded_rebuttal = self.bert(batch.rebuttal_sentence)[0][:, 0]

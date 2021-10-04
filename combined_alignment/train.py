@@ -23,12 +23,16 @@ parser.add_argument('-i',
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
-parser.add_argument('-m',
-                    '--model_choice',
-                    default="score_2t",
+parser.add_argument('-r',
+                    '--repr_choice',
+                    default="cat",
                     type=str,
-                    help='which model to train')
-
+                    help='which representation, 2 tower or concatenated (2t/cat)')
+parser.add_argument('-t',
+                    '--task_choice',
+                    default="bin",
+                    type=str,
+                    help='which task, binary classification or regression (bin/reg)')
 
 def generate_text_field(tokenizer):
   metadata = alignment_lib.TokenizerMetadata(tokenizer)
@@ -48,12 +52,13 @@ def make_fields(tokenizer):
   REVIEW_SENT = generate_text_field(tokenizer)
   REBUTTAL_SENT = generate_text_field(tokenizer)
   SCORE = data.Field(sequential=False, use_vocab=False, dtype=torch.float)
-  LABEL = data.Field(sequential=False, use_vocab=False, dtype=torch.int)
+  LABEL = data.Field(sequential=False, use_vocab=False, dtype=torch.int64)
 
   return {
       "overall_index": ("overall_index", RAW),
       "review_sentence": ("review_sentence", REVIEW_SENT),
       "rebuttal_sentence": ("rebuttal_sentence", REBUTTAL_SENT),
+      "both_sentences": ("both_sentences", generate_text_field(tokenizer)),
       "label": ("label", LABEL),
       "score": ("score", SCORE),
   }
@@ -155,12 +160,19 @@ def get_mrrs(epoch_data, example_identifiers, true_match_map):
   return mean(list(i for i in mrr_accumulator if i is not None))
 
 
-def get_model_and_loss(model_choice, device):
-  if model_choice == "score_2t":
-    return alignment_lib.BERT2TRegresser(device).to(device), nn.MSELoss()
+def get_loss_and_label_getter(task):
+  if task == 'reg':
+    loss = nn.MSELoss()
+    label_getter = lambda x:x.score
   else:
-    assert False
+    assert task == 'bin'
+    loss = nn.BCEWithLogitsLoss()
+    label_getter = lambda x:x.label.float()
+  return loss, label_getter
 
+
+  model_class, loss_fn, score_getter = MODEL_AND_LOSS_MAP[model_choice]
+  return model_class(device).to(device), loss_fn, score_getter
 
 def main():
 
@@ -168,9 +180,10 @@ def main():
 
   dataset_tools = get_dataset_tools(args.input_dir)
 
-  model_save_name = alignment_lib.get_checkpoint_name()
+  model_save_name = alignment_lib.get_checkpoint_name(args.repr_choice,
+  args.task_choice)
 
-  experiment = Experiment(project_name='ir_rank_model')
+  experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
   all_train_iterator, all_valid_iterator, = build_iterators(
       args.input_dir,
@@ -179,7 +192,10 @@ def main():
       debug=args.debug,
       make_valid=True)
 
-  model, loss = get_model_and_loss(args.model_choice, dataset_tools.device)
+  model = alignment_lib.BERTAlignmentModel(args.repr_choice)
+  model.to(dataset_tools.device)
+
+  loss, label_getter = get_loss_and_label_getter(args.task_choice)
 
   optimizer = optim.Adam(model.parameters())
 
@@ -190,13 +206,14 @@ def main():
 
   for epoch in range(10000):
     _ = alignment_lib.do_epoch(model, all_train_iterator, optimizer,
-                               all_valid_iterator, loss)
+                               all_valid_iterator, loss, label_getter)
 
     this_epoch_data = alignment_lib.do_epoch(model,
                                              all_train_iterator,
                                              optimizer,
                                              all_valid_iterator,
                                              loss,
+                                             label_getter,
                                              eval_both=True)
     alignment_lib.report_epoch(epoch, this_epoch_data)
 
@@ -204,10 +221,6 @@ def main():
                           this_epoch_data.train_mse,
                           step=epoch)
     experiment.log_metric("Batch val MSE", this_epoch_data.val_mse, step=epoch)
-
-    #train_mrr = get_mrrs(this_epoch_data, example_identifiers, true_match_map)
-    #print(train_mrr)
-    #experiment.log_metric("Train MRR",train_mrr, step=epoch)
 
     if this_epoch_data.val_mse < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
