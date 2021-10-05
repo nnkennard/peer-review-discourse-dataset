@@ -67,17 +67,21 @@ def do_epoch(model,
              valid_iterator,
              loss,
              label_getter,
-             eval_both=False):
+             eval_both=False,
+             dev_only=False):
 
   start_time = time.time()
   if eval_both:
     train_set_mode = "evaluate"
   else:
     train_set_mode = "train"
-  train_mse, train_score_map = train_or_evaluate(model, train_iterator,
-                                                 train_set_mode, loss,
-                                                 label_getter,
-                                                 optimizer)
+  if dev_only:
+    train_mse = 0; train_score_map ={}
+  if not dev_only:
+    train_mse, train_score_map = train_or_evaluate(model, train_iterator,
+                                                   train_set_mode, loss,
+                                                   label_getter,
+                                                   optimizer)
   valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
                                                  "evaluate", loss, label_getter)
   end_time = time.time()
@@ -85,8 +89,14 @@ def do_epoch(model,
                    valid_score_map)
 
 
-def report_epoch(epoch, epoch_data):
-  print((f'Epoch: {epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
+def report_epoch(epoch, epoch_data, experiment, sub_epoch=0):
+  experiment.log_metric("Batch train metric",
+                            epoch_data.train_mse,
+                            step=epoch)
+  experiment.log_metric("Batch val metric", epoch_data.val_mse, step=epoch)
+
+
+  print((f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
          f'{epoch_data.elapsed_secs}s\n'
          f'\tTrain MSE: {epoch_data.train_mse:.3f} | '
          f'\t Val. MSE: {epoch_data.val_mse:.3f}'))

@@ -1,5 +1,6 @@
 import argparse
 import collections
+import glob
 import json
 import random
 
@@ -86,9 +87,36 @@ def build_iterators(data_dir,
                     make_valid=False):
 
   if debug:
-    train_file_name = "train_head.jsonl"
-  else:
-    train_file_name = "train/0000.jsonl"
+    raise NotImplementedError
+
+  train_iterator_list = [
+  ]
+  for train_file in tqdm(glob.glob(data_dir + "/train/*.jsonl")[:10]):
+    train_dataset, = data.TabularDataset.splits(
+      path=".",
+      train=train_file,
+      format='json',
+      skip_header=True,
+      fields=dataset_tools.fields)
+    train_iterator_list.append(
+      data.BucketIterator.splits([train_dataset],
+                                    batch_size=batch_size,
+                                    device=dataset_tools.device,
+                                    sort_key=lambda x: x.overall_index,
+                                    sort_within_batch=False)[0])
+  
+  vocabber_train_dataset, = data.TabularDataset.splits(
+      path=data_dir,
+      train="vocabber.jsonl",
+      format='json',
+      skip_header=True,
+      fields=dataset_tools.fields)
+
+  for key in "review_sentence rebuttal_sentence both_sentences label".split():
+    dataset_tools.fields[key][1].build_vocab(vocabber_train_dataset)
+
+
+  train_file_name = "train/0000.jsonl"
   train_dataset, dev_dataset = data.TabularDataset.splits(
       path=data_dir,
       train=train_file_name,
@@ -97,30 +125,14 @@ def build_iterators(data_dir,
       skip_header=True,
       fields=dataset_tools.fields)
 
-  for key in "review_sentence rebuttal_sentence label".split():
-    dataset_tools.fields[key][1].build_vocab(train_dataset)
 
-  return data.BucketIterator.splits([train_dataset, dev_dataset],
+  return train_iterator_list, data.BucketIterator.splits([train_dataset, dev_dataset],
                                     batch_size=batch_size,
                                     device=dataset_tools.device,
                                     sort_key=lambda x: x.overall_index,
                                     sort_within_batch=False)
 
-  #def get_match_map():
-  #  with open("score_model_input/metadata.json", 'r') as f:
-  #    metadata = json.load(f)
-
-  return metadata["example_identifiers"], metadata["true_matches"]
-
-  #example_identifiers = metadata["example_identifiers"]
-  #true_match_map = collections.defaultdict(list)
-  #for subset, matches in metadata["true_matches"].items():
-  #  for review_id, rebuttal_index, review_index in matches:
-  #    true_match_map[(review_id, rebuttal_index)].append(review_index)
-  #
-  #return example_identifiers, true_match_map
-
-
+  
 def get_index_to_rank_map(score_map):
   sorted_scores = sorted(score_map.values(), reverse=True)
   index_to_rank_map = {}
@@ -185,7 +197,7 @@ def main():
 
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
-  all_train_iterator, all_valid_iterator, = build_iterators(
+  train_iterator_list, (all_train_iterator, all_valid_iterator) = build_iterators(
       args.input_dir,
       dataset_tools,
       alignment_lib.Hyperparams.batch_size,
@@ -202,25 +214,26 @@ def main():
   best_valid_loss = float('inf')
   best_valid_epoch = None
 
-  patience = 5000
+  patience = 10
 
-  for epoch in range(10000):
-    _ = alignment_lib.do_epoch(model, all_train_iterator, optimizer,
-                               all_valid_iterator, loss, label_getter)
+  for epoch in range(40):
+    for i, train_iterator in enumerate(train_iterator_list):
+      _ = alignment_lib.do_epoch(model, train_iterator, optimizer,
+                                 all_valid_iterator, loss, label_getter)
+      this_sub_epoch_data = alignment_lib.do_epoch(model, train_iterator, optimizer,
+                                 all_valid_iterator, loss, label_getter,
+                                 eval_both=True)
+      alignment_lib.report_epoch(epoch, this_sub_epoch_data,
+      experiment, sub_epoch=i)
 
     this_epoch_data = alignment_lib.do_epoch(model,
-                                             all_train_iterator,
-                                             optimizer,
-                                             all_valid_iterator,
-                                             loss,
-                                             label_getter,
-                                             eval_both=True)
-    alignment_lib.report_epoch(epoch, this_epoch_data)
+                                               all_train_iterator,
+                                               optimizer,
+                                               all_valid_iterator,
+                                               loss,
+                                               label_getter,
+                                               dev_only=True)
 
-    experiment.log_metric("Batch train MSE",
-                          this_epoch_data.train_mse,
-                          step=epoch)
-    experiment.log_metric("Batch val MSE", this_epoch_data.val_mse, step=epoch)
 
     if this_epoch_data.val_mse < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
