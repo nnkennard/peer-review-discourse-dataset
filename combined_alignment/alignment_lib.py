@@ -1,8 +1,9 @@
 import time
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 #from transformers import BertTokenizer
-from transformers import BertModel
+from transformers import BertForSequenceClassification
 from contextlib import nullcontext
 
 
@@ -132,20 +133,25 @@ def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=No
       if is_train:
         optimizer.zero_grad()
 
-      predictions = model(batch).squeeze(1)
-      loss = loss_fn(predictions, label_getter(batch))
+      #predictions = model(batch).squeeze(1)
+      #loss = loss_fn(predictions, label_getter(batch))
 
+      output = model(batch)
+      loss = output.loss
+
+
+      
 
       score_map.update({
-          index: score.item()
-          for index, score in zip(batch.overall_index, predictions)
+          index: torch.argmax(score)
+          for index, score in zip(batch.overall_index, output.logits)
       })
 
       if is_train:
         loss.backward()
         optimizer.step()
 
-      epoch_loss += loss.item() * len(predictions)
+      epoch_loss += loss.item()
 
   assert example_counter
   return epoch_loss / example_counter, score_map
@@ -168,7 +174,7 @@ class EpochData(object):
 
 class BERTAlignmentModel(nn.Module):
 
-  def __init__(self, repr_type):
+  def __init__(self, repr_type, task_type):
 
     super().__init__()
 
@@ -178,20 +184,29 @@ class BERTAlignmentModel(nn.Module):
       assert repr_type == "2t"
       self.actual_forward = self._forward_2tower
 
-    self.bert = BertModel.from_pretrained('bert-base-uncased')
-    self.dropout = nn.Dropout(Hyperparams.dropout)
-    self.out = nn.Linear(768, 1)
+
+    self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+    if task_type == "bin":
+      self.bert.config.num_labels = 2
+    else:
+      assert task_type == 'reg'
+      self.bert.config.num_labels = 1
 
   def forward(self, batch):
+
     return self.actual_forward(batch)
 
   def _forward_cat(self, batch):
-    with torch.no_grad():
-      embedded = self.bert(batch.both_sentences)[0][:, 0]
-    return self.out(self.dropout(embedded))
+    return self.bert(batch.both_sentences, labels=batch.label)
+    #with torch.no_grad():
+    #  embedded = self.bert(batch.both_sentences)[0][:, 0]
+    #
+    #return self.out(self.dropout(
+    #F.sigmoid(self.linear2(F.sigmoid(self.linear1(embedded))))))
 
   def _forward_2tower(self, batch):
-    with torch.no_grad():
-      embedded_review = self.bert(batch.review_sentence)[0][:, 0]
-      embedded_rebuttal = self.bert(batch.rebuttal_sentence)[0][:, 0]
-    return self.out(self.dropout(embedded_review))
+    pass
+    #with torch.no_grad():
+    #  embedded_review = self.bert(batch.review_sentence)[0][:, 0]
+    #  embedded_rebuttal = self.bert(batch.rebuttal_sentence)[0][:, 0]
+    #return self.out(self.dropout(embedded_review))

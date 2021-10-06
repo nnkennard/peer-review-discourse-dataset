@@ -91,7 +91,7 @@ def build_iterators(data_dir,
 
   train_iterator_list = [
   ]
-  for train_file in tqdm(glob.glob(data_dir + "/train/*.jsonl")[:10]):
+  for train_file in tqdm(glob.glob(data_dir + "/train/*.jsonl")[:1]):
     train_dataset, = data.TabularDataset.splits(
       path=".",
       train=train_file,
@@ -204,7 +204,7 @@ def main():
       debug=args.debug,
       make_valid=True)
 
-  model = alignment_lib.BERTAlignmentModel(args.repr_choice)
+  model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
 
   loss, label_getter = get_loss_and_label_getter(args.task_choice)
@@ -214,9 +214,9 @@ def main():
   best_valid_loss = float('inf')
   best_valid_epoch = None
 
-  patience = 10
+  patience = 1000
 
-  for epoch in range(40):
+  for epoch in range(1000):
     for i, train_iterator in enumerate(train_iterator_list):
       _ = alignment_lib.do_epoch(model, train_iterator, optimizer,
                                  all_valid_iterator, loss, label_getter)
