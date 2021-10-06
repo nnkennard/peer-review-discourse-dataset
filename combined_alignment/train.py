@@ -91,7 +91,7 @@ def build_iterators(data_dir,
 
   train_iterator_list = [
   ]
-  for train_file in tqdm(glob.glob(data_dir + "/train/*.jsonl")[:1]):
+  for train_file in tqdm(glob.glob(data_dir + "/train/group*.jsonl")):
     train_dataset, = data.TabularDataset.splits(
       path=".",
       train=train_file,
