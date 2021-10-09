@@ -66,16 +66,19 @@ def overall_indexifier():
     yield index
     index += 1
 
+
 TOKENIZER = BertTokenizer.from_pretrained('bert-base-uncased')
+
 
 def get_token_vocab(review_sentences, rebuttal_sentences):
   tokens = set()
   for sentence in review_sentences + rebuttal_sentences:
     normal_tokens = word_tokenize(sentence.lower())
     bert_tokens = TOKENIZER.tokenize(sentence)
-    tokens.update(set(normal_tokens).union( tok for tok in bert_tokens if '#'
-    not in tok))
+    tokens.update(
+        set(normal_tokens).union(tok for tok in bert_tokens if '#' not in tok))
   return tokens
+
 
 def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
                        index_generator):
@@ -105,7 +108,7 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
       identifiers.append((overall_example_index, identifier))
   return examples, identifiers, get_token_vocab(review_sentence_texts,
-  rebuttal_sentence_texts)
+                                                rebuttal_sentence_texts)
 
 
 def make_output_filename(output_dir, subset, index):
@@ -125,6 +128,7 @@ def write_examples_to_file(examples, filename):
     for example in examples:
       f.write(json.dumps(example._asdict()) + "\n")
 
+
 Example = collections.namedtuple(
     "Example",
     "overall_index identifier review_sentence rebuttal_sentence both_sentences score label"
@@ -135,9 +139,10 @@ def make_vocabber(tokens, index_generator, output_dir):
   examples = []
   tokens = sorted(tokens)
   for i in range(0, len(tokens), 20):
-    sentence = " ".join(tokens[i:i+20])
+    sentence = " ".join(tokens[i:i + 20])
     examples.append(
-      Example(next(index_generator), None, sentence, sentence, sentence, 0, 0))
+        Example(next(index_generator), None, sentence, sentence, sentence, 0,
+                0))
   write_examples_to_file(examples, output_dir + "/vocabber.jsonl")
 
 

@@ -2,18 +2,8 @@ import time
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-#from transformers import BertTokenizer
 from transformers import BertForSequenceClassification
 from contextlib import nullcontext
-
-
-class Hyperparams(object):
-  hidden_dim = 512
-  output_dim = 2
-  n_layers = 2
-  bidirectional = True
-  dropout = 0.25
-  batch_size = 128
 
 
 class TokenizerMetadata(object):
@@ -66,8 +56,6 @@ def do_epoch(model,
              train_iterator,
              optimizer,
              valid_iterator,
-             loss,
-             label_getter,
              eval_both=False,
              dev_only=False):
 
@@ -77,33 +65,33 @@ def do_epoch(model,
   else:
     train_set_mode = "train"
   if dev_only:
-    train_mse = 0; train_score_map ={}
+    train_metric = None
+    train_score_map = {}
   if not dev_only:
-    train_mse, train_score_map = train_or_evaluate(model, train_iterator,
-                                                   train_set_mode, loss,
-                                                   label_getter,
-                                                   optimizer)
-  valid_mse, valid_score_map = train_or_evaluate(model, valid_iterator,
-                                                 "evaluate", loss, label_getter)
+    train_metric, train_score_map = train_or_evaluate(model, train_iterator,
+                                                   train_set_mode, optimizer)
+  valid_metric, valid_score_map = train_or_evaluate(model, valid_iterator,
+                                                 "evaluate")
   end_time = time.time()
-  return EpochData(start_time, end_time, train_mse, valid_mse, train_score_map,
-                   valid_score_map)
+  return EpochData(start_time, end_time, train_metric, valid_metric,
+                   train_score_map, valid_score_map)
 
 
 def report_epoch(epoch, epoch_data, experiment, sub_epoch=0):
-  experiment.log_metric("Batch train metric",
-                            epoch_data.train_mse,
-                            step=epoch)
-  experiment.log_metric("Batch val metric", epoch_data.val_mse, step=epoch)
+  experiment.log_metric("Batch train metric", epoch_data.train_metric, step=epoch)
+  experiment.log_metric("Batch val metric", epoch_data.val_metric, step=epoch)
+
+  print((
+      f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
+      f'{epoch_data.elapsed_secs}s\n'
+      f'\tTrain MSE: {epoch_data.train_metric:.3f} | '
+      f'\t Val. MSE: {epoch_data.val_metric:.3f}'))
 
 
-  print((f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
-         f'{epoch_data.elapsed_secs}s\n'
-         f'\tTrain MSE: {epoch_data.train_mse:.3f} | '
-         f'\t Val. MSE: {epoch_data.val_mse:.3f}'))
-
-
-def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=None):
+def train_or_evaluate(model,
+                      iterator,
+                      mode,
+                      optimizer=None):
   assert mode in "train evaluate".split()
 
   is_train = mode == "train"
@@ -121,11 +109,6 @@ def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=No
     model.eval()
     context = torch.no_grad()
 
-  #if type(loss) == nn.BCEWithLogitsLoss:
-  #  pass
-    
-
-
   with context:
     for batch in iterator:
 
@@ -136,16 +119,12 @@ def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=No
       #predictions = model(batch).squeeze(1)
       #loss = loss_fn(predictions, label_getter(batch))
 
-      output = model(batch)
-      loss = output.loss
+      loss, predictions = model(batch)
 
-
-      
-
-      score_map.update({
-          index: torch.argmax(score)
-          for index, score in zip(batch.overall_index, output.logits)
-      })
+      #score_map.update({
+      #    index: torch.argmax(score)
+      #    for index, score in zip(batch.overall_index, output.logits)
+      #})
 
       if is_train:
         loss.backward()
@@ -159,10 +138,10 @@ def train_or_evaluate(model, iterator, mode, loss_fn, label_getter, optimizer=No
 
 class EpochData(object):
 
-  def __init__(self, start_time, end_time, train_mse, val_mse, train_score_map,
-               valid_score_map):
-    self.train_mse = train_mse
-    self.val_mse = val_mse
+  def __init__(self, start_time, end_time, train_metric, val_metric,
+               train_score_map, valid_score_map):
+    self.train_metric = train_metric
+    self.val_metric = val_metric
 
     elapsed_time = end_time - start_time
     self.elapsed_mins = int(elapsed_time / 60)
@@ -172,41 +151,93 @@ class EpochData(object):
     self.valid_score_map = valid_score_map
 
 
+BCELOSS = nn.BCEWithLogitsLoss()
+
+
+
+def get_a_bert():
+  return BertForSequenceClassification.from_pretrained(
+        'bert-base-uncased')
+
+
+
 class BERTAlignmentModel(nn.Module):
 
   def __init__(self, repr_type, task_type):
 
     super().__init__()
 
+    # Set up berts
+
+    self.repr_type = repr_type
+    self.task_type = task_type
+
+
     if repr_type == "cat":
       self.actual_forward = self._forward_cat
+      self.bert = get_a_bert()
+      self.bert.config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
     else:
       assert repr_type == "2t"
       self.actual_forward = self._forward_2tower
+      self.review_bert = get_a_bert()
+      self.rebuttal_bert = get_a_bert()
+      for mod in [self.review_bert, self.rebuttal_bert]:
+        mod.config.output_hidden_states = True
+      self.dropout = nn.Dropout(0.25)
+      self.classifier = nn.Linear(256, 1)
 
 
-    self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased')
-    if task_type == "bin":
-      self.bert.config.num_labels = 2
-    else:
-      assert task_type == 'reg'
-      self.bert.config.num_labels = 1
+    self.label_getter = self._LABEL_GETTER_GETTER[task_type]
+    self.checkpoint_name = get_checkpoint_name(repr_type, task_type)
 
   def forward(self, batch):
-
-    return self.actual_forward(batch)
+    return self._ACTUAL_FORWARD_MAP[self.repr_type](self, batch)
 
   def _forward_cat(self, batch):
-    return self.bert(batch.both_sentences, labels=batch.label)
-    #with torch.no_grad():
-    #  embedded = self.bert(batch.both_sentences)[0][:, 0]
-    #
-    #return self.out(self.dropout(
-    #F.sigmoid(self.linear2(F.sigmoid(self.linear1(embedded))))))
+    output = self.bert(batch.both_sentences, labels=self.label_getter(batch))
+    return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):
-    pass
-    #with torch.no_grad():
-    #  embedded_review = self.bert(batch.review_sentence)[0][:, 0]
-    #  embedded_rebuttal = self.bert(batch.rebuttal_sentence)[0][:, 0]
-    #return self.out(self.dropout(embedded_review))
+    review_rep = self.review_bert(
+        batch.review_sentence).hidden_states[0][:, 0]
+    rebuttal_rep = self.rebuttal_bert(
+        batch.rebuttal_sentence).hidden_states[0][:, 0]
+
+    concat_rep = torch.cat([review_rep, rebuttal_rep], 1)
+    logits = torch.reshape(self.classifier(self.dropout(concat_rep)), [128])
+
+    if self.task_type == 'reg':
+      dsds
+    else:
+      loss = BCELOSS(logits, self.label_getter(batch))
+
+    return loss, self._get_predictions(logits) 
+
+  def _get_predictions(self, logits):
+    if self.task_type == 'reg':
+      return logits
+    else:
+      return torch.argmax(logits)
+
+  _TASK_TO_NUM_LABELS = {
+    "bin": 2,
+    "reg": 1}
+
+  _ACTUAL_FORWARD_MAP = {
+    "cat": _forward_cat,
+    "2t": _forward_2tower
+  }
+
+  _LABEL_GETTER_GETTER = {
+    "bin": lambda x: x.label,
+    "reg": lambda x: x.score
+  }
+
+
+
+
+
+
+
+
