@@ -2,7 +2,7 @@ import time
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertForSequenceClassification
+from transformers import BertForSequenceClassification, BertConfig
 from contextlib import nullcontext
 
 
@@ -69,16 +69,18 @@ def do_epoch(model,
     train_score_map = {}
   if not dev_only:
     train_metric, train_score_map = train_or_evaluate(model, train_iterator,
-                                                   train_set_mode, optimizer)
+                                                      train_set_mode, optimizer)
   valid_metric, valid_score_map = train_or_evaluate(model, valid_iterator,
-                                                 "evaluate")
+                                                    "evaluate")
   end_time = time.time()
   return EpochData(start_time, end_time, train_metric, valid_metric,
                    train_score_map, valid_score_map)
 
 
 def report_epoch(epoch, epoch_data, experiment, sub_epoch=0):
-  experiment.log_metric("Batch train metric", epoch_data.train_metric, step=epoch)
+  experiment.log_metric("Batch train metric",
+                        epoch_data.train_metric,
+                        step=epoch)
   experiment.log_metric("Batch val metric", epoch_data.val_metric, step=epoch)
 
   print((
@@ -88,10 +90,7 @@ def report_epoch(epoch, epoch_data, experiment, sub_epoch=0):
       f'\t Val. MSE: {epoch_data.val_metric:.3f}'))
 
 
-def train_or_evaluate(model,
-                      iterator,
-                      mode,
-                      optimizer=None):
+def train_or_evaluate(model, iterator, mode, optimizer=None):
   assert mode in "train evaluate".split()
 
   is_train = mode == "train"
@@ -120,8 +119,8 @@ def train_or_evaluate(model,
 
       score_map.update({
           index: (pred.item(), score.item(), label.item())
-          for index, pred, score, label in zip(batch.overall_index,
-          predictions, batch.score, batch.label)
+          for index, pred, score, label in zip(batch.overall_index, predictions,
+                                               batch.score, batch.label)
       })
 
       if is_train:
@@ -130,8 +129,6 @@ def train_or_evaluate(model,
 
       epoch_loss += loss.item()
 
-  print(example_counter)
-  print(len(score_map))
   assert example_counter
   return epoch_loss / example_counter, score_map
 
@@ -155,11 +152,11 @@ BCELOSS = nn.BCEWithLogitsLoss()
 MSE_LOSS = nn.MSELoss()
 
 
-
-def get_a_bert():
-  return BertForSequenceClassification.from_pretrained(
-        'bert-base-uncased')
-
+def get_a_bert(config_dict):
+  config = BertConfig.from_pretrained("bert-base-uncased")
+  config.num_labels = config_dict.get("num_labels", 1)
+  return BertForSequenceClassification.from_pretrained('bert-base-uncased',
+                                                       config=config)
 
 
 class BERTAlignmentModel(nn.Module):
@@ -173,78 +170,66 @@ class BERTAlignmentModel(nn.Module):
     self.repr_type = repr_type
     self.task_type = task_type
 
-
     if repr_type == "cat":
       self.actual_forward = self._forward_cat
-      self.bert = get_a_bert()
-      self.bert.config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
+      self.cat_bert = get_a_bert(
+          {"num_labels": self._TASK_TO_NUM_LABELS[task_type]})
+      self.cat_bert.config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
     else:
       assert repr_type == "2t"
       self.actual_forward = self._forward_2tower
-      self.review_bert = get_a_bert()
-      self.rebuttal_bert = get_a_bert()
+      self.review_bert = get_a_bert({})
+      self.rebuttal_bert = get_a_bert({})
       for mod in [self.review_bert, self.rebuttal_bert]:
         mod.config.output_hidden_states = True
       self.dropout = nn.Dropout(0.25)
-      self.linear1 = nn.Linear(256, 128)
-      self.classifier = nn.Linear(128, 1)
+      self.linear1 = nn.Linear(1536, 768)
+      self.classifier = nn.Linear(768, 1)
 
-
-    self.label_getter = self._LABEL_GETTER_GETTER[task_type]
+    self.label_getter = self._LABEL_GETTER_GETTER[repr_type][task_type]
     self.checkpoint_name = get_checkpoint_name(repr_type, task_type)
 
   def forward(self, batch):
     return self._ACTUAL_FORWARD_MAP[self.repr_type](self, batch)
 
   def _forward_cat(self, batch):
-    print(self.label_getter(batch))
-    print(type(self.bert))
-    print(self.bert.config)
-    print(self.bert.config.num_labels)
-    print(self.bert.classifier.weight.shape)
-    output = self.bert(batch.both_sentences, labels=self.label_getter(batch))
-
-    print("Cat model logits")
-    print(output.logits.shape)
-    print(output.logits)
-    exit()
+    output = self.cat_bert(batch.both_sentences,
+                           labels=self.label_getter(batch))
     return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):
-    review_rep = self.review_bert(
-        batch.review_sentence).hidden_states[0][:, 0]
+    review_rep = self.review_bert(batch.review_sentence).hidden_states[0][:, 0]
     rebuttal_rep = self.rebuttal_bert(
         batch.rebuttal_sentence).hidden_states[0][:, 0]
 
     concat_rep = torch.cat([review_rep, rebuttal_rep], 1)
-    logits = torch.reshape(
-    self.classifier(self.linear1(self.dropout(concat_rep))),
-    [128])
+    logits = self.classifier(self.linear1(self.dropout(concat_rep)))
 
     if self.task_type == 'reg':
-      loss = MSE_LOSS(logits, batch.score)
+      loss = MSE_LOSS(torch.reshape(logits, [len(logits),1]),
+      torch.reshape(batch.score, [len(logits), 1]))
     else:
-      print("shape of logits", logits.shape)
-      loss = BCELOSS(logits, self.label_getter(batch))
+      loss = BCELOSS(torch.reshape(logits, [len(logits),1]), self.label_getter(batch))
 
     return loss, self._get_predictions(logits)
 
   def _get_predictions(self, logits):
-    if self.task_type == 'reg':
-      return logits
-    else:
+    if self.task_type == 'bin' and self.repr_type == 'cat':
       return torch.argmax(logits, axis=1)
+    else:
+      return logits
 
-  _TASK_TO_NUM_LABELS = {
-    "bin": 2,
-    "reg": 1}
+  _TASK_TO_NUM_LABELS = {"bin": 2, "reg": 1}
 
-  _ACTUAL_FORWARD_MAP = {
-    "cat": _forward_cat,
-    "2t": _forward_2tower
-  }
+  _ACTUAL_FORWARD_MAP = {"cat": _forward_cat, "2t": _forward_2tower}
 
   _LABEL_GETTER_GETTER = {
-    "bin": lambda x: x.label.float(),
-    "reg": lambda x: x.score
+      "cat": {
+          "bin": lambda x: x.label,
+          "reg": lambda x: x.score
+      },
+      "2t": {
+          "bin": lambda x: torch.reshape(x.label.float(), [len(x.label), 1]),
+          "reg": lambda x: x.score
+      },
   }

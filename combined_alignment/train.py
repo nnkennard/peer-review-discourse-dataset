@@ -44,6 +44,7 @@ torch.backends.cudnn.deterministic = True
 
 BATCH_SIZE = 128
 
+
 def generate_text_field(tokenizer):
   metadata = alignment_lib.TokenizerMetadata(tokenizer)
   return data.Field(use_vocab=False,
@@ -87,7 +88,7 @@ def build_iterators(data_dir,
 
   train_iterator_list = []
   for train_file in tqdm(glob.glob(data_dir + "/train/group*.jsonl")):
-  #for train_file in tqdm(glob.glob(data_dir + "/train/000*.jsonl")):
+    #for train_file in tqdm(glob.glob(data_dir + "/train/000*.jsonl")):
     train_dataset, = data.TabularDataset.splits(path=".",
                                                 train=train_file,
                                                 format='json',
@@ -190,12 +191,11 @@ def main():
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
   train_iterator_list, (all_train_iterator,
-                        all_valid_iterator) = build_iterators(
-                            args.input_dir,
-                            dataset_tools,
-                            BATCH_SIZE,
-                            debug=args.debug,
-                            make_valid=True)
+                        all_valid_iterator) = build_iterators(args.input_dir,
+                                                              dataset_tools,
+                                                              BATCH_SIZE,
+                                                              debug=args.debug,
+                                                              make_valid=True)
 
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
@@ -222,14 +222,15 @@ def main():
                                  sub_epoch=i)
 
     # Eval on full train and full dev set (ideally)
-    this_epoch_data = alignment_lib.do_epoch(model,
-                                             all_train_iterator,
-                                             optimizer,
-                                             all_valid_iterator)
-    print("*", len(this_epoch_data.train_score_map))
-    print("*", len(this_epoch_data.valid_score_map))
-    print(collections.Counter([(a, b) for a, _, b in this_epoch_data.train_score_map.values()]))
-    dsds
+    this_epoch_data = alignment_lib.do_epoch(model, all_train_iterator,
+                                             optimizer, all_valid_iterator)
+    if args.task_choice == 'bin':
+      print(
+          collections.Counter([
+              (a, b) for a, _, b in this_epoch_data.train_score_map.values()
+          ]))
+    else:
+      print([a - b for a, b, _ in this_epoch_data.train_score_map.values()])
 
     if this_epoch_data.val_metric < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)

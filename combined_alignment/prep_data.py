@@ -110,8 +110,8 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
       identifiers.append((overall_example_index, identifier))
     examples += example_maps[1]
-    examples += random.sample(example_maps[0], min(len(example_maps[0]), 2 *
-    len(example_maps[1])))
+    examples += random.sample(
+        example_maps[0], min(len(example_maps[0]), 2 * len(example_maps[1])))
 
     random.shuffle(examples)
   return examples, identifiers, get_token_vocab(review_sentence_texts,
