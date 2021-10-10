@@ -19,7 +19,7 @@ import alignment_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="score_model_input/",
+                    default="ml_prepped_data_2-1/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
@@ -86,8 +86,8 @@ def build_iterators(data_dir,
     raise NotImplementedError
 
   train_iterator_list = []
-  #for train_file in tqdm(glob.glob(data_dir + "/train/group*.jsonl")):
-  for train_file in tqdm(glob.glob(data_dir + "/train/000*.jsonl")):
+  for train_file in tqdm(glob.glob(data_dir + "/train/group*.jsonl")):
+  #for train_file in tqdm(glob.glob(data_dir + "/train/000*.jsonl")):
     train_dataset, = data.TabularDataset.splits(path=".",
                                                 train=train_file,
                                                 format='json',
@@ -200,8 +200,6 @@ def main():
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
 
-  #loss, label_getter = get_loss_and_label_getter(args.task_choice)
-
   optimizer = optim.Adam(model.parameters())
 
   best_valid_loss = float('inf')
@@ -227,8 +225,11 @@ def main():
     this_epoch_data = alignment_lib.do_epoch(model,
                                              all_train_iterator,
                                              optimizer,
-                                             all_valid_iterator,
-                                             dev_only=True)
+                                             all_valid_iterator)
+    print("*", len(this_epoch_data.train_score_map))
+    print("*", len(this_epoch_data.valid_score_map))
+    print(collections.Counter([(a, b) for a, _, b in this_epoch_data.train_score_map.values()]))
+    dsds
 
     if this_epoch_data.val_metric < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)

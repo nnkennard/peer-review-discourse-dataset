@@ -2,6 +2,7 @@ import argparse
 import collections
 import glob
 import json
+import random
 import sys
 import tqdm
 
@@ -91,6 +92,7 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
   examples = []
   identifiers = []
 
+  example_maps = collections.defaultdict(list)
   for rebuttal_index, preprocessed_query in enumerate(preprocessed_queries):
     scores = model.get_scores(preprocessed_query)
     assert len(scores) == len(review_sentences)
@@ -102,11 +104,16 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
       review_sentence = review_sentence_texts[review_index]
       rebuttal_sentence = rebuttal_sentence_texts[rebuttal_index]
       both_sentences = review_sentence + " [SEP] " + rebuttal_sentence
-      examples.append(
+      example_maps[label].append(
           Example(overall_example_index, identifier,
                   review_sentence_texts[review_index], both_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
       identifiers.append((overall_example_index, identifier))
+    examples += example_maps[1]
+    examples += random.sample(example_maps[0], min(len(example_maps[0]), 2 *
+    len(example_maps[1])))
+
+    random.shuffle(examples)
   return examples, identifiers, get_token_vocab(review_sentence_texts,
                                                 rebuttal_sentence_texts)
 
@@ -148,7 +155,7 @@ def make_vocabber(tokens, index_generator, output_dir):
 
 def main():
 
-  output_dir = "ml_prepped_data"
+  output_dir = "ml_prepped_data_2-1"
   overall_identifier_list = []
   index_generator = overall_indexifier()
   overall_token_vocab = set()
