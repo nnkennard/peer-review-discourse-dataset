@@ -2,6 +2,7 @@ import argparse
 import collections
 import glob
 import json
+import os
 import random
 import sys
 import tqdm
@@ -153,23 +154,46 @@ def make_vocabber(tokens, index_generator, output_dir):
   write_examples_to_file(examples, output_dir + "/vocabber.jsonl")
 
 
+MAX_EXAMPLES_PER_FILE = 10000
+
 def main():
 
-  output_dir = "ml_prepped_data_2-1"
+  output_dir = "ml_data_2-1"
   overall_identifier_list = []
   index_generator = overall_indexifier()
   overall_token_vocab = set()
+  
+  os.makedirs(output_dir + "/")
 
   for subset in SUBSETS:
+    example_lists = collections.defaultdict(list)
     print("Working on subset: ", subset)
     file_list = glob.glob("/".join([sys.argv[1], subset, "*"]))
     for i, input_filename in enumerate(tqdm.tqdm(file_list)):
-      output_filename = make_output_filename(output_dir, subset, i)
       pair_ml_examples, identifiers, token_vocab = get_general_examples(
           input_filename, index_generator)
       overall_token_vocab.update(token_vocab)
       overall_identifier_list += identifiers
-      write_examples_to_file(pair_ml_examples, output_filename)
+      example_lists[identifiers[0][0]] = pair_ml_examples
+
+    current_list = []
+    num_files_written = 0
+
+    os.makedirs(output_dir + "/" + subset + "/")
+
+    for review_id, examples in example_lists.items():
+      if len(examples) + len(current_list) > MAX_EXAMPLES_PER_FILE:
+        filename = make_output_filename(output_dir, subset, num_files_written)
+        write_examples_to_file(current_list, filename)
+        num_files_written += 1
+        current_list = []
+      else:
+        current_list += examples
+    if current_list:
+      filename = make_output_filename(output_dir, subset, num_files_written)
+      write_examples_to_file(current_list, filename)
+    #write_examples_to_file(sum(example_lists.values(), []), output_dir +"/" +
+    #subset + "_all.jsonl")
 
   make_vocabber(overall_token_vocab, index_generator, output_dir)
 

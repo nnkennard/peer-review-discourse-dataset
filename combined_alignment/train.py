@@ -2,7 +2,6 @@ import argparse
 import collections
 import glob
 import json
-import random
 
 from comet_ml import Experiment
 
@@ -19,7 +18,7 @@ import alignment_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="ml_prepped_data_2-1/",
+                    default="ml_data_2-1/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
@@ -38,7 +37,6 @@ parser.add_argument(
 
 # Setting random seeds
 SEED = 43
-random.seed(SEED)
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
@@ -76,30 +74,38 @@ def get_dataset_tools(data_dir):
 
   return alignment_lib.DatasetTools(tokenizer, device, metadata, fields)
 
-
-def build_iterators(data_dir,
-                    dataset_tools,
-                    batch_size,
-                    debug=False,
-                    make_valid=False):
-
+def get_iterator_list(glob_path, debug, dataset_tools):
+  print("Debug? ", debug)
+  iterator_list = []
+  filenames = glob.glob(glob_path)
   if debug:
-    raise NotImplementedError
-
-  train_iterator_list = []
-  for train_file in tqdm(glob.glob(data_dir + "/train/group*.jsonl")):
-    #for train_file in tqdm(glob.glob(data_dir + "/train/000*.jsonl")):
-    train_dataset, = data.TabularDataset.splits(path=".",
-                                                train=train_file,
+    filenames = filenames[:2]
+  for filename in filenames:
+    dataset, = data.TabularDataset.splits(path=".",
+                                                train=filename,
                                                 format='json',
                                                 skip_header=True,
                                                 fields=dataset_tools.fields)
-    train_iterator_list.append(
-        data.BucketIterator.splits([train_dataset],
-                                   batch_size=batch_size,
+    iterator_list.append(
+        data.BucketIterator.splits([dataset],
+                                   batch_size=BATCH_SIZE,
                                    device=dataset_tools.device,
                                    sort_key=lambda x: x.overall_index,
                                    sort_within_batch=False)[0])
+    if debug:
+      break
+  return iterator_list
+
+
+def build_iterators(data_dir,
+                    dataset_tools,
+                    debug=False,
+                    make_valid=False):
+
+  train_iterator_list = get_iterator_list(data_dir +"/train/0*.jsonl", debug,
+  dataset_tools)
+  dev_iterator_list = get_iterator_list(data_dir +"/dev/0*.jsonl", debug,
+  dataset_tools)
 
   vocabber_train_dataset, = data.TabularDataset.splits(
       path=data_dir,
@@ -111,23 +117,7 @@ def build_iterators(data_dir,
   for key in "review_sentence rebuttal_sentence both_sentences label".split():
     dataset_tools.fields[key][1].build_vocab(vocabber_train_dataset)
 
-  train_file_name = "train/0000.jsonl"
-  train_dataset, dev_dataset = data.TabularDataset.splits(
-      path=data_dir,
-      train=train_file_name,
-      validation=train_file_name.replace("train", "dev"),
-      #validation=train_file_name,
-      format='json',
-      skip_header=True,
-      fields=dataset_tools.fields)
-
-  return train_iterator_list, data.BucketIterator.splits(
-      [train_dataset, dev_dataset],
-      batch_size=batch_size,
-      device=dataset_tools.device,
-      sort_key=lambda x: x.overall_index,
-      sort_within_batch=False)
-
+  return train_iterator_list, dev_iterator_list
 
 def get_index_to_rank_map(score_map):
   sorted_scores = sorted(score_map.values(), reverse=True)
@@ -167,20 +157,23 @@ def get_mrrs(epoch_data, example_identifiers, true_match_map):
 
   return mean(list(i for i in mrr_accumulator if i is not None))
 
+def do_epoch(model, train_iterators, do_train, eval_sets,
+     dev_iterators=None, optimizer=None):
 
-#def get_loss_and_label_getter(task):
-#  if task == 'reg':
-#    loss = nn.MSELoss()
-#    label_getter = lambda x: x.score
-#  else:
-#    assert task == 'bin'
-#    loss = nn.BCEWithLogitsLoss()
-#    label_getter = lambda x: x.label.float()
-#  return loss, label_getter
-#
-#  model_class, loss_fn, score_getter = MODEL_AND_LOSS_MAP[model_choice]
-#  return model_class(device).to(device), loss_fn, score_getter
-
+  if do_train:
+    for iterator in train_iterators:
+      _ = alignment_lib.train_or_evaluate(
+        model, iterator, "train", optimizer
+      )
+  if 'train' in eval_sets:
+    for iterator in train_iterators:
+      train_metric, train_score_map = alignment_lib.train_or_evaluate(
+        model, iterator, "evaluate")
+  if 'dev' in eval_sets:
+    assert dev_iterators is not None
+    for iterator in dev_iterators:
+      dev_metric, dev_score_map = alignment_lib.train_or_evaluate(
+        model, iterator, "evaluate")
 
 def main():
 
@@ -190,10 +183,8 @@ def main():
 
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
-  train_iterator_list, (all_train_iterator,
-                        all_valid_iterator) = build_iterators(args.input_dir,
+  train_iterators, dev_iterators = build_iterators(args.input_dir,
                                                               dataset_tools,
-                                                              BATCH_SIZE,
                                                               debug=args.debug,
                                                               make_valid=True)
 
@@ -206,31 +197,12 @@ def main():
   best_valid_epoch = None
   patience = 1000
   for epoch in range(1000):
-    for i, train_iterator in enumerate(train_iterator_list):
-      # Run on training subset
-      _ = alignment_lib.do_epoch(model, train_iterator, optimizer,
-                                 all_valid_iterator)
-      # Eval on full dev set
-      this_sub_epoch_data = alignment_lib.do_epoch(model,
-                                                   train_iterator,
-                                                   optimizer,
-                                                   all_valid_iterator,
-                                                   eval_both=True)
-      alignment_lib.report_epoch(epoch,
-                                 this_sub_epoch_data,
-                                 experiment,
-                                 sub_epoch=i)
 
-    # Eval on full train and full dev set (ideally)
-    this_epoch_data = alignment_lib.do_epoch(model, all_train_iterator,
-                                             optimizer, all_valid_iterator)
-    if args.task_choice == 'bin':
-      print(
-          collections.Counter([
-              (a, b) for a, _, b in this_epoch_data.train_score_map.values()
-          ]))
-    else:
-      print([a - b for a, b, _ in this_epoch_data.train_score_map.values()])
+    do_epoch(model, train_iterators, do_train=True, eval_sets=[],
+      optimizer=optimizer)
+
+    do_epoch(model, train_iterators, do_train=False, eval_sets=["train", "dev"],
+      dev_iterators=dev_iterators)
 
     if this_epoch_data.val_metric < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
