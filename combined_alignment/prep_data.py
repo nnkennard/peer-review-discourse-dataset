@@ -110,11 +110,26 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
                   review_sentence_texts[review_index], both_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
       identifiers.append((overall_example_index, identifier))
-    examples += example_maps[1]
-    examples += random.sample(
-        example_maps[0], min(len(example_maps[0]), 2 * len(example_maps[1])))
+    pos_examples = len(example_maps[1])
+    original_neg_examples = len(example_maps[0])
+    sampled_neg_examples = random.sample(
+        example_maps[0], max(min(len(example_maps[0]), 2 *
+        len(example_maps[1])), 3))
 
-    random.shuffle(examples)
+
+    print(collections.Counter(collections.Counter(k.overall_index for k in
+    example_maps[1]).values()))
+
+
+    #print(pos_examples, original_neg_examples, len(sampled_neg_examples))
+
+    examples += example_maps[1]
+    examples += sampled_neg_examples
+  random.shuffle(examples)
+
+
+  #print(collections.Counter(x.label for x in examples))
+
   return examples, identifiers, get_token_vocab(review_sentence_texts,
                                                 rebuttal_sentence_texts)
 
@@ -158,7 +173,7 @@ MAX_EXAMPLES_PER_FILE = 10000
 
 def main():
 
-  output_dir = "ml_data_2-1"
+  output_dir = "temp_data_files"
   overall_identifier_list = []
   index_generator = overall_indexifier()
   overall_token_vocab = set()
@@ -194,6 +209,10 @@ def main():
       write_examples_to_file(current_list, filename)
     #write_examples_to_file(sum(example_lists.values(), []), output_dir +"/" +
     #subset + "_all.jsonl")
+
+
+    all_examples = sum(example_lists.values(), [])
+    print(collections.Counter(x.label for x in all_examples))
 
   make_vocabber(overall_token_vocab, index_generator, output_dir)
 

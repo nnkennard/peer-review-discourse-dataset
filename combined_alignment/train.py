@@ -2,6 +2,7 @@ import argparse
 import collections
 import glob
 import json
+import time
 
 from comet_ml import Experiment
 
@@ -18,7 +19,7 @@ import alignment_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="ml_data_2-1/",
+                    default="temp_data_files/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
@@ -81,6 +82,7 @@ def get_iterator_list(glob_path, debug, dataset_tools):
   if debug:
     filenames = filenames[:2]
   for filename in filenames:
+    print(filename)
     dataset, = data.TabularDataset.splits(path=".",
                                                 train=filename,
                                                 format='json',
@@ -160,6 +162,9 @@ def get_mrrs(epoch_data, example_identifiers, true_match_map):
 def do_epoch(model, train_iterators, do_train, eval_sets,
      dev_iterators=None, optimizer=None):
 
+  train_metric, train_score_map, dev_metric, dev_score_map = [None] * 4
+
+  start_time = time.time()
   if do_train:
     for iterator in train_iterators:
       _ = alignment_lib.train_or_evaluate(
@@ -174,6 +179,9 @@ def do_epoch(model, train_iterators, do_train, eval_sets,
     for iterator in dev_iterators:
       dev_metric, dev_score_map = alignment_lib.train_or_evaluate(
         model, iterator, "evaluate")
+  end_time = time.time()
+  return alignment_lib.EpochData(start_time, end_time, train_metric,
+  dev_metric, train_score_map, dev_score_map)
 
 def main():
 
@@ -191,6 +199,17 @@ def main():
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
 
+
+  train_ite = train_iterators[0]
+
+  seen_indices = set()
+  seen_sentences = set()
+  for batch in train_ite:
+    #print(len(seen_indices.intersection(set(batch.overall_index))))
+    print(len(seen_indices.intersection(set(batch.both_sentences))))
+    seen_indices.update(batch.overall_index)
+    seen_indices.update(batch.both_sentences)
+
   optimizer = optim.Adam(model.parameters())
 
   best_valid_loss = float('inf')
@@ -201,8 +220,14 @@ def main():
     do_epoch(model, train_iterators, do_train=True, eval_sets=[],
       optimizer=optimizer)
 
-    do_epoch(model, train_iterators, do_train=False, eval_sets=["train", "dev"],
-      dev_iterators=dev_iterators)
+    print("Ran train epoch")
+
+    this_epoch_data = do_epoch(model, train_iterators,
+      do_train=False, eval_sets=["train", "dev"], dev_iterators=dev_iterators)
+
+    alignment_lib.report_epoch(epoch, this_epoch_data, experiment)
+
+    print("Ran eval epoch")
 
     if this_epoch_data.val_metric < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)

@@ -1,8 +1,8 @@
-import time
+import collections
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertForSequenceClassification
+from transformers import BertForSequenceClassification, BertConfig
 from contextlib import nullcontext
 
 
@@ -86,7 +86,9 @@ def train_or_evaluate(model,
     context = torch.no_grad()
 
   with context:
-    for batch in iterator:
+    for i, batch in enumerate(iterator):
+      
+      print("Batch ", i, " length: ", len(batch))
 
       example_counter += len(batch)
       if is_train:
@@ -94,11 +96,16 @@ def train_or_evaluate(model,
 
       loss, predictions = model(batch)
 
-      score_map.update({
-          index: (pred.item(), score.item(), label.item())
-          for index, pred, score, label in zip(batch.overall_index,
-          predictions, batch.score, batch.label)
-      })
+      #for k in batch.overall_index:
+      #  if k in score_map:
+      #    dsdsds
+
+      #score_map.update({
+      #    index: (pred.item(), score.item(), label.item())
+      #    for index, pred, score, label in zip(batch.overall_index,
+      #    predictions, batch.score, batch.label)
+      #})
+      #print(len(score_map))
 
       if is_train:
         loss.backward()
@@ -106,8 +113,7 @@ def train_or_evaluate(model,
 
       epoch_loss += loss.item()
 
-  print(example_counter)
-  print(len(score_map))
+
   assert example_counter
   return epoch_loss / example_counter, score_map
 
@@ -128,14 +134,17 @@ class EpochData(object):
 
 
 BCELOSS = nn.BCEWithLogitsLoss()
+MSE_LOSS = nn.MSELoss()
+SIGMOID = nn.Sigmoid()
 
 
 
-def get_a_bert():
+def get_a_bert(bert_config):
   return BertForSequenceClassification.from_pretrained(
-        'bert-base-uncased')
+        'bert-base-uncased', config=bert_config)
 
 
+BERT_SIZE = 768
 
 class BERTAlignmentModel(nn.Module):
 
@@ -148,30 +157,37 @@ class BERTAlignmentModel(nn.Module):
     self.repr_type = repr_type
     self.task_type = task_type
 
+    bert_config = BertConfig()
+
 
     if repr_type == "cat":
       self.actual_forward = self._forward_cat
-      self.bert = get_a_bert()
-      self.bert.config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
+      bert_config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
+      self.bert = get_a_bert(bert_config)
     else:
       assert repr_type == "2t"
       self.actual_forward = self._forward_2tower
-      self.review_bert = get_a_bert()
-      self.rebuttal_bert = get_a_bert()
+      self.review_bert = get_a_bert(bert_config)
+      self.rebuttal_bert = get_a_bert(bert_config)
       for mod in [self.review_bert, self.rebuttal_bert]:
         mod.config.output_hidden_states = True
       self.dropout = nn.Dropout(0.25)
-      self.classifier = nn.Linear(256, 1)
-
+      self.linear = nn.Linear(2 * BERT_SIZE, BERT_SIZE)
+      self.classifier = nn.Linear(BERT_SIZE, 1)
 
     self.label_getter = self._LABEL_GETTER_GETTER[task_type]
     self.checkpoint_name = get_checkpoint_name(repr_type, task_type)
 
   def forward(self, batch):
+    print("In forward pass, batch length: ", len(batch))
     return self._ACTUAL_FORWARD_MAP[self.repr_type](self, batch)
 
   def _forward_cat(self, batch):
-    output = self.bert(batch.both_sentences, labels=self.label_getter(batch))
+    if self.task_type =='bin':
+      labels = batch.label
+    else:
+      labels = batch.score
+    output = self.bert(batch.both_sentences, labels=labels)
     return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):
@@ -181,20 +197,28 @@ class BERTAlignmentModel(nn.Module):
         batch.rebuttal_sentence).hidden_states[0][:, 0]
 
     concat_rep = torch.cat([review_rep, rebuttal_rep], 1)
-    logits = torch.reshape(self.classifier(self.dropout(concat_rep)), [128])
+    logits = self.classifier(self.dropout(self.linear(concat_rep)))
 
     if self.task_type == 'reg':
-      dsds
+      loss = MSE_LOSS(logits, self.label_getter(batch))
     else:
+      logits = torch.reshape(logits, [logits.shape[0]])
       loss = BCELOSS(logits, self.label_getter(batch))
 
-    return loss, self._get_predictions(logits)
+    return loss, self._get_predictions_for_2t(logits)
+
+  def _get_predictions_for_2t(self, logits):
+    if self.task_type == 'reg':
+      return logits
+    else:
+      return (SIGMOID(logits) > 0.5).int()
 
   def _get_predictions(self, logits):
     if self.task_type == 'reg':
       return logits
     else:
-      return torch.argmax(logits, axis=1)
+      return (SIGMOID(logits) > 0.5).int()
+
 
   _TASK_TO_NUM_LABELS = {
     "bin": 2,
@@ -206,6 +230,6 @@ class BERTAlignmentModel(nn.Module):
   }
 
   _LABEL_GETTER_GETTER = {
-    "bin": lambda x: x.label,
+    "bin": lambda x: x.label.float(),
     "reg": lambda x: x.score
   }
