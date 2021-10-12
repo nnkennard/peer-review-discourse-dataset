@@ -110,23 +110,15 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,
                   review_sentence_texts[review_index], both_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
       identifiers.append((overall_example_index, identifier))
-    pos_examples = len(example_maps[1])
-    original_neg_examples = len(example_maps[0])
+    #pos_examples = len(example_maps[1])
+    #original_neg_examples = len(example_maps[0])
     sampled_neg_examples = random.sample(
-        example_maps[0], max(min(len(example_maps[0]), 2 *
-        len(example_maps[1])), 3))
-
-
-    print(collections.Counter(collections.Counter(k.overall_index for k in
-    example_maps[1]).values()))
-
-
-    #print(pos_examples, original_neg_examples, len(sampled_neg_examples))
+        example_maps[0],
+        max(min(len(example_maps[0]), 2 * len(example_maps[1])), 3))
 
     examples += example_maps[1]
     examples += sampled_neg_examples
   random.shuffle(examples)
-
 
   #print(collections.Counter(x.label for x in examples))
 
@@ -146,10 +138,13 @@ def get_general_examples(input_filename, index_generator):
                               obj["rebuttal_sentences"], index_generator)
 
 
-def write_examples_to_file(examples, filename):
+def write_examples_to_file(examples, filename, identifier_offset):
   with open(filename, 'w') as f:
-    for example in examples:
-      f.write(json.dumps(example._asdict()) + "\n")
+    for i, example in enumerate(examples):
+      temp_dict = example._asdict()
+      temp_dict["overall_index"] = identifier_offset + i
+      f.write(json.dumps(temp_dict) + "\n")
+  return identifier_offset + len(examples)
 
 
 Example = collections.namedtuple(
@@ -158,18 +153,19 @@ Example = collections.namedtuple(
     .split())
 
 
-def make_vocabber(tokens, index_generator, output_dir):
+def make_vocabber(tokens, output_dir):
   examples = []
   tokens = sorted(tokens)
+  j = 0
   for i in range(0, len(tokens), 20):
     sentence = " ".join(tokens[i:i + 20])
-    examples.append(
-        Example(next(index_generator), None, sentence, sentence, sentence, 0,
-                0))
-  write_examples_to_file(examples, output_dir + "/vocabber.jsonl")
+    examples.append(Example(j, None, sentence, sentence, sentence, 0, 0))
+    j += 1
+  write_examples_to_file(examples, output_dir + "/vocabber.jsonl", 0)
 
 
 MAX_EXAMPLES_PER_FILE = 10000
+
 
 def main():
 
@@ -177,8 +173,10 @@ def main():
   overall_identifier_list = []
   index_generator = overall_indexifier()
   overall_token_vocab = set()
-  
+
   os.makedirs(output_dir + "/")
+
+  examples_by_subset = {}
 
   for subset in SUBSETS:
     example_lists = collections.defaultdict(list)
@@ -191,30 +189,28 @@ def main():
       overall_identifier_list += identifiers
       example_lists[identifiers[0][0]] = pair_ml_examples
 
-    current_list = []
-    num_files_written = 0
+    examples_by_subset[subset] = example_lists
 
+  identifier_offset = 0
+  for subset, example_lists in examples_by_subset.items():
     os.makedirs(output_dir + "/" + subset + "/")
 
+    num_files_written = 0
+    current_list = []
     for review_id, examples in example_lists.items():
       if len(examples) + len(current_list) > MAX_EXAMPLES_PER_FILE:
         filename = make_output_filename(output_dir, subset, num_files_written)
-        write_examples_to_file(current_list, filename)
+        identifier_offset = write_examples_to_file(current_list, filename,
+                                                   identifier_offset)
         num_files_written += 1
         current_list = []
       else:
         current_list += examples
     if current_list:
       filename = make_output_filename(output_dir, subset, num_files_written)
-      write_examples_to_file(current_list, filename)
-    #write_examples_to_file(sum(example_lists.values(), []), output_dir +"/" +
-    #subset + "_all.jsonl")
+      write_examples_to_file(current_list, filename, identifier_offset)
 
-
-    all_examples = sum(example_lists.values(), [])
-    print(collections.Counter(x.label for x in all_examples))
-
-  make_vocabber(overall_token_vocab, index_generator, output_dir)
+    make_vocabber(overall_token_vocab, output_dir)
 
 
 if __name__ == "__main__":

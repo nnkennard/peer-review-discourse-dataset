@@ -75,6 +75,7 @@ def get_dataset_tools(data_dir):
 
   return alignment_lib.DatasetTools(tokenizer, device, metadata, fields)
 
+
 def get_iterator_list(glob_path, debug, dataset_tools):
   print("Debug? ", debug)
   iterator_list = []
@@ -84,10 +85,10 @@ def get_iterator_list(glob_path, debug, dataset_tools):
   for filename in filenames:
     print(filename)
     dataset, = data.TabularDataset.splits(path=".",
-                                                train=filename,
-                                                format='json',
-                                                skip_header=True,
-                                                fields=dataset_tools.fields)
+                                          train=filename,
+                                          format='json',
+                                          skip_header=True,
+                                          fields=dataset_tools.fields)
     iterator_list.append(
         data.BucketIterator.splits([dataset],
                                    batch_size=BATCH_SIZE,
@@ -99,15 +100,12 @@ def get_iterator_list(glob_path, debug, dataset_tools):
   return iterator_list
 
 
-def build_iterators(data_dir,
-                    dataset_tools,
-                    debug=False,
-                    make_valid=False):
+def build_iterators(data_dir, dataset_tools, debug=False, make_valid=False):
 
-  train_iterator_list = get_iterator_list(data_dir +"/train/0*.jsonl", debug,
-  dataset_tools)
-  dev_iterator_list = get_iterator_list(data_dir +"/dev/0*.jsonl", debug,
-  dataset_tools)
+  train_iterator_list = get_iterator_list(data_dir + "/train/0*.jsonl", debug,
+                                          dataset_tools)
+  dev_iterator_list = get_iterator_list(data_dir + "/dev/0*.jsonl", debug,
+                                        dataset_tools)
 
   vocabber_train_dataset, = data.TabularDataset.splits(
       path=data_dir,
@@ -120,6 +118,7 @@ def build_iterators(data_dir,
     dataset_tools.fields[key][1].build_vocab(vocabber_train_dataset)
 
   return train_iterator_list, dev_iterator_list
+
 
 def get_index_to_rank_map(score_map):
   sorted_scores = sorted(score_map.values(), reverse=True)
@@ -159,29 +158,33 @@ def get_mrrs(epoch_data, example_identifiers, true_match_map):
 
   return mean(list(i for i in mrr_accumulator if i is not None))
 
-def do_epoch(model, train_iterators, do_train, eval_sets,
-     dev_iterators=None, optimizer=None):
+
+def do_epoch(model,
+             train_iterators,
+             do_train,
+             eval_sets,
+             dev_iterators=None,
+             optimizer=None):
 
   train_metric, train_score_map, dev_metric, dev_score_map = [None] * 4
 
   start_time = time.time()
   if do_train:
     for iterator in train_iterators:
-      _ = alignment_lib.train_or_evaluate(
-        model, iterator, "train", optimizer
-      )
+      _ = alignment_lib.train_or_evaluate(model, iterator, "train", optimizer)
   if 'train' in eval_sets:
     for iterator in train_iterators:
       train_metric, train_score_map = alignment_lib.train_or_evaluate(
-        model, iterator, "evaluate")
+          model, iterator, "evaluate")
   if 'dev' in eval_sets:
     assert dev_iterators is not None
     for iterator in dev_iterators:
       dev_metric, dev_score_map = alignment_lib.train_or_evaluate(
-        model, iterator, "evaluate")
+          model, iterator, "evaluate")
   end_time = time.time()
-  return alignment_lib.EpochData(start_time, end_time, train_metric,
-  dev_metric, train_score_map, dev_score_map)
+  return alignment_lib.EpochData(start_time, end_time, train_metric, dev_metric,
+                                 train_score_map, dev_score_map)
+
 
 def main():
 
@@ -192,13 +195,12 @@ def main():
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
   train_iterators, dev_iterators = build_iterators(args.input_dir,
-                                                              dataset_tools,
-                                                              debug=args.debug,
-                                                              make_valid=True)
+                                                   dataset_tools,
+                                                   debug=args.debug,
+                                                   make_valid=True)
 
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
-
 
   train_ite = train_iterators[0]
 
@@ -217,13 +219,19 @@ def main():
   patience = 1000
   for epoch in range(1000):
 
-    do_epoch(model, train_iterators, do_train=True, eval_sets=[],
-      optimizer=optimizer)
+    do_epoch(model,
+             train_iterators,
+             do_train=True,
+             eval_sets=[],
+             optimizer=optimizer)
 
     print("Ran train epoch")
 
-    this_epoch_data = do_epoch(model, train_iterators,
-      do_train=False, eval_sets=["train", "dev"], dev_iterators=dev_iterators)
+    this_epoch_data = do_epoch(model,
+                               train_iterators,
+                               do_train=False,
+                               eval_sets=["train", "dev"],
+                               dev_iterators=dev_iterators)
 
     alignment_lib.report_epoch(epoch, this_epoch_data, experiment)
 
