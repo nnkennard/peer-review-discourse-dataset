@@ -5,10 +5,15 @@ import torch.nn.functional as F
 from transformers import BertForSequenceClassification, BertConfig
 from contextlib import nullcontext
 
-CAT, TT, BIN, REG = "cat 2t bin reg".split()
-TASKS = [BIN, REG]
-REPS = [CAT, TT]
 
+# Some string constants
+CAT, TT, BIN, REG = "cat 2t bin reg".split()
+TASKS = [BIN, REG] # Binary classification and regression
+REPS = [CAT, TT] # Concatenated and two-tower
+
+
+# BERT constants
+BERT_SIZE = 768
 
 class TokenizerMetadata(object):
 
@@ -94,13 +99,14 @@ def train_or_evaluate(model, iterator, mode, optimizer=None):
       if is_train:
         optimizer.zero_grad()
 
-      loss, predictions = model(batch)
+      mean_loss, predictions = model(batch)
+
 
       if is_train:
-        loss.backward()
+        mean_loss.backward()
         optimizer.step()
 
-      epoch_loss += loss.item()
+      epoch_loss += mean_loss.item() * len(predictions)
 
   assert example_counter
   return epoch_loss / example_counter, score_map
@@ -128,7 +134,6 @@ class EpochData(object):
 
 CE_LOSS = nn.CrossEntropyLoss()
 MSE_LOSS = nn.MSELoss()
-SIGMOID = nn.Sigmoid()
 
 
 def get_a_bert(bert_config):
@@ -136,7 +141,6 @@ def get_a_bert(bert_config):
                                                        config=bert_config)
 
 
-BERT_SIZE = 768
 
 
 class BERTAlignmentModel(nn.Module):
@@ -147,17 +151,26 @@ class BERTAlignmentModel(nn.Module):
 
     # Set up berts
 
-    assert repr_type in REPRS
+    assert repr_type in REPS
     assert task_type in TASKS
 
     self.repr_type = repr_type
     self.task_type = task_type
 
+    if self.task_type == BIN:
+      self.loss = CE_LOSS
+      self.label_getter = lambda x:x.label
+      num_labels = 2
+    else:
+      self.loss = MSE_LOSS
+      self.label_getter = lambda x:x.score
+      num_labels = 1
+
     bert_config = BertConfig()
 
     if repr_type == CAT:
       self.actual_forward = self._forward_cat
-      bert_config.num_labels = self._TASK_TO_NUM_LABELS[task_type]
+      bert_config.num_labels = num_labels
       self.bert = get_a_bert(bert_config)
     else:
       self.actual_forward = self._forward_2tower
@@ -167,21 +180,15 @@ class BERTAlignmentModel(nn.Module):
         mod.config.output_hidden_states = True
       self.dropout = nn.Dropout(0.25)
       self.linear = nn.Linear(2 * BERT_SIZE, BERT_SIZE)
-      self.classifier = nn.Linear(BERT_SIZE, 1)
+      self.classifier = nn.Linear(BERT_SIZE, num_labels)
 
-    self.label_getter = self._LABEL_GETTER_GETTER[task_type]
     self.checkpoint_name = get_checkpoint_name(repr_type, task_type)
 
   def forward(self, batch):
-    #print("In forward pass, batch length: ", len(batch))
     return self._ACTUAL_FORWARD_MAP[self.repr_type](self, batch)
 
   def _forward_cat(self, batch):
-    if self.task_type == BIN:
-      labels = batch.label
-    else:
-      labels = batch.score
-    output = self.bert(batch.both_sentences, labels=labels)
+    output = self.bert(batch.both_sentences, labels=self.label_getter(batch))
     return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):
@@ -191,28 +198,15 @@ class BERTAlignmentModel(nn.Module):
 
     concat_rep = torch.cat([review_rep, rebuttal_rep], 1)
     logits = self.classifier(self.dropout(self.linear(concat_rep)))
+    if self.task_type == "REG":
+      logits = tf.reshape(logits, [logits.shape[0]])
+    return self.loss(logits, self.label_getter(batch)), self._get_predictions(logits)
 
-    if self.task_type == REG:
-      loss = MSE_LOSS(logits, self.label_getter(batch))
-    else:
-      logits = torch.reshape(logits, [logits.shape[0]])
-      loss = CE_LOSS(logits, self.label_getter(batch))
-
-    return loss, self._get_predictions(logits)
-
-    def _get_predictions(self, logits):
+  def _get_predictions(self, logits):
     if self.task_type == REG:
       return logits
     else:
-      #return (SIGMOID(logits) > 0.5).int()
       return torch.argmax(logits, axis=1)
-
-  _TASK_TO_NUM_LABELS = {BIN: 2, REG: 1}
 
   _ACTUAL_FORWARD_MAP = {CAT: _forward_cat, TT: _forward_2tower}
 
-
-  _LABEL_GETTER_GETTER = {
-      BIN: lambda x: x.label.float(),
-      REG: lambda x: x.score
-  }

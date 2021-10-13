@@ -202,22 +202,12 @@ def main():
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
 
-  train_ite = train_iterators[0]
-
-  seen_indices = set()
-  seen_sentences = set()
-  for batch in train_ite:
-    #print(len(seen_indices.intersection(set(batch.overall_index))))
-    print(len(seen_indices.intersection(set(batch.both_sentences))))
-    seen_indices.update(batch.overall_index)
-    seen_indices.update(batch.both_sentences)
-
   optimizer = optim.Adam(model.parameters())
 
   best_valid_loss = float('inf')
   best_valid_epoch = None
   patience = 1000
-  for epoch in range(1000):
+  for epoch in range(1):
 
     do_epoch(model,
              train_iterators,
