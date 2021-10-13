@@ -43,7 +43,7 @@ torch.backends.cudnn.deterministic = True
 
 BATCH_SIZE = 64
 EPOCHS = 1000
-PATIENCE = 100
+PATIENCE = 600
 
 
 def generate_text_field(tokenizer):
@@ -81,7 +81,7 @@ def get_dataset_tools(data_dir):
 def get_iterator_list(glob_path, debug, dataset_tools):
   iterator_list = []
   filenames = glob.glob(glob_path)
-  for filename in filenames:
+  for filename in tqdm(filenames):
     dataset, = data.TabularDataset.splits(path=".",
                                           train=filename,
                                           format='json',
@@ -101,9 +101,11 @@ def get_iterator_list(glob_path, debug, dataset_tools):
 
 def build_iterators(data_dir, dataset_tools, debug=False, make_valid=False):
 
-  train_iterator_list = get_iterator_list(data_dir + "/train/mini*.jsonl", debug,
+  print("Train iterators")
+  train_iterator_list = get_iterator_list(data_dir + "/train/0*.jsonl", debug,
                                           dataset_tools)
-  dev_iterator_list = get_iterator_list(data_dir + "/dev/mini*.jsonl", debug,
+  print("Dev iterators")
+  dev_iterator_list = get_iterator_list(data_dir + "/dev/0*.jsonl", debug,
                                         dataset_tools)
 
   vocabber_train_dataset, = data.TabularDataset.splits(
@@ -199,6 +201,7 @@ def main():
 
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
+  print("Getting iterators")
   train_iterators, dev_iterators = build_iterators(args.input_dir,
                                                    dataset_tools,
                                                    debug=args.debug,

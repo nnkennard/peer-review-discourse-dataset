@@ -2,7 +2,7 @@ import collections
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertForSequenceClassification, BertConfig
+from transformers import BertModel, BertForSequenceClassification, BertConfig
 from contextlib import nullcontext
 
 # Some string constants
@@ -197,7 +197,11 @@ class BERTAlignmentModel(nn.Module):
       )
       #bert_config.num_labels = num_labels
       #self.bert = get_a_bert(bert_config)
-      self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', config=config)
+      self.bert = BertModel.from_pretrained('bert-base-uncased')
+      self.dropout = nn.Dropout(0.25)
+      self.classifier = nn.Linear(BERT_SIZE, 2)
+      self.bert.config.output_hidden_states = True
+      #self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', config=config)
     else:
       self.actual_forward = self._forward_2tower
       self.review_bert = get_a_bert(bert_config)
@@ -214,7 +218,10 @@ class BERTAlignmentModel(nn.Module):
     return self._ACTUAL_FORWARD_MAP[self.repr_type](self, batch)
 
   def _forward_cat(self, batch):
-    output = self.bert(batch.both_sentences, labels=self.label_getter(batch))
+    bert_output = self.bert(batch.both_sentences)
+    logits = self.classifier(self.dropout(bert_output[0][:,0]))
+    loss = CE_LOSS(logits, batch.label)
+    return loss, self._get_predictions(logits)
     return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):

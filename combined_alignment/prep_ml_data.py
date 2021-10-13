@@ -27,7 +27,7 @@ parser.add_argument('-o',
                     help='path to dataset files')
 
 MAX_EXAMPLES_PER_FILE = 10000
-NEG_TO_POS_SAMPLE_RATIO = 2
+NEG_TO_POS_SAMPLE_RATIO = 1
 
 STEMMER = PorterStemmer()
 STOPWORDS = stopwords.words('english')
