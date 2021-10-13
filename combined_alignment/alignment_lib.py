@@ -59,18 +59,45 @@ class DatasetTools(object):
 def get_checkpoint_name(repr_choice, task_choice):
   return "".join(["checkpoints/", repr_choice, "_", task_choice, ".pt"])
 
+def calculate_f1(score_map):
+  category_accumulators = collections.Counter(
+      (a, b) for a, _, b in score_map.values())
+  tp = category_accumulators[(1,1)]
+  fp = category_accumulators[(0,1)]
+  fn = category_accumulators[(1,0)]
 
-def report_epoch(epoch, epoch_data, experiment, sub_epoch=0):
-  experiment.log_metric("Batch train metric",
+  print(category_accumulators)
+
+  if not tp or not fp or not fn:
+    return 0.0
+
+  p = tp /(tp + fp)
+  r = tp/(tp+fn)
+
+  f1 = 2 * p * r / (p + r)
+  return f1
+
+
+def report_epoch(epoch, task, epoch_data, experiment, sub_epoch=0):
+  experiment.log_metric("Epoch train metric",
                         epoch_data.train_metric,
                         step=epoch)
-  experiment.log_metric("Batch val metric", epoch_data.val_metric, step=epoch)
+  experiment.log_metric("Epoch val metric", epoch_data.val_metric, step=epoch)
+
+
+  if task == BIN:
+    experiment.log_metric("Epoch train F1",
+    calculate_f1(epoch_data.train_score_map),
+    step=epoch)
+    experiment.log_metric("Epoch dev F1",
+    calculate_f1(epoch_data.valid_score_map),
+    step=epoch)
 
   print((
       f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
       f'{epoch_data.elapsed_secs}s\n'
-      f'\tTrain MSE: {epoch_data.train_metric:.3f} | '
-      f'\t Val. MSE: {epoch_data.val_metric:.3f}'))
+      f'\tTrain metric: {epoch_data.train_metric:.3f} | '
+      f'\t Val. metric: {epoch_data.val_metric:.3f}'))
 
 
 def train_or_evaluate(model, iterator, mode, optimizer=None):
@@ -78,9 +105,7 @@ def train_or_evaluate(model, iterator, mode, optimizer=None):
 
   is_train = mode == "train"
 
-  epoch_loss = 0.0
-  epoch_acc = 0.0
-  example_counter = 0
+  epoch_loss_sum = 0.0
   score_map = {}
 
   if is_train:
@@ -94,20 +119,21 @@ def train_or_evaluate(model, iterator, mode, optimizer=None):
   with context:
     for i, batch in enumerate(iterator):
 
-      example_counter += len(batch)
+      mean_loss, predictions = model(batch)
       if is_train:
         optimizer.zero_grad()
-
-      mean_loss, predictions = model(batch)
-
-      if is_train:
         mean_loss.backward()
         optimizer.step()
 
-      epoch_loss += mean_loss.item() * len(predictions)
+      else:
+        for pred, index, score, label in zip(
+          predictions, batch.overall_index, batch.score, batch.label):
+          score_map[index] = (pred.item(), score.item(), label.item())
 
-  assert example_counter
-  return epoch_loss / example_counter, score_map
+
+      epoch_loss_sum += mean_loss.item() * len(predictions)
+
+  return epoch_loss_sum, score_map
 
 
 class EpochData(object):
@@ -161,11 +187,17 @@ class BERTAlignmentModel(nn.Module):
       num_labels = 1
 
     bert_config = BertConfig()
+    
 
     if repr_type == CAT:
       self.actual_forward = self._forward_cat
-      bert_config.num_labels = num_labels
-      self.bert = get_a_bert(bert_config)
+      config = BertConfig.from_pretrained(
+          'bert-base-uncased',
+          num_labels = num_labels,
+      )
+      #bert_config.num_labels = num_labels
+      #self.bert = get_a_bert(bert_config)
+      self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', config=config)
     else:
       self.actual_forward = self._forward_2tower
       self.review_bert = get_a_bert(bert_config)

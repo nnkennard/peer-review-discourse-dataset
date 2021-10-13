@@ -41,9 +41,9 @@ SEED = 43
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
-BATCH_SIZE = 128
-EPOCHS = 100
-PATIENCE = 10
+BATCH_SIZE = 64
+EPOCHS = 1000
+PATIENCE = 100
 
 
 def generate_text_field(tokenizer):
@@ -92,6 +92,7 @@ def get_iterator_list(glob_path, debug, dataset_tools):
                                    batch_size=BATCH_SIZE,
                                    device=dataset_tools.device,
                                    sort_key=lambda x: x.overall_index,
+                                   shuffle=True,
                                    sort_within_batch=False)[0])
     if debug:
       break
@@ -100,9 +101,9 @@ def get_iterator_list(glob_path, debug, dataset_tools):
 
 def build_iterators(data_dir, dataset_tools, debug=False, make_valid=False):
 
-  train_iterator_list = get_iterator_list(data_dir + "/train/0*.jsonl", debug,
+  train_iterator_list = get_iterator_list(data_dir + "/train/mini*.jsonl", debug,
                                           dataset_tools)
-  dev_iterator_list = get_iterator_list(data_dir + "/dev/0*.jsonl", debug,
+  dev_iterator_list = get_iterator_list(data_dir + "/dev/mini*.jsonl", debug,
                                         dataset_tools)
 
   vocabber_train_dataset, = data.TabularDataset.splits(
@@ -164,7 +165,7 @@ def do_epoch(model,
              dev_iterators=None,
              optimizer=None):
 
-  train_metric, train_score_map, dev_metric, dev_score_map = [None] * 4
+  train_metric, train_score_map, dev_metric, dev_score_map = 0, {}, 0, {}
 
   start_time = time.time()
   if do_train:
@@ -172,17 +173,23 @@ def do_epoch(model,
       _ = alignment_lib.train_or_evaluate(model, iterator, "train", optimizer)
   if 'train' in eval_sets:
     for iterator in train_iterators:
-      train_metric, train_score_map = alignment_lib.train_or_evaluate(
+      sub_train_metric, sub_train_score_map = alignment_lib.train_or_evaluate(
           model, iterator, "evaluate")
+      train_metric += sub_train_metric
+      train_score_map.update(sub_train_score_map)
   if 'dev' in eval_sets:
     assert dev_iterators is not None
     for iterator in dev_iterators:
-      dev_metric, dev_score_map = alignment_lib.train_or_evaluate(
+      sub_dev_metric, sub_dev_score_map = alignment_lib.train_or_evaluate(
           model, iterator, "evaluate")
+      dev_metric += sub_dev_metric
+      dev_score_map.update(sub_dev_score_map)
   end_time = time.time()
   return alignment_lib.EpochData(start_time, end_time, train_metric, dev_metric,
                                  train_score_map, dev_score_map)
-
+def get_metadata(input_dir):
+  with open(input_dir + "/metadata.json", 'r') as f:
+   obj = json.load(f)
 
 def main():
 
@@ -197,10 +204,12 @@ def main():
                                                    debug=args.debug,
                                                    make_valid=True)
 
+  metadata = get_metadata(args.input_dir)
+
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
 
-  optimizer = optim.Adam(model.parameters())
+  optimizer = optim.Adam(model.parameters(), lr=5e-5)
 
   best_valid_loss = float('inf')
   best_valid_epoch = None
@@ -220,7 +229,7 @@ def main():
                                eval_sets=["train", "dev"],
                                dev_iterators=dev_iterators)
 
-    alignment_lib.report_epoch(epoch, this_epoch_data, experiment)
+    alignment_lib.report_epoch(epoch, args.task_choice, this_epoch_data, experiment)
 
     print("Ran eval epoch")
 
