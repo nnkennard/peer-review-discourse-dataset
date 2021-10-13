@@ -19,7 +19,7 @@ import alignment_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="temp_data_files/",
+                    default="torchtext_input_data/",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
@@ -42,6 +42,8 @@ torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
 BATCH_SIZE = 128
+EPOCHS = 100
+PATIENCE = 10
 
 
 def generate_text_field(tokenizer):
@@ -77,13 +79,9 @@ def get_dataset_tools(data_dir):
 
 
 def get_iterator_list(glob_path, debug, dataset_tools):
-  print("Debug? ", debug)
   iterator_list = []
   filenames = glob.glob(glob_path)
-  if debug:
-    filenames = filenames[:2]
   for filename in filenames:
-    print(filename)
     dataset, = data.TabularDataset.splits(path=".",
                                           train=filename,
                                           format='json',
@@ -206,8 +204,7 @@ def main():
 
   best_valid_loss = float('inf')
   best_valid_epoch = None
-  patience = 1000
-  for epoch in range(1):
+  for epoch in range(EPOCHS):
 
     do_epoch(model,
              train_iterators,
@@ -233,7 +230,7 @@ def main():
       torch.save(model.state_dict(), model.checkpoint_name)
       best_valid_epoch = epoch
 
-    if best_valid_epoch < (epoch - patience):
+    if best_valid_epoch < (epoch - PATIENCE):
       break
 
 

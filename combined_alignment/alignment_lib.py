@@ -5,15 +5,14 @@ import torch.nn.functional as F
 from transformers import BertForSequenceClassification, BertConfig
 from contextlib import nullcontext
 
-
 # Some string constants
 CAT, TT, BIN, REG = "cat 2t bin reg".split()
-TASKS = [BIN, REG] # Binary classification and regression
-REPS = [CAT, TT] # Concatenated and two-tower
-
+TASKS = [BIN, REG]  # Binary classification and regression
+REPS = [CAT, TT]  # Concatenated and two-tower
 
 # BERT constants
 BERT_SIZE = 768
+
 
 class TokenizerMetadata(object):
 
@@ -101,7 +100,6 @@ def train_or_evaluate(model, iterator, mode, optimizer=None):
 
       mean_loss, predictions = model(batch)
 
-
       if is_train:
         mean_loss.backward()
         optimizer.step()
@@ -141,15 +139,11 @@ def get_a_bert(bert_config):
                                                        config=bert_config)
 
 
-
-
 class BERTAlignmentModel(nn.Module):
 
   def __init__(self, repr_type, task_type):
 
     super().__init__()
-
-    # Set up berts
 
     assert repr_type in REPS
     assert task_type in TASKS
@@ -159,11 +153,11 @@ class BERTAlignmentModel(nn.Module):
 
     if self.task_type == BIN:
       self.loss = CE_LOSS
-      self.label_getter = lambda x:x.label
+      self.label_getter = lambda x: x.label
       num_labels = 2
     else:
       self.loss = MSE_LOSS
-      self.label_getter = lambda x:x.score
+      self.label_getter = lambda x: x.score
       num_labels = 1
 
     bert_config = BertConfig()
@@ -198,9 +192,10 @@ class BERTAlignmentModel(nn.Module):
 
     concat_rep = torch.cat([review_rep, rebuttal_rep], 1)
     logits = self.classifier(self.dropout(self.linear(concat_rep)))
-    if self.task_type == "REG":
-      logits = tf.reshape(logits, [logits.shape[0]])
-    return self.loss(logits, self.label_getter(batch)), self._get_predictions(logits)
+    if self.task_type == REG:
+      logits = torch.reshape(logits, [logits.shape[0]])
+    return self.loss(logits,
+                     self.label_getter(batch)), self._get_predictions(logits)
 
   def _get_predictions(self, logits):
     if self.task_type == REG:
@@ -209,4 +204,3 @@ class BERTAlignmentModel(nn.Module):
       return torch.argmax(logits, axis=1)
 
   _ACTUAL_FORWARD_MAP = {CAT: _forward_cat, TT: _forward_2tower}
-
