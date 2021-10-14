@@ -2,6 +2,7 @@ import argparse
 import collections
 import glob
 import json
+import pickle
 import time
 
 from comet_ml import Experiment
@@ -19,7 +20,7 @@ import alignment_lib
 parser = argparse.ArgumentParser(description='prepare CSVs for ws training')
 parser.add_argument('-i',
                     '--input_dir',
-                    default="torchtext_input_data/",
+                    default="torchtext_input_data_posneg_1_sample_1.0",
                     type=str,
                     help='path to data file containing score jsons')
 parser.add_argument('-d', '--debug', action='store_true')
@@ -42,8 +43,8 @@ torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
 BATCH_SIZE = 128
-EPOCHS = 1000
-PATIENCE = 600
+EPOCHS = 50
+PATIENCE = 5
 
 
 def generate_text_field(tokenizer):
@@ -107,6 +108,9 @@ def build_iterators(data_dir, dataset_tools, debug=False, make_valid=False):
   print("Dev iterators")
   dev_iterator_list = get_iterator_list(data_dir + "/dev/0*.jsonl", debug,
                                         dataset_tools)
+  print("Test iterators")
+  test_iterator_list = get_iterator_list(data_dir + "/test/0*.jsonl", debug,
+                                         dataset_tools)
 
   vocabber_train_dataset, = data.TabularDataset.splits(
       path=data_dir,
@@ -118,7 +122,7 @@ def build_iterators(data_dir, dataset_tools, debug=False, make_valid=False):
   for key in "review_sentence rebuttal_sentence both_sentences label".split():
     dataset_tools.fields[key][1].build_vocab(vocabber_train_dataset)
 
-  return train_iterator_list, dev_iterator_list
+  return train_iterator_list, dev_iterator_list, test_iterator_list
 
 
 def get_index_to_rank_map(score_map):
@@ -160,43 +164,35 @@ def get_mrrs(epoch_data, example_identifiers, true_match_map):
   return mean(list(i for i in mrr_accumulator if i is not None))
 
 
-def do_epoch(model,
-             train_iterators,
-             do_train,
-             eval_sets,
-             dev_iterators=None,
-             optimizer=None):
-
-  train_metric, train_score_map, dev_metric, dev_score_map = 0, {}, 0, {}
+def do_epoch(model, iterators, do_train, eval_sets, optimizer=None):
 
   start_time = time.time()
   if do_train:
+    assert optimizer is not None
     print("Train iterators (train)")
-    for iterator in tqdm(train_iterators):
+    for iterator in tqdm(iterators["train"]):
       _ = alignment_lib.train_or_evaluate(model, iterator, "train", optimizer)
-  if 'train' in eval_sets:
-    print("Train iterators (eval)")
-    for iterator in tqdm(train_iterators):
-      sub_train_metric, sub_train_score_map = alignment_lib.train_or_evaluate(
+
+  metric_dict = collections.defaultdict(float)
+  score_maps = collections.defaultdict(dict)
+
+  for eval_set in eval_sets:
+    assert eval_set in iterators
+    for iterator in tqdm(iterators[eval_set]):
+      sub_metric, sub_score_map = alignment_lib.train_or_evaluate(
           model, iterator, "evaluate")
-      print(sub_train_metric, len(sub_train_score_map))
-      train_metric += sub_train_metric
-      train_score_map.update(sub_train_score_map)
-  if 'dev' in eval_sets:
-    print("Dev iterators (eval)")
-    assert dev_iterators is not None
-    for iterator in tqdm(dev_iterators):
-      sub_dev_metric, sub_dev_score_map = alignment_lib.train_or_evaluate(
-          model, iterator, "evaluate")
-      dev_metric += sub_dev_metric
-      dev_score_map.update(sub_dev_score_map)
+      metric_dict[eval_set] += sub_metric
+      score_maps[eval_set].update(sub_score_map)
+
   end_time = time.time()
-  return alignment_lib.EpochData(start_time, end_time, train_metric, dev_metric,
-                                 train_score_map, dev_score_map)
+  return alignment_lib.EpochData(start_time, end_time, metric_dict, score_maps)
+
+
 def get_metadata(input_dir):
   with open(input_dir + "/metadata.json", 'r') as f:
-   obj = json.load(f)
-   return obj["index_to_review_map"], obj["review_to_map_map"]
+    obj = json.load(f)
+    return obj["index_to_review_map"], obj["review_to_map_map"]
+
 
 def main():
 
@@ -207,15 +203,10 @@ def main():
   experiment = Experiment(project_name=args.repr_choice + args.task_choice)
 
   print("Getting iterators")
-  train_iterators, dev_iterators = build_iterators(args.input_dir,
-                                                   dataset_tools,
-                                                   debug=args.debug,
-                                                   make_valid=True)
+  train_iterators, dev_iterators, test_iterators = build_iterators(
+      args.input_dir, dataset_tools, debug=args.debug, make_valid=True)
 
   dataset_metadata = get_metadata(args.input_dir)
-  #a, b = dataset_metadata
-  #print(sorted(a.keys())[:10])
-  #exit()
 
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
@@ -229,7 +220,7 @@ def main():
     print("Starting epoch {0}".format(epoch))
 
     do_epoch(model,
-             train_iterators,
+             iterators={"train": train_iterators},
              do_train=True,
              eval_sets=[],
              optimizer=optimizer)
@@ -237,26 +228,41 @@ def main():
     print("Ran train epoch")
 
     this_epoch_data = do_epoch(model,
-                               train_iterators,
+                               iterators={
+                                   "train": train_iterators,
+                                   "dev": dev_iterators
+                               },
                                do_train=False,
-                               eval_sets=["train", "dev"],
-                               dev_iterators=dev_iterators)
-
-
+                               eval_sets=["train", "dev"])
 
     print("in train.py", args.task_choice)
     alignment_lib.report_epoch(epoch, args.task_choice, this_epoch_data,
-    experiment, dataset_metadata)
+                               experiment, dataset_metadata)
 
     print("Ran eval epoch")
 
     if this_epoch_data.val_metric < best_valid_loss:
       print("Best validation loss; saving model from epoch ", epoch)
       best_valid_loss = this_epoch_data.val_metric
+      best_epoch_data = this_epoch_data
       torch.save(model.state_dict(), model.checkpoint_name)
       best_valid_epoch = epoch
 
     if best_valid_epoch < (epoch - PATIENCE):
+      torch.load(model.checkpoint_name)
+      best_epoch_data_with_test = do_epoch(model,
+                                           iterators={
+                                               "train": train_iterators,
+                                               "dev": dev_iterators,
+                                               "test": test_iterators
+                                           },
+                                           do_train=False,
+                                           eval_sets=["train", "dev", "test"])
+      print("Dumping test results")
+      with open(
+          alignment_lib.get_pickle_name(args.repr_choice, args.task_choice),
+          'wb') as f:
+        pickle.dump(best_epoch_data_with_test, f)
       break
 
 

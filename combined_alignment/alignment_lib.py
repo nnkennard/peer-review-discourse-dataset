@@ -56,26 +56,32 @@ class DatasetTools(object):
     self.fields = fields
 
 
+def get_pickle_name(repr_choice, task_choice):
+  return "".join(["checkpoints/", repr_choice, "_", task_choice, ".pickle"])
+
+
 def get_checkpoint_name(repr_choice, task_choice):
   return "".join(["checkpoints/", repr_choice, "_", task_choice, ".pt"])
+
 
 def calculate_f1(score_map):
   category_accumulators = collections.Counter(
       (a, b) for a, _, b in score_map.values())
-  tp = category_accumulators[(1,1)]
-  fp = category_accumulators[(0,1)]
-  fn = category_accumulators[(1,0)]
+  tp = category_accumulators[(1, 1)]
+  fp = category_accumulators[(0, 1)]
+  fn = category_accumulators[(1, 0)]
 
   print(category_accumulators)
 
   if not tp or not fp or not fn:
     return 0.0
 
-  p = tp /(tp + fp)
-  r = tp/(tp+fn)
+  p = tp / (tp + fp)
+  r = tp / (tp + fn)
 
   f1 = 2 * p * r / (p + r)
   return f1
+
 
 def unpack_key(key):
   a, b = key.split("_")
@@ -87,6 +93,7 @@ def mean(l):
     return None
   else:
     return sum(l) / len(l)
+
 
 def calculate_mrr(score_map, dataset_metadata):
   index_to_review_map, review_to_map_map = dataset_metadata
@@ -105,10 +112,10 @@ def calculate_mrr(score_map, dataset_metadata):
 
     for query_index, score_list in values_lists.items():
       reciprocal_ranks = []
-      for i, (_, pred, label) in enumerate(sorted(score_list, key=lambda x:x[1],
-      reverse=True)):
+      for i, (_, pred, label) in enumerate(
+          sorted(score_list, key=lambda x: x[1], reverse=True)):
         if label == 1:
-          reciprocal_ranks.append(1/(i + 1))
+          reciprocal_ranks.append(1 / (i + 1))
 
       if reciprocal_ranks:
         mrrs.append(mean(reciprocal_ranks))
@@ -116,7 +123,12 @@ def calculate_mrr(score_map, dataset_metadata):
   return mean(mrrs)
 
 
-def report_epoch(epoch, task, epoch_data, experiment, dataset_metadata, sub_epoch=0):
+def report_epoch(epoch,
+                 task,
+                 epoch_data,
+                 experiment,
+                 dataset_metadata,
+                 sub_epoch=0):
 
   assert task in TASKS
 
@@ -130,12 +142,14 @@ def report_epoch(epoch, task, epoch_data, experiment, dataset_metadata, sub_epoc
     metric_fn = calculate_f1
   else:
     metric_name = "MRR"
-    metric_fn = lambda x:calculate_mrr(x, dataset_metadata)
+    metric_fn = lambda x: calculate_mrr(x, dataset_metadata)
 
   experiment.log_metric("Epoch train {0}".format(metric_name),
-      metric_fn(epoch_data.train_score_map), step=epoch)
+                        metric_fn(epoch_data.train_score_map),
+                        step=epoch)
   experiment.log_metric("Epoch dev {0}".format(metric_name),
-      metric_fn(epoch_data.valid_score_map), step=epoch)
+                        metric_fn(epoch_data.valid_score_map),
+                        step=epoch)
 
   print((
       f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
@@ -164,16 +178,16 @@ def train_or_evaluate(model, iterator, mode, optimizer=None):
     for i, batch in enumerate(iterator):
 
       mean_loss, predictions = model(batch)
+
       if is_train:
         optimizer.zero_grad()
         mean_loss.backward()
         optimizer.step()
 
       else:
-        for pred, index, score, label in zip(
-          predictions, batch.overall_index, batch.score, batch.label):
+        for pred, index, score, label in zip(predictions, batch.overall_index,
+                                             batch.score, batch.label):
           score_map[index] = (pred.item(), score.item(), label.item())
-
 
       epoch_loss_sum += mean_loss.item() * len(predictions)
 
@@ -185,24 +199,33 @@ class EpochData(object):
   def __init__(self,
                start_time=None,
                end_time=None,
-               train_metric=None,
-               val_metric=None,
-               train_score_map=None,
-               valid_score_map=None):
+               metric_dict=None,
+               score_maps=None):
 
-    print(train_metric, len(train_score_map))
-    print(val_metric, len(valid_score_map))
+    if 'train' in score_maps:
+      self.train_metric = metric_dict["train"] / len(score_maps["train"])
+      self.train_score_map = score_maps["train"]
+    else:
+      self.train_metric = -1.0
+      self.train_score_map = {}
 
+    if 'dev' in score_maps:
+      self.val_metric = metric_dict["dev"] / len(score_maps["dev"])
+      self.valid_score_map = score_maps["dev"]
+    else:
+      self.val_metric = -1.0
+      self.valid_score_map = {}
 
-    self.train_metric = train_metric / len(train_score_map)
-    self.val_metric = val_metric / len(valid_score_map)
+    if 'test' in score_maps:
+      self.test_metric = metric_dict["test"] / len(score_maps["test"])
+      self.test_score_map = score_maps["test"]
+    else:
+      self.test_metric = -1.0
+      self.test_score_map = {}
 
     elapsed_time = end_time - start_time
     self.elapsed_mins = int(elapsed_time / 60)
     self.elapsed_secs = int(elapsed_time - (self.elapsed_mins * 60))
-
-    self.train_score_map = train_score_map
-    self.valid_score_map = valid_score_map
 
 
 CE_LOSS = nn.CrossEntropyLoss()
@@ -211,6 +234,7 @@ MSE_LOSS = nn.MSELoss()
 
 def get_a_bert(bert_config):
   return BertModel.from_pretrained('bert-base-uncased', config=bert_config)
+
 
 class BERTAlignmentModel(nn.Module):
 
@@ -234,10 +258,10 @@ class BERTAlignmentModel(nn.Module):
       num_labels = 1
 
     bert_uncased_config = config = BertConfig.from_pretrained(
-          'bert-base-uncased',
-          num_labels = num_labels,
-          output_hidden_states = True,
-      )
+        'bert-base-uncased',
+        num_labels=num_labels,
+        output_hidden_states=True,
+    )
 
     self.dropout = nn.Dropout(0.25)
     self.classifier = nn.Linear(BERT_SIZE, num_labels)
@@ -258,7 +282,7 @@ class BERTAlignmentModel(nn.Module):
 
   def _forward_cat(self, batch):
     bert_output = self.bert(batch.both_sentences)
-    logits = self.classifier(self.dropout(bert_output[0][:,0]))
+    logits = self.classifier(self.dropout(bert_output[0][:, 0]))
     if self.task_type == REG:
       logits = torch.reshape(logits, [logits.shape[0]])
     loss = self.loss_fn(logits, self.label_getter(batch))
@@ -274,7 +298,7 @@ class BERTAlignmentModel(nn.Module):
     if self.task_type == REG:
       logits = torch.reshape(logits, [logits.shape[0]])
     return self.loss_fn(logits,
-                     self.label_getter(batch)), self._get_predictions(logits)
+                        self.label_getter(batch)), self._get_predictions(logits)
 
   def _get_predictions(self, logits):
     if self.task_type == REG:
