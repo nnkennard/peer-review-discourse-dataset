@@ -15,7 +15,6 @@ import rank_bm25
 
 random.seed(43)
 
-
 parser = argparse.ArgumentParser(description='prepare jsonls for torchtext')
 parser.add_argument('-i',
                     '--input_dir',
@@ -30,10 +29,11 @@ parser.add_argument('-o',
 
 MAX_EXAMPLES_PER_FILE = 10000
 NEG_TO_POS_SAMPLE_RATIO = 1
-POS_SAMPLE_RATIO = 1.0
+#POS_SAMPLE_RATIO = 1.0
 
 STEMMER = PorterStemmer()
 STOPWORDS = stopwords.words('english')
+
 
 def preprocess(sentence):
   return [
@@ -41,6 +41,7 @@ def preprocess(sentence):
       for word in word_tokenize(sentence)
       if word.lower() not in STOPWORDS
   ]
+
 
 def preprocess_sentences(sentences):
   return zip(*[(preprocess(sentence["text"]), sentence["text"])
@@ -90,7 +91,11 @@ def get_token_vocab(review_sentences, rebuttal_sentences):
   return tokens
 
 
-def make_pair_examples(review_id, review_sentences, rebuttal_sentences,):
+def make_pair_examples(
+    review_id,
+    review_sentences,
+    rebuttal_sentences,
+):
   true_related_pairs = get_true_related_pairs(rebuttal_sentences)
   corpus, review_sentence_texts = preprocess_sentences(review_sentences)
   preprocessed_queries, rebuttal_sentence_texts = preprocess_sentences(
@@ -115,20 +120,21 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,):
       rebuttal_sentence = rebuttal_sentence_texts[rebuttal_index]
       both_sentences = review_sentence + " [SEP] " + rebuttal_sentence
       example_maps[label].append(
-          Example(None, identifier,
-                  review_sentence_texts[review_index], both_sentences,
-                  rebuttal_sentence_texts[rebuttal_index], score, label))
+          Example(None, identifier, review_sentence_texts[review_index],
+                  both_sentences, rebuttal_sentence_texts[rebuttal_index],
+                  score, label))
     pos_examples = example_maps[1]
-    sampled_pos_examples = []
-    for pos_example in pos_examples:
-      choice = random.random()
-      if choice < POS_SAMPLE_RATIO:
-        sampled_pos_examples.append(pos_example)
+    sampled_pos_examples = pos_examples
+    #for pos_example in pos_examples:
+    #  choice = random.random()
+    #  if choice < POS_SAMPLE_RATIO:
+    #    sampled_pos_examples.append(pos_example)
 
     sampled_neg_examples = random.sample(
         example_maps[0],
-        max(min(len(example_maps[0]),
-        NEG_TO_POS_SAMPLE_RATIO * len(sampled_pos_examples)), 1))
+        max(
+            min(len(example_maps[0]),
+                NEG_TO_POS_SAMPLE_RATIO * len(sampled_pos_examples)), 3))
 
     examples += sampled_pos_examples + sampled_neg_examples
     filtered_examples = {}
@@ -137,13 +143,12 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,):
         continue
       else:
         filtered_examples[example.identifier] = example
-      
 
   examples = sorted(filtered_examples.values())
   random.shuffle(examples)
 
   return examples, review_id, get_token_vocab(review_sentence_texts,
-                                                rebuttal_sentence_texts)
+                                              rebuttal_sentence_texts)
 
 
 def make_output_filename(output_dir, subset, index):
@@ -218,11 +223,12 @@ def make_metadata(output_dir, overall_identifier_list):
   print(len(sum([list(k.values()) for k in review_to_map_map.values()], [])))
 
   with open(output_dir + "/metadata.json", 'w') as f:
-    json.dump({
-    "index_to_review_map": index_to_review_map,
-    "review_to_map_map": dict(review_to_map_map),
-    "negative_to_positive_example_ratio": NEG_TO_POS_SAMPLE_RATIO
-    }, f)
+    json.dump(
+        {
+            "index_to_review_map": index_to_review_map,
+            "review_to_map_map": dict(review_to_map_map),
+            "negative_to_positive_example_ratio": NEG_TO_POS_SAMPLE_RATIO
+        }, f)
 
 
 def main():
@@ -254,17 +260,20 @@ def main():
     current_list = []
     for review_id, examples in example_lists.items():
       if len(examples) + len(current_list) > MAX_EXAMPLES_PER_FILE:
-        filename = make_output_filename(args.output_dir, subset, num_files_written)
-        identifiers, index_offset = write_examples_to_file(current_list, filename,
-                                                   index_offset)
+        filename = make_output_filename(args.output_dir, subset,
+                                        num_files_written)
+        identifiers, index_offset = write_examples_to_file(
+            current_list, filename, index_offset)
         overall_identifier_list += identifiers
         num_files_written += 1
         current_list = examples
       else:
         current_list += examples
     if current_list:
-      filename = make_output_filename(args.output_dir, subset, num_files_written)
-      identifiers, index_offset = write_examples_to_file(current_list, filename, index_offset)
+      filename = make_output_filename(args.output_dir, subset,
+                                      num_files_written)
+      identifiers, index_offset = write_examples_to_file(
+          current_list, filename, index_offset)
       overall_identifier_list += identifiers
 
     print(len(overall_identifier_list))
@@ -274,6 +283,7 @@ def main():
   print("Total examples", len(overall_identifier_list))
 
   make_metadata(args.output_dir, overall_identifier_list)
+
 
 if __name__ == "__main__":
   main()
