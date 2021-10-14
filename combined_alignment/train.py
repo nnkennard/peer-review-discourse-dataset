@@ -41,7 +41,7 @@ SEED = 43
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
-BATCH_SIZE = 64
+BATCH_SIZE = 128
 EPOCHS = 1000
 PATIENCE = 600
 
@@ -85,7 +85,7 @@ def get_iterator_list(glob_path, debug, dataset_tools):
     dataset, = data.TabularDataset.splits(path=".",
                                           train=filename,
                                           format='json',
-                                          skip_header=True,
+                                          skip_header=False,
                                           fields=dataset_tools.fields)
     iterator_list.append(
         data.BucketIterator.splits([dataset],
@@ -171,17 +171,21 @@ def do_epoch(model,
 
   start_time = time.time()
   if do_train:
-    for iterator in train_iterators:
+    print("Train iterators (train)")
+    for iterator in tqdm(train_iterators):
       _ = alignment_lib.train_or_evaluate(model, iterator, "train", optimizer)
   if 'train' in eval_sets:
-    for iterator in train_iterators:
+    print("Train iterators (eval)")
+    for iterator in tqdm(train_iterators):
       sub_train_metric, sub_train_score_map = alignment_lib.train_or_evaluate(
           model, iterator, "evaluate")
+      print(sub_train_metric, len(sub_train_score_map))
       train_metric += sub_train_metric
       train_score_map.update(sub_train_score_map)
   if 'dev' in eval_sets:
+    print("Dev iterators (eval)")
     assert dev_iterators is not None
-    for iterator in dev_iterators:
+    for iterator in tqdm(dev_iterators):
       sub_dev_metric, sub_dev_score_map = alignment_lib.train_or_evaluate(
           model, iterator, "evaluate")
       dev_metric += sub_dev_metric
@@ -192,6 +196,7 @@ def do_epoch(model,
 def get_metadata(input_dir):
   with open(input_dir + "/metadata.json", 'r') as f:
    obj = json.load(f)
+   return obj["index_to_review_map"], obj["review_to_map_map"]
 
 def main():
 
@@ -207,7 +212,10 @@ def main():
                                                    debug=args.debug,
                                                    make_valid=True)
 
-  metadata = get_metadata(args.input_dir)
+  dataset_metadata = get_metadata(args.input_dir)
+  #a, b = dataset_metadata
+  #print(sorted(a.keys())[:10])
+  #exit()
 
   model = alignment_lib.BERTAlignmentModel(args.repr_choice, args.task_choice)
   model.to(dataset_tools.device)
@@ -217,6 +225,8 @@ def main():
   best_valid_loss = float('inf')
   best_valid_epoch = None
   for epoch in range(EPOCHS):
+
+    print("Starting epoch {0}".format(epoch))
 
     do_epoch(model,
              train_iterators,
@@ -232,7 +242,11 @@ def main():
                                eval_sets=["train", "dev"],
                                dev_iterators=dev_iterators)
 
-    alignment_lib.report_epoch(epoch, args.task_choice, this_epoch_data, experiment)
+
+
+    print("in train.py", args.task_choice)
+    alignment_lib.report_epoch(epoch, args.task_choice, this_epoch_data,
+    experiment, dataset_metadata)
 
     print("Ran eval epoch")
 

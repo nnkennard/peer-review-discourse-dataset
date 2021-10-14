@@ -77,21 +77,65 @@ def calculate_f1(score_map):
   f1 = 2 * p * r / (p + r)
   return f1
 
+def unpack_key(key):
+  a, b = key.split("_")
+  return int(a), int(b)
 
-def report_epoch(epoch, task, epoch_data, experiment, sub_epoch=0):
+
+def mean(l):
+  if not l:
+    return None
+  else:
+    return sum(l) / len(l)
+
+def calculate_mrr(score_map, dataset_metadata):
+  index_to_review_map, review_to_map_map = dataset_metadata
+
+  reviews_represented = set()
+  for index, scores in score_map.items():
+    reviews_represented.add(index_to_review_map[str(index)])
+  mrrs = []
+  for review in reviews_represented:
+    examples_map = review_to_map_map[review]
+    values_lists = collections.defaultdict(list)
+    for key, index in review_to_map_map[review].items():
+      pred, score, label = score_map[index]
+      review_index, rebuttal_index = unpack_key(key)
+      values_lists[rebuttal_index].append((rebuttal_index, pred, label))
+
+    for query_index, score_list in values_lists.items():
+      reciprocal_ranks = []
+      for i, (_, pred, label) in enumerate(sorted(score_list, key=lambda x:x[1],
+      reverse=True)):
+        if label == 1:
+          reciprocal_ranks.append(1/(i + 1))
+
+      if reciprocal_ranks:
+        mrrs.append(mean(reciprocal_ranks))
+
+  return mean(mrrs)
+
+
+def report_epoch(epoch, task, epoch_data, experiment, dataset_metadata, sub_epoch=0):
+
+  assert task in TASKS
+
   experiment.log_metric("Epoch train metric",
                         epoch_data.train_metric,
                         step=epoch)
   experiment.log_metric("Epoch val metric", epoch_data.val_metric, step=epoch)
 
-
   if task == BIN:
-    experiment.log_metric("Epoch train F1",
-    calculate_f1(epoch_data.train_score_map),
-    step=epoch)
-    experiment.log_metric("Epoch dev F1",
-    calculate_f1(epoch_data.valid_score_map),
-    step=epoch)
+    metric_name = "F1"
+    metric_fn = calculate_f1
+  else:
+    metric_name = "MRR"
+    metric_fn = lambda x:calculate_mrr(x, dataset_metadata)
+
+  experiment.log_metric("Epoch train {0}".format(metric_name),
+      metric_fn(epoch_data.train_score_map), step=epoch)
+  experiment.log_metric("Epoch dev {0}".format(metric_name),
+      metric_fn(epoch_data.valid_score_map), step=epoch)
 
   print((
       f'Epoch: {epoch+1:02} {sub_epoch+1:02} | Epoch Time: {epoch_data.elapsed_mins} '
@@ -145,8 +189,13 @@ class EpochData(object):
                val_metric=None,
                train_score_map=None,
                valid_score_map=None):
-    self.train_metric = train_metric
-    self.val_metric = val_metric
+
+    print(train_metric, len(train_score_map))
+    print(val_metric, len(valid_score_map))
+
+
+    self.train_metric = train_metric / len(train_score_map)
+    self.val_metric = val_metric / len(valid_score_map)
 
     elapsed_time = end_time - start_time
     self.elapsed_mins = int(elapsed_time / 60)
@@ -161,9 +210,7 @@ MSE_LOSS = nn.MSELoss()
 
 
 def get_a_bert(bert_config):
-  return BertForSequenceClassification.from_pretrained('bert-base-uncased',
-                                                       config=bert_config)
-
+  return BertModel.from_pretrained('bert-base-uncased', config=bert_config)
 
 class BERTAlignmentModel(nn.Module):
 
@@ -178,39 +225,31 @@ class BERTAlignmentModel(nn.Module):
     self.task_type = task_type
 
     if self.task_type == BIN:
-      self.loss = CE_LOSS
+      self.loss_fn = CE_LOSS
       self.label_getter = lambda x: x.label
       num_labels = 2
     else:
-      self.loss = MSE_LOSS
+      self.loss_fn = MSE_LOSS
       self.label_getter = lambda x: x.score
       num_labels = 1
 
-    bert_config = BertConfig()
-    
+    bert_uncased_config = config = BertConfig.from_pretrained(
+          'bert-base-uncased',
+          num_labels = num_labels,
+          output_hidden_states = True,
+      )
+
+    self.dropout = nn.Dropout(0.25)
+    self.classifier = nn.Linear(BERT_SIZE, num_labels)
 
     if repr_type == CAT:
       self.actual_forward = self._forward_cat
-      config = BertConfig.from_pretrained(
-          'bert-base-uncased',
-          num_labels = num_labels,
-      )
-      #bert_config.num_labels = num_labels
-      #self.bert = get_a_bert(bert_config)
-      self.bert = BertModel.from_pretrained('bert-base-uncased')
-      self.dropout = nn.Dropout(0.25)
-      self.classifier = nn.Linear(BERT_SIZE, 2)
-      self.bert.config.output_hidden_states = True
-      #self.bert = BertForSequenceClassification.from_pretrained('bert-base-uncased', config=config)
+      self.bert = get_a_bert(bert_uncased_config)
     else:
       self.actual_forward = self._forward_2tower
-      self.review_bert = get_a_bert(bert_config)
-      self.rebuttal_bert = get_a_bert(bert_config)
-      for mod in [self.review_bert, self.rebuttal_bert]:
-        mod.config.output_hidden_states = True
-      self.dropout = nn.Dropout(0.25)
+      self.review_bert = get_a_bert(bert_uncased_config)
+      self.rebuttal_bert = get_a_bert(bert_uncased_config)
       self.linear = nn.Linear(2 * BERT_SIZE, BERT_SIZE)
-      self.classifier = nn.Linear(BERT_SIZE, num_labels)
 
     self.checkpoint_name = get_checkpoint_name(repr_type, task_type)
 
@@ -220,9 +259,10 @@ class BERTAlignmentModel(nn.Module):
   def _forward_cat(self, batch):
     bert_output = self.bert(batch.both_sentences)
     logits = self.classifier(self.dropout(bert_output[0][:,0]))
-    loss = CE_LOSS(logits, batch.label)
+    if self.task_type == REG:
+      logits = torch.reshape(logits, [logits.shape[0]])
+    loss = self.loss_fn(logits, self.label_getter(batch))
     return loss, self._get_predictions(logits)
-    return output.loss, self._get_predictions(output.logits)
 
   def _forward_2tower(self, batch):
     review_rep = self.review_bert(batch.review_sentence).hidden_states[0][:, 0]
@@ -233,7 +273,7 @@ class BERTAlignmentModel(nn.Module):
     logits = self.classifier(self.dropout(self.linear(concat_rep)))
     if self.task_type == REG:
       logits = torch.reshape(logits, [logits.shape[0]])
-    return self.loss(logits,
+    return self.loss_fn(logits,
                      self.label_getter(batch)), self._get_predictions(logits)
 
   def _get_predictions(self, logits):

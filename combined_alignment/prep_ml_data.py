@@ -13,6 +13,8 @@ from nltk.stem.porter import PorterStemmer
 from transformers import BertTokenizer
 import rank_bm25
 
+random.seed(43)
+
 
 parser = argparse.ArgumentParser(description='prepare jsonls for torchtext')
 parser.add_argument('-i',
@@ -22,12 +24,13 @@ parser.add_argument('-i',
                     help='path to dataset files')
 parser.add_argument('-o',
                     '--output_dir',
-                    default="torchtext_input_data",
+                    default="torchtext_input_data_posneg_1_sample_1.0",
                     type=str,
                     help='path to dataset files')
 
 MAX_EXAMPLES_PER_FILE = 10000
 NEG_TO_POS_SAMPLE_RATIO = 1
+POS_SAMPLE_RATIO = 1.0
 
 STEMMER = PorterStemmer()
 STOPWORDS = stopwords.words('english')
@@ -103,6 +106,9 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,):
     assert len(scores) == len(review_sentences)
     for review_index, score in enumerate(scores):
       identifier = identifier_maker(review_id, review_index, rebuttal_index)
+      if identifier in identifiers:
+        dsdsds
+      identifiers.append(identifier)
       label = 1 if RelatedPair(review_index,
                                rebuttal_index) in true_related_pairs else 0
       review_sentence = review_sentence_texts[review_index]
@@ -112,14 +118,28 @@ def make_pair_examples(review_id, review_sentences, rebuttal_sentences,):
           Example(None, identifier,
                   review_sentence_texts[review_index], both_sentences,
                   rebuttal_sentence_texts[rebuttal_index], score, label))
+    pos_examples = example_maps[1]
+    sampled_pos_examples = []
+    for pos_example in pos_examples:
+      choice = random.random()
+      if choice < POS_SAMPLE_RATIO:
+        sampled_pos_examples.append(pos_example)
+
     sampled_neg_examples = random.sample(
         example_maps[0],
         max(min(len(example_maps[0]),
-        NEG_TO_POS_SAMPLE_RATIO * len(example_maps[1])), 3))
+        NEG_TO_POS_SAMPLE_RATIO * len(sampled_pos_examples)), 1))
 
-    examples += example_maps[1]
-    examples += sampled_neg_examples
+    examples += sampled_pos_examples + sampled_neg_examples
+    filtered_examples = {}
+    for example in examples:
+      if example.identifier in filtered_examples:
+        continue
+      else:
+        filtered_examples[example.identifier] = example
+      
 
+  examples = sorted(filtered_examples.values())
   random.shuffle(examples)
 
   return examples, review_id, get_token_vocab(review_sentence_texts,
@@ -177,11 +197,25 @@ def make_metadata(output_dir, overall_identifier_list):
   index_to_review_map = {}
   review_to_map_map = collections.defaultdict(dict)
 
+  print("Overall identifier list")
+  print(len(overall_identifier_list))
+
+  seen_indices = []
   for index, identifier in overall_identifier_list:
     review_id, review_index, rebuttal_index = identifier
+    if index in index_to_review_map:
+      dsdsdsds
     index_to_review_map[index] = review_id
     key = "{0}_{1}".format(review_index, rebuttal_index)
+    if key in review_to_map_map[review_id]:
+      dsds
     review_to_map_map[review_id][key] = index
+
+  print("Writing metadata")
+  print("indices mapped to reviews")
+  print(len(index_to_review_map))
+  print("indices accounted for")
+  print(len(sum([list(k.values()) for k in review_to_map_map.values()], [])))
 
   with open(output_dir + "/metadata.json", 'w') as f:
     json.dump({
@@ -230,10 +264,12 @@ def main():
         current_list += examples
     if current_list:
       filename = make_output_filename(args.output_dir, subset, num_files_written)
-      identifiers, _ = write_examples_to_file(current_list, filename, index_offset)
+      identifiers, index_offset = write_examples_to_file(current_list, filename, index_offset)
       overall_identifier_list += identifiers
 
-    make_vocabber(overall_token_vocab, args.output_dir)
+    print(len(overall_identifier_list))
+
+  make_vocabber(overall_token_vocab, args.output_dir)
 
   print("Total examples", len(overall_identifier_list))
 
