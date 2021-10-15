@@ -42,9 +42,9 @@ SEED = 43
 torch.manual_seed(SEED)
 torch.backends.cudnn.deterministic = True
 
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 EPOCHS = 50
-PATIENCE = 5
+PATIENCE = 10
 
 
 def generate_text_field(tokenizer):

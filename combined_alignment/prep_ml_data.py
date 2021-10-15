@@ -91,6 +91,25 @@ def get_token_vocab(review_sentences, rebuttal_sentences):
   return tokens
 
 
+def get_ranks_of_positives(example_maps):
+  all_examples = sum(example_maps.values(), [])
+  ranks = collections.defaultdict(list)
+  for pos_example in example_maps[1]:
+    review_id, rev_idx, reb_idx = pos_example.identifier
+    relevant_examples = []
+    for i in all_examples:
+      a, b, c = i.identifier
+      assert a == review_id
+      if c == reb_idx:
+        relevant_examples.append(i)
+    sorted_examples = sorted(relevant_examples, key=lambda x:x.score,
+    reverse=True)
+
+    for i, e in enumerate(sorted_examples):
+      if e == pos_example:
+        ranks[e.identifier[2]].append(i+1)
+  return ranks
+  
 def make_pair_examples(
     review_id,
     review_sentences,
@@ -121,15 +140,10 @@ def make_pair_examples(
       both_sentences = review_sentence + " [SEP] " + rebuttal_sentence
       example_maps[label].append(
           Example(None, identifier, review_sentence_texts[review_index],
-                  both_sentences, rebuttal_sentence_texts[rebuttal_index],
+                  rebuttal_sentence_texts[rebuttal_index], both_sentences,
                   score, label))
     pos_examples = example_maps[1]
     sampled_pos_examples = pos_examples
-    #for pos_example in pos_examples:
-    #  choice = random.random()
-    #  if choice < POS_SAMPLE_RATIO:
-    #    sampled_pos_examples.append(pos_example)
-
     sampled_neg_examples = random.sample(
         example_maps[0],
         max(
@@ -147,8 +161,10 @@ def make_pair_examples(
   examples = sorted(filtered_examples.values())
   random.shuffle(examples)
 
+  ranks = get_ranks_of_positives(example_maps)
+
   return examples, review_id, get_token_vocab(review_sentence_texts,
-                                              rebuttal_sentence_texts)
+                                    rebuttal_sentence_texts), ranks
 
 
 def make_output_filename(output_dir, subset, index):
@@ -202,9 +218,6 @@ def make_metadata(output_dir, overall_identifier_list):
   index_to_review_map = {}
   review_to_map_map = collections.defaultdict(dict)
 
-  print("Overall identifier list")
-  print(len(overall_identifier_list))
-
   seen_indices = []
   for index, identifier in overall_identifier_list:
     review_id, review_index, rebuttal_index = identifier
@@ -216,12 +229,6 @@ def make_metadata(output_dir, overall_identifier_list):
       dsds
     review_to_map_map[review_id][key] = index
 
-  print("Writing metadata")
-  print("indices mapped to reviews")
-  print(len(index_to_review_map))
-  print("indices accounted for")
-  print(len(sum([list(k.values()) for k in review_to_map_map.values()], [])))
-
   with open(output_dir + "/metadata.json", 'w') as f:
     json.dump(
         {
@@ -230,6 +237,31 @@ def make_metadata(output_dir, overall_identifier_list):
             "negative_to_positive_example_ratio": NEG_TO_POS_SAMPLE_RATIO
         }, f)
 
+def mean(l):
+  return sum(l)/len(list(l))
+
+def mrr(ranks):
+  return mean([1/x for x in ranks])
+
+def summarize_ranks(rank_collector):
+  single_accumulator = []
+  multiple_accumulator = []
+  mrr_accumulator = []
+  for example in rank_collector:
+    this_example_rank_collector = []
+    for ranks in example:
+      r = list(ranks)
+      #if not ranks:
+      #  continue
+      if len(ranks) == 1:
+        single_accumulator += r
+      else:
+        multiple_accumulator += r
+      mrr_accumulator.append(mrr(r))
+
+  print("Single MRR", mrr(single_accumulator))
+  print("Multiple MRR", mrr(multiple_accumulator))
+  print("True MRR", mean(mrr_accumulator))
 
 def main():
 
@@ -240,16 +272,21 @@ def main():
   overall_token_vocab = set()
   examples_by_subset = {}
 
+  rank_collector = []
+
   for subset in SUBSETS:
     example_lists = collections.defaultdict(list)
     file_list = glob.glob("/".join([args.input_dir, subset, "*"]))
     for i, input_filename in enumerate(tqdm.tqdm(file_list)):
-      pair_ml_examples, review_id, token_vocab = get_general_examples(
+      pair_ml_examples, review_id, token_vocab, ranks = get_general_examples(
           input_filename)
+      rank_collector.append(list(ranks.values()))
       overall_token_vocab.update(token_vocab)
       example_lists[review_id] = pair_ml_examples
 
     examples_by_subset[subset] = example_lists
+
+  summarize_ranks(rank_collector)
 
   index_offset = 0
   overall_identifier_list = []
@@ -276,11 +313,7 @@ def main():
           current_list, filename, index_offset)
       overall_identifier_list += identifiers
 
-    print(len(overall_identifier_list))
-
   make_vocabber(overall_token_vocab, args.output_dir)
-
-  print("Total examples", len(overall_identifier_list))
 
   make_metadata(args.output_dir, overall_identifier_list)
 
