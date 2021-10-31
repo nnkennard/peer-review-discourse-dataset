@@ -3,7 +3,6 @@ import collections
 import glob
 import json
 import os
-#import random
 import rank_bm25
 import tqdm
 
@@ -187,12 +186,27 @@ def get_true_pairs(rebuttal_sentences):
   return true_pairs
 
 
-def get_rrs_from_document(doc_obj, threshold):
-  if not check_alignment_indices(doc_obj):
-    return []
+def get_query_rrs(scores, true_corpus_indices):
+  query_rrs = []
+  sorted_scores = sorted(
+    list(enumerate(scores)), key=lambda x:x[1], reverse=True)
+  current_rank = 0
+  current_score = float("inf")
+  successes_at_rank = collections.Counter()
+  for i, (corpus_index, score) in enumerate(sorted_scores):
+    if score < current_score:
+      current_rank = i + 1
+    if corpus_index in true_corpus_indices:
+      successes = sum(v for k, v in successes_at_rank.items() if k <
+      current_rank)
+      query_rrs.append(1/(current_rank - successes))
+      successes_at_rank[current_rank] += 1
+    current_score = score
+  return query_rrs
+
+def get_rrs_from_document(doc_obj, true_pairs, threshold):
   review_sentences = [s["text"] for s in doc_obj["review_sentences"]]
   rebuttal_sentences = [s["text"] for s in doc_obj["rebuttal_sentences"]]
-  true_pairs = get_true_pairs(doc_obj["rebuttal_sentences"])
 
   queries = [preprocess(sent) for sent in rebuttal_sentences]
   corpus = [preprocess(sent) for sent in review_sentences]
@@ -200,25 +214,28 @@ def get_rrs_from_document(doc_obj, threshold):
 
   doc_rrs = []
   for query_index, true_corpus_indices in true_pairs.items():
-    query_rrs = []
     scores = model.get_scores(queries[query_index])
-    sorted_scores = sorted(
-      list(enumerate(scores)), key=lambda x:x[1], reverse=True)
-    current_rank = 0
-    current_score = float("inf")
-    successes_at_rank = collections.Counter()
-    for i, (corpus_index, score) in enumerate(sorted_scores):
-      if score < current_score:
-        current_rank = i + 1
-      if corpus_index in true_corpus_indices:
-        successes = sum(v for k, v in successes_at_rank.items() if k <
-        current_rank)
-        query_rrs.append(1/(current_rank - successes))
-        successes_at_rank[current_rank] += 1
-      current_score = score
-    doc_rrs.append(query_rrs)
+    doc_rrs.append(get_query_rrs(scores, true_corpus_indices))
   return doc_rrs
-   
+
+
+def get_rrs_from_corpus(doc_obj, true_pairs, threshold, full_corpus_model):
+  rebuttal_sentences = [s["text"] for s in doc_obj["rebuttal_sentences"]]
+  queries = [preprocess(sent) for sent in rebuttal_sentences]
+
+  start_index, end_index = full_corpus_model.index_map[
+                            doc_obj["metadata"]["review_id"]]
+
+  doc_rrs = []
+  for query_index, true_corpus_indices in true_pairs.items():
+    scores = full_corpus_model.model.get_scores(queries[query_index])
+    relevant_scores = scores[start_index:end_index]
+    doc_rrs.append(get_query_rrs(relevant_scores, true_corpus_indices))
+  return doc_rrs
+
+
+ 
+
 
 def print_rr_means(rr_collector):
   corpus_rrs = []
@@ -236,17 +253,42 @@ def print_rr_means(rr_collector):
     "query": mean(query_mrrs)
   }
 
-def get_subset_mrr(glob_path):
+def get_subset_mrr(glob_path, corpus_level, full_corpus_model):
   rr_collector = []
   for filename in glob.glob(glob_path):
     with open(filename, 'r') as f:
       obj = json.load(f)
-    rrs = get_rrs_from_document(obj, threshold=0.0)
+      if not check_alignment_indices(obj):
+        continue
+      true_pairs = get_true_pairs(obj["rebuttal_sentences"])
+    if corpus_level == "corpus":
+      rrs = get_rrs_from_corpus(obj, true_pairs, 0.0, full_corpus_model)
+    else:
+      rrs = get_rrs_from_document(obj, true_pairs, 0.0)
     if rrs:
       rr_collector.append(rrs)
 
-  k = print_rr_means(rr_collector)
-  print(k)
+  return print_rr_means(rr_collector)
+
+class FullCorpusModel(object):
+  def __init__(self, model, index_map):
+    self.model = model
+    self.index_map = index_map
+
+def get_full_corpus_model(input_dir):
+  corpus = []
+  index_map = {}
+  for subset in SUBSETS:
+    for filename in glob.glob(input_dir + "/" + subset + "/*.json"):
+      with open(filename, 'r') as f:
+        obj = json.load(f)
+      review_id = obj["metadata"]["review_id"]
+      start_index = len(corpus)
+      new_sentences = [preprocess(x["text"]) for x in obj["review_sentences"]]
+      end_index = start_index + len(new_sentences)
+      corpus += new_sentences
+      index_map[review_id] = (start_index, end_index)
+  return FullCorpusModel(rank_bm25.BM25Okapi(corpus), index_map)
 
 def main():
 
@@ -254,8 +296,14 @@ def main():
 
   rank_collector = []
 
+  full_corpus_model = get_full_corpus_model(args.input_dir)
+
   for subset in SUBSETS:
-    get_subset_mrr("/".join([args.input_dir, subset, "*"]))
+    for corpus_level in "corpus doc".split():
+      print(corpus_level)
+      k = get_subset_mrr("/".join([args.input_dir, subset, "*"]), corpus_level,
+      full_corpus_model)
+      print(k)
     break
 
 if __name__ == "__main__":
