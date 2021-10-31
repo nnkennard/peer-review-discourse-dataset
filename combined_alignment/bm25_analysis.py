@@ -41,127 +41,6 @@ def preprocess_sentences(sentences):
 TRAIN, DEV, TEST = "train dev test".split()
 SUBSETS = [TRAIN, DEV, TEST]
 
-Example = collections.namedtuple(
-    "Example",
-    "overall_index identifier review_sentence rebuttal_sentence both_sentences score label"
-    .split())
-
-RelatedPair = collections.namedtuple("RelatedPair",
-                                     "review_idx rebuttal_idx".split())
-
-
-def get_true_related_pairs(rebuttal_sentences):
-  true_pairs = []
-  for rebuttal_index, rebuttal_sentence in enumerate(rebuttal_sentences):
-    align_type, review_indices = rebuttal_sentence["alignment"]
-    if align_type == "context_sentences":
-      true_pairs += [
-          RelatedPair(review_idx=review_index, rebuttal_idx=rebuttal_index)
-          for review_index in review_indices
-      ]
-  return true_pairs
-
-
-def get_ranks_of_positives(example_maps):
-  all_examples = sum(example_maps.values(), [])
-  ranks = collections.defaultdict(list)
-  for pos_example in example_maps[1]:
-    review_id, rev_idx, reb_idx = pos_example.identifier
-    relevant_examples = []
-    for i in all_examples:
-      a, b, c = i.identifier
-      assert a == review_id
-      if c == reb_idx:
-        relevant_examples.append(i)
-    sorted_examples = sorted(relevant_examples, key=lambda x:x.score,
-    reverse=True)
-
-    for i, e in enumerate(sorted_examples):
-      if e == pos_example:
-        ranks[e.identifier[2]].append(i+1)
-  return ranks
-
-
-def make_pair_examples(
-    review_id,
-    review_sentences,
-    rebuttal_sentences,
-):
-  true_related_pairs = get_true_related_pairs(rebuttal_sentences)
-  corpus, review_sentence_texts = preprocess_sentences(review_sentences)
-  preprocessed_queries, rebuttal_sentence_texts = preprocess_sentences(
-      rebuttal_sentences)
-  model = rank_bm25.BM25Okapi(corpus)
-
-  examples = []
-  identifiers = []
-
-  example_maps = collections.defaultdict(list)
-  for rebuttal_index, preprocessed_query in enumerate(preprocessed_queries):
-    scores = model.get_scores(preprocessed_query)
-    assert len(scores) == len(review_sentences)
-    for review_index, score in enumerate(scores):
-      identifier = identifier_maker(review_id, review_index, rebuttal_index)
-      if identifier in identifiers:
-        dsdsds
-      identifiers.append(identifier)
-      label = 1 if RelatedPair(review_index,
-                               rebuttal_index) in true_related_pairs else 0
-      review_sentence = review_sentence_texts[review_index]
-      rebuttal_sentence = rebuttal_sentence_texts[rebuttal_index]
-      both_sentences = review_sentence + " [SEP] " + rebuttal_sentence
-      example_maps[label].append(
-          Example(None, identifier, review_sentence_texts[review_index],
-                  rebuttal_sentence_texts[rebuttal_index], both_sentences,
-                  score, label))
-    pos_examples = example_maps[1]
-    sampled_pos_examples = pos_examples
-    sampled_neg_examples = random.sample(
-        example_maps[0],
-        max(
-            min(len(example_maps[0]),
-                NEG_TO_POS_SAMPLE_RATIO * len(sampled_pos_examples)), 3))
-
-    examples += sampled_pos_examples + sampled_neg_examples
-    filtered_examples = {}
-    for example in examples:
-      if example.identifier in filtered_examples:
-        continue
-      else:
-        filtered_examples[example.identifier] = example
-
-  examples = sorted(filtered_examples.values())
-  random.shuffle(examples)
-
-  ranks = get_ranks_of_positives(example_maps)
-
-  return examples, review_id, get_token_vocab(review_sentence_texts,
-                                    rebuttal_sentence_texts), ranks
-
-
-def make_output_filename(output_dir, subset, index):
-  return "/".join([output_dir, subset, str(index).zfill(4) + ".jsonl"])
-
-
-def get_general_examples(input_filename):
-  with open(input_filename, 'r') as f:
-    obj = json.load(f)
-    return make_pair_examples(obj["metadata"]["review_id"],
-                              obj["review_sentences"],
-                              obj["rebuttal_sentences"])
-
-
-Example = collections.namedtuple(
-    "Example",
-    "overall_index identifier review_sentence rebuttal_sentence both_sentences score label"
-    .split())
-
-
-def create_if_not_exists(dir_path):
-  if not os.path.exists(dir_path):
-    os.makedirs(dir_path)
-
-
 def mean(l):
   return sum(l)/len(list(l))
 
@@ -205,12 +84,10 @@ def get_query_rrs(scores, true_corpus_indices):
   return query_rrs
 
 def get_rrs_from_document(doc_obj, true_pairs, threshold):
-  review_sentences = [s["text"] for s in doc_obj["review_sentences"]]
   rebuttal_sentences = [s["text"] for s in doc_obj["rebuttal_sentences"]]
 
   queries = [preprocess(sent) for sent in rebuttal_sentences]
-  corpus = [preprocess(sent) for sent in review_sentences]
-  model = rank_bm25.BM25Okapi(corpus)
+  model = create_document_model(doc_obj)
 
   doc_rrs = []
   for query_index, true_corpus_indices in true_pairs.items():
@@ -232,9 +109,6 @@ def get_rrs_from_corpus(doc_obj, true_pairs, threshold, full_corpus_model):
     relevant_scores = scores[start_index:end_index]
     doc_rrs.append(get_query_rrs(relevant_scores, true_corpus_indices))
   return doc_rrs
-
-
- 
 
 
 def print_rr_means(rr_collector):
@@ -290,6 +164,57 @@ def get_full_corpus_model(input_dir):
       index_map[review_id] = (start_index, end_index)
   return FullCorpusModel(rank_bm25.BM25Okapi(corpus), index_map)
 
+
+def create_document_model(obj):
+  return rank_bm25.BM25Okapi([preprocess(x["text"]) for x in
+  obj["review_sentences"]])
+
+def get_threshold_info(glob_path, corpus_level, full_corpus_model):
+  scores_of_negatives = []
+  scores_of_positives = []
+  for filename in glob.glob(glob_path):
+    with open(filename, 'r') as f:
+      obj = json.load(f)
+
+
+    if corpus_level == "corpus":
+      model = full_corpus_model.model
+      start_index, end_index = full_corpus_model.index_map[
+        obj["metadata"]["review_id"]]
+    else:
+      model = create_document_model(obj)
+
+    for query_index, reb_sent in enumerate(obj["rebuttal_sentences"]):
+      query = preprocess(reb_sent["text"])
+      align_type, indices = reb_sent["alignment"]
+      if corpus_level == "corpus":
+        scores = full_corpus_model.model.get_scores(query)
+        scores_of_negatives += list(scores[:start_index]) + list(
+          scores[end_index:])
+        relevant_scores = scores[start_index:end_index]
+      else:
+        relevant_scores = model.get_scores(query)
+
+      if indices is None:
+        scores_of_negatives += list(relevant_scores)
+      else:
+        for i, relevant_score in enumerate(relevant_scores):
+          if i in indices:
+            scores_of_positives.append(relevant_score)
+          else:
+            scores_of_negatives.append(relevant_score)
+
+  return {
+  "negatives": make_counter_from_scores(scores_of_negatives),
+  "positives": make_counter_from_scores(scores_of_positives),
+  }
+
+
+def make_counter_from_scores(scores):
+  return collections.Counter(
+    ["{:.3f}".format(k) for k in scores]
+    )
+
 def main():
 
   args = parser.parse_args()
@@ -297,6 +222,14 @@ def main():
   rank_collector = []
 
   full_corpus_model = get_full_corpus_model(args.input_dir)
+
+  thresholds = {}
+  for corpus_level in "corpus doc".split():
+    thresholds[corpus_level] = get_threshold_info(args.input_dir + "/train/*",
+    corpus_level, full_corpus_model)
+
+  with open("thresholds.json", 'w') as f:
+    json.dump(thresholds, f)
 
   for subset in SUBSETS:
     for corpus_level in "corpus doc".split():
