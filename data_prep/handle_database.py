@@ -23,7 +23,7 @@ parser.add_argument(
     help='path to annotation dump from annotation server')
 parser.add_argument('-i',
                     '--intermediate_file',
-                    default="filtered_database.json",
+                    default="dsds/filtered_database.json",
                     type=str,
                     help='where to dump intermediate collated data items')
 
@@ -54,6 +54,7 @@ REVIEW_ID, INITIALS = "review_id initials".split()
 def get_key_from_annotation(ann):
   return ann["fields"][REVIEW_ID], ANONYMIZER[ann["fields"][INITIALS]]
 
+Sentence = collections.namedtuple("Sentence", "text suffix".split())
 
 def get_text(text_dump_path, review_ids):
   """Get text for all reviews and rebuttals from server dataset dump.
@@ -76,7 +77,8 @@ def get_text(text_dump_path, review_ids):
     fields = dpl.get_fields(sentence)
     assert fields[FIELDS.sentence_index] == len(
         sentence_map[fields[FIELDS.comment_id]])
-    sentence_map[fields[FIELDS.comment_id]].append(fields[FIELDS.text])
+    sentence_map[fields[FIELDS.comment_id]].append(Sentence(fields[FIELDS.text],
+    fields[FIELDS.suffix])._asdict())
 
   comment_pair_map = {}
 

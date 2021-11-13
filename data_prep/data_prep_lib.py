@@ -26,14 +26,15 @@ class AnnotationFields(object):
   text = "text"
   review_id = "review_id"
   rebuttal_id = "rebuttal_id"
+  suffix = "suffix"
 
 
 ReviewSentence = collections.namedtuple(
     "ReviewSentence",
-    "review_id sentence_index text coarse fine asp pol".split())
+    "review_id sentence_index text suffix coarse fine asp pol".split())
 RebuttalSentence = collections.namedtuple(
     "RebuttalSentence",
-    "review_id rebuttal_id sentence_index text coarse fine alignment".split())
+    "review_id rebuttal_id sentence_index text suffix coarse fine alignment".split())
 
 with open("label_map.yaml") as stream:
   map_of_maps = yaml.safe_load(stream)
@@ -73,7 +74,7 @@ class Annotation(object):
         "rebuttal_sentences": [
             sent._asdict() for sent in self.rebuttal_sentences
         ]
-    })
+    }, indent=2)
 
 
 with open('subset_map.json', 'r') as f:

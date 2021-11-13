@@ -43,13 +43,21 @@ def get_convokit_politeness_labels(input_file, use_rebuttal=False):
       speaker=PLACEHOLDER_SPEAKERS[0]) for sentence in relevant_sentences])
     corpus = TEXT_PARSER.transform(corpus)
     corpus = POLITENESS_STRATEGIES.transform(corpus, markers=True)
+
+    for i,j in enumerate(
+      corpus.get_utterances_dataframe()["meta.politeness_markers"]):
+      print(i)
+      print(j)
+      print()
+      print()
+
     return {review_id: corpus.get_utterances_dataframe()[
-    "meta.politeness_strategies"][0]}
+    "meta.politeness_markers"][0]}
 
 
 def main():
   args = parser.parse_args()
-  print(get_convokit_politeness_labels(args.input_file, True))
+  k = get_convokit_politeness_labels(args.input_file, False)
 
 
 if __name__ == "__main__":

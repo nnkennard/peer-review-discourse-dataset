@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(
     description="Convert the filtered database entries into a cleaned dataset.")
 parser.add_argument('-i',
                     '--intermediate_file',
-                    default="filtered_database.json",
+                    default="dsds/filtered_database.json",
                     type=str,
                     help='path to text dump from annotation server')
 
@@ -42,8 +42,10 @@ def process_review_sentences(review_sentence_annotations, review_text,
   original_index_to_merged_index = []
   final_sentence_list = []
 
-  for i, (sentence_text, merge_prev_val) in enumerate(zip(review_text,
+  for i, (sentence_text_info, merge_prev_val) in enumerate(zip(review_text,
   merge_prev)):
+    sentence_text = sentence_text_info["text"]
+    suffix = sentence_text_info["suffix"]
     if merge_prev_val:
       assert i > 0
       # Need to merge just the text with previous sentence
@@ -51,6 +53,7 @@ def process_review_sentences(review_sentence_annotations, review_text,
       merged_text = old.text.rstrip() + " " + sentence_text.lstrip()
       final_sentence_list.append(
           dpl.ReviewSentence(old.review_id, old.sentence_index, merged_text,
+          suffix,
                              old.coarse, old.fine, old.asp, old.pol))
       original_index_to_merged_index.append(original_index_to_merged_index[-1])
     else:
@@ -61,7 +64,7 @@ def process_review_sentences(review_sentence_annotations, review_text,
           dpl.ReviewSentence(relevant["review_id"],
                              #review_sentence_row["review_sentence_index"],
                              i,
-                             sentence_text, coarse, fine, asp, pol))
+                             sentence_text, suffix, coarse, fine, asp, pol))
       original_index_to_merged_index.append(relevant["review_sentence_index"])
 
 
@@ -89,7 +92,9 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
 
     final_rebuttal_sentences.append(
         dpl.RebuttalSentence(review_id, rebuttal_id, index,
-                             rebuttal_text[index], coarse, label, alignment))
+                             rebuttal_text[index]["text"],
+                             rebuttal_text[index]["suffix"],
+                             coarse, label, alignment))
     prev_sentence = sentence
 
 
@@ -165,14 +170,12 @@ def main():
     rev_lens.append(len(i.review_sentences))
     reb_lens.append(len(i.rebuttal_sentences))
 
-  #print(sum(rev_lens)/len(rev_lens))
-  #print(sum(reb_lens)/len(reb_lens))
-
-  write_annotations_to_dir(final_annotations, "final_dataset/")
+  write_annotations_to_dir(final_annotations, "dsds/final_dataset/")
   write_annotations_to_dir(extra_annotations,
-                             "extra_annotations/",
+                             "dsds/extra_annotations/",
                              append_annotator=True)
 
+  exit()
   for annotation in final_annotations:
     break
     review_id = annotation.meta["review_id"]
