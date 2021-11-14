@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(
     description="Convert the filtered database entries into a cleaned dataset.")
 parser.add_argument('-i',
                     '--intermediate_file',
-                    default="dsds/filtered_database.json",
+                    default="acl_final/filtered_database.json",
                     type=str,
                     help='path to text dump from annotation server')
 
@@ -170,12 +170,12 @@ def main():
     rev_lens.append(len(i.review_sentences))
     reb_lens.append(len(i.rebuttal_sentences))
 
-  write_annotations_to_dir(final_annotations, "dsds/final_dataset/")
+  write_annotations_to_dir(final_annotations, "acl_final/final_dataset/")
   write_annotations_to_dir(extra_annotations,
-                             "dsds/extra_annotations/",
+                             "acl_final/extra_annotations/",
                              append_annotator=True)
-
   exit()
+
   for annotation in final_annotations:
     break
     review_id = annotation.meta["review_id"]
