@@ -81,7 +81,7 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
   ])
 
   for sentence in rebuttal_sentence_annotations:
-    index, label, coarse, alignment = dpl.clean_rebuttal_label(
+    index, label, coarse, alignment, details = dpl.clean_rebuttal_label(
         sentence, merge_map)
 
     #if dpl.recursive_json_load(sentence["fields"]["errors"])["merge_prev"]:
@@ -94,7 +94,7 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
         dpl.RebuttalSentence(review_id, rebuttal_id, index,
                              rebuttal_text[index]["text"],
                              rebuttal_text[index]["suffix"],
-                             coarse, label, alignment))
+                             coarse, label, alignment, details))
     prev_sentence = sentence
 
 
@@ -170,9 +170,9 @@ def main():
     rev_lens.append(len(i.review_sentences))
     reb_lens.append(len(i.rebuttal_sentences))
 
-  write_annotations_to_dir(final_annotations, "acl_final/final_dataset/")
+  write_annotations_to_dir(final_annotations, "acl_another/final_dataset/")
   write_annotations_to_dir(extra_annotations,
-                             "acl_final/extra_annotations/",
+                             "acl_another/extra_annotations/",
                              append_annotator=True)
   exit()
 

@@ -34,7 +34,7 @@ ReviewSentence = collections.namedtuple(
     "review_id sentence_index text suffix coarse fine asp pol".split())
 RebuttalSentence = collections.namedtuple(
     "RebuttalSentence",
-    "review_id rebuttal_id sentence_index text suffix coarse fine alignment".split())
+    "review_id rebuttal_id sentence_index text suffix coarse fine alignment details".split())
 
 with open("label_map.yaml") as stream:
   map_of_maps = yaml.safe_load(stream)
@@ -143,22 +143,27 @@ def clean_review_label(review_sentence_row):
 
 Alignment = collections.namedtuple("Alignment",
                                    "category aligned_indices".split())
-RebuttalDetails = collections.namedtuple("RebuttalDetails",
-                  "is_empty request_out_of_scope manuscript_change".split())
+#RebuttalDetails = collections.namedtuple("RebuttalDetails",
+#                  "is_empty request_out_of_scope manuscript_change".split())
+
+OUT_OF_SCOPE = "request_out_of_scope"
+MANUSCRIPT_CHANGE = "manuscript_change"
 
 REBUTTAL_DETAILS_MAP = {
 
-  "rebuttal_by-cr_manu_No": ("rebuttal_by-cr", RebuttalDetails(False, False, None)),
-  "rebuttal_by-cr_manu_Yes": ("rebuttal_by-cr", RebuttalDetails(False, True, None)),
-  "rebuttal_reject-request_scope_No": ("rebuttal_reject-request", RebuttalDetails(False, None, None)),
-  "rebuttal_reject-request_scope_Yes":  ("rebuttal_reject-request", RebuttalDetails(False, None, None)),
-  "rebuttal_done_manu_No":  ("rebuttal_done", RebuttalDetails(False, None, None)),
-  "rebuttal_done_manu_Yes":  ("rebuttal_done", RebuttalDetails(False, None, None)),
+  "rebuttal_by-cr_manu_No": ("rebuttal_by-cr", {MANUSCRIPT_CHANGE: False}),
+  "rebuttal_by-cr_manu_Yes": ("rebuttal_by-cr", {MANUSCRIPT_CHANGE: True}),
+  "rebuttal_reject-request_scope_No": ("rebuttal_reject-request",
+  {OUT_OF_SCOPE: False}),
+  "rebuttal_reject-request_scope_Yes":  ("rebuttal_reject-request",
+  {OUT_OF_SCOPE: True}),
+  "rebuttal_done_manu_No":  ("rebuttal_done", {OUT_OF_SCOPE: False}),
+  "rebuttal_done_manu_Yes":  ("rebuttal_done", {OUT_OF_SCOPE: True}),
 }
 
 def build_rebuttal_details_from_label(label):
   if "_No" not in label and "_Yes" not in label:
-    return label, RebuttalDetails(True, None, None)
+    return label, {}
   else:
     return REBUTTAL_DETAILS_MAP[label]
 
@@ -169,8 +174,6 @@ def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
           "relation_label", "alignment_category"
       ]
   ]
-
-  #print(raw_category)
 
   label, details = build_rebuttal_details_from_label(LABEL_MAP[raw_label])
   coarse = REBUTTAL_FINE_TO_COARSE[label]
@@ -194,7 +197,7 @@ def clean_rebuttal_label(rebuttal_sentence_row, merge_map):
     else:
       alignment = Alignment(alignment_category, None)
 
-  return index, label, coarse, alignment
+  return index, label, coarse, alignment, details
 
 
 def get_fields(dataset_row):
