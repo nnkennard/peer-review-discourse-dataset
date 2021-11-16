@@ -1,0 +1,604 @@
+{
+  "metadata": {
+    "forum_id": "rygjHxrYDB",
+    "review_id": "BJl815FntH",
+    "rebuttal_id": "r1xOpSmroS",
+    "title": "Deep Audio Priors Emerge From Harmonic Convolutional Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rygjHxrYDB&noteId=r1xOpSmroS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 0,
+      "text": "This paper studies the problem of how to design generative networks for auditory signals in order to capture natural signal priors.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 1,
+      "text": "Compared to state-of-art methods in images [Lempitsky et al., 2018], this problem is not so easy on audio signals.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 2,
+      "text": "Existing work [Michelashvili &Wolf] trains generative networks to model signal-to-noise ratio rather than the signal itself.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 3,
+      "text": "This paper proposes a new convolutional operator called Harmonic Convolution to improve these generative networks to model both signals or signal-to-noise ratio.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 4,
+      "text": "Applications on audio restoration and source separation are given.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 5,
+      "text": "The paper starts to show that an existing generative network Wave-U-Net does not capture audio signal priors.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 6,
+      "text": "The explanation in Fig 2 on why this is the case seem to me not so clear. Are you trying to show that the Wave-U-Net does not work since there is no 1/f^2 law for clean audio signals?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 7,
+      "text": "The Harmonic Convolution is similar to deformable convolutions, but specifically designed to capture audio harmonics.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 8,
+      "text": "It is further combined with the idea of anchors and mixing to capture fractional frequencies.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 9,
+      "text": "The explanation of this section is slightly unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 10,
+      "text": "There is a little typo in Formula 1 for the STFT spectrogram, I would use the modulus |.| rather than || . ||.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 11,
+      "text": "Is Harmonic Convolution applicable to complex STFT coefficients as well?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 12,
+      "text": "It seems to be yes based on Section 4.2.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 13,
+      "text": "If so it would be better to define the operator in a more general notation.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 14,
+      "text": "Numerical experiments show that the Harmonic Convolution improves over existing regular and dilated convolutions in various settings.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 15,
+      "text": "Section 4.2 aims to fit the complex STFT coefficients of corrupted signals.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 16,
+      "text": "However, the setting is less clear to me for both the unsupervised speech/music restoration and supervised source separation problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 17,
+      "text": "In Section 4.3 and 4.4, is the x_0 (defined in Section 2.1) complex-valued STFT coefficients or something else?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 18,
+      "text": "It seems to me x_0 = ratio mask in Section 4.4.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 19,
+      "text": "What is the L1 loss defined in Section 4.4? To obtain the final separated audio waveform, an inverse STFT is applied on what?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 20,
+      "text": "These details can be written in supplementary material if more space is needed.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl815FntH",
+      "sentence_index": 21,
+      "text": "After all, the numerical results seem to me encouraging.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 0,
+      "text": "Thank you for your helpful suggestions and we would like to address your concerns as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 1,
+      "text": "1. Better explanatory texts for natural statistics comparison.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 2,
+      "text": "We have modified the caption for Fig. 2 and text in Sec 2.4 to be more clear about the natural statistics analysis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 3,
+      "text": "This analysis is intended to contrast the natural statistical differences among the representations, to indicate that different modeling approaches are needed for each of them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 4,
+      "text": "Models that capture image priors well might not transfer to spectrograms or raw waveforms.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 5,
+      "text": "2. Equation 1 typo fixed.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 6,
+      "text": "3. Complex Coefficient vs Spectrograms.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 7,
+      "text": "Thanks for the suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 8,
+      "text": "We intentionally use the spectrogram notation as we do not use complex-valued kernels with complex-valued convolution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 9,
+      "text": "Yet in order to generate the audio signal, we simply generate the real and imaginary parts of the STFT coefficients such that we can convert them to waveform using inverse STFT.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 10,
+      "text": "We have modified the text in the implementation details in Sec. 3 and the setup paragraphs in Sec. 4.2, 4.3, and 4.4 to make this point.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 11,
+      "text": "4. Details in the experiments to clear up the settings.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 12,
+      "text": "We have modified the text in Sec. 4.2, 4.3, and 4.4 to make the details more clear.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 13,
+      "text": "For experiments in Sec. 4.2 and 4.3, the network\u2019s output is the complex STFT coefficient, the raw waveform is then recovered by inverse STFT using the overlap-and-add method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 14,
+      "text": "For experiments in Sec 4.4, the output of the network is the ratio mask, and the separated audio is generated by an Inverse STFT operated on the input STFT coefficients multiplied by the predicted ratio mask.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 15,
+      "text": "The L1 loss is calculated between the predicted ratio mask and the ground truth ratio mask.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 16,
+      "text": "Please let us know for any questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 17,
+      "text": "Thanks again for your suggestions, which have made this submission stronger.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 18,
+      "text": "Thanks,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl815FntH",
+      "rebuttal_id": "r1xOpSmroS",
+      "sentence_index": 19,
+      "text": "Authors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "metadata": {
+    "forum_id": "rJed6j0cKX",
+    "review_id": "BJgZjv4c37",
+    "rebuttal_id": "rygRUCn4am",
+    "title": "Analyzing Inverse Problems with Invertible Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJed6j0cKX&noteId=rygRUCn4am",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 0,
+      "text": "The authors propose in this paper an approach for learning models with tractable approximate posterior inference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 1,
+      "text": "The paper is well motivated (fast and accurate posterior inference) and the construction of the solutions (invertible architecture, appending vectors to input and output, choice of cost function) well described.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 2,
+      "text": "From my understanding, it seems this method is also to be compatible with other methods of approximate Bayesian Computation (ABC).",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 3,
+      "text": "Concerning the experimental section:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 4,
+      "text": "- The Mixture of Gaussians experiment is a good illustration of how the choice of cost functions influences the solution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 5,
+      "text": "However, I do not understand how are the *discrete* output y is handled.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 6,
+      "text": "Is it indeed a discrete output (problem with lack of differentiability)? Softwax probability? Other modelling choice?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 7,
+      "text": "- The inverse kinematics is an interesting illustration of the potential advantage of this method over conditional VAE and how close it is to ABC which can be reasonably computed for this problem.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 8,
+      "text": "- For the medical application, INN outperforms other methods (except sometimes for ABC, which is far more expensive, or direct predictor, which doesn\u2019t provide uncertainty estimates) over some metrics such as the error on parameters recovery (Table 1), calibration error, and does indeed have a approximate posterior which seems to correspond to the ABC solution better.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 9,
+      "text": "I\u2019m not sure I understand what we are supposed to learn from the astrophysics experiments.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 10,
+      "text": "The method proposed and the general problem it aims at tackling seem interesting enough, the toy experiments demonstrates well the advantage of the method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 11,
+      "text": "However, the real-world experiments are not necessarily the easiest to read.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "sentence_index": 12,
+      "text": "EDIT: the concerns were mostly addressed in the revision.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 0,
+      "text": "Thank you very much for your time, and your constructive comments, we are looking forward to further discussions!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 1,
+      "text": "We answer your questions and concerns in the following.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 2,
+      "text": "> \"However, I do not understand how are the *discrete* output y is handled.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 3,
+      "text": "For this toy problem, we represent labels y by standard one-hot encoding, and we directly regress one-hot vectors using squared loss instead of softmax.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 4,
+      "text": "This allows us to input one-hot vectors into the inverted network to generate conditional x-samples.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 5,
+      "text": "> \"I\u2019m not sure I understand what we are supposed to learn from the astrophysics experiments.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 6,
+      "text": "We included this experiment to demonstrate that we are able to find multi-modal posteriors in a second real-world setting relevant to natural science.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 7,
+      "text": "> \"INN outperforms other methods [...] over some metrics such as the error on parameters recovery (Table 1), calibration error, and does indeed have a approximate posterior which seems to correspond to the ABC solution better\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 8,
+      "text": "We indeed consider the calibration errors (reported in Sec. 4.2 (\u201cQuantitative results\u201d) and Appendix Sec. 6) the most meaningful of these comparisons, because they directly measure the quality of the estimated posterior distributions, and INNs have a clear lead here.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 9,
+      "text": "We will add these numbers to Table 1 to emphasize their importance.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 10,
+      "text": "> \"However, the real-world experiments are not necessarily the easiest to read.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 11,
+      "text": "We understand, although we tried our best to condense the complicated nature of these applications.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 12,
+      "text": "For the astrophysics setting, we provide more information in the appendix, Sec. 5, and for the medical application we refer to [1] for full details.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 13,
+      "text": "[1] Wirkert et al.: Robust near real-time estimation of physiological parameters from megapixel multispectral images with inverse monte carlo and random forest regression. International Journal of Computer Assisted Radiology and Surgery, 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 14,
+      "text": "(https://link.springer.com/article/10.1007/s11548-016-1376-5 )",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 15,
+      "text": "We have uploaded a revised version of the paper, thank you again for your suggestions.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 16,
+      "text": "The changes and additions are highlighted in red font for convenience.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 17,
+      "text": "Please also note that by adding these changes, our page count increased by half a page beyond the recommended 8 pages.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgZjv4c37",
+      "rebuttal_id": "rygRUCn4am",
+      "sentence_index": 18,
+      "text": "If this presents a problem, we can attempt shorten the paper accordingly.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

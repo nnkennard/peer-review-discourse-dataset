@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "forum_id": "S1lvn0NtwH",
+    "review_id": "S1xAWnjRFH",
+    "rebuttal_id": "rklpjoQ9oH",
+    "title": "Mutual Exclusivity as a Challenge for Deep Neural Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lvn0NtwH&noteId=rklpjoQ9oH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 1,
+      "text": "This paper makes an observation that most of the neural network architectures do not learn the mutual exclusivity (ME) bias: if an object has one label, then it does not need another.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 2,
+      "text": "Authors demonstrate this in both synthetic tasks and real-world tasks like object recognition and machine translation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 3,
+      "text": "Authors argue that ME bias could help the model to handle new classes and rare events better.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 4,
+      "text": "My comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 5,
+      "text": "I very much enjoyed reading this paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 6,
+      "text": "I support accepting this paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 7,
+      "text": "It highlights one of the missing inductive biases in ML and proposes it as a challenge.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 8,
+      "text": "As the authors also agree, ME bias is missing not just in DNNs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 9,
+      "text": "It is the issue of MLE.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 10,
+      "text": "It would be good to have some non-NN results too.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 11,
+      "text": "I see this is a challenge for MLE than DNNs.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 12,
+      "text": "1. In figure-4 you mention that entropy regularizer helps to keep the initial ME score. Can you elaborate more about the way in which entropy regularizer is used with regular MLE training?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 13,
+      "text": "2. It is not very clear how is the base rate computed in Figure 5. I have a guess. But it is better to explain it in detail.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 14,
+      "text": "3. Section 4.2 need more clarity.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 15,
+      "text": "For example, what do you mean by classifying the image as \u201cnew\u201d? Is \u201cnew\u201d a class name? Also, how is P(N|t) computed? Please explain.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 16,
+      "text": "4. Are the authors willing to release the code and data to reproduce the results?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 17,
+      "text": "Minor comments:",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 18,
+      "text": "1. Page 3: second para, line 4: \u201cour aim is to study\u201d",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 19,
+      "text": "2. Page 5: last line: estimate for -> estimated for",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 20,
+      "text": "3. Section 4.2: 3rd line: \u201cthe class for the from\u201d",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 21,
+      "text": "=====================================================",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "sentence_index": 22,
+      "text": "After rebuttal: I have read the authors' response and  I stand by my decision.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 0,
+      "text": "Thank you for your supportive review.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 1,
+      "text": "We answer the specific queries below and have also added them to the revised version of the paper.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 2,
+      "text": "1.         We found that the entropy regularizer produces an ME score that stays constant across training, at the cost of the model being less confident about predictions made for seen classes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 3,
+      "text": "We added details regarding this condition to the manuscript.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 4,
+      "text": "2.         The base rate is the probability of observing a new word in the target at that particular point in training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 5,
+      "text": "We go through the remaining sentences in the corpus from the target compute the probability of sampling a sentence with at least one new word.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 6,
+      "text": "Thus, the base rate at time t in training is defined as:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 7,
+      "text": "$$P(\\text{new in target at t}) = \\frac{ \\text{# of unseen sentences in target with new words}} {\\text{# of unseen sentences}}$$",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 8,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 9,
+      "text": "In Section 4.2, we use \u201cnew\u201d to refer to the set of all the unseen classes at a particular timepoint t.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 10,
+      "text": "For the classifier, P(N|t) is calculated by adding the probabilities the model assigns to all the \u201cnew\u201d classes when iterating through the remaining corpus (similar to Equation 1 in our paper).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 11,
+      "text": "For the dataset, we compute P(N|t) by sampling all unseen images in the corpus and compute the proportion from \u201cnew\u201d classes given their ground truth labels.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 12,
+      "text": "4.         We will release our code and data with the publication of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 13,
+      "text": "Most of our experiments are easy to replicate as they use standard datasets, models, loss functions and optimizers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 14,
+      "text": "We sincerely hope that our challenge and these resources will stimulate progress in this area.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xAWnjRFH",
+      "rebuttal_id": "rklpjoQ9oH",
+      "sentence_index": 15,
+      "text": "Please also see above where we write a general response to all reviews.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

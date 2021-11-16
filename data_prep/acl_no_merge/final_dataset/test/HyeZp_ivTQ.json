@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "forum_id": "H1e0-30qKm",
+    "review_id": "HyeZp_ivTQ",
+    "rebuttal_id": "rkemAkgIRQ",
+    "title": "Unlabeled Disentangling of GANs with Guided Siamese Networks",
+    "reviewer": "AnonReviewer5",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1e0-30qKm&noteId=rkemAkgIRQ",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 0,
+      "text": "[Edit] I changed my rating from 4 to 5 based on the author responses.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 1,
+      "text": "=======",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 2,
+      "text": "This paper proposed a GAN that learns a disentangled factors of variations in unsupervised (or weakly-supervised) manner.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 3,
+      "text": "To this end, the proposed method incorporates a contrastive loss together with Siamese network, which encourages the generator to output smaller variations in samples if they are drawn by varying the same latent factors.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 4,
+      "text": "The proposed idea is evaluated on simple datasets such as MNIST and centered faces, and show that it is able to learn disentangled latent codes by incorporating some heuristics.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 5,
+      "text": "Although the paper presents an interesting and reasonable idea, I think the paper is incomplete and in the proof-of-concept stage.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 6,
+      "text": "In terms of method, the guidance for learning Siamese networks are designed heuristically (e.g. edges, colors, etc.) which limits its applicability over various datasets; I think that designing more principled approach to build such guidances from data should be one of the key contributions of the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 7,
+      "text": "In terms of evaluation, the authors only presented a few qualitative results on simple datasets, which is not comprehensive and convincing.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "sentence_index": 8,
+      "text": "In conclusion, I suggest a reject of this paper due to the lacks of comprehensive study and evaluation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 0,
+      "text": "We would like to thank you for reviewing our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 1,
+      "text": "[Principled Guidance] The design of guidances is heuristic, but as illustrated in Figure 2 and in Table 2, they are easy to design and are effective.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 2,
+      "text": "Further, we added our unsupervised analyses to show that the method works even without explicit guidance on all tested datasets.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 3,
+      "text": "In this paper, we propose the idea of guidance itself and show that it is imposing a desired semantics on the latent space without having labeled data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 4,
+      "text": "In our future work, we plan to investigate more principled ways of deciding guidances.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 5,
+      "text": "We now address this point in our \"Discussion\" section.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyeZp_ivTQ",
+      "rebuttal_id": "rkemAkgIRQ",
+      "sentence_index": 6,
+      "text": "[Experiments Section] We have significantly updated qualitative and quantitative results in our \"Experiments\" section and now compare our methods against Beta-VAE, DIP-VAE, and InfoGAN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

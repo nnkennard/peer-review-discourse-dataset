@@ -1,0 +1,750 @@
+{
+  "metadata": {
+    "forum_id": "rkxciiC9tm",
+    "review_id": "HkxrqOb6nm",
+    "rebuttal_id": "B1xcdgFE67",
+    "title": "NADPEx: An on-policy temporally consistent exploration method for deep reinforcement learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxciiC9tm&noteId=B1xcdgFE67",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 0,
+      "text": "The authors propose a new on-policy exploration strategy by using a policy with a hierarchy of stochasticity.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 1,
+      "text": "The authors use a two-level hierarchical distribution as a policy, where the global variable is used for dropout.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 2,
+      "text": "This work is interesting since the authors use dropout for policy learning and exploration.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 3,
+      "text": "The authors show that parameter noise exploration is a particular case of the proposed policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 4,
+      "text": "The main concern is the gap between the problem formulation and the actual optimization problem in Eq 12.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 5,
+      "text": "I am very happy to give a higher rating if the authors address the following points.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 6,
+      "text": "Detailed Comments",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 7,
+      "text": "(1) The authors give the derivation for Eq 10.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 8,
+      "text": "However, it is not obvious that how to move from line 3 to line 4 at Eq 15.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 9,
+      "text": "Minor:  Since the action is denoted by \"a\",  it will be more clear if the authors use another symbol to denote the parameter of q(z) instead of \"\\alpha\" at Eq 10 and 15.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 10,
+      "text": "(2) Due to the use of the likelihood ratio trick, the authors use the mean policy as an approximation at Eq 12.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 11,
+      "text": "Does such approximation guarantee the policy improvement?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 12,
+      "text": "Any justification?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 13,
+      "text": "(3) Instead of using the mean policy approximation in Eq 12, the authors should consider existing Monte Carlo techniques to reduce the variance of the gradient estimation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 14,
+      "text": "For example, [1] could be used to reduce the variance of gradient w.r.t. \\phi.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 15,
+      "text": "Note that the gradient is biased if the mean policy approximation is used.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 16,
+      "text": "(4) Are \\theta and \\phi jointly and simultaneously optimized at Eq 12?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 17,
+      "text": "The authors should clarify this point.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 18,
+      "text": "(5) Due to the mean policy approximation, does the mean policy depend on \\phi?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 19,
+      "text": "The authors should clearly explain how to update \\phi when optimizing Eq 12.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 20,
+      "text": "(6) If the authors jointly and simultaneously optimize \\theta and \\phi, why a regularization term about q_{\\phi}(z)  is missing in Eq 12 while a regularization term about \\pi_{\\theta|z} does appear in Eq 12?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 21,
+      "text": "(7) The authors give the derivations about \\theta such as the gradient and the regularization term about \\theta (see, Eq 18-19).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 22,
+      "text": "However, the derivations about \\phi are missing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 23,
+      "text": "For example, how to compute the gradient w.r.t. \\phi? Since the mean policy is used, it is not apparent that how to compute the gradient w.r.t. \\phi.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 24,
+      "text": "Minor, 1/2 is missing in the last line of Eq 19.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 25,
+      "text": "Reference:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "sentence_index": 26,
+      "text": "[1] AUEB, Michalis Titsias RC, and Miguel L\u00e1zaro-Gredilla. \"Local expectation gradients for black box variational inference.\" In Advances in neural information processing systems, pp. 2638-2646. 2015.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 0,
+      "text": "Thank your very much for your review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 1,
+      "text": "We have updated the manuscript with more details in the derivation of the first order approximation of KL divergence.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 2,
+      "text": "1) Elaborated derivation of Eq. 10",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 3,
+      "text": "Q1: We have added one more line to explain the derivation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 4,
+      "text": "Basically a baseline is subtracted, and GAE is introduced.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 5,
+      "text": "2) Gradient update on \\phi from KL divergence",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 6,
+      "text": "The gradients w.r.t. \\phi from the KL divergence is stopped for variance reduction with acceptable bias, which we prove with MuProp [1].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 7,
+      "text": "Details could be found in Appendix C.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 8,
+      "text": "Q3: Rather than [2], we employ MuProp to reduce variance in our development of NADPEx.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 9,
+      "text": "Thank your for your suggestion.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 10,
+      "text": "Q4: Yes \\theta and \\phi are jointly and simultaneously optimized at Eq. 12, though the gradients w.r.t. \\phi from the KL divergence is stopped.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 11,
+      "text": "Q7: Due to the stop-gradient manipulation in the KL divergence, gradients w.r.t. \\phi remains the same as in stated in last subsection.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 12,
+      "text": "3) Mean policy in the KL divergence",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 13,
+      "text": "What motivates the mean policy is not variance reduction, but the idea that dropout policy had better to be close to each other.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 14,
+      "text": "As intuitively \\phi is controlling the distance between dropout policies, it would further remedy the little bias mentioned above.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 15,
+      "text": "However, the computation complexity for \"close to each other\" would be O(N^2), with N being the number of dropout policies in this batch.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 16,
+      "text": "We employ mean policy to make it linear. And it could be regarded as an integration on a Gaussian approximation of the Monte Carlo estimate according to [3].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 17,
+      "text": "Details could be found in Appendix C.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 18,
+      "text": "Q2: No the mean policy is not used due to the likelihood ratio trick.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 19,
+      "text": "And the approximation of using mean policy is discussed in [3], with a sound deduction.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 20,
+      "text": "Q3: Mean policy is not motivated by variance reduction, which is addressed as introduced above.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 21,
+      "text": "Thank you for your suggestion.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 22,
+      "text": "Q5: In the updated version, we have explicitly pointed out that the gradients w.r.t. \\phi from KL divergence is stopped. Thanks for this suggestion.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 23,
+      "text": "Hope our response addresses your concerns!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 24,
+      "text": "[1] Gu et al., \"MuProp: Unbiased Backpropagation for Stochastic Neural Networks\", ICLR 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 25,
+      "text": "[2] Titsias et al., \"Local Expectation Gradients for Black Box Variational Inference\", NIPS 2015.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxrqOb6nm",
+      "rebuttal_id": "B1xcdgFE67",
+      "sentence_index": 26,
+      "text": "[3] Wang et al., \"Fast dropout training\", ICML 2013.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

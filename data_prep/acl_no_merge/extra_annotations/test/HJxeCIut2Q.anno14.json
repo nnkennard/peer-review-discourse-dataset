@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "forum_id": "ByxZX20qFQ",
+    "review_id": "HJxeCIut2Q",
+    "rebuttal_id": "ryloqL1G0Q",
+    "title": "Adaptive Input Representations for Neural Language Modeling",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByxZX20qFQ&noteId=ryloqL1G0Q",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 0,
+      "text": "This paper introduced a new architecture for input embeddings of neural language models: adaptive input representation (ADP).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 1,
+      "text": "ADP allowed a model builder to define a set of bands of input words with different frequency where frequent words have larger embedding size than the others.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 2,
+      "text": "The embeddings of each band are then projected into the same size.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 3,
+      "text": "This resulted in lowering the number of parameters.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 4,
+      "text": "Extensive experiments with the Transformer LM on WikiText-103 and Billion Word corpus showed that ADP achieved competitive perplexities.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 5,
+      "text": "While tying weight with the output did not benefit the perplexity, it lowered the runtime significantly on Billion Word corpus.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 6,
+      "text": "Further analyses showed that ADP gained performance across all word frequency ranges.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 7,
+      "text": "Overall, the paper was well-written and the experiments supported the claim.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 8,
+      "text": "The paper was very clear on its contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 9,
+      "text": "The variable-size input of this paper was novel as far as I know.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 10,
+      "text": "However, the method, particularly on the weight sharing, lacked a bit of important background on adaptive softmax.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 11,
+      "text": "The weight sharing was also needed further investigation and experimental data on sharing different parts.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 12,
+      "text": "The experiments compared several models with different input levels (characters, BPE, and words).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 13,
+      "text": "The perplexities of the proposed approach were competitive with the character model with an advantage on the training time.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 14,
+      "text": "However, the runtimes were a bit strange.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 15,
+      "text": "For example, ADP and ADP-T runtimes were very close on WikiText-103 dataset but very different on Billion Word corpus (Table 3 and 4).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 16,
+      "text": "The runtime of ADP seemed to lose in term of scaling as well to BPE.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 17,
+      "text": "Perhaps, the training time was an artifact of multi-GPU training.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 18,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 19,
+      "text": "1. I am curious about what would you get if you use ADP on BPE vocab set?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "sentence_index": 20,
+      "text": "2. How much of the perplexity reduction of 8.7 actually come from ADP instead of the transformer and optimization?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 1,
+      "text": "Q: \u201cADP and ADP-T runtimes were very close on WikiText-103 dataset but very different on Billion Word corpus (Table 3 and 4)\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 2,
+      "text": "The differences in training time are due to the size of the models: Weight tying saves a lot more parameters for the Billion Word model due to the larger vocab compared to the WikiText-103 models which have a smaller vocab.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 3,
+      "text": "On WikiText-103, tying saves 15% of parameters (Table 3, ADP vs ADP-T, 291M vs 247M) and training time is reduced by about 13%.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 4,
+      "text": "On Billion Word, tying saves 27% of parameters (Table 4) and training time is reduced by about 34%.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 5,
+      "text": "The slight discrepancy may be due to multi-machine training for Billion Word compared to the single machine setup for WikiText-103.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 6,
+      "text": "Q1: \"I am curious about what would you get if you use ADP on BPE vocab set?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 7,
+      "text": "We tried adaptive input embeddings with BPE but the results were worse than softmax.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 8,
+      "text": "This is likely because 'rare' BPE units are in some sense not rare enough compared to a word vocabulary.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 9,
+      "text": "In that case, the regularization effect of assigning less capacity to 'rare' BPE tokens through adaptive input embeddings is actually harmful.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 10,
+      "text": "Q2: \"How much of the perplexity reduction of 8.7 actually come from ADP instead of the transformer and optimization?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 11,
+      "text": "For WikiText-103 (Table 3) we measured 24.92 on test with a full softmax model (a 5.2 PPL improvement over the previous SOTA).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 12,
+      "text": "This corresponds to a Transformer model including our tuned optimization scheme.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxeCIut2Q",
+      "rebuttal_id": "ryloqL1G0Q",
+      "sentence_index": 13,
+      "text": "Adding tied adaptive input embeddings (ADP-T) to this configuration reduces this perplexity to 20.51, which is another reduction of 4.4 PPL.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

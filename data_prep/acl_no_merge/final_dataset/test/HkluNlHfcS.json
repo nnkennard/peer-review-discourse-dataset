@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "forum_id": "SkgTR3VFvH",
+    "review_id": "HkluNlHfcS",
+    "rebuttal_id": "BkxCvEBDsH",
+    "title": "Pipelined Training with Stale Weights of Deep Convolutional Neural Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkgTR3VFvH&noteId=BkxCvEBDsH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 0,
+      "text": "This paper investigates the impact of stale weights on the statistical efficiency and performance in a pipelined backpropagation scheme that maximizes accelerator utilization while keeping the memory overhead modest.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 1,
+      "text": "The paper proposes to combine pipelined and non-pipelined training in a hybrid scheme to address the issue of significant drop in accuracy when pipelining is deeper in the network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 2,
+      "text": "The performance of the proposed pipelined backpropagation is demonstrated on 2 GPUs using ResNet with speedups of up to 1.8X over a 1-GPU baseline and a small drop in inference accuracy.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 3,
+      "text": "The paper is well written and easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 4,
+      "text": "The proposed idea is interesting and its effectiveness is well demonstrated with a promising speed and a small drop in accuracy.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 5,
+      "text": "The proposed approach is compared to two existing works:  PipeDream [1] and GPipe [2].",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 6,
+      "text": "Though promising results have been demonstrated, a drawback of the proposed method is that it introduces more memory overhead compared to GPipe.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 7,
+      "text": "Although a detailed discussion is provided related to the memory consumption between the proposed method and PipeDream, no detailed discussion is provided with respect to GPipe.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 8,
+      "text": "Further, no proper convergence analysis of the proposed approach is provided and is desired due to the likely divergence in the optimization.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 9,
+      "text": "Minor comment: An interesting line of work is that of [3] which could be included in the discussion.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 10,
+      "text": "Overall, the proposed approach is interesting and is shown to achieve promising results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 11,
+      "text": "However, memory overhead is still an issue compared to existing method.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 12,
+      "text": "[1] Aaron Harlap, Deepak Narayanan, Amar Phanishayee, Vivek Seshadri, Nikhil Devanur, Greg Ganger, and Phil Gibbons. Pipedream: Fast and efficient pipeline parallel DNN training, 2018. URL http://arXiv:1806.03377.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 13,
+      "text": "[2] Yanping Huang, Yonglong Cheng, Dehao Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, and Zhifeng Chen. Gpipe: Efficient training of giant neural networks using pipeline parallelism, 2018. URL http://arXiv:1811.06965.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "sentence_index": 14,
+      "text": "[3] Guanhua Wang, Shivaram Venkataraman, Amar Phanishayee, Jorgen Thelin, Nikhil Devanur, Ion Stoica: Blink: Fast and Generic Collectives for Distributed ML. arXiv:1910.04940, 2019.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 0,
+      "text": "Indeed, GPipe [2] incurs less memory footprint than our pipelining scheme and PipeDream [1] because it only saves the activations at the boundary of each model partition and re-computes the activations of the model during the backward pass.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 1,
+      "text": "However, the re-computation still incurs pipeline bubbles during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 2,
+      "text": "Our scheme saves all activations instead of re-computing them to eliminate pipeline bubble, thus achieving better utilization for the accelerators (GPUs).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 3,
+      "text": "Our scheme has less memory footprint than PipeDream because it does not stash weights.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 4,
+      "text": "The main goal of our submission is to experimentally show that our pipelined training, using stale weights without weight stashing [1] or micro-batching [2], is simpler and does converge.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 5,
+      "text": "The paper does achieve this goal, on a number of networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 6,
+      "text": "It would be difficult fit a detailed convergence analysis in our paper given the limited space provided.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 7,
+      "text": "Thank you for pointing out paper [3].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 8,
+      "text": "We notice that it is submitted to arXive after the submission deadline of ICLR, thus we were unaware of it at the time of submission.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkluNlHfcS",
+      "rebuttal_id": "BkxCvEBDsH",
+      "sentence_index": 9,
+      "text": "Nonetheless, we will cite it and discuss its approach in comparison to ours in the related work section of the final revised version of our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

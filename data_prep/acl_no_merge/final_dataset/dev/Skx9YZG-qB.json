@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "forum_id": "Syx79eBKwr",
+    "review_id": "Skx9YZG-qB",
+    "rebuttal_id": "rJlgPc-mjB",
+    "title": "A Mutual Information Maximization Perspective of Language Representation Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Syx79eBKwr&noteId=rJlgPc-mjB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 0,
+      "text": "This paper first gives a concise yet precise summary of maximizing one of variational lower bounds of mutual information, InfoNCE, then it provides an alternative view to explain case by case why word embedding Skip-gram, BERT, XLNet work in practice can be viewed by InfoNCE framework, thus we have a good understand for these methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 1,
+      "text": "Moreover it introduces a self-learning method  that maximizes the mutual information between a global sentence representation and n-grams in the sentence based on deep InfoMax framework instead.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 2,
+      "text": "Experiments show that it is better then BERT and BERT-NCE. It's known that InfoNCE increases bias but reduce variance, the same is true for deep InfoMax. Do you observe this in your experiments? If so, please provide.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 3,
+      "text": "The paper is well-written and easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 4,
+      "text": "The originality is relative low though, since it is mainly an application of  deep InfoMax to language modeling, not inventing a new algorithm and applying to language modeling.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "sentence_index": 5,
+      "text": "In equations 1 and 2, should a, b be written in capital? Since they represent random variables.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skx9YZG-qB",
+      "rebuttal_id": "rJlgPc-mjB",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "rebuttal_id": "rJlgPc-mjB",
+      "sentence_index": 1,
+      "text": "We have updated notations in Equations 1 and 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "rebuttal_id": "rJlgPc-mjB",
+      "sentence_index": 2,
+      "text": "The expectations are now taken over random variables (A and B) and the function takes particular values (a and b) of these random variables.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx9YZG-qB",
+      "rebuttal_id": "rJlgPc-mjB",
+      "sentence_index": 3,
+      "text": "Regarding your comment about increasing bias and reducing variance, we did observe that the quality of the InfoWord representations is relatively stable across different runs in our experiments (as evaluated by performance on downstream tasks). Could you please clarify a bit more whether this is what you are asking?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

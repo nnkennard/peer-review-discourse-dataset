@@ -1,0 +1,699 @@
+{
+  "metadata": {
+    "forum_id": "Syf9Q209YQ",
+    "review_id": "rkepvb7c2Q",
+    "rebuttal_id": "H1g061y90Q",
+    "title": "Manifold regularization with GANs for semi-supervised learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Syf9Q209YQ&noteId=H1g061y90Q",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 0,
+      "text": "This paper builds upon the assumption that GANs successfully approximate the data manifold, and uses this assumption to regularize semi-supervised learning process.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 1,
+      "text": "The proposed regularization strategy enforces that a discriminator or a given classifier should be invariant to small perturbations on the data manifold z. It is empirically shown that naively enforcing such a constraint by randomly adding noise to z could lead to under-smoothing or over-smoothing in some cases which can harm the final classification performance.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 2,
+      "text": "Consequently, the proposed regularization technique takes a step of tunable size in the direction of the manifold gradient, which has the effect of smoothing along the direction of the gradient while ignoring its norm.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 3,
+      "text": "Extensive experiments have been conducted, showing that the proposed approach",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 4,
+      "text": "outperforms or is comparable with recent state-of-the-art approaches on cifar 10, especially in presence of fewer labelled data points.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 5,
+      "text": "On SVHN however, the proposed approach fails in comparison with (Kumar et al 2017) but performs better than other approaches.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 6,
+      "text": "Furthermore, it has been shown that adding the proposed manifold regularization technique to the training of GAN greatly improves the image quality of generated images (in terms of FID scores and inception scores).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 7,
+      "text": "Also, by combining the proposed regularizer with a classical supervised classifier (via pre-training a GAN and using it for regularization) decreases classification error by 2 to 3%.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 8,
+      "text": "Finally, it has also been shown that after training a GAN using the manifold regularization, the algorithm is able to produce similar images giving a low enough perturbation of the data manifold z.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 9,
+      "text": "Overall, this paper is well written and show significant improvements especially for image generation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 10,
+      "text": "However, the novelty is rather limited as similar ideas have been undertaken (e.g., Mescheder et al 2018), but in different contexts.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 11,
+      "text": "The paper would be improved if the following points are taken into account:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 12,
+      "text": "A comparison with Graph Convolutional Network based techniques seems appropriate (e.g. Kipf and Welling 2017).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 13,
+      "text": "How do the FID/Inception improvements compare to (Mescheder et al 2018)?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 14,
+      "text": "It would be interesting to discuss why the FID score for SVHN gets worse in presence of 1000 labels.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 15,
+      "text": "Although there is a clear improvement in FID scores for Cifar10.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 16,
+      "text": "It would be informative to show the generated images w/ and w/o manifold regularization.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 17,
+      "text": "More analysis should be provided on why (Kumar et al 2017) perform so well on SVHN.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "sentence_index": 18,
+      "text": "It should be stated that bold values in tables do not represent best results (as it is usually the case) but rather results for the proposed approach.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 0,
+      "text": "Thank you for your constructive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 1,
+      "text": "We are glad that you found our experiments extensive and that our approach provides significant improvements.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 2,
+      "text": "In response to your comment that \"similar ideas have been undertaken (e.g., Mescheder et al 2018), but in different contexts\" we would like to take this opportunity to clarify the novelty of our approach.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 3,
+      "text": "First, with regards to (Mescheder et al 2018), our method is not simply the application of existing gradient penalties (GPs) in the context of semi-supervised learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 4,
+      "text": "Our approach is conceptually different since the regularizer proposed by (Mescheder et al 2018) is an (isotropic) ambient regularizer in the input space, whereas the regularizer we used performs (anisotropic) smoothing on the manifold parametrized by the latent generative model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 5,
+      "text": "We believe we are the first to show the benefits of anisotropic Jacobian regularizers in the context of semi-supervised learning.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 6,
+      "text": "Moreover, an important contribution of our work is the efficient computation of such gradient penalties in the context of semi-supervised learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 7,
+      "text": "Current application of such penalties uses the exact Jacobian which is especially computationally expensive in the case of semi-supervised learning as it is now a tensor (one matrix per class in the case of Improved GAN), which quickly becomes intractable with large numbers of classes.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 8,
+      "text": "We proposed and demonstrated the effectiveness of an efficient (non-obvious) approximation of the Jacobian-based regularizer which significantly accelerates training.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 9,
+      "text": "We provide responses to further questions/comments below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 10,
+      "text": "Q: \"A comparison with Graph Convolutional Network based techniques seems appropriate (e.g. Kipf and Welling 2017).\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 11,
+      "text": "A: Methods such as (Kipf and Welling 2017) are designed for semi-supervised learning on graphs; here a key challenge is in defining the structure (edges and edge weights) of the graph.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 12,
+      "text": "Defining the graph structure is not trivial for the image datasets commonly used as benchmarks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 13,
+      "text": "In this light, one of the advantages of our approach is that the manifold (graph structure) is implicitly learned by the GAN, thus avoiding the need to explicitly define it.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 14,
+      "text": "That said, it is an interesting direction for future work and we thank the reviewer for the suggestion.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 15,
+      "text": "Q: \"How do the FID/Inception improvements compare to (Mescheder et al 2018)?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 16,
+      "text": "A: We cannot directly compare our image generation scores with those reported in (Merscheder et al 2018) as we used different GAN architectures; for reference, they reported an Inception score of 6.2.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 17,
+      "text": "We have updated the paper with Inception/FID scores from the ambient regularizer on CIFAR-10 (Table 4), which is an approximation of the proposed regularizer in (Merscheder et al. 2018) using stochastic finite differences.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 18,
+      "text": "As mentioned earlier, it is not practical to compare the non-approximated regularizer due to the substantial increase in computational complexity in the semi-supervised GAN setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 19,
+      "text": "We observe that ambient regularization gives better image generation scores; however it does not perform as well on semi-supervised learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 20,
+      "text": "This tradeoff between image generation and semi-supervised learning performance was previously reported in (Salimans et al., 2016) \"Improved Methods for Training GANs\".",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 21,
+      "text": "Q: \"It would be interesting to discuss why the FID score for SVHN gets worse in presence of 1000 labels.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 22,
+      "text": "A: We re-checked our FID computation for this case and fixed a bug.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 23,
+      "text": "We have updated the paper with updated FID scores; we note there is a high variance in the FID so while there is an improvement on average, it occasionally may not be better.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 24,
+      "text": "Q: \"Although there is a clear improvement in FID scores for Cifar10. It would be informative to show the generated images w/ and w/o manifold regularization.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 25,
+      "text": "A: We have included generated images with and without manifold regularization in the Appendix (Figure A5 for CIFAR-10, Figure A6 for SVHN) - these show clear improvements as well.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 26,
+      "text": "Q: \"More analysis should be provided on why (Kumar et al 2017) perform so well on SVHN.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 27,
+      "text": "A: We note that although on average the method of (Kumar et al 2017) performs better on SVHN, the standard deviation is also much higher than many other methods (including ours) on both SVHN and CIFAR-10 indicating that it is not as robust.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 28,
+      "text": "Q: \"It should be stated that bold values in tables do not represent best results (as it is usually the case) but rather results for the proposed approach.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkepvb7c2Q",
+      "rebuttal_id": "H1g061y90Q",
+      "sentence_index": 29,
+      "text": "A: We have revised the tables such that bold values represent the best results for clarity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

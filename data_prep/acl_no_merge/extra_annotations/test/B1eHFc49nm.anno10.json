@@ -1,0 +1,667 @@
+{
+  "metadata": {
+    "forum_id": "rket4i0qtX",
+    "review_id": "B1eHFc49nm",
+    "rebuttal_id": "Ske5xOUn6m",
+    "title": "The meaning of \"most\" for visual question answering models",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rket4i0qtX&noteId=Ske5xOUn6m",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 0,
+      "text": "Problem and contribution:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 1,
+      "text": "The paper studies if the Visual Question answering model \u201cFILM\u201d from Perez et al (2018) is able to decide if \u201cmost\u201d of the objects have a certain attribute or color.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 2,
+      "text": "For this it tries to mimic the setup used to test human abilities in the study by Pietroski et al. (2009).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 3,
+      "text": "The main contribution of this is work is a discussion of how a model could solve the problem of deciding \u201cmost\u201d and the study which shows that the studied model has some ability to do this.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 4,
+      "text": "From this the paper concludes that the model is likely to have some approximate number system.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 5,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 6,
+      "text": "1.\tThe paper looks at a new angle to study and characterize CNN models in general, and VQA models in particular by looking into the psycholinguistic literature experimental setup studied with human subjects.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 7,
+      "text": "2.\tThe paper studies different variants of controlling for different factors (e.g. pairing data points, area used, different training data and pre-trained vs. trained from scratch CNN models)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 8,
+      "text": "3.\tIt is interesting to see that the models performance reasonably aligns with the curve predicted by \u201cWeber\u2019s law\u201d.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 9,
+      "text": "Weaknesses:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 10,
+      "text": "4.\tNumber of objects vs. ratios is not disentangled: While the paper clarifies that not only a smaller number of objects are used, it would be interesting to understand if similar conclusions hold if only the same number or about the same number of total objects are used but the ratios change (at least for more extreme ratios, 1:2, this seems to be the case as they achieve 100% accuracy).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 11,
+      "text": "5.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 12,
+      "text": "The paper only focusses on a single VQA model (FILM) which limits the understanding if this observation is specific to this model; what about other models such as the one from Hudson & Manning (2018), or Relation Networks (Santoro et al) or even simpler baselines: A system which two attention mechanisms (without normalizations) which are sum pooled and then compared would sort of explicitly encode the idea of the APN system.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 13,
+      "text": "It would be valuable to compare them to see how different systems (can) solve this task.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 14,
+      "text": "I would expect that the architecture favors certain capabilities; e.g. Relation Networks might lead more to a paring-based strategy. Or Zhang et al. (2018) might be able to exploit explicit counting to solve the task.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 15,
+      "text": "6.\tThe \u201cmost\u201d ability or APN ability seems to be highly related to accumulation in neural networks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 16,
+      "text": "The paper FiLM uses global max-pooling and I am wondering if this affect this ability.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 17,
+      "text": "7.\tThe study is only performed on symbols which a very large training set (given the difficulty of the problem) and it not clear how well this generalizes to real images or scenarios with less training data.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 18,
+      "text": "7.1.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 19,
+      "text": "Maybe beyond the scope of this work, but it would be interesting to understand how much training data different models need to obtain this capability.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 20,
+      "text": "8.\tFor evaluation: Are there distractors, i.e. elements which don\u2019t belong to set A or B? If not, how would distractors affect it.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 21,
+      "text": "9.\tClarity:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 22,
+      "text": "9.1.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 23,
+      "text": "The equation between equation (1) and (2) misses a number [I will call it 1.5 for now]",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 24,
+      "text": "9.2.\tIn formula (1.5) \u201c<=>\u201d seems to be used at different levels (?) it would be good to use brackets to make clear which level \u201c<=>\u201d refers to.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 25,
+      "text": "Minor:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 26,
+      "text": "10.\tThe title suggests that the paper studies multiple VQA models but only a single model is studied.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 27,
+      "text": "Conclusion:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "sentence_index": 28,
+      "text": "The paper looks into an interesting direction to study CNN models but has some limitations including studying only a single VQA model type, limited to artificially generated images.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 0,
+      "text": "Many thanks for the valuable feedback! We uploaded a revised version of the paper, and in the following address the weaknesses you pointed out:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 1,
+      "text": "4.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 2,
+      "text": "Note that the training data is not constrained with respect to ratios and number of objects addressed by the caption, so the learned behavior should be independent of these aspects.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 3,
+      "text": "Moreover, note that for most ratios there is only one combination of numbers with at most 15 objects in total, but larger images fitting a greater total number of objects would definitely be an option here.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 4,
+      "text": "For the less close-to-balanced ratios 1:2, 2:3, 3:4 where there are multiple possibilities, performance generally is (close-to-)perfect, indicating that there is no increased difficulty of learning multiples in the presence of more close-to-balanced ratios (for instance, 6:9 vs 7:8).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 5,
+      "text": "We hope this clarifies your concern.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 6,
+      "text": "5. We fully agree that it would be very interesting to investigate these models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 7,
+      "text": "For this paper, we decided to focus on the methodology of investigating such questions in detail (the evaluation for FiLM alone comprises around 100 experiments) as opposed to focusing on the comparison of behavior of different models, and leave the latter to future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 8,
+      "text": "We added a few additional sentences to section 3.2 regarding that.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 9,
+      "text": "6. We added a few sentences to the end of section 2.4 on our speculative intuition regarding what strategy a model may prefer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 10,
+      "text": "We didn't think about the fact that one may want to control which strategy is learned, which would indeed be interesting, but that's why we considered FiLM as is and didn't experiment with changing architecture details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 11,
+      "text": "At the same time, considering that understanding \"most\" is only one of many capabilities a VQA model is supposed to learn, these results are unlikely to be an important influencing factor for architecture choice, while at least knowing about the properties of a model is nonetheless interesting.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 12,
+      "text": "7. The evaluation is supposed to show what an architecture is capable of learning under \"ideal\" conditions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 13,
+      "text": "It's an interesting question whether/how this changes when gradually shifting towards \"less ideal\" setups.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 14,
+      "text": "An advantage of using a controlled setup like ours is that this is possible to investigate, to some degree at least (for instance, add more types of captions to the training data, not just quantifier statements).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 15,
+      "text": "At some point we may be interested in actually investigating the same for real-world data, but we think it's unclear right now what exactly such evaluation data should ideally look like, what problems are most interesting, what details to pay attention to. Artificial data allows us to investigate these questions while avoiding the elaborate and expensive process of obtaining real-world data.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 16,
+      "text": "8. Note that the training data is far less constrained than the evaluation data, including various distracting aspects like additional shapes/colors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 17,
+      "text": "The evaluation data doesn't contain such distractors, but it would of course be possible (and potentially interesting) to add such.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 18,
+      "text": "We didn't do so since we considered instances with only \"relevant\" attributes to be the most difficult setup, like a minimal pair, where a model is required to focus on all objects and both their shape and color attribute to decide correctly.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 19,
+      "text": "9. We incorporated the changes as you suggested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 20,
+      "text": "Thanks!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eHFc49nm",
+      "rebuttal_id": "Ske5xOUn6m",
+      "sentence_index": 21,
+      "text": "10. We didn't think about this interpretation -- our intention was to signal that we take the \"The Meaning of 'Most'\" setup and methodology of Pietroski et al. from psychology, and implement a deep learning version for visual question answering models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

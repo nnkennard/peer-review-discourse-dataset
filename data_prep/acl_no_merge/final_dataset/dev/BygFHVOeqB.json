@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "forum_id": "rygjmpVFvB",
+    "review_id": "BygFHVOeqB",
+    "rebuttal_id": "BkgZq5uHor",
+    "title": "Difference-Seeking Generative Adversarial Network--Unseen Sample Generation",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rygjmpVFvB&noteId=BkgZq5uHor",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 1,
+      "text": "This paper provides an interesting application of GAN which can generate the outlier distribution of training data which forces generator to learn the distribution of the low probability density area of given data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 2,
+      "text": "To show the effectiveness of the method, the author intuitively shows how it works on 2-D points data as well as the reconstructed Mnist dataset.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 3,
+      "text": "Additionally, this approach reaches a comparable performance on semi-supervised learning and novelty detection task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 4,
+      "text": "Paper Strengths",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 5,
+      "text": "1. The idea of this paper is novel, and the implementation of this method is easily interacted with any GAN model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 6,
+      "text": "Also, due to its concise structure compared to the existing method, it saves more computational memory and is time efficiency.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 7,
+      "text": "Paper Weaknesses",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 8,
+      "text": "1. Experimental settings are clear, however, what makes me confused is that the construction for p_{\\bar{d}} is straightforward for simple distribution like 2D points dataset, however, it might be intractable for complex high dimensional data such as images.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "sentence_index": 9,
+      "text": "2. The model seems to be sensitive to the hyper-parameter \\alpha, is this parameter always fixed at 0.5 or needed to fine-tune for different datasets?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 0,
+      "text": "Thanks for your comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 1,
+      "text": ">>> Experimental settings are clear, however, what makes me confused is that the construction for $p_{\\bar{d}}$ is straightforward for simple distribution like 2D points dataset, however, it might be intractable for complex high dimensional data such as images.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 2,
+      "text": "In responding to this comment and the comment of Reviewer #1, we perform one more experiment on CelebA to demonstrate that DSGAN can work well even for complicated images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 3,
+      "text": "In this experiment, we generate the color images of size 64 $\\times$ 64.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 4,
+      "text": "Similar to 1/7 experiments on the MNIST dataset, we let $p_{\\bar{d}}$ be the distribution of face images with glasses and without glasses, and let $p_{d}$ be images without glasses.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 5,
+      "text": "We sample 10000 images with glasses and 10000 images without glasses from CelebA, and we set $\\alpha$ to 0.5.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 6,
+      "text": "In order to verify the generated image quality of DSGAN, we also train a GAN for comparison.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 7,
+      "text": "GAN is trained with the same amount of training images (but only using face images with glasses since GAN is to learn the distribution of training data).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 8,
+      "text": "In other words, we assume GAN can use complement data as training data directly.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 9,
+      "text": "On the contrary, DSGAN only uses complement data indirectly (the difference between $p_{\\bar{d}}$ and $p_d$).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 10,
+      "text": "Figure 10 in Appendix G shows generated images and FID for both methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 11,
+      "text": "We can see that our DSGAN can generate images with glasses from the given $p_d$ and $p_{\\bar{d}}$, and the FID of DSGAN are comparable to that of GAN.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 12,
+      "text": "The experiment validates that DSGAN still works well to create complement data for complicate images.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 13,
+      "text": ">>> The model seems to be sensitive to the hyper-parameter $\\alpha$, is this parameter always fixed at 0.5 or needed to fine-tune for different datasets?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 14,
+      "text": "Since the optimal $\\alpha$ of generating \"unseen\" data in DSGAN depends on the degree of overlap between $p_{\\bar{d}}$ and $p_d$, it might need to be fine-tuned for different datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 15,
+      "text": "However, in our experiments, we set $\\alpha$ to $0.8$ in most cases.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 16,
+      "text": "Theorem 1 illustrates $\\alpha$ should be expected to be as large as possible if both network G and D have infinite capacity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 17,
+      "text": "Though the networks never have the infinite capacity in real applications, a general rule is to pick a large $\\alpha$ and force the complement data to be far from p_d, which is similar to the ablation studies in Sec. 5.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 18,
+      "text": "According to our empirical observations, $\\alpha = 0.8$ is the good choice for all datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 19,
+      "text": "Table 11 in Sec. F of Appendix shows the experimental results of how $\\alpha$ affects the performances.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 20,
+      "text": "We use different $\\alpha$ values in the MNIST, SVHN and CIFAR10 dataset, respectively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygFHVOeqB",
+      "rebuttal_id": "BkgZq5uHor",
+      "sentence_index": 21,
+      "text": "One can see that we achieve the best performances at $\\alpha = 0.8$.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

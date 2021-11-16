@@ -1,0 +1,405 @@
+{
+  "metadata": {
+    "forum_id": "rklhqkHFDB",
+    "review_id": "HJxl4O3AYB",
+    "rebuttal_id": "SJgNYnkcsS",
+    "title": "LARGE SCALE REPRESENTATION LEARNING FROM TRIPLET COMPARISONS",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rklhqkHFDB&noteId=SJgNYnkcsS",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 0,
+      "text": "The paper proposes to use the triplet loss as a convex relaxation of the ordinal embedding problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 1,
+      "text": "The loss is solved using feed-forward neural network with the input to the network being the ids of the items encoded in binary codes.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 2,
+      "text": "The benefit of using a deep network is to exploit its optimization capability and the parallelism on GPUs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 3,
+      "text": "The experiments presented in the paper include a set of simulation experiments and a real-world task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 4,
+      "text": "I am giving a score of 3.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 5,
+      "text": "This work is an interesting application of deep learning, but it gives little insight as to why deep networks are able to solve the problem and how to solve ordinal embedding itself.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 6,
+      "text": "To elaborate, the problem is known to be NP-hard in the worst case, while the data sets used in the paper seem to have certain nice properties.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 7,
+      "text": "It would be interesting to see how deep networks do for the hard cases.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 8,
+      "text": "It would also be interesting to see if additional assumptions, such as the existence of clusters or separation between clusters, make ordinal embedding simpler and thus tractable.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 9,
+      "text": "Another approach is to assume the solution to have low surrogate loss (4), and any convex solver with sufficiently large number of points is able to find such a solution.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 10,
+      "text": "Then the question becomes how deep networks solve the particular convex optimization problem.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 11,
+      "text": "Thinking along these directions would bring more insight and impact to both the ordinal embedding problem and optimization in deep networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 12,
+      "text": "one quick question:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 13,
+      "text": "equations (3) and (4)",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "sentence_index": 14,
+      "text": "--> isn't this the same as using the hinge loss to bound the zero-one loss?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 0,
+      "text": "We would like to thank the reviewer for their feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 1,
+      "text": "We address each comment below individually with appropriate headings.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 2,
+      "text": "- Summary",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 3,
+      "text": "We would like to point out that the reviewer in the summary incorrectly described that our approach uses the \"triplet loss as a convex relaxation of the ordinal embedding problem\".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 4,
+      "text": "Using the triplet loss as a proxy does not make the problem convex.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 5,
+      "text": "- The relation between data distribution and hardness of ordinal embedding",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 6,
+      "text": "Ordinal embedding is NP-hard independent of the data distribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 7,
+      "text": "The paper \u201cLandscape of non-convex quadratic feasibility\u201d (Bower et al. 2018) can shed more light on this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 8,
+      "text": "The equation (1) in this paper rephrases the ordinal embedding problem as a homogeneous quadratic feasibility problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 9,
+      "text": "The constraint matrices of the problem (P_i in the paper), which correspond to the triplet inequalities, are all indefinite which makes the whole optimization NP-hard.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 10,
+      "text": "Moreover, many of our experiments in this paper feature the uniform distribution, which does not satisfy any nice structural assumptions.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 11,
+      "text": "- Using a convex solver",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 12,
+      "text": "As we pointed out earlier, using the triplet loss does not make the optimization problem convex and hence using a convex solver would not be possible here.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 13,
+      "text": "- \u201cEquations (3) and (4):  isn't this the same as using the hinge loss to bound the zero-one loss?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxl4O3AYB",
+      "rebuttal_id": "SJgNYnkcsS",
+      "sentence_index": 14,
+      "text": "Yes, that is true.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

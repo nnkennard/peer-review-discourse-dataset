@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "forum_id": "H1eqjiCctX",
+    "review_id": "Skg4J4xt27",
+    "rebuttal_id": "Skeg0uolRm",
+    "title": "Understanding Composition of Word Embeddings via Tensor Decomposition",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1eqjiCctX&noteId=Skeg0uolRm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 0,
+      "text": "The authors suggest a method to create combined low-dimensional representations for combinations of pairs of words which have a specific syntactic relationship (e.g. adjective - noun).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 1,
+      "text": "Building on the generative word embedding model provided by Arora et al. (2015), their solution uses the core tensor from the Tucker decomposition of a 3-way PMI tensor to generate an additive term, used in the composition of two word embedding vectors.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 2,
+      "text": "Although the method the authors suggest is a plausible way to explicitly model the relationship between syntactic pairs and to create a combined embedding for them, their presentation does not make this obvious and it takes effort to reach the conclusion above.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 3,
+      "text": "Unlike Arora's original work, the assumptions they make on their subject material are not supported enough, as in their lack of explanation of why linear addition of two word embeddings should be a bad idea for composition of the embedding vectors of two syntactically related words, and why the corrective term produced by their method makes this a good idea.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 4,
+      "text": "Though the title promises a contribution to an understanding of word embedding compositions in general, they barely expound on the broader implications of their idea in representing elements of language through vectors.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 5,
+      "text": "Their lack of willingness to ground their claims or decisions is even more apparent in two other cases.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 6,
+      "text": "The authors claim that the Arora's RAND-WALK model does not capture any syntactic information.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 7,
+      "text": "This is not true.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 8,
+      "text": "The results presented by Arora et al. indeed show that RAND-WALK captures syntactic information, albeit to a lesser extent than other popular methods for word embedding (Table 1, Arora et al. 2015).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 9,
+      "text": "Another unjustified choice by the authors is their choice of weighing the Tensor term (when it is being added to two base embedding vectors) in the phrase similarity experiment.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 10,
+      "text": "The reason the authors provide for weighing the composition Tensor is the fact that in the unweighted version their model produced a worse performance than the additive composition.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 11,
+      "text": "One would at least expect an after-the-fact interpretation for the weighted tensor term and what this implies with regard to their method and syntactic embedding compositions in general.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 12,
+      "text": "Arora's generative model for word embeddings, on which the current paper is largely based upon, not only make the mathematical relationship among different popular word embedding methods explicit, but also by making and verifying explicit assumptions with regard to properties of the word embeddings created by their model, they are able to explain why low-dimensional embeddings provide superior performance in tasks that implicate semantic relationships as linear algebraic relations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "sentence_index": 13,
+      "text": "Present work, however interesting with regard to its potential implications, strays away from providing such theoretical insights and suffices with demonstrating limited improvements in empirical tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for reading and evaluating our submission.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 1,
+      "text": "Additive composition vs. tensor: as discussed in our introduction (and illustrated by the qualitative results in Tables 1 and 2), we believe that linear addition of two word embeddings may be an insufficient representation of the phrase when the combined meaning of the words differs from the individual meanings.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 2,
+      "text": "Syntactically related word pairs such as adjective-noun and verb-object pairs can have this property.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 3,
+      "text": "The tensor term can capture the specific meaning of the word pair taken as a whole, as evidenced by qualitative and quantitative evaluations.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 4,
+      "text": "RAND-WALK and syntax: we will clarify this point more carefully: what we mean is that the RAND-WALK model itself does not treat syntactically related word-pairs different from other word pairs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 5,
+      "text": "From a purely model perspective, in the RAND-WALK model each word is generated independent of all others given the discourse vector, hence the model itself does not account for syntactic relationships between words.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 6,
+      "text": "Certainly the word embeddings trained based on this model may capture syntactic information that is communicated through the co-occurrence statistics of the training corpus, which allows their embeddings to perform decently on syntactic analogy tasks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 7,
+      "text": "Our goal is to explicitly model syntactic dependencies in the context of a word embedding model, in the hopes that the learned embeddings might capture additional information that is missed in non-syntax-aware embedding models.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 8,
+      "text": "Weighting the tensor term: we don't expect that our model or any other model will correspond perfectly with how humans use language in practice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 9,
+      "text": "When it comes to tasks such as predicting phrase similarity, we give our model a bit of extra flexibility to account for this discrepancy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 10,
+      "text": "We also note that previous works on embedding composition also explore various re-weighting schemes.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 11,
+      "text": "While the meaning of the weighting parameter isn't a central question in our work, one can think of it as the degree to which specific knowledge of the syntactic relationship between the two words affects the phrase's overall meaning.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skg4J4xt27",
+      "rebuttal_id": "Skeg0uolRm",
+      "sentence_index": 12,
+      "text": "Verifying assumptions in our model: we note that in section 5 of the paper, we verify the assumptions and concentration phenomena introduced in our model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

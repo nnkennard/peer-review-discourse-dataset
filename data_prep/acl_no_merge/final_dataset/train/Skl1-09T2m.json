@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "forum_id": "HJlEUoR9Km",
+    "review_id": "Skl1-09T2m",
+    "rebuttal_id": "BygEO5SY0m",
+    "title": "Improved resistance of neural networks to adversarial images through generative pre-training",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJlEUoR9Km&noteId=BygEO5SY0m",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 0,
+      "text": "This paper is clearly written and in an interesting domain.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 1,
+      "text": "The question asked is whether or not pretrained mean-field RBMs can help in preventing adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 2,
+      "text": "However, there are some key issues with the paper that are not clear.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 3,
+      "text": "The first is regarding the structure of the paper.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 4,
+      "text": "The authors combine two ideas, 1: the training of MF RBMs and 2: the the ability to prevent adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 5,
+      "text": "The combination of ideas is ok, however, it is unclear how novel or how good is the proposed MF training of the RBMs.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 6,
+      "text": "It would make the paper much stronger if the authors perform quantitative + qualitative evaluation on the MF training of RBMs first.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 7,
+      "text": "Without doing so, it leaves the reader wondering why not simply a standard RBM trained using a standard method (e.g. contrastive divergence).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 8,
+      "text": "In a related note, using MF for training BMs have been proposed previously and found to not work due to various reasons:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 9,
+      "text": "see paragraph after equation 8 of the Deep BM paper: http://proceedings.mlr.press/v5/salakhutdinov09a/salakhutdinov09a.pdf",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 10,
+      "text": "It would be very interesting to contrast the proposed method with other previously proposed MF based method, in particular using Free energy to approximate the expectation of the model without constraints.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 11,
+      "text": "It is also unclear how the calculation of relative entropy \"D\" was performed in figure 3.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 12,
+      "text": "Obtaining the normalized marginal density in a BM is very challenging due to the partition function.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 13,
+      "text": "The second part of the paper associate good performance in preventing adversarial attacks with the possibility of denoising by the pretrained BM.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 14,
+      "text": "This is a very good point, however the paper do not compare or contrast with existing methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 15,
+      "text": "For example, it is curious to see how denoising Auto encoders would perform.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 16,
+      "text": "In addition, it could be worthwhile to compare and benchmark on existing evaluations: https://arxiv.org/pdf/1802.06806.pdf",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 17,
+      "text": "- The authors should make a distinction on what kinds of attack is considered: white box, black box or grey box.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 18,
+      "text": "Defending against black box attacks is considerably easier than defending against white-box attacks.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 19,
+      "text": "In summary, the paper is interesting, however, more experiments could be added to concretely demonstrate the advantage",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "sentence_index": 20,
+      "text": "of the proposed MF BMs in increasing robustness against adversarial attacks.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 0,
+      "text": "We thank the referee for finding our paper clearly written and in an interesting domain.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 1,
+      "text": "1. We are not training Restricted Boltzmann Machines (RBMs), but Boltzmann machines where the hidden units can be fully connected.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 2,
+      "text": "We have shown in our experiments (see Fig.\u00a03) that using a single RBM as a pre-processor will not result in increased adversarial resistance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 3,
+      "text": "A comparison of mean field training vs. constrastive divergence for RBMs has been made by [III,IV].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 4,
+      "text": "Nevertheless, we have added a comparison between our method and the exact solution for a small Boltzmann machine of 16 units in the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 5,
+      "text": "While we don't claim that this explains the performance of the method under all circumstances, it gives an indication of how well it works.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 6,
+      "text": "We agree that a more thorough study of the training method would be desirable but in this article we are concentrating on reporting the results on increased adversarial resistance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 7,
+      "text": "We believe that these results should be interesting to the community even if some doubts about the training procedure remain.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 8,
+      "text": "Lastly, we want to obtain a differentiable building block that can be used in standard neural nets.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 9,
+      "text": "The unrolling of the mean field iterations (see Fig.\u00a01) provides a straightforward to achieve this.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 10,
+      "text": "Propagating a gradient through a sampling based building block, while possible, would be considerably harder.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 11,
+      "text": "2. In [III,IV] the authors have succesfully used a mean field approximation beyond the trivial first order to train RBMs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 12,
+      "text": "In [II] a first order approximation is used.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 13,
+      "text": "In our approach we use the approximation up to fourth order in the coupling J.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 14,
+      "text": "3. The approach of the authors in [III,IV] and also our approach is based on free energy.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 15,
+      "text": "The systematic expansion of the free energy in the coupling constant forms the basis of our approach.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 16,
+      "text": "4. D is calculated as the relative entropy over a batch of 10000 examples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 17,
+      "text": "The reference probabilities are taken to be uniform and the model probabilities are calculated according to the procedure outlined in section 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 18,
+      "text": "Due to the approximations involved it is possible that the sum of the model probabilities exceeds one.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 19,
+      "text": "In this case we rescale the unclamped free energy to limit the total probability to one.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 20,
+      "text": "We have added a note to that effect to the article.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 21,
+      "text": "5. We have included a comparison to the, to our knowledge, currently most adversarially resistant model on MNIST.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 22,
+      "text": "Since our results are derived for MNIST we can only compare to methods in the literature that are evaluated on MNIST.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 23,
+      "text": "We acknowledge that other methods perform very well on more sophisticated tasks and have added a reference.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 24,
+      "text": "6. While we have not explicitely labelled white box and black box attacks we are using a strong white box attack (gradient based) and the, to our knowledge, strongest black box attack (boundary method).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 25,
+      "text": "We have added the labels in the text and Table 1 to make this more clear.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 26,
+      "text": "7. We have added some more attacks on the most robust model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 27,
+      "text": "We completely agree that more experiments on other datasets are needed to show the universality of the method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 28,
+      "text": "Due to the computational complexity this will need to remain a topic for a follow up article.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 29,
+      "text": "[I] Seyed-Mohsen Moosavi-Dezfooli, Ashish Shrivastava, Oncel Tuzel: Divide, Denoise, and Defend against Adversarial Attacks. arXiv 1802.06806 (2018).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 30,
+      "text": "[II] Ruslan Salakhutdinov, Geoffrey Hinton: Deep Boltzmann Machines. Proceedings of the Twelfth International Conference on Artificial Intelligence and Statistics, 448-455, (2009)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 31,
+      "text": "[III] Pawe\u0142 Budzianowski. Training Restricted Boltzmann Machines Using High-Temperature Expansions. Master\u2019s thesis, University of Cambridge, 2016.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl1-09T2m",
+      "rebuttal_id": "BygEO5SY0m",
+      "sentence_index": 32,
+      "text": "[IV] Marylou Gabri\u00e9, Eric W. Tramel, and Florent Krzakala. Training restricted boltzmann machines via the Thouless-Anderson-Palmer free energy. CoRR, abs/1506.02914, 2015.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

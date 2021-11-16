@@ -1,0 +1,794 @@
+{
+  "metadata": {
+    "forum_id": "Sk4jFoA9K7",
+    "review_id": "rJxejaXmhQ",
+    "rebuttal_id": "HklyONYZAX",
+    "title": "PeerNets: Exploiting Peer Wisdom Against Adversarial Attacks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Sk4jFoA9K7&noteId=HklyONYZAX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 0,
+      "text": "After reading the authors' response, I'm revising my score upwards from 5 to 6.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 1,
+      "text": "The authors propose a defense against adversarial examples, that is inspired by \"non local means filtering\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 2,
+      "text": "The underlying assumption seems to be that, at feature level, adversarial examples manifest as IID noise in feature maps, which can be \"filtered away\" by using features from other images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 3,
+      "text": "While this assumption seems plausible,  no analysis has been done to verify it in a systematic way.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 4,
+      "text": "Some examples of verifying this are:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 5,
+      "text": "1. How does varying the number of nearest neighbors change the network behavior?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 6,
+      "text": "2. At test time, a fixed number of images are used for denoising - how does the choice of these images change accuracy or adversarial robustness?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 7,
+      "text": "3. Does just simple filtering of the feature map, say, by local averaging, perform equally well?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 8,
+      "text": "4. When do things start to break down? I imagine randomly replacing feature map values (i.e. with very poor nearest neighbors) will cause robustness and accuracy to go down - was this tested?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 9,
+      "text": "Based on the paper of Athalye et. al., really the only method worth comparing to for adversarial defense, is adversarial training.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "sentence_index": 10,
+      "text": "It is hard to judge absolute adversarial robustness performance without a baseline of adversarial training.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 0,
+      "text": "Thank you for the valuable remarks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 1,
+      "text": "We have tested most of the concerns in points 1. - 4. during our experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 2,
+      "text": "We however could not provide full-extent analysis due to the limited length of the paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 3,
+      "text": "Let us respond to each of the points separately below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 4,
+      "text": "1. How does varying the number of nearest neighbors change the network behavior?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 5,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 6,
+      "text": "We observe that using small k (~5) doesn't always provide enough information to perform the denoising and the network is therefore less robust against adversarial examples.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 7,
+      "text": "On the other hand, having k too high (~20) yields too much regularization and the network original performance decreases more significantly.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 8,
+      "text": "In our experiments, we have found k=10 to be a reasonable compromise.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 9,
+      "text": "2. At test time, a fixed number of images are used for denoising - how does the choice of these images change accuracy or adversarial robustness?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 10,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 11,
+      "text": "We refer the reviewer to the Section 3 and Section 4.1. of our paper where this is addressed in detail.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 12,
+      "text": "3. Does just simple filtering of the feature map, say, by local averaging, perform equally well?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 13,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 14,
+      "text": "It does not.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 15,
+      "text": "We have tried simple smoothing of the feature maps and it not only does not make the network robust against adversarial attacks, but also regularizes the original network too much which results in significant loss in classification accuracy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 16,
+      "text": "Moreover, local averaging uses the information from the corrupted image itself to filter the feature map, which could even further amplify the noise.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 17,
+      "text": "4. When do things start to break down? I imagine randomly replacing feature map values (i.e. with very poor nearest neighbors) will cause robustness and accuracy to go down - was this tested?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 18,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 19,
+      "text": "This is of-course true.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 20,
+      "text": "Obviously, selecting very poor nearest neighbors will definitely break the method as the newly created feature map will not express the original information anymore.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 21,
+      "text": "In our paper, we even reason that the adversary often tries to fool the KNN algorithm directly, as we mention at the end of Section 4.3.2.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 22,
+      "text": "Moreover, we believe that our results show when do things start to \"break down\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 23,
+      "text": "We explicitly mention that an unbounded attack will always fool the network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 24,
+      "text": "Also, our figures in the main text and tables in the supplementary material show that with increasing magnitude of the perturbation, things start to \"break down\".",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 25,
+      "text": "5. Based on the paper of Athalye et. al., really the only method worth comparing to for adversarial defense, is adversarial training.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 26,
+      "text": "It is hard to judge absolute adversarial robustness performance without a baseline of adversarial training.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 27,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 28,
+      "text": "We provide an evaluation below as well as add an additional section with the results in the supplementary material.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 29,
+      "text": "We have compared our approach to adversarial training method using the code provided by Madry etal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 30,
+      "text": "https://github.com/MadryLab/cifar10_challenge",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 31,
+      "text": ".",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 32,
+      "text": "The ResNet-32 baseline model provided in Tensorflow repository (the same we use as CNN baseline in our paper) was trained using the script provided in the cifar10_challenge repository above.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 33,
+      "text": "We have used two training configurations producing two baseline models1 - the default one provided by the repository (ResNet-32 CNN A) and then the same one as in our paper (ResNet-32 CNN B).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 34,
+      "text": "PeerNet was trained traditionally without adversarial training.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 35,
+      "text": "The attack was left as defined by the repository by Madry etal.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 36,
+      "text": "ResNet-32 CNN A: original_acc = 78.86% | adversarial_acc = 45.47%",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 37,
+      "text": "ResNet-32 CNN B: original_acc = 75.59% | adversarial_acc = 42.53%",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 38,
+      "text": "PeerNet:         original_acc = 77.44% | adversarial_acc = 64.76%",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 39,
+      "text": "Results show superiority of PeerNet on this benchmark.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxejaXmhQ",
+      "rebuttal_id": "HklyONYZAX",
+      "sentence_index": 40,
+      "text": "PeerNet was trained without considering any specific attacks and still outperforms ResNet-32 CNN, which was adversarially trained using this specific attack, by margin of 20%.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

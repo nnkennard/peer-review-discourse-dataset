@@ -1,0 +1,759 @@
+{
+  "metadata": {
+    "forum_id": "SylGpT4FPS",
+    "review_id": "H1evEoR6YH",
+    "rebuttal_id": "rJlZpTg5sr",
+    "title": "Last-iterate convergence rates for min-max optimization",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylGpT4FPS&noteId=rJlZpTg5sr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 1,
+      "text": "The paper, considers methods for solving smooth unconstrained min-max optimization problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 2,
+      "text": "In particular, the authors prove that the Hamiltonian Gradient Descent (HGD) algorithm converges with linear convergence rate to the min-max solution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 3,
+      "text": "One of the main contributions of this work is that the proposed analysis is focusing on last iterate convergence guarantees for the HGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 4,
+      "text": "This result, as the authors claim can be particularly useful in the future for analyzing more general settings (nonconvex-nonconcave min-max problems).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 5,
+      "text": "In addition, two preliminary convergence theorems were provided for two extensions of HGD: (i) a stochastic variant of HGD and (ii)  Consensus Optimization Algorithm (CO) (by establishing connections of CO and HGD).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 6,
+      "text": "Main Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 7,
+      "text": "The paper is well written and the main contributions are clear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 8,
+      "text": "I believe that the idea of the paper is interesting and the convergence analysis seems correct, however i have some concerns regarding  the presentation and the combination of different assumptions used in the theory.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 9,
+      "text": "1) I think definition 2.5 of Higher order Lipschitz is very strong assumption to have. What exactly means? Essentially the authors upper bounded any difficult term appear in the theorems. Is it possible to avoid having something so strong? Please elaborate.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 10,
+      "text": "2) In assumption 3.1 is not clear what $L_H$ is.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 11,
+      "text": "This quantity never mentioned before.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 12,
+      "text": "Reading the Lemmas of Section 4 (Lemma 4.4) you can see that it is the smoothness parameter of function $H$. Thus, is not necessary to have it there (not important for the definition).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 13,
+      "text": "3) What is the main difference on the combination of assumptions on Theorems 3.2, 3.2 and 3.4. Which one is stronger. Is there a reason for the existence of Theorem 3.3?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 14,
+      "text": "4) All the results heavily depend on the PL condition.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 15,
+      "text": "I think having this in mind, showing the convergence of Theorems 3.2-3.4 is somehow trivial.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 16,
+      "text": "In particular, one can propose several combinations of assumptions in order for the function H to satisfy the PL condition.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 17,
+      "text": "Can we avoid having the PL condition?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 18,
+      "text": "The authors need to elaborate more on this.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 19,
+      "text": "5) In Theorem 5.2, the term 1/sqrt(2) is missing from the final bound.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 20,
+      "text": "Minor Suggestions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 21,
+      "text": "In first paragraph of page 5 where the authors divide the existing literature into the three particular cases, I am suggesting to add the refereed papers inside each one of this cases (which papers assumed function g bilinear , which papers strongly convex-concave etc.)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 22,
+      "text": "I understand that the main contribution of the work is the theoretical analysis of the proposed method but would like to see some numerical evaluation in the main paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 23,
+      "text": "There are some preliminary results in the appendix but it will be useful for the reader if there are are some plots showing the benefit of the method in comparison with existing methods that guarantee convergence (which method is faster?).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 24,
+      "text": "In the current experiments there is a comparison only with CO algorithm and SGDA.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 25,
+      "text": "In general i find the paper interesting, with nice ideas and I believe that will be appreciated from researchers that are interested on smooth games and their connections to machine learning applications.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 26,
+      "text": "I suggest weak accept but I am open to reconsider in case that my above concerns are answered.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 27,
+      "text": "**********after rebuttal",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 28,
+      "text": "********",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 29,
+      "text": "I would like to thank the authors for their reply and for the further clarification.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 30,
+      "text": "I will keep my score the same but I highly encourage the authors to add some clarification related to my last comment on the globally bounded gradient.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 31,
+      "text": "In their response they mentioned that the analysis only requires that  H is smooth and that $\\|\\xi(x^{(0)})\\|$ is sufficient bound.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 32,
+      "text": "This needs to be clear in the paper (add clear arguments and related references).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 33,
+      "text": "In addition, in their response they highlight the non-increasing nature of function H over the course of the algorithm which is important for their argument.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 34,
+      "text": "Having this in mind note that the theoretical results on stochastic variant presented in the paper are wrong.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 35,
+      "text": "In SGD,  function H does not necessarily decrease over the course of the algorithm.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "sentence_index": 36,
+      "text": "The authors either need to remove these results or restate them in a different way in order to satisfy the assumed conditions.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 1,
+      "text": "We address points individually below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 2,
+      "text": "1) The Higher-order Lipschitz condition is necessary for us to use the PL convergence guarantee.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 3,
+      "text": "This condition is similar to assumptions made in convex optimization, especially where higher-order updates are involved (see eg. Agarwal et al. 2017 and Bubeck et al. 2019).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 4,
+      "text": "If the iterates of the algorithm always have bounded norm (eg. due to constraints or regularization), then three-times differentiable functions will satisfy the Higher-order Lipschitz condition for our purposes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 5,
+      "text": "This is because it suffices for the condition to hold for only the iterates of the algorithm ($x^{(1)},x^{(2)},...$), rather than for all of $\\mathbb{R}^d$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 6,
+      "text": "2) We thank the reviewer for this remark.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 7,
+      "text": "We wanted $L_H$ to be defined for our theorem statements, but we can see how it is confusing as is. We will make it clear that $L_H$ is the smoothness parameter of $H$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 8,
+      "text": "3) Theorem 3.4 holds in the broadest setting out of all of these results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 9,
+      "text": "Theorems 3.2 and 3.3 have slightly tighter bounds for their respective settings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 10,
+      "text": "We will clarify this in the surrounding text.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 11,
+      "text": "4) It is true that these results rely on the PL condition, and this is unavoidable for our current results.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 12,
+      "text": "The novel perspective in this paper is that we consider the PL condition on a different objective, namely the squared gradient norm, rather than on the game objective $g$. This perspective allows us to prove our new bounds, although we still require some nontrivial linear algebra.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 13,
+      "text": "The PL condition also allows us to easily prove our stochastic HGD results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 14,
+      "text": "5) The 1/sqrt(2) should cancel out on both sides of the guarantee in Theorem 5.2 (and eg. in equation 68).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 15,
+      "text": "Minor suggestions:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 16,
+      "text": "-We appreciate the suggestion for page 5 and will make this change in the final version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 17,
+      "text": "We thank the reviewer for recognizing our theoretical contributions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 18,
+      "text": "We would be happy to include some further experiments in the final version comparing HGD with other algorithms such as extragradient.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 19,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 20,
+      "text": "Agarwal, Naman, and Elad Hazan. \"Lower bounds for higher-order convex optimization.\" COLT 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1evEoR6YH",
+      "rebuttal_id": "rJlZpTg5sr",
+      "sentence_index": 21,
+      "text": "Bubeck, S\u00e9bastien, et al. \"Near-optimal method for highly smooth convex optimization.\" COLT 2019.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

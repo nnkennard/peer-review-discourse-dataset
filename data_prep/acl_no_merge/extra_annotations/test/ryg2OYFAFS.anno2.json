@@ -1,0 +1,745 @@
+{
+  "metadata": {
+    "forum_id": "HJxdTxHYvB",
+    "review_id": "ryg2OYFAFS",
+    "rebuttal_id": "HyxJPqchoB",
+    "title": "BREAKING  CERTIFIED  DEFENSES:  SEMANTIC  ADVERSARIAL  EXAMPLES  WITH  SPOOFED  ROBUSTNESS  CERTIFICATES",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJxdTxHYvB&noteId=HyxJPqchoB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 0,
+      "text": "The paper proposes a new way to generate adversarial images that are perturbed based on natural images called Shadow Attach.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 1,
+      "text": "The generated adversarial images are imperceptible and have a large norm to escape the certification regions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 2,
+      "text": "The proposed method incorporates the quantities of total variation of the perturbation, change in the mean of each color channel, and dissimilarity between channels, into the loss function, to make sure the generate adversarial images are smooth and natural.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 3,
+      "text": "Quantitative studies on CIFAR-10 and ImageNet shows that the new attack method can generate adversarial images that have larger certified radii than natural images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 4,
+      "text": "To further improve the paper, it would be great if the authors can address the following questions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 5,
+      "text": "- In Table 1, for ImageNet, Shadow Attach does not always generate adversarial examples that have on average larger certified radii than the natural parallel, at least for sigma=0.5 and 1.0. Could the authors explain the reason?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 6,
+      "text": "- In Table 2, it is not clear to me what is the point for comparing errors of the natural images (which measures the misclassification rate of a natural image) and that of the adversarial images (which measures successful attacks rate), and why this comparison helps to support the claim that the attack results in a stronger certificates.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 7,
+      "text": "In my opinion, to support the above claim, shouldn\u2019t the authors provide a similar table as Table 1, directly comparing the certified radii of the natural images and adversarial images?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 8,
+      "text": "- From Figure 9, we see the certificate radii of the natural have at least two peaks. Though on average the certificate radii of the adversarial attacks is higher than that of the natural images, it is smaller than the right peak. Could the authors elaborate more of the results?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 9,
+      "text": "- Sim(delta) should be Dissim(delta) which measures the dissimilarity between channels.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 10,
+      "text": "A smaller dissimilarity suggests a greater similarity between channels.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 11,
+      "text": "- Lambda sim and lambda s are used interchangeably. Please make it consistent.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "sentence_index": 12,
+      "text": "- The caption of Table 1 is a little vague. Please clearly state the meaning of the numbers in the table.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 0,
+      "text": "Thanks for your constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 1,
+      "text": "We have modified the paper to clarify some of the terms per your suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 2,
+      "text": "Please find our detailed response below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 3,
+      "text": "[R1: In Table 1, for ImageNet, Shadow Attack does not always generate adversarial examples that have on average larger certified radii than the natural parallel, at least for sigma=0.5 and 1.0. Could the authors explain the reason?]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 4,
+      "text": "During attack/crafting, we need to make an adversarial example that gets misclassified even after perturbations drawn from a Gaussian distribution centered at zero with scale sigma.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 5,
+      "text": "During evaluation, while the augmentations are drawn from a similar distribution, the realized random variables are not identical to those used for crafting the adversarial perturbation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 6,
+      "text": "In ImageNet, where the dimensionality is high (224X224X3) and for larger sigmas, to have a relatively dense and representative sampling, we need to sample a lot more perturbations during adversarial example crafting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 7,
+      "text": "However, in our experiments, we could only sample up to 400 instances per example (the maximum batch-size that could fit on our machine with 4 GPUs is 400).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 8,
+      "text": "This results in having a sparse sample when the standard deviation is higher.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 9,
+      "text": "One can potentially improve these results by using larger batch-sizes (i.e., sampling more) or a more powerful GPU or even a TPU, however we do not have the resources for such experiments at this time.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 10,
+      "text": "[R1: In Table 2, it is not clear to me what is the point for comparing errors of the natural images (which measures the misclassification rate of a natural image) and that of the adversarial images (which measures successful attacks rate), and why this comparison helps to support the claim that the attack results in a stronger certificates.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 11,
+      "text": "In my opinion, to support the above claim, shouldn\u2019t the authors provide a similar table as Table 1, directly comparing the certified radii of the natural images and adversarial images?]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 12,
+      "text": "In the original submission, we tried to produce tables that look like the tables in papers that we compare",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 13,
+      "text": "to",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 14,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 15,
+      "text": "The randomized smoothing paper reports certified radii and also accuracy (1-error) under various perturbation bounds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 16,
+      "text": "However, the CROWN-IBP paper and the improved randomized smoothing paper based on adversarial training of smoothed classifiers (SmoothAdv) only report *error rates* using a fixed distance to the decision boundary.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 17,
+      "text": "This is done because, unlike the Randomized Smoothing method, the radii are not directly calculated in the CROWN-IBP method and cannot be accessed directly;  CROWN-IBP takes a fixed radius chosen by the user, and either produces or fails to produce a certificate for that radius.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 18,
+      "text": "This is in contrast to randomized smoothing, which outputs different radii for different images (a larger radius means a stronger certificate).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 19,
+      "text": "In regards to why we compare the errors on natural images and those of our adversarial images:",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 20,
+      "text": "Please see the (updated) last paragraph of Section 5, which explains this comparison in detail.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 21,
+      "text": "In short -  we are comparing the rate at which natural images certify to the rate at which adversarial images certify.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 22,
+      "text": "For the case of large perturbations, we find that our adversarial image produce certificates more often than natural images!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 23,
+      "text": "For small perturbations, our attack still produces certificates reasonably often, although not quite as frequently as natural images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 24,
+      "text": "This shows that certificates alone cannot be used to reliably discern between natural images, and adversarial images produced by the proposed shadow attack.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 25,
+      "text": "[R1: From Figure 9, we see the certificate radii of the natural have at least two peaks. Though on average the certificate radii of the adversarial attacks is higher than that of the natural images, it is smaller than the right peak. Could the authors elaborate more of the results?]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 26,
+      "text": "This happens because, for CIFAR-10, the smoothed classifier is very \u201cconfident\u201d on a subset of the validation images which correspond to that right peak.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 27,
+      "text": "Here, our use of \u201cconfidence\u201d should not be confused with the confidence of a network (output of the softmax layer).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 28,
+      "text": "For the purpose of the certified radii, the \u201cconfidence\u201d we are interested in is related to the prediction of the network on the Gaussian perturbed images (i.e., a very high \u201cconfident\u201d example is an example where all of the perturbed images get the same label).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 29,
+      "text": "[R1: Sim(delta) should be Dissim(delta) which measures the dissimilarity between channels.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 30,
+      "text": "A smaller dissimilarity suggests a greater similarity between channels.]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 31,
+      "text": "Good point! We have updated this in the revised document, and we think it enhanced clarity.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 32,
+      "text": "[R1: Lambda sim and lambda s are used interchangeably. Please make it consistent. ]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 33,
+      "text": "Fixed. Thank you.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 34,
+      "text": "[R1: The caption of Table 1 is a little vague. Please clearly state the meaning of the numbers in the table.]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg2OYFAFS",
+      "rebuttal_id": "HyxJPqchoB",
+      "sentence_index": 35,
+      "text": "In the revision, we have described what the numbers are representing in more detail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

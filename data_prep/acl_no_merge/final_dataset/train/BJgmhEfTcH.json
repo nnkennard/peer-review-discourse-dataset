@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "forum_id": "ryGWhJBtDB",
+    "review_id": "BJgmhEfTcH",
+    "rebuttal_id": "rye3zaZ7or",
+    "title": "Hyperparameter Tuning and Implicit Regularization in Minibatch SGD",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ryGWhJBtDB&noteId=rye3zaZ7or",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJgmhEfTcH",
+      "sentence_index": 0,
+      "text": "This paper is an empirical contribution regarding SGD arguing that it presents two different behaviors which the authors name a noise dominated regimen, and a curvature dominated regime.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "sentence_index": 1,
+      "text": "They observe that the behaviors seem to arise in different batch sizes",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "sentence_index": 2,
+      "text": "The authors derive empirical conclusions and perform experiments in different settings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "sentence_index": 3,
+      "text": "The paper is well-written and the experimental setup seems to be carefully carried out.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "sentence_index": 4,
+      "text": "I find the observations interesting, but the contribution is empirical and not entirely new. It would be nice if there were some theoretical results to back up the observations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 1,
+      "text": "Although our primary contributions are empirical, we also provided a detailed theoretical discussion in section 2, where we give a clear and simple account of why the two regimes arise.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 2,
+      "text": "Although previous authors have also discussed some of these results, there are differences between our conclusions, as we discussed in our responses to the other two reviewers.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 3,
+      "text": "We would also like to emphasize that we make a significant contribution to the debate regarding SGD and generalization.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 4,
+      "text": "While many papers have proposed that small batches may generalize better than large minibatches, it was recently pointed out by Shallue et al. that none of these experiments provide convincing evidence for this claim, because no experiment to date has compared small and large batch training under a constant step budget with a realistic learning rate decay schedule while independently tuning the learning rate at each batch size.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 5,
+      "text": "We are the first to run this experiment and conclusively establish that SGD noise does enhance generalization in popular models/datasets.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 6,
+      "text": "We believe this is an important contribution.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 7,
+      "text": "We also provide intriguing results as we vary the epoch budget, which demonstrate that the optimal learning rate which maximizes the test accuracy does not decrease as the epoch budget rises.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 8,
+      "text": "This supports the notion that SGD has an optimal \u201ctemperature\u201d which biases it towards solutions that generalize well.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgmhEfTcH",
+      "rebuttal_id": "rye3zaZ7or",
+      "sentence_index": 9,
+      "text": "Additional experiments in the appendix G go further and study how the optimal learning rate schedule changes as we increase the epoch budget.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

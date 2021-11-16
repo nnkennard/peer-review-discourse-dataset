@@ -1,0 +1,559 @@
+{
+  "metadata": {
+    "forum_id": "H1gBsgBYwH",
+    "review_id": "ryxeE1cjYH",
+    "rebuttal_id": "Bklc6FAsoH",
+    "title": "Generalization of Two-layer Neural Networks: An Asymptotic Viewpoint",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=H1gBsgBYwH&noteId=Bklc6FAsoH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 0,
+      "text": "This paper provides exact bounds on the risk when training a two-layer neural network in an asymptotic regime.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 1,
+      "text": "Namely, the paper considers training under the square-loss objective, a two-layer neural network with $h$ hidden units on inputs of dimension $d$ and training on $n$ samples.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 2,
+      "text": "The asymptotic regime is considered by making all of $d$, $h$, $n$ go to $\\infty$, in a way that the ratio $d/n$ approaches $\\gamma_1$ and the ratio $h/n$ approaches $\\gamma_2$.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 3,
+      "text": "This paper considers the following scenarios of training described below, where the data is generated from a linear model on Gaussian inputs and with a zero-mean noise.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 4,
+      "text": "The emphasis of the results is on understanding when a \"double descent\" type phenomenon occurs (\"Double descent\" is a recently coined phenomenon in literature where the risk, as a function of the \"complexity of the model\", initially has a classical U-shape behavior, but eventually decreases again once the complexity of the model exceeds the number of training points.)",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 5,
+      "text": "1. Training only the second layer: The risk is first decomposed into a bias and a variance term.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 6,
+      "text": "An exact bound on the variance term of the risk is obtained.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 7,
+      "text": "While the exact nature of the bound is rather complex to parse, the takeaway is that a double descent phenomenon is observed in terms of $\\gamma_2$, namely, the risk blows up when $h \\approx n$, but decreases as $h$ is increased beyond $n$.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 8,
+      "text": "2. Training only the first layer: Two different regimes are considered here, depending on the scale of initialization, called \"vanishing\" and \"non-vanishing\" initializations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 9,
+      "text": "In both regimes, the risk is independent of $\\gamma_2$, that is, the risk does not depend on number of hidden units (although the risk bounds are different and there is an additional assumption in the case of non-vanishing initialization to ensure that the initialized network computes the zero function).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 10,
+      "text": "In other words, a \"double descent\" phenomenon is not observed in this setting.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 11,
+      "text": "Recommendation:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 12,
+      "text": "I recommend \"weak acceptance\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 13,
+      "text": "The paper extends prior works that obtain asymptotic risk bounds on linear models to the setting of two-layer neural networks (where only one layer is trained).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 14,
+      "text": "However, I am unable to assess the technical novelty of this work as it seems to heavily rely on prior work which in turn use techniques from random matrix theory.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 15,
+      "text": "Technical Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 16,
+      "text": "- I felt that while it is valuable to have exact bounds on the risk, the form of the bounds are quite complex and hard to parse (especially in Thm 4, case of training only the second layer).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 17,
+      "text": "Moreover, these bounds are just in the case where the teacher model is linear and while it is claimed that this could be relaxed to a more general class of functions, the specific bounds might change drastically.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 18,
+      "text": "So any insights on the nature of these bounds will be valuable, especially with some comments on how these bounds change if the teacher model is itself realized as a 2-layer neural network.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 19,
+      "text": "- The parameter count of a 2-layer network with $h$ hidden units and input dimension $d$ is $O(dh)$. So perhaps it makes sense to study an asymptotic regime where $dh/n$ approaches $\\gamma$, instead of both d and h growing linearly in n. While this issue is hinted at in the discussion section, I don't understand the statement \"the mechanism that provably gives rise to double descent from previous works Hastie et al. (2019); Belkin et al. (2019) might not translate to optimizing two-layer neural networks.\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "sentence_index": 20,
+      "text": "- Another future direction that could be included in discussions is the setting where both layers are trained simultaneously.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 0,
+      "text": "Thank you for the comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 1,
+      "text": "The technical comments are addressed below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 2,
+      "text": "Extending result to other target functions:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 3,
+      "text": "We agree that the problem might be significantly more difficult for different target functions, and would like to make the following remarks:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 4,
+      "text": "1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 5,
+      "text": "Note that in our bias-variance decomposition, only the bias term depends on the target function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 6,
+      "text": "In other words, our result on the variance (including Theorem 4) would still be valid for other targets, such as two-layer neural network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 7,
+      "text": "One caveat is that for general target function, the output needs to be properly scaled since our current analysis in Section 5 relies on linearizing the network.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 8,
+      "text": "2. When the target function is a multiple-neuron neural network, deriving the bias term can be challenging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 9,
+      "text": "However, we note that under the same setup, the bias may be obtained when the teacher is a slightly more general single-index model, i.e. $y=\\psi(\\beta^\\top x)$ with Lipschitz link function $\\psi$, equivalent to a single-neuron network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 10,
+      "text": "For instance, the bias under vanishing initialization is the same as that of least squares regression on the input, which can be solved under isotropic prior on $\\beta$ via decomposing the activation function similar to Appendix C.5.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 11,
+      "text": "Parameter count:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 12,
+      "text": "To clarify our statement in the discussion section, our current result requires $n,d,h$ to grow at the same rate, and thus $n = O(dh)$ is beyond the regime we consider.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 13,
+      "text": "This is also true for previous works on double-descent in random feature model [Hastie et al. (2019)][Mei and Montanari (2019)].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 14,
+      "text": "When $h \\ll n$, it is not clear if the same analysis still applies (for instance approximating the network with a kernel model), and thus the instability of the inverse may not be the complete explanation of double-descent (if it appears).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 15,
+      "text": "Characterizing the generalization in this regime would be an interesting direction.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 16,
+      "text": "Training both layers:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 17,
+      "text": "Thank you for the suggestion; we have included training both layers simultaneously as a future direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 18,
+      "text": "We would like to briefly mention that under certain model parameterization and initialization, gradient flow on both layers may reduce to one of the three models we analyzed (see [Williams et al. (2019)]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxeE1cjYH",
+      "rebuttal_id": "Bklc6FAsoH",
+      "sentence_index": 19,
+      "text": "More generally, our current result may be extended to cases where the dynamics of training both layers can be linearized (for instance initialization in the \"kernel regime\"), for which the learned model can be written down in closed-form.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

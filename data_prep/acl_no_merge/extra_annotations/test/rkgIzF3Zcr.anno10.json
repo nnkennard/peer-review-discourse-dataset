@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "forum_id": "Bke6vTVYwH",
+    "review_id": "rkgIzF3Zcr",
+    "rebuttal_id": "r1lg9KIEjS",
+    "title": "Graph convolutional networks for learning with few clean and many noisy labels",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Bke6vTVYwH&noteId=r1lg9KIEjS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 0,
+      "text": "This paper presents a classification method when the data consists of few clean labels and many noisy labels.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 1,
+      "text": "The authors propose to construct a graph structure within each class and use graph convolutional network to determine the clean/noisy labels of samples in each class.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 2,
+      "text": "The model is based on a binary cross entropy loss function in each class, which learns the probability of labels to be clean. And such \"clean\" probability is used as the measure of relevance score between the sample different classes.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 3,
+      "text": "The idea of this paper is straightforward and the experimental results seem promising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 4,
+      "text": "The authors compare with several related methods and show the proposed method has better performance in few shot learning experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 5,
+      "text": "For the motivation of this methods, why would the graph be constructed within each class? If there is correlation between different classes, how could the model use such class-wise correlation to clean the label?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "sentence_index": 6,
+      "text": "Maybe I missed it, but how is the relevance score / predicted label determined for testing data given the graphs constructed in each class of training data?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 0,
+      "text": "We would like to thank the reviewer for the positive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 1,
+      "text": "We reply to the the two questions below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 2,
+      "text": "Q1: For the motivation of this method, why would the graph be constructed within each class? If there is a correlation between different classes, how could the model use such class-wise correlation to clean the label?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 3,
+      "text": "R1: The most general graph would be constructed based on image and text similarities combined.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 4,
+      "text": "Here, we pre-filter with text similarity, i.e., label names, and then build the graph based on visual similarities.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 5,
+      "text": "This permits (a) to significantly reduce the size of the graph and hence the complexity and (b) to reduce the noise during the cleaning task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 6,
+      "text": "We agree that operating on the more complex graph could be the subject of future research, but a significantly different method would be required and the gain of the correlation is not granted.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 7,
+      "text": "Q2: Maybe I missed it, but how is the relevance score / predicted label determined for testing data given the graphs constructed in each class of training data?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 8,
+      "text": "R2: There is no relevance score assigned to the test data.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 9,
+      "text": "Relevance scores are only used during training.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 10,
+      "text": "In particular, we build per-class graphs using the training data, assign each training example a relevance score (Section 4), and train a classifier using the training data and the corresponding relevance scores (Section 5).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 11,
+      "text": "Now given a test image, a prediction is simply made by the classifier; no data or relevance scores are used.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgIzF3Zcr",
+      "rebuttal_id": "r1lg9KIEjS",
+      "sentence_index": 12,
+      "text": "See also pseudo-code in response R1 to reviewer 3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

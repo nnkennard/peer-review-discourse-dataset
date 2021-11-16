@@ -1,0 +1,800 @@
+{
+  "metadata": {
+    "forum_id": "rygjN3C9F7",
+    "review_id": "Byx7lzhRhQ",
+    "rebuttal_id": "SkeI70MiAm",
+    "title": "The Variational Deficiency Bottleneck",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rygjN3C9F7&noteId=SkeI70MiAm",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 0,
+      "text": "This paper used the concept based on channel deficiency to derive a variational bound similar to variational information bottleneck.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 1,
+      "text": "Theoretical analysis shows that this bound is an lower bound on the VIB objective.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 2,
+      "text": "The empirical analysis shows it outperforms VIB in some sense.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 3,
+      "text": "I think this paper's contribution is rather theoretical than practical.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 4,
+      "text": "The experiments section can be improved in the following aspect:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 5,
+      "text": "-  Figure 2 are hard to read for different M's. It would be better if the authors can show the exact accuracy numbers rather than the overlapped lines",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 6,
+      "text": "- I(Z;Y) vs I(Z;X) graph is typically used in a VIB setting.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 7,
+      "text": "In the paper's variational deficiency setting, although plotting I(Z;Y) vs I(Z;X) is necessary, it would be also helpful for the authors' to plot Deficiency vs I(Z;X), because this is what new objective is trading-off.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 8,
+      "text": "- Again, Figure 3, it is hard to see the benefits for increasing M from the visualizations for different clusterings.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 9,
+      "text": "- How do the paper estimate I(Z;Y) and I(Z;X) for plotting these figures? Does the paper use lower bound or some estimators? It should be made clear in the paper since these are non-trivial estimations.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 10,
+      "text": "Last comment is that, although the concept of `deficiency` in a bottleneck setting is novel, the similar idea for tighter bound of log likelihood has already been pursed in the following paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 11,
+      "text": "- Yuri Burda, Roger Grosse, Ruslan Salakhutdinov. Importance Weighted Autoencoders. ICLR 2016",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 12,
+      "text": "It was kind of surprising that the authors did not cite this paper given the results are pretty much the same.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 13,
+      "text": "It would also be helpful for the authors to do a comparison or connection section with this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "sentence_index": 14,
+      "text": "I like the paper in general, but given it still has some space for improvement, I would keep my decision as boarder line for now.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 0,
+      "text": "Thank you for your comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 1,
+      "text": "* We included a table showing accuracy numbers for different values of beta and M (see p. 6, Table 1) for the latent bottleneck sizes K=256 (Figure 2) and K=2 (Figure 3).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 2,
+      "text": "*",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 3,
+      "text": "In relation to the figures, we have improved these in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 4,
+      "text": "We are added a figure tracing the mutual information between representation and output I(Z;Y) vs. the minimality term I(Z;X) for different values of beta (see Figure 2, lower right panel), when training with our loss function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 5,
+      "text": "This is the usual information bottleneck curve.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 6,
+      "text": "This contrasts with the deficiency bottleneck curve (Figure 2, upper right panel) which traces the corresponding sufficiency term J(Z;Y) (which is just the entropy of the labels minus our loss) vs. I(Z;X) for different values of beta.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 7,
+      "text": "Note that for M=1, J(Z;Y) = I(Z;Y).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 8,
+      "text": "We apologize for the confusion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 9,
+      "text": "The text now makes this more explicit (see p.7, first paragraph).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 10,
+      "text": "*",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 11,
+      "text": "In response to your question about how we estimate the mutual information",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 12,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 13,
+      "text": "Yes, we minimize an upper bound on both the deficiency and the rate term (see p.3, equation 3 and discussion leading up to the VDB objective in equation 4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 14,
+      "text": "The estimation of this upper bound is simplified by our choice of the prior and the encoding distribution which are diagonal Gaussians.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 15,
+      "text": "The KL term can be computed and differentiated without estimation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 16,
+      "text": "We estimate the expected loss term using Monte Carlo sampling.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 17,
+      "text": "We draw samples from the encoder using the reparameterization trick and leverage automatic differentiation (in Tensorflow) to compute the gradients.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 18,
+      "text": "Since the expectation is inside the log, gradient updates may have higher variance for larger values of M.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 19,
+      "text": "Our model is a classifier and our loss term is a tighter bound on the misclassification error (bias) than the usual cross-entropy loss as in the VIB (see p. 12, equation 13).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 20,
+      "text": "Trading bias for variance has been investigated in some recent works (see, e.g., Bamler, Robert, et al. \"Perturbative black box variational inference.\" NIPS 2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 21,
+      "text": "See last paragraph in p. 18 for the related discussion in the unsupervised setting.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 22,
+      "text": "* In relation to the connection to IWAE, we have included a detailed discussion in Appendix E.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 23,
+      "text": "The method is different from ours, except in the limiting case where M = 1 and beta =1, in which case it coincides with the beta-VAE and also with our method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 24,
+      "text": "After taking a close look, we make the following observations:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 25,
+      "text": "For M > 1, the IWAE bound does not admit a decomposition like the standard ELBO (see equation 29 and 36) into a reconstruction loss term and a regularization term.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 26,
+      "text": "In particular, this implies we cannot trade-off reconstruction fidelity for learning more meaningful representations by incorporating bottleneck constraints.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 27,
+      "text": "See ensuing discussion in p.18 following equation 36.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 28,
+      "text": "In contrast, our method has a tuning parameter beta.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 29,
+      "text": "The IWAE bound is known to be equivalent to the ELBO in expectation with a more complex approximate posterior qIW (see p.17, equation 34 and 35 and references therein in Appendix E.1).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 30,
+      "text": "For beta values other than 1, a naive trick would be to plant qIW in liue of qphi in equation 37 (p. 18) to get a beta-IWAE of sorts.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 31,
+      "text": "It is not entirely clear however, why we would want to do so when modulating beta already suffices to tune the VAE towards autoencoding (low beta) or autodecoding behavior (high beta) depending on the requirement at hand.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 32,
+      "text": "A similar argument goes in the direction of an \"Importance weighted Variational Information Bottleneck\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 33,
+      "text": "We have not explored if and how using more expressive posteriors such as the qIW (p. 17, equation 35) can help the supervised bottleneck formulations in VDB or VIB.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 34,
+      "text": "This remains a scope for future study.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byx7lzhRhQ",
+      "rebuttal_id": "SkeI70MiAm",
+      "sentence_index": 35,
+      "text": "We are now also citing the paper Yuri Burda, Roger Grosse, Ruslan Salakhutdinov. Importance Weighted Autoencoders. ICLR 2016.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

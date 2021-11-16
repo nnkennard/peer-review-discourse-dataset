@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "forum_id": "r1lrAiA5Ym",
+    "review_id": "ryxWDI_Gsm",
+    "rebuttal_id": "rJx0WYw9R7",
+    "title": "Backpropamine: training self-modifying neural networks with differentiable neuromodulated plasticity",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1lrAiA5Ym&noteId=rJx0WYw9R7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 0,
+      "text": "The paper extends previous work on differentiable placticity to include neuro modulation by parameterizing the learning rate of Hebbs update rule.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 1,
+      "text": "In addition, the authors introduce retroactive modulation that basically allows the system to delay incorporation of plasticity updates via so eligibility traces.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 2,
+      "text": "Experiments are performaed on 2 simple toy datasets and a simple language modeling task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 3,
+      "text": "A newly developed cue-reward association task shows the clear limitations of basic plasticity and how modulation can resolve this.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 4,
+      "text": "Slight improvements can also be seen on a simple maze navigation task as well as on a basic language modeling dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 5,
+      "text": "Overall I like the motivation, provided background information and simplicity of the approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 6,
+      "text": "Furthermore, the cue-reward experiment seems to be a well designed show case for neuro-modulation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 7,
+      "text": "However, as the authors acknowledge the overall simplicity of the tasks being evaluated with mostly marginal improvements makes the overall evaluation fall short.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 8,
+      "text": "Unfortunately the paper doesn't provide any qualitative analysis on how modulation is employed by the models after training.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 9,
+      "text": "Therefore, although I would like to see an extended version of this paper at the conference, without further experiments and analysis I see the current version rather as an interesting workshop contribution.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 10,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 11,
+      "text": "- motivation: the natural extension of previous work on differentiable plasticity based on existing knowledge from neuro science is an important next step",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 12,
+      "text": "- cue reward experiment exemplifies limitations of current plasticity approaches and clearly shows the potential benefits of neuro modulation",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 13,
+      "text": "- maze navigation shows incremental benefits over non-modulated plasticity",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 14,
+      "text": "- thorough experimentation",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 15,
+      "text": "- clipping-trick is a neat observation",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 16,
+      "text": "Weaknesses:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 17,
+      "text": "- evaluation: only on toy tasks (which includes PTB), no real world tasks",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 18,
+      "text": "- very incremental improvements on PTB over a very simple baseline (far from SotA)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 19,
+      "text": "- evaluated models (feed-forward NNs and LSTMs) are very basic and far from current SotA architectures",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 20,
+      "text": "- no qualitative analysis on how modulation is actually use by the systems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 21,
+      "text": "E.g., when is modulation strong and when is it not used",
+      "suffix": "\n\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 22,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 23,
+      "text": "- perplexity improvements of less than 1.3 points over plasticity alone (which is the actual baseline for this paper) can hardy be called \"significant\". Even though they might be statistically significant (meaning nothing more than the two models being statistically different), minor architectural changes can lead to such improvements.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "sentence_index": 24,
+      "text": "Furthermore PTB is not a \"challenging\" LM benchmark.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 0,
+      "text": "Thank you to Reviewer 3 for your thoughtful critique and we are happy that you share our enthusiasm for the motivation behind our approach.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 1,
+      "text": "We share your curiosity on the qualitative behavior of such systems, and as documented in this response we have augmented the paper to address that and other of your suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 2,
+      "text": "Re: \"- no qualitative analysis on how modulation is actually use by the systems.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 3,
+      "text": "E.g., when is modulation strong and when is it not used \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 4,
+      "text": "Following the reviewer\u2019s suggestion, we have added a figure that shows the dynamics of neuromodulation in the cue-response task (Figure 3, in the Appendix).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 5,
+      "text": "This figure shows that while neuromodulation clearly reacts to reward, this reaction is complex and varies both within each episode and between runs.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 6,
+      "text": "Re: \"- perplexity improvements of less than 1.3 points over plasticity alone (which is the actual baseline for this paper) can hardy be called \"significant\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 7,
+      "text": "Even though they might be statistically significant (meaning nothing more than the two models being statistically different), minor architectural changes can lead to such improvements.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 8,
+      "text": "Furthermore PTB is not a \"challenging\" LM benchmark.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 9,
+      "text": "We agree that, while the differences are statistically significant, they are minor.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 10,
+      "text": "We were using that word technically, but do not want to give the wrong impression.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 11,
+      "text": "We have thus modified the text to make it clear that we mean \u201cstatistically significant\u201d only.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 12,
+      "text": "We also removed the adjective \u201cchallenging\u201d as regards PTB.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 13,
+      "text": "We agree that, ideally, a comparison with SOTA architectures would be desirable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 14,
+      "text": "As explained in the response to Reviewer 1, despite all our efforts, we found the technical challenges insurmountable given our computational and engineering resources.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 15,
+      "text": "We will keep trying to investigate such massive architectures in the future.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 16,
+      "text": "Importantly, our purpose in this task is to show that, **all other things being equal**, a neuromodulated plastic LSTM can outperform a standard LSTM in realistic settings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxWDI_Gsm",
+      "rebuttal_id": "rJx0WYw9R7",
+      "sentence_index": 17,
+      "text": "We believe that outperforming standard LSTMs (again, all else being equal) on their \u201cworkhorse\u201d task domain (language processing) is worthy of notice, especially given the ease of implementation of our method which requires only adding a few lines of codes (<10) to a standard LSTM implementation and can then be used as a drop-in replacement to standard LSTM.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

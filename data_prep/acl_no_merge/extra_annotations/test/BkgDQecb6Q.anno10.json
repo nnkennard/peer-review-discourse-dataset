@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "forum_id": "SJl98sR5tX",
+    "review_id": "BkgDQecb6Q",
+    "rebuttal_id": "SygN8oCDAm",
+    "title": "Interactive Agent Modeling by Learning to Probe",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJl98sR5tX&noteId=SygN8oCDAm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 0,
+      "text": "The authors consider the scenario of two agents, a demonstrator acting in an environment to achieve a goal, and a learner, which can also interact with the environment, but whose goal is to learn the demonstrator\u2019s policy by carrying out actions eliciting strong changes in the demonstrator\u2019s trajectory.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 1,
+      "text": "The former is implemented as imitation learning, i.e. policy learning, the latter as curiosity driven RL.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 2,
+      "text": "The authors are encouraged to review some of the related literature on optimal teaching, which also has developed a rich set of approaches to agent modeling, e.g. the work by Patrick Shafto.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 3,
+      "text": "It may also be relevant to think about the relationship to active learning in IRL.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 4,
+      "text": "I am not sure whether I would be able to implement and reproduce the presented work on the basis of the current manuscript including the appendix.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 5,
+      "text": "It would be very helpful for the community to be able to do so.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 6,
+      "text": "E.g., details on the the training of the demonstrators, their reward functions, and the behavior tracker.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 7,
+      "text": "Particularly the \"fusion\" module remains extremely unclear.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 8,
+      "text": "Overall, this is a nice paper, despite the fact that the example domains and problems considered are engineered strongly to allow for the proposed algorithm to be useful.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 9,
+      "text": "Particularly for the claim of generalization to different environments, the details are all in the engineering of the particular grid world tasks, how they relate to each other and the sate representation used for the demonstrator s_d.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 10,
+      "text": "I am not sure why it was submitted to ICLR and not the Annual Meeting of the Cognitive Science Society, though.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 11,
+      "text": "Minor points:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 12,
+      "text": "\u201cdiffers from this in two folds\u201d",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "sentence_index": 13,
+      "text": "\u201cby generate queries\u201d",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions. Please see our responses below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 1,
+      "text": "1. Related work",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 2,
+      "text": "Thanks for pointing out this. We have added discussion about the optimal teaching and active IRL.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 3,
+      "text": "2. More implementation details",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 4,
+      "text": "We have provided more details in the revision and plan to release our code.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 5,
+      "text": "Regarding your questions: i) demonstrators policies are implemented by search algorithms; ii) the behavior tracker is an LSTM with 128 hidden units; iii) fusion module produces a 32-dim attention vector corresponding to 32 feature maps from the state encoder, and each element of that vector is used to reweight one of the feature map in order to reshape the state feature.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 6,
+      "text": "3. I am not sure why it was submitted to ICLR and not the Annual Meeting of the Cognitive Science Society",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 7,
+      "text": "We think this is appropriate for ICLR as we propose a novel deep RL approach to improve representation learning for agent modeling.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 8,
+      "text": "Having said that, it could be an interesting future work to study how humans perform probing in the perspective of cognitive science.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 9,
+      "text": "4. Typos",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgDQecb6Q",
+      "rebuttal_id": "SygN8oCDAm",
+      "sentence_index": 10,
+      "text": "Thanks for point out the typos. We have fixed them in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "metadata": {
+    "forum_id": "H1e0-30qKm",
+    "review_id": "H1xX2I782m",
+    "rebuttal_id": "H1emnxgIRX",
+    "title": "Unlabeled Disentangling of GANs with Guided Siamese Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1e0-30qKm&noteId=H1emnxgIRX",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 1,
+      "text": "The paper presents a novel approach for learning a generative model where different factors of variations can be independently manipulated.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 2,
+      "text": "The method is build upon  the GAN framework where the latent variables are divided into different subsets (chunks) which are expected to encode information about high-level factors of variation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 3,
+      "text": "To this end, a Siamese Network for each chunk is trained with a contrastive loss minimizing the distance between generated images sharing the same factor (the latent variables in the chunk are equal), and maximizing the distance between pairs where the latent variables differ.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 4,
+      "text": "Given that the proposed model fails in this fully-unsupervised setting, the authors propose to add weak-supervision into the model by forcing the Siamese networks to  focus only on particular aspects of generated images (e.g, color, edges, etc..).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 5,
+      "text": "This is achieved by applying  a basic transformation  over the input images in order to remove specific information.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 6,
+      "text": "The evaluation of the  proposed model is carried out using the MS-Celeb dataset where the authors provide qualitative results.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 7,
+      "text": "Methodology",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 8,
+      "text": "*Disentangling generative factors without explicit labels is a challenging and interesting problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 9,
+      "text": "The idea of dividing the latent representation in different subsets and using a proxy task involving triplets of images has been already explored in [3].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 10,
+      "text": "However, the use of Siamese networks in this context is novel and sound.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 11,
+      "text": "*As shown in the reported results, the proposed method fails to learn meaningful factors in the unsupervised setting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 12,
+      "text": "However, the authors do not provide an in-depth discussion of this phenomena.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 13,
+      "text": "Given that previous works [1,2,3] have successfully addressed this problem using a completely unsupervised approach, it would be necessary to give more insights about: (i) why the proposed method is failing (ii) why this negative result is interesting and (iii) if the method could be useful in other potential scenarios.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 14,
+      "text": "*The strategy proposed to introduce weak-supervision is too ad-hoc.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 15,
+      "text": "I agree that using cues such as the average color of an image can be useful if we want to model basic factors of variation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 16,
+      "text": "However, it is unclear how a similar strategy could be applied if we are interested in learning variables with higher-level semantics such as the expression of a face or its pose.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 17,
+      "text": "*As far as I understand, the transformations applied to the input images (e.g, edge detection) must be differentiable (given that it is necessary to backpropagate the gradient of the contrastive loss through the generator network).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 18,
+      "text": "If this is the case, this should be properly discussed in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 19,
+      "text": "Moreover, given that the amount of differentiable transformations is reduced, this also limits the application of the proposed method for more interesting scenarios.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 20,
+      "text": "*It is not clear why the latent variables modelling the generative factors are defined using a Gaussian prior.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 21,
+      "text": "How the case where two images have a very similar latent factor is avoided while generating pairs of images for the Siamese network?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 22,
+      "text": "Have the authors considered to use categorical or binary variables?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 23,
+      "text": "The use of the contrastive loss sounds more appropriate in this case.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 24,
+      "text": "Experimental results",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 25,
+      "text": "*The experimental section is too limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 26,
+      "text": "First of all, only a small number of qualitative results are reported and, therefore, it is very difficult to assess the proposed method and draw any conclusion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 27,
+      "text": "For example, when the edge extractor is used, what kind of information is modeled by the latent variables? Is it consistent across different samples?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 28,
+      "text": "Moreover, it is not clear why the authors have limited the evaluation to the case where only two \u201cchunks\u201d are used.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 29,
+      "text": "In principle, the method could be applied with many more subsets of latent variables and then manually inspect them to check it they are semantically meaningful (see [2])",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 30,
+      "text": "*As previously mentioned, there are many recent works addressing the same problem from a fully-unsupervised perspective [1,2,3].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 31,
+      "text": "All these works provide quantitative results evaluating the learned representations by using them to predict real labels (e.g, attributes in the CelebA data-set).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 32,
+      "text": "The authors could provide a similar evaluation for their method by using the feature representations learned by the siamese networks in order to evaluate how much information they convey about real factors of variation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 33,
+      "text": "This could clarify the advantages of the weakly-supervised strategy compared to unsupervised approaches.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 34,
+      "text": "Review summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 35,
+      "text": "+The addressed problem (learning disentangled representations without explicit labeling) is challenging and interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 36,
+      "text": "+The idea of using a proxy task (contrastive loss with triplets of generated images) is somewhat novel and promising.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 37,
+      "text": "- The authors report only negative results for the fully-unsupervised version of UD-GAN The paper lacks and in-depth discussion about why this negative result is interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 38,
+      "text": "-The strategy proposed to provide weak-supervision to the model is too ad-hoc and it is not clear how to apply it in general applications",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 39,
+      "text": "-The experimental section do not clarify the benefits of the proposed approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 40,
+      "text": "In particular, the qualitative results are too limited and no quantitative evaluations is provided.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 41,
+      "text": "[1] Variational Inference of Disentangled Latent Concepts from Unlabelled Observations (Kumar et al, ICLR 2018)",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 42,
+      "text": "[2] Beta-vae: Learning basic visual concepts with a constrained variational framework. (Higgins et. al, ICLR 2017)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 43,
+      "text": "[3] Disentangling Factors of Variation by Mixing Them.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "sentence_index": 44,
+      "text": "(Hu et. al, CVPR  2018)",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1xX2I782m",
+      "rebuttal_id": "H1emnxgIRX",
+      "sentence_index": 0,
+      "text": "We would like to thank you for reviewing our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xX2I782m",
+      "rebuttal_id": "H1emnxgIRX",
+      "sentence_index": 1,
+      "text": "[Unguided Case]",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

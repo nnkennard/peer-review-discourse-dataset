@@ -1,0 +1,727 @@
+{
+  "metadata": {
+    "forum_id": "rklHqRVKvH",
+    "review_id": "SJl0rjD2tr",
+    "rebuttal_id": "HyxOjDn_oH",
+    "title": "Harnessing Structures for Value-Based Planning and Reinforcement Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rklHqRVKvH&noteId=HyxOjDn_oH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 0,
+      "text": "The study is motivated by the observation that the Q-value matrix in reinforcement learning problems often has a low-rank structure.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 1,
+      "text": "The paper proposes an approach called structured value-based planning or learning, where the Q matrix or the Q function is estimated from incomplete observations based on the prior that it is low-rank.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 2,
+      "text": "The proposed strategy is demonstrated in stochastic control tasks and reinforcement learning applications.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 3,
+      "text": "The paper is clearly written and the experimental results show that the proposed strategy leads to performance gains especially in problems where the Q matrix indeed conforms to a low-rank model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 4,
+      "text": "A few comments and questions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 5,
+      "text": "- The assumption that the Q matrix should be low-rank is demonstrated with several experiments.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 6,
+      "text": "Is there any theoretical motivation or guarantee for this assumption as well?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 7,
+      "text": "- The experimental results show that the proposed strategy performs well in problems that are low-rank, while the performance may degrade in problems where the low-rank assumption is not met. Would it be possible to detect the rank of the problem in a dynamical manner (i.e., during the learning), so that the number of incomplete observations of Q can be increased to improve the performance, or the solution strategy (e.g. whether to use the low-rank assumption or not) can be adapted to the nature of the problem?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 8,
+      "text": "- The Q-value matrices and functions considered in the problem have a special structure as they result from Markov Decision Processes. Would it be possible to go beyond the low-rank assumption and propose and use a more elaborate type of prior that employs the special structure of MDPs?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "sentence_index": 9,
+      "text": "- Please clearly define the notation used in Section 4.2.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 0,
+      "text": "Thank you very much for your supportive remark! We are happy that the writing is clear to you. Below we provide additional comments regarding your questions.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 1,
+      "text": "1). Low-rank assumption:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 2,
+      "text": "This work was primarily motivated by the observation that many systems exhibit strong relationship among states and actions, governed by potentially simple dynamics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 3,
+      "text": "This might eventually lead to structures within the optimal solution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 4,
+      "text": "We hope that this empirical study would motivate further theoretical analysis on structures within the community.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 5,
+      "text": "Below are some thoughts on the potential theoretical motivation for this assumption:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 6,
+      "text": "a) It is possible that the states and actions in consideration have some latent variable representations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 7,
+      "text": "If the optimal Q function is a piecewise analytic function on the latent variables, then there are works arguing the approximately low-rank property of the resulting matrix [1].",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 8,
+      "text": "b) There are theoretical works in RL and Markov process that assume that the transition kernel can be decomposed to a low-dimensional feature representation [2,3].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 9,
+      "text": "These assumptions on the transition kernel may lead to low-rank optimal Q matrices.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 10,
+      "text": "c) For continuous problems, theoretical analysis often needs to assume some sort of smoothness in the Q function [4,5].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 11,
+      "text": "It is possible that such smoothness in the Q function will result in a low-rank Q matrix when evaluated at finite but fine enough discretized grid.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 12,
+      "text": "[1] Udell, Madeleine, and Alex Townsend. \"Why Are Big Data Matrices Approximately Low Rank?.\" SIAM Journal on Mathematics of Data Science 1.1 (2019): 144-160.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 13,
+      "text": "[2] Yang, Lin, and Mengdi Wang. \"Sample-Optimal Parametric Q-Learning Using Linearly Additive Features.\" International Conference on Machine Learning. 2019.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 14,
+      "text": "[3] Sun, Yifan, et al. \"Learning low-dimensional state embeddings and metastable clusters from time series data.\" Neural Information Processing Systems 2019.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 15,
+      "text": "[4] Yang, Zhuora, Yuchen Xie, and Zhaoran Wang. \"A theoretical analysis of deep Q-learning.\" arXiv preprint arXiv:1901.00137(2019).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 16,
+      "text": "[5] Shah, Devavrat, and Qiaomin Xie. \"Q-learning with nearest neighbors.\" Advances in Neural Information Processing Systems. 2018.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 17,
+      "text": "2). Dynamical manner for the number of incomplete observations and whether the strategy can be adapted to the nature of the problem:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 18,
+      "text": "This is a great point and definitely an interesting future direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 19,
+      "text": "In the current work, it is not immediately that one could easily detect the rank and adapt the algorithm in a principled manner.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 20,
+      "text": "As one practical solution, it may be possible to dynamically adjust the regularization in a manner similar to cross validation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 21,
+      "text": "At each step, for the submatrix, one could randomly sample a portion of the entries for ME, while keeping another fraction of the remaining entries as a validation set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 22,
+      "text": "If the recovered matrix via ME has a low reconstruction error on the validation set, it is likely that a suitable low-rank approximation is sufficient and has been found by the ME oracle.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 23,
+      "text": "In contrast, if the reconstruction error is large, the algorithm might have been too aggressive on finding a low-rank solution while a higher rank solution is indeed necessary.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 24,
+      "text": "As such, one could then adjust the algorithm to increase the number of observations for ME or try to reduce the level of low-rank regularization.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 25,
+      "text": "The above cross validation scheme might be an interesting complement to our current approach.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 26,
+      "text": "Overall, we believe that principally solving those questions you posted are meaningful and important directions that worth further investigations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 27,
+      "text": "3). Beyond the low-rank assumption and use a more elaborate type of prior:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 28,
+      "text": "Thank you for your inspiring advice.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 29,
+      "text": "Without any elaborate prior information, rank is a natural point to study the global property of a matrix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 30,
+      "text": "In principle, understanding structures in MDP could also be potentially explored, and we believe that it is possible to extend to other types of scenarios with prior information about the MDPs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 31,
+      "text": "However, at the current stage, we do not have a particularly systematic approach to explore more elaborate type of structures in MDPs.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 32,
+      "text": "While this paper is focusing on low-rank structures, as the reviewer noted, there can be other structures to be explored.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 33,
+      "text": "We hope that our paper could serve as an example, and further motivates future studies for exploiting structures in MDP.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 34,
+      "text": "4). Notation in Section 4.2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 35,
+      "text": "Thank you for the suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl0rjD2tr",
+      "rebuttal_id": "HyxOjDn_oH",
+      "sentence_index": 36,
+      "text": "We will expand the definition of the notation to make them clearer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "forum_id": "rygjN3C9F7",
+    "review_id": "SJgxZjtRnX",
+    "rebuttal_id": "ryxlCAGjAm",
+    "title": "The Variational Deficiency Bottleneck",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rygjN3C9F7&noteId=ryxlCAGjAm",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 0,
+      "text": "The paper presents a method of learning representations that is based on minimizing \"deficiency\" rather than optimizing for information sufficiency.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 1,
+      "text": "While perfect optimization of the sufficiency term in IB is equivalent to minimizing deficiency, the thesis of the paper is that the variational upper bound on deficiency is easier to optimize, and when optimized produces",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 2,
+      "text": "better (more compressed representations), while performing equally on test accuracy.",
+      "suffix": "\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 3,
+      "text": "The paper is well written and easy to read.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 4,
+      "text": "The idea behind the paper (optimizing for minimizing deficiency instead of sufficiency in IB) is interesting, especially because the variational formulation of DB is a generalization of VIB (in that VIB reduces to VDB for M=1).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 5,
+      "text": "What takes away from the paper is that while perfect optimization of IB/sufficiency is equivalent to perfect optimization of DB, it is not clear what happens when perfection is not achieved.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 6,
+      "text": "Further, the authors claim that DB is able to obtain more compressed representations (But is the goal a compressed representation, or an informative one?).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "sentence_index": 7,
+      "text": "The paper would also benefit from evaluation of the representation itself, and comparison to other non-information bottleneck based algorithms.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 0,
+      "text": "Thank you for your comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 1,
+      "text": "* In our method, \"``more informative\" means \"``less deficient\".",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 2,
+      "text": "We have added a figure tracing the mutual information between representation and output I(Z;Y) vs. the minimality term I(Z;X) for different values of beta (see Figure 2, lower right panel), when training with our loss function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 3,
+      "text": "This is the usual information bottleneck curve.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 4,
+      "text": "The deficiency bottleneck curve (Figure 2, upper right panel) traces the corresponding sufficiency term J(Z;Y) (which is just the entropy of the labels minus our loss) vs. I(Z;X) for different values of beta.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 5,
+      "text": "The text now makes this more explicit (see p.7, first paragraph).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 6,
+      "text": "Note that for M=1, J(Z;Y) = I(Z;Y).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 7,
+      "text": "We can see that when training with our loss, we achieve approximately the same level of sufficiency (measured in terms of I(Z;Y)) while consistently achieving more compression (note the log ordinate for I(Z;X) in the lower left panel in Fig. 2) for a wide range of beta values.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgxZjtRnX",
+      "rebuttal_id": "ryxlCAGjAm",
+      "sentence_index": 8,
+      "text": "* We included two new figures plotting the representation for MNIST (p. 19, Figure 7) and Fashion-MNIST (p. 19, Figure 8) in Appendix E.3 for an unsupervised version of the VDB objective (p. 18, equation 38).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

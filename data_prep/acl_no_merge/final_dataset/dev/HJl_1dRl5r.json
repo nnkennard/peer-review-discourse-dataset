@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "forum_id": "ryenvpEKDr",
+    "review_id": "HJl_1dRl5r",
+    "rebuttal_id": "SkxT1pNwir",
+    "title": "A Constructive Prediction of the Generalization Error Across Scales",
+    "reviewer": "AnonReviewer1",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ryenvpEKDr&noteId=SkxT1pNwir",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 0,
+      "text": "This paper explores the relation among the generalization error of neural networks and the model and data scales empirically.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 1,
+      "text": "The topic is interesting, while I was expecting to learn more from the paper, instead of some well-known conclusions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 2,
+      "text": "If the paper could provide some guidance for model and data selection, that would be an interesting paper for the ICLR audience.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 3,
+      "text": "For instance, how deep should a model be for a classification or regression task?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 4,
+      "text": "What is the minimum/maximum layers of a deep model? How much data is sufficient for a model to learn?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 5,
+      "text": "What is the minimum/maximum size of the data set? Do we really need a large data set or just a subset that covers the data distribution?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 6,
+      "text": "What's the relation between the size of a model and that of a data set? By increasing the depth/width of a neural network, how much new data should be collected for achieving a reasonable performance?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "sentence_index": 7,
+      "text": "How about the gain of the task performance?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 0,
+      "text": "Thank you for your review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 1,
+      "text": "We are a bit surprised since the paper provides answers to the exact questions you raised as missing. We are sorry you missed it, and we have cleaned up the presentation so it is hopefully now clear that we do answer these questions and more.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 2,
+      "text": "The answers, as you pointed out, were much desired and not known before.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 3,
+      "text": "Below are answers resultant from eq. 5 to the specific questions the referee raised, with some added definitions to make them concrete.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 4,
+      "text": "1. \u201chow deep should a model be for a classification or regression task? \u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 5,
+      "text": "We show in section 6.1 that the dependency of the classification error on the number of layers is also well approximated by eq. 5 (recall $m$ scales linearly with depth).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 6,
+      "text": "So, if we consider some target error $\\epsilon_{target}$, we can solve eq. 5 for m or n given the other or for both, attaining the m,n contour for $\\hat{\\epsilon}(m,n) = \\epsilon_{target}$.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 7,
+      "text": "2. \u201cWhat is the minimum/maximum layers of a deep model? \u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 8,
+      "text": "For a fixed dataset size, model scaling eventually contributes marginally to error reduction and becomes negligible when $bm^{-\\beta} \\ll n_{lim}^{-\\alpha}$ (Eq. 5).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 9,
+      "text": "Define the relative contribution threshold $T$ as satisfying $ T = \\frac{n^{-\\alpha} }{ bm^{-\\beta}}$. (For example, $T=10$.) Then the maximal useful model size meeting threshold $T$ is:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 10,
+      "text": "$$     m_{max}(T) = \\left(bT\\right)^{1/\\beta} n_{lim}^{\\alpha/\\beta}  $$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 11,
+      "text": "As for minimal depth, here too let\u2019s consider a definition as a working example: what is the minimum depth that could meet a certain error level $\\epsilon_{target}$ (if data is not a limit).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 12,
+      "text": "For example, when the target error is small relative to the \u201crandom guess error\u201d $\\epsilon_0$ (equivalently when $ n^{-\\alpha} + bm^{-\\beta} \\ll \\eta$), by solving eq. 5 for $m$ we have:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 13,
+      "text": "$$ m_{min} = \\left(\\frac{b}{\\frac{\\epsilon_{target}}{\\epsilon_0}\\eta-c_\\infty}\\right)^{1/\\beta} $$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 14,
+      "text": "3. \u201cHow much data is sufficient for a model to learn? What is the minimum/maximum size of the data set?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 15,
+      "text": "Similarly to the above:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 16,
+      "text": "Minimum data needed for target error (if model size is not a limit):",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 17,
+      "text": "$$ n_{min} = \\left(\\frac{1}{\\frac{\\epsilon_{target}}{\\epsilon_0}\\eta-c_\\infty}\\right)^{1/\\alpha} $$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 18,
+      "text": "4. Maximum useful data (in the marginal sense $T$ for a limited size model, as above):",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 19,
+      "text": "$$n_{max}(T) = \\left(1/bT\\right)^{1/\\alpha} m_{lim}^{\\beta/\\alpha} $$",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 20,
+      "text": "In particular, note that there is also a minimal amount of data and model size needed for better-than-random-guess error level, characterized by the location of the pole $\\eta$: $n^{-\\alpha}+bm^{-\\beta}< \\eta$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 21,
+      "text": "5. \u201cDo we really need a large data set or just a subset that covers the data distribution?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 22,
+      "text": "Via careful dataset sub-sampling (as noted by reviewer 3) we show that indeed more data *is* needed to improve performance (reduce error) while holding the class distribution fixed (in expectation), for a given architecture and scaling policy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 23,
+      "text": "For directly viewing the error manifolds decoupling the dependency on model and data size, see figure 1 and in appendix C.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 24,
+      "text": "6. \u201cWhat's the relation between the size of a model and that of a data set? \u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 25,
+      "text": "The joint form in Eq. 5 captures the relation between data-size and model-size (and error) completely.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 26,
+      "text": "7. \u201cBy increasing the depth/width of a neural network, how much new data should be collected for achieving a reasonable performance?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 27,
+      "text": "For example, from Eq. 5, it is clear that a sweet-spot in terms of balancing the effect of the data/model sizes on limiting the error is $n^{-\\alpha} \\approx bm^{-\\beta}$ .",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 28,
+      "text": "When considering this sweet spot for example, increasing depth/width/both such that the model size $m$ is increased by a factor $f$ to a new size is $m\u2019 = mf$, the corresponding increase in data maintaining the sweet-spot is $n\u2019 = nf^{\\beta/\\alpha}$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 29,
+      "text": "8. How about the gain of the task performance?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 30,
+      "text": "The effect on the performance is given by evaluating Eq.5 for the initial and scaled $m,n$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 31,
+      "text": "For example, in the powerlaw region ($c_\\infty \\ll n^{-\\alpha} + bm^{-\\beta} \\ll \\eta$):",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJl_1dRl5r",
+      "rebuttal_id": "SkxT1pNwir",
+      "sentence_index": 32,
+      "text": "The effect on the performance is $\\epsilon\u2019 = \\epsilon f^{-\\beta}$",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

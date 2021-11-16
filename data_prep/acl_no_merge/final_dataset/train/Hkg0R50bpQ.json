@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "forum_id": "HyGEM3C9KQ",
+    "review_id": "Hkg0R50bpQ",
+    "rebuttal_id": "SkxQaAFh6m",
+    "title": "Improving Differentiable Neural Computers Through Memory Masking, De-allocation, and Link Distribution Sharpness Control",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyGEM3C9KQ&noteId=SkxQaAFh6m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 1,
+      "text": "This paper is built on the top of DNC model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 2,
+      "text": "Authors observe a list of issues with the DNC model: issues with deallocation scheme, issues with the blurring of forward and backward addressing, and issues in content-based addressing.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 3,
+      "text": "Authors propose changes in the network architecture to solve all these three issues.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 4,
+      "text": "With toy experiments, authors demonstrate the usefulness of the proposed modifications to DNC.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 5,
+      "text": "The improvements are also seen in more realistic bAbI tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 6,
+      "text": "Major Comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 7,
+      "text": "The paper is well written and easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 8,
+      "text": "The proposed improvements seem to result in very clear improvements.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 9,
+      "text": "The proposed improvements also improve the convergence of the model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 10,
+      "text": "I do not have any major concerns about the paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 11,
+      "text": "I think that contributions of the paper are good enough to accept the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 12,
+      "text": "I also appreciate that the authors have submitted the code to reproduce the results.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "sentence_index": 13,
+      "text": "I am curious to know if authors observe similar convergence gains in bAbI tasks as well. Can you please provide the mean learning curve for bAbI task for DNC vs proposed modifications?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hkg0R50bpQ",
+      "rebuttal_id": "SkxQaAFh6m",
+      "sentence_index": 0,
+      "text": "Thank you for your careful consideration and feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "rebuttal_id": "SkxQaAFh6m",
+      "sentence_index": 1,
+      "text": "Following your request, we updated the paper to include mean learning curves for different models in Figure 6 in Appendix C. Our models converge faster than DNC.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkg0R50bpQ",
+      "rebuttal_id": "SkxQaAFh6m",
+      "sentence_index": 2,
+      "text": "Some of them (especially DNC-MD) also have significantly lower variance than DNC.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

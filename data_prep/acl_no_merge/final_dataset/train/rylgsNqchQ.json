@@ -1,0 +1,922 @@
+{
+  "metadata": {
+    "forum_id": "ryxjH3R5KQ",
+    "review_id": "rylgsNqchQ",
+    "rebuttal_id": "HyewJo1YAQ",
+    "title": "Single Shot Neural Architecture Search Via Direct Sparse Optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryxjH3R5KQ&noteId=HyewJo1YAQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 1,
+      "text": "This paper proposes Direct Sparse Optimization (DSO)-NAS, which is a method to obtain neural architectures on specific problems, at a reasonable computational cost.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 2,
+      "text": "The main idea is to treat all architectures as a Directed Acyclic Graph (DAG), where each architecture is realized by a subgraph.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 3,
+      "text": "All architectures in the search space thus share their weights, like ENAS (Pham et al 2018) and DARTS (Liu et al 2018a).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 4,
+      "text": "The DAG\u2019s edges can be pruned via a sparsity regularization term.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 5,
+      "text": "The optimization objective of DSO-NAS is thus:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 6,
+      "text": "Accuracy + L2-regularization(W) + L1-sparsity(\\lambda),",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 7,
+      "text": "where W is the shared weights and \\lambda specifies which edges in the DAG are used.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 8,
+      "text": "There are 3 phases of optimization:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 9,
+      "text": "1. All edges are activated and the shared weights W are trained using normal SGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 10,
+      "text": "Note that this step does not involve \\lambda.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 11,
+      "text": "2. \\lambda is trained using Accelerated Proximal Gradient (APG, Huang and Wang 2018).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 12,
+      "text": "3. The best architecture is selected and retrained from scratch.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 13,
+      "text": "This procedure works for all architectures and objectives.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 14,
+      "text": "However, DSO-NAS further proposes to incorporate the computation expense of architectures into step (2) above, leading to their found architectures having fewer parameters and a smaller FLOP counts.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 15,
+      "text": "Their experiments confirm all the hypotheses (DSO-NAS can find architectures, having small FLOP counts, having good performances on CIFAR-10 and ImageNet).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 16,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 17,
+      "text": "1. Regularization by sparsity is a neat idea.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 18,
+      "text": "2. The authors claim to be the first NAS algorithm to perform direct search on ImageNet.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 19,
+      "text": "Honestly, I cannot confirm this claim (not sure if I have seen all NAS papers out there), but if it is the case, then it is impressive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 20,
+      "text": "3. Incorporating architecture costs into the search objective is nice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 21,
+      "text": "However, this contribution seems to be orthogonal to the sparsity regularization, which, I suppose, is the main point of the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 22,
+      "text": "Weaknesses:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 23,
+      "text": "1. Some experimental details are missing. I\u2019m going to list them here:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 24,
+      "text": "- Was the auxiliary tower used during the training of the shared weights W?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 25,
+      "text": "- Figure 4 does not illustrate M=4 and N=4, e.g. which operation belongs to which layer?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 26,
+      "text": "- Did the experiments on CIFAR-10 and ImageNet use the cosine learning rate schedule [1]? If or if not, either way, you should specify it in a revised version of this paper, e.g. did you use the cosine schedule in the first 120 steps to train the shared parameters W, did you use it in the retraining from scratch?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 27,
+      "text": "- In Section 3.3, it is written that \u201cThe sparse regularization of \\lambda induces great difficulties in optimization\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 28,
+      "text": "This triggers my curiosity of which difficulty is it? It would be nice to see this point more elaborated, and to see ablation study experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 29,
+      "text": "2. Missed citation: MnasNet [2] also incorporates the cost of architectures in their search process.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 30,
+      "text": "On ImageNet, your performance is similar to theirs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 31,
+      "text": "I think this will be a good comparison.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 32,
+      "text": "3. The paper has some grammatical errors. I obviously missed many, but here are the one I found:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 33,
+      "text": "- Section 3.3: \u201cDifferent from pruning, which the search space is usually quite limited\u201d. \u201cwhich\u201d should be \u201cwhose\u201d?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 34,
+      "text": "- Section 4.4.1: \u201cDSO-NAS can also search architecture [...]\u201d  -> \u201cDSO-NAS can also search for architectures [...]\u201d",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 35,
+      "text": "References.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 36,
+      "text": "[1] SGDR: Stochastic Gradient Descent with Warm Restarts. https://arxiv.org/pdf/1608.03983.pdf",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "sentence_index": 37,
+      "text": "[2] MnasNet: Platform-Aware Neural Architecture Search for Mobile. https://arxiv.org/pdf/1807.11626.pdf",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 0,
+      "text": "Thanks for your valuable comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 1,
+      "text": "It helps us to prepare the revision.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 2,
+      "text": "We address all your concerns in the revision as below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 3,
+      "text": "Q1: Was the auxiliary tower used during the training of the shared weights W?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 4,
+      "text": "A1: Auxiliary tower is used only in the retraining stage.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 5,
+      "text": "Q2: \u201cDid the experiments on CIFAR-10 and ImageNet use the cosine learning rate schedule?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 6,
+      "text": "A2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 7,
+      "text": "CIFAR: In the pretrain stage and search stage, the learning rate is fixed to 0.1 with batch size 128; In the retraining stage, we use cosine learning rate schedule.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 8,
+      "text": "ImageNet: In the pretrain stage and search stage, the learning rate is fixed to 0.1 with batch 224; In the retraining stage, we use linear decay learning rate schedule.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 9,
+      "text": "Q3: \u201cFigure 4 does not illustrate M=4 and N=4, e.g. which operation belongs to which layer?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 10,
+      "text": "A3: In the revision, we replace the Figure 4 with a new version which has more details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 11,
+      "text": "As show in Figure 4, all the operators in level 4 are pruned.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 12,
+      "text": "Q4: \u201cThe sparse regularization of \\lambda induces great difficulties in optimization\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 13,
+      "text": "A4: The non-smooth regularization introduced by l1 regularization makes traditional stochastic SGD failed to yield sparse results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 14,
+      "text": "If we need exact zero, we have to use heuristic thresholding on the \\lambda learned, which has already been demonstrated in SSS [1] that is inferior.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 15,
+      "text": "Besides, traditional APG method is not friendly for deep learning as extra forward-backward computation is required, also as shown by SSS.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 16,
+      "text": "Q5: \u201cMissed citation: MnasNet also incorporates the cost of architectures in their search process. On ImageNet, your performance is similar to theirs. I think this will be a good comparison.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 17,
+      "text": "A5: We have added the result of MnasNet [2] in Table 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 18,
+      "text": "Indeed, MnasNet achieves similar results with us with less FLOPs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 19,
+      "text": "However, it is also need to note that MnasNet evaluates more than 8K models, which introduces much higher search cost than our method.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 20,
+      "text": "Moreover, the design space of MnasNet is significant different from other existing NAS methods including ours.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 21,
+      "text": "It is interesting to explore the combination of MnasNet with ours in the future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 22,
+      "text": "Q6: \u201cThe paper has some grammatical errors.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 23,
+      "text": "A6: We have fixed the typos and grammatical errors in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 24,
+      "text": "Q7: About \u201cfirst NAS algorithm to perform direct search on ImageNet\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 25,
+      "text": "A7: We check this claim again and find methods like MnasNet [2] and one-shot architecture search [3] also have the ability to perform direct search on ImageNet, we have delete this claim in the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 26,
+      "text": "However, to the best of our knowledge, our method is the first method to perform directly search without block structure sharing.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 27,
+      "text": "We also report preliminary results that directly search on task beyond classification (semantic segmentation).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 28,
+      "text": "Please refer to Q1 of Reviewer3 for details.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 29,
+      "text": "[1] Data-Driven Sparse Structure Selection for Deep Neural Networks. ECCV 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 30,
+      "text": "[2] MnasNet: Platform-Aware Neural Architecture Search for Mobile. https://arxiv.org/pdf/1807.11626.pdf",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylgsNqchQ",
+      "rebuttal_id": "HyewJo1YAQ",
+      "sentence_index": 31,
+      "text": "[3] Understanding and simplifying one-shot architecture search. ICML 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

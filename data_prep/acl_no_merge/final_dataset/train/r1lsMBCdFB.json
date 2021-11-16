@@ -1,0 +1,525 @@
+{
+  "metadata": {
+    "forum_id": "S1lOTC4tDS",
+    "review_id": "r1lsMBCdFB",
+    "rebuttal_id": "HylXRrsijS",
+    "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lOTC4tDS&noteId=HylXRrsijS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 0,
+      "text": "This work is clearly the work of a large team.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 1,
+      "text": "the paper clearly defines what is being done.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 2,
+      "text": "I have spent a lot of effort with MCTS. I can not find the corresponding allowance for stochastic jumps in the latent space long horizon learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 3,
+      "text": "You have the phrase \"allowing to imagine thousands of trajectories in parallel\". I would like some elaboration on this. I think you have ideas of what is happening in the latent space that I am not following.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 4,
+      "text": "You are heavy on the machinery and math. I find the learning in the latent space the important part and there are things like how much simulation is done in the latent learning not clearly spelled out. How does the effort compare to the 1E9 steps of the base line your refer to?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 5,
+      "text": "Your team is highly competent your style is distinct.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 6,
+      "text": "Now may be the time to move you to understanding what structures get learned in latent space, are the in fact compact, diverse?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 7,
+      "text": "Perhaps there is room for memory/memories in the latent space?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "sentence_index": 8,
+      "text": "Massive effort, nice results. Now for learning on our part (the humans).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 0,
+      "text": "Thank you for your review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 1,
+      "text": "> You have the phrase \"allowing to imagine thousands of trajectories in parallel\". I would like some elaboration on this. I think you have ideas of what is happening in the latent space that I am not following.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 2,
+      "text": "The latent states are defined as 330 dimensional activation vectors with 300 deterministic and 30 sampled components.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 3,
+      "text": "We can predict imagined trajectories for thousands of initial states in parallel since they fit into the memory of the GPU at once.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 4,
+      "text": "Specifically, Dreamer predicts imagined trajectory of length 20 from each of the 50x50=2500 latent states for the current training batch.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 5,
+      "text": "Performing the same amount of imagination steps with a dynamics model that generates images during inference would be challenging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 6,
+      "text": "For example, we could only fit up to 500 trajectories of length 10 into GPU memory with the SV2P model (Babaeizadeh et al. 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 7,
+      "text": "Besides the memory constraints for predicting multiple trajectories in parallel, predictions in the latent space are often an order of magnitude faster than in pixel space.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 8,
+      "text": "> I find the learning in the latent space the important part and there are things like how much simulation is done in the latent learning not clearly spelled out. How does the effort compare to the 1E9 steps of the base line your refer to?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 9,
+      "text": "We will include more details in the final version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 10,
+      "text": "Dreamer was run for 2e6 environment steps (20 hours) compared to D4PG that was run for 1e9 environment steps (24 hours).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 11,
+      "text": "Both algorithms used a single GPU each.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 12,
+      "text": "As outlined in our previous answer, Dreamer performs 10 billion imagination steps throughout training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 13,
+      "text": "Please note that imagination steps are often considered free for robotic learning, because the bottleneck is the time of physical interaction with the real world.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 14,
+      "text": "> [...] understanding what structures get learned in latent space, are the in fact compact, diverse?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 15,
+      "text": "The amount of information in the latent representation is upper bounded by the KL divergence loss.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 16,
+      "text": "We observed a typical KL divergence of 15 bits per time step,",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 17,
+      "text": "compared to the 64 x 64 x 3 x 8 bits of the corresponding images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 18,
+      "text": "This bounds the compression ratio to at least 1 : 6500.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 19,
+      "text": "We make no claims regarding diversity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 20,
+      "text": "However, since the behaviors are learned purely in latent space, there must be a sufficient amount of diversity to solve the presented tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 21,
+      "text": "We agree that exploring the semantics of the latent space is an interesting orthogonal direction for future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 22,
+      "text": "> Perhaps there is room for memory/memories in the latent space?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 23,
+      "text": "It would be interesting to combine Dreamer with external memory modules.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 24,
+      "text": "Gregor et al. (2019) provide a comparison of such modules.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lsMBCdFB",
+      "rebuttal_id": "HylXRrsijS",
+      "sentence_index": 25,
+      "text": "However, this would better be addressed in a separate work to keep the paper focused on the main contribution of learning behaviors by latent imagination.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,632 @@
+{
+  "metadata": {
+    "forum_id": "rylV-2C9KQ",
+    "review_id": "BkeNja15nm",
+    "rebuttal_id": "Hkg5wOyOaX",
+    "title": "Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rylV-2C9KQ&noteId=Hkg5wOyOaX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 0,
+      "text": "Brief summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 1,
+      "text": "This paper presents a deep decoder model which given a target natural image and a random noise tensor learns to decode the noise tensor into the target image by a series of 1x1 convolutions, RELUs, layer wise normalizations and upsampling.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 2,
+      "text": "The parameter of the convolution are fitted to each target image, where the source noise tensor is fixed.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 3,
+      "text": "The method is shown to serve as a good model for natural image for a variety of image processing tasks such as denoising and compression.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 4,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 5,
+      "text": "* an interesting model which is quite intriguing in its simplicity.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 6,
+      "text": "* good results and good analysis of the model",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 7,
+      "text": "* mostly clear writing and presentation (few typos etc. nothing too serious).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 8,
+      "text": "Cons and comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 9,
+      "text": "* The author say explicitly that this is not a convolutional model because of the use of 1x1 convolutions.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 10,
+      "text": "I disagree and I actually think this is important for two reasons.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 11,
+      "text": "First, though these are 1x1 convolutions, because of the up-sampling operation and the layer wise normalizations the influence of each operation goes beyond the 1x1 support.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 12,
+      "text": "Furthermore, and more importantly is the weight sharing scheme induced by this - using convolutions is a very natural choice for natural images (no pun intended) due to the translation invariant statistics of natural images.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 13,
+      "text": "I doubt this would have worked so well hadn't it been modeled this way (not to mention this allows a small number of parameters).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 14,
+      "text": "* The upsampling analysis is interesting but it is only done on synthetic data - will the result hold for natural images as well? should be easy to try and will allow a better understanding of this choice.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 15,
+      "text": "Natural images are only approximately piece-wise smooth after all.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 16,
+      "text": "* The use of the name \"batch-norm\" for the layer wise normalization is both wrong and misleading.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 17,
+      "text": "This is just channel-wise normalization with some extra parameters - no need to call it this way (even if it's implemented with the same function) as there is no \"batch\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 18,
+      "text": "* I would have loved to see actual analysis of the method's performance as a function of the noise standard deviation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 19,
+      "text": "Specifically, for a fixed k, how would performance increase or decrease, and vice versa - for a given noise level, how would k affect performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 20,
+      "text": "* The actual standard deviation of the noise is not mentioned in any of the experiments (as far as I could tell)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 21,
+      "text": "* What does the decoder produce when taking a trained C on a given image and changing the source noise tensor?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "sentence_index": 22,
+      "text": "I think that would shed light on what structures are learned and how they propagated in the image, possibly more than Figure 6 (which should really have something to compare to because it's not very informative out of context).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 0,
+      "text": "Many thanks for the detailed review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 1,
+      "text": "1/ We agree that there are many elements of our architecture that are similar to that of a convolutional network, however the network does not perform convolutions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 2,
+      "text": "To reflect both points, we have revised the text to:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 3,
+      "text": "``The network does not use convolutions.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 4,
+      "text": "Instead, the network does have pixelwise linear combinations of channels, and just like in a convolutional neural network the weights are",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 5,
+      "text": "are shared among spatial positions.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 6,
+      "text": "Nonetheless, they are not convolutions because they provide no spatial coupling between pixels, despite how pixelwise linear combinations are sometimes called `1x1 convolutions.' '',",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 7,
+      "text": "and we have also added a subsection comparing the compression performance of our architecture to that of a decoder with convolution layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 8,
+      "text": "In a sense, what the deep decoder is doing is separating multiple roles that proper convolutional layers fill:  the DD breaks apart the spatial coupling inherent to convolutions from their channel dependence and equivariance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 9,
+      "text": "Further, it says that the spatial coupling need not be learned or fit to data, and can be directly imposed by upsampling.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 10,
+      "text": "2/ Yes, the upsampling analysis in Figure 5 also extends to two-dimensional images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 11,
+      "text": "We agree that natural images are only approximately piece-wise smooth after all, and the deep decoder only provides an approximation of natural images (albeit a very good one).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 12,
+      "text": "3/ We agree and have changed `batch normalization' to `channel normalization' throughout.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 13,
+      "text": "4/ Great point; we have added the sentence ``The optimal $k$ trades off those two errors; larger noise levels require smaller values of $k$ (or some other form of regularization).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 14,
+      "text": "If the noise is significantly larger, then the method requires either choosing $k$ smaller, or it requires another means of regularization, for example early stopping of the optimization.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 15,
+      "text": "For example $k=64$ or $128$ performs best out of $\\{32,64,128\\}$, for a PSNR of around 20dB, while for a PSNR of about 14dB, $k=32$ performs best.''",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 16,
+      "text": "5/ We do not mention the standard deviation, but do specify the SNR throughout (e.g., in table 1 in column identity).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 17,
+      "text": "We have clarified this in the caption of the table.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 18,
+      "text": "6/ It essentially produces smooth noise then.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 19,
+      "text": "The weights learned by the deep decoder pertain to the source noise tensor.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeNja15nm",
+      "rebuttal_id": "Hkg5wOyOaX",
+      "sentence_index": 20,
+      "text": "We have added a corresponding figure to the jupyter notebook for reproducing Figure 6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

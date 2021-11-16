@@ -1,0 +1,780 @@
+{
+  "metadata": {
+    "forum_id": "rJleKgrKwS",
+    "review_id": "S1eJGUy6Yr",
+    "rebuttal_id": "BJgJZYS9ir",
+    "title": "Differentiable learning of numerical rules in knowledge graphs",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJleKgrKwS&noteId=BJgJZYS9ir",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 0,
+      "text": "This paper proposes an interesting extension to the Neural LP framework for learning numerical rules in knowledge graphs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 1,
+      "text": "The proposed method can handle predicates involving the comparison of the numerical attribute values.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 2,
+      "text": "The authors demonstrate its effectiveness on both synthetic knowledge graphs and the parts of existing knowledge graphs which consider numerical values.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 3,
+      "text": "I recommend the paper to be rejected in its current form for the following 3 reasons:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 4,
+      "text": "(1) Although the idea of making numerical rules differentiable is interesting, the current proposed method can only deal with one form of numerical predicate, which is numerical comparison.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 5,
+      "text": "The limitation to such a special case makes the paper somewhat incremental.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 6,
+      "text": "(2) The paper does not do a great job of convincing the reader that the problem it is trying to solve is an important matter, or the proposed method is indeed effective in some applications.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 7,
+      "text": "Although the proposed method does a good job in synthetic experiments, outperforming existing methods by a large margin, its performance on the numerical variants of Freebase/DBPedia dataset does not show consistent significant improvement.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 8,
+      "text": "The authors should try to find a real-world domain which can really demonstrate the effectiveness of the method.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 9,
+      "text": "(3) The experiment section lacks more detailed analysis which can intuitively explain how well the proposed method performs on the benchmarks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 10,
+      "text": "A good place to start with is to visualize(print out) the learned numerical rules and see if they make any sense.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 11,
+      "text": "The experiment section needs significant improvement, especially when there is space left.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 12,
+      "text": "The authors can consider improving the paper based on the above drawbacks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "sentence_index": 13,
+      "text": "I encourage the authors to re-submit the paper once it's improved.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 0,
+      "text": "We appreciate the comments of the reviewer.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 1,
+      "text": "Please see our reply below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 2,
+      "text": "1) - \"... the current proposed method can only deal with one form of numerical predicate, which is numerical comparison.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 3,
+      "text": "Apart from simple numerical comparison we are also able to deal with complex classification operators that aggregate numerical attributes using linear functions, where the threshold value is selected in a systematic fashion, (see Classification Operators) as well as negated atoms (see Negated Operators on p. 6).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 4,
+      "text": "We note that such rules are indeed limited to some extent, but they still capture a rather expressive fragment of answer set programs with restricted forms of external computations",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 5,
+      "text": "[Eiter et al., 2012].",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 6,
+      "text": "Below we present examplar rules learned by our framework, which are not restricted to numerical comparisons.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 7,
+      "text": "2a) - \"The paper does not do a great job of convincing the reader that the problem it is trying to solve is an important matter, or the proposed method is indeed effective in some applications.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 8,
+      "text": "With the rapid development of industrial and scientific knowledge graphs, we believe (and agree with the Reviewer #2) that learning rules that involve multiple modalities is an important and relevant problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 9,
+      "text": "Indeed, such rules can not only be used for data cleaning and completion, but they are also themselves extremely valuable assets carrying human-understandable structures that support both symbolic and subsymbolic representations and inference.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 10,
+      "text": "2b) -  \"The authors should try to find a real-world domain which can really demonstrate the effectiveness of the method.\"",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 11,
+      "text": "To the best of our knowledge Freebase and DBPedia are the only standard KGs with numerical values [Garcia-Duran et al., 2018] used for the evaluation in state-of-the-art works.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 12,
+      "text": "This is the reason why we have selected and used them for our experiments.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 13,
+      "text": "The impact of our approach might appear to be rather modest, since these KGs still have only a limited amount of numerical information.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 14,
+      "text": "Therefore, to demonstrate the power of our approach further, we have also performed evaluation on the synthetic datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 15,
+      "text": "We would be happy to learn about other datasets suitable for our experiments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 16,
+      "text": "3) - \"The experiment section lacks more detailed analysis which can intuitively explain how well the proposed method performs on the benchmarks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 17,
+      "text": "A good place to start with is to visualize (print out) the learned numerical rules and see if they make any sense.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 18,
+      "text": "According to the Reviewer's comment we will extend Section 5 on experimental results by showing more detailed analysis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 19,
+      "text": "In particular, we will present the following examples of the learned rules from the considered (real-world and synthetic) datasets:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 20,
+      "text": "- FB15K:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 21,
+      "text": "disease_has_risk_factors(X,Z) :- f(X), symptom_of_disease(X,Y), disease_has_risk_factors(Y,Z)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 22,
+      "text": "The rule states that symptoms with certain properties (described by the function f) typically provoke risk factors inherited from diseases which have these symptoms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 23,
+      "text": "Here, the function f is the sigmoid over a linear combination of numerical properties of X.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 24,
+      "text": "- DBPedia:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 25,
+      "text": "defends(X,Z) :- primeMinister(Z,Y), militaryBranch(Y,X), f(Y)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 26,
+      "text": "This rule states that prime ministers of countries with certain numerical properties (described by the function f), are supported by military branches of the given country.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 27,
+      "text": "The function f is the sigmoid over a linear combination of numerical properties of Y.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 28,
+      "text": "- Numerical1:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 29,
+      "text": "prefer(X,Y) :- isNeighbourTo(X,Y), hasOrder(X,Z1), hasOrder(Y,Z2), Z1>Z2, max{Z2:hasOrder(Y,Z2)}",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 30,
+      "text": "This rule with a comparison operator states that a person X prefers neighbours with the maximal order that is less than X's.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 31,
+      "text": "- Numerical2:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 32,
+      "text": "prefer(X,Y) :- isNeignborTo(X,Y), hasBalance(Y,Z1), borrowed(Y,Z2), f(Y)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 33,
+      "text": "This rule states that neighbours with the largest difference between the balance and the borrowed amount are preferred.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eJGUy6Yr",
+      "rebuttal_id": "BJgJZYS9ir",
+      "sentence_index": 34,
+      "text": "More precisely, here f selects among all X those entities, for which the difference between the balance and the borrowed amount is maximal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

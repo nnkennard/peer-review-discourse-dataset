@@ -1,0 +1,619 @@
+{
+  "metadata": {
+    "forum_id": "Bklzkh0qFm",
+    "review_id": "rkx6mDnd37",
+    "rebuttal_id": "ryxiFneiam",
+    "title": "Relational Graph Attention Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Bklzkh0qFm&noteId=ryxiFneiam",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkx6mDnd37",
+      "sentence_index": 0,
+      "text": "The paper proposes a few variations on the RGCN model with adding attention to either within relations or across relations.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "sentence_index": 1,
+      "text": "Unfortunately the paper falls short in two main areas:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "sentence_index": 2,
+      "text": "- novelty: the additions proposed are small modifications to existing algorithms and there are other methods of attention on graphs which have been discussed in the paper but not directly compared to (e.g. this method builds heavily on Velickovic et al 2017)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "sentence_index": 3,
+      "text": "- impact: the results achieved in the experiments are very small improvements compared to the baseline of RGCN (~ +0.01 in two experiments and ~ -0.04 in another) and often these small variations in results can be compensated with better baselines training (e.g. better hyper-params, ...)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "sentence_index": 4,
+      "text": "However, on a positive note, the paper has been written very well and I really liked the frank discussion on page 8 about results on MUTAG dataset.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 0,
+      "text": "Dear Reviewer 1, thank you for taking time to read and review our paper and for your useful comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 1,
+      "text": "Hopefully the new results in our response will better aid discussion. Your specific points are addressed below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 2,
+      "text": "> \u201c...the additions proposed are small modifications to existing algorithms",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 3,
+      "text": "We concede that the modifications to the existing models is a minor contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 4,
+      "text": "We would like to highlight that despite being a simple modification, producing an implementation that trains in a reasonable about ot time is non-trivial - this is confirmed by community comments requesting for implementation details.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 5,
+      "text": "We plan to make our code public to aid research in the area.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 6,
+      "text": "To generalise the model, following the recommendations in one of the comments, we have investigated applying the Transformer-style dot product attention that was presented in GaAN (Zhang at al. 2018 https://arxiv.org/abs/1803.07294).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 7,
+      "text": "This generalises the notion of RGAT, and we believe that this increase the contributions in terms of model modification that our paper offers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 8,
+      "text": "> \u201c...and there are other methods of attention on graphs which have been discussed in the paper but not directly compared to (e.g. this method builds heavily on Velickovic et al 2017).\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 9,
+      "text": "Unfortunately we cannot directly compare our approach to Velickovic et al. (2017) on relational graphs since their proposed model doesn\u2019t support relationship types.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 10,
+      "text": "Hence, we only compare to Schlichtkrull et al. (2017) and the conventional baselines, whereas Velickovic et al (2017) reports results on the non-relational graphs Cora, Citeseer, Pubmed and PPI.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 11,
+      "text": "In the case of the RDF tasks, our model hyperparameter search space does include a model very similar to vanilla GAT.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 12,
+      "text": "In the case where we only have both one basis kernel for each of the convolution and the attention, i.e. where B_V and B_v in equation (8) are set to 1, then the difference between RGAT and GAT is only a set of learnable relative scale factors living inside the basis coefficients c_b and c_d.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 13,
+      "text": "During our hyperparameter search, however, no favourable points for evaluation set performance were discovered with basis sizes lower than 10 (a basis size of 5 is permitted in the search).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 14,
+      "text": "This leads us to conclude that vanilla GAT would not perform well on the RDF tasks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 15,
+      "text": "As mentioned above, we have now also evaluated the dot-product style attention of the transformer and have included it in our results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 16,
+      "text": "As one of the public comments mentioned, a study comparing these types of attention models to the more recurrent based models like Gated Graph Neural Networks (Li et al. 2015) would be extremely worthwhile.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 17,
+      "text": "We we feel that evaluation lies outside of the scope of this work, however, which is mainly concerned with evaluating how the introduction of an attention mechanism into RGCN modifies its behaviour.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 18,
+      "text": "> \u201c...the results achieved in the experiments are very small improvements compared to the baseline of RGCN",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 19,
+      "text": "\u2026\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 20,
+      "text": "We agree that any improvements compared to RGCN are marginal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 21,
+      "text": "In light of your third comment (below) regarding hyperparameters, the new RGCN baseline on Tox21 significantly closes the gap between the baseline and sum-attention RGAT.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 22,
+      "text": "The new dot product attention results on Tox21 (Mean test AUCs: WIRGAT 0.838 +/- 0.007, ARGAT 0.837 +/- 0.007) are slightly improved compared those of the sum attention, however, due to the retrained RGCN baseline, the relative gap between the best performing RGAT and RGCN is now smaller than it was before.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 23,
+      "text": "We also see value in reporting these negative results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 24,
+      "text": "It was expected that an attention mechanism like GAT should cope with the node-degree imbalances observed to be present in the MUTAG dataset [a statement along these lines was made in Schlichtkrull et al. (2017)].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 25,
+      "text": "The most natural route to tackle this problem turns out to fail - a result which we believe is informative for the community who are trying to solve this problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 26,
+      "text": "On the other hand, the newly evaluated dot-product attention does no worse (or better) than RGCN, indicating a more promising research direction to pursue.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 27,
+      "text": "> \u201c...often these small variations in results can be compensated with better baselines training",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 28,
+      "text": "\u2026\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 29,
+      "text": "We also suspected this was a possibility, and in the same of sum-style attention it turns out to be true.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 30,
+      "text": "To determine whether this was the case, we performed the same hyperparameter optimisations to our implementation of RGCN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 31,
+      "text": "In the case of the RDF datasets AIFB and MUTAG, we observe no meaningful difference between our retrained RGCN benchmark and the original benchmark provided in Schlichtkrull et al. (2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 32,
+      "text": "On the other hand, our retrained implementation on the graph classification task TOX21 raised the performance above that of the RGCN reported in Wu et al, 2017 ti match the performance of the sum-style attention mechanism RGAT performance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkx6mDnd37",
+      "rebuttal_id": "ryxiFneiam",
+      "sentence_index": 33,
+      "text": "This new RGCN performance is not higher than the observed performance of the dot-style attention mechanism, however, although this is not significant as discussed above.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

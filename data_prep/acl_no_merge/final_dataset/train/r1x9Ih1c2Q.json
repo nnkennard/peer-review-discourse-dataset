@@ -1,0 +1,622 @@
+{
+  "metadata": {
+    "forum_id": "ByGOuo0cYm",
+    "review_id": "r1x9Ih1c2Q",
+    "rebuttal_id": "BkehyvUFR7",
+    "title": "Meta-Learning with Domain Adaptation for Few-Shot Learning under Domain Shift",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByGOuo0cYm&noteId=BkehyvUFR7",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 0,
+      "text": "The authors consider the few-shot / meta-learning scenario in which the test set of interest is drawn from a different distribution from the training set.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 1,
+      "text": "This scenario",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 2,
+      "text": "is well-motivated by the \"researcher example\" given throughout the paper.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 3,
+      "text": "The authors assume access to a large unlabelled set in test (target) domain, and a large labelled (few-shot) set in the source domain.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 4,
+      "text": "Thus, the paper is concerned with unsupervised version of the meta-learning problem under domain shift (i.e., a large amount of data unlabelled are available from the target domain).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 5,
+      "text": "The key idea is to learn a mapping from the source domain to the target domain.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 6,
+      "text": "This mapping is learned jointly with the meta-learner, who performs the meta-learning in the target domain, on examples from the labelled domain.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 7,
+      "text": "In practice however, it appears from the experimental section that the domain mapping is learned offline, and then frozen for the meta-learning phase.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 8,
+      "text": "Thus, at test time, given examples from the target domain, the meta-learner can perform few-shot learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 9,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 10,
+      "text": "- The paper addresses an important scenario which has not been addressed to this point: namely, meta-learning without the assumption that the train and test sets are drawn from the same domain/distribution.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 11,
+      "text": "- The authors propose a novel task and experimental framework for considering their method, and show (somewhat unsurprisingly) that their method outperforms standard meta-learning methods that do not properly account for domain shift.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 12,
+      "text": "- The paper reads well and is easy to follow.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 13,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 14,
+      "text": "- My main concern is reproducibility: the authors employ a number of large architectures, complex loss functions, and regularizers / \"additional improvements\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 15,
+      "text": "Further, there a number of experimental details that need to be further elaborated upon.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 16,
+      "text": "e.g., architectures and hyper-parameters used, and training procedures (I encourage the authors to utilize the appendices for this).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 17,
+      "text": "It is unclear to me how difficult/easy these results would be to reproduce. Do the authors intend to release code for their implementations and experiments?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 18,
+      "text": "- Some assumptions are not explicitly stated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 19,
+      "text": "In particular, it is unclear what the assumption on the size of the unlabelled test set is.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 20,
+      "text": "This is also lacking from the description of the experimental protocol, which does not address the data-splits (how many classes were used for each) and size of the unlabelled test set.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 21,
+      "text": "- While the method is presented as jointly learning all the components, in the experimental section it is stated that the embedding network (the meta-learner) and the GAN-based domain adaptation are done separately. Can the authors comment on this further?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 22,
+      "text": "Is this different from first learning a image translation mapping (using the unlabelled data in the target domain), and then applying existing meta-learning models/algorithms to the labelled data in the target domain?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 23,
+      "text": "- The overall method seems to be not very principled, and requires a lot of \"tweaks and tunes\", with additional losses and regularizers, to work.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 24,
+      "text": "Overall, the paper proposes a method combining a number of existing useful works (prototypical networks for meta-learning and image-to-image translation for domain adaptation) to tackle an important problem setting that is not currently addressed in existing meta-learning research.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 25,
+      "text": "Further, it establishes a useful experimental benchmark for this task, and provides what appear to be reasonable results (though this is somewhat difficult to judge due to the lack of baseline approaches).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 26,
+      "text": "Hopefully, such a benchmark will inspire more researchers to explore this setting, and perhaps propose simpler, more principled approaches to perform this task.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "sentence_index": 27,
+      "text": "It is my impression that, if the authors elaborate on the experimental protocol and implementation details, this paper would be a good fit for the venue.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 0,
+      "text": "Overall",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 1,
+      "text": "We thank you for your kind comments, in acknowledging that the work is well motivated, and the problem is an important one, currently not studied under the meta-learning paradigm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 2,
+      "text": "We have made substantial improvements based on your suggestions, and other reviewers\u2019 comments, and hopefully we are able to address most of your concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 3,
+      "text": "Concern 1: Reproducibility",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 4,
+      "text": "Our code is built on top of existing code (Prototypical Networks and Image-to-Image Translation from CycleGAN).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 5,
+      "text": "Thus, we adopt the same hyperparameters and architectures as the prior work, and as a result our work is fairly easy to reproduce.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 6,
+      "text": "We will of course release the code.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 7,
+      "text": "As suggested, we have utilized the appendices to give detailed information about the experimental setup.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 8,
+      "text": "Concern 2: Size of unlabelled test set, data-split information",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 9,
+      "text": "We did provide some details on the first version (in the appendix).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 10,
+      "text": "In light of the reviews, in the revised version, we have expanded the appendix to give more details on the experimental protocol.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 11,
+      "text": "Concern 3: Jointly learning vs Freezing GAN",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 12,
+      "text": "Training in joint manner can be very tricky, and may often cause stability issues.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 13,
+      "text": "You are right in your suggestion, that it is similar to first styling, and then applying meta-learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 14,
+      "text": "Having said that, this is a common strategy in several state of the art domain adaptation techniques, where the GAN-based domain adaptation and task-specific classifier are trained in multiple steps.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 15,
+      "text": "For example, see training protocol in [1,2,3, etc.].",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 16,
+      "text": "[1] Judy Hoffman, Eric Tzeng, Taesung Park, Jun-Yan Zhu, Phillip Isola, Kate Saenko, Alyosha Efros, and Trevor Darrell. Cycada: Cycle-consistent adversarial domain adaptation. In ICML, 2018",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 17,
+      "text": "[2] Eric Tzeng, Judy Hoffman, Kate Saenko, and Trevor Darrell. Adversarial discriminative domain adaptation. In Computer Vision and Pattern Recognition (CVPR), volume 1, pp. 4, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x9Ih1c2Q",
+      "rebuttal_id": "BkehyvUFR7",
+      "sentence_index": 18,
+      "text": "[3] Bousmalis, K., Silberman, N., Dohan, D., Erhan, D., & Krishnan, D. Unsupervised pixel-level domain adaptation with generative adversarial networks. In The IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

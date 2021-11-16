@@ -1,0 +1,1253 @@
+{
+  "metadata": {
+    "forum_id": "ByGOuo0cYm",
+    "review_id": "BygGS54qnQ",
+    "rebuttal_id": "SygmDPUFCX",
+    "title": "Meta-Learning with Domain Adaptation for Few-Shot Learning under Domain Shift",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByGOuo0cYm&noteId=SygmDPUFCX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 0,
+      "text": "This paper proposes to combine unsupervised adversarial domain adaptation with prototypical networks and finds that the proposed model performs well on few-shot learning task with domain shift, much better than other few-shot learning baselines that do not consider.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 1,
+      "text": "Specifically it tests on Omniglot with natural image background and cliparts to real images.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 2,
+      "text": "It is true that current meta-learning approaches do not address the problem of domain shift, and as a result, the testing domain has to be the same with the training domain.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 3,
+      "text": "However, this paper rather than proposing solution address the meta-learning problem, albeit the title \u201cmeta domain adaptation\u201d, only brings few-shot learning to domain adaptation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 4,
+      "text": "Here\u2019s why:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 5,
+      "text": "In order for a meta-learning model to be called \u201cmeta domain adaptation,\u201d the type of adaptation cannot be seen during training, and the goal is to test on adaptation that the model has not seen before.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 6,
+      "text": "Indeed, each task in meta domain adaptation should be seen as a pair of source task and target task.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 7,
+      "text": "The problem with the current model is that during training, it is trained to target at one specific type of test domain--the generator network G aims to generated images that align with the unsupervised  test domain X_test.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 8,
+      "text": "Thus, the trained model will also only be able to handle one test domain, not much different than regular meta-learning models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 9,
+      "text": "In short, the meta-learning part stays in the regular few-shot learning module (which is implemented as a prototypical network), and has nothing related to domain adaptation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 10,
+      "text": "Therefore, the paper cannot be qualified for ``meta domain adaptation\u2019\u2019 and has very limited novelty in terms of its contribution to meta-learning; however, the combination of domain adaptation and few-shot learning is fair.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 11,
+      "text": "For the rest of my review, I will treat the paper as \u201cfew-shot learning with domain adaptation\u201d for more appropriate analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 12,
+      "text": "For the experiments, there seems to have a great win of the proposed algorithm against the baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 13,
+      "text": "However, I think since this is few-shot learning with domain adaptation, there is no domain adaptation baselines being mentioned in comparison.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 14,
+      "text": "Specifically, what if the few-shot learning component is removed, and the network is trained with standard domain adaptation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 15,
+      "text": "Then use the same network to extract the features and then using the nearest neighbor to retrieve the classes.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 16,
+      "text": "Also it seems that the regular batch normalization could be very sensitive to domain shifts, and it would be good if the authors can test other normalization schemes such as layer/group normalization as baselines.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 17,
+      "text": "Another concern is that the evaluation of domain adaptation does not have much varieties.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 18,
+      "text": "Only two domains shifts are evaluated in the paper, specifically Omniglot + BSD500 and Office-Home.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 19,
+      "text": "BSD 500 only contains 500 images, and it would be good if more diverse set of images are considered.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 20,
+      "text": "Other domain transfer settings such as synthetic rendered vs. real (e.g. visDA challenge) could have been considered.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 21,
+      "text": "In conclusion, the paper presents a interesting combination of ProtoNet + Adversarial DA + Cycle consistency.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 22,
+      "text": "However, unlike as advertised, the paper does not address the domain shift issue in meta-learning, and the experiments lack thorough evaluation as the paper considers itself as a meta-learning paper and only compares to other meta-learning approaches without much comparison to domain adaptation papers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 23,
+      "text": "Therefore, I recommend reject.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 24,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 25,
+      "text": "Note: after reading the comments updated by authors, I remain my opinions: even though exact meta-testing data is unseen during training, the domain is seen during training, and therefore it cannot be qualified for being \"meta domain adaptation\".",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 26,
+      "text": "===",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 27,
+      "text": "After rebuttal:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 28,
+      "text": "I would like to thank the authors for the response and updating the draft.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 29,
+      "text": "They have addressed 1) the title issue and 2) adding domain adaptation baselines.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 30,
+      "text": "Considering these improvements, I would like to raise the score to 5, since the setting of combining few-shot learning and domain adaptation is interesting and the proposed model outperforms the baselines.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 31,
+      "text": "However, my criticisms remain that the paper is a simple combination of cycle GAN and prototypical networks, and lacks new insights/novelty.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "sentence_index": 32,
+      "text": "The experiments use fairly small datasets, where the performance can be largely influenced by how good the feature extractor backbone is (e.g. training on more data and using deeper architecture would warrant better performance, and thus may change the conclusion).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 0,
+      "text": "Overall:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 1,
+      "text": "We thank you for your valuable suggestions in helping us avoid potential inefficiencies in our work, and suggesting ways to avoid misunderstandings.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 2,
+      "text": "We have incorporated your comments to significantly improve our work, and hope our revised draft is able to convince you towards a favorable outcome.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 3,
+      "text": "Concern 1: Concerns with title \u201cMeta Domain Adaptation\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 4,
+      "text": "\u201c\u2026unlike as advertised, the paper does not address",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 5,
+      "text": "\u2026 \u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 6,
+      "text": "It appears that our choice of the title may have resulted in the reviewer qualifying our paper as a form of false advertising.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 7,
+      "text": "We acknowledge this problem and agree with you about a possible misinterpretation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 8,
+      "text": "However, we feel this maybe a bit harsh, as in the technical content of the paper (Abstract, Introduction, etc.), we have been very clear about the motivation and the problem setting, and do not think we did any form of false advertising.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 9,
+      "text": "We also do think that the problem setting we have proposed is an important problem that deserves attention, and has not been studied in the meta-learning paradigm.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 10,
+      "text": "We are glad that you also agree that setting makes sense (\u201c... the combination \u2026 is fair\u201d).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 11,
+      "text": "Overall, we think that we have made an important contribution to Meta-Learning literature, by identifying its limitation for few-shot learning under domain shift, and proposed a solution to tackle this problem.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 12,
+      "text": "We have tried to revise the draft with appropriate renaming of the method to avoid potential misunderstandings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 13,
+      "text": "In fact, we have mostly changed the name from \u201cMeta Domain Adaptation\u201d to \u201cMeta Learning with Domain Adaptation\u201d, and the rest of the paper is almost identical, which we believe addresses the concerns of false advertising.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 14,
+      "text": "Concern 2: Experiments",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 15,
+      "text": "Domain Adaptation Baselines + Other datasets",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 16,
+      "text": "Being a new problem setting, designing appropriate baselines can be challenging.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 17,
+      "text": "We considered the traditional meta-learning for few-shot learning approaches, and combined meta-learning with a popular domain adaptation baseline.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 18,
+      "text": "We are grateful for your suggestions on the domain adaptation baselines, and fully agree that it is reasonable.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 19,
+      "text": "It is something we should have done on our own.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 20,
+      "text": "Accordingly, based on your suggestions, and suggestions from other reviewers, we have tried to expand the baselines substantially (specifically, we include three state of the art Domain Adaptation methods as baselines \u2013 RevGrad [1], ADDA [2] and CyCADA [3]), and our proposed methods outperform them.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 21,
+      "text": "For the other dataset suggested (VisDA), for synthetic-real adaptation, it is difficult to match the training paradigm of meta-learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 22,
+      "text": "Typically, we desire several classes for meta-train, and several classes for meta-test, so that a variety of (e.g.) 5-way tasks can be crawn.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 23,
+      "text": "With just 12 classes, the dataset is not very suitable for such settings.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 24,
+      "text": "[1] Ganin, Yaroslav, et al. \"Domain-adversarial training of neural networks.\" The Journal of Machine Learning Research 17.1 (2016): 2096-2030",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 25,
+      "text": "[2] Tzeng, Eric, et al. \"Adversarial discriminative domain adaptation.\" Computer Vision and Pattern Recognition (CVPR). Vol. 1. No. 2. 2017",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 26,
+      "text": "[3] Hoffman, J., Tzeng, E., Park, T., Zhu, J. Y., Isola, P., Saenko, K. & Darrell, T. Cycada: Cycle-consistent adversarial domain adaptation. ICML 2018",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 27,
+      "text": "We thank you for considering our rebuttal and updating the score.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 28,
+      "text": "We are grateful for your time and advice, and would appreciate if we could further extend the discussion.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 29,
+      "text": "We appreciate the concern in the updated comments, but would like to point out that the novelty in our work should be viewed from two angles: the need to study this problem (i.e., the problem setting), and the proposed solution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 30,
+      "text": "We have identified a novel problem setting, which is closer to the real world setting, than what has been studied so far under the meta-learning paradigm.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 31,
+      "text": "Existing solutions are not effective in this setting, restricting their use in the real world.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 32,
+      "text": "Addressing this setting in our framework gives us a direction to improve the practical utility of meta-learning solutions for few-shot learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 33,
+      "text": "Specifically, we identify that the principle of image-to-image translation is very suitable for this setting, and apply those concepts to boost the performance of few-shot learning under domain shift.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 34,
+      "text": "As a combination of problem setting and proposed solution, we do believe we have addressed an important problem, and made a novel contribution.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 35,
+      "text": "As regards the experiments: \u201cfairly small datasets",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 36,
+      "text": "\u2026 feature extractor backbone\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 37,
+      "text": "Most domain adaptation experiments use MNIST, USPS, SVHN, which are comparable in size to our Omniglot experiments.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 38,
+      "text": "The other popular benchmark is using the Office-dataset, which also we have used (although a more recent version of a similar dataset, i.e., office-home \u2013 more suitable for meta-learning evaluation, as it has larger number of classes).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 39,
+      "text": "See for example some of the recent domain adaptation papers [1, 2, 3].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 40,
+      "text": "While a feature extractor backbone network may have some influence, we would like to highlight three points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 41,
+      "text": "First, when networks are trained in one domain, and evaluated in another, regardless of the backbone network, it is the domain-shift that dominates the performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 42,
+      "text": "For example, no matter how large the network is, if it is trained to recognize black and white digits, it will still struggle to recognize colored digits.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 43,
+      "text": "Second, any benefit of a larger backbone network will likely also enhance the performance of our model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 44,
+      "text": "Third, we just wanted to clarify (if there was a misunderstanding), unlike domain adaptation papers, we do not use a pretrained network \u2013 we train the full network from scratch (following traditional meta-training settings).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 45,
+      "text": "[1] Ganin, Yaroslav, et al. \"Domain-adversarial training of neural networks.\" The Journal of Machine Learning Research 17.1 (2016): 2096-2030",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 46,
+      "text": "[2] Tzeng, Eric, et al. \"Adversarial discriminative domain adaptation.\" Computer Vision and Pattern Recognition (CVPR). Vol. 1. No. 2. 2017",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BygGS54qnQ",
+      "rebuttal_id": "SygmDPUFCX",
+      "sentence_index": 47,
+      "text": "[3] Hoffman, J., Tzeng, E., Park, T., Zhu, J. Y., Isola, P., Saenko, K. & Darrell, T. Cycada: Cycle-consistent adversarial domain adaptation. ICML 2018",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

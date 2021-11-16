@@ -1,0 +1,501 @@
+{
+  "metadata": {
+    "forum_id": "SJeLopEYDH",
+    "review_id": "HyecCk_TFH",
+    "rebuttal_id": "BkexWBXKor",
+    "title": "V4D: 4D Convolutional Neural Networks for Video-level Representation Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJeLopEYDH&noteId=BkexWBXKor",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 0,
+      "text": "[Summary]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 1,
+      "text": "The paper presents a video classification framework that employs 4D convolution to capture longer term temporal structure than the popular 3D convolution schemes.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 2,
+      "text": "This is achieved by treating the compositional space of local 3D video snippets as an individual dimension where an individual convolution is applied.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 3,
+      "text": "The 4D convolution is integrated in resnet blocks and implemented via first applying 3D convolution to regular spatio-temporal video volumes and then the compositional space convolution, to leverage existing 3D operators.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 4,
+      "text": "Empirical evaluation on three benchmarks against other baselines suggested the advantage of the proposed method.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 5,
+      "text": "[Decision]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 6,
+      "text": "Overall, the paper addresses an important problem in computer vision (video action recognition) with an interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 7,
+      "text": "I found the motivation and solution are reasonable (despite some questions pending more elaboration), and results also look promising, thus give it a weak accept (conditional on the answers though).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 8,
+      "text": "[Comments]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 9,
+      "text": "At the conceptual level, the idea of jointly modeling local video events is not novel, and can date back to at least ten years ago in the paper \u201cLearning realistic human actions from movies\u201d, where the temporal pyramid matching was combined with the bag-of-visual-words framework to capture long-term temporal structure.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 10,
+      "text": "The problem with this strategy is that the rigid composition only works for actions that can be split into consecutive temporal parts with prefixed duration and anchor points in time, which is clearly challenged by many works later when more complicated video events are studied.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 11,
+      "text": "It seems to me that the proposed framework also falls in this category, with a treatment from deep learning.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 12,
+      "text": "It is definitely worth some discussion on this path.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 13,
+      "text": "That said, I would like to see more analysis on the behavior of the proposed method under various interesting cases not tested yet.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 14,
+      "text": "Despite the claim that the proposed method can capture long-term video patterns, the static compositional nature seems to work best for activities with well-defined local events and clear temporal boundaries.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 15,
+      "text": "These assumptions hold mostly true for the three datasets used in the experiment, and also are suggested by results in table 2(e), where 3 parts are necessary to achieve optimal results.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 16,
+      "text": "How does the proposed method perform in more complicated tasks such as",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 17,
+      "text": "- action detection or localization (e.g., in benchmarks JHMDB or UCF101-24).",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 18,
+      "text": "- complex video event modeling (e.g., recognizing activities in extended video of TRECVID).",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 19,
+      "text": "Will it still be more favorable than other concerning baselines?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 20,
+      "text": "Besides, on the computation side, it would be complexity, an explicit comparison of complexity makes it easier to evaluate the performance when compared to other state-of-the-art methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 21,
+      "text": "[Area to improve]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 22,
+      "text": "Better literature review to reflect the relevant previous video action recognitions, especially those on video compositional models.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 23,
+      "text": "Proof reading",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "sentence_index": 24,
+      "text": "- The word in the title should be \u201cConvolutional\u201d, right?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 1,
+      "text": "We will address the issues you mentioned.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 2,
+      "text": "1.\tThank you for the insightful suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 3,
+      "text": "We now have added related work about video compositional methods in section 2.3 in the second version of the paper.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 4,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 5,
+      "text": "In the original version of the paper, all experiments are conducted on trimmed video classification datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 6,
+      "text": "Although most papers in this field only report results on the trimmed video datasets, we do agree that more complicate cases should be tested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 7,
+      "text": "Additionally, we evaluated our V4D for untrimmed video classification on ActivityNet v1.3, which contains videos of 5 to 10 minutes and typically large time lapses of the videos are not related with any activity of interest.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 8,
+      "text": "The very competitive result is reported in the appendix of the second version of paper, which demonstrated the generalization and robustness of our V4D.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 9,
+      "text": "In fact, unlike previous video compositional methods, even when local events are not well aligned or misclassified, long-term modelling with 4D convolution and video-level aggregation with global average pooling are very likely to correct the partial error.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 10,
+      "text": "3.About complexity, in the original version of the paper, we have reported parameters and FLOPs of V4D and compared it with other baseline methods in Table 2.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 11,
+      "text": "4. We have already corrected the typo in title in the second version of the paper. Yet it seems that we are not able to modify the title on OpenReview. Thank you for pointing it out.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HyecCk_TFH",
+      "rebuttal_id": "BkexWBXKor",
+      "sentence_index": 12,
+      "text": "Hopefully our rebuttal could stress your concerns. If there are still any possible issues, please don\u2019t hesitate to tell us and we will response as soon as possible.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

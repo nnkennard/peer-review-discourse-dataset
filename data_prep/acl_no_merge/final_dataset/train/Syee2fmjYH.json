@@ -1,0 +1,858 @@
+{
+  "metadata": {
+    "forum_id": "HJgfDREKDB",
+    "review_id": "Syee2fmjYH",
+    "rebuttal_id": "BkxjmrtcjH",
+    "title": "Higher-Order Function Networks for Learning Composable 3D Object Representations",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJgfDREKDB&noteId=BkxjmrtcjH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 0,
+      "text": "This paper presents a method for single image 3D reconstruction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 1,
+      "text": "It is inspired by implicit shape models, like presented in Park et al. and Mescheder et al., that given a latent code project 3D positions to signed distance, or occupancy values, respectively.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 2,
+      "text": "However, instead of a latent vector, the proposed method directly outputs the network parameters of a second (mapping) network that displaces 3D points from a given canonical object, i.e., a unit sphere.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 3,
+      "text": "As the second network maps 3D points to 3D points it is composable, which can be used to interpolate between different shapes.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 4,
+      "text": "Evaluations are conducted on the standard ShapeNet dataset and the yields results close to the state-of-the-art, but using significantly less parameters.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 5,
+      "text": "Overall, I am in favour of accepting this paper given some clarifications and improving the evaluations.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 6,
+      "text": "The core contribution of the paper is to estimate the network parameters conditioned on the input (i.e., the RGB image).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 7,
+      "text": "As noted in the related work section this is not a completely new idea (cf. Schmidhuber, Ha et al.).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 8,
+      "text": "There are a few more references that had similar ideas and might be worth adding: Brabandere et al. \"Dynamic Filter Networks\", Klein et al. \"A dynamic convolutional layer for short range weather prediction\", Riegler et al. \"Conditioned regression models for non-blind single image super-resolution\", and maybe newer works along the line of Su et al. \"Pixel-Adaptive Convolutional Neural Networks\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 9,
+      "text": "The input 3D points are sampled from a unit sphere.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 10,
+      "text": "Does this imply any topological constraints?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 11,
+      "text": "Is this the most suitable shape to sample from? How do you draw samples from the sphere (Similarly, how are the points sampled for the training objects)?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 12,
+      "text": "What happens if you instead densely sample from a 3D box (similar to the implicit shape models)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 13,
+      "text": "On page 4 the mapping network is described as a function that maps c-dimensional points to 3D points.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 14,
+      "text": "What is c? Isn't it always 3, or how else is it possible to composite the mapping network?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 15,
+      "text": "Regarding the main evaluation: The paper follows the \"standard\" protocol on ShapeNet.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 16,
+      "text": "Recently, Tatarchenko et al. showed in \"What Do Single-view 3D Reconstruction Networks Learn?\" shortcomings of this evaluation scheme and proposed alternatives.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 17,
+      "text": "It would be great if this paper could follow those recommendations to get better insights in the results.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 18,
+      "text": "Further, I could not find what k was set to in the evaluation of Tab. 1.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 19,
+      "text": "It did also not match any numbers in Tab. 4 of the appendix.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 20,
+      "text": "Tab. 4 shows to some extend the influence of k, but I would like to see a more extensive evaluation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 21,
+      "text": "How does performance change for larger k, and what happens if k is larger at testing then on at training, etc.?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 22,
+      "text": "Things to improve the paper that did not impact the score:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "sentence_index": 23,
+      "text": "- The tables will look a lot nicer if booktab is used in LaTeX",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 1,
+      "text": "We have performed additional experiments in order to address them, particularly training and evaluating HOF as in [1].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 2,
+      "text": "Q1: Evaluation as in [1]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 3,
+      "text": "In accordance with these recommendations in [1], we have trained HOF on the dataset provided by the authors of [1] and evaluated it according to the F1 metric that is proposed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 4,
+      "text": "We find that HOF provides competitive performance to existing methods, giving the highest average F1 score of all methods in [1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 5,
+      "text": "We will report quantitative results on this benchmark in a revised PDF submitted before the end of the discussion period.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 6,
+      "text": "Q2: Input shape",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 7,
+      "text": "We have performed new comparison experiments to address this question.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 8,
+      "text": "Varying the input shape does affect performance; sampling the surface of the 3d sphere gives worse performance than sampling the interior of the sphere (1.369 average chamfer distance for surface of sphere versus 1.247 for interior).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 9,
+      "text": "In addition, we find that sampling the interior of the 4D sphere, rather than the 3D sphere gives a fairly significant improvement in performance (1.195 average chamfer distance for 4D sphere vs 1.247 for 3D).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 10,
+      "text": "Since we are learning an arbitrary mapping (rather than, for example, a projection to a manifold), the mapping domain does not explicitly induce any topological constraints such as genus.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 11,
+      "text": "If our mapping didn't have to be continuous, it wouldn't matter what shape we sampled.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 12,
+      "text": "However, because we use neural networks with continuous activation functions (relus) to represent the mapping, it must be continuous.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 13,
+      "text": "And because the experiments above indicate that the mapping domain affects the quality of the reconstructions, it is possible that the sampling domain imposes topological constraints on the set of objects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 14,
+      "text": "It's difficult to say what the \"best\" shape to sample from is; however, in future work, we would like to investigate strategies for learning the best input shape to sample from.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 15,
+      "text": "Q3: Sampling the input shape",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 16,
+      "text": "Our input 3D points are sampled from the interior of the unit sphere, rather than the surface (we have clarified this in the revised manuscript).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 17,
+      "text": "Samples are drawn uniformly at random from within the sphere in order to avoid overfitting to a particular gridding structure.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 18,
+      "text": "Q4: Value of $c$ for composition networks",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 19,
+      "text": "In order to apply composition, the reviewer is correct that c must equal 3 (this is the case in our composition experiments).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 20,
+      "text": "However, if we are not composing the reconstruction function, c could be anything greater than zero.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 21,
+      "text": "For example, c=4 in our ablation experiment in which we sample input points from the 4D sphere rather than the 3D sphere.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 22,
+      "text": "Q5: Clarifying values of $k$",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 23,
+      "text": "$k=1$",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 24,
+      "text": "for both HOF models in Table 1",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 25,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 26,
+      "text": "We have edited the manuscript to clarify this point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 27,
+      "text": "The small difference in results between HOF-1 in Table 1 and HOF-1 ($k=1$) in Table 4 as well as HOF-3 in Table 1 and HOF-3 ($k=1$) in Table 4 is a matter of different initialization on a later training run.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 28,
+      "text": "We have updated these tables so that the numbers are computed from the same model, rather than separate training runs.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 29,
+      "text": "If we keep the number of compositions fixed while training and test with a larger value of k, we observe that the performance degrades significantly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 30,
+      "text": "On the other hand, when we use a varying number of compositions (1,2,...,k) at training time, we find that the results do generalize to higher values of k. After several additional compositions (such as k+3, k+4) however, the results start worsening similar to the trend in the fixed k evaluation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 31,
+      "text": "Finally, we have updated our pdf to reflect the additional related work and stylistic suggestion that you have brought to our attention.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 32,
+      "text": "Thank you again for your feedback, and please let us know if you have any additional questions or concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syee2fmjYH",
+      "rebuttal_id": "BkxjmrtcjH",
+      "sentence_index": 33,
+      "text": "[1] M. Tatarchenko, S. R. Richter, R. Ranftl, Z. Li, V. Koltun, and T. Brox, \u201cWhat do single-view 3d reconstruction networks learn?,\u201d in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 3405\u2013 3414, 2019.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

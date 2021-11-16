@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "forum_id": "rkxd2oR9Y7",
+    "review_id": "rJggFt49nX",
+    "rebuttal_id": "B1lP_IyMRm",
+    "title": "The Case for Full-Matrix Adaptive Regularization",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxd2oR9Y7&noteId=B1lP_IyMRm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 0,
+      "text": "The authors seek to make it practical to use the full-matrix version of Adagrad\u2019s adaptive preconditioner (usually one uses the diagonal version), by storing the r most recently-seen gradient vectors in a matrix G, and then showing that (GG^T)^(-\u00bd) can be calculated fairly efficiently (at the cost of one r*r matrix inversion, and two matrix multiplications by an r*d matrix).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 1,
+      "text": "This is a really nice trick.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 2,
+      "text": "I\u2019m glad to see that the authors considered adding momentum (to adapt ADAM to this setting), and their experiments show a convincing benefit in terms of performance *per iteration*. Interestingly, they also show that the models found by their method also don\u2019t generalize poorly, which is noteworthy and slightly surprising.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 3,
+      "text": "However, their algorithm--while much less computationally expensive than true full-matrix adaptive preconditioning---is still far more expensive than the usual diagonal version.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 4,
+      "text": "In Appendix B.1, they report mixed results in terms of wall-clock time, and I strongly feel that these results should be in the main body of the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 5,
+      "text": "One would *expect* the proposed approach to work better than diagonal preconditioning on a per-iteration basis (at least in terms of training loss).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 6,
+      "text": "A reader\u2019s most natural question is whether there is a large enough improvement to offset the extra computational cost, so the fact that wall-clock times are relegated to the appendix is a significant weakness.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 7,
+      "text": "Finally, the proposed approach seems to sort of straddle the line between traditional convex optimization algorithms, and the fast stochastic algorithms favored in machine learning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 8,
+      "text": "In particular, I think that the proposed algorithm has a more-than-superficial resemblance to stochastic LBFGS: the main difference is that LBFGS approximates the inverse Hessian, instead of (GG^T)^(-\u00bd).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 9,
+      "text": "It would be interesting to see how these two algorithms stack up.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 10,
+      "text": "Overall, I think that this is an elegant idea and I\u2019m convinced that it\u2019s a good algorithm, at least on a per-iteration basis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "sentence_index": 11,
+      "text": "However, it trades-off computational cost for progress-per-iteration, so I think that an explicit analysis of this trade-off (beyond what\u2019s in Appendix B.1) must be in the main body of the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 0,
+      "text": "Thanks for the review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 1,
+      "text": "@Wall-clock: We don\u2019t quite understand the question.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 2,
+      "text": "As mentioned in the response to Reviewer 3, our NLP example does answer the natural question about end-to-end gains. Is the reviewer only concerned with the location of the plots?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 3,
+      "text": "- Another note: to perform a full wall-clock comparison with algorithms that have different per-iteration costs, one must disentangle and retune various hyperparameter choices, most notably the learning rate schedule.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 4,
+      "text": "Thus we decided to feature the per-iteration comparison in the main paper, as it is the cleanest one.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 5,
+      "text": "@L-BFGS: On a high level, we agree that GGT develops a similar window-based approximation to the gradient Gram matrix as L-BFGS does to the approximated Hessian.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 6,
+      "text": "While adaptive methods have proven effective in practice, quasi-Newton algorithms are not in general regarded as competitive for deep learning (despite recent efforts [1,2]), and that\u2019s why it is not compared to in the vast majority of deep learning papers.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 7,
+      "text": "- Quasi-Newton methods are suited for deterministic problems, while stochasticity is crucial in deep learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 8,
+      "text": "This is because they try to approximate the Hessian by finite differences, which seems unstable with stochastic gradients in practice.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 9,
+      "text": "- Direct second-order methods require significant modifications to converge in the non-convex setting (see [3,4]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 10,
+      "text": "Even these have not been observed to work well in deep learning.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 11,
+      "text": "- One reason for the practical success of AdaGrad-like algorithms we believe is the difference of  -1/2 vs. -1 power on the Gram matrix, which seems to change the training dynamics dramatically.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 12,
+      "text": "With the gradient Gram matrix and a -1 power, meaningful end-to-end advances have only been claimed for niche tasks other than classification.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 13,
+      "text": "[1] Stochastic L-BFGS: Improved Convergence Rates and Practical Acceleration Strategies.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 14,
+      "text": "R. Zhao and W. Haskell and V. Tan. arXiv, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 15,
+      "text": "[2] A Stochastic Quasi-Newton Method for Large-Scale Optimization. R. Byrd, S. Hansen, and J. Nocedal, and Y. Singer SIAM Journal on Optimization, 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 16,
+      "text": "[3] Accelerated methods for nonconvex optimization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 17,
+      "text": "Y. Carmon, J. Duchi, O. Hinder, A. Sidford. SIAM Journal on Optimization, 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 18,
+      "text": "[4] Finding approximate local minima faster than gradient descent.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJggFt49nX",
+      "rebuttal_id": "B1lP_IyMRm",
+      "sentence_index": 19,
+      "text": "N. Agarwal, Z. Allen-Zhu, B. Bullins, E. Hazan, and T. Ma. STOC 2017.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

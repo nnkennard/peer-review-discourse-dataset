@@ -1,0 +1,869 @@
+{
+  "metadata": {
+    "forum_id": "SyxYEoA5FX",
+    "review_id": "Hkl2yixyCX",
+    "rebuttal_id": "B1lldQ0bRX",
+    "title": "Invariance and Inverse Stability under ReLU",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyxYEoA5FX&noteId=B1lldQ0bRX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 0,
+      "text": "Review",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 1,
+      "text": "This paper discusses invariances in ReLU networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 2,
+      "text": "The discussion is anchored around the observation that while the spectral norm of neural networks layers (their product bounds the Lipschitz constant) has been investigated as a measure of robustness of nets, the smallest singular values are also of interest as these indicate directions of invariance.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 3,
+      "text": "The paper consists mostly of a theoretical analysis with little empirical support, focusing on a property of matrices called omnidirectIonality.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 4,
+      "text": "The definition given seems weird \u2014 an A \\in R^{m \\times n} is omnidirectional if there exists a unique x \\in R^n such that Ax \\leq 0.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 5,
+      "text": "If there is a *unique* x then that x must be 0.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 6,
+      "text": "Else if there were a nonzero x for which Ax \\leq 0, then A(cx) also \\leq 0 for any positive scalar 0 and thus x is not unique",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 7,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 8,
+      "text": "Moreover if x must be equal to 0 Ax \\leq 0 and at that point Ax = 0, then that means there exists no x for which Ax < 0, so why not just say this outright?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 9,
+      "text": "Perhaps a cleaner definition would just be \u201cA is full rank and there does not exist any X such that Ax < 0?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 10,
+      "text": "Also perhaps better to use the curly sign for vector inequality.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 11,
+      "text": "Overall the paper, while interesting is unacceptably messy.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 12,
+      "text": "The first two pages have no paragraph breaks!",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 13,
+      "text": "!! This means either that the author are separating paragraphs with \\\\ \\noindent or that they have modified the style file to remove paragraph breaks to save space.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 14,
+      "text": "Either choice is unreadable and unacceptable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 15,
+      "text": "The paper is also littered with typos and vague statements (many enumerated below under *small issues*).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 16,
+      "text": "In this case, they add up to make a big issue.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 17,
+      "text": "The notation at the top of page 4 \u2014 see (1) and (2) \u2014 comes out of nowhere and requires explanation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 18,
+      "text": "|_{y>0} x + b |_{y>0}  <\u2014 what is the purpose of the subscripts here? Why is this notation never introduced?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 19,
+      "text": "Ultimately this paper focuses on the question on whether the pre-image of a ReLU layer can be concluded (based on the post-image) to be a singleton,  a compact polytope, or if it has infinite volume.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 20,
+      "text": "The paper offers some analysis, suggesting when each of the conditions occurs, upper bounds the smallest singular value of D A (where the example dependent diagonal matrix D incorporates the ReLU activation (shouldn\u2019t this be more clearly introduced and notated?).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 21,
+      "text": "Ultimately this paper is interesting but falls well below the standards of exposition that I expect from a theory paper and doesn\u2019t go very far at connecting the analysis back to the claimed motivation of investigating practical invariances. If the authors significantly improve the quality of the draft, I\u2019ll be happy to revisit it and re-evaluate my score.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 22,
+      "text": "Small issues",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 23,
+      "text": "The following is a *very* incomplete list of small bugs found in the paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 24,
+      "text": "\u201cFrom a high-level perspective both of these approaches\u201d --> missing comma after \u201cperspective\u201d",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 25,
+      "text": "\"as well as the gradient correspond to the highest",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 26,
+      "text": "possible responds for a given perturbation\" --> incomprehensible \"corresponding?\" \"possible responds?\" do you mean \"response\", and if so what is the precise technical meaning here?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 27,
+      "text": "\"analyzing the lowest possible response\" what does \"response' mean here?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 28,
+      "text": "\"We provide upper bounds on the smallest singular value\" -- the singular value of what? This hasn't been stated yet.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 29,
+      "text": "\"reverse view on adversarial examples\" --- what this means isn't clear from the preceding text.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 30,
+      "text": "\"we aim to theoretically derive means to uncover mechanisms of rectifier networks without assumptions on the weights\" -- what does \"mechanisms\" mean here?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 31,
+      "text": "Notation section -- need a sentence here at the beginning, can't just have a section heading followed by bullets.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "sentence_index": 32,
+      "text": "\"realated\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 0,
+      "text": "We thank you for interest in our work and your thorough review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 1,
+      "text": "We found your review particularly helpful in our efforts to create a more structured and formally sound version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 2,
+      "text": "------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 3,
+      "text": "- On Notation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 4,
+      "text": "+ We now have an introductory sentence to our notation section to improve the flow of reading and in order to not open the section with bullet points right away.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 5,
+      "text": "+ As you suggested we changed our inequality notation to curly brackets to make it visually clearer that we are dealing with vectors.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 6,
+      "text": "+ In fact we did introduce our subscript notation of the kind \"b |_{y>0}\".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 7,
+      "text": "It is defined in our section on notation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 8,
+      "text": "Nevertheless your troubles compelled us to restate the meaning of this notation at the time of its first usage.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 9,
+      "text": "------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 10,
+      "text": "- On Omnidirectionality:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 11,
+      "text": "We are glad that you seem to find the concept of omnidirectionality intriguing. In the new version of our paper we therefore tried hard to make the definition as intelligible and intuitive as possible.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 12,
+      "text": "We now use the following, equivalent, formulation as our definition: The matrix A of the form m x n is omnidirectional if for every given x in R^n \\ {0} there exists a row A_i of A such that <A_i, x> > 0.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 13,
+      "text": "Or in less formal terms: There is no open linear half-space in R^n that does not contain an A_i.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 14,
+      "text": "This geometric formulation of the definition is not only the origin of the naming, but it is also a mathematically sound formulation similar to the one you suggested \u201cA is full rank and there does not exist any X such that Ax < 0\u201d.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 15,
+      "text": "The problem with your formulation (from the point of view of our notation) lies in the usage of the inequality sign since we defined it in the notation section to be element-wise.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 16,
+      "text": "Your formulation would therefore require every entry of Ax to be negative, while for omnidirectionality one entry would be sufficient as long as the others are non-positive.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 17,
+      "text": "This miscommunication also encouraged us to change our signs to the curly version as suggested by you.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 18,
+      "text": "The original reason we used the previous definition was that we thought it would show more clearly what the core property is, namely that omnidirectionality can be used to nail down one precise solution. But we are now convinced that the best introductory formulation is the geometric one, as it offers an intuition of omnidirectionality.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 19,
+      "text": "------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 20,
+      "text": "- On Orderliness in General:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 21,
+      "text": "+ As you suggested we carefully restructured our paragraphs and removed the appearances of \u201c\\\\\u201d.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 22,
+      "text": "+ We corrected as many typos as we could find, we would be very thankful for pointing out any further typos!",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 23,
+      "text": "+ We tried to improve the readability by increasing structure of longer segments of text e.g. by introducing informal titles.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 24,
+      "text": "+ We added a clear and formal definition of the \u201cbinary\u201d diagonal matrices representing the application of ReLU.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 25,
+      "text": "(Section 3.1)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 26,
+      "text": "+ We rewrote potentially ambiguous statements in order to remove any inaccuracies.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 27,
+      "text": "We hope we addressed your main concerns and our changes based on your review led to a paper that conforms with your standards of exposition.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hkl2yixyCX",
+      "rebuttal_id": "B1lldQ0bRX",
+      "sentence_index": 28,
+      "text": "We want to thank you again for your thoughtful review and would welcome further advice.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

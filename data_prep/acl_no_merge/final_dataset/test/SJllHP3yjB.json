@@ -1,0 +1,617 @@
+{
+  "metadata": {
+    "forum_id": "HJxdTxHYvB",
+    "review_id": "SJllHP3yjB",
+    "rebuttal_id": "rJe2nF5nsB",
+    "title": "BREAKING  CERTIFIED  DEFENSES:  SEMANTIC  ADVERSARIAL  EXAMPLES  WITH  SPOOFED  ROBUSTNESS  CERTIFICATES",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJxdTxHYvB&noteId=rJe2nF5nsB",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 0,
+      "text": "The paper presents a new attack: Shadow Attack, which can generate imperceptible adversarial samples.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 1,
+      "text": "This method is based on adding regularization on total variation, color change in each channel and similar perturbation in each channel.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 2,
+      "text": "This method is easy to follow and a lot of examples of different experiments are shown.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 3,
+      "text": "However, I have several questions about motivation and method.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 4,
+      "text": "First, the proposed attack method can yield adversarial perturbations to images that are large in the \\ell_p norm.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 5,
+      "text": "Therefore, the authors claim that the method can attack certified systems.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 6,
+      "text": "However, attack in Wasserstein distance and some other methods can also do so.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 7,
+      "text": "They can generate adversarial examples whose \\ell_p norm is large.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 8,
+      "text": "I think the author should have some discussions about these related methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 9,
+      "text": "Second, I notice that compared to the result in Table 1, PGD attack can yield better results [1].",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 10,
+      "text": "I hope to see some discussions about this.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 11,
+      "text": "Also, Table 1 is really confused. I would not understand the meaning if I am not familiar with the experiment settings.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "sentence_index": 12,
+      "text": "[1] Salman, Hadi, et al. \"Provably Robust Deep Learning via Adversarially Trained Smoothed Classifiers.\" Neuips (2019).",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 0,
+      "text": "Thanks for your constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 1,
+      "text": "We have modified the paper to include some of the experiments you have suggested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 2,
+      "text": "Please find our detailed response below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 3,
+      "text": "[R4: First, the proposed attack method can yield adversarial perturbations to images that are large in the \\ell_p norm.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 4,
+      "text": "Therefore, the authors claim that the method can attack certified systems.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 5,
+      "text": "However, attack in Wasserstein distance and some other methods can also do so.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 6,
+      "text": "They can generate adversarial examples whose \\ell_p norm is large.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 7,
+      "text": "I think the author should have some discussions about these related methods.]",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 8,
+      "text": "Thank you for pointing us out to the missing related work which we have included in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 9,
+      "text": "Indeed, the Wasserstein attack and the other previously mentioned non-$\\ell_p$ bounded attacks are alternatives for producing quasi-imperceptible non-$\\ell_p$ bounded adversarial examples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 10,
+      "text": "Any of these methods can alternatively be used for generating non $\\ell_p$ bounded attacks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 11,
+      "text": "However, one major advantage of our attack method over the Wasserstein attack may be its simplicity and scalability.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 12,
+      "text": "Per your suggestion, we ran experiments using the Wasserstein attack.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 13,
+      "text": "The authors of [1] suggest that the Wasserstein PGD attack works best when the attacker takes PGD steps in $ell_p$-norm directions and then project the noise back onto the Wasserstein ball.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 14,
+      "text": "We used their official implementation and adapted it to attack the Randomized Smoothed classifier.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 15,
+      "text": "Based on the official implementation, after every 10 iterations, if the attack is not successful, we increase the radius of the wasserstein ball in which the noise is projected back onto.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 16,
+      "text": "Consequently, the attack is always able to reach a comparable, but slightly weaker, spoofed certified radii (~ 67% that of the shadow attack) at the cost of slightly more perceptible adversarial noise in difficult cases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 17,
+      "text": "Note that the reason that the examples are more perceptible than those from [1] is that they are made to produce large certified radii and not only cause misclassification (i.e., the entire Gaussian augmented batch needs to get misclassified.) A comparison of the resulting images and average certified radii of those images can be found in the following anonymized link:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 18,
+      "text": "https://docs.google.com/spreadsheets/d/1F0P8aOD_5aiVjW3CrR49fudz4EgrORz7v4t0ZIJEBAo/edit?usp=sharing.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 19,
+      "text": "[1] Wong et al., \u201cWasserstein Adversarial Examples via Projected Sinkhorn Iterations\u201d.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 20,
+      "text": "[R4: Second, I notice that compared to the result in Table 1, PGD attack can yield better results [1].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 21,
+      "text": "I hope to see some discussions about this. Also, Table 1 is really confused. I would not understand the meaning if I am not familiar with the experiment settings.]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 22,
+      "text": "Per your request, we have attacked the work of [2] and reported results of attacking the pre-trained SmoothAdv classifiers (available in [3]) in Appendix B.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 23,
+      "text": "Similar to the non-adversarially trained smooth classifier included in the original submission, we can produce adversarial examples for the SmoothAdv classifier which on average produce larger certified radii than their natural example counterpart.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 24,
+      "text": "Also, in the revised document, we have expanded the caption of Table 1 to make sure that it is clear what a certified is and that a larger radii is better.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 25,
+      "text": "[2]. Salman et al., \u201cProvably Robust Deep Learning via Adversarially Trained Smoothed Classifiers\u201d, NeurIPS 2019",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllHP3yjB",
+      "rebuttal_id": "rJe2nF5nsB",
+      "sentence_index": 26,
+      "text": "[3]. https://github.com/Hadisalman/smoothing-adversarial",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

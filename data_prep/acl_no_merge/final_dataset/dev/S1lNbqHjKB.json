@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "forum_id": "SkeHuCVFDr",
+    "review_id": "S1lNbqHjKB",
+    "rebuttal_id": "HJe7CzzGir",
+    "title": "BERTScore: Evaluating Text Generation with BERT",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkeHuCVFDr&noteId=HJe7CzzGir",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 0,
+      "text": "*** Update ***",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 1,
+      "text": "I'd like to thank the authors for answering my questions, and I am satisfied with their response. I have read the other reviews for this paper as well, and I am keeping my score.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 2,
+      "text": "This paper proposes BERTScore, a method for automatic evaluation of text.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 3,
+      "text": "Their method uses BERT to produce contextualized word representations for the words in the reference and hypothesis.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 4,
+      "text": "Then they compute the precision, recall, and F1 by greedily matching up words between the hypothesis and reference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 5,
+      "text": "To be more specific, for say recall they take each word in the reference and compute the cosine with all words in the hypothesis.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 6,
+      "text": "Then they add up the largest cosine similarity for each word and average them together.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 7,
+      "text": "Precision is defined similarly but with the roles of hypothesis and reference switched.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 8,
+      "text": "F1 is then the harmonic mean of these two scores.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 9,
+      "text": "They also experiment with using idf to weight importance.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 10,
+      "text": "Their method is simple, but achieves very strong results and there are a ton of experiments in this paper (it is 41 pages).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 11,
+      "text": "The focus is largely on metrics for MT, but they also evaluate on image captioning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 12,
+      "text": "The paper is also very thorough and many of the questions I had when reading it are answered (like effect of optimal matching, running time, etc.).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 13,
+      "text": "The latter (running time) being one of the downsides of the method if it was to be used for fine-tuning MT systems. 40 times slower than BLEU, but I think this increased cost would be worth it and could be engineered around.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 14,
+      "text": "Overall, I like the paper - it is simple and effective on its goal task of automatic evaluation for text generation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 15,
+      "text": "I think we are moving that way as a field and this paper proposes a useful method and is additionally a good study on the subject.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 16,
+      "text": "A question I have is why the method doesn't perform well in certain cases.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 17,
+      "text": "For instance, in Table 2 and 3 - some of the evaluations with tr and fi fall well below relative performance for other language pairs. Does this have to do with the quality of the representations in multilingual BERT? What is YiSi-1 doing, for instance for model selection of en-fi and en-tr that makes it have so much better performance?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 18,
+      "text": "Edit: I also wonder if incorporating idf would be better if the values were computed by a larger corpus.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 19,
+      "text": "I think it would make the most sense to compute these from the training data for the underlying BERT models.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 20,
+      "text": "Since BERT itself is a function of this training data, it seems appropriate that these values would be as well (or perhaps at least a subset of this data).",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 21,
+      "text": "Missing citations:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 22,
+      "text": "A citation to \"Beyond BLEU:Training Neural Machine Translation with Semantic Similarity\" from ACL 2019 should be incorporated into the related work.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 23,
+      "text": "They use semantic similarity to fine-tune NMT systems with their own embedding-based (semantic similarity) metric and they found some nice properties from training in this way.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 24,
+      "text": "Have you tried BERTScore on sentence similarity tasks? It's possible BERTScore could have strong performance and some readers may wonder this.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 25,
+      "text": "There are evaluations on PAWS for paraphrase detection which I appreciated, but that is a little different.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 26,
+      "text": "A citation to \"Deep Reinforcement Learning with Distributional Semantic Rewards for Abstractive Summarization\" from EMNLP 2019 should also be incorporated.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 27,
+      "text": "This paper is a big boon to BERT score showing that it is a very helpful metric for fine-tuning summarization systems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 28,
+      "text": "They don't even need a cross-entropy term since BERTScore captures fluency so well. I'd like to see it for MT as well, but perhaps that is the next paper.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 29,
+      "text": "Typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "sentence_index": 30,
+      "text": "The word \"language\" is misspelled twice in Appendix E.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 0,
+      "text": "Thank you for your comments! We appreciate the very detailed review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 1,
+      "text": "We have included the missing citations and fixed the typos in the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          29
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 2,
+      "text": "Similar to your hypothesis, we suspect that multilingual BERT cannot produce high-quality representations for Turkish and Finnish.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 3,
+      "text": "This can lead to worse performance of BERTScore.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 4,
+      "text": "Based on [1] and [2], YiSi-1 trains word2vec embeddings on the monolingual data provided as part of the WMT translation task, which may explain its comparably higher performance on these languages.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 5,
+      "text": "We believe it is an important future direction to improve the performance of multilingual BERT on low-resource language, but this requires a broader study of training BERT in low-resource regimes.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 6,
+      "text": "We have studied computing the idf on a larger corpus.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 7,
+      "text": "We computed idf scores using the monolingual English corpus released by WMT18, a much larger amount of data then we used before.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 8,
+      "text": "The importance-weighted version of BERTScore using these idf scores performs worse than the original importance-weighted version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 9,
+      "text": "We hypothesize this is due to the domain shift between the corpora.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 10,
+      "text": "Beyond paraphrase detection, we didn\u2019t try using BERTScore for text similarity tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 11,
+      "text": "The results on paraphrase are definitely promising.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 12,
+      "text": "Given the number of experiments we conducted, we decided to consider this an important direction for future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 13,
+      "text": "Indeed, several groups are already following the direction of using BERTScore for other tasks, including [3] and one of the papers R1 points to (\"Deep Reinforcement Learning with Distributional Semantic Rewards for Abstractive Summarization\").",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 14,
+      "text": "We discuss these follow up works in Section 7.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 15,
+      "text": "[1] Chi-kiu Lo. 2017. Meant 2.0: Accurate semantic mt evaluation for any output language. In Proceedings of the Second Conference on Machine Translation, Volume 2: Shared Tasks Papers, Copenhagen, Denmark, September. Association for Computational Linguistics.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 16,
+      "text": "[2] Chi-kiu Lo. 2018. The NRC metric submission to the WMT18 metric and parallel corpus filtering shared task. Proceedings of the Third Conference on Machine Translation: Shared Task Papers, Belgium, Brussels, October. Association for Computational Linguistics.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNbqHjKB",
+      "rebuttal_id": "HJe7CzzGir",
+      "sentence_index": 17,
+      "text": "[3] Qin, L., Bosselut, A., Holtzman, A., Bhagavatula, C., Clark, E., & Choi, Y. (2019). Counterfactual Story Reasoning and Generation. Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP). Hong Kong, China, November. Association for Computational Linguistics.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

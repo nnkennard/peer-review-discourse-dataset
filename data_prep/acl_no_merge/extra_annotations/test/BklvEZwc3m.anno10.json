@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "forum_id": "BJlMcjC5K7",
+    "review_id": "BklvEZwc3m",
+    "rebuttal_id": "ryx8fMZiC7",
+    "title": "Neural Random Projections for Language Modelling",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJlMcjC5K7&noteId=ryx8fMZiC7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 0,
+      "text": "This paper presents some experiments using random projections instead of embeddings from a 1-of-V encoding.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 1,
+      "text": "Experiments on the Penn TreeBank benchmark data set show that in a feed-forward language modeling architecture similar to that of (Bengio, 2003), the random projections substantially reduce the number of parameters of the model while not harming perplexity too much.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 2,
+      "text": "The paper would need to be improved substantially in order to appear at a conference like ICLR.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 3,
+      "text": "First, the novelty of the approach is limited -- the approach amounts to using a sparse integer layer instead of a floating-point layer within a feed-forward architecture.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 4,
+      "text": "Second, and more importantly, the experiments need to be re-done to better measure the practical impact of the techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 5,
+      "text": "First, larger data sets such as Wikitext-2 and Wikitext-103, and/or the billion-word benchmark, are needed to understand how well the approach works in practical LM settings.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 6,
+      "text": "Second, the paper needs to use more state-of-the-art architectures.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 7,
+      "text": "Language modeling is a fast-moving field, so the very latest and greatest techniques are not strictly necessary for this paper, but at least midsize LSTM models that get scores in the ~80 ppl range for Penn Treebank are important, otherwise it becomes very questionable whether the results will provide any practical impact in today's best models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 8,
+      "text": "Finally, the paper needs to compare its parameter-reduction approaches against other compression and hyperparameter optimization techniques.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 9,
+      "text": "Changing the number/sizes of the network layers or using sparse weight matrices (perhaps with sparsity-inducing regularization) would be natural ways to reduce the parameter space.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 10,
+      "text": "In my opinion, due to how many researchers are and have been looking into improvements of language modeling, the authors may find it hard to break new ground in this direction.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 11,
+      "text": "Minor",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 12,
+      "text": "In the start of Section 3, it is not clear why having the projection be sparse is desired.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 13,
+      "text": "Later, space (and time) efficiency is revealed as the motivation for the sparsity, but it would be helpful if the paper said this earlier.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 14,
+      "text": "Equation 6 seems to have an error, the probability should be P(w_t | w_t-1...) instead of P(w_t , w_t-1...) if this is to represent the standard LM objective (the probability of the corpus).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "sentence_index": 15,
+      "text": "Sec 3.3: \"all models sare\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 0,
+      "text": "* models that get scores in the ~80 ppl range for Penn Treebank are important.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 1,
+      "text": "we agree with the advice but not with the justification.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 2,
+      "text": "We explain why in the general response: our goal is not to get good language models, but to use language modelling as a setting to test a property of a mechanism that is proposed.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 3,
+      "text": "The perplexity becomes a way to observer the effect of a mechanism and not the goal itself.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 4,
+      "text": "Moreover, (not in this case but) the architectures used to achieve better scores on given datasets are so over-parametrized that it's hardly reasonable to assume that the improvement justifies the cost of accommodating huge models overfitted to a particular dataset (and sometimes to a particular dataset configuration)",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 5,
+      "text": "That said, we agree that using different architectures would strengthen our point and make the paper more convincing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 6,
+      "text": "Also, using different datasets would help us demonstrate that the effect of the proposed mechanism is data-independent.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 7,
+      "text": "We are also considering it's application to a different set of tasks in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 8,
+      "text": "We did follow reviewer recommendations and performed experiments with LSTMs and QRNN (slightly faster) along with WikiText (which is larger but not intractable), unfortunately we couldn't accommodate all the analysis and changes in time.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 9,
+      "text": "* its parameter-reduction approaches against other compression and hyperparameter optimization techniques.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 10,
+      "text": "We recognize that the focus on parameter reduction was perhaps counter productive to making the goal or this work clear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 11,
+      "text": "It is a byproduct of the technique, but modelling discrete distributions without prior knowledge of how many classes one might encounter is the main issue we are trying to solve. We could do that by using character-level or sub-word tokens, but again, the goal is not --solely-- language modelling as a task.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklvEZwc3m",
+      "rebuttal_id": "ryx8fMZiC7",
+      "sentence_index": 12,
+      "text": "The mechanism is applicable to settings where the number of possible input patterns is too large to instantiate as a parameter table (embeddings), but where the number of patterns that actually occur could actually more \"reasonable\". Meaning that as long as the \"world\" is not random uniform, we can make predictions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

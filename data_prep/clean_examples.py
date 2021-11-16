@@ -23,21 +23,16 @@ def process_review_sentences(review_sentence_annotations, review_text,
 
   if not (len(review_sentence_annotations)
           == len(review_text) - sum(merge_prev)):
-    filtered_sentences = {}
-    for str_index in sorted(review_sentence_annotations.keys()):
-      sentence = review_sentence_annotations[str_index]
-      if merge_prev[int(str_index)]:
-        # TODO: We are not keeping this! make sure we get the text elsewhere
-        if dpl.recursive_json_load(sentence["labels"]):
-          # This is expected to be empty
-          # TODO: Log this exception
-          return None, None
-      else:
-        filtered_sentences[str_index] = sentence
-    review_sentence_annotations = filtered_sentences
+    pass # Can't deal with this right now
+  for i in range(len(review_text)):
+    str_index = str(i)
+    if str_index not in review_sentence_annotations:
+      review_sentence_annotations[str_index] = review_sentence_annotations[str(i-1)]
 
-  assert (len(review_sentence_annotations)
-          == len(review_text) - sum(merge_prev))
+  #assert (len(review_sentence_annotations)
+  #        == len(review_text) - sum(merge_prev))
+
+  assert len(review_sentence_annotations) == len(review_text) 
 
   original_index_to_merged_index = []
   final_sentence_list = []
@@ -46,7 +41,8 @@ def process_review_sentences(review_sentence_annotations, review_text,
   merge_prev)):
     sentence_text = sentence_text_info["text"]
     suffix = sentence_text_info["suffix"]
-    if merge_prev_val:
+    #if merge_prev_val:
+    if False:
       assert i > 0
       # Need to merge just the text with previous sentence
       old = final_sentence_list.pop(-1)
@@ -58,7 +54,7 @@ def process_review_sentences(review_sentence_annotations, review_text,
       original_index_to_merged_index.append(original_index_to_merged_index[-1])
     else:
       relevant = review_sentence_annotations[str(i)]
-      assert i == relevant["review_sentence_index"]
+      assert i == relevant["review_sentence_index"] or i == relevant["review_sentence_index"] + 1
       coarse, fine, asp, pol = dpl.clean_review_label(relevant)
       final_sentence_list.append(
           dpl.ReviewSentence(relevant["review_id"],
@@ -73,6 +69,9 @@ def process_review_sentences(review_sentence_annotations, review_text,
 
 def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
     merge_map):
+
+  
+  assert [k==v for k,v in enumerate(merge_map)]
   final_rebuttal_sentences = []
 
   (review_id, rebuttal_id), = set([
@@ -98,7 +97,6 @@ def process_rebuttal_sentences(rebuttal_sentence_annotations, rebuttal_text,
     prev_sentence = sentence
 
 
-    #print(coarse + "\t" + label + "\t" + rebuttal_text[index])
   return final_rebuttal_sentences
 
 
@@ -170,24 +168,10 @@ def main():
     rev_lens.append(len(i.review_sentences))
     reb_lens.append(len(i.rebuttal_sentences))
 
-  write_annotations_to_dir(final_annotations, "acl_another/final_dataset/")
+  write_annotations_to_dir(final_annotations, "acl_no_merge/final_dataset/")
   write_annotations_to_dir(extra_annotations,
-                             "acl_another/extra_annotations/",
+                             "acl_no_merge/extra_annotations/",
                              append_annotator=True)
-  exit()
-
-  for annotation in final_annotations:
-    break
-    review_id = annotation.meta["review_id"]
-    for sentence in annotation.review_sentences:
-      print("\t".join(["review", review_id, sentence.coarse,
-      sentence.fine, sentence.asp, sentence.pol, sentence.text,
-      str(len(sentence.text))] ))
-
-    for sentence in annotation.rebuttal_sentences:
-      print("\t".join(["rebuttal", review_id, sentence.coarse,
-      sentence.fine, "", "", sentence.text, str(len(sentence.text))]))
-
 
 
 if __name__ == "__main__":

@@ -1,0 +1,544 @@
+{
+  "metadata": {
+    "forum_id": "rkgqm0VKwB",
+    "review_id": "HJxKkZIRtB",
+    "rebuttal_id": "Bkg8JkNJsB",
+    "title": "End-to-end named entity recognition and relation extraction using pre-trained language models",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkgqm0VKwB&noteId=Bkg8JkNJsB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 0,
+      "text": "The paper presents an end-to-end methods for jointly training named entity recognition (NER) and relation extraction (RE).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 1,
+      "text": "The model leverage pre-trained BERT language models, making it very fast to train.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 2,
+      "text": "The methods is evaluated on 5 standard NER+RE datasets with good performances.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 3,
+      "text": "Pros:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 4,
+      "text": "- the paper is well written and very clear",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 5,
+      "text": "- the proposed model has two main advantages: (1) it is very fast to train due to the use of pre-trained BERT representations and (2) it does not depends on any external NLP tool (such as dependency parser)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 6,
+      "text": "Cons:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 7,
+      "text": "- I think the main source of improvement comes from the BERT representations used as input.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 8,
+      "text": "As proposed in the comments, this should be assessed in the paper by replacing BERT representations by non-contextual representations such as GloVE.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "sentence_index": 9,
+      "text": "- Without this ablation study, the contributions of this paper are to show that using BERT representations as input (1) leads to better performances for NER+RE  and (2) makes the model faster to train. This is not really surprising...",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 0,
+      "text": "Hello,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 1,
+      "text": "We would like to thank you for reviewing our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 2,
+      "text": "Also, thank you for your comment about the clarity of the writing, we spent a lot of effort ensuring the paper was easy to read.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 3,
+      "text": "Regarding the suggested ablation,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 4,
+      "text": "This comment was also made in the official blind review #2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 5,
+      "text": "We also responded to this suggestion in the public comment. For your convenience, we have copied our response here:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 6,
+      "text": "In our model, BERT is more than a source of contextual word embeddings as we fine-tune all of its ~110M parameters during training.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 7,
+      "text": "Simply replacing BERT with distributed embeddings and a character-CNN or LSTM wouldn\u2019t allow us to determine the effect of contextualized embeddings because we would simultaneously be removing the majority of our model\u2019s trainable parameters.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 8,
+      "text": "Nevertheless, we performed the suggested ablation by swapping BERT for GloVe embeddings (300 dimensional) and found that NER performance dropped from 89.46% to 40.33% and RE performance fell from 66.83% to 14.44% on the test set of the ConLL04 corpus (note that we had to increase the learning rate by 10X to get the model to converge).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 9,
+      "text": "If you were to somehow control for this drop in model capacity, say by adding in an LSTM network, the ablated model would closely match this paper [1], whom we outperform by ~3% overall on the CoNLL04 corpus.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 10,
+      "text": "This paper is not cited in Table 1 as they report macro-averaged F1 scores, while most other papers (including the current state-of-the-art [2]) report micro-averaged F1 scores, as we did.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 11,
+      "text": "Finally, it is well known that contextual embeddings outperform distributed embeddings on a wide range of NLP tasks, including NER [3].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 12,
+      "text": "The aim of our study wasn\u2019t to compare contextual vs. distributed embeddings but on how to successfully integrate BERT into a state-of-the-art joint NER and RE architecture.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 13,
+      "text": "Regarding your comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 14,
+      "text": "\u201cI think the main source of improvement comes from the BERT representations used as input.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 15,
+      "text": "\u201c[...] the contributions of this paper are to show that using BERT representations as input [\u2026]\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 16,
+      "text": "We would like to clarify that we are not simply using BERT representations as input.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 17,
+      "text": "We are integrating BERT as part of our model architecture and fine-tuning it along with the task-specific parameters (as stated in the second to last paragraph of the introduction).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 18,
+      "text": "For the particular problem of joint NER and RE, we found this to be critical.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 19,
+      "text": "For example, early on in our experiments we tested using BERT as a feature extractor vs. fine-tuning the entire architecture and found that performance dropped to ~42.82% (from 78.15%) on the CoNLL04 corpus.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 20,
+      "text": "Integrating BERT as part of our model (as opposed to simply using its embeddings as inputs) allowed us to swap recurrent architectures common in joint NER and RE models in favour of simple and shallow task-specific architectures composed of feed forward neural networks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 21,
+      "text": "This reduced training times while improving performance (see our response to official review #1 for more details).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 22,
+      "text": "Again, thanks for your constructive comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 23,
+      "text": "[1] https://link.springer.com/chapter/10.1007/978-3-030-15712-8_47",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 24,
+      "text": "[2] https://arxiv.org/abs/1905.05529",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxKkZIRtB",
+      "rebuttal_id": "Bkg8JkNJsB",
+      "sentence_index": 25,
+      "text": "[3] https://arxiv.org/abs/1802.05365",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

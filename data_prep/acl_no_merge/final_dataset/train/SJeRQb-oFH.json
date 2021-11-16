@@ -1,0 +1,995 @@
+{
+  "metadata": {
+    "forum_id": "S1lOTC4tDS",
+    "review_id": "SJeRQb-oFH",
+    "rebuttal_id": "SkxXFusisH",
+    "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lOTC4tDS&noteId=SkxXFusisH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 0,
+      "text": "Paper summary.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 1,
+      "text": "The paper proposes Dreamer, a model-based RL method for high-dimensional inputs such as images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 2,
+      "text": "The main novelty in Dreamer is to learn a policy function from latent representation-and-transition models in an end-to-end manner.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 3,
+      "text": "Specifically, Dreamer is an actor-critic method that learns an optimal policy by backpropagating re-parameterized gradients through a value function, a latent transition model, and a latent representation model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 4,
+      "text": "This is unlike existing methods which use model-free or planning methods on simulated trajectories to learn the optimal policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 5,
+      "text": "Meanwhile, Dreamer learns the remaining components, namely a value function, a latent transition model, and a latent representation model, based on existing methods (the world models and PlaNet).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 6,
+      "text": "Experiments on a large set of continuous control tasks show that Dreamer outperforms existing model-based and model-free methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 7,
+      "text": "Comments.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 8,
+      "text": "Efficiently learning a policy from visual inputs is an important research direction in RL.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 9,
+      "text": "This paper takes a step in this direction by improving existing model-based methods (the world models and PlaNet) using the actor-critic approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 10,
+      "text": "I am leaning towards weak accepting the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 11,
+      "text": "I am reluctant to give a higher score due to its incremental contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 12,
+      "text": "Specifically, the policy update in Dreamer resembles that of SVG (Heess et al., 2015), which also backpropagates re-parameterized gradients through a value function and a transition model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 13,
+      "text": "The main difference between Dreamer and SVG is that Dreamer incorporates a latent representation model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 14,
+      "text": "From this viewpoint, the actor-critic component in Dreamer is an incremental contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 15,
+      "text": "Since the latent models are learned based on existing techniques, the paper presents an incremental contribution.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 16,
+      "text": "Besides the above comments, I have these additional comments.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 17,
+      "text": "- Effectiveness on very long horizon trajectories:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 18,
+      "text": "Simulating long-horizon trajectories with a probabilistic model is known to be unsuitable for model-based RL due to accumulated errors.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 19,
+      "text": "This is an open issue in model-based RL.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 20,
+      "text": "The paper attempts to solve this issue by backpropagating policy gradients through the transition model, which is known to be more robust against model errors (see e.g., PILCO (Deisenroth et al., 2011)).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 21,
+      "text": "However, the issue still exists in Dreamer, since there seems to be an upper limit of effective horizon length (perhaps around 40, according to Figure 4).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 22,
+      "text": "This horizon length is still short compared to the entire horizon length of many MDPs (e.g., 1000).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 23,
+      "text": "I think this point should be discussed in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 24,
+      "text": "That is, the issue still exists, and Dreamer is less effective with very long horizon.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 25,
+      "text": "- Inapplicability to discrete controls:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 26,
+      "text": "One restriction of re-parameterized gradients is that the technique is not applicable to discrete random variables.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 27,
+      "text": "This restriction exists in Dreamer, and the method cannot be applied to discrete control tasks unless approximation techniques such as Gumbel-softmax are used.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 28,
+      "text": "Still, such approximations would make learning more challenging, especially with long-horizon backpropagation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 29,
+      "text": "This restriction should be noted in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 30,
+      "text": "- There is no mention about variance of policy gradient estimates.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 31,
+      "text": "Dreamer does not use any variance reduction technique, so the gradient estimates could have very large variance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 32,
+      "text": "- q_theta was introduced in Eq. (8) before it is defined in Eq. (11).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 33,
+      "text": "Also, I suggest moving Section 4 to be right after Section 2, since Section 4 presents existing techniques similarly to Section 2, while Section 3 presents the main contribution.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 34,
+      "text": "Update after authors' response.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 35,
+      "text": "I read the response.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 36,
+      "text": "The paper is more clear after authors' clarification.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 37,
+      "text": "Though, I still think the contribution is incremental, since back-propagating gradients through values and dynamics has been studied in prior works (albeit with less empirical successes compared to Dreamer).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "sentence_index": 38,
+      "text": "Nonetheless, I am keen to acceptance. I would increase the rating from 6 to 7, but I will keep the rating of 6 since the rating of 7 is not possible.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 0,
+      "text": "Thank you for the review and accurate summary of our submission!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 1,
+      "text": "> I am reluctant to give a higher score due to its incremental contribution.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 2,
+      "text": "Specifically, the policy update in Dreamer resembles that of SVG (Heess et al., 2015), which also backpropagates re-parameterized gradients through a value function and a transition model.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 3,
+      "text": "SVG clearly differs from Dreamer in that it only considers 1-step model predictions in SVG(1) or multi-step predictions without value function in SVG(\u221e).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 4,
+      "text": "SVG(0) does not use a dynamics model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 5,
+      "text": "In addition, Dreamer propagates gradients through transitions in a learned features, making it effective for high-dimensional control tasks.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 6,
+      "text": "> Since the latent models are learned based on existing techniques, the paper presents an incremental contribution.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 7,
+      "text": "Besides the important technical difference described above, we highlight the empirical performance of Dreamer.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 8,
+      "text": "A conclusion of the SVG paper was that the model did not yield substantial practical benefits beyond 1-step predictions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 9,
+      "text": "We found it important to revisit this topic in the light of recent substantial improvements to dynamics models (see below).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 10,
+      "text": "> Effectiveness on very long horizon trajectories: Simulating long-horizon trajectories with a probabilistic model is known to be unsuitable for model-based RL due to accumulated errors.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 11,
+      "text": "This is an open issue in model-based RL.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 12,
+      "text": "While current dynamics models still cannot accurately predict full episodes, this is rarely needed in practice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 13,
+      "text": "Recent works successfully use learned dynamics for control from both proprioceptive inputs (Chua et al. 2018, Shyam et al. 2019, Wang & Ba 2019) and from images (Hafner et al. 2019, Zhang et al. 2019).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 14,
+      "text": "Dreamer shows that the relatively short model predictions (H=20) yield high-quality policy gradients, and that an additional value function in the latent space is effective for solving tasks that require longer-term credit assignment (e.g. with sparse rewards).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 15,
+      "text": "Our experiments provide evidence that combination is effective in practice.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 16,
+      "text": "> However, the issue still exists in Dreamer, since there seems to be an upper limit of effective horizon length (perhaps around 40, according to Figure 4).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 17,
+      "text": "This horizon length is still short compared to the entire horizon length of many MDPs (e.g., 1000).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 18,
+      "text": "I think this point should be discussed in the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 19,
+      "text": "That is, the issue still exists, and Dreamer is less effective with very long horizon.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 20,
+      "text": "We address the challenge of long horizons not using long-term model predictions but by learning a value function that estimates the infinite sum of discounted future rewards.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 21,
+      "text": "Figure 4 in our submission shows that this gives Dreamer robustness to the imagination horizon compared to two baselines.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 22,
+      "text": "> Inapplicability to discrete controls:  One restriction of re-parameterized gradients is that the technique is not applicable to discrete random variables.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 23,
+      "text": "This restriction exists in Dreamer, and the method cannot be applied to discrete control tasks unless approximation techniques such as Gumbel-softmax are used.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 24,
+      "text": "Still, such approximations would make learning more challenging, especially with long-horizon backpropagation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 25,
+      "text": "This restriction should be noted in the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 26,
+      "text": "We applied Dreamer to environments with discrete actions using the DiCE estimator (Foerster et al. 2018) locally for the da/d\u03bc and da/d\u03c3 derivatives.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 27,
+      "text": "This was a drop-in replacement for the reparameterization estimator and slightly outperformed a Gumble-softmax actor.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 28,
+      "text": "We find that with this 1 line change, Dreamer solves discrete action tasks of the Atari suite and a 3D DMLab environment.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 29,
+      "text": "> There is no mention about variance of policy gradient estimates.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 30,
+      "text": "Dreamer does not use any variance reduction technique, so the gradient estimates could have very large variance.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 31,
+      "text": "Dreamer uses reparamterization gradients that already have low variance (Kingma & Welling 2013, Rezende et al. 2014); although see Miller et al. (2017).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeRQb-oFH",
+      "rebuttal_id": "SkxXFusisH",
+      "sentence_index": 32,
+      "text": "Learning baselines for variance reduction is common for Reinforce estimators as used in A3C and PPO (Mnih et al. 2016, Schulman et al. 2017) but not for reparameterization estimators as used in Dreamer, SVG, and SAC (Heess et al. 2015, Haarnoja et al. 2018).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

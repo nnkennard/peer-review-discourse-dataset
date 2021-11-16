@@ -1,0 +1,379 @@
+{
+  "metadata": {
+    "forum_id": "SJfPFjA9Fm",
+    "review_id": "S1eEnYWC3Q",
+    "rebuttal_id": "Syx9fKn7RX",
+    "title": "ACCELERATING NONCONVEX LEARNING VIA REPLICA EXCHANGE LANGEVIN DIFFUSION",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJfPFjA9Fm&noteId=Syx9fKn7RX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 0,
+      "text": "This paper gives a theoretical analysis of an interesting statistical physics technique known as replica exchange.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 1,
+      "text": "The basic idea is that Langevin dynamics at low temperature is slow to converge, and that one could potentially boost the convergence by alternating between low and high temperature.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 2,
+      "text": "At the extreme one could imagine running in parallel a random search and a gradient descent, and ``teleporting\" the gradient descent algorithm whenever the random search algorithm finds a point with better value.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 3,
+      "text": "This makes a lot of sense and it is nice to see a theoretical analysis of this.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 4,
+      "text": "The mathematics are sound, but I do not know whether it is an appropriate submission for ICLR.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "sentence_index": 5,
+      "text": "One comment from the math side: it would be interesting (albeit probably difficult) to study kappa in (3.10) as a function of a. In particular at face value it looks like one only benefits from taking a larger, so why not study the limiting behavior of a->infty? What is the limiting value of kappa? Can you perform those calculations in the convex case at least?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 0,
+      "text": "We really appreciate your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 1,
+      "text": "Replica exchange Langevin diffusion is widely used in classic MCMC over the years.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 2,
+      "text": "Our work also uses this methodology in the setting of nonconvex optimization problem, which arises in many machine learning applications such as training neural networks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 3,
+      "text": "There are also many interesting questions in this direction, for example, how to choose the best temperature based on the structure of specific problems.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 4,
+      "text": "That is why we still submit it for ICLR.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 5,
+      "text": "As for the comments on math side.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 6,
+      "text": "First, when a->infty, the exchange process should be defined in another way.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 7,
+      "text": "Our current definition, which swapping particles with some rate, is only valid for finite a.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 8,
+      "text": "This extension is not totally trivial and in Dupuis&et. al's work, some results are established.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 9,
+      "text": "In our paper, we only discuss finite swap rate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 10,
+      "text": "This brings convenience for the discussion of discretization error.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 11,
+      "text": "Otherwise, we need to use a different approach to analyze.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 12,
+      "text": "Moreover, we point out that in discretization, the swapping intensity a should be smaller than the step size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 13,
+      "text": "This also reflects the nontrivial connection between infinity swapping and discretization.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 14,
+      "text": "Second, the kappa in (3.10) is related to the Poincare inequality and it is also a lower estimate of the spectral gap of Markov process.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 15,
+      "text": "Kappa is can be defined as the solution of a variational problem involved Dirichlet form.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 16,
+      "text": "However, although our result shows that swapping boosts the Dirichlet form, we still cannot obtain an analytical formula of kappa depending on a, since the variational problem makes this relation extremely complicated.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 17,
+      "text": "Even in the field of pure math, it is still very hard to obtain an explicit formula of kappa for a general Markov process.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eEnYWC3Q",
+      "rebuttal_id": "Syx9fKn7RX",
+      "sentence_index": 18,
+      "text": "However, for this special case, we will keep trying to solve it in the future.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

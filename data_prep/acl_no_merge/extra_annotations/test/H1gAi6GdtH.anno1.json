@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "forum_id": "rJehVyrKwH",
+    "review_id": "H1gAi6GdtH",
+    "rebuttal_id": "B1ezIjyQiH",
+    "title": "And the Bit Goes Down: Revisiting the Quantization of Neural Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehVyrKwH&noteId=B1ezIjyQiH",
+    "annotator": "anno1"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 0,
+      "text": "This paper addresses to compress the network weights by quantizing their values to some fixed codeword vectors.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 1,
+      "text": "The authors aim to reduce the distortion of each layer rather than the weight distortion.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 2,
+      "text": "The proposed algorithm first selects the candidate codeword vectors using k-means clustering and fine-tune them via knowledge distillation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 3,
+      "text": "The authors verify the proposed algorithm by comparing it with existing algorithms for ResNet-18 and ResNet-50.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 4,
+      "text": "Overall, I think that the proposed algorithm is easy to apply and the draft is relatively well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 5,
+      "text": "Some questions and doubts are listed below.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 6,
+      "text": "-In k-means clustering (E-step and M-step), is it correct to multiply \\tilde x to (c-v)?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 7,
+      "text": "I think that the error arising from quantizing v into c is only affected by a subset of rows of \\tilde x. For example, if v is the first subvector of w_j, then I think that only 1-st, m+1-th, 2m+1-th, \u2026 rows of \\tilde x affect to the error.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 8,
+      "text": "-Does minimizing reconstruction error minimizes the training loss (before any further fine-tuning) compared to na\u00efve PQ? If not,",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 9,
+      "text": "-Is there any guideline for choosing the optimal number of centroids and the optimal block size given a target compression rate?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "sentence_index": 10,
+      "text": "-Is there any reason not comparing the proposed algorithm with other compression schemes? (e.g., network pruning and low-rank approximation)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 3 for raising important questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 1,
+      "text": "We answer them below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 2,
+      "text": "Using \\tilde x in the E- and M-steps.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 3,
+      "text": "We agree with Reviewer 3 that \u201cthe error arising from quantizing v into c is only affected by a subset of rows of \\tilde x\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 4,
+      "text": "However, we solve Equation (2) with this proxy algorithm for two reasons.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 5,
+      "text": "First, using the full \\tilde x matrix allows to factor the computation of the pseudo-inverse of \\tilde x and thus allows for a much faster algorithm, see answer to Reviewer 2 and the details of the M-step in the paper (as well as footnote 2).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 6,
+      "text": "Second, early (and slow) experiments suggested that the gains were not significant when using the right subsets of \\tilde x in this particular context.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 7,
+      "text": "Minimizing the reconstruction error",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 8,
+      "text": "Our method results in both better reconstruction error and better training loss than na\u00efve PQ *before* any finetuning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 9,
+      "text": "As we state in the paper, applying naive PQ without any finetuning to a ResNet-18 leads to accuracies below 18% for all operating points, whereas our method (without any finetuning) gives accuracy around 50% (not reported in the paper, we will add it in the next version of our paper).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 10,
+      "text": "Choosing the optimal number of centroids/blocks size",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 11,
+      "text": "There is some rationale for the block size, related to the way the information is structured and redundant in the weight matrices (see in particular point 1 of answer to Reviewer 1).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 12,
+      "text": "For instance, for convolutional weight filters with a kernel size of 3x3, the natural block size is 9, as we wish to exploit the spatial redundancy in the convolutional filters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 13,
+      "text": "For the fully-connected classifier matrices and 1x1 convolutions however, the only constraint on the block size if to be a divisor of the column size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 14,
+      "text": "Early experiments when trying to quantize such matrices in the row or column direction gave similar results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 15,
+      "text": "Regarding the number of centroids, we expect byte-aligned schemes (256 centroids indexed over 1 byte) to be more friendly for an efficient implementation of the forward in the compressed domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 16,
+      "text": "Otherwise, as can be seen in Figure 3, doubling the number of centroids results in better performance, even if the curve tends to saturate around k=2048 centroids.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 17,
+      "text": "As a side note, there exists some strategies that automatically adjust for those two parameters (see HAQ for example).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 18,
+      "text": "Comparison with pruning and low-rank approximation",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gAi6GdtH",
+      "rebuttal_id": "B1ezIjyQiH",
+      "sentence_index": 19,
+      "text": "We argue that both pruning and low-rank approximation are orthogonal and complementary approaches to our method, akin to what happens in image compression where the transform stage (e.g., DCT or wavelet) is complementary with quantization. See \u201cDeep neural network compression by in-parallel pruning-quantization\u201d, Tung and Mori for some works investigating this direction.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

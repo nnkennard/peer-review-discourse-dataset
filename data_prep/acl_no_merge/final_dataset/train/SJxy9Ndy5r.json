@@ -1,0 +1,821 @@
+{
+  "metadata": {
+    "forum_id": "HygSq3VFvH",
+    "review_id": "SJxy9Ndy5r",
+    "rebuttal_id": "SJgUsHzqsr",
+    "title": "Self-Supervised State-Control through Intrinsic Mutual Information Rewards",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HygSq3VFvH&noteId=SJgUsHzqsr",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 0,
+      "text": "This paper proposes a self-supervised reinforcement learning approach, Mutual Information-based State-Control (MISC), which maximizes the mutual information between the context states (i.e. robot states) and the states of interest (i.e. states of an object to manipulate).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 1,
+      "text": "For this, they first split the entire state into two mutually exclusive sets of the context states and the states of interest.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 2,
+      "text": "Then, the neural discriminator is trained to estimate the (lower-bound of) mutual information between the two states.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 3,
+      "text": "The (mutual-information) intrinsic reward is computed by the trained neural discriminator, which is used for policy pre-training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 4,
+      "text": "Experimental results show that MISC helps to improve the performance of DDPG/SAC and the learned discriminator can be transferred to different environments.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 5,
+      "text": "Detailed comments and questions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 6,
+      "text": "- In the paper, the states are represented by only object positions (x, y, z). Is this sufficient? (e.g. velocity is unnecessary?)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 7,
+      "text": "- For MISC, the additional assumption is required: the agent should know that which parts of the states are its own controllable state and object's state respectively.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 8,
+      "text": "Is this additional assumption realistic enough and has it been adopted in other previous works? Is there any way to discriminate robot states and object states automatically?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 9,
+      "text": "- Can MISC deal with the problems where the number of objects of interest is more than two? In this case, how can we define mutual information?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 10,
+      "text": "- In Eq. (4), T(x_1:N, y_1:N) is assumed to be decomposable into the sum of T(x_t, y_t) / N. Can this make the lower bound (Eq. (3)) arbitrarily loose since the class of functions becomes very limited?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 11,
+      "text": "- Detailed experimental setups are missing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 12,
+      "text": "e.g. network architecture, hyper-parameters (e.g. I_tran^max), and how they were searched.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 13,
+      "text": "- Similarly to the problem of sparse reward, if the robot and the object are far apart and it is difficult to reach the object with random exploration, it would also be difficult to train the mutual information discriminator. How was the discriminator trained? How many time steps were used to train MI discriminator?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 14,
+      "text": "- It seems that the MI discriminator learns to estimate the 'proximity' between the robot and the object.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 15,
+      "text": "Compared to using just a very simple dense reward (e.g. negative L2 distance between the robot and the object), what would be the advantage of using MI discriminator? It would be great to show the comparison between using simple dense reward and MI discriminator for each Push, Pick&Place, and Slide task.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 16,
+      "text": "- For the MISC+DIAYN, what if we train the agent using MISC and DIAYN at the same time, instead of pre-training MISC first and fine-tuning DIAYN later?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 17,
+      "text": "- It is unclear how MISC-p is performed. Please elaborate on how MISC-p works for prioritization.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 18,
+      "text": "- Also, for MISC-r experiments, the weights between the intrinsic reward bonus and the extrinsic reward are not specified in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 19,
+      "text": "- It seems that MISC is beneficial when the robot should get closer to the object for the success of the task.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 20,
+      "text": "Then, how about the opposite situation? What if the task requires that the robot should 'avoid' the object of interest? Does MISC still work? Is it helpful for the improvement of sample efficiency?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 21,
+      "text": "- In order to pre-train the discriminator network, additional (s,a,s') experiences are required, thus it seems difficult to say that it is better for exploration than VIME.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "sentence_index": 22,
+      "text": "- In section 4.3, what happens if we transfer the learned discriminator to Pick&Place from Push that has a gripper fixed to be closed, rather than the opposite direction (i.e. from Pick&Place to Push)? Does the MISC-t still well work? Can the learned MI discriminator be transferred to different tasks even when the state space is different?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 0,
+      "text": "Thank you for the comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 1,
+      "text": "To review\u2019s questions:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 2,
+      "text": "- As the experimental results shows, with position information alone, the agent is able to learn to push or pick up the object, therefore we consider position information alone (without velocity information) is sufficient in our case.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 3,
+      "text": "- For MISC, the method needs to know what are the states of interests and what are the context state.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 4,
+      "text": "While, the states of interest can be any states that users are interested in, such as a part of the robot states or the object states.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 5,
+      "text": "The context states are some other states, which are different from the states of interest.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 6,
+      "text": "In robotic tasks, the states of the robot and the object states are normally available [Andrychowicz et al 2018, Plappert et al 2018].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 7,
+      "text": "To automatically detect the state of interests and the context states, we can train the agent with random state splits and then chose the combination, which is suitable for the tasks at hand.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 8,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 9,
+      "text": "[1] Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, and Wojciech Zaremba. Hindsight experience replay. In Advances in Neural Information Processing Systems, pp. 5048\u20135058, 2017.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 10,
+      "text": "[2] Matthias Plappert, Marcin Andrychowicz, Alex Ray, Bob McGrew, Bowen Baker, Glenn Pow- ell, Jonas Schneider, Josh Tobin, Maciek Chociej, Peter Welinder, et al. Multi-goal reinforce- ment learning: Challenging robotics environments and request for research. arXiv preprint arXiv:1802.09464, 2018.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 11,
+      "text": "- Yes, MISC can deal with the case, when there are multiple objects of interest.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 12,
+      "text": "We added new experiments showing the agent can learn to manipulate two balls.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 13,
+      "text": "We define the mutual information intrinsic reward as I(S^i_{1}, S^c)+I(S^i_{2}, S^c).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 14,
+      "text": "The experimental results are shown in the new video at https://youtu.be/l5KaYJWWu70?t=148, where we show that a robot car can learn to manipulate two balls in the same episode.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 15,
+      "text": "- Equation (4) is not the mutual information between two trajectories of states.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 16,
+      "text": "It is an estimation of mutual information between two sets of states. And the states are sampled from the same trajectory.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 17,
+      "text": "Therefore, we do not need to decompose Equation (4) to evaluate Equation (3).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 18,
+      "text": "- We add the experimental details in the Appendix.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 19,
+      "text": "- The discriminator is trained along with the policy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 20,
+      "text": "For example, in the case that we update the agent 200 times in each epoch, then we also update the MISC 200 times per epoch.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 21,
+      "text": "For more detailed information, please refer to our code at https://github.com/misc-project/misc",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 22,
+      "text": "- Compared to the dense reward, with the negative L2 distance between the robot and the object, the robot can only learn to reach the object but will not learn to push or pick up the object because when the robot reaches the object, the negative L2 distance is already zero.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 23,
+      "text": "However, MISC has the advantage that it not only enables the agent to learn to reach but also learn to push and pick & place.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 24,
+      "text": "- If we train the MISC and DIAYN at the same time, the DIAYN reward might be dominant. Subsequently, The agent might not learn to control the states of interests with MISC.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 25,
+      "text": "- MISC-p works similarly to PER.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 26,
+      "text": "The main difference is that MISC-p uses the estimated mutual information quantity as a priority, while PER uses the TD-error as a priority for replay.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 27,
+      "text": "For more detail on PER, please refer to the original PER paper [Schaul et al 2016].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 28,
+      "text": "Reference:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 29,
+      "text": "Tom Schaul, John Quan, Ioannis Antonoglou, and David Silver. Prioritized experience replay. In International Conference on Learning Representations, 2016.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 30,
+      "text": "- We first scale the intrinsic and the extrinsic reward between 0 and 1 and then use equal weights for these two rewards.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 31,
+      "text": "- For the opposite situation, we can use negative mutual information rewards to encourage the agent to learn to \u201cavoid\u201d some objects.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 32,
+      "text": "- The discriminator uses the same amount of (s,a,s') experience as VIME consumes because the discriminator is fixed after pre-training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 33,
+      "text": "VIME can only be trained along with the policy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 34,
+      "text": "VIME cannot be pre-trained, otherwise, it won\u2019t detect novel states.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJxy9Ndy5r",
+      "rebuttal_id": "SJgUsHzqsr",
+      "sentence_index": 35,
+      "text": "- Transfer the learned discriminator from Push to the Pick&Place should still help the agent to learn the pick & place task because the transferred discriminator will help the agent to learn to reach the object at least. As long as the state inputs for the discriminator are the same, then MI discriminator can be transferred among different tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

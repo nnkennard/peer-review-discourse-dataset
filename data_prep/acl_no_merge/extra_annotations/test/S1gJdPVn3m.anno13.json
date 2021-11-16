@@ -1,0 +1,791 @@
+{
+  "metadata": {
+    "forum_id": "SkgToo0qFm",
+    "review_id": "S1gJdPVn3m",
+    "rebuttal_id": "B1gm0gxqp7",
+    "title": "Transferrable End-to-End Learning for Protein Interface Prediction",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkgToo0qFm&noteId=B1gm0gxqp7",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 0,
+      "text": "For the task of predicting interaction contact among atoms of protein complex consisting of two interacting proteins, the authors propose to train a Siamese convolutional neural network, noted as SASNet, and to use the contact map of two binding proteins\u2019 native structure.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 1,
+      "text": "The authors claim that the proposed method outperforms methods that use hand crafted features; also the authors claim that the proposed method has better transferability.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 2,
+      "text": "My overall concern is that the experiment result doesn\u2019t really fully support the claim in the two aspects: 1) the SASNet takes the enriched dataset as input to the neural net but it also uses the complex (validation set) to train the optimal parameters, so strictly it doesn\u2019t really fit in the \u201ctransfer\u201d learning scenario.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 3,
+      "text": "Also, the compared methods don\u2019t really use the validation set from the complex data for training at all.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 4,
+      "text": "Thus the experiment comparison is not really fair.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 5,
+      "text": "2) The experiment results include standard errors for different replicates where such replicates correspond to different training random seeds (or different samples from the enriched set?), however, it doesn\u2019t include any significance of the sampling.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 6,
+      "text": "Specifically, the testing dataset is fixed.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 7,
+      "text": "A more rigorous setting is to, for N runs, each run splitting the validation and testing set differently.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 8,
+      "text": "Since this paper is an application paper, rather than a theoretical paper that bears theoretical findings, I would expect much more thorough experimental setup and analysis.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 9,
+      "text": "Currently it is still missing discussion such as, when SASNet would perform better and when it would perform worse, what it is that the state of the art features can\u2019t capture while SASNet can.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 10,
+      "text": "Moreover, it is the prediction performance that matters to such task, but the authors remove the non-structure features from the compared methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 11,
+      "text": "Results and discussion about how the previous methods with full features perform compared to SASNet, and also how we can include those features into SASNet should complete the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 12,
+      "text": "Overall the paper is well written, and I do think the paper could be much stronger the issues above are addressed.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 13,
+      "text": "Some minor issues:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 14,
+      "text": "1)\ton page 4, Section 3, the first paragraph, shouldn\u2019t \u201cC_p^{val} of 55\u201d be \u201cC_p^{test} of 55\u201d?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 15,
+      "text": "2)\tIt is not clear what the \u201creplicates\u201d refer to in the experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "sentence_index": 16,
+      "text": "3)\tSome discussion on why the \u201cSASNet ensemble\u201d would yield better performance would be good; could it be overfitting?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 1,
+      "text": "We address their comments individually below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 2,
+      "text": "> My overall concern is that the experiment result doesn\u2019t really fully support the claim in the two aspects: 1) the SASNet takes the enriched dataset as input to the neural net but it also uses the complex (validation set) to train the optimal parameters, so strictly it doesn\u2019t really fit in the \u201ctransfer\u201d learning scenario.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 3,
+      "text": "Response: Our work is indeed not classical transfer learning -- it is in fact an even stricter variant.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 4,
+      "text": "We do not re-train the parameters of the neural network at all using C_p, which is typically done as a \u201cfine-tuning\u201d step in the transfer learning scenario.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 5,
+      "text": "So while we do use C_p^{val} for model selection (i.e., hyperparameter tuning), this is still much less use of the data-poor dataset than in the common transfer learning setting of actually fine-tuning the parameters of the neural network using a subset of the data from the data-poor dataset.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 6,
+      "text": "The use of C_p^{val} for hyperparameter tuning was incidental and not a central point of our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 7,
+      "text": "To really make this clear, we have updated the paper to demonstrate that even if we do not use C_p^{val} for model selection, and instead select from the same class of models we previously generated by using a randomly selected held-out set C_r^{val}, we still obtain state-of-the-art performance (0.892 [0.885 +/- 0.009]).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 8,
+      "text": "In this formulation, C_p is not used at all by our method until test time.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 9,
+      "text": "> Also, the compared methods don\u2019t really use the validation set from the complex data for training at all.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 10,
+      "text": "Thus the experiment comparison is not really fair.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 11,
+      "text": "The competing models do make use of validation set C_p^{val} from the complex data to select amongst the most important hyperparameters of their model -- which is equivalent to what we did in our initial formulation, and favors the competing methods compared to if we use C_r^{val} for hyperparameter search instead.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 12,
+      "text": "> 2) The experiment results include standard errors for different replicates where such replicates correspond to different training random seeds (or different samples from the enriched set?), however, it doesn\u2019t include any significance of the sampling.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 13,
+      "text": "Specifically, the testing dataset is fixed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 14,
+      "text": "A more rigorous setting is to, for N runs, each run splitting the validation and testing set differently.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 15,
+      "text": "Response: The replicates correspond to different training and validation samples of the enriched set -- we have clarified this in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 16,
+      "text": "While it is true that the hyperparameter validation set was initially fixed, the switch to use C_r^{val} as above resolves this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 17,
+      "text": "The testing data C_p^{test} is that which has been used in the prior works we compare to (Fout et al. 2017; Sanchez-Garcia et al. 2018).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 18,
+      "text": "Furthermore, use of this subset for performance evaluation is justified as as C_p^{test} corresponds to latest released structures in C_p, leading to a more accurate assessment of how such methods would perform on unreleased structures (as they do no sequence identity pruning).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 19,
+      "text": "Thus our experimental set up",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 20,
+      "text": "is rigorous and justified.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 21,
+      "text": "> Since this paper is an application paper, rather than a theoretical paper that bears theoretical findings, I would expect much more thorough experimental setup and analysis.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 22,
+      "text": "Currently it is still missing discussion such as, when SASNet would perform better and when it would perform worse, what it is that the state of the art features can\u2019t capture while SASNet can.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 23,
+      "text": "Response: As we discuss above, we believe our experimental setup and analysis is sufficient to demonstrate that our atomic representation transfers much better across atomic tasks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 24,
+      "text": "We have also added to our discussion, making clear that our method represents a significant advantage over competing methods when detailed atomic information is available.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 25,
+      "text": "Competitors rely on amino acid-level features that fail to capture specific atomic positions but can be better when the structural is less detailed or accurate.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 26,
+      "text": "> Moreover, it is the prediction performance that matters to such task, but the authors remove the non-structure features from the compared methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 27,
+      "text": "Results and discussion about how the previous methods with full features perform compared to SASNet, and also how we can include those features into SASNet should complete the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 28,
+      "text": "Response:",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 29,
+      "text": "As our paper is primarily about the power and transferrability of our structural features for atomic tasks, we believe a detailed investigation of non-structural features is mostly outside of the scope of this work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 30,
+      "text": "To show that we can easily include these features, we have included in our appendix some results including non-structural features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 31,
+      "text": "When adding in the sequence features used by Fout et al. via a simple linear model combining our final hidden layer and the additional sequence features, we are able to achieve a superior performance of 0.921 (0.914 +/- 0.009) versus their performance of 0.896 (0.894 +/- 0.004).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 32,
+      "text": "While BIPSPI (Sanchez-Garcia et al. 2018) does achieve the best combined performance at 0.942, they also use additional sequence correlation features (note their structure-only performance is comparable to that of Fout et al).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 33,
+      "text": "> Some discussion on why the \u201cSASNet ensemble\u201d would yield better performance would be good; could it be overfitting?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 34,
+      "text": "Response: We have removed the SASNet ensemble from the paper, as it was based on C_p^{val} and confuses the point we are making about minimally relying on C_p for training and validation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1gJdPVn3m",
+      "rebuttal_id": "B1gm0gxqp7",
+      "sentence_index": 35,
+      "text": "We could definitely investigate further why this mild ensembling yields a small performance increase, but we see this as tangential to the overarching points of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

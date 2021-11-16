@@ -1,0 +1,1530 @@
+{
+  "metadata": {
+    "forum_id": "SJeq9JBFvH",
+    "review_id": "Syerno7kqH",
+    "rebuttal_id": "r1gTIpmuiH",
+    "title": "Deep probabilistic subsampling for task-adaptive compressed sensing",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJeq9JBFvH&noteId=r1gTIpmuiH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 0,
+      "text": "This paper introduces  a novel DPS(Deep Probabilistic Subsampling) framework for the task-adaptive  subsampling case, which attempts to resolve the issue of end-to-end optimization of an optimal subset of signal with jointly learning a sub-Nyquist sampling scheme and a predictive model for downstream tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 1,
+      "text": "The parameterization is used to simplify the subsampling distribution and ensure an expressive yet tractable distribution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 2,
+      "text": "The new approach contribution is applied to  both reconstruction and classification tasks and demonstrated with a suite of experiments in a toy dataset, MINIST, and COFAR10.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 3,
+      "text": "Overall, the paper requires significant improvement.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 4,
+      "text": "1. The approach is not well justified either by theory or practice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 5,
+      "text": "There is no experiment clearly shows convincing evidence of the correctness of the proposed approach or its utility compared to existing approaches (Xie & Ermon (2019); Kool et al. (2019); Pl\u00c2\u0161otz & Roth (2018) ).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 6,
+      "text": "2. The paper never clearly demonstrates the problem they are trying to solve (nor well differentiates it from the compressed sensing problem  or sample selection problem)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 7,
+      "text": "The method is difficult to understand, missing many details and essential explanation, and generally does not support a significant contribution.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 8,
+      "text": "3. The paper is not nicely written or rather easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 9,
+      "text": "The model is not well motivated and the optimization algorithm is also not well described.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 10,
+      "text": "4. A theoretical analysis of the convergence of the optimization algorithm could be needed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 11,
+      "text": "5. The paper is imprecise and unpolished and the presentation needs improvement.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 12,
+      "text": "**There are so many missing details or questions to answer**",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 13,
+      "text": "1. What is the Gumbel-max trick?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 14,
+      "text": "2. How to tune the parameters discussed in training details in the experiments?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 15,
+      "text": "3. Why to use experience replay for the linear experiments?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 16,
+      "text": "4. Are there evaluations on the utility of proposed compared to existing approaches?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 17,
+      "text": "5. Does the proposed approach work in real-world problems?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 18,
+      "text": "6. Was there any concrete theoretical guarantee to ensure the convergence of the algorithm.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "sentence_index": 19,
+      "text": "[Post Review after discussion]\u0010: The uploaded version has significantly improved over the first submission. It is now acceptable.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 0,
+      "text": "Question 3:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 1,
+      "text": "We did our best to write the paper such that it includes all details needed to fully understand the proposed method and its theoretical background.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 2,
+      "text": "The referee indicates (in sharp contrast to referee 3) that the paper is not nicely written, nor easy to follow.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 3,
+      "text": "We invite the referee to be specific about the sections of the original manuscript that need more clarification, allowing us to revise these sections.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 4,
+      "text": "Question 4:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 5,
+      "text": "The optimization algorithm used is the ADAM optimizer (Kingma & Ba, 2014).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 6,
+      "text": "We refer to section 4 of Kingma & Ba (2014) for a proof of convergence for convex functions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 7,
+      "text": "It is known that that loss surfaces of deep neural networks are typically non-convex, however the gap between global and local minima is believed to be small for (see our answer to the referee\u2019s last question for more detail on this statement).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 8,
+      "text": "Question 5:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 9,
+      "text": "We kindly ask the reviewer to elaborate on the given statement.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 10,
+      "text": "Could the reviewer indicate which sections are found to be imprecise and unpolished, and which parts of the manuscript need a better presentation?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 11,
+      "text": "=====================================",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 12,
+      "text": "Second part of the review",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 13,
+      "text": "=====================================",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 14,
+      "text": "Question 1:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 15,
+      "text": "We specify the Gumbel-max trick in the paragraph below equation 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 16,
+      "text": "To make the paper more self-contained, we will extend this paragraph to further clarify the Gumbel-max trick.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 17,
+      "text": "We also refer to our answer to the first question of this referee, in which we elaborated more on the Gumbel-max trick as well.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 18,
+      "text": "Question 2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 19,
+      "text": "All training parameters were tuned empirically.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 20,
+      "text": "However, we agree it is worth elaborating on our insights regarding the influence on performance of some of them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 21,
+      "text": "We experienced that performance was most sensitive to the learning rates for the sampling and task models, and the temperature parameter tau of the softmax relaxation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 22,
+      "text": "We augmented the discussion of our revised manuscript to share these insights.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 23,
+      "text": ".",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 24,
+      "text": "Question 3:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 25,
+      "text": "We know experience replay as a reinforcement learning technique for storing previous state/action pairs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 26,
+      "text": "However, our method does not make use of reinforcement learning, so could the reviewer please elaborate how experience replay would relate to our method?",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 27,
+      "text": "Question 4:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 28,
+      "text": "In Section 4.1 (MNIST classification) we already compared our proposed sampling method to used Gumbel top-K sampling for data subsampling.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 29,
+      "text": "We are currently also running experiments that allow for extensive comparison with the recently proposed LOUPE method by Bahadir et al. (2019).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 30,
+      "text": "Question 5:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 31,
+      "text": "A large part of the experiments in this work are focusing on compressive/partial Fourier measurements.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 32,
+      "text": "This adequately reflects the measurement setup in many real-world problems, such as k-space measurement in magnetic resonance imaging (Lustig et al.), Xampling for ultrasound imaging (Eldar et al.), and non-uniform step frequency radar (Huang, 2014).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 33,
+      "text": "In addition, we cover direct pixel sampling, related to real-world applications such as compressive cameras.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 34,
+      "text": "We would like to emphasize that the proposed approach is measurement-domain agnostic, and therefore can be applied across a vast amount of real-world problem.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 35,
+      "text": "In addition, our ongoing research already shows promising results for real-world applications such as magnetic resonance imaging and ultrasound imaging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 36,
+      "text": "This is part of future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 37,
+      "text": "Question 6:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 38,
+      "text": "The trends towards using deep learning for data-driven compressed sensing indeed has the downside of not having guarantees on finding a global minimum, as the loss surface of a NN is highly non-linear and non-convex.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 39,
+      "text": "Still, these data-driven results have shown to be very promising (Gregor et al., 2010; Jin,2019; Bahadir et al., 2019; Mousavi, 2019)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 40,
+      "text": "However due to the weight space symmetry problem (Goodfellow et al., 2016) the loss surface contains a vast amount of local minima with the same error value.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 41,
+      "text": "The size of the gap between local and the global minima remains an open field of research.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 42,
+      "text": "However, citing from Goodfellow et al. (2016):",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 43,
+      "text": "\u201cThe problem remains an active area of research, but experts now suspect that,",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 44,
+      "text": "for su\ufb03ciently large neural networks, most local minima have a low cost function",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 45,
+      "text": "value, and that it is not important to \ufb01nd a true global minimum rather than to",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 46,
+      "text": "\ufb01nd a point in parameter space that has low but not minimal cost (Saxe et al.,",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 47,
+      "text": "2013; Dauphin et al., 2014; Goodfellow et al., 2015; Choromanska et al., 2014)\u201d",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 48,
+      "text": "As such, we leverage the empirically-shown ability of stochastic gradient descent to optimize this non-convex function in our NN for finding local minima.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 49,
+      "text": "Indeed there is no guarantee on finding a global optimum.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 50,
+      "text": "We thank the reviewer for the feedback.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 51,
+      "text": "The reviewer states in his/her summary: The parameterization is used to simplify the subsampling distribution.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 52,
+      "text": "We would like to comment on this, by stating that the reparametrization is not used for simplifying the subsampling distribution; on the contrary it actually enables sampling from this trained distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 53,
+      "text": "In fact, without this reparametrization, our generative sampling model (DPS) would not be differentiable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 54,
+      "text": "Below we elaborate upon the questions and raised concerns by the reviewer:",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 55,
+      "text": "Question 1:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 56,
+      "text": "We respectfully disagree with the referee\u2019s conclusions, and will elaborate on the above statements in the following.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 57,
+      "text": "While we disagree, we did however undertake a significant effort to further clarify and provide additional evidence in the revised manuscript, taking into account these comments.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 58,
+      "text": "Regarding the theoretical correctness of deep probabilistic subsampling, in section 3.2 we explain how we incorporate a well-known reparametrization trick, termed the Gumbel-max trick (Gumbel,1954), to sample from a categorical probability distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 59,
+      "text": "Note that this shares similarities with the reparameterization trick used for sampling from trained gaussian distributions in a vanilla variational autoencoder.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 60,
+      "text": "The Gumbel-max reparametrization perturbs the logits of the categorical distribution with Gumbel noise after which, by means of the argmax, the highest value is selected.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 61,
+      "text": "Gumbel (1954) showed that this reparametrization allows sampling from the original categorical distribution.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 62,
+      "text": "Recent state-of-the art work on a relaxation of this trick, termed Gumbel-softmax sampling (Jang et al., 2017) or the concrete distribution (Maddison et al., 2016), allows us to apply this relaxed reparametrization inside a neural network as it enables gradient calculation, which is needed for error backpropagation in the training procedure of the network.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 63,
+      "text": "We would like to ask the reviewer what is believed to be missing from this explanation on the subsampling part of our proposed method.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 64,
+      "text": "Regarding the theoretical basis used for the design of the task network; we took a theoretically principled approach by exploiting a model-driven network architecture for the CIFAR10 reconstruction problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 65,
+      "text": "To that end, we unfold the iterations of a proximal gradient scheme (Mardani et al., NeurIPS, 2018), allowing for explicit embedding of the acquisition model (and therewith the learned sampling) in the reconstruction network.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 66,
+      "text": "Regarding the referee\u2019s conclusion that the manuscript lacks comparison to the approaches of (Xie & Ermon (2019); Kool et al. (2019); Pl\u00f6tz & Roth (2018): We would like to point out that these three references all together put forward the Gumbel top-k method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 67,
+      "text": "Note that the use of the Gumbel top-k method for compressive sampling is also new, and in fact constitutes a specific case (constrained version with shared weights across distributions) of the proposed deep probabilistic subsampling (DPS) framework.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 68,
+      "text": "In the MNIST experiments we already included Gumbel top-k sampling, but we will also add this for the other experiments in the revised manuscript.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 69,
+      "text": "In addition, we added a thorough comparison of the DPS to LOUPE (Bahadir et al, 2019), a recently proposed data-driven method for subsampling.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 70,
+      "text": "Question 2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 71,
+      "text": "We would first like to refer the referee to third paragraph of the introduction, where we explicitly formulate the main shortcoming of compressed sensing:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 72,
+      "text": "\u201cThese [compressed sensing] methods, however, are lacking in the sense that they do not fully exploit both the underlying data distribution and information to solve the downstream task of interest.\u201d",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 73,
+      "text": "Then, in the list of main contributions, we write:",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 74,
+      "text": "\u201cDPS: A new regime for task-adaptive subsampling using a novel probabilistic deep learning framework for jointly learning a sub-Nyquist sampling scheme with a predictive model for downstream tasks\u201d",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 75,
+      "text": "Subquestion 2:",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 76,
+      "text": "We are of course willing to further specify any details that the referee misses in the current paper. We would therefore like to kindly invite the referee to be specific about the details that he/she would like to be added to the manuscript.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 77,
+      "text": "We respectfully disagree with the referee\u2019s conclusion that the method does not support a significant contribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 78,
+      "text": "We propose a fully-probabilistic generative model for trainable sampling, that exploits both the underlying data distribution and information to solve the downstream task of interest.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 79,
+      "text": "Our generative model builds upon recent advances on Gumbel max and top-k reparameterizations and their relaxations, showing for the first time how discrete sample selection can be done in a data-driven and task-adaptive fashion.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syerno7kqH",
+      "rebuttal_id": "r1gTIpmuiH",
+      "sentence_index": 80,
+      "text": "This opens up a vast array of new opportunities in compressed sensing.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

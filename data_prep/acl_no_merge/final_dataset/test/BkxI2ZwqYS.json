@@ -1,0 +1,715 @@
+{
+  "metadata": {
+    "forum_id": "rJlqoTEtDB",
+    "review_id": "BkxI2ZwqYS",
+    "rebuttal_id": "rke7afxSjr",
+    "title": "PowerSGD: Powered Stochastic Gradient Descent Methods for Accelerated Non-Convex Optimization",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJlqoTEtDB&noteId=rke7afxSjr",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 0,
+      "text": "This paper investigates an SGD variant (PowerSGD) where the stochastic gradient is raised to a power of $\\gamma \\in [0,1]$.  The authors introduce PowerSGD and PowerSGD with momentum (PowerSGDM).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 1,
+      "text": "The theoretical proof of  the convergence is given and experimental results show that the proposed algorithm converges faster than some of the existing popular adaptive SGD techniques.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 2,
+      "text": "Intuitively, the proposed PowerSGD can boost the gradient (since $\\gamma \\in [0,1]$) so it may be helpful for the gradient of the lower layers of a deep network which may be hit by the vanishing gradient issue.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 3,
+      "text": "This may give rise to a faster convergence.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 4,
+      "text": "So overall the idea makes sense but I have the following concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 5,
+      "text": "1.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 6,
+      "text": "The major issue I have with this paper is Theorem 3.1 on the ergodic convergence rate of the proposed PowerSGD.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 7,
+      "text": "At the first glance, it is $O(\\frac{1}{T})$ which is faster than the conventional SGD convergence rate $O(\\frac{1}{\\sqrt{T}})$.  But after a closer look, this rate is obtained by a very strong assumption on the batch size $B_{t}=T$.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 8,
+      "text": "In other words, when the number of iterations is large, the batch size will be large too.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 9,
+      "text": "I consider this assumption unrealistic.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 10,
+      "text": "Given that $T$ is typically very large (it is iterations, not epochs),  it will require a huge batch size, probably close to the whole training set.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 11,
+      "text": "In this case, it is basically a GD, not SGD any more.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 12,
+      "text": "That's why the rate is $O(\\frac{1}{T})$, which is the convergence rate of GD.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 13,
+      "text": "I would like to see a convergence proof where the batch size $B_{t}$ is treated as a small constant like other SGD proofs assume.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 14,
+      "text": "Actually in the experiments the authors never use an increasing batch size.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 15,
+      "text": "Instead, a constant batch size 128 is used.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 16,
+      "text": "Therefore,  the faster convergence demonstrated in the experiments can not be explained by Theorem 3.1 or Theorem 3.2.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 17,
+      "text": "2. There are numerous inaccuracies in the proof given the supplementary material.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 18,
+      "text": "For instance, in Eq.7,",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 19,
+      "text": "$\\nabla f(x) \\sigma(\\nabla f(x))$",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 20,
+      "text": "should be $\\nabla f(x)^{T} \\sigma(\\nabla f(x))$   The random variable $\\xi_{t}$ should be a scalar on training samples, not a vector, etc..  The authors should clean it up.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 21,
+      "text": "3. It would be helpful to show the $\\gamma$ value on each experiment with different tasks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 22,
+      "text": "It would be good to know how $\\gamma$ varies across tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 23,
+      "text": "4. I think in the comparative experiments, the plain SGD should be added as another reference algorithm.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "sentence_index": 24,
+      "text": "5. The term \"PowerSGD\" seems to have been used by other papers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 0,
+      "text": "We thank you for your comments and hope that the following response will address your concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 1,
+      "text": "1. We did stated both in the Theorem statements and Remark 3.4 that the a large batch size $B_t=T$ is used for the convergence proof.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 2,
+      "text": "This means the effective rate of convergence is $O(1/\\sqrt{T})$ as pointed out by the reviewer.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 3,
+      "text": "This rate matches the currently best known rate of convergence for SGD (see, e.g. Ge et al., COLT'15).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 4,
+      "text": "We have now made this very clear in both Remarks 3.3 and 3.5.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 5,
+      "text": "Please see changes highlighted in blue and also our response to Reviewer 2 on novelty of the convergence analysis.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 6,
+      "text": "If our response addresses your main concern, we sincerely hope you that you can reconsider your score.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 7,
+      "text": "For your other points, we have made the following changes in the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 8,
+      "text": "2. We have checked and fixed a few typos in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 9,
+      "text": "Please note that we wrote  $\\nabla f(x)\\cdot \\sigma (\\nabla f(x))$ in eq. (7) as a dot product.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 10,
+      "text": "So it is the same as $\\nabla f(x)^{T} \\sigma(\\nabla f(x))$. This notation was explained in the notation section.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 11,
+      "text": "If you have any remaining concerns, please let us know.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 12,
+      "text": "3. We have added the values for chosen $\\gamma$ in the updated version (see caption of Figure 1).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 13,
+      "text": "4. We plan to add SGD to the experiments, but this may take a while to complete, especially for some of the experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 14,
+      "text": "We promise to do so in the final version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 15,
+      "text": "5. We were not aware of this at the time of submission.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 16,
+      "text": "We have changed this to PoweredSGD. If you have any alternative suggestions, please let us know.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 17,
+      "text": "We summarize the main contributions of the paper as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 18,
+      "text": "- In the theoretical part, we provided more concise convergence rate analysis for stochastic momentum methods in the non-convex setting.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 19,
+      "text": "This was made possible by a sharp estimate of the accumulated momentum terms (Lemma B1).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 20,
+      "text": "We believe this is an important but under-explored topic (Yan et al., 2018).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 21,
+      "text": "- In the experimental part, we empirically showed that the proposed optimisation algorithms have potential to solve realistic problems.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 22,
+      "text": "We are not claiming these variants will outperform all other methods in all training cases, but we sincerely believe that the results are promising.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 23,
+      "text": "In particular, we have demonstrated their potential benefits of mitigating gradient vanishing and combining other techniques for accelerating optimization.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 24,
+      "text": "We do admit the gap between our theoretical analysis and experiments in the sense that the analysis does not account for the initial acceleration observed in many experiments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 25,
+      "text": "We think this is a very interesting question for future research and hope that this paper can motivate further research in this area.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxI2ZwqYS",
+      "rebuttal_id": "rke7afxSjr",
+      "sentence_index": 26,
+      "text": "We agree with your intuition that this may have something to do with $\\gamma\\in (0,1)$ boosting the gradients.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

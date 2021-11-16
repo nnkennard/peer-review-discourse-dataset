@@ -1,0 +1,1310 @@
+{
+  "metadata": {
+    "forum_id": "HyNmRiCqtm",
+    "review_id": "rkg0nroYn7",
+    "rebuttal_id": "B1xsXfY7RQ",
+    "title": "CDeepEx: Contrastive Deep Explanations",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyNmRiCqtm&noteId=B1xsXfY7RQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 0,
+      "text": "The paper proposes an approach to provide contrastive visual explanations for deep neural networks -- why the network assigned more confidence to some class A as opposed to some other class B. As opposed to the applicability of previous approaches to this problem -- the approach is designed to directly answer the contrastive explanations question rather adapting other visual saliency techniques for the same.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 1,
+      "text": "Overall, while I find the proposed approach simple -- the paper needs to address some issues regarding the claims made and should provide more quantitative experimental results justifying the same.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 2,
+      "text": "- Apart from some flaws in the claims made in the paper, the paper is easy to follow and understand.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 3,
+      "text": "- Assuming the availability of a latent model over the images of the input distribution, the proposed approach is directly applicable and faster.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 4,
+      "text": "- The authors clearly highlight the problems associated with existing explanation modalities and approaches; ranging from ones applicable to only specific deep architectures to ones using backpropagation based heuristics.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 5,
+      "text": "- The proposed approach to generate contrastive explanations is simple and is structured along the lines of methods utilizing probe images to explain decisions -- except for the added advantage that the provided explanations are instance-agnostic due to the assumption of a latent model over the input distribution.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 6,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 7,
+      "text": "- One of the problems highlighted in the paper regarding existing explanation modalities is the use of another black-box to explain the decisions of an existing deep network (also somewhat of a black-box) which the authors claim their model does not suffer from.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 8,
+      "text": "The proposed approach provides explanations by operating in the latent space of a learned generative model of the input distribution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 9,
+      "text": "The learned generator in itself is somewhat of a black-box itself -- there has been prior work indicating how much of the input distribution",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 10,
+      "text": "are GANs able to capture.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 11,
+      "text": "As such, conditioning on a generative model to propose such contrastive explanations is to some extent using another black-box (generator) to explain the decisions of an existing one.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 12,
+      "text": "Thus, the above claim made in the paper does not seem well-founded.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 13,
+      "text": "Furthermore, in experiments, the paper does not provide any quantitatively convincing results to suggest the generator in use is a good one.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 14,
+      "text": "- While the authors suggest that a latent model over the input distribution needs to be trained only once and is applicable off-the-shelf for any further contrastive explanations regarding any network operating on the same dataset -- learning such a model of the input space is an overhead in itself.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 15,
+      "text": "In this light, experiments demonstrating comparisons between GANs and VAEs as the reference generative model for explanations would have made the paper stronger (as the proposed approach relies explicitly on how good the generative model is).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 16,
+      "text": "- The paper proposes an interesting experiment to show that the proposed approach is somewhat capable of capturing slightly adversarial biases in the input domain (adding square to the top-left of images of class \u20188\u2019). While I like this experiment, I feel this has not been explored to completion in the sense of experimenting with robustness with respect to structured as well as unstructured perturbations.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 17,
+      "text": "- Typographical Errors: Section 3.1 repeats the use of D for a discriminator as well as the input distribution.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 18,
+      "text": "Procedure 1 and Procedure 2 share the same titles -- which is slightly misleading.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 19,
+      "text": "In addition, Procedure 1 is not referenced in the text which makes is hard to understand the utility of the same.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 20,
+      "text": "In Section 4.1",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 21,
+      "text": ", the use of Gradcam and Lime to generate counterfactual explanations is not very clear and makes it slightly hard to follow.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 22,
+      "text": "Citations used for Gradcam are wrong -- Sundarajan et al., 2016 should be changed to Selvaraju et al., 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 23,
+      "text": "Experimental Issues:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 24,
+      "text": "- Experimental results are provided only on MNIST and Fashion-MNIST.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 25,
+      "text": "Since the paper focuses explicitly on providing contrastive explanations for choosing a class A over another class B -- experiments on datasets which do not have real-images seem insufficient.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 26,
+      "text": "Additional experiments on at least ImageNet would have made the paper stronger.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 27,
+      "text": "Regarding contrastive explanations, experiments on datasets where distractor classes (y_probe) are present in addition to the class interest (y_true) seem important -- PASCAL VOC, COCO, etc.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 28,
+      "text": "Specifically, since the explanations provided are visual saliency maps the paper would have been stronger if there were experiments suggesting -- what needs to change in a region of an image classified as a \u2018cat\u2019 to be classified as a \u2018dog\u2019 while there is an instance of the class - \u2018dog\u2019 present in the image itself.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 29,
+      "text": "Also, section 7 in Gradcam (https://arxiv.org/pdf/1610.02391.pdf) provides a procedure to generate counter-factual explanations using Gradcam.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 30,
+      "text": "Is there a particular reason the authors did not choose to adopt the above technique as a baseline?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 31,
+      "text": "- Experimental results provided in the paper are only qualitative -- as such, I do not find the comparisons (and improvements) over the existing approaches convincing enough.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 32,
+      "text": "Since, there is no clear metric to evaluate contrastive explanations -- human studies to judge the class-discriminativeness (or trust) of the proposed approach would have made the paper stronger.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "sentence_index": 33,
+      "text": "The authors adressed the issues raised/comments made in the review. In light of my comments below to the author responses -- I am not inclined towards increasing my rating and will stick to my original rating for the paper.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 0,
+      "text": "Comment: One of the problems highlighted in the paper regarding existing",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 1,
+      "text": "explanation modalities is the use of another black-box to explain the",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 2,
+      "text": "decisions of an existing deep network (also somewhat of a black-box) which",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 3,
+      "text": "the authors claim their model does not suffer from.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 4,
+      "text": "Response: While the GAN is certainly another black box, it is a function",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 5,
+      "text": "just of the data (or the data domain), and not a function of the",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 6,
+      "text": "discriminator from which we want to extract explanations.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 7,
+      "text": "Therefore,",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 8,
+      "text": "training different models, switching prediction tasks on the same",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 9,
+      "text": "domain, or any other similar changes would not require changing the GAN.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 10,
+      "text": "Comment: Learning such a model of the input space is an overhead in itself.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 11,
+      "text": "Response: Overhead calculations of some form are almost impossible to",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 12,
+      "text": "avoid.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 13,
+      "text": "Whether this is an overly large computational burdon will depend",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 14,
+      "text": "on the problem, although we believe the GAN or VAE need only be trained once",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 15,
+      "text": "per domain.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 16,
+      "text": "Comment: The paper does not provide any quantitatively convincing results",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 17,
+      "text": "to suggest the generator in use is a good one.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 18,
+      "text": "Response: Measuring the reconstruction accuracy (of goodness of the",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 19,
+      "text": "generator)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 20,
+      "text": "is difficult, as each measure has its own flaws.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 21,
+      "text": "For instance,",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 22,
+      "text": "Norm measures are sensitive to translations in the image.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 23,
+      "text": "Comment: Experiments demonstrating comparisons between GANs and VAEs as the",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 24,
+      "text": "reference generative model for explanations would have made the paper",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 25,
+      "text": "stronger (as the proposed approach relies explicitly on how good the",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 26,
+      "text": "generative model is)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 27,
+      "text": "Response: This is a good suggestion. We have added experiments using",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 28,
+      "text": "with variational autoencoders (VAEs) instead of GANs",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 29,
+      "text": ".",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 30,
+      "text": "We believe these",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 31,
+      "text": "address this concern and some of the comments above.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 32,
+      "text": "Thank you.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 33,
+      "text": "Comment: The paper proposes an interesting experiment to show that the",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 34,
+      "text": "proposed approach is somewhat capable of capturing slightly adversarial",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 35,
+      "text": "biases in the input domain (adding square to the top-left of images of",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 36,
+      "text": "class 8). While I like this experiment, I feel this has not been explored",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 37,
+      "text": "to completion in the sense of experimenting with robustness with respect",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 38,
+      "text": "to structured as well as unstructured perturbations.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 39,
+      "text": "Response: While we could certainly perform more experiments in this vein,",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 40,
+      "text": "we are uncertain what type of unstructured perturbations would be useful",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 41,
+      "text": "(and how then to measure whether the technique captured the correct",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 42,
+      "text": "explanation).",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 43,
+      "text": "Comment: typographical errors...",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 44,
+      "text": "Response:  Thank you.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 45,
+      "text": "We have fixed the typos.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 46,
+      "text": "Comment: Section 7 in Gradcam (https://arxiv.org/pdf/1610.02391.pdf)",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 47,
+      "text": "provides a procedure to generate counter-factual explanations using",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 48,
+      "text": "Gradcam. Is there a particular reason the authors did not choose to adopt",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 49,
+      "text": "the above technique as a baseline?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 50,
+      "text": "Response: The the proposed counter-factual experiment for GCAM produces",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 51,
+      "text": "*any* counter-factual explanation, not a targeted explanation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 52,
+      "text": "It answers",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg0nroYn7",
+      "rebuttal_id": "B1xsXfY7RQ",
+      "sentence_index": 53,
+      "text": "\"why A?\" and not \"why A and not B?\" as we do in this paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

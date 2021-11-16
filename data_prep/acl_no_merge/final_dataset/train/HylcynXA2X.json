@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "forum_id": "Sklv5iRqYX",
+    "review_id": "HylcynXA2X",
+    "rebuttal_id": "S1giTvK6am",
+    "title": "Multi-Domain Adversarial Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Sklv5iRqYX&noteId=S1giTvK6am",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 0,
+      "text": "PROS:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 1,
+      "text": "* Original idea of using separate \"discriminator\" paths for unknown classes",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 2,
+      "text": "* Thorough theoretical explanation",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 3,
+      "text": "*",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 4,
+      "text": "A variety of experiments",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 5,
+      "text": "* Very well-written, and clear paper",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 6,
+      "text": "CONS:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 7,
+      "text": "* The biggest problem for me was the unconvincing results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 8,
+      "text": "MNIST-to-MNIST-M has better baselines  (PixelDA performed better on this task for example), Office is not suitable for domain adaptation experiments anymore unless one wants to be in a few-datasample regime or work with data with noisy labels(the dataset is plagued with label pollution, and there are too few examples per class per domain for NN-based domain adaptation); the results on CELL were not convincing, I don't know the dataset but it seems that baseline NN does better than DA most of the times.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 9,
+      "text": "* Comparison with other methods did not take into account a variety of hyperparameters.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 10,
+      "text": "Although I do understand the problem of evaluation in unsupervised DA, this should have at least been done in the semi-supervised case, and some analysis/discussion should be included for the unsupervised one.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "sentence_index": 11,
+      "text": "What if the proposed method performs that much better than baselines but they hyperparameters are not set correctly?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their encouraging words.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 1,
+      "text": "\"There are better baselines for MNIST to MNIST-M\": yes, the presented method might not outperform all other methods on all other datasets. Still, we hope to convince the reviewer that the results on the other datasets are worth being considered.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 2,
+      "text": "\"Office is not suitable unless one wants to be in a few-datasample regime or work with data with noisy labels\": we would like to point that this regime is quite realistic in Bioimage informatics (noisy, with few samples per class).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 3,
+      "text": "\"The results on Cell are not convincing\": as our goal is multi-domain learning on this dataset, the relevant performance indicator is the average risk over all domains.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 4,
+      "text": "Table 2 details what happens in various categories of cases (on classes with/without labelled samples).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 5,
+      "text": "Despite the (well-known) degradation of the results on labeled classes when one also considers unlabelled classes, the bottom line is that -- regarding the average risk -- our method outperforms the baseline.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 6,
+      "text": "Importantly, MuLANN results on Cell are significantly better than the baseline on all rows which involve unlabeled classes (rows  3, 6, 9, 13), while remaining not significantly different to the baseline on 6/9 of the other rows.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 7,
+      "text": "\"Comparison with other methods did not take into account a variety of hyperparameters\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 8,
+      "text": "The reviewer is right.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 9,
+      "text": "Complementary experiments have thus been performed, and tables 1, 2 updated.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 10,
+      "text": "We investigated the impact of varying the learning rate, the weight lambda on the discriminator loss, the weight dzeta of the known-unknown discrimination loss, the learning rate schedule, lambda schedule as well as using different learning rates for pre-trained layers versus from scratch layers (see Table 5 for more detailed information).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylcynXA2X",
+      "rebuttal_id": "S1giTvK6am",
+      "sentence_index": 11,
+      "text": "These results show a moderate sensitivity of MuLANN, MADA and DANN wrt hyper-parameters and confirm that MuLANN outperforms both MADA and DANN (detailed results available here https://drive.google.com/file/d/1NjtMKF53qmnx4_Jyvh-ofxb0WjzcDvow/view?usp=sharing).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

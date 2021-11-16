@@ -1,0 +1,619 @@
+{
+  "metadata": {
+    "forum_id": "rkeSiiA5Fm",
+    "review_id": "HylYyr91T7",
+    "rebuttal_id": "BkgnVCCK6Q",
+    "title": "Deep Learning 3D Shapes Using Alt-az Anisotropic 2-Sphere Convolution",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkeSiiA5Fm&noteId=BkgnVCCK6Q",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 0,
+      "text": "# Weaknesses",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 1,
+      "text": "Applications are a bit unclear.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 2,
+      "text": "It would be nice to see a better case made for spherical convolutions within the experimental section.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 3,
+      "text": "The experiments on SHREC17 show all three spherical methods under-performing other approaches.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 4,
+      "text": "It leaves it unclear to the reader when someone should choose to utilize a spherical method or when the proposed method would then be preferred compared to other spherical methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 5,
+      "text": "Is there a task that this representation significantly outperforms other spherical methods and non-spherical methods?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 6,
+      "text": "Or a specific useful application where spherical methods in general outperform other approaches?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 7,
+      "text": "# Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 8,
+      "text": "The method is well developed and explained.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "sentence_index": 9,
+      "text": "Ability to implement in a straight-forward manner on GPU.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 0,
+      "text": "Thank you for your positive review, we address your reasonable concern for the applications of the proposed method in below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 1,
+      "text": "Q1:  It would be nice to see a better case made for spherical convolutions within the experimental section.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 2,
+      "text": "A1",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 3,
+      "text": ": We believe the best case is the non-rigid shape classification and retrieval.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 4,
+      "text": "Our method achieves a state-of-the-art classification and retrieval performance on Shrec\u201911.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 5,
+      "text": "The good performance on non-rigid shape is mainly contributed by the use of bijective spherical parameterization method, which obtains the input spherical image without topological information losses.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 6,
+      "text": "When using spherical projection method to represent 3D shape, there will be information loss if the object is non-convex.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 7,
+      "text": "The lossy input affect the performance of rigid shape analysis to some extent.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 8,
+      "text": "Q2: The experiments on SHREC17 show all three spherical methods under-performing other approaches.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 9,
+      "text": "It leaves it unclear to the reader when someone should choose to utilize a spherical method or when the proposed method would then be preferred compared to other spherical methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 10,
+      "text": "Is there a task that this representation significantly outperforms other spherical methods and non-spherical method?",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 11,
+      "text": "A2: The experiments on SHREC17 does show all three spherical methods slightly under-perform some other state-of-the art approaches, We believe this is mainly due to the information losses introduced in the spherical projection process which retains only the convex portion geometric information.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 12,
+      "text": "Future improvements can be added by using:  (1) less lossy input in spherical projection methods (e.g. on top of SEF, and EDF, we can also add other statistic information such as the minimum distance of intersection, mean distance of intersections or standard deviation of the intersection and so on to reduce the information losses); (2) extend the spherical parameterization method on to the general 3D shapes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 13,
+      "text": "Currently, the spherical parameterization method only works for genus-0 closed object.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 14,
+      "text": "The 3D models presented on ModelNet and Shrec\u201917 are of arbitrary genus which prevents us from using spherical parameterization method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 15,
+      "text": "Generalization of spherical parameterization methods to objects with arbitrary topology will be one of the future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 16,
+      "text": "Compared to non-spherical method, spherical image is one of the most compact representation for 3D shape analysis, the spherical convolution methods rely on no data augmentation (for Type I and Type II) or reduced data augmentation (for Type III, only SO(2) rotation augmentation is required).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 17,
+      "text": "Other non-spherical method (such as volumetric or multi-view based methods)  can only be generalized into unknown orientations using SO(3) rotation augmentations, their representation of 3D shapes are either too sparse (voxel model) or too redundant (multi-view projections).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 18,
+      "text": "Compared to SO(3) spherical convolution method (Cohen et al. 2018), our network is computationally efficient (in terms of network model), but we have to admit that this is at the price of required data augmentation",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 19,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 20,
+      "text": "Another advantage is that our network allows local filters and local-to-global multi-level spherical features extraction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 21,
+      "text": "The other two spherical convolution methods (Cohen et al 2018 and Esteves et al 2018) use a lat-lon grid and conduct convolution in the Fourier space, which has a common disadvantage: the Fourier transform does not support local spherical filters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 22,
+      "text": "Another disadvantage is the use of lat-lon grid which introduces unevenness of the perception field (due to the high resolution near the poles, and low resolution at the equator).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 23,
+      "text": "Experimentally, we compared the three spherical convolution methods in Table 3 using Shrec\u201917 perturbed shape retrieval experiment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 24,
+      "text": "Cohen et al 2018 and ours obtain similar performances because both of the methods used anisotropic filters, the former achieves rotational invariant using SO(3) rotations for filters, while ours achieves rotational invariant using alt-az rotation of filter and SO(2) rotation augmentation of input shapes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 25,
+      "text": "As expected, anisotropic filter perform  better than the isotropic filter proposed in Esteves et al 2018 which limits the model capacity.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 26,
+      "text": "Q3:  Is there a specific useful application where spherical methods in general outperform other approaches?",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 27,
+      "text": "A3: As mentioned in Cohen et al 2018, perhaps the most exciting future application of the Spherical CNN is in omnidirectional vision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 28,
+      "text": "Although very little omnidirectional image data is currently available in public repositories, the increasing prevalence of omnidirectional sensors in drones, robots, and autonomous cars makes this a very compelling application of our work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylYyr91T7",
+      "rebuttal_id": "BkgnVCCK6Q",
+      "sentence_index": 29,
+      "text": "Omnidirectional vision is a better application to show the strength of the spherical convolution method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

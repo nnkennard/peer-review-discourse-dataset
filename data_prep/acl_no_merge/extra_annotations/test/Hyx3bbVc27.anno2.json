@@ -1,0 +1,984 @@
+{
+  "metadata": {
+    "forum_id": "SklEEnC5tQ",
+    "review_id": "Hyx3bbVc27",
+    "rebuttal_id": "rJllM_RzaQ",
+    "title": "DISTRIBUTIONAL CONCAVITY REGULARIZATION FOR GANS",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklEEnC5tQ&noteId=rJllM_RzaQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 0,
+      "text": "GANs (generative adversarial network) represent a recently introduced min-max generative modelling scheme with several successful applications.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 1,
+      "text": "Unfortunately, GANs often show unstable behaviour during the training phase.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 2,
+      "text": "The authors of the submission propose a functional-gradient type entropy-promoting approach to tackle this problem, as estimating entropy is computationally difficult.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 3,
+      "text": "While the idea of the submission might be useful in some applications, the work is rather vaguely written, it is in draft phase:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 4,
+      "text": "1. Abbreviations, notations are not defined: GAN, WGAN-GP, DNN, FID (the complete name only shows up in Section 4), softplus, sigmoid, D_{\\theta_{old}}, ...",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 5,
+      "text": "2. While the primary motivation of the work is claimed to be 'mode collapse', it does not turn out from the submission what mode collapse is.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 6,
+      "text": "3. Estimating entropies is a standard practice in statistics and machine learning, with an arsenal of estimators; the motivation of the submission is questionable.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 7,
+      "text": "4. Differentiation w.r.t. functions (or more generally elements in normed spaces) is a well-defined concept in mathematics, including the notions of Gateaux, Frechet and Hadamard differentiability.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 8,
+      "text": "It is not clear why the authors neglect these classical concepts, and are talking about 'random functional perturbations', ... It is also unclear where the optimized transformation (T) lives; the authors are trying to differentiate over some function space which is undefined.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 9,
+      "text": "While the idea of the work might be useful in practice, the current submission requires significant revision and work before publication.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 10,
+      "text": "---",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 11,
+      "text": "After paper revisions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 12,
+      "text": "Thank you for the updates.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "sentence_index": 13,
+      "text": "The submission definitely improved. I have changed my score to '6: Marginally above acceptance threshold'; the suggested regularization can be a useful heuristic for the GAN community.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 0,
+      "text": "Thank you very much for the comment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 1,
+      "text": "We have revised the script to reflect the suggestions, and we would like to articulate on the changes we have made.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 2,
+      "text": "Because we are out of space, we will provide the  answers over several comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 3,
+      "text": "For the list of mentioned references, please see the 'last' comment.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 4,
+      "text": "> 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 5,
+      "text": "Abbreviations, notations are not defined: GAN, WGAN-GP, DNN, FID (the complete name only shows up in Section 4), softplus, sigmoid, D_{\\theta_{old}}, \u2026",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 6,
+      "text": "We clarified the abbreviations for commonly used acronyms, such as Deep Neural Networks and Frechet inception distance, and gave definitions to undefined  symbols.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 7,
+      "text": "> 2. While the primary motivation of the work is claimed to be 'mode collapse', it does not turn out from the submission what mode collapse is.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 8,
+      "text": "We have given more detailed explanation of mode collapse, and provided citation that can be consulted for further information regarding its definition.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 9,
+      "text": "In short, Mode collapse collectively refers to the lack of diversity in generator distribution [1-5].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 10,
+      "text": "This phenomena happens even in the simplest case of generating a mixture of Gaussian Distribution (See Fig 22, [1] for example) .",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 11,
+      "text": "Without any notable countermeasure, GANs tend to produce a distribution with less number of modes than the target distribution .",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 12,
+      "text": "> 3. Estimating entropies is a standard practice in statistics and machine learning, with an arsenal of estimators; the motivation of the submission is questionable.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 13,
+      "text": "In the revision, we have emphasized how the classical empirical techniques in estimating the entropy are not suited for the training of GANs aimed toward the synthesis of high dimensional distribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 14,
+      "text": "In fact, our method yields much better performance than Energy-based GANs(EGANs) [6], that uses a rather high calibre variational inference based technique to directly estimate the entropy, which was, in their experiment, performed the best among all classical techniques they tested.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 15,
+      "text": "For more details, please consult the original text.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 16,
+      "text": "In many application of GANs, the objective is to synthesize a generative model on high dimensional space, and it is a very difficult problem on its own to rely on classical techniques to estimate the entropy in such high dimensional space.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 17,
+      "text": "In most study of generative models, the distribution is defined in term of latent variables, and its law is given by G# p where p is some known distribution---or the pushforward of p with a measurable function G with an euclidean range.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 18,
+      "text": "The most straightforward approach in entropy estimation uses some form of plugin Estimator based on Kernel density estimation and nearest neighbor estimation hat p:",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 19,
+      "text": "estimate  =  g(\\hat p(X_i), X_i  \\in Data ).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 20,
+      "text": "For the real world applications of GANs (e.g image generations), the dimensions of the data space are high.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 21,
+      "text": "On the CIFAR 10 benchmark",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 22,
+      "text": ", the dimension is   32*32*3, and the dimension of the ImageNet benchmark is high as 64*64*3",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 23,
+      "text": ".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 24,
+      "text": "Even for Kernel density estimator on of  regular density on d dimensional Euclidean space for example, the mean square error is MSE(f*, \\hat f) = O(h^4  +  1/(n h^{d})) where h is the bandwidth, n is the number of samples [7,8].",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 25,
+      "text": "This is to say we need small enough bandwidth with tremendous size of n for large d. On the top of this, for  the density of p_g of G\\# p is computed through the formula",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 26,
+      "text": "H(p_g) = H(p(z)) + E_p(z)[det(D_z G(z))].",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 27,
+      "text": "In order to compute E_p(z)[det(D_z G(z))], we need at least O(n d^2) (often d^3 in usual implementation)  and this expression does not include the massicve scaler that is dependent on the number of parameters,",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 28,
+      "text": "which again, is  often extremely large, and can be in order of millions\uff08Fig 2 in [9])",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 29,
+      "text": ".",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 30,
+      "text": "Again, Energy-based GANs(EGANs)[6], that uses a rather high calibre variational inference based technique are not performing too well relative to our approach.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 31,
+      "text": "Also, one of the fundamental motivation for the development of GANs techniques is to do away with the precise and explicit density of the target distribution in high dimensional space.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 32,
+      "text": "For more details of these motives, please consult classical literatures in GANs [1,4,10].",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 33,
+      "text": "> 4.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 34,
+      "text": "Differentiation w.r.t. functions (or more generally elements in normed spaces) is a well-defined concept in mathematics, including the notions of Gateaux, Frechet and Hadamard differentiability.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 35,
+      "text": "It is not clear why the authors neglect these classical concepts, and are talking about 'random functional perturbations', ... It is also unclear where the optimized transformation (T) lives; the authors are trying to differentiate over some function space which is undefined.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 36,
+      "text": "We have added more descriptions in the theory section and expressed our intention that we are taking Frechet derivatives of a functional defined on a Hilbert space consisting of functions that are L2 integrable with respect to the probability measure of concern.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 37,
+      "text": "In functional gradient applications to generative models [11, 12]",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 38,
+      "text": ",  conditions required for  the Frechet differentiability of the objective functional are often assumed to hold.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 39,
+      "text": "We hope that our revisions made the paper more readable to the wider audience, and hope that  the paper now assumes less knowledge of GANs in understanding our idea.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 40,
+      "text": "[1] Ian Goodfellow. NIPS 2016 tutorial: Generative adversarial networks. arXiv preprint arXiv:1701.00160, 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 41,
+      "text": "[2] Luke Metz, Ben Poole, David Pfau, and Jascha Sohl-Dickstein. Unrolled generative adversarial networks. In ICLR, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 42,
+      "text": "[3] Martin Arjovsky and Le \u0301on Bottou. Towards principled methods for training generative adversarial networks. In ICLR, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 43,
+      "text": "[4] Martin Arjovsky, Soumith Chintala, and Le \u0301on Bottou. Wasserstein generative adversarial networks. In ICML, pp. 214\u2013223, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 44,
+      "text": "[5] Zinan Lin, Ashish Khetan, Giulia Fanti, and Sewoong Oh. Pac gan: The power of two samples in generative adversarial networks. arXiv preprint arXiv:1712.04086, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 45,
+      "text": "[6] Zihang Dai, Amjad Almahairi, Philip Bachman, Eduard Hovy, and Aaron Courville. Calibrating energy-based generative adversarial networks. In ICLR, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 46,
+      "text": "[7] Theophilos Cacoullos. Estimation of a multivariate density.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 47,
+      "text": "Annals of the Institute of Statistical Mathematics, 18(1):179\u2013189, 1966.",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 48,
+      "text": "[8] Arkadas Ozakin and Alexander G Gray. Submanifold density estimation. In Advances in Neural Information Processing Systems, pp. 1375\u20131382, 2009.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 49,
+      "text": "[9] Alfredo Canziani, Eugenio Culurciello, Adam Paszke. AN ANALYSIS OF DEEP NEURAL NETWORK MODELS FOR PRACTICAL APPLICATIONS. arXiv preprint arXiv:1605.07678, 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 50,
+      "text": "[10] Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. Generative adversarial nets. In NIPS, pp. 2672\u20132680, 2014.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 51,
+      "text": "[11] Atsushi Nitanda and Taiji Suzuki. Gradient layer: Enhancing the convergence of adversarial training for generative models. In AISTATS, pp. 1008\u20131016, 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx3bbVc27",
+      "rebuttal_id": "rJllM_RzaQ",
+      "sentence_index": 52,
+      "text": "[12] Rie Johnson and Tong Zhang. Composite functional gradient learning of generative adversarial models. In ICML, pp. 2376\u20132384, 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

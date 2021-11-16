@@ -1,0 +1,1176 @@
+{
+  "metadata": {
+    "forum_id": "ryf6Fs09YX",
+    "review_id": "HygWY_1c2X",
+    "rebuttal_id": "S1eUAxbKa7",
+    "title": "GO Gradient for Expectation-Based Objectives",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryf6Fs09YX&noteId=S1eUAxbKa7",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 0,
+      "text": "* Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 1,
+      "text": "The paper proposes an improved method for computing derivatives of the expectation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 2,
+      "text": "Such problems arises with many probabilistic models with noises or latent variables.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 3,
+      "text": "The paper proposes a new gradient estimator of low variance applicable in certain scenarios, in particular it allows training of generative models in which observations and/or latent variables are discrete.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 4,
+      "text": "The submission clearly improves the state-of-the-art, experimentally demonstrates the method on several problems comparing with the alternative techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 5,
+      "text": "In what concerns the optimization, the method achieves a better objective value much faster, confirming that it is a lower variance gradient estimator.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 6,
+      "text": "The clarity of the presentation (in particular the description of when the method is applicable) and the technical correctness of the paper are somewhat lacking.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 7,
+      "text": "In terms of applicability, it seems that many cases where discrete latent variables would be really interesting are not covered (e.g. sigmoid belief networks); the paper demonstrates experiments with discrete images (binary or 4-bit) not particularly motivated in my opinion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 8,
+      "text": "It also contains lots of additional technical details and experiments in the appendix, which I unfortunately did not review.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 9,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 10,
+      "text": "Clarity",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 11,
+      "text": "In the abstract the paper promises more than it delivers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 12,
+      "text": "Many problems can be cast as optimizing an expectation-based objective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 13,
+      "text": "The result does not at all apply to all of them.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 14,
+      "text": "The reparameterization trick does not apply to all continuous random variables, only to such that the reparameterization satisfies certain smoothness conditions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 15,
+      "text": "Discrete variables are supported by the method only in the case that the distribution factors over all discrete variables conditionally on any additional \u201ccontinuous variables\u201d (to which the reparameterization trick is applicable).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 16,
+      "text": "This very much limits the utility of the method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 17,
+      "text": "In particular it is not applicable to learning e.g. sigmoid belief networks [Neal, 92] (with conditional Bernoulli units) and many other problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 18,
+      "text": "\u201creparametrizable distributions\u201d",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 19,
+      "text": "A Bernoulli(p) random variable is discrete, yet it is reparametrizable as [Z>p] with Z following standard logistic distribution, whose density and cdf is smooth.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 20,
+      "text": "Because of the above many discussions about discrete vs. continuous variables are missleading.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 21,
+      "text": "Section 2.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 22,
+      "text": "The notation of the true distribution as \u201cq\u201d the model as p and the approximate posterior of the model as \u201cq\u201d again is inconsistent.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 23,
+      "text": "I find the background on ELBO and GANs unnecessary occluding the clarity at this point.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 24,
+      "text": "For the purpose of introduction, it might be better to give examples of expectation objectives such as:",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 25,
+      "text": "- dropout: q is the distribution of NN outputs given the input image and integrating out latent dropout noises, gamma are parameters of this NN.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 26,
+      "text": "- VAE, GAN: q is the generative model defined as a mapping of a standard multivariate normal distribution by a NN.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 27,
+      "text": "- sigmoid belief networks: q is a Bayesian network where each conditional distribution is a logistic regression model.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 28,
+      "text": "Then to state to which of these cases the results of the paper are applicable, allow for an improvement of the variance and at what additional computational cost (considering the cost of evaluating the discrete derivatives).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 29,
+      "text": "Section 3.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 30,
+      "text": "Contrary to the discussion, there are examples of non-negative distributions to which the reparameterization trick can be applied, including log-Normal and Gamma distributions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 31,
+      "text": "Method:",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 32,
+      "text": "In the case when Rep trick is applicable, is it identical to GO?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 33,
+      "text": "The difference seems to be only in that the mapping tau may be different from Q^-1.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 34,
+      "text": "However, this only affects the method of drawing the samples from a fixed known distribution and should have no more effect on the results than say a choice of a pseudo-random number generator.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 35,
+      "text": "Yet, in Fig.1 some difference is observed between the methods, why is that so?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 36,
+      "text": "Sec 7.1",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 37,
+      "text": "\u201cWe adopt the sticking approach hereafter\u201d. Does it mean it is applied with all experiments with GO?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 38,
+      "text": "* Related Work",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 39,
+      "text": "The state of the art allows combining differentiable and non-differentiable pieces of computation:",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 40,
+      "text": "[Schulman, J., Heess, N., Weber, T., Abbeel, P.: Gradient estimation using stochastic computation graphs.]",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 41,
+      "text": "I believe it should be discussed in related work.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 42,
+      "text": "Limitations / where the proposed method brings an improvement should be highlighted.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 43,
+      "text": "* Technical Correctness",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 44,
+      "text": "Equations (5) and (6) require a theorem of differentiating under integral (expectation), such as Leibnitz rule, which in case of (6) requires q_gamma(y)f(y) to be continuous in y and q_gamma(y) continuously differentiable in gamma.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 45,
+      "text": "Equation (7) (integration by parts) holds only with some additional requires on f.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "sentence_index": 46,
+      "text": "Theorem 1 does not take account for the above conditions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 0,
+      "text": "We appreciate your time and effort of reviewing our paper, and thank you for the insightful and constructive comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 1,
+      "text": "For simplicity of the main paper, we moved all the detailed proofs to the Appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 2,
+      "text": "More specifically, the proofs for Theorem 1, Lemma 1, Theorem 2, Corollary 1, and Theorem 3 are given in Appendix A, C, D, E, and F, respectively.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 3,
+      "text": "Thanks a lot for pointing out the smoothness conditions for reparameterization; we have carefully revised our paper to remove the misleading statements and to make it clearer when our method (and also the reparameterization trick, Rep) is applicable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 4,
+      "text": "For your comments wrt discrete random variables (RVs), unfortunately, we haven\u2019t found a principled way to back-propagate gradient through discrete internal RVs (like in multi-layer sigmoid belief networks).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 5,
+      "text": "However, as stated in the last paragraph of Sec. 7.2, we presented in Appendix B.4 a procedure to assist our methods in handling discrete internal RVs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 6,
+      "text": "We believe that procedure could be useful for the inference of models like the multi-layer sigmoid belief networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 7,
+      "text": "As for the conditional independency, it is actually removed after marginalizing out additional continuous RVs (which could be non-reparameterizable RVs like Gamma).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 8,
+      "text": "Also note that one can strengthen the aforementioned procedure by inserting more additional continuous internal RVs into the inference model to enlarge its (marginal) description power.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 9,
+      "text": "The notations are chosen for harmony and also to keep consistency with the main literature.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 10,
+      "text": "For example, one can add another expectation wrt the true data distribution q(x) to the ELBO in Eq. (1), that is, E_{q(x)} [ELBO] = E_{q(x) q(z|x)} [log p(x,z) \u2013 log q(z|x)]  \\propto  - KL[q(x)q(z|x) || p(x,z)].",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 11,
+      "text": "For dropout, since the dropout rate is a tunable hyperparameter that need not be learned (thus no back-propagation is required)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 12,
+      "text": ", one can use Rep to construct the q distribution you defined.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 13,
+      "text": "If we understand correctly, in that case we cannot demonstrate our advantages.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 14,
+      "text": "Currently, the proposed method cannot be directly applied to multi-layer sigmoid belief networks (without the procedure in Appendix B.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 15,
+      "text": "We have made an explicit statement of this in the revised manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 16,
+      "text": "Thank you for pointing this out.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 17,
+      "text": "However, it\u2019s believed that Rep cannot be applied to Gamma distributions [1,2].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 18,
+      "text": "We have revised our statement to \u201cThere are situations for which Rep is not readily applicable, e.g., where the components of y may be discrete or nonnegative Gamma distributed\u201d.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 19,
+      "text": "[1] F. Ruiz, M. Titsias, and D. Blei. The generalized reparameterization gradient. In NIPS, pp. 460\u2013468, 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 20,
+      "text": "[2] C. Naesseth, F. Ruiz, S. Linderman, and D. Blei. Rejection sampling variational inference. arXiv:1610.05683, 2016.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 21,
+      "text": "Yes, Lemma 1 shows that our deep GO will reduce to Rep when Rep is applicable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 22,
+      "text": "We are not sure whether you were asking about the difference in Fig. 1 or Fig. 2.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 23,
+      "text": "So, two responses are given below.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 24,
+      "text": "(A) In Fig. 1, the difference comes from the definition of node y^(i).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 25,
+      "text": "For deterministic deep neural networks, node y^(i) is the activated value after an activation function, where deterministic chain rule can be readily applied; while for deep GO gradient, node y^(i) might be the sample of a non-reparameterizable RV, where deterministic chain rule is not applicable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 26,
+      "text": "Please also refer to the main contribution (ii) of our response to Reviewer 2.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 27,
+      "text": "(B) If you were interested in the difference in Fig. 2 (a)(b), the reasons include (1) the standard Rep cannot be applied to Gamma RVs; (2) both GRep and RSVI are designed to approximately reparametrize Gamma RVs; (3) GO generalizes Rep to non-reparameterizable RVs; or in other words, GO is identical to the exact Rep for Gamma RVs.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 28,
+      "text": "Yes, the sticking approach was implicitly adopted for all the compared methods when it is applicable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 29,
+      "text": "We have made a clear statement in the revised paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 30,
+      "text": "Since stochastic computation graph (SCG) is based on REINFORCE and our method is based on GO, the comparison between SCG and our method is (roughly speaking) identical to that between REINFORCE and GO.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 31,
+      "text": "That is, SCG is more generally applicable but with higher variance; the proposed method has less generalizability but with much lower variance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 32,
+      "text": "We have added the following discussion into Related Work.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 33,
+      "text": "\u201c\u2026as the Rep gradient (Grathwohl et al., 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 34,
+      "text": "SCG (Schulman et al., 2015) utilizes the generalizability of REINFORCE to construct widely-applicable stochastic computation graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 35,
+      "text": "However, REINFORCE is known to have high variance, especially for high-dimensional problems, where the proposed methods are preferable when applicable (Schulman et al., 2015).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 36,
+      "text": "Stochastic back-propagation\u2026\u201d",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 37,
+      "text": "Thank you for pointing out these fundamental conditions, which we have added into the revised manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HygWY_1c2X",
+      "rebuttal_id": "S1eUAxbKa7",
+      "sentence_index": 38,
+      "text": "We hope your concerns have been addressed. If not, further discussion would be welcomed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

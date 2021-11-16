@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "forum_id": "SkeQniAqK7",
+    "review_id": "rker_F1q3X",
+    "rebuttal_id": "HklrWoFdCX",
+    "title": "Combining Learned Representations for Combinatorial Optimization",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkeQniAqK7&noteId=HklrWoFdCX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 0,
+      "text": "The paper proposes learning Restricted Boltzmann Machines for solving small computational tasks (e.g., 1-bit addition) and composing those RBMs to form a more complex computational module (e.g., 16-bit addition).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 1,
+      "text": "The claim is that such an approach can be more data efficient than learning a single network to directly learn the more complex module.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 2,
+      "text": "Results are shown for addition and factoring tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 3,
+      "text": "- The paper is somewhat easy to follow and the figures are helpful. But the overall organization and flow of ideas can be improved significantly.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 4,
+      "text": "- The term \"combinatorial optimization\" is used in a confusing way -- addition would not usually be called a combinatorial optimization problem.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 5,
+      "text": "- It would be good to understand what benefit does the stochasticity of RBMs provide.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 6,
+      "text": "How do deterministic neural networks perform on the addition and factoring tasks?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 7,
+      "text": "The choice of RBMs is not motivated well and without any comparisons to alternatives, it comes across",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 8,
+      "text": "as arbitrary.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 9,
+      "text": "- That learning simple functions and composing them to compute more complex functions would be more data efficient than directly learning the complex functions does not seem very surprising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 10,
+      "text": "After all, the former approach gets a lot more knowledge about the target function built into it.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 11,
+      "text": "It's good that the paper empirically confirms the intuition, but doesn't feel like a significant contribution on its own.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 12,
+      "text": "- The paper would be stronger if it includes more complex tasks, e.g., TSP, and show that the same ideas can be applied to improve the learning a solver for such tasks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "sentence_index": 13,
+      "text": "The current tasks and problem sizes are not very convincing, and the accuracy results are not very compelling.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 0,
+      "text": "Thank you for your comments, we will be responding with specific comments to AnonReviewer3 here, and more general comments to the reviewer above.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 1,
+      "text": "R3: \u201cIt would be good to understand what benefit does the stochasticity of RBMs provide.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 2,
+      "text": "The stochasticity of the RBM provides a number of benefits over more deterministic methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 3,
+      "text": "Firstly, the stochasticity allows for full sampling from the RBMs distribution, and has the ability to identify all possible modes in a multimodal distribution if sampled for long enough.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 4,
+      "text": "As there are many possible solutions to a Boolean logic query (and integers can have many different factors), we note that the statistics that this method provides can give us a variety of answers to the queries, allowing the user to evaluate each individual solution based on its individual merit.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 5,
+      "text": "R3: How do deterministic neural networks perform on the addition and factoring tasks? The choice of RBMs is not motivated well and without any comparisons to alternatives, it comes across as arbitrary.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 6,
+      "text": "To the best of our knowledge, deterministic neural networks have not been well studied for the integer factorization problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 7,
+      "text": "In [4] deterministic neural networks are used, but are able to factor smaller integers, on a more restricted problem, and are fully trained on the subset of all integers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 8,
+      "text": "We have cited this work in our related works section, and mentioned its impact.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 9,
+      "text": "R3: That learning simple functions and composing them to compute more complex functions would be more data efficient than directly learning the complex functions does not seem very surprising.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 10,
+      "text": "We agree that this method of composing simple functions to compute more complex ones is intuitive, and may not be very surprising, but we think that this helps data and model efficiency in a different manner than presented in previous papers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 11,
+      "text": "As far as scaling up the tasks and problem sizes, we are showing a method of combination here, and are scaling up the problem sizes continuously.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rker_F1q3X",
+      "rebuttal_id": "HklrWoFdCX",
+      "sentence_index": 12,
+      "text": "We believe this combination method could be used for other things, and have presented it here as a proof of concept rather than a definitive survey with all possible uses.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "metadata": {
+    "forum_id": "B1ldb6NKDr",
+    "review_id": "SyeMmx63FS",
+    "rebuttal_id": "SyeJCxF5jB",
+    "title": "Multi-Agent Hierarchical Reinforcement Learning for Humanoid Navigation",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1ldb6NKDr&noteId=SyeJCxF5jB",
+    "annotator": "anno7"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 0,
+      "text": "The submission proposes a method for hierarchical RL in multiagent settings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 1,
+      "text": "In particular it proposes to explicitly decouple training of a high-level and low-level controller with grounded the controller interface as goals in the environment to reach for the low-level controller.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 2,
+      "text": "The model is trained via PPO with GAE and evaluated on a small set of multi agent locomotion tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 3,
+      "text": "The paper is overall well written and intuitive but limited in evaluation and novelty (see e.g. [1,2] ) with only limited modifications (sharing low-level controller) for the multi agent case.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 4,
+      "text": "Furthermore, the experimental section does not compare to other forms of hierarchical approaches for MARL, and generally only provides a single comparison to PPO & MADDPG.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 5,
+      "text": "To evaluate the impact of the proposed changes in this paper, one would have to perform extended evaluations and ablations for the submission.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 6,
+      "text": "A large part of making the MA system work well is based on reward shaping which nearly fills all of page 5.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 7,
+      "text": "This is clearly interested in as far as solving this particular task but does not provide any general insights for the design of (MA)RL algorithms.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 8,
+      "text": "The experimental section includes various mistakes (see under minor) and misses to describe figures, leading to the assumption that additional time is required for a more detailed evaluation of the algorithm (including more domains and in particular baselines).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 9,
+      "text": "Regarding the challenges (and focus on learning simple tasks), reference [3] might be of interest to the authors.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 10,
+      "text": "Minor",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 11,
+      "text": "- Direct duplication of text between parts of section 5.3 and 8.3 leading to the duplication of the error of describing the value function learning rate as 0.000.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 12,
+      "text": "- Self-referential sentences in the supplementary materials (i.e. referral to itself)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 13,
+      "text": "- Missing references on page 3",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 14,
+      "text": "- The egocentric velocity field is not described (section 5)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 15,
+      "text": "- Section 3.1: maximize",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 16,
+      "text": "- The wording new paradigm in MARL might be unsuited given existing work on complex domains.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 17,
+      "text": "\u2018Our proposed approach represents the first physics-based simulation of its kind that supports MARL.\u2019 This sentence remains unclear as the authors do not propose a simulation engine.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 18,
+      "text": "- Text on experiment figures is much too small.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 19,
+      "text": "[1] Andrew Levy, Robert Platt, and Kate Saenko. Learning Multi-Level Hierarchies with Hindsight. In International Conference on Learning Representations, 2019.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 20,
+      "text": "[2] Ofir Nachum, Shixiang Shane Gu, Honglak Lee, and Sergey Levine. Data-efficient Hierarchical Reinforcement Learning. In Advances in Neural Information Processing Systems, pp. 3303\u20133313, 2018.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "sentence_index": 21,
+      "text": "[3] Ray Interference: a Source of Plateaus in Deep Reinforcement Learning Tom Schaul, Diana Borsa, Joseph Modayil and Razvan Pascanu",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their time and comments on the work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 1,
+      "text": "Concerning including more comparison and ablations in the paper, we have performed an extended analysis of our method to the baselines across many environments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 2,
+      "text": "See Figures 2,3,5 for more learning curve results and baseline comparisons and Figure 6 for qualitative metric analysis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 3,
+      "text": "We show that our method outperforms the baselines across multiple environments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 4,
+      "text": "In the paper, we include many details on the environment rewards and design as we consider these simulation tasks part of the contribution of the work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 5,
+      "text": "The simulation tasks contain robotic humanoid characters that need to learn how to navigate given egocentric vision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 6,
+      "text": "No other simulation is available that combines these challenges.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 7,
+      "text": "The simulation will be released with the work for others to use and build on multi-agent learning methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeMmx63FS",
+      "rebuttal_id": "SyeJCxF5jB",
+      "sentence_index": 8,
+      "text": "We have reviewed the provided references and have included them in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

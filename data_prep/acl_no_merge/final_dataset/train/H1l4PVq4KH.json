@@ -1,0 +1,647 @@
+{
+  "metadata": {
+    "forum_id": "SJxjPxSYDH",
+    "review_id": "H1l4PVq4KH",
+    "rebuttal_id": "rygR36nHjr",
+    "title": "Discriminative Variational Autoencoder for Continual Learning with Generative Replay",
+    "reviewer": "AnonReviewer2",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJxjPxSYDH&noteId=rygR36nHjr",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 0,
+      "text": "The paper devises a pipeline that aims to address catastrophic forgetting in continual learning (CL) by the well-known generative replay (GR) technique.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 1,
+      "text": "The key ingredient of the pipeline is a modern variational auto-encoder (VAE) that is trained with class labels with respect to a mutual information maximization criterion.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 2,
+      "text": "The paper does not follow a smooth story line, where an open research question is presented and a solution to this problem is developed in steps.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 3,
+      "text": "The flowchart in Fig 1 is rather a system design consisting of many components, the functionality of which is not clearly described and existence of which is not justified.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 4,
+      "text": "This complex flowchart does not even describe the complete task.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 5,
+      "text": "It is in the end plugged into a continual learning algorithm which also performs domain transformation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 6,
+      "text": "All of these pieces are very well-known methods (e.g. VAEs, conditional VAEs, CL, catastrophic forgetting, domain transformation) in the literature and this paper puts them together in a straightforward way.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 7,
+      "text": "Hence, I kindly do not think the outcome is truly a research result.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 8,
+      "text": "It is more system engineering than science.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 9,
+      "text": "The next submission of the paper could choose one or few of these pieces as target research problems and develop a thoroughly analyzed novel technical solution for them.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 10,
+      "text": "If this solution can be proven to improve a valuable metric (e.g. accuracy, interpretability, theoretical understanding, or computational efficiency) of a setup, it is then worthwhile being published.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "sentence_index": 11,
+      "text": "Minor: The abstract could be improved by providing more clear pointers to the presented novelty.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 0,
+      "text": "We appreciate your constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 1,
+      "text": "Specifically, your comments about our motivation and development of our idea greatly help us to improve the quality of our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 2,
+      "text": "If we correctly understand reviewer 2\u2019s concerns, the concerns can be divided into two folds:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 3,
+      "text": "1. Our suggestion to mitigate the catastrophic forgetting looks a naive combination of well-known concepts. Thus, it is more system engineering than science.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 4,
+      "text": "2. Each component described in Figure 1 is not explained enough.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 5,
+      "text": "Also, there is no description of the complete task.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 6,
+      "text": "[Response for 1]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 7,
+      "text": "As we explained at the common response, we started our research from clear open questions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 8,
+      "text": "Our first open question was that why other GR-based algorithms [1, 2] assume unit Gaussian priors even though they integrate classification loss into their VAE formulation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 9,
+      "text": "Since they do not consider the conflict between the unit Gaussian prior and discriminative loss for the latent variable z, their models generate ambiguous samples that negatively affect the performance of incremental learning, which is discussed in section 4.1 in our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 10,
+      "text": "This leads us to a more theoretical formulation for classification-regularized VAE.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 11,
+      "text": "By introducing class conditional priors induced by the mutual information maximization, DiVA yields class-wise discriminative one mode Gaussians for latent variable z.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 12,
+      "text": "Naturally, DiVA can conduct both class prediction and class conditional sample generation with one integrated model.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 13,
+      "text": "The second open question was that why GR-based algorithms suffer from serious catastrophic forgetting in natural image datasets, even though generated samples are not completely noisy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 14,
+      "text": "We assumed that this is due to the vulnerability of neural networks [3] triggered by different distributions of pixel values between real and generated images.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 15,
+      "text": "Thus, we defined the two domains: real domain and sample domain.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 16,
+      "text": "To narrowing the distribution gap, we needed a solution that satisfies two conditions (also described in section 5):",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 17,
+      "text": "1. We should translate only the style (a global pattern of a specific domain) as keeping outline patterns of given images.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 18,
+      "text": "2. We should consider an unpaired domain translation between real and generated images because the generated images are sampled randomly.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 19,
+      "text": "Fortunately, we were able to find an existing solution that satisfies the requirements: CycleGAN. Any other domain translators that satisfy the conditions can be used or newly studied.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 20,
+      "text": "With the solution, we could make a breakthrough for GR-based methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 21,
+      "text": "To the best of our knowledge, this is the first successful approach for a GR-based algorithm to start to resist the catastrophic forgetting problem with a natural image dataset.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 22,
+      "text": "[Response for 2]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 23,
+      "text": "Figure 1 is a conceptual description of our proposed model, DiVA.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 24,
+      "text": "Each component is explained in section 4, below Equation 2, and justified in section 4.1.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 25,
+      "text": "Also, for an easy understanding of the whole CL process with DiVA, we added another figure in Appendix E.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 26,
+      "text": "[References]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 27,
+      "text": "[1] van de Ven, Gido M., and Andreas S. Tolias. \"Generative replay with feedback connections as a general strategy for continual learning.\" arXiv preprint arXiv:1809.10635 (2018).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 28,
+      "text": "[2] Mundt, Martin, et al. \"Unified Probabilistic Deep Continual Learning through Generative Replay and Open Set Recognition.\" arXiv preprint arXiv:1905.12019 (2019).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l4PVq4KH",
+      "rebuttal_id": "rygR36nHjr",
+      "sentence_index": 29,
+      "text": "[3] Su, Jiawei, Danilo Vasconcellos Vargas, and Kouichi Sakurai. \"One pixel attack for fooling deep neural networks.\" IEEE Transactions on Evolutionary Computation (2019).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

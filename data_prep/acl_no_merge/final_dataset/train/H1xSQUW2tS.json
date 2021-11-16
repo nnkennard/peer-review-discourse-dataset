@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "forum_id": "S1lOTC4tDS",
+    "review_id": "H1xSQUW2tS",
+    "rebuttal_id": "HJezKUjisr",
+    "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lOTC4tDS&noteId=HJezKUjisr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 0,
+      "text": "This paper introduced a latent space model for reinforcement learning in vision-based control tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 1,
+      "text": "It first learns a latent dynamics model, in which the transition model and the reward model can be learned on the latent state representations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 2,
+      "text": "Using the learned latent state representations, it used an actor-critic model to learn a reactive policy to optimize the agent's behaviors in long-horizon continuous control tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 3,
+      "text": "The method is applied to vision-based continuous control in 20 tasks in the Deepmind control suite.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 4,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 5,
+      "text": "1. The method used a latent dynamics model, which avoids reconstruction of the future images during inference.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 6,
+      "text": "2. The learned actor-critic model replaced online planning, where actions can be evaluated in a more efficient manner.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 7,
+      "text": "3. The model achieved better performances in challenging control tasks compared to previous latent space planning methods, such as PlaNet.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 8,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 9,
+      "text": "1. The work has limited novelty: the learning of the world model (recurrent state-space model) closely follows the prior work of PlaNet.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 10,
+      "text": "In contrast to PlaNet, the difference is that this work learns an actor-critic model in place of online planning with the cross entropy method.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 11,
+      "text": "However, I found the contribution of the actor-critic model is insufficient and requires additional experimental validation (see below).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 12,
+      "text": "2. Since the actor-critic model is the novel component in this model (propagating gradients through the learned dynamics), I would like to see additional analysis and baseline comparisons of this method to previous actor-critic policy learning methods, such as DDPG and SAC training on the (fixed) latent state representations, and recent work of MVE or STEVE that use the learned dynamics to accelerate policy learning with multi-step updates.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 13,
+      "text": "3. The world model is fixed while learning the action and value models, meaning that reinforcement learning of the actor-critic model cannot be used to improve the latent state model.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 14,
+      "text": "It'd be interesting to see how optimization of the actions would lead to better state representations by propagating gradients from the actor-critic model to the world model.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 15,
+      "text": "Typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 16,
+      "text": "Reward prediction along --> Reward prediction alone",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "sentence_index": 17,
+      "text": "this limitation in latenby?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 0,
+      "text": "Thank you for your review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 1,
+      "text": "> Pros:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 2,
+      "text": "> 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 3,
+      "text": "The method used a latent dynamics model, which avoids reconstruction of the future images during inference.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 4,
+      "text": "> 2. The learned actor-critic model replaced online planning, where actions can be evaluated in a more efficient manner.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 5,
+      "text": "> 3. The model achieved better performances in challenging control tasks compared to previous latent space planning methods, such as PlaNet.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 6,
+      "text": "This is an accurate summary.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 7,
+      "text": "We would like to highlight two additional points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 8,
+      "text": "First, the improved performance is attributed to a novel actor-critic algorithm that uses analytic multi-step gradients of predicted state-values (not Q-values).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 9,
+      "text": "Second, in addition to outperforming previous latent space planning methods, the proposed algorithm also outperforms the model-free D4PG algorithm, the previous state-of-the-art on this benchmark suite.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 10,
+      "text": "> 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 11,
+      "text": "The work has limited novelty: the learning of the world model (recurrent state-space model) closely follows the prior work of PlaNet.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 12,
+      "text": "In contrast to PlaNet, the difference is that this work learns an actor-critic model in place of online planning with the cross entropy method.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 13,
+      "text": "However, I found the contribution of the actor-critic model is insufficient and requires additional experimental validation (see below).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 14,
+      "text": "Dreamer is a novel algorithm that belongs to the family of actor critic methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 15,
+      "text": "At a high level, previous approaches can be grouped into those using Reinforce gradients with V baselines (A3C, PPO, ACER) and those using deterministic or reparameterization gradients of learned Q functions (DDPG, SAC, MVE, STEVE).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 16,
+      "text": "In comparison, Dreamer uses reparameterization gradients of V functions by backpropagating the value estimates through the latent dynamics.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 17,
+      "text": "Specifically, while Reinforce estimators typically learn V functions, these are only used to reduce the variance of the gradient estimate rather than directly maximizing them with respect to the actor.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 18,
+      "text": "Actor-critic algorithms that use analytic gradients of Q critics differ from Dreamer in two ways.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 19,
+      "text": "First, they learn a Q function rather than just a V function.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 20,
+      "text": "Second, the actor only maximizes the Q value predicted for the current time step rather than maximizing multi-step value estimates.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 21,
+      "text": "While MVE and STEVE learn dynamics models (from proprioceptive inputs), the dynamics are not directly used to update the policy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 22,
+      "text": "Instead, they only serve for computing multi-step Q targets for learning the Q critic.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 23,
+      "text": "Thus, no gradients are backpropagated through the dynamics model for learning the actor or critic.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 24,
+      "text": "Please also see the comparison in the last paragraph of Section 3, which we will extend with the present discussion.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 25,
+      "text": "> 2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 26,
+      "text": "Since the actor-critic model is the novel component in this model (propagating gradients through the learned dynamics), I would like to see additional analysis and baseline comparisons of this method to previous actor-critic policy learning methods, such as DDPG and SAC training on the (fixed) latent state representations, and recent work of MVE or STEVE that use the learned dynamics to accelerate policy learning with multi-step updates.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 27,
+      "text": "As summarized above, Dreamer differs from previous actor-critic algorithms not just by using latent dynamics but also by using analytic multi-step gradients of a V function rather than one-step gradients Q function.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 28,
+      "text": "This renders Dreamer conceptually distinct from DDPG, SAC, MVE, and STEVE.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 29,
+      "text": "We have run experiments with MVE in the latent space of the same dynamics model and tuned the learning rate for actor and Q function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 30,
+      "text": "We did not find an improvement over Dreamer (MVE worked worse across tasks) in these experiments, possibly because it only updates the Q function at the initial state of the imagination rollout.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 31,
+      "text": "Note that with a model, Q values can be computed by combining the dynamics with a value function, so learning Q is not necessary anymore.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 32,
+      "text": "Since using V in Dreamer outperforms the state-of-the-art D4PG agent and is simpler than the Q function in DDPG and MVE and substantially simpler than STEVE (ensemble of models) and SAC (two Q functions, one V function), we argue for this design choice.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 33,
+      "text": "> 3. [...] It'd be interesting to see how optimization of the actions would lead to better state representations by propagating gradients from the actor-critic model to the world model.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 34,
+      "text": "We have run these experiments and it prevented learning completely.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 35,
+      "text": "Using gradients of the action or value models to shape the dynamics allows them to \"cheat\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 36,
+      "text": "Specifically, the actions maximize value estimates; using these to update the dynamics results in overly optimistic dynamics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 37,
+      "text": "The values maximize Bellman consistency; using these to update the dynamics can encourage collapse of the latent space.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 38,
+      "text": "As a result, we suggest the perspective of viewing the dynamics as a fixed MDP during imagination training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 39,
+      "text": "We will add a discussion of this to the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "H1xSQUW2tS",
+      "rebuttal_id": "HJezKUjisr",
+      "sentence_index": 40,
+      "text": "If we addressed your concerns satisfactorily, we would be happy if you would consider updating your score.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

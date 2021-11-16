@@ -1,0 +1,651 @@
+{
+  "metadata": {
+    "forum_id": "BJgK6iA5KX",
+    "review_id": "HklV1vNp2m",
+    "rebuttal_id": "BklC6-auT7",
+    "title": "AutoLoss: Learning Discrete Schedule for Alternate Optimization",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJgK6iA5KX&noteId=BklC6-auT7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 0,
+      "text": "This paper addresses a novel variant of AutoML, to automatically learn and generate optimization schedules for iterative alternate optimization problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 1,
+      "text": "The problem is formulated as a RL problem, and comprehensive experiments on four various applications have demonstrated that the optimization schedule produced can guide the task model to achieve better quality of convergence, more sample-efficient, and the trained controller is transferable between datasets and models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 2,
+      "text": "Overall, the writing is quite clear, the problem is interesting and important, and the results are promising.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 3,
+      "text": "Some suggestions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 4,
+      "text": "1. What are the key limitations of AutoLoss ? Did we observe some undesirable behavior of the learned optimization schedule, especially when transfer between different datasets or different models ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 5,
+      "text": "More discussions on these questions can be very helpful to further understand the proposed method.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 6,
+      "text": "2. As the problem is formulated as an RL problem, which is well-known for its difficulty in training, did we encounter similar issues? More details in the implementation can be very helpful for reproducibility.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "sentence_index": 7,
+      "text": "3. Any plan for open source ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 0,
+      "text": "Thank you for the valuable and encouraging feedback! Below, please see our replies.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 1,
+      "text": ">> What are the key limitations of AutoLoss? Did we observe some undesirable behavior of the learned optimization schedule, especially when transfer between different datasets or different models ?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 2,
+      "text": "More discussions on these questions can be very helpful to further understand the proposed method.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 3,
+      "text": "These are indeed good questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 4,
+      "text": "We list several limitations we discovered during the development of AutoLoss:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 5,
+      "text": "- Bounded transferability",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 6,
+      "text": "We observe AutoLoss has bounded transferability -- while we successfully transfer a controller across different CNNs, we can hardly transfer a controller trained for CNNs to RNNs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 7,
+      "text": "This is slightly different from some related AutoML works, such as in [1], where auto-learned neural optimizers are able to produce decent results on even different families of neural networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 8,
+      "text": "We hypothesize that the optimization behaviors or trajectories of CNNs and RNNs are very different, hence the function mappings from status features to actions are different.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 9,
+      "text": "We leave it as a future work to study where the clear boundary is.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 10,
+      "text": "- Design white-box features to capture optimization status",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 11,
+      "text": "Another limitation of AutoLoss is the necessity of designing the feature vector X, which might require some prior knowledge on the task of interest, such as being aware of a rough range of the possible values of validation metrics, etc.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 12,
+      "text": "In fact, We initially experimented with directly feeding blackbox features (e.g. raw vectors of parameters, gradients, momentum, etc.) into controller, but found they empirically contributed little to the prediction, and sometimes hindered transferability (as different models have their parameter or gradient values at different scales).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 13,
+      "text": "- Non-differentiable optimization",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 14,
+      "text": "Meta-learning discrete schedules involves non-differentiable optimization, which is by nature difficult.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 15,
+      "text": "Therefore, a lot of techniques in addition to vanilla REINFORCE are required to stabilize the training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 16,
+      "text": "Please also see our answer to the next question for more details.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 17,
+      "text": "As a potential future work, we will seek for continuous representations of the update schedules and end-to-end training methodologies, as arisen in recent works [2].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 18,
+      "text": "We haved add the above discussion to the latest version as Appendix A.9.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 19,
+      "text": ">> As the problem is formulated as an RL problem, which is well-known for its difficulty in training, did we encounter similar issues? More details in the implementation can be very helpful for reproducibility.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 20,
+      "text": ">> Any plan for open source?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 21,
+      "text": "We acknowledge the difficulties of training controllers using vanilla REINFORCE.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 22,
+      "text": "During our development of the training algorithm (See Eq.2, the \u201cdiscussion\u201d section in Sec.4, and Appendix A.1), we found the vanilla form of REINFORCE algorithm leads to unstable training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 23,
+      "text": "We therefore have made many improvements and adaptations by either referring to existing literature, or depending on the specific tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 24,
+      "text": "They include:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 25,
+      "text": "- Substitute from the reward a baseline term, which is a moving average (see section 3, Eq.2)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 26,
+      "text": "- Reward clipping (see section 3, under Eq.2)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 27,
+      "text": "- Use different values of T for different tasks (see \u201cdiscussion\u201d in section 4)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 28,
+      "text": "- Use improved training algorithms (e.g. PPO) for more challenging tasks, and slightly adjust reward generation schemes (see \u201cdiscussion\u201d in section 4, and Appendix A.1).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 29,
+      "text": "We have also revised the submission to disclose more details on how we make these improvements.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 30,
+      "text": "We will make all code and models trained in this paper available for reproducibility.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 31,
+      "text": "[1] Neural optimizer search with reinforcement learning. ICML 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklV1vNp2m",
+      "rebuttal_id": "BklC6-auT7",
+      "sentence_index": 32,
+      "text": "[2] DARTS: Differentiable Architecture Search. Arxiv 1806.09055.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

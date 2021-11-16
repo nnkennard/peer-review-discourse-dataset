@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "forum_id": "B14ejsA5YQ",
+    "review_id": "BJlOnG0gTX",
+    "rebuttal_id": "BJx-0jEsC7",
+    "title": "Neural Causal Discovery with Learnable Input Noise",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B14ejsA5YQ&noteId=BJx-0jEsC7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 0,
+      "text": "The paper proposes an approach to learn nonlinear causal relationship from time series data that is based on empirical risk minimization regularized by mutual information.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 1,
+      "text": "The mutual information at the minimizer of the objective function  is used as causal measure.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 2,
+      "text": "The paper is well written and the proposed method well motivate and intuitive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 3,
+      "text": "However I am concerned by the assumption that the lagged variables X_{t-1}^{(j)} follow a diagonal gaussian distribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 4,
+      "text": "This appears to be very restrictive, since typically the values of time series j at time t-1 are typically depending say of those that time t-2, t-3 etc.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 5,
+      "text": "Another key concern concerns scalability.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 6,
+      "text": "The authors mention gene regulatory networks , neuroscience etc as key applications.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 7,
+      "text": "Yet the experiments considered in the paper are limited to very few time series.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 8,
+      "text": "For instance the simulation experiments use  N=30,",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 9,
+      "text": "which is much smaller than the number of time series usually involved say in gene regulatory network data",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 10,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 11,
+      "text": "The real data experiments use N= 6 or N=2.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 12,
+      "text": "This is way to small.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 13,
+      "text": "The real data experiments (sections 4.2 and 4.3) are not very convincing, not only because of the very small size of N, but also because there is no comparison with the other approaches.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "sentence_index": 14,
+      "text": "How do these compare? Does the proposed approach offer  insights on these datasets which are not captured by the comparison methods?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 0,
+      "text": "Thank you for the instructive review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 1,
+      "text": "Our algorithm 1 minimizes the empirical learnable noise risk (Eq. 4), which does not assume that X_{t-1}^{(j)} follows a diagonal gaussian distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 2,
+      "text": "Originally, to justify the I^u=1/2 \\sum_l log(1+Var(X^(j)_{t-1,l})/ \\eta_{j,l}^2) term used in our experiments for estimating mutual information, we used diagonal Gaussian assumption for X_{t-1}^(j) in the experiment.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 3,
+      "text": "In fact, a better way to justify this is to note that I^u provides an upper bound for the mutual information subject to the constraint of known variance of marginal distributions of X^(j)_{t-1}, and the upper bound is reached with the diagonal Gaussian distribution, as is proved in Appendix C in the revision.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 4,
+      "text": "Therefore, the assumption of diagonal Gaussian assumption is dropped for the experiments in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 5,
+      "text": "Practitioners can choose to optimize an upper bound of the learnable noise risk for better efficiency (as is also used in the experiments in this paper), or use differentiable estimate of mutual information for better accuracy, as has also been pointed out in the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 6,
+      "text": "In the revision, we have also added a more detailed comparison with other methods in sections 4.2 and 4.3, showing the strength of our method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 7,
+      "text": "For example, in section 4.2, our method correctly identifies important causal arrows, while the four other comparison methods either have more false positives and false negatives, or completely fail to discover causal arrows.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 8,
+      "text": "In section 4.3",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 9,
+      "text": ", we compare with the results in previous literature.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlOnG0gTX",
+      "rebuttal_id": "BJx-0jEsC7",
+      "sentence_index": 10,
+      "text": "We note that although all compared methods correctly identify the causal relations, our method have the advantage that the inferred causal strength does not decay with increasing history length (we also analyzed that in the original submission).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

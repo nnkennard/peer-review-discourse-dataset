@@ -1,0 +1,656 @@
+{
+  "metadata": {
+    "forum_id": "HJeu43ActQ",
+    "review_id": "B1x81eSE2m",
+    "rebuttal_id": "ByeGb44y0X",
+    "title": "NOODL: Provable Online Dictionary Learning and Sparse Coding",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJeu43ActQ&noteId=ByeGb44y0X",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 0,
+      "text": "The main contributions of this work are essentially on the theoretical aspects.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 1,
+      "text": "It seems that the proposed algorithm is not very original because its two parts, namely prediction (coefficient estimation) and learning (dictionary update) have been widely used in the literature, using respectively a IHT and a gradient descent.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 2,
+      "text": "The authors need to describe in detail the algorithmic novelty of their work.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 3,
+      "text": "The definition of \u201crecovering true factor exactly\u201d need to be given.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 4,
+      "text": "The proposed algorithm involves several tuning parameters, when alternating between two updating rules, an IHT-based update for coefficients and a gradient descent-based update for the dictionary.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 5,
+      "text": "Therefore, an appropriate choice of their values need to be given.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 6,
+      "text": "In the algorithm, the authors need to define the HT function in (3) and (4).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 7,
+      "text": "In the experiments, the authors compare the proposed method to only the one proposed by Arora et al. 2015.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 8,
+      "text": "We think that this is not enough, and more extensive experimental results would provide a better paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "sentence_index": 9,
+      "text": "There are some typos that can be easily found, such as \u201cof the out algorithm\u201d.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 0,
+      "text": "We are grateful to the reviewer for the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 1,
+      "text": "In this revision, we have corrected the minor typos, added additional comparisons, and added a proof map for easier navigation of the results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 2,
+      "text": "Specific comments are addressed below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 3,
+      "text": "1. Regarding exact recovery guarantees \u2014 NOODL converges geometrically to the true factors.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 4,
+      "text": "Therefore, the error drops exponentially with iterations t. In other words, as t \u2014> infinity A_i \u2014> A^*_i for i in [1,m] and x_j \u2014> x^*_j for j in [1,m], where x_j is in R^m.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 5,
+      "text": "We have added this clarification in Section 1.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 6,
+      "text": "2. On tuning parameters \u2014 There are primarily three tuning parameters, namely eta_x (step-size for the IHT step), tau (threshold for the IHT step), and eta_A (step-size for the dictionary update step.) Our main result prescribes the theoretical values of these as shown in assumptions A.5 and A.6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 7,
+      "text": "Here, eta_x = Omega_tilde(k/sqrt(n)), tau = Omega_tilde(k\u02c62/n), and eta_A = Theta(m/k).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 8,
+      "text": "We have updated A.6. to include the order of these parameters.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 9,
+      "text": "The specific choices of these parameters, like other similar problems, depend on some a priori unknown parameters (e.g. the sparsity k, and the incoherence mu) which makes some level of tuning unavoidable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 10,
+      "text": "This is true for Arora '15 and Mairal '09, as well, where tuning is required for the choice of step-size for dictionary update, and for choice of regularization parameter and the step-size for coefficient estimation via FISTA.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 11,
+      "text": "Note that, in our experiments we fix the step-size for FISTA as 1/L, where L is the estimate of the Lipschitz constant (since A is not known exactly).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 12,
+      "text": "Alternately, since NOODL involves gradient-based updates for the coefficients and the dictionary, tuning (the step-sizes and the threshold) is relatively straightforward in practice, since it is based on a gradient descent strategy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 13,
+      "text": "In fact, to compile the experiments presented in this paper, we fixed step-size, eta_x, and threshold, tau, and tuned the step-size parameter eta_A only (Theta(m/k)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 14,
+      "text": "The choices of eta_A are 30 for k = 10,20 and eta_A = 15 for k =50,100, as shown in Fig.2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 15,
+      "text": ", eta_A mostly effects the convergence rate as long as it is chosen in Theta(m/k).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 16,
+      "text": "Also, as shown in Table 4 (Appendix E), the tuning process for l1-based algorithms (i.e. FISTA) takes more time, since one needs to scan over the range of the regularization parameter to find one that works.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 17,
+      "text": "This (a) adds to the computational time, and (b) since the dictionary is not known exactly, may guarantee recovery of coefficients only in terms of closeness in l2-norm sense, due to the error-in-variables (EIV) model for the dictionary.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 18,
+      "text": "In this sense, NOODL is (a) simple to tune, (b) assures guaranteed recovery of both factors, and (c) is fast due to its geometric convergence properties.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 19,
+      "text": "These factors highlight its applicability in practical DL problems.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 20,
+      "text": "3. Definition of Hard Thresholding (HT) \u2014 As per the recommendation of the reviewer, we have repeated the definition of hard-thresholding (HT) initially presented in the \"Notation\" sub-section, in Section 2 for clarity.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 21,
+      "text": "4. Comparison to other Online DL algorithms \u2014 As correctly observed by the reviewer, the overall structure of NOODL is similar to successful online DL algorithms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 22,
+      "text": "These successful algorithms (such as Mairal '09) leverage the progress made on both factors for convergence, however, do not guarantee recovery of the factors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 23,
+      "text": "On the other hand, the state-of-the-art provable DL algorithms focus on the progress made on only one of factors (the dictionary), and do not have good performance in practice, since they incur a non-negligible bias; see Section 5 and Appendix E.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 24,
+      "text": "NOODL bridges the gap between these two.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 25,
+      "text": "In addition to our main theoretical result, which establishes conditions for exact recovery of both factors at a geometric rate, NOODL also has superior empirical performance, leading to a neurally-plausible practical online DL algorithm with strong guarantees; see Section 3 and 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 26,
+      "text": "Our work also paves way for the development and analysis of related alternating optimization-based techniques.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 27,
+      "text": "On reviewer's recommendation, we compare the performance of NOODL with one of the most popular alternating minimization-based online DL algorithm used in practice -- Mairal `09 -- in Fig. 2 and Table 4 (Appendix E).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 28,
+      "text": "In this work, the authors show that alternating between a l1-based sparse approximation step and dictionary update based on block co-ordinate descent converges to a stationary point.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 29,
+      "text": "The other comparable techniques shown in Table 1, are not ``online\u2019\u2019 and/or require stringent initializations, in terms of closeness to the true dictionary, as compared to NOODL.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 30,
+      "text": "Our experiments show that due to the geometric convergence to the true factors, NOODL outperforms competing state-of-the-art provable online DL techniques both in terms of overall computational time, and convergence performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1x81eSE2m",
+      "rebuttal_id": "ByeGb44y0X",
+      "sentence_index": 31,
+      "text": "These additional expositions further showcase the contributions of our work both on theoretical and practical online DL front.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

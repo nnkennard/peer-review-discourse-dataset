@@ -1,0 +1,1083 @@
+{
+  "metadata": {
+    "forum_id": "rkxQ-nA9FX",
+    "review_id": "S1gZOpsFnQ",
+    "rebuttal_id": "B1eSf1V0aX",
+    "title": "Theoretical Analysis of Auto Rate-Tuning by Batch Normalization",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxQ-nA9FX&noteId=B1eSf1V0aX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 0,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 1,
+      "text": "Description",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 2,
+      "text": "The work is motivated by the empirical performance of Batch Normalization and in particular the observed better robustness of the choice of the learning rate.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 3,
+      "text": "Authors analyze theoretically the asymptotic convergence rate for objectives involving normalization, not necessarily BN, and show that for scale-invariant groups of parameters (appearing as a result of normalization) the initial learning rate may be set arbitrary while still asymptotic convergence is guaranteed with the same rate as the best known in the general case.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 4,
+      "text": "Offline gradient descent and stochastic gradient descent cases are considered.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 5,
+      "text": "* Strengths",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 6,
+      "text": "The work addresses better theoretical understanding of successful heuristics in deep learning, namely batch normalization and other normalizations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 7,
+      "text": "The technical results obtained are non-trivial and detailed proofs are presented.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 8,
+      "text": "Also I did not verify the proofs the paper appears technically correct and technically clear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 9,
+      "text": "The result may be interpreted in the following form: if one chooses to use BN or other normalization, the paper gives a recommendation that only the learning rate of scale-variant parameters need to be set, which may have some practical advantages.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 10,
+      "text": "Perhaps more important than the rate of convergence, is the guarantee that the method will not diverge (and will not get stuck in a non-local minimum).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 11,
+      "text": "* Criticism",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 12,
+      "text": "This paper presents non-trivial theoretical results that are worth to be published but as I argue below its has a weak relevance to practice and the applicability of the obtained results is unclear.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 13,
+      "text": "-- Concerns regarding the clarity of presentation and interpretation of the results.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 14,
+      "text": "The properties of BN used as motivation for the study, are observed non-asymptotically with constant or empirically decreased learning rate schedules for a limited number of iterations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 15,
+      "text": "In contrast, the studied learning rates are asymptotic and there is a big discrepancy.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 16,
+      "text": "SGD is observed to be significantly faster than batch gradient when far from convergence (experimental evidence), and",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 17,
+      "text": "this is with or without normalization.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 18,
+      "text": "In practice, the training is stopped much before convergence, in the hope of finding solutions close to minimum with high probability.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 19,
+      "text": "There is in fact no experimental evidence that the practical advantages of BN are relevant to the results proven.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 20,
+      "text": "It makes a nice story that the theoretical properties justify the observations, but they may be as well completely unrelated.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 21,
+      "text": "As seen from the formal construction, the theoretical results apply equally well to all normalization methods.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 22,
+      "text": "It occludes the clarity that BN is emphasized amongst them.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 23,
+      "text": "Considering theoretically, what advantages truly follow from the paper for optimizing a given function? Let\u2019s consider the following cases.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 24,
+      "text": "1. For optimizing a general smooth function with all parameters forming a single scale-invariant vector.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 25,
+      "text": "In this case, the paper proves that no careful selection of the learning rate is necessary.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 26,
+      "text": "This result is beyond machine learning and unfortunately I cannot evaluate its merit.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 27,
+      "text": "Is it known / not known in optimization?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 28,
+      "text": "2. The case of data-independent normalization (such as weight normalization).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 29,
+      "text": "Without normalization, we have to tune learning rate to achieve the optimal convergence.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 30,
+      "text": "With normalization we still have to tune the learning rate (as scale-variant parameters remain or are reintroduced with each invariance to preserve the degrees of freedom), then we have to wait for the phase two of Lemma 3.2 so that the learning rate of scale-invariant parameters adapts, and from then on the optimal convergence rate can be guaranteed.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 31,
+      "text": "3. The case of Batch Normalization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 32,
+      "text": "Note that there is no direct correspondence between the loss of BN-normalized network (2) and the loss of the original network because of dependence of the normalization on the batches.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 33,
+      "text": "In other words, there is no setting of parameters of the original network that would make its forward pass equivalent to that of BN network (2) for all batches.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 34,
+      "text": "The theory tells the same as in case 2 above but with an additional price of optimizing a different function.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 35,
+      "text": "These points remain me puzzled regarding either practical or theoretical application of the result. It would be great if authors could elaborate.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 36,
+      "text": "-- Difference from Wu et al. 2018",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 37,
+      "text": "This works is cited as a source of inspiration in several places in the paper.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 38,
+      "text": "As the submission is a theoretical result with no immediate applicability, it would be very helpful if the authors could detail the technical improvements over this related work.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 39,
+      "text": "Note, ICLR policy says that arxiv preprints earlier than one month before submission are considered a prior art. Could the authors elaborate more on possible practical/theoretical applications?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 40,
+      "text": "* Side Notes (not affecting the review recommendation)",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 41,
+      "text": "I believe that the claim that \u201cBN reduces covariate shift\u201d (actively discussed in the intro) was an imprecise statement in the original work.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 42,
+      "text": "Instead, BN should be able to quickly adapt to the covariate shift when it occurs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 43,
+      "text": "It achieves this by using the parameterization in which the mean and variance statistics of neurons (the quantities whose change is called the covariate shift) depend on variables that are local to the layer (gamma, beta in (1)) rather than on the cumulative effect of all of the preceding layers.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 44,
+      "text": "* Revision",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 45,
+      "text": "I took into account the discussion and the newly added experiments and increased the score.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 46,
+      "text": "The experiments verify the proven effect and make the paper more substantial.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 47,
+      "text": "Some additional comments about experiments follow.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 48,
+      "text": "Training loss plots would be more clear in the log scale.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 49,
+      "text": "Comparison to \"SGD BN removed\" is not fair because the initialization is different (application of BN re-initializes weight scales and biases).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 50,
+      "text": "The same initialization can be achieved by performing one training pass with BN with 0 learning rate and then removing it, see e.g. Gitman, I. and Ginsburg, B. (2017).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 51,
+      "text": "Comparison of batch normalization and weight normalization algorithms for the large-scale image classification.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 52,
+      "text": "The use of Glorot uniform initializer is somewhat subtle.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 53,
+      "text": "Since BN is used, Glorot initialization has no effect for a forward pass.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 54,
+      "text": "However, it affects the gradient norm.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "sentence_index": 55,
+      "text": "Is there a rationale in this setting or it is just a more tricky method to fix the weight norm to some constant, e.g. ||w||=1?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 0,
+      "text": "Thanks for your careful review! As mentioned in the intro, we are trying to give some principled insight into benefits of BN, which has proved tricky.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 1,
+      "text": "Also, it is noted in the paper that BN probably has many desirable properties, of which auto-rate tuning is just one.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 2,
+      "text": "(i) Speed of SGD vs GD:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 3,
+      "text": "Note that \u201ctime\u201d here refers to number of iterations, not epochs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 4,
+      "text": "We are not aware of results establishing SGD is faster in this measure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 5,
+      "text": "(As noted on p2,  we are working within the standard paradigm of convergence rates in optimization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 6,
+      "text": "The only new part is the automatic rate tuning  behavior shown for most parameters when BN is used.)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 7,
+      "text": "(ii) \u201cusually training is stopped much before convergence, in the hope of finding solutions close to minimum with high probability.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 8,
+      "text": "We\u2019re assuming training proceeds until gradient is small (stationary point).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 9,
+      "text": "We are not aware of any prior analysis of speed of convergence that deviates from this assumption.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 10,
+      "text": "Perhaps the reviewer is thinking of early stopping in context of better generalization?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 11,
+      "text": "(iii) \u201cclarify difference from Wu et al. (2018)\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 12,
+      "text": "Wu et al. 2018 introduces a *new* algorithm inspired by weight normalization (WN) and studies its convergence rate to stationary point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 13,
+      "text": "This algorithm can be seen as an explicit way to tune the learning rate (thus it is conceptually analogous Adagrad).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 14,
+      "text": "They don't have any results about WN or BN itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 15,
+      "text": "Their analysis could be adapted to GD on one-neuron network with WN or BN without scale-variant parameters (gamma and beta).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 16,
+      "text": "Even this adaptation is not immediate because the goal of this work is to find a stationary point on the unit sphere rather than R^d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 17,
+      "text": "Finally, they prove no results for SGD, whereas our paper does.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 18,
+      "text": "(iv) \u201csingle learning rate doesn\u2019t apply for all parameters\u201d",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 19,
+      "text": "Correct.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 20,
+      "text": "The algorithm can use a single learning rate for scale-invariant parameters but needs a tuned rate for the scale-variant ones.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 21,
+      "text": "In feedforward nets, the number of scale-variant parameters scales as the number of nodes and the number of scale-invariant parameters scales as the number of edges (up to weight sharing).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 22,
+      "text": "Thus the vast majority of parameters are scale-invariant.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 23,
+      "text": "(v) \u201cRelation between original loss and loss using BN.\u201d",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46,
+          47
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 24,
+      "text": "Our results hold for the loss of batch-normalized network (\u201cBN-loss\u201d)  which is different from the loss of the original network (\u201cBN-less loss\u201d).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46,
+          47
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gZOpsFnQ",
+      "rebuttal_id": "B1eSf1V0aX",
+      "sentence_index": 25,
+      "text": "Probably the reshaping of loss function due to BN is very important but currently hard to analyse theoretically because we lack a good mathematical understanding of the loss landscape (even BN-less).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46,
+          47
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

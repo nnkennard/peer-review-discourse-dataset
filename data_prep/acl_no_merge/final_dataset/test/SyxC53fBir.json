@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "forum_id": "Bke6vTVYwH",
+    "review_id": "SyxC53fBir",
+    "rebuttal_id": "rJxXNsJLor",
+    "title": "Graph convolutional networks for learning with few clean and many noisy labels",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Bke6vTVYwH&noteId=rJxXNsJLor",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 0,
+      "text": "The paper makes a significant attempt at solving one of the practical problems in machine learning -- learning from many noisy and limited number of clean labels.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 1,
+      "text": "This setting is presumably more practical than the setting of few-shot learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 2,
+      "text": "Noisy labels are often abundantly available and investing in methods that can take the noise into account for building a discriminative model is quite timely.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 3,
+      "text": "To be honest, the theoretical contribution of the paper is limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 4,
+      "text": "The authors make use of the nearest neighbour graph obtained from a reduced-dimensional set of features to compute the weights of the noisy labels that must guide the predictive model.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 5,
+      "text": "From this perspective, the paper seems like an application of existing tools (such as CNN, graph convolutional network and binary classification).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 6,
+      "text": "However, that does not undermine the superior results the authors have received in the novel application they have targeted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 7,
+      "text": "I appreciate the effort that went validating these ideas with real-world datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 8,
+      "text": "In future, I would like to see a joint approach to such training, where the function g(), the nearest neighbour graph loss and the classification loss are all tied in the same objective function and are optimized jointly.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "sentence_index": 9,
+      "text": "The paper has few really minor grammatical errors and typos. Please fix those before uploading the final draft.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyxC53fBir",
+      "rebuttal_id": "rJxXNsJLor",
+      "sentence_index": 0,
+      "text": "We thank the review for their positive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "rebuttal_id": "rJxXNsJLor",
+      "sentence_index": 1,
+      "text": "We agree that our main contribution is to cast a graph convolution network as a binary classifier learning to discriminate clean from noisy data and show its excellent results for few-shot learning.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "rebuttal_id": "rJxXNsJLor",
+      "sentence_index": 2,
+      "text": "Q1: In future, I would like to see a joint approach to such training, where the function g(), the nearest neighbour graph loss and the classification loss are all tied in the same objective function and are optimized jointly.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "rebuttal_id": "rJxXNsJLor",
+      "sentence_index": 3,
+      "text": "R1: We fully agree that this is an interesting direction for future research, which should result in a further increase in performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxC53fBir",
+      "rebuttal_id": "rJxXNsJLor",
+      "sentence_index": 4,
+      "text": "It would be interesting to see if the feature extractor can benefit from the cleaning of noisy images during learning, resulting in more robust feature descriptors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

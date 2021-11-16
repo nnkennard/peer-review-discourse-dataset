@@ -1,0 +1,628 @@
+{
+  "metadata": {
+    "forum_id": "rJlJ-2CqtX",
+    "review_id": "B1g4z20Vs7",
+    "rebuttal_id": "SJgudF2KCX",
+    "title": "Success at any cost: value constrained model-free continuous control",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJlJ-2CqtX&noteId=SJgudF2KCX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 0,
+      "text": "This paper proposes an approach for mitigating issues associated with high-frequency/amplitude control signals that may be obtained when one applies reinforcement learning algorithms to continuous control tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 1,
+      "text": "The approach taken by the paper is to solve a constrained optimization problem, where the constraint imposes a (potentially state-dependent) lower bound on the reward.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 2,
+      "text": "This is done by using a Lagrangian relaxation that learns the parameters of a control policy that satisfies the desired constraints (and also learns the Lagrange multipliers).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 3,
+      "text": "The presented approach is demonstrated on a cart-pole swing-up task as well as a quadruped locomotion task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 4,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 5,
+      "text": "+ The paper is generally clear and readable.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 6,
+      "text": "+ The simulation results for the Minitaur quadruped robot are performed using a realistic model of the robot.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 7,
+      "text": "Major concern:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 8,
+      "text": "- My biggest concern is that the technical contributions of the paper are not clear at all.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 9,
+      "text": "The motivation for the work (avoiding high amplitude/frequency control inputs) is certainly now new; this has always been a concern of control theorists and roboticists (e.g., when considering minimum-time optimal control problems, or control schemes such as sliding mode control).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 10,
+      "text": "The idea of using a constrained formulation is not novel either (constrained MDPs have been thoroughly studied since Altman (1999)).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 11,
+      "text": "The technical approach of using a Lagrangian relaxation is the standard way one goes about handling constrained optimization problems, and thus I do not see any novelty there either.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 12,
+      "text": "Overall, the paper does not make a compelling case for the novelty of the problem or approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 13,
+      "text": "Other concerns:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 14,
+      "text": "- For the cart-pole task, the paper states that the reward is modified \"to exclude any cost objective\".",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 15,
+      "text": "Results are then presented for this modified reward showing that it results in high-frequency control signals (and that the proposed constrained approach avoids this).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 16,
+      "text": "I don't think this is really a fair comparison; I would have liked to have seen results for the unmodified reward function.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 17,
+      "text": "- The claim made in the first line of the abstract (applying RL algorithms to continuous control problems often leads to bang-bang control)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 18,
+      "text": "is very broad and should be watered down.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 19,
+      "text": "This is the case only when one considers a poorly-designed cost function that doesn't take into account realistic factors such as actuator limits.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 20,
+      "text": "- In the last paragraph of Section 3.3, the paper proposes making the lower-bound on the reward state-dependent.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 21,
+      "text": "However, this can be tricky in practice since it requires having an estimate for Q_r(s,a) as a function of the state (in order to ensure that the state-dependent lower bound can indeed be satisfied).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 22,
+      "text": "Typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 23,
+      "text": "- Pg. 5, Section 3.4: \"...this is would achieve...\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "sentence_index": 24,
+      "text": "- Pg. 6: ...thedse value of 90...\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 0,
+      "text": "Thank you for your comments. Please find below our response to your questions and concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 1,
+      "text": "1) Technical contributions",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 2,
+      "text": "We are glad that the reviewer agrees that we are tackling a long standing and important problem and acknowledge the fact that neither the definition of constrained MDPs nor the application of Lagrangian relaxation to solve these problems is novel by itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 3,
+      "text": "We should have stated our exact technical contributions more clearly and have adapted the paper to do so.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 4,
+      "text": "For completeness we will list these below:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 5,
+      "text": "a) We introduce pointwise, per-state constraints to learn more consistent behavior compared a single global constraint, and regress the resulting state-dependent Lagrangian multipliers using a neural network to exploit generalization across similar states.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 6,
+      "text": "b) Instead of recombining the reward and cost directly on the environment side and learning a single value estimate, we train a critic network to output both return and penalty value estimates as well as the Lagrangian multipliers themselves, effectively providing more structure to the critic.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 7,
+      "text": "We only combine the different terms appropriately for the actor update.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 8,
+      "text": "c) We show that we can train a single, bound-conditional policy that can optimize penalty across a range of bounds and can be used to dynamically trade off reward and penalty.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 9,
+      "text": "2) Comparison with the original benchmark reward",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 10,
+      "text": "We have extended the results on Cartpole to include the original reward as defined in the DM Control Suite (incl. bonus for low control).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 11,
+      "text": "We found that compared to the original setting, our method is able to reduce the average control norm by over 50% across the entire episode, and by over 80% after the swingup phase, without significant reduction in the average return as measured without control bonus.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 12,
+      "text": "3) Claims about bang-bang control in continuous RL",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 13,
+      "text": "The reviewer is right in that the claim of RL often leading to bang-bang control is too strongly worded.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 14,
+      "text": "This is only the case when the objective function is not well-designed and one is naively optimizing for success only.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 15,
+      "text": "Designing a proper objective function is however often not trivial and more of an art, requiring several iterations to achieve the desired behavior.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 16,
+      "text": "This work tries to remove some of the complexities in designing such a function.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 17,
+      "text": "4) State-dependent lower bound",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 18,
+      "text": "Defining a state-dependent bound is indeed not trivial and requires knowledge of what is feasible in the system, and as such we leave this up to future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 19,
+      "text": "In this paper we have made the approximation that the state distribution is stationary and the discount is large enough to assume that the value is more or less constant.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g4z20Vs7",
+      "rebuttal_id": "SJgudF2KCX",
+      "sentence_index": 20,
+      "text": "While this holds for locomotion tasks, this does not apply in e.g. the swingup phase of the cartpole task and as a result the penalty is completely ignored during this phase.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

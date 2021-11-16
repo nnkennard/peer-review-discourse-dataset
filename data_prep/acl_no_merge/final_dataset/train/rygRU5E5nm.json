@@ -1,0 +1,431 @@
+{
+  "metadata": {
+    "forum_id": "HyGEM3C9KQ",
+    "review_id": "rygRU5E5nm",
+    "rebuttal_id": "BklGVJ92pX",
+    "title": "Improving Differentiable Neural Computers Through Memory Masking, De-allocation, and Link Distribution Sharpness Control",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyGEM3C9KQ&noteId=BklGVJ92pX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 0,
+      "text": "Overview:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 1,
+      "text": "This paper proposes modifications to the original Differentiable Neural Computer architecture in three ways.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 2,
+      "text": "First by introducing a masked content-based addressing which dynamically induces a key-value separation",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 3,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 4,
+      "text": "Second, by modifying the de-allocation system by also multiplying the memory contents by a retention vector before an update",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 5,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 6,
+      "text": "Finally, the authors propose a modification in the link distribution, through renormalization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 7,
+      "text": "They provide some theoretical motivation and empirical evidence that it helps avoiding memory aliasing.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 8,
+      "text": "The authors test their approach in the some algorithm task from the DNC paper (Copy, Associative Recall and Key-Value Retrieval), and also in the bAbi dataset.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 9,
+      "text": "Strengths: Overall I think the paper is well-written, and proposes simple adaptions to the DNC architecture which are theoretically grounded and could be effective for improving general performance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 10,
+      "text": "Although the experimental results seem promising when comparing the modified architecture to the original DNC, in my opinion there are a few fundamental problems in the empirical session (see weakness discussion bellow).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 11,
+      "text": "Weaknesses: Not all model modifications are studied in all the algorithmic tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 12,
+      "text": "For example, in the associative recall and key-value retrieval only DNC and DNC + masking are studied.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 13,
+      "text": "For the bAbi task, although there is a significant improvement (43%) in the mean error rate compared to the original DNC, it's important to note that performance in this task has improved a lot since the DNC paper was release. Since this is the only non-toy task in the paper, in my opinion, the authors have to discuss current SOTA on it, and have to cite, for example the universal transformer[1], entnet[2], relational nets [3], among others architectures that shown recent advances on this benchmark.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 14,
+      "text": "Moreover, the sparse DNC (Rae el at., 2016) is already a much better performant in this task.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 15,
+      "text": "(mean error DNC: 16.7 \\pm 7.6, DNC-MD (this paper) 9.5 \\pm 1.6, sparse DNC 6.4 \\pm 2.5).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 16,
+      "text": "Although the authors mention in the conclusion that it's future work to merge their proposed changes into the sparse DNC, it is hard to know how relevant the improvements are, knowing that there are much better baselines for this task.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 17,
+      "text": "It would also be good if besides the mean error rates, they reported best runs chosen by performance on the validation task, and number of the tasks solve (with < 5% error) as it is standard in this dataset.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 18,
+      "text": "Smaller Notes.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 19,
+      "text": "1) In the abstract, I find the message for motivating the masking from the sentence  \"content based look-up results... which is not present in the key and need to be retrieved.\"  hard to understand by itself. When I first read the abstract, I couldn't understand what the authors wanted to communicate with it. Later in 3.1 it became clear.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 20,
+      "text": "2) page 3, beta in that equation is not defined",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 21,
+      "text": "3) First paragraph in page 5 uses definition of acronyms DNC-MS and DNC-MDS before they are defined.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 22,
+      "text": "4) Table 1 difference between DNC and DNC (DM) is not clear. I am assuming it's the numbers reported in the paper, vs the author's implementation?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 23,
+      "text": "5)In session 3.1-3.3, for completeness. I think it would be helpful to explicitly compare the equations from the original DNC paper with the new proposed ones.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 24,
+      "text": "--------------",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "sentence_index": 25,
+      "text": "Post rebuttal update: I think the authors have addressed my main concern points and I am updating my score accordingly.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful and helpful comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 1,
+      "text": "Following the suggestions, we added additional results for the associative recall task for many network variants.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 2,
+      "text": "We also report mean and variance of losses for different seeds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 3,
+      "text": "This shows that masking improves performance on this task especially when combined with improved de-allocation, while sharpness enhancements negatively affect performance in this case.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 4,
+      "text": "From the variance plots it can be seen that some seeds of DNC-M and DNC-MD converge significantly faster than plain DNC.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 5,
+      "text": "In our experimental section, we added requested references to methods performing better on bAbI, and point out that our goal is not to beat SOTA on bAbI, but to exhibit and overcome drawbacks of DNC.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 6,
+      "text": "Comparison to Sparse DNC is an interesting idea, and we are currently running experiments in this direction. We intend to make the results available in the near future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 7,
+      "text": "We are unable to provide a fair comparison for the lowest bAbi scores, having reported 8 seeds compared to the 20 seeds reported by Graves et al. Indeed, the high variance of DNC (Table 1) suggests that it may benefit a lot from exploring additional seeds.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygRU5E5nm",
+      "rebuttal_id": "BklGVJ92pX",
+      "sentence_index": 8,
+      "text": "We incorporated all of the smaller notes, including a comparison to the original DNC equations in Appendix A.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

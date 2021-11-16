@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "forum_id": "SkfMWhAqYQ",
+    "review_id": "Bkeb0FIa2Q",
+    "rebuttal_id": "H1ep2zJyaX",
+    "title": "Approximating CNNs with Bag-of-local-Features models works surprisingly well on ImageNet",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkfMWhAqYQ&noteId=H1ep2zJyaX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 0,
+      "text": "The idea of image classification based on patch-level deep feature in the BoF model has been studied extensively.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 1,
+      "text": "Just list few of them:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 2,
+      "text": "Wei et al. HCP: A Flexible CNN Framework for Multi-label Image Classification, IEEE TPAMI 2016",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 3,
+      "text": "Tang et al. Deep Patch Learning for Weakly Supervised Object Classification and Discovery, Pattern Recognition 2017",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 4,
+      "text": "Tang et al. Deep FisherNet for Object Classification, IEEE TNNLS",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 5,
+      "text": "Arandjelovi\u0107 et al. NetVLAD: CNN Architecture for Weakly Supervised Place Recognition, CVPR 2016",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 6,
+      "text": "The above papers are not cited in this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 7,
+      "text": "There are some unique points.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 8,
+      "text": "This work does not use RoIPooling layer and has results on ImageNet.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 9,
+      "text": "But, the previous works use RoIPooling layer to save computations and works on scene understanding images, such as PASCAL.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 10,
+      "text": "Besides, the paper uses the smallest patch among all the patch-based deep networks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 11,
+      "text": "It is interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "sentence_index": 12,
+      "text": "I highly encourage the authors to finetune the ImageNet pre-trained BagNet on PASCAL VOC and compare to the previous patch-based deep networks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 0,
+      "text": "Thank you for reviewing our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 1,
+      "text": "We would like to make a quick clarification right away, which we hope will change your assessment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 2,
+      "text": "All works you cite use non-linear BoF encodings on top of pretrained VGG (or AlexNet) features; the effective patch size of individual features is thus large and will generally encompass the whole object of interest.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 3,
+      "text": "In contrast, our BagNets are constrained to very small image patches (much smaller than the typical object size in ImageNet), use no region proposals (all patches are treated equally) and employ a very simple and transparent average pooling of local features (no non-linear dependence between features and regions).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 4,
+      "text": "That\u2019s why BagNets (1) substantially increase interpretability of the decision making process (see e.g. heatmaps), (2) highlight what features and length-scales are necessary for object recognition and (3) shed light on the classification strategy followed by modern high performance CNNs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 5,
+      "text": "None of the cited papers addresses any of these contributions.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 6,
+      "text": "PS: We do cite similar approaches in our paper, see first paragraph of related literature. We will add your references there.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 7,
+      "text": "Maybe the following perspective also helps: the works you cite use BoF over larger image regions, but the embeddings for each region are still based on conventional, non-interpretable DNNs (like VGG).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 8,
+      "text": "Our work \"opens this blackbox\" (to use a very stressed term) and provides a way to compute similar region embeddings in a much more interpretable way as a linear BoF over small patches.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Bkeb0FIa2Q",
+      "rebuttal_id": "H1ep2zJyaX",
+      "sentence_index": 9,
+      "text": "In other words, if the works you cite would use BagNets instead of VGG, they would basically use a \"stacked BoF\" approach: first, small and local patches are combined to yield region embeddings (BagNet), and these region embeddings are used by a second BoF to infer image-level object labels and bounding boxes.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

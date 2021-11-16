@@ -1,0 +1,863 @@
+{
+  "metadata": {
+    "forum_id": "BJesDsA9t7",
+    "review_id": "B1xF4md62m",
+    "rebuttal_id": "SJxIdW5rCQ",
+    "title": "Better Accuracy with Quantified Privacy: Representations Learned via Reconstructive Adversarial Network",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJesDsA9t7&noteId=SJxIdW5rCQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 0,
+      "text": "Privacy concerns arise when data is shared with third parties, a common occurrence.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 1,
+      "text": "This paper proposes a privacy-preserving classification framework that consists of an encoder that extracts features from data, a classifier that performs the actual classification, and a decoder that tries to reconstruct the original data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 2,
+      "text": "In a mobile computing setting, the encoder is deployed at the client side and the classification is performed on the server side which accesses only the output features of the encoder.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 3,
+      "text": "The adversarial training process guarantees good accuracy of the classifier while there is no decoder being able to reconstruct the original input sample accurately.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 4,
+      "text": "Experimental results are provided to confirm the usefulness of the algorithm.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 5,
+      "text": "The problem of privacy-preserving learning is an important topic and the paper proposes an interesting framework for that. However, I think it needs to provide more solid evaluations of the proposed algorithm, and presentation also need to be improved a bit.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 6,
+      "text": "Detailed comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 7,
+      "text": "I don\u2019t see a significant difference between RAN and DNN in Figure 5. Maybe more explanation or better visualization would help.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 8,
+      "text": "The decoder used to measure privacy is very important. Can you provide more detail about the decoders used in all the four cases?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 9,
+      "text": "If possible, evaluating the privacy with different decoders may provide a stronger evidence for the proposed method.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 10,
+      "text": "It seems that DNN(resized) is a generalization of DNN.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 11,
+      "text": "If so, by changing the magnitude of noise and projection dimensions for PCA should give a DNN(resized) result (in Figure 3) that is close to DNN.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 12,
+      "text": "If the two NNs used in DNN and DNN(resized) are different, I believe it\u2019s still possible to apply the algorithm in DNN(resized) to the NN used in DNN, and get a full trace in the figure as noise and projection changes, which would lead to more fair comparison.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 13,
+      "text": "The abstract mentioned that the proposed algorithm works as an \u201cimplicit regularization leading to better classification accuracy than the original model which completely ignores privacy\u201d. But I don\u2019t see clearly from the experimental results how the accuracy compares to a non-private classifier.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 14,
+      "text": "Section 2.2 mentioned how different kind of layers would help with the encoder\u2019s utility and privacy. It would be better to back up the argument with some experiments.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 15,
+      "text": "I think it needs to be made clearer how reconstruction error works as a measure of privacy.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 16,
+      "text": "For example, an image which is totally unreadable for human eye might still leak sensitive information when fed into a machine learning model.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 17,
+      "text": "In term of reference, it\u2019s better to cite more articles with different kind of privacy attacks for how raw data can cause privacy risks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 18,
+      "text": "For the \u201cNoisy Data\u201d method, it\u2019s better to cite more articles on differential privacy and local differential privacy.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 19,
+      "text": "Some figures, like Figure 3 and 4, are hard to read.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "sentence_index": 20,
+      "text": "The author may consider making the figures larger (maybe with a 2 by 2 layout), adjusting the position of the legend & scale of x-axis for Figure 3, and using markers with different colors for Figure 4.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 0,
+      "text": "We thank the comments with cares and insights, which are helpful for improving the quality and readability of our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 1,
+      "text": "We are glad that you support our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 2,
+      "text": "We have addressed all the comments as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 3,
+      "text": "Response #1: In the revision, we had added a new experiment to zoom in on two categories for clearer utility visualization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 4,
+      "text": "In particular, we show the DNN\u2019s deep features and RAN\u2019s Encoder output to illustrate how they push the features to cluster with the \u201ccar with/without road\u201d & \u201csailboat with/without water\u201d images in the feature space.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 5,
+      "text": "Response #2: We agree that we should provide more details about the decoders.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 6,
+      "text": "Generally, we set the Decoder to mirror the Encoder's architecture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 7,
+      "text": "That is, we assume a powerful adversary that knows the Encoder in training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 8,
+      "text": "Because the Encoders are different for different tasks, the Encoders are different too.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 9,
+      "text": "In particular, we select the architecture of Encoder plus Classifier to be LeNet for MNIST, Ubisound and Har, to be AlexNet for CIFAR-10, and to be VGG-16 for ImageNet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 10,
+      "text": "The architectures of Encoder in four cases are different, so the Decoder is varied as well.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 11,
+      "text": "In the revision, we have added above explanations about Decoder in Section 2.3 and in experiment settings of Section 3.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 12,
+      "text": "Response #3: We agree that the description of three baselines should be more precise, especially the DNN and DNN(resized) baseline.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 13,
+      "text": "In the revision, we have added explanations on the difference/similarity between DNN (resized) and DNN baselines. And explain why we include them as baselines to compare RAN against in Section 3.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 14,
+      "text": "Response #4: We have added more explanations in Section 3.1 about how \u201cthe proposed algorithm works as an implicit regularization leading to better classification accuracy than the original model which completely ignores privacy\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 15,
+      "text": "As shown in Figure 3, the utility of RAN\u2019s Encoder output is higher than that of DNN.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 16,
+      "text": "Here the DNN model stands for the non-private feature extractor followed by a non-private classifier.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 17,
+      "text": "Response #5: We agree that it is necessary to conduct experiments to compare RAN\u2019s performance concerning privacy and accuracy with/without a different kind of layers so that we can back up the argument mentioned in Section 2.2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 18,
+      "text": "On the one hand, we have already conducted exhaustive micro-benchmark experiments to determine the current design of RAN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 19,
+      "text": "For example, we select different model architectures (layers and building blocks), weight updating schemes of different parts (when and how to update Encoder, Decoder and Classifier) and settings of some important hyper-parameters (the setup of \u201cn\u201d epochs and \u201ck\u201d steps, learning rate) to select the empirically optimized one.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 20,
+      "text": "However, we only present the most important results in this paper due to the space limit.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 21,
+      "text": "On the other hand, for all the arguments in Section 2.2, we have added the citation to support them.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 22,
+      "text": "Response #6: We agree that it is important to justify how the reconstruction error works as a measure of privacy in this paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 23,
+      "text": "In the revision, we have added the following explanation and justification on privacy quantification in Section 1, Section 2, Section 4 and Section 5.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 24,
+      "text": "First, there is no single standard definition of data privacy-preserving and corresponding adversary attacks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 25,
+      "text": "And a fundamental problem is the natural privacy-utility tradeoff which is affected by different data privacy-preserving methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 26,
+      "text": "We note that our principal contribution in this paper is the RAN framework and the training algorithm, which can accommodate different choices of privacy attacker and privacy quantification.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 27,
+      "text": "Second, finding the right measurement for privacy is an open problem in itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 28,
+      "text": "To evaluate RAN, one has to pick some quantifications.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 29,
+      "text": "In the present paper, we chose the \u201creconstructive error\u201d because it is the most intuitive one to measure the risk of original data disclosure given perturbed data (Encoder output).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 30,
+      "text": "Third, in the future, we will evaluate RAN using other quantifications of privacy as well in a defined application.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 31,
+      "text": "For example, we could measure the privacy by the hidden failure, i.e., the ratio between the background patterns that were discovered based on RAN\u2019s Encoder output, and the sensitive patterns founded from the raw data, in an object recognition task.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 32,
+      "text": "Response #7: Thanks for pointing out the citation problem in Section 3.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 33,
+      "text": "In the revision, we have added explanation and cited more articles about several attacks for how the raw data can cause privacy risks in Section 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 34,
+      "text": "For example, underlying correlation detection, re-identification and other malicious mining.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 35,
+      "text": "As for the \u201cNoisy Data\u201d method, we have added the citation on differential privacy in Section 3.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xF4md62m",
+      "rebuttal_id": "SJxIdW5rCQ",
+      "sentence_index": 36,
+      "text": "Response #8: We have re-plotted Figure 3 and Figure 4 to improve the readability.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

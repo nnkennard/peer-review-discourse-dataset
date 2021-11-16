@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "forum_id": "rJlJ-2CqtX",
+    "review_id": "SkggB79t2X",
+    "rebuttal_id": "HkgX7K2FA7",
+    "title": "Success at any cost: value constrained model-free continuous control",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJlJ-2CqtX&noteId=HkgX7K2FA7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 0,
+      "text": "This paper uses constrained Markov decision processes to solve a multi-objective problem that aims to find the correct trade-off between cost and return in continuous control.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 1,
+      "text": "The main technique is Lagrangian relaxation and experiments are focus on cart-pole and locomotion task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 2,
+      "text": "Comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 3,
+      "text": "1) How to solve the constrained problem (8) is unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 4,
+      "text": "It is prefer to provide detailed description or pseudocode for this step.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 5,
+      "text": "2) In equation (8), lambda is a trade-off between cost and return.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 6,
+      "text": "Optimization on lambda reduces burdensome hyperparameter selection, but a new hyperparameter beta is introduced.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 7,
+      "text": "How do we choose a proper beta, and will the algorithm be sensitive to beta?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 8,
+      "text": "3) The paper only conducts comparison experiments with fixed-alpha baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 9,
+      "text": "The topic is similar to safe reinforcement learning.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "sentence_index": 10,
+      "text": "Including the comparison with safe reinforcement learning algorithms is more convincing.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 0,
+      "text": "Thank you for your comments. Please find below our response to your questions and concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 1,
+      "text": "1) Pseudocode",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 2,
+      "text": "We apologise that the optimization procedure was unclear.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 3,
+      "text": "We have added pseudocode of the general optimization procedure in Appendix A.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 4,
+      "text": "2) Hyperparameter selection",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 5,
+      "text": "The reviewer is completely right that we are removing one hyperparameter by introducing another.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 6,
+      "text": "However, there are two reasons why this might still be beneficial: one is that the penalty coefficient is now effectively dynamic and can change during training, ensuring higher chances of finding a good solution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 7,
+      "text": "Second, by elevating the hyperparameter one level up, we hope that the learning is indeed less sensitive to its specific setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 8,
+      "text": "Indeed, we found in practice that we get similar results for \\beta within some orders of magnitude, which requires significantly less tuning compared to a fixed \\alpha.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 9,
+      "text": "3) Relation to safe reinforcement learning",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 10,
+      "text": "It is indeed the case that constrained MDPs are often considered in safe RL.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 11,
+      "text": "In those cases there is generally an upper bound on a penalty function that should never be exceeded, including during training itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 12,
+      "text": "These algorithms generally restrict policy updates to remain within the constraint-satisfying regime.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 13,
+      "text": "While our approach can similarly be applied to upper bounds on penalties, there\u2019s unfortunately no guarantee that the constraints will be satisfied at every moment during training, but only at convergence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkggB79t2X",
+      "rebuttal_id": "HkgX7K2FA7",
+      "sentence_index": 14,
+      "text": "As such it is not clear how these methods would apply to our specific experimental setups.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

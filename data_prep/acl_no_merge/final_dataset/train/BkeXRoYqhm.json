@@ -1,0 +1,589 @@
+{
+  "metadata": {
+    "forum_id": "SJl8gnAqtX",
+    "review_id": "BkeXRoYqhm",
+    "rebuttal_id": "S1etFWjga7",
+    "title": "Prob2Vec: Mathematical Semantic Embedding for Problem Retrieval in Adaptive Tutoring",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJl8gnAqtX&noteId=S1etFWjga7",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 0,
+      "text": "The paper proposed a hierarchical framework for problem embedding and intended to apply it to adaptive tutoring.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 1,
+      "text": "The system first used a rule-based method to extract the concepts for problems and then learned the concept embeddings and used them for problem representation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 2,
+      "text": "In addition, the paper further proposed negative pre-training for training with imbalanced data sets to decrease false negatives and positives.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 3,
+      "text": "The methods are compared with some other word-embedding based methods and showed 100% accuracy in a similarity detection test on a very small dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 4,
+      "text": "In sum, the paper has a very good application but not good enough as a research paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 5,
+      "text": "Some of the problems are listed as follows:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 6,
+      "text": "1.\tLack of technical novelty.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 7,
+      "text": "It seems to me just a combination of several mature techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 8,
+      "text": "I do not see much insight into the problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 9,
+      "text": "For example, if the rule-based concept extractor can already extract concepts very well, the \u201cproblem retrieval\u201d should be solved by searching with the concepts as queries.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 10,
+      "text": "Why should we use embedding to compare the similarity?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 11,
+      "text": "Also, the title of the paper is about problem retrieval but the experiments are about similarity comparison, there seems a gap.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 12,
+      "text": "2.\tData size is too small, and the baselines",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 13,
+      "text": "are not state-of-the-art. There are some unsupervised sentence embedding methods other than the word-embedding based models.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 14,
+      "text": "Some clarity issues.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "sentence_index": 15,
+      "text": "For example, Page 6. \u201cis pre-trained on a pure set of negative samples\u201d\u2014 what is the objective function? How to train on only negative samples?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 0,
+      "text": "1- There are two reasons that concept and problem embedding are performed in this work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 1,
+      "text": "Considering concept continuity is an important matter in education.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 2,
+      "text": "Having concept embedding, concept continuity can be reached as is discussed in the last paragraph on page 7 and some other examples are given in table 2.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 3,
+      "text": "By just having the most sophisticated concept extractor, the concept continuity cannot be retrieved.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 4,
+      "text": "Furthermore, problem embedding is used by the recommender system to project the performance of students on the problems they solved onto other problems that they have not solved.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 5,
+      "text": "This way, we have an idea of what problems should be recommended to them and which problems should not by having an evaluation of their ability to solve unseen problems and recommend problems in the boundary of their capacity, not way beyond, and to recommend problems in a way that covers all concepts necessary for students to learn.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 6,
+      "text": "We have observed interesting patterns, e.g. similar problems are more likely to be solved correctly at the same time or wrong at the same time.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 7,
+      "text": "Note that by just having the concepts of problems that are not in numerical form, performance projection may not be feasible and there is a need for using other methods like embedding.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 8,
+      "text": "2- The data size being small",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 9,
+      "text": "is just the nature of the application.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 10,
+      "text": "Creating new problems is a creative process and is not easy, given that with the insight we have on the application, the data size seems to suffice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 11,
+      "text": "Furthermore, since Prob2Vec is performing well for not a relatively big data set, it would definitely do well for big data sets since the more data we have, the more precise the concept and problem embedding are.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 12,
+      "text": "The easy-tough-to-beat method proposed by Arora et al. is the state of the art in unsupervised sentence embedding that we compared our algorithm with.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 13,
+      "text": "Please let us know if we missed anything.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 14,
+      "text": "Pre-training is a common practice in transfer learning (one-shot learning).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 15,
+      "text": "The objective function does not differ from the objective function used for post training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 16,
+      "text": "Training on only negative samples with lower training epochs than the training epochs in post training just adjusts the weights of the neural network to a better starting point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 17,
+      "text": "If the training epochs in pre-training is relatively smaller than the training epochs in post training, due to curse of dimensionality, the warm start for post training results in better performance for NN classifier.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 18,
+      "text": "To make it more clear what it means to train the neural network on a pure set of negative data samples, think about batch training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 19,
+      "text": "It's not likely, but possible, that a batch only has negative or positive samples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 20,
+      "text": "In the pre-training phase of our method, we intentionally used a pure set of negative samples (with fewer training epochs) to have a warm start for post training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 21,
+      "text": "As table 3 shows, our proposed method outperforms one-shot learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeXRoYqhm",
+      "rebuttal_id": "S1etFWjga7",
+      "sentence_index": 22,
+      "text": "Please look at part 1 of our response to reviewer2 and part 2 of comment titled \"Response to Question on Negative Pre-Training\" below.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

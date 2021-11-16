@@ -1,0 +1,518 @@
+{
+  "metadata": {
+    "forum_id": "SklXvs0qt7",
+    "review_id": "Byxla5U9h7",
+    "rebuttal_id": "SyeblhC2pQ",
+    "title": "Curiosity-Driven Experience Prioritization via Density Estimation",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklXvs0qt7&noteId=SyeblhC2pQ",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 0,
+      "text": "This work considers a version of importance sampling of states from the replay buffer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 1,
+      "text": "Each trajectory is assigned a rank, inversely proportional to its probability according to a GMM.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 2,
+      "text": "The trajectories with lower rank are preferred at sampling.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 3,
+      "text": "Main issues:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 4,
+      "text": "1. Estimating rank from a density estimator",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 5,
+      "text": "- the reasoning behind picking VGMM as the density estimator is not fully convincing and (dis)advantages of other candidate density estimators are almost not highlighted.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 6,
+      "text": "- it is unclear and possibly could be better explained why one needs to concatenate the goals (what would change if we would not concatenate but estimate state densities rather than trajectories?)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 7,
+      "text": "2. Generalization issues",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 8,
+      "text": "- the method is not applicable to episodes of different length",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 9,
+      "text": "- the approach assumes existence of a state to goal function f(s)->g",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 10,
+      "text": "- although the paper does not expose this point (it is discussed the HER paper)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 11,
+      "text": "3. Scaling issues",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 12,
+      "text": "- length of the vector grows linearly with the episode length",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 13,
+      "text": "- length of the vector grows linearly with the size of the goal vector",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 14,
+      "text": "For long episodes or episodes with large goal vectors it is quite possible that there will not be enough data to fit the GMM model or one would need to collect many samples prior.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 15,
+      "text": "4. Minor issues",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 16,
+      "text": "- 3.3 \"It is known that PER can become very expensive in computational time\" - please supply a reference",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 17,
+      "text": "- 3.3 \"After each update of the model, the agent needs to update the priorities of the transitions in the replay buffer with the new TD-errors\" - However the method only renews priorities of randomly selected transitions (why would there be a large overhead?).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "sentence_index": 18,
+      "text": "Here is from the PER paper \"Our final implementation for rank-based prioritization produced an additional 2%-4% increase in running time and negligible additional memory usage\"",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 0,
+      "text": "Thank you for the valuable feedback!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 1,
+      "text": "We uploaded a revised version of the paper based on the comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 2,
+      "text": "- The reason behind using V-GMM is that V-GMM is much faster than KDE in inference and has a better generalization ability compared to GMM.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 3,
+      "text": "We use V-GMM as a proof of concept for the idea \u201cCuriosity-Driven Experience Prioritization via Density Estimation\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 4,
+      "text": "Other density estimation methods can also be applied.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 5,
+      "text": "We now clarify these reasons in Section \u201c2.3 Density Estimation Methods\u201d of the revised paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 6,
+      "text": "- We concatenate the goals and estimate the trajectory density instead of state density because HER needs to sample a future state in the trajectory as a virtual goal for training.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 7,
+      "text": "- For episodes of different length, we can pad or truncate the trajectories into same lengths and apply V-GMM.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 8,
+      "text": "Another method is to use PCA or auto-encoder to reduce the dimension into a fixed size and then apply CDP.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 9,
+      "text": "- Similarly, to handle scaling issues, for very high dimension vectors, we can first apply dimension reduction methods, such as PCA and auto-encoder, and then use CDP.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 10,
+      "text": "- The reference for \"It is known that PER can become very expensive in computational time\u201d is actually the \u201cPrioritized Experience Replay\u201d paper itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 11,
+      "text": "On page three of the PER paper, it writes \u201cImplementation: To scale to large memory sizes N , we use a binary heap data structure for the priority queue, for which",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 12,
+      "text": "finding the maximum priority transition when sampling is O(1) and updating priorities (with the new TD-error after a learning step) is O(log N). See Appendix B.2.1 for more details. \u201c",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 13,
+      "text": "In their Atari case, the memory size N is of 1e4 transitions.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 14,
+      "text": "In our hand manipulation environment cases, the memory size N is of 1e6 trajectories, and each trajectory has 100 transitions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 15,
+      "text": "Thus, the memory size is 1e4 (theirs) vs 1e8 (ours).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 16,
+      "text": "The complexity of updating priorities is O(log N).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 17,
+      "text": "Therefore, PER is very expensive in computational time, at least in our case.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxla5U9h7",
+      "rebuttal_id": "SyeblhC2pQ",
+      "sentence_index": 18,
+      "text": "The memory buffer size N can be found in OpenAI Baselines link: https://github.com/openai/baselines",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

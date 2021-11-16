@@ -1,0 +1,597 @@
+{
+  "metadata": {
+    "forum_id": "rkxciiC9tm",
+    "review_id": "HyeuvtzF2X",
+    "rebuttal_id": "S1g0_Au4pm",
+    "title": "NADPEx: An on-policy temporally consistent exploration method for deep reinforcement learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxciiC9tm&noteId=S1g0_Au4pm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 0,
+      "text": "This paper proposed to use dropout to randomly choose only a subset of neural network as a potential way to perform exploration.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 1,
+      "text": "The dropout happens at the beginning of each episode, and thus leads to a temporally consistent exploration.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 2,
+      "text": "The paper shows that with small amount of Gaussian multiplicative dropout, the algorithm can achieve the state-of-the-art results on benchmark environments.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 3,
+      "text": "And it can significantly outperform vanilla PPO for environments with sparse rewards.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 4,
+      "text": "The paper is clearly written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 5,
+      "text": "The introduced technique is interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 6,
+      "text": "I wonder except for the difference of memory consumption, how different it is compared to parameter space exploration.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 7,
+      "text": "I feel that it is a straightforward extension/generalization of the parameter space exploration. But the stochastic alignment and policy space constraint seem novel and important.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 8,
+      "text": "The motivation of this paper is mostly about learning with sparse reward.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 9,
+      "text": "I am curious whether the paper has other good side effects.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 10,
+      "text": "For example, will the dropout cause the policy to be more robust?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 11,
+      "text": "Furthermore, If I deploy the learning algorithm on a physical robot, will the temporally consistent exploration cause less wear and tear to the actuators when the robot explores.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 12,
+      "text": "In addition, I would like to see some discussions whether this technique could be applied to off-policy learning as well.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 13,
+      "text": "Overall, I like this paper. It is well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 14,
+      "text": "The method seems technically sound and achieves good results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "sentence_index": 15,
+      "text": "For this reason, I would recommend accepting this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 0,
+      "text": "Glad to know that you like our paper!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 1,
+      "text": "1) Difference from parameter noise except for memory consumption:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 2,
+      "text": "As stated in Section 3.3, we believe NADPEx is a generalization of parameter noise, with not only flexible memory consumption but also lower variance in gradients.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 3,
+      "text": "This theory is examined in Section 4.2, where NADPEx shows faster convergence and lower variance in performance with different random seeds.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 4,
+      "text": "Besides, comparing with [1], our work provides a theoretical modeling for the idea \"a hierarchy of stochasticity for exploration\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 5,
+      "text": "We model the NADPEx policy as a joint distribution of dropout random variables and actions, such that it could be combined seamlessly with existing on-policy policy gradient methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 6,
+      "text": "One example is the policy space constraint stated in Section 3.2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 7,
+      "text": "We also provide another distribution i.e. Bernoulli distribution for stochasticity at high level, for which we derive gradient alignment and policy space constraint, as well as empirical results.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 8,
+      "text": "As a minor point, in [1], the stochasticity at the high level i.e. the variance of parameter noise, is adjusted in a heuristic manner.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 9,
+      "text": "NADPEx, in contrast, aligns the stochasticity throughout the hierarchy with end-to-end gradient update.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 10,
+      "text": "2) Other good side effects:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 11,
+      "text": "The robustness of the NADPEx policy is orthogonal to our current work, but will be an interesting direction for the future.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 12,
+      "text": "Currently we only have some preliminary results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 13,
+      "text": "For example, it is more robust to adversarial neural attacks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 14,
+      "text": "In the future we will investigate how robust NADPEx policies could be when the environment is perturbed, e.g. agents are dragged slightly by humans as in [2, 3].",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 15,
+      "text": "That temporally consistent exploration is fairly important for physical robots is one of our motivations for this whole project.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 16,
+      "text": "In the next step we will look for simulator environments with more authentic actuators to see how NADPEx could help solve that.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 17,
+      "text": "Our ultimate goal is to find a safer and more efficient way for on-policy exploration on physical robots.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 18,
+      "text": "We believe the application of NADPEx to off-policy exploration is straightforward.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 19,
+      "text": "However, as stated in Section 1, off-policy methods benefit from stronger flexibility for experience sampler.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 20,
+      "text": "This makes the gradient alignment and policy space constraint not as important as in the on-policy methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 21,
+      "text": "As off-policy methods have the potential to be much more data-efficient, we will compare in the future how NADPEx performs comparing with auto-correlated noise in [4] and separate sampler in [5].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 22,
+      "text": "[1] Plappert et al., \"Parameter Space Noise for Exploration\", ICLR 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 23,
+      "text": "[2] Tassa et al., \"Synthesis and stabilization of complex behaviors through online trajectory optimization\", IROS 2012.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 24,
+      "text": "[3] Clavera et al., \"Learning to Adapt: Meta-Learning for Model-based Control\", arXiv 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 25,
+      "text": "[4] Lillicrap et al., \"Continuous control with deep reinforcement learning\", ICLR 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeuvtzF2X",
+      "rebuttal_id": "S1g0_Au4pm",
+      "sentence_index": 26,
+      "text": "[5] Xu et al., \"Learning to explore via meta-policy gradient\", ICML 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

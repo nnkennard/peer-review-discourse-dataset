@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "forum_id": "SkxBUpEKwH",
+    "review_id": "H1gcRli3YB",
+    "rebuttal_id": "SkxzOluyor",
+    "title": "Vid2Game: Controllable Characters Extracted from Real-World Videos",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkxBUpEKwH&noteId=SkxzOluyor",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 0,
+      "text": "This paper proposes a method to address the interesting task, i.e. controllable human activity synthesis, by conditioning on the previous frames and the input control signal.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 1,
+      "text": "To synthesis the next frame, a Pose2Pose network is proposed to first transfer the input information into the next frame body structure and object.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 2,
+      "text": "Then, a Pose2Frame network is applied to generate the final result.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 3,
+      "text": "The results on several video sequences look nice with more natural boundaries, object, and backgrounds",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 4,
+      "text": "compared to previous methods.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 5,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 6,
+      "text": "1. The proposed Pose2Pose successfully transfer the pose conditioned on the past pose and the input control signal.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 7,
+      "text": "The proposed conditioned residual block, occlusion augmentation and stopping criteria seem to help the Pose2Pose network work well.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 8,
+      "text": "Besides, the object is also considered in this network, which makes the method generalized well to the videos where human holds some rigid object.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 9,
+      "text": "2. The Pose2Frame network is similar to previous works but learns to predict the soft mask to incorporate the complex background and to produce shallow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 10,
+      "text": "The mask term in Eq. (7) seems to work well for the foreground (body+object) and the shallow regions.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 11,
+      "text": "3. The paper is easy to follow.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 12,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 13,
+      "text": "1. Since the method is only evaluated on several video sequences, I am not sure how the method will perform on other different scenes.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 14,
+      "text": "Results on more scenes will make the performance more convincing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 15,
+      "text": "I also wonder if the video data will be released, which could be important for the following comparisons.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 16,
+      "text": "2. As to the results of the Pose2Pose network, I wonder if there are some artifacts that will affect the performance of the Pose2Frame network.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 17,
+      "text": "Then, there will be another question: how the two networks are trained? Are they trained separately or jointly?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 18,
+      "text": "I assume the authors first train the Pose2Pose network, then use the output to train the Pose2Frame network.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 19,
+      "text": "Otherwise, the artifacts from Pose2Pose will affect the testing performance of the Pose2Frame network.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 20,
+      "text": "3. The mask term seems to work well for the shallow part.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 21,
+      "text": "I wonder how the straightforward regression term plus the smooth term will perform for the mask.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "sentence_index": 22,
+      "text": "Here, the straightforward regression term means directly regress the output mask to the target densepose mask. Will the proposed mask term perform better?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 0,
+      "text": "1. We aimed to provide a broad variety of example applications (playing tennis, walking, fencing, dancing), while mainly focusing on the most complicated (tennis) application, for a thorough analysis of our method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 1,
+      "text": "Unfortunately, we cannot release the dataset, since we do not own the videos, but we will share our code.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 2,
+      "text": "2. The Pose2Pose and Pose2Frame networks are trained separately.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 3,
+      "text": "Specifically, the P2F network is trained on the original data, and not on the output frames of the P2P network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 4,
+      "text": "You are correct that some artifacts are added to the final P2F output at test time, yet they are minor due to the structural stability of the poses generated by the P2P network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 5,
+      "text": "Furthermore, training the P2F network with the P2P outputs is problematic, since we do not have the ground-truth for the new pose generated by the P2P network.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 6,
+      "text": "3. The mask loss proposed in the review is similar to our implementation, except that we make a distinction between an inner-mask control and an outer-mask control.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 7,
+      "text": "Our mask regression losses consist of a first loss penalizing the mask from being active outside the densepose mask, and a second loss penalizing the mask from being inactive inside the densepose mask.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gcRli3YB",
+      "rebuttal_id": "SkxzOluyor",
+      "sentence_index": 8,
+      "text": "Combining them both results in the suggested loss.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

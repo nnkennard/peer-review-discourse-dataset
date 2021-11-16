@@ -1,0 +1,754 @@
+{
+  "metadata": {
+    "forum_id": "rJl6M2C5Y7",
+    "review_id": "SklCKPP1h7",
+    "rebuttal_id": "Bkg51P6KCX",
+    "title": "Online Hyperparameter Adaptation via Amortized Proximal Optimization",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJl6M2C5Y7&noteId=Bkg51P6KCX",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 0,
+      "text": "I raised my rating. After the rebuttal.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 1,
+      "text": "- the authors address most of my concerns.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 2,
+      "text": "- it's better to show time v.s. testing accuracy as well.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 3,
+      "text": "the per-epoch time for each method is different.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 4,
+      "text": "- anyway, the theory part acts still more like a decoration. as the author mentioned, the assumption is not realistic.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 5,
+      "text": "-------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 6,
+      "text": "This paper presents a method to update hyper-parameters (e.g. learning rate) before updating of model parameters.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 7,
+      "text": "The idea is simple but intuitive. I am conservative about my rating now, I will consider raising it after the rebuttal.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 8,
+      "text": "1. The focus of this paper is the hyper-parameter, please focus and explain more on the usage with hyper-parameters.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 9,
+      "text": "- no need to write so much in section 2.1, the surrogate is simple and common in optimization for parameters.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 10,
+      "text": "After all, newton method and natural gradients method are not used in experiments.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 11,
+      "text": "- in section 2.2, please explain more how gradients w.r.t hyper-parameters are computed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 12,
+      "text": "2. No need to write so much decorated bounds in section 3.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 13,
+      "text": "The convergence analysis is on Z, not on parameters x and hyper-parameters theta.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 14,
+      "text": "So, bounds here can not be used to explain empirical observations in Section 5.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 15,
+      "text": "3. Could authors explain the time complexity of inner loop in Algorithm 1? Does it take more time than that of updating model parameters?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 16,
+      "text": "4. Authors have done a good comparison in the context of deep nets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 17,
+      "text": "However,",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 18,
+      "text": "- could the authors compare with changing step-size?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 19,
+      "text": "In most of experiments, the baseline methods, i.e. RMSProp are used with fixed rates.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 20,
+      "text": "Is it better to decay learning rates for toy data sets?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 21,
+      "text": "It is known that SGD with fixed step-size can not find the optimal for convex (perhaps, also simple) problems.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 22,
+      "text": "- how to tune lambda? it is an important hyper-parameter, but it is set without a good principle, e.g., \"For SGD-APO, we used lambda = 0.001, while for SGDm-APO, we used lambda = 0.01\", \"while for RMSprop-APO, the best lambda was 0.0001",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 23,
+      "text": "\"",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 24,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 25,
+      "text": "What are reasons for these?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 26,
+      "text": "- In Section 5.2, it is said lambda is tuned by grid-search.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "sentence_index": 27,
+      "text": "Tuning a good lambda v.s. tuning a good step-size, which one costs more?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 0,
+      "text": "Thank you for your helpful comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 1,
+      "text": "We have improved the writing to incorporate your feedback.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 2,
+      "text": "We have also performed more experiments to compare APO to manual learning rate schedules.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 3,
+      "text": "Q: Please explain more how gradients w.r.t hyper-parameters are computed.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 4,
+      "text": "We implemented custom versions of the optimizers we consider (SGD, RMSprop, and K-FAC) that treat the optimization hyperparameters as variables in the computation graph for an optimization step.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 5,
+      "text": "We then use automatic differentiation to compute the gradient of the meta-objective with respect to the hyperparameters (e.g., the learning rate).",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 6,
+      "text": "Q: Could authors explain the time complexity of inner loop in Algorithm 1? Does it take more time than that of updating model parameters?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 7,
+      "text": "Each meta-optimization step requires approximately the same amount of computation as a parameter update for the model.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 8,
+      "text": "By using the default meta learning rate suggested in our updated paper, we can amortize the meta-optimization by performing 1 meta-update for every K steps of the base optimization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 9,
+      "text": "We found that K=10 works well across our settings, while reducing the computational requirements of APO to just a small fraction more than the original training procedure.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 10,
+      "text": "We have added a discussion of our meta-optimization setup and the efficiency of APO in Section 5 of the updated paper.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 11,
+      "text": "Q: No need to write so much decorated bounds in section 3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 12,
+      "text": "The convergence analysis is on Z, not on parameters x and hyper-parameters theta.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 13,
+      "text": "So, bounds here cannot be used to explain empirical observations in Section 5.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 14,
+      "text": "The convergence of the network output Z directly indicates the rate of decrease of the loss function, which is exactly what we observe in practice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 15,
+      "text": "Although the assumption of a global optimization oracle is not realistic, we believe our theoretical justification provides insight into why the method works.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 16,
+      "text": "One important takeaway from the theoretical analysis is that running gradient descent on output space can potentially accelerate the optimization (since the convergence bounds have better constants).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 17,
+      "text": "This directly motivates the regularization term in our meta objective to be defined as the discrepancy of network outputs instead of the network parameters, which is essential to our technique.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 18,
+      "text": "Q: Could the authors compare with changing step-size?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 19,
+      "text": "Thank you for the suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 20,
+      "text": "We have added comparisons with custom learning rate schedules for CIFAR-10 and CIFAR-100.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 21,
+      "text": "We updated our results for CIFAR-10/100 using a larger network, ResNet34, instead of the VGG11 model used in the previous version, and we used a manual learning rate decay schedule where we trained for 200 epochs, decaying the learning rate by a factor of 5 three times during training.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 22,
+      "text": "We found that APO is competitive with the custom schedule, achieving similar training loss and test accuracy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 23,
+      "text": "We provide results in our response to all reviewers at the top.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 24,
+      "text": "Q: How to tune lambda?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 25,
+      "text": "Tuning a good lambda v.s. tuning a good step-size, which one costs more?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 26,
+      "text": "We tune lambda by performing a grid search over the range {1e-1, 1e-2, 1e-3, 1e-4, 1e-5}. Because each lambda value gives rise to a learning rate schedule, tuning lambda yields significantly more value than tuning a fixed learning rate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklCKPP1h7",
+      "rebuttal_id": "Bkg51P6KCX",
+      "sentence_index": 27,
+      "text": "Instead of trying to come up with a custom learning rate schedule, which would require deciding how frequently to decay the learning rate, and by what factor it should be decayed, all one needs to do is perform a grid search over a fixed set of lambdas to find an automated schedule that is competitive with hand-designed schedules (which are the result of years of accumulated experience in the field).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

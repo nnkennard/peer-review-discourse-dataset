@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "forum_id": "Byx93sC9tm",
+    "review_id": "rJgwCU_82Q",
+    "rebuttal_id": "rygdEjy1CX",
+    "title": "Deep Ensemble Bayesian Active Learning : Adressing the Mode Collapse issue in Monte Carlo dropout via Ensembles",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Byx93sC9tm&noteId=rygdEjy1CX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 0,
+      "text": "This paper introduces a technique using ensembles of models with MC-dropout to perform uncertainty sampling for active learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 1,
+      "text": "In active learning, there is generally a trade-off between data efficiency and computational cost.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 2,
+      "text": "This paper proposes a combination of existing techniques, not just ensembling neural networks and not just doing MC dropout, but doing both.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 3,
+      "text": "The improvements over basic ensembling are rather minimal, at the cost of extra computation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 4,
+      "text": "More specifically, the data efficiency (factor improvement in data to achieve some accuracy) of the proposed method over using a deterministic ensemble is around just 10% or so.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 5,
+      "text": "On the other hand, the proposed algorithm requires 100x more forward passes when computing the uncertainty (which may be significant, unclear without runtime experiments).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 6,
+      "text": "As a concrete experiment to determine the importance, what would be the accuracy and computational comparison of ensembling 4+ models without MC-dropout vs. 3 ensembled models with MC-dropout?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 7,
+      "text": "At the point (number of extra ensembles) where the computational time is equivalent, is the learning curve still better?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 8,
+      "text": "The novelty of this method is minimal.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 9,
+      "text": "The technique basically fills out the fourth entry in a Punnett square.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 10,
+      "text": "The paper is well-written, has good experiments, and has a comprehensive related work section.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "sentence_index": 11,
+      "text": "Overall, this paper is good, but is not novel or important enough for acceptance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 0,
+      "text": "We thank our third reviewer for his comment.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 1,
+      "text": "We do understand your concern about the significant increase in computational time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 2,
+      "text": "However, we believe that in the context of active learning, the main problem is not related to computational power, rather to the scarcity of data.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 3,
+      "text": "Therefore, a better way of making the most out of little data is critical.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 4,
+      "text": "For example, a 10 \\% increase for only 300 samples acquired, could make a huge difference in a critical field where active learning is most valuable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 5,
+      "text": "We believe that this is exactly what we manage to achieve with our method and this comes as a result of a better representation of uncertainty during AL.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 6,
+      "text": "Furthermore,  Beluch et al. (2018) showed that going beyond 3 networks in their deterministic ensemble method does not add any significant improvements in terms of performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 7,
+      "text": "Therefore we use 3 stochastic ensembles for our method.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgwCU_82Q",
+      "rebuttal_id": "rygdEjy1CX",
+      "sentence_index": 8,
+      "text": "As for the novelty of this method, although it seems more like an engineering solution, we believe that it makes a significant contribution in the field of deep active learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

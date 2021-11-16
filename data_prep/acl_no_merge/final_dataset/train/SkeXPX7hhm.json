@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "forum_id": "Hyx4knR9Ym",
+    "review_id": "SkeXPX7hhm",
+    "rebuttal_id": "ByeNL6dJAQ",
+    "title": "Generalizable Adversarial Training via Spectral Normalization",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hyx4knR9Ym&noteId=ByeNL6dJAQ",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 0,
+      "text": "The paper first provides a generalization bounds for adversarial training, showing that the error bound depends on Lipschitz constant.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 1,
+      "text": "This motivates the use of spectral regularization (similar to Miyato et al 2018) in adversarial training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 2,
+      "text": "Using spectral regularization to improve robustness is not new, but it's interesting to combine spectral regularization and adversarial training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 3,
+      "text": "Experimental results show significant improvement over vanilla adversarial training.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 4,
+      "text": "The paper is nicely written and the experimental results are quite strong and comprehensive. I really like the paper but I have two questions about the results:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 5,
+      "text": "1. The numbers reported in Figure 5 do not match with the performance of adversarial training in previous paper.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 6,
+      "text": "In PGM L_inf adversarial training/attack (column 3 of Figure 5), the prediction accuracy is roughly 50% under 0.1 infinity norm perturbation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 7,
+      "text": "However, previous papers (e.g., \"Obfuscated Gradients Give a False Sense of Security\") reported 55% accuracy under 0.031 infinity norm perturbation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 8,
+      "text": "I wonder why the numbers are so different.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 9,
+      "text": "Maybe it's because of different scales? Previous works usually scale each pixel to [0,1] or [-1,1], maybe the authors use the [0, 255] scale? But 0.1/255 will be much smaller than 0.031.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 10,
+      "text": "Another factor might be the model structure. If Alexnet has much lower accuracy, it's probably worthwhile to conduct experiments on the same structure with previous works (Madry et al and Athalye et al) to make the conclusion more clear.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 11,
+      "text": "2. What's the training time of the proposed method compared with vanilla adversarial training?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 12,
+      "text": "3. The idea of using SN to improve robustness has been introduced in the following paper:",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 13,
+      "text": "\"Lipschitz-Margin Training: Scalable Certification of Perturbation Invariance for Deep Neural Networks\"",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "sentence_index": 14,
+      "text": "(but this paper did not combine it with adv training).",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 1 for the constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 1,
+      "text": "Here is our point-to-point response to the comments and questions raised in the review:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 2,
+      "text": "1. \u201cThe numbers reported in Figure 5 do not match with the performance of adversarial training in previous paper\u2026 I wonder why the numbers are so different.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 3,
+      "text": "Table 1 of \"Obfuscated Gradients Give a False Sense of Security\" reports an accuracy of 47% under 0.031 norm-inf perturbation for the CIFAR10 dataset (55% is reported for the MNIST dataset), approximately the same as the 44% accuracy in our Figure 5.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 4,
+      "text": "The difference in performance stems from how we preprocessed the CIFAR10 images: exactly in the manner described by (Zhang et al., 2017)\u2019s ICLR paper \u201cUnderstanding deep learning requires rethinking generalization\u201d (we whiten and crop each image).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 5,
+      "text": "2. \u201cWhat's the training time of the proposed method compared with vanilla adversarial training?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 6,
+      "text": "We have added Table 2 to the Appendix which reports the increase in runtime for each of the 42 experiments discussed in Table 1 after introducing spectral normalization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 7,
+      "text": "For 39 of the cases, our TensorFlow implementation of the proposed method results in longer training times (from 1.02 to 1.84 times longer).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 8,
+      "text": "In the 3 cases of iterative adversarial attacks with the Inception architecture, the proposed method actually results in faster training time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 9,
+      "text": "This is likely due to how TensorFlow handles training in the backend.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 10,
+      "text": "We provide the code for full transparency.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 11,
+      "text": "3. \u201cThe idea of using SN to improve robustness has been introduced in the following paper: \"Lipschitz-Margin Training: Scalable Certification of Perturbation Invariance for Deep Neural Networks\" (but this paper did not combine it with adv training).\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 12,
+      "text": "Thank you for bringing this recent work to our attention.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeXPX7hhm",
+      "rebuttal_id": "ByeNL6dJAQ",
+      "sentence_index": 13,
+      "text": "We cite and discuss this NIPS paper in our updated draft.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

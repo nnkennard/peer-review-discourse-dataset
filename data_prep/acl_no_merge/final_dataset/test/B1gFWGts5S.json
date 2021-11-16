@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "forum_id": "SkgTR3VFvH",
+    "review_id": "B1gFWGts5S",
+    "rebuttal_id": "H1xO7NHvjr",
+    "title": "Pipelined Training with Stale Weights of Deep Convolutional Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkgTR3VFvH&noteId=H1xO7NHvjr",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 0,
+      "text": "The paper proposed a new pipelined training strategy to fully utilize the memory and computational power to speed up the training process.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 1,
+      "text": "In order to overcome the generalization degradation of the proposed method, the authors further introduced the so-called hybrid method to combine their proposed pipelined method and normal training.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 2,
+      "text": "The pipelined method is interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 3,
+      "text": "For the pipelined process itself, it is similar to model parallelization.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 4,
+      "text": "For the method proposed by the paper,  it is like the async-SGD method.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 5,
+      "text": "The paper merged these two ideas together but did not solve the problem from async-SGD, i.e. with a large number of processes, the generalization performance degrades (in the paper, it is so-called \"stages\").",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 6,
+      "text": "Even with the hybrid method, the accuracy still drops.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 7,
+      "text": "Also, the sentence, \"We demonstrate the implementation and performance of our pipelined backpropagation in PyTorch on 2 GPUs using ResNet, achieving speedups of up to 1.8X over a 1-GPU baseline, with a small drop in inference accuracy.\", is confusing. If I use data parallelization, the gain should be also around 2.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 8,
+      "text": "The ResNet on Cifar-10 results are not convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 9,
+      "text": "The normal accuracy of ResNet20 on Cifar-10 is around 92 but the paper reported 91.1%.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "sentence_index": 10,
+      "text": "Based on this, I think the paper has some room for improvement.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 0,
+      "text": "Pipelined backpropagation is similar to model parallelism but it addresses the resource underutilization issue in model parallelism.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 1,
+      "text": "Our pipelined method might look like async-SGD on surface.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 2,
+      "text": "However, async-SGD (e.g. Dean et al., pointed out by Reviewer 4) utilizes data parallelism (as indicated in Dean el al.) and a parameter server to keep track of model parameters (weights).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 3,
+      "text": "In contrast, our pipelined method does not use any parameter server.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 4,
+      "text": "Furthermore, each accelerator obtains a replica of a full model in asycn-SGD training while each accelerator contains only a part of the model in our pipelined method, on the assumption that the full model does not fit into the memory of a single accelerator.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 5,
+      "text": "The accuracy drops for some models in a pure pipelined training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 6,
+      "text": "However, hybrid training is able to bring the accuracy of most networks studied in our paper up to a comparable level of the non-pipelined baseline as shown in the evaluation section of our paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 7,
+      "text": "Our pipelined method is different from data parallelism in the following way (for a 2-GPU example).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 8,
+      "text": "For data parallelism, a model is duplicated and placed onto 2 GPUs, each GPU containing a full copy of the model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 9,
+      "text": "On the other hand, for pipelined parallelism, a model is divided into two partitions (on the assumption that it cannot fit in a single device): one is mapped onto GPU 0 while the other is mapped onto GPU 1, each GPU obtaining only a part of the model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 10,
+      "text": "Communication between these two partitions is necessary to enable activation and gradient transfers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 11,
+      "text": "Regardless of the parallelization techniques, the maximum speedup of a 2-GPU system is 2X compared to a 1-GPU system.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 12,
+      "text": "To obtain a close to perfect speedup of 2X, the communication overhead must be almost non-existent and the workload needs to be perfectly balanced between the 2 GPUs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 13,
+      "text": "In our implementation, we obtained a speedup of 1.81X for ResNet-362, which is equivalent to 90% utilization of each GPU.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 14,
+      "text": "Thus, our sentence the reviewer refers to.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 15,
+      "text": "Thank you for pointing out the accuracy of ResNet-20 (similar to Reviewer 1).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 16,
+      "text": "Again, we think the exact inference accuracy of the model is somewhat orthogonal to our study.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 17,
+      "text": "It is the trend of the decline in inference accuracy with pipelining is what we study.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 18,
+      "text": "This trend exists with both our hyperparameters and those at, for example, https://github.com/akamaster/pytorch_resnet_cifar10.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 19,
+      "text": "The use of these set of hyperparameters, obtains an inference accuracy of 91.65% (better than the accuracy stated in the original ResNet paper) for ResNet-20 non-pipelined baseline and 91.21% for pipelined version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 20,
+      "text": "We are not aware of any reports of an accuracy of ResNet-20 at 92% (perhaps this is approximate).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 21,
+      "text": "Please kindly let us know a pointer.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gFWGts5S",
+      "rebuttal_id": "H1xO7NHvjr",
+      "sentence_index": 22,
+      "text": "It is relatively easy to update our results in the paper with new hyperparameters.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

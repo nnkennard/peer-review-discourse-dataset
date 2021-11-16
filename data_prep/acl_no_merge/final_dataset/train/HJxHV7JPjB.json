@@ -1,0 +1,883 @@
+{
+  "metadata": {
+    "forum_id": "rJehNT4YPr",
+    "review_id": "HJxHV7JPjB",
+    "rebuttal_id": "BJgM_eowiS",
+    "title": "I Am Going MAD: Maximum Discrepancy Competition for Comparing Classifiers Adaptively",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehNT4YPr&noteId=BJgM_eowiS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 0,
+      "text": "This paper proposes a new method to compare existing classifiers, which does not use fixed test set and adaptively sample it from an arbitrarily large corpus of unlabeled images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 1,
+      "text": "The main idea seems similar to adopting active learning for the test set selection.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 2,
+      "text": "One of the main advantage is that it can select a sample set from an arbitrarily large unlabeled images.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 3,
+      "text": "However, to compare different classifiers, the proposed algorithm still needs humans to annotate the selected dataset, which is very expensive compared with traditional methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 4,
+      "text": "Since this paper select the top-k images in D, if k is large the annotating for S will be very tedious, however if k is relatively small the method seems very sensitive to selected examples, which will make the comparison not totally convincing.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 5,
+      "text": "The authors invite five volunteer graduate students to annotate the selected example.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 6,
+      "text": "However, for many categories, it\u2019s nor easy for normal people to distinguish.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "sentence_index": 7,
+      "text": "So the experiments in this paper is also not convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 0,
+      "text": "With all our due respect to Reviewer #3\u2019s valuable time and effort in reviewing our manuscript, we must admit that we are a bit upset by this last late review, due to the apparent lack of understanding before placing comments, and several factual errors that make the current comments at least poorly grounded.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 1,
+      "text": "We understand that the idea of \u201cmodel falsification as model comparison\u201d might not be trivial to understand for people primarily from practical deep learning backgrounds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 2,
+      "text": "The idea is deeply rooted in a successful series of studies from image perceptual assessment research: a basic introduction can be found in (Wang & Simoncelli (2008)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 3,
+      "text": "We notice that Reviewer #2 also kindly points out another interdisciplinary foundation of MAD in software differential testing.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 4,
+      "text": "We hope Reviewer #3 can carefully read the below explanation, and reconsider the rating to a more serious and appropriate one.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 5,
+      "text": "Q1:",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 6,
+      "text": "One of the main advantages is that it can select a sample set from an arbitrarily large unlabeled images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 7,
+      "text": "However, to compare different classifiers, the proposed algorithm still needs humans to annotate the selected dataset, which is very expensive compared with traditional methods.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 8,
+      "text": "Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 9,
+      "text": "Our method is very efficient in terms of human annotation budget compared with traditional methods, which is one of the main claims we elaborated in our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 10,
+      "text": "We are disappointed that this major important point was not well understood.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 11,
+      "text": "In fact, MAD provides the very first and efficient solution (in the context of image classification) to exploit a large-scale image set under the constraint of the very limited budget for human labeling.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 12,
+      "text": "We have noticed that the other two reviewers agree with us and appreciate this point.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 13,
+      "text": "For example, quote Reviewer #2: \u201cBecause of the efficacy of such \"worst-case\" comparison, the needed set size is very small and thus minimizes the human annotation workload\u201d.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 14,
+      "text": "To evaluate the relative performance of two ImageNet classifiers, traditional evaluation methods compute accuracy on a fixed test set.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 15,
+      "text": "For ImageNet validation set, human annotations for 50,000 images need to be provided.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 16,
+      "text": "This number is large in terms of human labeling effort, but is extremely small compared to the set of all natural images (the natural image manifold).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 17,
+      "text": "As also mentioned by the reviewer, annotation for each image is a 1000-class classification task, which makes the labeling task more difficult compared to a binary classification problem.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 18,
+      "text": "In contrast, rather than comparing fixed test sets which are typically small, the proposed MAD adaptively samples a test set from an arbitrarily large corpus of unlabeled images so as to maximize the discrepancies between the classifiers, measured by the distance over WordNet hierarchy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 19,
+      "text": "Human labeling is only required on the resulting small and model-dependent image sets, which contains only k=30 images (for each pair of classifiers) on the ImageNet experiment as reported in our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 20,
+      "text": "Our experiments show that the MAD ranking stabilizes at around k>15 (see figure 5) and successfully tracks the recent progress in image classification .",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 21,
+      "text": "For comparing 11 classifiers, the total labeled images needed are 1,650 (see page 6): it is obviously smaller than 50,000 and leaves much room to compare more classifiers (before it reaches 50, 000).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 22,
+      "text": "In conclusion, our method is apparently much more efficient in terms of human annotation budget compared with traditional methods.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 23,
+      "text": "In addition, despite the fact that the selected set by MAD is small (as a way of maximizing the efficiency of human labeling), it provides the strongest examples to let classifiers compete with one another.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 24,
+      "text": "Quote Reviewer #2: \u201cThe proposed MAD competition distinguishes classifiers by finding their respective counterexamples. It is therefore an \"error spotting\" mechanism\u201d.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 25,
+      "text": "Their respective strengths, weaknesses as well as biases can be most easily revealed (see figures in the appendix), which sheds light on potential ways to improve the classifiers or combine them into a better one.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 26,
+      "text": "Those gains are way beyond the scope of collecting random image samples.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 27,
+      "text": "Q2: Since this paper select the top-k images in D, if k is large the annotating for S will be very tedious, however if k is relatively small the method seems very sensitive to selected examples, which will make the comparison not totally convincing.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 28,
+      "text": "Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 29,
+      "text": "We agree with the reviewer that k is a critical parameter in MAD.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 30,
+      "text": "We want to however draw the reviewer\u2019s attention to the ablation study and figure 5, if they were accidentally missed in the first reading.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 31,
+      "text": "Based on them, we cannot concur with the statement \u201cif k is relatively small the method seems very sensitive to selected examples\u201d.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 32,
+      "text": "When we apply MAD to compare imageNet classifiers, we find that the MAD ranking stabilizes very quickly when around k>15.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 33,
+      "text": "We would like to also emphasize that despite the small size of labeled images, MAD successfully tracks the steady progress in image classification, as verified by a reasonable Spearman rank-order correlation coefficient (SRCC) of 0.89 between the accuracy rank on ImageNet validation set and the MAD rank on our test set.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 34,
+      "text": "As also pointed out by Review #2, the selected top-k images provide the strongest examples to let classifiers compete with one another.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 35,
+      "text": "Through this process, their respective strengths, weaknesses as well as biases can be most easily revealed (see figures in the appendix).",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 36,
+      "text": "Q3: The authors invite five volunteer graduate students to annotate the selected example.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 37,
+      "text": "However, for many categories, it\u2019s nor easy for normal people to distinguish.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 38,
+      "text": "So the experiments in this paper is also not convincing.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 39,
+      "text": "Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 40,
+      "text": "As veterans in performing subjective studies, we understand and agree with the reviewer that querying ground truth labels for a 200-class classification problem is difficult. That is exactly why we have carefully designed our subjective experiment.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 41,
+      "text": "Given an image x, which is associated with two classifiers f_i and f_j , we pick two binary questions for human annotators: \u201cDoes x contain an f_i(x)?\u201d and \u201cDoes x contain an f_j (x)?\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 42,
+      "text": "For each question, we follow  the original ImageNet instructions and include the definition of f_i(x) (or f_j(x))  with a link to a corresponding Wikipedia page.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 43,
+      "text": "We also show several example images of f_i(x) (or f_j(x)) sampled from the ImageNet validation set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 44,
+      "text": "Moreover, if more than three of our five human annotators find difficulty in labeling x, it is discarded and replaced.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 45,
+      "text": "When both answers to the two binary questions are false (corresponding to Case III), we cease to source the ground-truth label of x for reasons mentioned by the reviewer, and treat x as a strong counterexample for both f_i and f_j.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxHV7JPjB",
+      "rebuttal_id": "BJgM_eowiS",
+      "sentence_index": 46,
+      "text": "Based on the above, we cannot concur with the judgement \u201cthe experiments in this paper is (are) also not convincing\u201d.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

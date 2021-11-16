@@ -1,0 +1,471 @@
+{
+  "metadata": {
+    "forum_id": "B14ejsA5YQ",
+    "review_id": "BkeWgLUpnX",
+    "rebuttal_id": "r1lLG24iR7",
+    "title": "Neural Causal Discovery with Learnable Input Noise",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B14ejsA5YQ&noteId=r1lLG24iR7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 0,
+      "text": "This paper aims to estimate time-delayed, nonlinear causal influences from time series under the causal sufficiency assumption.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 1,
+      "text": "It is easy to follow and contains a lot of empirical results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 2,
+      "text": "Thanks for the results, but I have several questions.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 3,
+      "text": "First, In Theorem 2, which seems to be a main result of the paper, the authors were concerned with the condition when W_{ji} >0, but there is not conclusion if W_{ji} =0.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 4,
+      "text": "In order to correctly estimate causal relations from data, both cases must be considered.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 5,
+      "text": "Second, the conclusion of Theorem 2 seems to be flawed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 6,
+      "text": "Let me try to make it clear with the following example.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 7,
+      "text": "Suppose x^1_{t-2} directly causes x^2_{t-1} and that x^2_{t-1} directly causes x^3_{t}, without a direct influence from x^1_{t-2}  to x^3_{t}. Then when minimizing (2), we have the following results step by step:",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 8,
+      "text": "1) The noise standard deviation in x^2_{t-1}, denoted by \\eta_2, may be non-zero.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 9,
+      "text": "This is because we minimize a tradeoff of the prediction error (the first term in (2)) and a function of the reciprocal of the noise standard deviation \\eta_2 (the second term in (2)), not only the prediction error.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 10,
+      "text": "2) If \\eta_2 is non-zero, then x^1_{t-2} will be useful for the purpose of predicting x^3_{t}. (Note that if \\eta_2 is zero, then x^1_{t-2} is not useful for predicting x^3_{t).) From the d-separation perspective, this is because x^1_{t-2} and x^3_{t} are not d-separated by x^2_{t-1} + \\eta_2 \\cdot \\epsilon_2, although they are d-separated by x^2_{t-1}. Then the causal Markov condition tells use that x^1_{t-2} and x^3_{t} are not independent conditional on x^2_{t-1} + \\eta_2 \\cdot \\epsilon_2, which means that x^1_{t-2} is useful for predicting x^3_{t}.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 11,
+      "text": "3) Given that x^1_{t-2} is useful for predicting x^3_{t}, when (2) is minimized, \\eta_1 will not go to infinity, resulting in a non-zero W_{13), which *mistakenly* tells us that X^{1}_{t-1} directly structurally causes x^{(3)}_t.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 12,
+      "text": "This illustrates that the conclusion of Theorem 2 may be wrong.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 13,
+      "text": "I believe this is because the proof of Theorem 2 is flawed in lines 5-6 on Page 16.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 14,
+      "text": "It does not seem sensible to drop X^{j}_{t-1} + \\eta_X \\cdot \\epsilon_X and attain a smaller value of the cost function at the same time.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 15,
+      "text": "Please carefully check it, especially the argument given in lines 10-13.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 16,
+      "text": "Third, it is rather surprising that the authors didn't mention anything about the traditional causal discovery methods based on conditional independence relations in the data, known as constraint-based methods, such as the PC algorithm (Spirtes et al., 1993), IC algorithm (Pearl, 2000), and FCI (Spirtes et al., 1993).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 17,
+      "text": "Such methods are directly applicable to time-delayed causal relations by further considering the constraint that effects temporally follow the causes.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 18,
+      "text": "Fourth, please make it clear that the proposed method aims to estimate \"causality-in-mean\" because of the formulation in terms of regression.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 19,
+      "text": "For instance, if x^j_{t-1} influences only the variance of x^i_{t}, but not its mean, then the proposed method may not detect such a causal influence, although the constraint-based methods can.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "sentence_index": 20,
+      "text": "Any response would be highly appreciated.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 0,
+      "text": "Thank you very much for the instructive and detailed review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 1,
+      "text": "For the first and second comments, we appreciate the detailed example you proposed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 2,
+      "text": "Specifically, we agree with the 1) and 2) of your analysis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 3,
+      "text": "For 3), although x^(1)_{t-2} is useful for predicting x^3_{t}, due to the causal chain and the presence of independent noise in the response function Eq. (1), x^(2)_{t-1} is even more useful for predicting x^(3)_{t}. When Eq. (2) is minimized w.r.t. both f_\\theta and all \\eta, with appropriate \\lambda, it is likely that \\eta_1 will go to infinity and \\eta_2 will be finite, leading to the correct conclusion that X^(1)_{t-1} does not directly structurally cause x^(3)_t.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 4,
+      "text": "For example, in the new Appendix B.3, we show analytically and numerically that for a linear Gaussian system, the global minimum of the learnable noise risk lies on I(x^(1)_{t-2}; \\tilde{x}^(1)_{t-2})=0, i.e. \\eta_1->\\infty, for a wide range of \\lambda.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 5,
+      "text": "To study the general landscape and global minimum of the learnable noise risk, we first carefully inspect Theorem 2, and find that its original statement is not true in general.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 6,
+      "text": "We have replaced the original Theorem 2 with a detailed analysis of the loss landscape of the learnable noise risk.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 7,
+      "text": "Specifically, there are four properties that the minimum MSE (MMSE, the first term of the learnable noise risk after minimizing w.r.t. f_\\theta) must obey, as demonstrated in the new Appendix B. In particular, we prove that the MMSE based only on the uncorrupted variables that directly structurally cause x^(i)_t is the minimum among all MMSE based on any set of uncorrupted variables.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 8,
+      "text": "These properties will likely lead to nonzero mutual information for the variables that directly structurally cause x^(i)_t, at the global minimum of the learnable noise risk, as we ramp down \\lambda from infinity.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 9,
+      "text": "In a sense, the learnable noise risk behaves similarly as an L1 regularized risk.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 10,
+      "text": "Whereas L1 encourages sparsity of the parameters of the model, the mutual information term in the learnable noise risk encourages sparsity of the influence of the inputs, where the strength of sparsity inducing depends on \\lambda.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 11,
+      "text": "As also pointed out in the \u201crelated works\u201d in the revision, the learnable noise risk is invariant to model structure change (keeping the function mapping unchanged) and rescaling of inputs, while L1 or group L1 do not, making learnable noise risk suitable for causal discovery where the scale of data may span orders of magnitude and the model structure may vary.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkeWgLUpnX",
+      "rebuttal_id": "r1lLG24iR7",
+      "sentence_index": 12,
+      "text": "For the third and fourth comment, thanks for pointing out and we have added the constraint-based methods in the related works section, and stressed that we are dealing with \u201ccausality in mean\u201d in section 3.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

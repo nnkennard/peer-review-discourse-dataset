@@ -1,0 +1,739 @@
+{
+  "metadata": {
+    "forum_id": "B1gXWCVtvr",
+    "review_id": "rygtop9XcS",
+    "rebuttal_id": "rJxCwMrOsS",
+    "title": "Adapting Behaviour for Learning Progress",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1gXWCVtvr&noteId=rJxCwMrOsS",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 0,
+      "text": "This papers studies how to explore, in order to generate experience for faster learning of policies in context of RL.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 1,
+      "text": "RL methods typically employ simple hand-tuned exploration schedules (such as epsilon greedy exploration, and changing the epsilon as training proceeds).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 2,
+      "text": "This paper proposes a scheme for learning this schedule.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 3,
+      "text": "The paper does this by modeling this as a non-stationary multi-arm bandit problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 4,
+      "text": "Different exploration settings (tuple of choice of exploration, and the exact hyper-parameter), are considered as different non-stationary multi-arm bandits (while also employing some factorization) and expected returns are maintained over training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 5,
+      "text": "Arm (exploration strategy and hyper-parameter) is picked according to the return.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 6,
+      "text": "The paper demonstrates results on the Atari suite of RL benchmarks, and shows results that demonstrate that their proposed search leads to faster learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 7,
+      "text": "Strength:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 8,
+      "text": "1. The paper tackles an interesting and important problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 9,
+      "text": "The proposed solution is simple, yet effective.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 10,
+      "text": "Shortcomings:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 11,
+      "text": "1. The presentation is somewhat convoluted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 12,
+      "text": "The paper motivates the problem that we need to pick out an exploration sequence that optimizes learning progress, but then approximates it as simply measuring the return.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 13,
+      "text": "Given there is no theoretical justification for the approximation, I believe the paper claims more than what it delivers and should change the presentation, so as not to claim that it is measuring and capturing learning progress to learn faster.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 14,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 15,
+      "text": "I am confused by Figure 4, and in general with the relative rank metrics.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 16,
+      "text": "Specifically, in Figure 4, is it that the proposed bandit approach not as good as picking a single hyper-parameter for the different settings (T=0.01, eps=0.01, omega=2.0)?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 17,
+      "text": "Similarly, for Figure 2, a singe fixed z, seems to do better than the bandit versions.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 18,
+      "text": "Why doesn't the proposed bandit algorithm not pick out the best hyper-parameter?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 19,
+      "text": "How well",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 20,
+      "text": "would a simpler hyper-parameter search procedure (picking the best hyper-parameter after the first 2000 episodes)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 21,
+      "text": "3. This apart, I think that the experiment section is pretty hard to read, given all the metrics and methodology is in the Appendix.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 22,
+      "text": "An alternate organization that presents all the main results in the main body in a self-contained manner will help.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 23,
+      "text": "4. Comparison with past works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 24,
+      "text": "I believe there are other existing works that should be cited and compared to.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 25,
+      "text": "Using bandits to decide between different hyper-parameters is common (for example, see [A] for a service to do this with ML models), [B] uses improvements in accuracy as a way to pick between which question type to train on.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 26,
+      "text": "Such past works should be cited and compared against.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 27,
+      "text": "[A] https://ai.google/research/pubs/pub46180",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 28,
+      "text": "[B] Learning by Asking Questions",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "sentence_index": 29,
+      "text": "Ishan Misra, Ross Girshick, Rob Fergus, Martial Hebert, Abhinav Gupta and Laurens van der Maaten",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 0,
+      "text": "Thank you for your constructive feedback!",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 1,
+      "text": "Comment 1:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 2,
+      "text": "We acknowledge that our presentation focused more than necessary on ideal scenarios that use learning progress LP(z) while the practical version used a (maybe disappointingly) simplistic choice of proxy f(z).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 3,
+      "text": "The updated paper will change the emphasis, and clarify that a proper learning progress proxy remains future work.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 4,
+      "text": "We will also clarify that the little phrase \u201cAfter initial experimentation, we opted for the simple proxy\u2026\u201d implies quite extensive experimentation with other plausible proxies that looked promising in individual environments but were not consistently effective across the suite of Atari games.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 5,
+      "text": "Comment 2:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 6,
+      "text": "Sorry, our presentation of Figure 4 was not very clear: The performance outcome for each variant is measured on multiple independent runs (seeds).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 7,
+      "text": "All the outcomes are then jointly ranked, and the ranks are averaged across seeds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 8,
+      "text": "Finally, these averaged ranks are normalized to fall between 0 and 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 9,
+      "text": "A normalized rank of 1 corresponds to all the N outcomes (seeds) of a variant being ranked at the top N positions in the joint ranking.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 10,
+      "text": "Figure 4 then further aggregates these normalized ranks across 15 Atari games.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 11,
+      "text": "Note that these joining rankings are done separately per subplot (ie modulation class).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 12,
+      "text": "The bandit is not guaranteed to reproduce the performance of the best arm for a couple of reasons: (a) the signal f(z) it obtains is noisy, (b) if is myopic in that it reflects only current performance not future learning, and (c) the dynamics are non-stationary, so the best arm changes over time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 13,
+      "text": "For all these reasons, the bandit we use is a conservative one that tends to spread the probability mass among decent-looking arms, while suppressing obviously sub-optimal arms.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 14,
+      "text": "The experiment you suggest (picking the best hyper-parameter after the first X episodes) is exactly what we investigated in Figure 5 (left subplot).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 15,
+      "text": "The empirical result is that it works well for some games but not others, and better for some modulation classes than others, but overall it\u2019s not reliable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 16,
+      "text": "The updated paper will split Figure 5 into two to increase clarity.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 17,
+      "text": "Comment 3:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 18,
+      "text": "Thank you for that suggestion: we will update the organization of the paper to make the main body more self-contained.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 19,
+      "text": "Comment 4:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 20,
+      "text": "The updated paper will discuss related work in more depth, including the suggested [A] and [B].",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rygtop9XcS",
+      "rebuttal_id": "rJxCwMrOsS",
+      "sentence_index": 21,
+      "text": "We think we could address all your concerns, but please let us know if you have further questions, the discussion period lasts until the end of the week!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "forum_id": "Sk4jFoA9K7",
+    "review_id": "HkgMKRcth7",
+    "rebuttal_id": "Bkecy4F-0Q",
+    "title": "PeerNets: Exploiting Peer Wisdom Against Adversarial Attacks",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Sk4jFoA9K7&noteId=Bkecy4F-0Q",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 0,
+      "text": "The paper presents a an interesting novel approach to train neural networks with so called peer regularization which aims to provide robustness to adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 1,
+      "text": "The idea is to add a graph neural network to a spatial CNN.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 2,
+      "text": "A graph is defined over similar training samples which are found using a Monte Carlo approximation.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 3,
+      "text": "The regularization using graphs reminds me of recent work at ICML on semi-supervised learning (Kamnitsas et al. (2018) Semi-supervised learning via compact latent space clustering) which is using a graph to approximate cluster density which acts as a regularizer for training on labelled data.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 4,
+      "text": "The main problem I see with these approaches is that they rely on sufficiently large batch sizes which could be (currently) problematic for many real-world applications.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 5,
+      "text": "Memory and computation limitations are mentioned, but not sufficently discussed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 6,
+      "text": "It would be good to add further details on practical limitations.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 7,
+      "text": "Experiments are limited to benchmark data using MNIST, CIFAR-10, CIFAR-100.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 8,
+      "text": "Comprehensive evaluation has been carried out with insightful experiments and good comparison to state-of-the-art.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 9,
+      "text": "Both white- and black-box adversarial attacks are explored with promising results for the proposed approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 10,
+      "text": "However, it is difficult to draw conclusions for real-world problems of larger scale.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 11,
+      "text": "The authors state that proposed framework can be added to any baseline model, but miss to clearly mention the limitations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 12,
+      "text": "It is stated that future work will aim at scaling PeerNets to benchmarks like ImageNet, but it is unclear how this could be done.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "sentence_index": 13,
+      "text": "Is there any hope this could be applied to problems like 3D imaging data or videos?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 0,
+      "text": "Thank you for the insightful comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 1,
+      "text": "1. It is stated that future work will aim at scaling PeerNets to benchmarks like ImageNet, but it is unclear how this could be done.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 2,
+      "text": "Is there any hope this could be applied to problems like 3D imaging data or videos?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 3,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 4,
+      "text": "Regarding the concerns on method scalability.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 5,
+      "text": "The current bottleneck of our approach is processing of all feature maps pixel-wise.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgMKRcth7",
+      "rebuttal_id": "Bkecy4F-0Q",
+      "sentence_index": 6,
+      "text": "We see potential of scaling our approach by operating on superpixels, or NxN patches, instead of processing all pixels individually.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

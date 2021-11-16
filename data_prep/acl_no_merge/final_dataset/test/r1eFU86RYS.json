@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "forum_id": "HklkeR4KPB",
+    "review_id": "r1eFU86RYS",
+    "rebuttal_id": "H1eouSDijr",
+    "title": "ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HklkeR4KPB&noteId=H1eouSDijr",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 0,
+      "text": "This paper presents ReMixMatch an improved version of MixMatch.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 1,
+      "text": "The main contributions are the distribution alignment and the augmentation anchoring.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 2,
+      "text": "Distribution alignment rescales the predictions based on the difference between the model marginals and the ground truth running average estimation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 3,
+      "text": "Augmentation anchoring instead of computing the guessed probabilities on unlabelled data as the average probabilities on transformed samples (as in MixMatch), it considers as guessed labels the average probabilities obtained from weak transformations (flip+crop) even when using stronger transformations (Autoaugment like).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 4,
+      "text": "The paper is well written, has interesting experiments and very impressive results.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 5,
+      "text": "However, there are some negative points that the authors should clarify:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 6,
+      "text": "- The final method is a mixup of many different techniques, thus, not a strong contribution, but many smaller contributions.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 7,
+      "text": "- As shown in the ablation study, the main contribution on the obtained results seems to be the use of stronger transformations than in MixMatch.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 8,
+      "text": "This is not so interesting, even though results are impressive.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 9,
+      "text": "If this is the case, authors should state it more clearly in the paper that a large proportion of the gap in performance between MixMatch and ReMixMatch is the introduction of stronger transformations (Autoaugment style).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 10,
+      "text": "Overall the paper is well presented and contributes to further improve the performance on semi-supervised learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 11,
+      "text": "I there fore recommend it for acceptance.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 12,
+      "text": "However, I would like to see in the paper a more general overview on the fact that strong transformations can further improve semi-supervised methods and ReMixMatch is a way to leverage those transformations.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 13,
+      "text": "Additional comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "sentence_index": 14,
+      "text": "- Instead of using the rescaling trick for distribution alignment, what about enforcing the marginal distribution on the annotated data and the marginal distribution of the model to be similar with KL divergence? Would it be better or worse than the proposed approach?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 0,
+      "text": "1. The final method is a mixup of many different techniques, thus, not a strong contribution, but many smaller contributions.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 1,
+      "text": "A: While ReMixMatch comprises many components (some of which are new), we believe our ablation study justifies the reason why each component exists. If there are additional ablation experiments that you think would be helpful for us to run, please let us know.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 2,
+      "text": "2. As shown in the ablation study, the main contribution on the obtained results seems to be the use of stronger transformations than in MixMatch.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 3,
+      "text": "A: We actually found that using stronger augmentations in MixMatch resulted in divergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 4,
+      "text": "We mention this in the paper (\"Since MixMatch uses a simple flip-and-crop augmentation strategy, we were interested to see if replacing the weak augmentation in MixMatch with AutoAugment would improve performance but found that training would not converge.\") but will emphasize this more in the next draft.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 5,
+      "text": "We also found in our ablation study that using only strong augmentation (i.e., replacing weak augmentations with strong augmentations) resulted in very poor performance for ReMixMatch, suggesting that anchoring towards a weaker augmentation is important.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 6,
+      "text": "We will update the labels in the ablation table to make this more clear.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 7,
+      "text": "3. What about enforcing the marginal distribution on the annotated data and the marginal distribution of the model to be similar with KL divergence?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 8,
+      "text": "A: We tried this approach in initial experiments and found that it performed poorly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 9,
+      "text": "Using the KL loss also introduces a scalar multiplier hyperparameter for this loss term.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 10,
+      "text": "We spent some time tuning this hyperparameter and were unable to obtain good results, so we chose to use the proposed version which does not introduce such a hyperparameter.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eFU86RYS",
+      "rebuttal_id": "H1eouSDijr",
+      "sentence_index": 11,
+      "text": "It may be that further investigation into this form of a loss could be fruitful.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

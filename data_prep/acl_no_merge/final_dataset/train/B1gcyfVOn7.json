@@ -1,0 +1,734 @@
+{
+  "metadata": {
+    "forum_id": "rkle3i09K7",
+    "review_id": "B1gcyfVOn7",
+    "rebuttal_id": "H1xd_45SCm",
+    "title": "Robust Determinantal Generative Classifier for Noisy Labels and Adversarial Attacks",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkle3i09K7&noteId=H1xd_45SCm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 0,
+      "text": "This paper formulates a new inference method called DDGC for noise labels and adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 1,
+      "text": "Their main idea is to induce a generative classifer on top of hidden feature spaces of the discriminative deep model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 2,
+      "text": "To improve the robustness, their DDGC model leverages the minimum covariance determinant (MCD) estimator.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 3,
+      "text": "Besides, the author proposes Theorem 1 to justify their MCD-based generative classifer.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 4,
+      "text": "Pros:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 5,
+      "text": "1. The authors find a new angle for learning with noisy labels.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 6,
+      "text": "Motivated by the fact that LDA-like generative classifer assuming the class-wise unimodal distribution might be robust, they introduce a generative classifer on top of hidden feature spaces of the discriminative deep model.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 7,
+      "text": "2. The authors perform numerical experiments to demonstrate the effectiveness of their framework in benchmark datasets. And their experimental result support their previous claims.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 8,
+      "text": "Cons:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 9,
+      "text": "We have two questions in the following.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 10,
+      "text": "1. Related works: In deep learning with noisy labels, there are three main directions, including small-loss trick [1-3], estimating noise transition matrix [4-6], and explicit and implicit regularization [7-9].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 11,
+      "text": "I would appreciate if the authors can survey and compare more baselines in their paper instead of listing some basic ones.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 12,
+      "text": "2. Experiment:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 13,
+      "text": "2.1 Baselines: For noisy labels, the authors should add MentorNet [1] as a baseline https://github.com/google/mentornet From my own experience, this baseline is very strong.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 14,
+      "text": "At the same time, they should compare with VAT [7].",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 15,
+      "text": "For adversarial attacks, the author should compare with data type from [10], and list L-FBGS [11] as a basic baseline.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 16,
+      "text": "2.2 Datasets: For datasets, I think the author should first compare their methods on symmetric and aysmmetric noisy data.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 17,
+      "text": "Besides, the current paper only verifies on vision datasets.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 18,
+      "text": "The authors are encouraged to conduct 1 NLP dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 19,
+      "text": "References:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 20,
+      "text": "[1] L. Jiang, Z. Zhou, T. Leung, L. Li, and L. Fei-Fei. Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels. In ICML, 2018.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 21,
+      "text": "[2] M. Ren, W. Zeng, B. Yang, and R. Urtasun. Learning to reweight examples for robust deep learning. In ICML, 2018.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 22,
+      "text": "[3] B. Han, Q. Yao, X. Yu, G. Niu, M. Xu, W. Hu, I. Tsang, M. Sugiyama. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In NIPS, 2018.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 23,
+      "text": "[4] G. Patrini, A. Rozza, A. Menon, R. Nock, and L. Qu. Making deep neural networks robust to label noise: A loss correction approach. In CVPR, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 24,
+      "text": "[5] J. Goldberger and E. Ben-Reuven. Training deep neural-networks using a noise adaptation layer. In ICLR, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 25,
+      "text": "[6] S. Sukhbaatar, J. Bruna, M. Paluri, L. Bourdev, and R. Fergus. Training convolutional networks with noisy labels. In ICLR workshop, 2015.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 26,
+      "text": "[7] T. Miyato, S. Maeda, M. Koyama, and S. Ishii. Virtual adversarial training: A regularization method for supervised and semi-supervised learning. ICLR, 2016.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 27,
+      "text": "[8] A. Tarvainen and H. Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 28,
+      "text": "In NIPS, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 29,
+      "text": "[9] S. Laine and T. Aila. Temporal ensembling for semi-supervised learning. In ICLR, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 30,
+      "text": "[10] C. Nicholas and W. David. Towards evaluating the robustness of neural networks. In IEEE Symposium on SP, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "sentence_index": 31,
+      "text": "[11] C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfellow, and R. Fergus. Intriguing properties of neural networks. In ICLR, 2013.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 0,
+      "text": "We very much appreciate your valuable comments, efforts and times on our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 1,
+      "text": "Our responses for all your questions are provided below. Our major revisions in the new draft are colored by red.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 2,
+      "text": "Q1. More related works",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 3,
+      "text": "We updated the introduction by including more recent works [1, 2, 3, 4, 5] related to deep learning with noisy labels.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 4,
+      "text": "In the previous draft, we only included the relevant literature which involves a single network/classifier.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 5,
+      "text": "The updated related works utilize multiple networks, e.g., an ensemble of classifiers or meta-learning model.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 6,
+      "text": "We also added new experimental results for them in Table 4 of the revised draft, as we mentioned in our common response to all reviewers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 7,
+      "text": "Thank you very much for the suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 8,
+      "text": "Q2. Comparison with VAT [6].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 9,
+      "text": "We remark that a targeted setting of VAT [6] is different from ours in that it is designed for improving the performance on semi-supervised learning, while our main goal is handling noisy labels in the training dataset.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 10,
+      "text": "Due to this, we skip the comparison with VAT.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 11,
+      "text": "Instead, as we mentioned in our common response to all reviewers, we consider more training baselines (such as MentorNet [2] and Co-teaching [3]) focusing on handling noisy labels, and show that our inference method can improve all of them.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 12,
+      "text": "Q3. L-FBGS adversarial attacks [8].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 13,
+      "text": "We remark that L-FBGS [8] is known to fail easily due to the near-zero gradient of loss function [7].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 14,
+      "text": "Instead, we consider CW attack [7] which is known to be much stronger.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 15,
+      "text": "[1] Jacob Goldberger and Ehud Ben-Reuven. Training deep neural-networks using a noise adaptation layer. In ICLR, 2017.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 16,
+      "text": "[2] Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: Regularizing very deep neural networks on corrupted labels. In ICML, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 17,
+      "text": "[3] Bo Han, Quanming Yao, Xingrui Yu, Gang Niu, Miao Xu, Weihua Hu, Ivor Tsang, and Masashi Sugiyama. Co-teaching: robust training deep neural networks with extremely noisy labels. In NIPS, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 18,
+      "text": "[4] Mengye Ren, Wenyuan Zeng, Bin Yang, and Raquel Urtasun. Learning to reweight examples for robust deep learning. In ICML, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 19,
+      "text": "[5] Eran Malach and Shai Shalev-Shwartz. Decoupling\u201d when to update\u201d from\u201d how to update\u201d. In NIPS, 2017.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 20,
+      "text": "[6] T. Miyato, S. Maeda, M. Koyama, and S. Ishii. Virtual adversarial training: A regularization method for supervised and semi-supervised learning. ICLR, 2016.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 21,
+      "text": "[7] C. Nicholas and W. David. Towards evaluating the robustness of neural networks. In IEEE Symposium on SP, 2017.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 22,
+      "text": "[8] C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. Goodfellow, and R. Fergus. Intriguing properties of neural networks. In ICLR, 2013.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 23,
+      "text": "Thanks a lot,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gcyfVOn7",
+      "rebuttal_id": "H1xd_45SCm",
+      "sentence_index": 24,
+      "text": "Authors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

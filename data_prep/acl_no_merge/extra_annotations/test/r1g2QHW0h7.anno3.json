@@ -1,0 +1,693 @@
+{
+  "metadata": {
+    "forum_id": "SyVU6s05K7",
+    "review_id": "r1g2QHW0h7",
+    "rebuttal_id": "Syei-gKKTm",
+    "title": "Deep Frank-Wolfe For Neural Network Optimization",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyVU6s05K7&noteId=Syei-gKKTm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 0,
+      "text": "Dual Block-Coordinate Frank-Wolfe (Dual-BCFW) has been widely used in the literature of non-smooth and strongly-convex stochastic optimization problems, such as (structural) Support Vector Machine.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 1,
+      "text": "To my knowledge, the submission is the first sound attempt to adapt this type of Dual-based algorithm for optimization of Deep Neural Network, which employs a proximal-point method that linearizes not the whole loss function but only the DNN (up to the logits) to form a convex subproblem and then deal with the loss part in the dual.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 2,
+      "text": "The attempt is not perfect (actually with a couple of issues detailed below), but the proposed approach is inspiring and I personally would love it published to encourage more development along this thread.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 3,
+      "text": "The following points out a couple of items that could probably help further improve the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 4,
+      "text": "*FW vs BCFW*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 5,
+      "text": "The algorithm employed in the paper is actually not Frank-Wolfe (FW) but Block-Coordinate Frank-Wolfe (BCFW), as it minimizes w.r.t. a block of dual variables belonging to the min-batch of samples.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 6,
+      "text": "*Batch Size*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 7,
+      "text": "Though the algorithm can be easily extended to the min-batch case, the author should discuss more how the batch size is interpreted in this case (i.e. minimizing w.r.t. a larger block of dual variables belonging to the batch of samples) and the algorithmic block (Algorithm 1) should be presented in a way reflecting the batch size since this is the way people use an algorithm in practice (to improve the utilization rate of a GPU).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 8,
+      "text": "*Convex-Conjugate Loss*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 9,
+      "text": "The Dual FW algorithm does not need to be used along with the hinge loss (SVM loss).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 10,
+      "text": "All convex loss function can derive a dual formulation based on its convex-conjugate.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 11,
+      "text": "See [1,2] for examples.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 12,
+      "text": "It would be more insightful to compare SGD vs dual-BCFW when both of them are optimizing the same loss functions (either hinge loss or cross-entropy loss) in the experimental comparison.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 13,
+      "text": "[1] Shalev-Shwartz, Shai, and Tong Zhang. \"Stochastic dual coordinate ascent methods for regularized loss minimization.\" JMLR (2013)",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 14,
+      "text": "[2] Tomioka, Ryota, Taiji Suzuki, and Masashi Sugiyama. \"Super-linear convergence of dual augmented Lagrangian algorithm for sparsity regularized estimation.\" JMLR (2011).",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 15,
+      "text": "*BCFW vs BCD*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 16,
+      "text": "Actually, (Lacoste-Julien, S. et al., 2013) proposes Dual-BCFW to optimize structural SVM because the problem contains exponentially many number of dual variables.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 17,
+      "text": "For typical multiclass hinge loss problem the Dual Block-Coordinate Descent that minimizes w.r.t. all dual variables of a sample in a closed-form update converges faster without extra computational cost.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 18,
+      "text": "See the details in, for example, [3, appendix for the multiclass hinge loss case].",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 19,
+      "text": "[3] Fan, Rong-En, et al. \"LIBLINEAR: A library for large linear classification.\" JMLR (2008).",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 20,
+      "text": "*Hyper-Parameter*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "sentence_index": 21,
+      "text": "The proposed dual-BCFW still contains a hyperparameter (eta) due to the need to introduce a convex subproblem, which makes its number of hyperparameters still the same to SGD.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their detailed review and for their suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 1,
+      "text": "We answer point by point:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 2,
+      "text": "*FW vs BCFW*",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 3,
+      "text": "The (primal) proximal problem is created for a mini-batch of samples, and not for the entire data set (details in section 3.2).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 4,
+      "text": "In other words, the primal problem consists of the proximal term which encourages proximity to the current iterate, the linearized regularization, and the average over the mini-batch of the losses applied to the linearized model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 5,
+      "text": "As a result, we can compute the Frank-Wolfe update for all dual coordinates simultaneously, and we do not need to operate in a block-coordinate fashion.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 6,
+      "text": "We have included this clarification in the new version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 7,
+      "text": "*",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 8,
+      "text": "Batch-Size*",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 9,
+      "text": "We thank the reviewer for this suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 10,
+      "text": "We have adapted the description of Algorithm 1 accordingly.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 11,
+      "text": "*Convex-Conjugate Loss*",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 12,
+      "text": "In order to compare the DFW algorithm to the strongest possible baselines, we choose the baselines to use the CE loss in the CIFAR experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 13,
+      "text": "Indeed we have generally found CE to help the baselines in this setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 14,
+      "text": "In addition, the hand-designed learning rate schedule of SGD and the l2 regularization were originally tuned for CE.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 15,
+      "text": "In the case of the SNLI data set, we allow the baseline to use either CE or SVM because using the hinge loss can increase their performance.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 16,
+      "text": "Finally, we choose to always employ the multi-class hinge loss for DFW because it gives an optimal step-size in closed form for the dual, which is a key strength of the formulation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 17,
+      "text": "*BCFW vs BCD*",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 18,
+      "text": "We thank the reviewer for this recommendation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 19,
+      "text": "It would be interesting indeed to explore how to exploit such updates in the context of the composite minimization framework for deep neural networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 20,
+      "text": "In our case, we emphasize that for speed reasons, it is crucial to process the samples within a mini-batch in parallel, and this does not look straightforward with the algorithm in [3, E.3].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 21,
+      "text": "Therefore we believe that for this setting the FW algorithm permits faster updates thanks to an easy parallelization over the mini-batch on GPU.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 22,
+      "text": "*Hyper-parameter*",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 23,
+      "text": "Counting a single hyper-parameter for SGD implicitly assumes that SGD can employ a constant step-size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 24,
+      "text": "Using such a constant step-size for SGD would incur a significant loss of performance (e.g. at least a few percents on the CIFAR data set).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1g2QHW0h7",
+      "rebuttal_id": "Syei-gKKTm",
+      "sentence_index": 25,
+      "text": "Therefore in order to obtain good performance, SGD requires a manual schedule of the learning rate, which involves many hyper-parameters to tune in practice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

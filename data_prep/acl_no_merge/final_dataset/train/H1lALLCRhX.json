@@ -1,0 +1,688 @@
+{
+  "metadata": {
+    "forum_id": "Hyewf3AqYX",
+    "review_id": "H1lALLCRhX",
+    "rebuttal_id": "BJxWfM-c0X",
+    "title": "A Frank-Wolfe Framework for Efficient and Effective Adversarial Attacks",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hyewf3AqYX&noteId=BJxWfM-c0X",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 0,
+      "text": "The paper investigates the Frank-Wolfe (FW) algorithm for constructing adversarial examples both in a white-box and black-box setting.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 1,
+      "text": "The authors provide both a theoretical analysis (convergence to a stationary point) and experiments for an InceptionV3 network on ImageNet.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 2,
+      "text": "The main claim is that the proposed algorithm can construct adversarial examples faster than various baselines (PGD, I-FGSM, CW, etc.), and from fewer queries in a black-box setting.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 3,
+      "text": "The FW algorithm is a classical method in optimization, but (to the best of my knowledge) has not yet been evaluated yet for constructing adversarial examples.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 4,
+      "text": "Hence it is a natural question to understand whether FW performs significantly better than current algorithms in this context.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 5,
+      "text": "Indeed, the authors find that FW is 6x - 20x faster for constructing white-box adversarial examples than a range of relevant baseline, which is a significant speed-up.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 6,
+      "text": "However, there are several points about the experiments that are unclear to me:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 7,
+      "text": "- It is well known that the running times of optimization algorithms are highly dependent on various hyperparameters such as the step size.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 8,
+      "text": "But the authors do not seem to describe how they chose the hyperparameters for the baselines algorithms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 9,
+      "text": "Hence it is unclear how large the running time improvement is compared to a well-tuned baseline.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 10,
+      "text": "- Other algorithms in the comparison achieve a better distortion (smaller perturbation).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 11,
+      "text": "Since finding an adversarial with smaller perturbation is a harder problem, it is unclear how the algorithms compare for finding adversarial examples with similar distortion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 12,
+      "text": "Instead of reporting a single time-vs-distortion data point, the authors could show the full trade-off curve.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 13,
+      "text": "- The authors only provide running times, not the number of iterations.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 14,
+      "text": "In principle all the algorithms should have a similar bottleneck in each iteration (computing a gradient for the input image), but it would be good to verify this with an iteration count vs success rate (or distortion) plot.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 15,
+      "text": "This would also allow the authors to compare their theoretical iteration bound with experimental data.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 16,
+      "text": "In addition to these three main points, the authors could strengthen their results by providing experiments on another dataset (e.g., CIFAR-10) or model architecture (e.g., a ResNet), and by averaging over a larger number of test data points (currently 200).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 17,
+      "text": "Overall, I find the paper a promising contribution. But until the authors provide a more thorough experimental evaluation, I hesitate to recommend acceptance.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 18,
+      "text": "Additional comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 19,
+      "text": "The introduction contains a few statements that may paint an incomplete or confusing picture of the current literature in adversarial attacks on neural networks:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 20,
+      "text": "* The abstract claims that the poor time complexity of adversarial attacks limits their practical usefulness.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 21,
+      "text": "However, the running time of attacks is typically measured in seconds and should not be the limiting element in real-world attacks on deep learning systems.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 22,
+      "text": "I am not aware of a setting where the running time of an attack is the main computational bottleneck (outside adversarial training).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 23,
+      "text": "* The introduction distinguishes between \"gradient-based methods\" and \"optimization-based methods\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 24,
+      "text": "This distinction is potentially confusing to a reader since the gradient-based methods can be seen as optimization algorithms, and the optimization-based methods rely on gradients.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 25,
+      "text": "* The introduction claims that black-box attacks need to estimate gradients coordinate-wise.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 26,
+      "text": "However, this is not the case already in some of the prior work that uses random directions for estimating gradients (e.g., the cited paper by Ilyas et al.)",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "sentence_index": 27,
+      "text": "I encourage the authors to clarify these points in an updated version of their paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 0,
+      "text": "Thank you for your constructive comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 1,
+      "text": "1. We fully understand your concern and we have added detailed description in the supplemental materials to show the hyperparameters we use for baseline methods in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 2,
+      "text": "2. We would like to argue that constrained optimization based formulation itself is not designed to achieve better distortion compared with regularized optimization based formulation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 3,
+      "text": "So there is no surprise that our algorithm\u2019s distortion is not the best.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 4,
+      "text": "On the other hand, as mentioned by the other reviewer, distortion is usually not that essential in adversarial attacks as long as it is maintained in a reasonable range.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 5,
+      "text": "We could actually remove the distortion column, instead, we chose to include it just to show that we did not trade a lot of distortions (to make problem much easier) and thus gains speedup.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 6,
+      "text": "From our experimental results, you can see that our proposed method achieves significant speedup while keeping the distortion around the same level as the best baselines.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 7,
+      "text": "3. Thank you for your suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 8,
+      "text": "We have further added success rate vs queries plot (for black-box case) and loss vs iterations plot (for white-box case) in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 9,
+      "text": "As you can see, in terms of number of iterations / queries, our method still outperforms the other baselines by a large margin.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 10,
+      "text": "4. Thank you for your suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 11,
+      "text": "We have further added experiments on ResNet V2 model and averaging over 500 correctly classified pictures to strengthen our result.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 12,
+      "text": "Again, this additional experiments show that our method outperforms the other baselines for both white-box attack and black-box attack.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 13,
+      "text": "5. Regarding poor time complexity in practice, first, as you mentioned, adversarial training currently is quite slow due to the slow adversarial attack steps.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 14,
+      "text": "Better time complexity of adversarial attack could significantly speed up adversarial training algorithms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 15,
+      "text": "Second, it is worth noting that the running time complexity of adversarial attack also highly depends on the input size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 16,
+      "text": "For example, if you attack a CIFAR-10 classifier or an MNIST classifier, it could take only seconds per attack even for the slowest algorithm since the input size is only 32 by 32 (or 28 by 28).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 17,
+      "text": "However, if you attack a ImageNet classifier or even higher dimensional data classifier, it could take significantly longer time (minutes).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 18,
+      "text": "That is why reducing the runtime of adversarial attack is very important.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 19,
+      "text": "6. We apologize for this confusion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 20,
+      "text": "Regarding \u201cgradient-based\u201d / \u201coptimization based\u201d methods and coordinate-wise black-box attacks, we have changed our description to avoid confusion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lALLCRhX",
+      "rebuttal_id": "BJxWfM-c0X",
+      "sentence_index": 21,
+      "text": "Thank you for pointing it out.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

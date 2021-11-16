@@ -1,0 +1,932 @@
+{
+  "metadata": {
+    "forum_id": "SJxjPxSYDH",
+    "review_id": "S1eIP8MpYB",
+    "rebuttal_id": "rJlpm6hSir",
+    "title": "Discriminative Variational Autoencoder for Continual Learning with Generative Replay",
+    "reviewer": "AnonReviewer3",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJxjPxSYDH&noteId=rJlpm6hSir",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 0,
+      "text": "-- This paper seeks to combine several ideas together to propose an approach for image classification based continual learning tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 1,
+      "text": "In this effort, the paper combines previously published approaches from generative modeling with VAEs, mutual information regularization and domain adaptation.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 2,
+      "text": "I am a making a recommendation for reject for this paper with the main reason being that I believe the primary derivations for their method appear flawed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 3,
+      "text": "--In the main section describing the approach (Section 4), the authors start with a claim that Equation 1 and 2 are equal; I don\u2019t believe 1 and 2 are equal.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 4,
+      "text": "--In Section 4.1, it appears that they are instead making a claim about Equation 2 being a bound for equation 1; but even this derivation appears to have a problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 5,
+      "text": "The following is the concern:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 6,
+      "text": "--In the second line of Equation 5, the KL term appears to be measuring a distance between distributions on two different variables; z|c and c|z.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 7,
+      "text": "If one were to interpret the second one as the unnormalized distribution on z defined via the likelihood for c given z; even this has an issue because then the expression for KL where we plug the unnormalized density in place of the normalized need not be positive which is something they need to derive their bound.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 8,
+      "text": "--Another issue is that the regularization lambda should apply to both the terms in the bound but in Equation (7) only appears selectively for one of the two terms.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 9,
+      "text": "It is also not clear how the loss function proposed differs from that of the CDVAE, etc.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 10,
+      "text": "If the novelty is in applying to continual learning and new datasets, it is not clear that this is sufficient.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 11,
+      "text": "Additional feedback for authors (not part of the main decision reasoning):",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 12,
+      "text": "- What is dt in Algorithm 1 description?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 13,
+      "text": "Figure 1:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 14,
+      "text": "-typo \u201cimplmented\u201d",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 15,
+      "text": "-What\u2019s the 3d plot supposed to represent?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 16,
+      "text": "Doesn't the classification loss have a dependency on the input condition?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 17,
+      "text": "--What does a \"heavy classifier\" imply concretely?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 18,
+      "text": "--\u201cRedundant weights\u201d seems like not a very strong constraint especially for a small cardinality label space (like 10, in the case of this paper).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 19,
+      "text": "--The notation for the proposed parameters theta, theta\u2019, phi, phi\u2019 are not consistent with the notation in the intro section, where phi was used for the encoder and theta for the decoder.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 20,
+      "text": "In later sections they use theta and theta\u2019 for encoder/decoder resp.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 21,
+      "text": "-- \u201cWhen the encoder and decoder networks are sufficiently complex, it is enough to implement each the prior and classification network as one fully-connected layer\u201d",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 22,
+      "text": "\u2192 what do the authors mean \u201c",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "sentence_index": 23,
+      "text": "when \u2026 networks are sufficiently complex\u201d or do they actually mean when the \u201cwhen the problem is simple enough\u201d?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 0,
+      "text": "We appreciate your constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 1,
+      "text": "Specifically, your comments about our derivations greatly help us to improve the quality of our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 2,
+      "text": "We hope you to also consider our notable experimental results as well.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 3,
+      "text": "(Bounds of KL divergence) Thank you for this good comment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 4,
+      "text": "We claimed that the Equation 1 can be maximized indirectly by maximizing Equation 2 which is a lower bound of Equation 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 5,
+      "text": "If we understand your primary concern correctly, the concern comes from the bound of KL divergence in Equation 5.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 6,
+      "text": "To prove correctness of our formulation, we can rewrite the pointed term in Equation 5 by using simple bayes rule as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 7,
+      "text": "$$\\displaystyle\\sum_{\\mathrm{z}}\\hat{q}\\mathrm{(z|c)}\\ \\mathrm{log}\\ \\frac{\\hat{q}\\mathrm{(z|c)}}{\\hat{p}\\mathrm{(c|z)}} = \\displaystyle\\sum_{\\mathrm{z}}\\hat{q}\\mathrm{(z|c)}\\bigg(\\mathrm{log}\\ \\frac{\\hat{q}\\mathrm{(z|c)}}{\\hat{p}\\mathrm{(z|c)}} + \\mathrm{log}\\ \\frac{\\hat{p}\\mathrm{(z)}}{\\hat{p}\\mathrm{(c)}} \\bigg)$$",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 8,
+      "text": "Because the $\\hat{p}\\mathrm{(c)}$ is constant, and $\\hat{p}\\mathrm{(z)}$ is not included in our optimization, we just optimize $\\displaystyle\\sum_{\\mathrm{z}}\\hat{q}\\mathrm{(z|c)}\\mathrm{log}[\\hat{q}\\mathrm{(z|c)} / \\hat{p}\\mathrm{(z|c)}]$. Since the $\\hat{q}\\mathrm{(z|c)}$ and $\\hat{p}\\mathrm{(z|c)}$ are both normalized distributions, the $D_{KL}[\\hat{q}\\mathrm{(z|c)} || \\hat{p}\\mathrm{(z|c)}]$ is always positive.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 9,
+      "text": "Then, we can conclude that Equation 2 becomes the lower bound for Equation 1.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 10,
+      "text": "(lambda)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 11,
+      "text": "Actually, Equation 7 consists of three terms.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 12,
+      "text": "Since only the third term is proposed additional regularization, we applied weighting parameter lambda to the third term only.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 13,
+      "text": "(Difference with CDVAE) To clarify the difference our DiVA with CDVAE, we write derivations for both models here.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 14,
+      "text": "CDVAE: $\\mathbb{E}_{q_{\\theta}\\mathrm{(z|x)}}[\\mathrm{log}\\ p_{\\theta '}(\\mathrm{x|z)}] - D_{KL}[q_{\\theta}\\mathrm{(z|x)} || p\\mathrm{(z)]} + \\lambda \\mathbb{E}_{q_{\\theta}\\mathrm{(z|x)}}[\\mathrm{log}\\hat{p}_{\\phi '}\\mathrm{(c|z)}]$",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 15,
+      "text": "DiVA: $\\mathbb{E}_{q_{\\theta}\\mathrm{(z|x)}}[\\mathrm{log}\\ p_{\\theta '}(\\mathrm{x|z)}] - D_{KL}[q_{\\theta}\\mathrm{(z|x)} || \\hat{q}_{\\phi}\\mathrm{(z|c)]} + \\lambda \\mathbb{E}_{q_{\\theta}\\mathrm{(z|x)}}[\\mathrm{log}\\ \\hat{p}_{\\phi '}\\mathrm{(c|z)}]$",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 16,
+      "text": "As we discussed in section 4.1, below the table for Algorithm 1, the key difference is that we consider class-conditional Gaussian distributions as priors for variational posteriors.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 17,
+      "text": "Since CDVAE assumes the prior as unit Gaussian for all classes and optimizes classification loss simultaneously with the KL divergence, the latent space does not follow the prior exactly.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 18,
+      "text": "As a result, CDVAE sometimes generates ambiguous samples (Figure 2 (c)).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 19,
+      "text": "Interestingly, RtF [1] also does not consider the class-conditional priors even though they consider a classifier integrated VAE similar to CDVAE.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 20,
+      "text": "In contrast, we assume class-wise specific Gaussian for each class.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 21,
+      "text": "As a result, we can stably generate more realistic samples than CDVAE.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 22,
+      "text": "[Additional feedback]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 23,
+      "text": "(dt in Algorithm 1) dt means the domain translation explained at section 5.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 24,
+      "text": "(Figure 1)",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 25,
+      "text": "- We corrected the typo.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 26,
+      "text": "- The 3d plot conceptually represents class-specific one mode Gaussians.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 27,
+      "text": "- The classification loss has implicit dependency with input conditions by minimizing the KL divergence in Equation 2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 28,
+      "text": "(heavy classifier) A classifier such as resnet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 29,
+      "text": "We used this term to distinguish the additional classifier from our integrated encoder that has discriminative power.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 30,
+      "text": "(Redundant weights)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 31,
+      "text": "If we extend to a more complex dataset such as ImageNet, it will become highly redundant.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 32,
+      "text": "Furthermore, if we consider fully-convolutional architecture (without fully-connected layers), redundancy becomes a serious problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 33,
+      "text": "For example, a feature map that has shape of [W x H x dim] becomes [W x H x (dim + the number of classes)].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 34,
+      "text": "In contrast, using discriminative conditional distributions can keep the dimension of the feature map as [W x H x dim] regardless of the number of classes.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 35,
+      "text": "(Notations) Thank you for commenting this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 36,
+      "text": "We corrected the notations of section 3 to match with later sections.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 37,
+      "text": "(Complexity of encoder) We intended that the encoder network can have enough both discriminative and generative power with a powerful architecture such as a deep residual network.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 38,
+      "text": "[References]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1eIP8MpYB",
+      "rebuttal_id": "rJlpm6hSir",
+      "sentence_index": 39,
+      "text": "[1] van de Ven, Gido M., and Andreas S. Tolias. \"Generative replay with feedback connections as a general strategy for continual learning.\" arXiv preprint arXiv:1809.10635 (2018).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

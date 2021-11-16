@@ -1,0 +1,739 @@
+{
+  "metadata": {
+    "forum_id": "rkgwuiA9F7",
+    "review_id": "B1lJvAAcnX",
+    "rebuttal_id": "r1e16X4HAm",
+    "title": "Cramer-Wold AutoEncoder",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkgwuiA9F7&noteId=r1e16X4HAm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 0,
+      "text": "This paper proposes a WAE variant based on a new statistical distance between the encoded data distribution and the latent prior distribution that can be computed in closed form without drawing samples from the prior (but only when it is Gaussian).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 1,
+      "text": "The primary contribution is the new CW statistical distance, which is the l2 distance between projected distributions, integrated over all possible projections (although not calculated as so in practice).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 2,
+      "text": "Plugging this distance into the WAE produces similar performance to existing WAE variants, but does not really advance the existing achievable performance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 3,
+      "text": "Overall, I quite liked the paper and think it is well-written, but I believe the authors need to highlight at least one practical advance introduced by the CW distance (in which case I will raise my score).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 4,
+      "text": "Some potential options include:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 5,
+      "text": "1) Faster training times.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 6,
+      "text": "It seems to me one potential advantage of the closed-form distance would be that the stochastic WAE-optimization can converge faster (due to lower-variance gradients).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 7,
+      "text": "However, the authors only presented per-batch processing times as opposed to overall training time for these models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 8,
+      "text": "2) Stabler training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 9,
+      "text": "Perhaps sampling from the prior (as needed to compute statistical distances in the other WAE variants) introduces undesirable extra variance in the training procedure.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 10,
+      "text": "The authors could run each WAE training process K times (with random initialization) to see if the closed-form distance enables more stable results.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 11,
+      "text": "3) Usefulness of the CW distance outside of the autoencoder context.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 12,
+      "text": "Since the novelty of this work lies in the introduction of the CW distance, I would like to see an independent evaluation of this distance as a  general statistical distance measure (independently of its use in CWAE).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 13,
+      "text": "Can you use this distance as a multivariate-Gaussian goodness of fit measure for high-dimensional data drawn from both Gaussian and non-Gaussian distributions and show that it actually outperforms other standard statistical distances (e.g. in two-sample testing power)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 14,
+      "text": "Without demonstrating any practical advance, this work becomes simply another one of the multitude of V/W-AE-variants that already exist.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 15,
+      "text": "Other Comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 16,
+      "text": "- While I agree that standard WAE-MMD and SWAE require some form of sampling to compute their respective statistical distance, a variant of WAE-MMD could be converted to a closed form statistical distance in the case of a Gaussian prior, by way of Stein's method or other existing goodness-of-fit measures designed specifically for Gaussians.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 17,
+      "text": "See for example:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 18,
+      "text": "Chwialkowski et al: https://arxiv.org/pdf/1602.02964.pdf",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 19,
+      "text": "which like CW-distance is also a quadratic-time closed-form distance between samples and a target density.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 20,
+      "text": "Besides having closed form in the case of a Gaussian prior (which other statistical distances could potentially also achieve), it would be nice to see some discussion of why the authors believe their CW-distance is conceptually superior to such alternatives.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 21,
+      "text": "- Silverman's rule of thumb is only asymptotically optimal when the underlying data-generating distribution itself is Gaussian. Perhaps you can argue here that due to CLT: the projected data (for high-dimensional latent spaces) should look approximately Gaussian?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "sentence_index": 22,
+      "text": "After reading the revision: I have raised my score by 1 point and recommend acceptance.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 0,
+      "text": "The reviewer observed that \u201cauthors need to highlight at least one practical advance introduced by the CW distance\u201d and suggested the following potential options:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 1,
+      "text": "1) Faster training times.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 2,
+      "text": "2) Stabler training.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 3,
+      "text": "3) Usefulness of the CW distance outside of the autoencoder context.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 4,
+      "text": "Ad. 1) (faster training) The experiments show, that CWAE model approaches best generalization, measured with the FID score, much more rapidly, than it is the case with WAE or SWAE models.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 5,
+      "text": "E.g., when trained on the CelebA problem, the FID-score in case of CWAE drops below 100 after only about 75 batches, while for the WAE model only near 400 batches, it does so.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 6,
+      "text": "The same applies to SWAE.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 7,
+      "text": "Needless to say, the FID score for CWAE is near a common best value (after about 500 epochs) of about 95 (these are results are for a DeConv encoder-decoder architecture, see. Appendix E for details; for a direct comparison with Tolstikhin at al\u2019s paper results for an identical architecture to theirs are given in Table 1 in the paper) after a much shorter processing time.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 8,
+      "text": "This is both thanks to the quicker convergence, but also due to faster batch processing (as it was shown in the paper).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 9,
+      "text": "The MMD-like cloud-to-cloud formula for CW-distance (see equation (3) in the paper) is much more cumbersome than the actual one cloud-to-distribution used in the experiments derived in the paper and shown in equation at page 5 of the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 10,
+      "text": "The proposed Cramer-Wold kernel behaves correctly.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 11,
+      "text": "We have added graphs describing this to the paper, exchanging those on page 8 (as the new are much more clearer).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 12,
+      "text": "Graphs comparing CWAE, WAE and SWAE learning, on both CelebA and CIFAR10 datasets, shall be added to the Appendix.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 13,
+      "text": "Ad. 2) (stable training) We have run repeated experiments with different initializations for all the generative models, as the reviewer has suggested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 14,
+      "text": "All experiments show that CWAE learning process is stable and repetitive: the standard deviations, for most of the coefficients computed during training are smaller than those of WAE or SWAE models (in particular CWAE minimizes WAE distance faster then WAE-MMD).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 15,
+      "text": "We have added appropriate graphs to the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 16,
+      "text": "Ad. 3) (CW usefulness) We have verified how the Cramer-Wold metric works as a Gaussian goodness of fit,",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 17,
+      "text": "however, the results were not satisfactory.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 18,
+      "text": "The tests based on Cramer-Wold metric were, in general, in the middle of compared tests (Mardia, Henze-Zirkler and Royston tests).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 19,
+      "text": "We doubt it can be efficiently applied in this direction.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 20,
+      "text": "However, since Cramer-Wold metric is defined by characteristic kernel, it can be applied in the large field of kernel-based methods in machine learning (where its particular advantage lies in the fact that it can be efficiently computed for the mixture of radial Gaussians).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 21,
+      "text": "The reviewer noted that \u201cbesides having closed form in the case of a Gaussian prior (which other statistical distances could potentially also achieve), it would be nice to see some discussion of why the authors believe their CW-distance is conceptually superior to such alternatives.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 22,
+      "text": "In our opinion sliced approach works well for neural networks, as the neural networks see/process data by applying similar one dimensional projections.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 23,
+      "text": "Also the success of neural networks based on the classical activation functions, as compared to RBF networks, supports this.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 24,
+      "text": "Concerning the closed-form, Cramer-Wold kernel is the only known to the authors, which is given by the sliced approach and has a closed form for radial gaussians.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 25,
+      "text": "The reviewer also noted, that \u201cSilverman's rule of thumb is only asymptotically optimal when the underlying data-generating distribution itself is Gaussian. Perhaps you can argue here that due to CLT: the projected data (for high-dimensional latent spaces) should look approximately Gaussian?\u201d.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 26,
+      "text": "In our opinion the model works well due to the fact that we compare it to the Gaussian N(0,I), where the Silverman\u2019s kernel is optimal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lJvAAcnX",
+      "rebuttal_id": "r1e16X4HAm",
+      "sentence_index": 27,
+      "text": "However, if the prior in general would not be standard Gaussian, the situation could possibly be different.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

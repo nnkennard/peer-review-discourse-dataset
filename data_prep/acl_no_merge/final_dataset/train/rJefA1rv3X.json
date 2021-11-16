@@ -1,0 +1,676 @@
+{
+  "metadata": {
+    "forum_id": "Hyewf3AqYX",
+    "review_id": "rJefA1rv3X",
+    "rebuttal_id": "HyxXl7Z5RX",
+    "title": "A Frank-Wolfe Framework for Efficient and Effective Adversarial Attacks",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hyewf3AqYX&noteId=HyxXl7Z5RX",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 0,
+      "text": "The paper proposes using the Frank-Wolfe algorithm for fast adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 1,
+      "text": "They prove upper bounds on the Frank-Wolfe gap and show experimentally that they can attack successfully much faster than other algorithms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 2,
+      "text": "In general I find the paper novel (to the best of my somewhat limited knowledge), interesting and well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 3,
+      "text": "However I find the white-box experiments lacking as almost every method has 100% success rate.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 4,
+      "text": "Fixing this would significantly improve the paper.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 5,
+      "text": "Main remarks:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 6,
+      "text": "- Need more motivation for faster white-box attack.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 7,
+      "text": "One good motivation for example is adversarial training, e.g. Kurakin et al 2017 \u2018ADVERSARIAL MACHINE LEARNING AT SCALE\u2019 that would benefit greatly from faster attacks",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 8,
+      "text": "- White-box attack experiments don\u2019t really prove the strength of the method, even with imagenet experiments, as almost all attacks get 100% success rate making it hard to compare.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 9,
+      "text": "Need to compare in more challenging settings where the success rate is meaningful, e.g. smaller epsilon or a more robust NN using some defence.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 10,
+      "text": "Also stating the 100% success rate in the abstract is a bit misleading for the this reason.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 11,
+      "text": "-Something is a bit weird with the FGM results. While it is a weaker attack, a 0%/100% disparity between it and every other",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 12,
+      "text": "attack seems odd.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 13,
+      "text": "-The average distortion metric (that\u2019s unfavourable to your method anyway) doesn\u2019t really mean anything as the constraint optimization has no incentive to find a value smaller than the constraint.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 14,
+      "text": "- Regarding lambda>1, you write that \u201cwe argue this modification makes our algorithm more general, and gives rise to better attack results\u201d.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 15,
+      "text": "I did not see any theoretical or empirical support for this in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 16,
+      "text": "Also, it seems quite strange to me that making the FW overshot and then projecting back would be beneficial.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 17,
+      "text": "Some intuitive explanation on why this should help and/or empirical comparison would be a great addition.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 18,
+      "text": "- The authors claim that this is the first zeroth-order non-convex FW convergence rate, I am not familiar enough with the field to evaluate this claim and its significance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 19,
+      "text": "- Alg. 1 for T>1 is very similar to I-FGM, but also \u2018pulls\u2019 x_t towards x_orig.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 20,
+      "text": "It would be very useful to write the update more explicitly and compare and contrast this 2 very similar updates.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 21,
+      "text": "This gives nice insight into why this should intuitively work better.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 22,
+      "text": "- I am not sure what the authors mean by \u201cthe Frank-Wolfe gap is affine invariant\u201d. If we scale the input space by a, the gap should be scaled by a^2 - how/why is it invariant?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 23,
+      "text": "- I am not sure what you mean in 5.4 \u201cwe omit all grid search/ binary search steps",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 24,
+      "text": "\u2026\u201d",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 25,
+      "text": "Minor remarks:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 26,
+      "text": "- In remark 4.8 in the end option I and II are inverted by mistake",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 27,
+      "text": "- In 5.1, imagenet results are normally top-5 error rate not top-1 acc, would be better to report that more familiar number.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "sentence_index": 28,
+      "text": "- In the proof you wrongfully use the term telescope sum twice, there is nothing telescopic about the sum it is just bound by the max value times the length.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 0,
+      "text": "1. Thank you for your suggestion, we have addressed this in the revision as you suggested. This is indeed a good motivation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 1,
+      "text": "2. Thank you for your suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 2,
+      "text": "We have further added experiments using even stronger query limit (previously 500000, now 50000) for the additional experiments on ResNet V2 model in the supplemental material. (We did not choose to use smaller epsilon because first, we already used a quite standard choice of epsilon, second, as you said, going for extremely small distortion does not really mean anything in adversarial context.) As you can see, in this even harder setting our proposed algorithm still maintain a performance lead over other baselines.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 3,
+      "text": "Also, we have revised the statement in the abstract as you suggested.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 4,
+      "text": "3. You are right, it is a quite weak attack and we have removed it from the table (just mention it in the text).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 5,
+      "text": "4. Yes, we could just remove the distortion column in our result.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 6,
+      "text": "We choose to include it because we do not want others to think that we actually trade a lot of distortions (to make problem easy) for speedup in runtime.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 7,
+      "text": "5. We have added further empirical evidence to show that in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 8,
+      "text": "From an intuitive perspective, using lambda>1 is essentially a \u201crelax and tighten\u201d step by first relax the constraint to make the problem easier, and then tighten it back to the real constraint.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 9,
+      "text": "The \u201crelax and tighten\u201d idea has been widely used in constrained optimization, and we adapted this idea to Frank-Wolfe algorithm to make it even faster.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 10,
+      "text": "6. As mentioned in an anonymous comment, there is one paper which proposed a similar but different zeroth-order non-convex FW algorithm as well as convergence rate analysis ahead of us.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 11,
+      "text": "We were not aware of this paper when we prepared our ICLR submission, since it was posted only ten days before the ICLR deadline.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 12,
+      "text": "We have cited this paper and modify our claim correspondingly in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 13,
+      "text": "Nevertheless, it does not affect the main contribution of our paper: a novel Frank-Wolfe based adversarial attack framework for both white-box and black-box attacks, which is much more efficient than existing white-box/black-box adversarial attacks in both query complexity and runtime.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 14,
+      "text": "7. Thank you for your suggestion and we have explicitly written down the update for a better comparison in the supplemental materials (Section A) in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 15,
+      "text": "8. It means it is invariant to an affine transformation of the constraint set, i.e., if we choose to re-parameterize of the constraint with some linear or affine transformation M, the original and the new optimization problem will looks the same to the Frank-Wolfe algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 16,
+      "text": "Please refer to [Jaggi (2013)], [Lacoste-Julien (2016)] for more details.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 17,
+      "text": "9. In white-box setting, we perform grid search / binary search for parameter epsilon (or c for CW) for all algorithms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 18,
+      "text": "This will lead to better/ closer distortions for all methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 19,
+      "text": "In black-box setting, we care more about query complexity and thus did not perform the grid search/binary search steps to avoid extra queries in finding the best epsilon/lambda.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJefA1rv3X",
+      "rebuttal_id": "HyxXl7Z5RX",
+      "sentence_index": 20,
+      "text": "10. Thank you for pointing these typos out, we have addressed it in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

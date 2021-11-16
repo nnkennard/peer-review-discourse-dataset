@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "forum_id": "H1eqjiCctX",
+    "review_id": "SJgejqZqhQ",
+    "rebuttal_id": "HyeFqDog0X",
+    "title": "Understanding Composition of Word Embeddings via Tensor Decomposition",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1eqjiCctX&noteId=HyeFqDog0X",
+    "annotator": "anno15"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 0,
+      "text": "The authors consider the use of tensor approximations to more accurately capture syntactical aspects of compositionality for word embeddings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 1,
+      "text": "Given two words a and b, when your goal is to find a word whose meaning is roughly that of the phrase (a,b)",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 2,
+      "text": ", a standard approach to to find the word whose embedding is close to the sum of the embeddings, a + b. The authors point out that others have observed that this form of compositionality does not leverage any information on the syntax of the pair (a,b), and the propose using a tensor contraction to model an additional multiplicative interaction between a and b, so they propose finding the word whose embedding is closest to a + b + T*a*b, where T is a tensor, and T*a*b denotes the vector obtained by contracting a and b with T. They test this idea specifically on the use-case where (a,b) is an adjective,noun pair, and show that their form of compositionality outperforms weighted versions of additive compositionality in terms of spearman and pearson correlation with human judgements.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 3,
+      "text": "In their model, the word embeddings are learned separately, then the tensor T is learned by minimizing an objective whose goal is to minimize the error in predicting observed trigram statistics.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 4,
+      "text": "The specific objective comes from a nontrivial tensorial extension of the original matricial RAND-WALK model for learning word embeddings.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 5,
+      "text": "The topic is fitting with ICLR, and some attendees will find the results interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 6,
+      "text": "As in the original RAND-WALK paper, the theory is interesting, but not the main attraction, as it relies on strong generative modeling assumptions that essentially bake in the desired results.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 7,
+      "text": "The main appeal is the idea of using T to model syntactic interactions, and the algorithm for learning T. Given that the main attraction of the paper is the potential for more performant word embeddings, I do not believe the work will have wide appeal to ICLR attendees, because no evidence is provided that the features from the learned tensor, say [a, b, T*a*b], are more useful in downstream applications than [a,b] (one experiment in sentiment analysis is tried in the supplementary material with no compelling difference shown).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 8,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 9,
+      "text": "- theoretical justification is given for their assumption that the higher-order interactions can be modeled by a tensor",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 10,
+      "text": "- the tensor model does deliver some improvement over linear composition on noun-adjective pairs when measured against human judgement",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 11,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 12,
+      "text": "- no downstream applications are given which show that these higher order interactions can be useful for downstream tasks.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 13,
+      "text": "- the higher-order features T*a*b are useful only when a is noun and b is an adjective: why not investigate using T to model higher-order interaction for all (a,b) pairs regardless of the syntactic relationships between a and b?",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 14,
+      "text": "- comparison should be made to the linear composition method in the Arora, Liang, Ma ICLR 2017 paper",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 15,
+      "text": "Some additional citations:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 16,
+      "text": "- the above-mentioned ICLR paper provides a performant alternative to unweighted linear composition",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "sentence_index": 17,
+      "text": "- the 2017 Gittens, Achlioptas, Drineas ACL paper provides theory on the linear composition of some word embeddings",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 0,
+      "text": "We are grateful to the reviewer for their time and effort in reading our paper and providing feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 1,
+      "text": "Generative model assumptions: our model is an expansion of the original RAND-WALK model of Arora et. al., with the purpose of accounting for syntactic dependencies.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 2,
+      "text": "The additional assumptions we include and the concentration phenomena we prove theoretically are verified empirically in section 5, so our results do hold up on real data.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 3,
+      "text": "Use on downstream tasks: we believe that capturing syntactic relationships using a tensor can be useful for some downstream tasks, since our results in the paper suggest that it captures additional information above and beyond the standard additive composition.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 4,
+      "text": "However, as the main goal of this paper is to introduce and analyze the model, we defer more application-focused analysis to future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 5,
+      "text": "Interaction between arbitrary word pairs: our model introduces the tensor in order to capture syntactic relationships between pairs of words, such as adjective-noun and verb-object pairs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 6,
+      "text": "While it might be interesting to try to capture interactions between all pairs of words, that is not justified by our model and we didn't explore it.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 7,
+      "text": "However, we also trained our model using verb-object pairs, and we have updated section 5 as well as the appendix to include these additional results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 8,
+      "text": "Comparison to Arora, Liang, Ma ICLR 2017: we appreciate the suggestion to include a comparison with the SIF embedding method of Arora et. al., as this method is also obtained from a variant of the original RAND-WALK paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 9,
+      "text": "We have updated Table 2 and the discussion in section 5 to include these additional results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 10,
+      "text": "As reported in their paper, the SIF embeddings yield a strong baseline for sentence embedding tasks, and we find the same to be true in the phrase similarity task for adjective-noun phrases (not so for verb-object phrases).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 11,
+      "text": "However, we find that we can improve upon the SIF performance by addition of the tensor component from our model. (We note that we have just used the tensors trained in our original model; it is possible that combining the model in SIF and syntactic RAND-WALK more carefully could give even better results.)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgejqZqhQ",
+      "rebuttal_id": "HyeFqDog0X",
+      "sentence_index": 12,
+      "text": "Additional citations: we have updated the paper to include both additional citations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "metadata": {
+    "forum_id": "rkgyS0VFvr",
+    "review_id": "SJe4yM7lcr",
+    "rebuttal_id": "rkgZSdB3oH",
+    "title": "DBA: Distributed Backdoor Attacks against Federated Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkgyS0VFvr&noteId=rkgZSdB3oH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 0,
+      "text": "This paper proposes a distributed backdoor attack strategy, framed differently from the previous two main approches (1) the centralised backdoor approach and (2) the (less discussed in the paper) distributed fault tolerance approach (often named \"Byzantine\").",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 1,
+      "text": "The authors show through experiments how their attack is more persistent than centralised backdoor attack.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 2,
+      "text": "The authors also compare two aggregation rules for federated learning schemes, (Fung et al 2018 & Pillutla et al 2019), suggesting that both rules are bypassed by the proposed distributed backdoor attack.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 3,
+      "text": "Strength:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 4,
+      "text": "what I found most interesting in the paper is Section 3.4, presenting an appreciable attempt to \"interpret\" poisoning. Together with Section 4.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 5,
+      "text": "This kind of fine-grained analysis of poisoning is highly needed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 6,
+      "text": "Weakness:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 7,
+      "text": "in section 3.3, the authors compare against RFA and take what is claimed in Pillulata et al as granted (that RFA detects more nuanced outliers than the wort-case of the Byzantine setting",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 8,
+      "text": "(Blanchard et al 2017) )",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 9,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 10,
+      "text": "In fact, there is more to the Byzantine setting than that,",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 11,
+      "text": "see e.g. Draco (Chen et al 2018 SysML), Bulyan (El Mhamdi et al 2018 ICML) and SignSGD (Bernstein et al 2019 ICLR) which have proposed more sophisticated approches to distributed robustness.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 12,
+      "text": "Since this paper is about distributed robustness and distributed attacks, it would be very informative to the community to illustrate DBA attack on these methods to have a more compelling message.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "sentence_index": 13,
+      "text": "post rebuttal: thank your for your detailed reply, I acknowledge your new comparisons with the distributed robustness mechanisms of Krum and Bulyan, too bad time was short to compare with the other measures such as Draco and SignSGD.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 0,
+      "text": "Thanks so much for your valuable review comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 1,
+      "text": "Following your suggestion, we evaluated the Byzantine settings Multi-Krum (Blanchard et al 2017) and Bulyan (El Mhamdi et al 2018 ICML).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 2,
+      "text": "For both DBA and centralized attack we use the aggregation rule that can tolerate f Byzantine workers among n workers",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 3,
+      "text": "(Blanchard et al 2017)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 4,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 5,
+      "text": "For centralized attack there is 1 attacker and n-1 non-Byzantine workers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 6,
+      "text": "For DBA there are f distributed attackers and n-f non-Byzantine workers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 7,
+      "text": "The total number of poisoned pixel amounts are kept the same.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 8,
+      "text": "1. Multi-Krum",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 9,
+      "text": "- To meet the assumption that 2f + 2 < n, we set  (n=10, f=3) for loan and (n=12, f=4) for image datasets.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 10,
+      "text": "The Multi-Krum parameter m is set to m=n-f.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 11,
+      "text": "For Tiny-imagenet we decrease the poison ratio to 5/64 for both attacks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 12,
+      "text": "Other parameters are the same as described in the paper.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 13,
+      "text": "- For CIFAR and Tiny-imagenet, we find that DBA is more effective.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 14,
+      "text": "- For LOAN and MNIST, both attacks don\u2019t behave well.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 15,
+      "text": "We believe the reason can be explained by the fact that Loan and MNIST are simpler tasks and benign clients quickly agree on the correct gradient direction, so malicious updates are more difficult to succeed.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 16,
+      "text": "2. Bulyan",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 17,
+      "text": "- We use Bulyan",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 18,
+      "text": "based on the Byzantine\u2013resilient aggregation rule Krum",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 19,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 20,
+      "text": "To meet the assumption that 4f + 3 <= n, we set  (n=15, f=3) for loan and (n=20, f=4) for image datasets.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 21,
+      "text": "- For CIFAR, DBA is more effective.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 22,
+      "text": "- For other datasets, both attacks fail.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 23,
+      "text": "However, we note that our distributed and centralized backdoor attacks are not optimized for Byzantine setting.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 24,
+      "text": "We believe it\u2019s worthwhile to explore the distributed version of other new attack algorithms, e.g. A Little Is Enough (Baruch et al 2019) that manipulates its update to mitigate Krum and Bulyan defenses.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 25,
+      "text": "In summary, Multi-Krum and Bulyan have stricter assumptions on the proportion of attackers than RFA and FoolsGold.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 26,
+      "text": "In addition, while RFA and FoolsGold still assign potential outliers with extreme low weights, Krum (Multi-Krum, Krum-based Bulyan) directly removes them, making it impossible to inject backdoors if the malicious updates are obviously far from the benign updates.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 27,
+      "text": "The centralized attack for four datasets totally fails under Multi-Krum and Bulyan while DBA can still succeed in some cases.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJe4yM7lcr",
+      "rebuttal_id": "rkgZSdB3oH",
+      "sentence_index": 28,
+      "text": "We have included these results in Appendix A.6 of the revised version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

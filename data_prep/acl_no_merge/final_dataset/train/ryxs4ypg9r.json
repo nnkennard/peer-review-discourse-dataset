@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "forum_id": "SklgTkBKDr",
+    "review_id": "ryxs4ypg9r",
+    "rebuttal_id": "B1eKyZOtoH",
+    "title": "Neural Non-additive Utility Aggregation",
+    "reviewer": "AnonReviewer2",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SklgTkBKDr&noteId=B1eKyZOtoH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxs4ypg9r",
+      "sentence_index": 0,
+      "text": "This paper proposes two new architectures for processing set-structured data: An RNN with an accumulator on its output, and an RNN with gating followed by an accumulator on its output.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "sentence_index": 1,
+      "text": "While sensible, this seems to me to be too minor a contribution to stand alone as a paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "sentence_index": 2,
+      "text": "Additionally, I believe the experimental tasks are new, and as a result all implementations of competing techniques are by the paper authors. This makes it difficult to have confidence in the higher reported performance of the proposed techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 0,
+      "text": "Thanks a lot for your review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 1,
+      "text": "We address your remarks below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 2,
+      "text": "\"RNN with an accumulator / too minor a contribution \"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 3,
+      "text": "We want to emphasis that the accumulator implemented in the newly proposed architectures has an inherently different nature than accumulators used so far: While accumulators such as LSTM cells accumulate knowledge about the state of a sequence, our architectures produce meaningful intermediate results, which can simply summed up to estimate the final set utility.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 4,
+      "text": "Producing such intermediate results, which model the nature of the problem much better than previous approaches, is the key idea presented in this paper and a major benefit of the proposed architectures.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 5,
+      "text": "This also follows the idea of the Choquet integral.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 6,
+      "text": "\"Additionally, I believe the experimental tasks are new, and as a result all implementations of competing techniques are by the paper authors. This makes it difficult to have confidence in the higher reported performance of the proposed techniques.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 7,
+      "text": "To improve reproducibility, we published the data and the code.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 8,
+      "text": "We implemented in our work the most basic version of our idea as well as the most basic version of each reference model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 9,
+      "text": "Hence, the code of the implemented architectures only consists of few lines and can be checked easily.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxs4ypg9r",
+      "rebuttal_id": "B1eKyZOtoH",
+      "sentence_index": 10,
+      "text": "We think that it is not fair to simply mistrust our results since we made our work fully transparent.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

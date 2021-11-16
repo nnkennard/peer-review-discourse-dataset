@@ -1,0 +1,773 @@
+{
+  "metadata": {
+    "forum_id": "Byg1v1HKDB",
+    "review_id": "ByltNYc0tr",
+    "rebuttal_id": "rylgzEOqsB",
+    "title": "Abductive Commonsense Reasoning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Byg1v1HKDB&noteId=rylgzEOqsB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 0,
+      "text": "This paper proposes a new task/dataset for language-based abductive reasoning in narrative texts.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 1,
+      "text": "Pros:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 2,
+      "text": "-\tThe proposed task is interesting and well motivated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 3,
+      "text": "The paper contributes a dataset (20,000 commonsense narratives and 200,000 explanatory hypotheses).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 4,
+      "text": "The construction of the dataset was performed carefully (e.g., avoiding annotation artifacts).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 5,
+      "text": "-\tThe paper established many reasonable baselines.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 6,
+      "text": "-\tThe paper conducted detailed analysis, which invites more research on this task: despite the strong performance of many existing systems on NLI/RTE, there are larger gaps between the performance of these models and human performance on the proposed task.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 7,
+      "text": "The experiments well support the conclusions made in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 8,
+      "text": "-\tThe paper is well structured and easy to follow. It is well written.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 9,
+      "text": "Cons/comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 10,
+      "text": "-\tWhile this is a new and interesting task, the contribution (as discussed above in \u201cpros\u201d above) is somewhat limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 11,
+      "text": "I also suggest the paper discusses e-SNLI a bit more.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 12,
+      "text": "-\tThe paper has a specific form of formulation for abductive reasoning, where there are exactly two observations and one proceeds the other; the explanation happens in between. I can see this helps collect and annotate data, but also limit the form of abductive reasoning and how models should be developed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 13,
+      "text": "-\tShould the title of the paper specify the paper is about \u201clanguage-based\u201d abductive reasoning.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 14,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "sentence_index": 15,
+      "text": "A minor one: \u201cTable 7 reports results on the \u03b1NLI task.\u201d Should it be \u201cTable 2\u201d?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 0,
+      "text": "We thank AnonReviewer1 for their positive comments about the interesting-ness of our proposed abductive reasoning tasks (inference and generation) and the associated benchmark dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 1,
+      "text": "We address specific concerns individually below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 2,
+      "text": "Discussion about e-SNLI:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 3,
+      "text": "A key distinction between e-SNLI and Abductive-NLI is that the explanations in e-SNLI serve the purpose of justifying model decisions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 4,
+      "text": "In contrast, the goal of Abductive-NLI and Abductive-NLG is to select or generate explanatory hypotheses for given observations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 5,
+      "text": "Indeed, analogous to e-SNLI for SNLI, Abductive-NLI can be extended to \u201ce-Abductive-NLI\u201d by providing explanations that justify the selected hypothesis.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 6,
+      "text": "Consider the following example that BERT fails to predict correctly:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 7,
+      "text": "O1: Chad loves Barry Bonds.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 8,
+      "text": "H1: Chad got to meet Barry Bonds online, chatting.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 9,
+      "text": "H2: Chad waited after a game and met Barry.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 10,
+      "text": "O2: Chad ensured that he took a picture to remember the event.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 11,
+      "text": "The e-Abductive-NLI task would require models to generate an explanation for selecting H2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 12,
+      "text": "For the above example, a possible explanation for selecting H2 could be: \u201cPeople need to be physically co-located to take a picture with someone. Meeting online does not mean two people are physically co-located\u201d.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 13,
+      "text": "We think generating such justifications is a great next step and hope that our work will foster such interesting future research.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 14,
+      "text": "Re. somewhat limited contribution:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 15,
+      "text": "We appreciate the opportunity to briefly restate our contributions and to discuss its significance.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 16,
+      "text": "Abductive Commonsense Reasoning, a critical capability in human reasoning, is relatively less studied in NLP research.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 17,
+      "text": "To support this line of research, our work introduces a dataset that focuses explicitly on this important reasoning capability.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 18,
+      "text": "Furthermore, several recent works [1,2,3,4] have shown the presence of annotation artifacts in crowdsourced datasets -- which poses a significant challenge for dataset curation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 19,
+      "text": "Our work makes the following contributions:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 20,
+      "text": "i) proposes and formalizes two novel tasks of Abductive Inference and Abductive Generation,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 21,
+      "text": "ii) presents a new dataset in support of these tasks collected through careful crowdsourcing design and an adversarial filtering algorithm,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 22,
+      "text": "iii) establishes strong baselines on the task proving the difficulty of the tasks and",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 23,
+      "text": "iv) analyses the types of commonsense reasoning that current state of the art models fall short on.",
+      "suffix": "\n\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 24,
+      "text": "Re. limited form of Abductive Reasoning:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 25,
+      "text": "The simplifying assumptions, mentioned in the paper, allow us to i) formulate the tasks concretely and ii) curate the dataset and evaluate models viably.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 26,
+      "text": "We show that in spite of the assumptions, our dataset presents significant challenges for current models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 27,
+      "text": "We totally agree that in its most general form, there should be any number of observations and models should be required to generate explanatory hypotheses in natural language (as in the alpha-NLG task).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 28,
+      "text": "We hope our work will lead to this future line of research.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 29,
+      "text": "Re. the title:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 30,
+      "text": "Thanks for the suggestion. We will update the title to reflect that this work is aimed at language-based abductive reasoning.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 31,
+      "text": "Table 7 vs Table2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 32,
+      "text": "Thanks for catching that. We\u2019ve updated the paper with the fix.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 33,
+      "text": "[1] Gururangan et al. Annotation artifacts in natural language inference data.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 34,
+      "text": "[2] Poliak et al. Hypothesis only baselines in natural language inference.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 35,
+      "text": "[3] Tsuchiya e. al. Performance impact caused by hidden bias of training data for recognizing textual entailment.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByltNYc0tr",
+      "rebuttal_id": "rylgzEOqsB",
+      "sentence_index": 36,
+      "text": "[4] Sakaguchi et al. WINOGRANDE: An Adversarial Winograd Schema Challenge at Scale",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

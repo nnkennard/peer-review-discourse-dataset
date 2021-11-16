@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "forum_id": "BJesDsA9t7",
+    "review_id": "SJgBsMKs2m",
+    "rebuttal_id": "Bygfi-9SRQ",
+    "title": "Better Accuracy with Quantified Privacy: Representations Learned via Reconstructive Adversarial Network",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJesDsA9t7&noteId=Bygfi-9SRQ",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 0,
+      "text": "Summary: The paper studies the problem of training deep neural networks in the distributes setting while ensuring privacy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 1,
+      "text": "Each data sample is held by one individual (e.g., on a cell phone), and a central algorithm trains a learning model on top of this data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 2,
+      "text": "In order to protect the privacy of the individuals, the paper proposes the use of multi-layer encoders (E) over the raw data, and then send them across the server.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 3,
+      "text": "The privacy is ensured by exemplifying the inability to reconstruct the original data from the encoded features, via running a reverse deep model (X).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 4,
+      "text": "The notion of privacy is quantified by the Euclidian distance between the reconstructed vector via the best X and the original feature vector, maximized over E. The overall framework resembles a GAN, and the paper calls it RAN (Reconstructive Adversarial Network).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 5,
+      "text": "Positive aspects: The problem of training privacy preserving deep models over distributed data has been a significant and important challenge.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 6,
+      "text": "The current solutions that adhere to differential privacy based approaches are not yet practical. In my view, it is a very important research question.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 7,
+      "text": "Negative aspects: One major concern I have with the paper is the notion of privacy considered.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 8,
+      "text": "The notion of privacy considered in the paper makes two assumptions which I am not comfortable with: i) The protection that the notion assures is against reconstruction attacks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 9,
+      "text": "There has been a large body of work which shows that weaker attacks like membership attacks can be equally damaging, ii) Privacy is a worst-case guarantee.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "sentence_index": 10,
+      "text": "I do not see the GAN style approach taken by the paper, ensures this.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 0,
+      "text": "We thank a lot for the comments with cares and insights, and appreciate your efforts in reviewing our paper, which is helpful for improving the quality and readability of our writing. We are also glad that you support our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 1,
+      "text": "We agree that it is essential to justify how the reconstruction error works as a measure of privacy in this paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 2,
+      "text": "In the revision, we have added the following justification on privacy quantification in Section 2, Section 4 and Section 5.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 3,
+      "text": "We also note that the proposed reconstructive adversarial network (RAN), is not an extension of GAN but only borrows GAN\u2019s thoughts on adversarial training several neural networks, for the data privacy-uniquely problem.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 4,
+      "text": "First, there is no single standard definition of data privacy-preserving problems and corresponding adversary attacks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 5,
+      "text": "And a fundamental problem in it is the natural tradeoff between privacy and utility, which is affected by different data privacy-preserving methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 6,
+      "text": "Our key contribution in this paper is the RAN framework and the training algorithm, which can accommodate different choices of privacy attackers and privacy quantification.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 7,
+      "text": "Second, finding the right measurement for privacy is an open problem in itself.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 8,
+      "text": "To evaluate RAN, one has to pick some quantifications.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 9,
+      "text": "In the present paper, we chose the \u201creconstructive error\u201d as the quantification of privacy because it is the most intuitive one to measure the risk of disclosing sensitive background information in the raw data for the given perturbed data (Encoder output).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 10,
+      "text": "Third, in the future, we will evaluate RAN using other quantifications of privacy as well in a definitely defined application.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgBsMKs2m",
+      "rebuttal_id": "Bygfi-9SRQ",
+      "sentence_index": 11,
+      "text": "For example, we could measure the privacy by the hidden failure, i.e., the ratio between the background patterns that were discovered based on RAN\u2019s Encoder output, and the sensitive patterns founded from the raw data, in the object recognition application.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

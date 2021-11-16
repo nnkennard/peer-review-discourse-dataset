@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "forum_id": "Hyx4knR9Ym",
+    "review_id": "B1xw3F5KhQ",
+    "rebuttal_id": "HyxOkadJAX",
+    "title": "Generalizable Adversarial Training via Spectral Normalization",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hyx4knR9Ym&noteId=HyxOkadJAX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 0,
+      "text": "This paper proposes using spectral normalization (SN) as a regularization for adversarial training, which is based on [Miyato et. al., ICLR 2018], where the original paper used SN for GAN training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 1,
+      "text": "The paper also uses the results from [Neyshabur et. al., ICLR 2018], where the original paper provided generalization bounds that depends on spectral norm of each layer.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 2,
+      "text": "The paper is well written in general, the experiments are extensive.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 3,
+      "text": "The idea of studying based on the combination of the results from two previous papers is quite natural, since one uses spectral normalization in practice for GAN training, and the other provides generalization bound that depends on spectral norm.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 4,
+      "text": "The novelty of the algorithm itself is limited, since GAN and adversarial training are both minmax problems, and the original algorithm can be carried over easily.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 5,
+      "text": "The experimental result itself is quite comprehensive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 6,
+      "text": "On the other hand, this paper provides specific generalization bounds under three adversarial attack methods, which explains the power of SN under those settings.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "sentence_index": 7,
+      "text": "However, it is not clear to me that these are some novel results that can better help adversarial training.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 3 for the constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 1,
+      "text": "Here is our point-to-point response to the comments and questions raised in this review:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 2,
+      "text": "1. \u201cThe novelty of the algorithm itself is limited, since GAN and adversarial training are both minmax problems, and the original algorithm can be carried over easily\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 3,
+      "text": "GAN inference and adversarial training seek different goals.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 4,
+      "text": "Adversarial training addresses a supervised learning task while GAN inference focuses on an unsupervised learning problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 5,
+      "text": "Due to the inherent difference between supervised and unsupervised learning problems, the notion of generalization is defined differently between them.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 6,
+      "text": "Arora et al. (2017) provide the standard definition of generalization error for GANs which is very different from the standard generalization error considered in supervised learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 7,
+      "text": "Furthermore, no work in the literature theoretically guarantees that spectral normalization closes the generalization gap for either adversarial supervised learning or GAN unsupervised learning.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 8,
+      "text": "2. \u201cIt is not clear to me that these are some novel results that can better help adversarial training\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 9,
+      "text": "Our work\u2019s main contribution is the theoretical generalization guarantees for spectrally-normalized adversarially-trained DNNs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 10,
+      "text": "Introducing the adversary can significantly grow the capacity of a DNN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 11,
+      "text": "Therefore, existing DNN generalization bounds are not applicable to adversarial training settings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 12,
+      "text": "Our work, to our best knowledge, is the first to show that the adversarial learning capacity of a DNN for FGM, PGM, WRM training schemes can be effectively controlled by regularizing the spectral norm of the DNN\u2019s weight matrices.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xw3F5KhQ",
+      "rebuttal_id": "HyxOkadJAX",
+      "sentence_index": 13,
+      "text": "Our numerical results further support our theoretical contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

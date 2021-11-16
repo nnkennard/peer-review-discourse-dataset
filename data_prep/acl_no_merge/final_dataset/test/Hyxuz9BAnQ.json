@@ -1,0 +1,737 @@
+{
+  "metadata": {
+    "forum_id": "SJl98sR5tX",
+    "review_id": "Hyxuz9BAnQ",
+    "rebuttal_id": "rkgV950DCm",
+    "title": "Interactive Agent Modeling by Learning to Probe",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJl98sR5tX&noteId=rkgV950DCm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 0,
+      "text": "This paper presents a method for interactive agent modeling that involves learning to model a demonstrator agent not only through passively viewing the demonstrator agent, but also through interactions from a learner agent that learns to probe the environment of the demonstrator agent so as to maximally change the behavior of the demonstrator agent.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 1,
+      "text": "The approximated demonstrator agent is trained through standard imitation learning techniques and the learning or probing agent is trained using reinforcement learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 2,
+      "text": "The mind of the demonstrating agent is modeled as a latent space representation from a neural net.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 3,
+      "text": "This latent space representation is used as the reinforcement learning signal for the learner (probing) agent similar to the curiosity driven techniques where larger changes in the representation of mind are sought out since they should lead to larger differences in demonstrator agent behavior.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 4,
+      "text": "The authors test this in several gridworld environments as well as a sorting task and show that their method achieves superior performance and generalizes better to unseen states and task variations compared to several baseline methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 5,
+      "text": "General comments, in no particular order:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 6,
+      "text": "1. The authors should provide more details on how the hand-crafted demonstrator agents were made.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 7,
+      "text": "I assume something similar to an a* algorithm was probably used for the passing task, but what about the maze navigation task?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 8,
+      "text": "2. The demonstrated tasks are (gridworld and algorithmic) which are very simple RL taks with low-dimensional (non-visual) state-spaces",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 9,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 10,
+      "text": "It's unclear how this would scale to more complex tasks with higher-dimensional state spaces such as Atari, Starcraft II or if this would work with tasks with continuous state and action spaces such as mujoco.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 11,
+      "text": "3. The core premise behind training the learner agent with RL is using a curiosity driven approach to train a probing policy to incite new demonstrator behaviors by maximizing the differences between the latent vectors of the behavior trackers at different time steps.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 12,
+      "text": "Because the latent vector is modeled as a non-linear function, distances between latent vector representations do not necessarily correspond to similar distances between behavior policies (for example, KL distances between two policy distributions).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 13,
+      "text": "Since this is for ILCR, I think the authors should have taken a deeper dive into examining those latent representations and potentially visualizing those distances and how they correspond to different policy behaviors.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 14,
+      "text": "4. The biggest flaw that I see in this method is the practicality of it's use.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 15,
+      "text": "This method relies on the ability to obtain or gain access to a demonstration agent to learn from.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 16,
+      "text": "In very simple tasks, such as the one presented here, the authors were able to hard-code their own demonstration agent.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 17,
+      "text": "However, in harder tasks, this will not be feasible.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 18,
+      "text": "If you are able to obtain or code your own agent, then you've already solved the task and there is no need to do any sort of imitation learning in the first place.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 19,
+      "text": "In reality, for sufficiently difficult tasks, a human would be the demonstration agent (as is done in most robotics tasks).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 20,
+      "text": "In practice, imitation learning from a human works well since the learning can be done offline (i.e., post-hoc after a set of demonstrations are collected from the human).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 21,
+      "text": "However, this task requires the learning to be interactive and thus the demonstrator needs to be present during the learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 22,
+      "text": "Interactively learning from a human becomes a problem if the learning takes tens of thousands of episodes of training since a human cannot reasonably be expected to be present for that amount of time.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 23,
+      "text": "Thus, the question is 1) how well will this method work with a human acting as the demonstrator? and 2) how can this method work if you are not able to have access to a demonstrator long periods of time (or even at all)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 24,
+      "text": "5. My previous comment relates mainly to the application of improved imitation learning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 25,
+      "text": "However, I do think this is still very useful in the context of multi-agent reinforcement learning for collaborative and competitive tasks (sections 4.6 and 4.7).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 26,
+      "text": "I think this method demonstrates a method for improved collaborative and/or competitive performances given the fact that you already have a single agent with a learned policy.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 27,
+      "text": "Overall, I think the paper presents a really nice idea of how to improve modeling of agents.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 28,
+      "text": "essentially, a learner agent learns how to probe a demonstrator agent to provide more information about what's being demonstrated and prevent over-fitting to a set of fixed demonstrations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "sentence_index": 29,
+      "text": "This work sounds novel to me from a reinforcement learning perspective, however, I'm not well versed on theory of mind research.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 0,
+      "text": "Thank you for your detailed reviews.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 1,
+      "text": "Here are our responses to your questions and concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 2,
+      "text": "1. The authors should provide more details on how the hand-crafted demonstrator agents were made.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 3,
+      "text": "We have added more details, and plan to release the code.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 4,
+      "text": "We indeed implemented search algorithm with simple heuristics for acceleration for all grid-world tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 5,
+      "text": "In Maze Navigation, the state space is extended to the combination of map status and the agent's inventory.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 6,
+      "text": "By this definition of states, an efficiency search can still be achieved.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 7,
+      "text": "2. Scalability?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 8,
+      "text": "We focus on simpler domains to provide proof-of-concept results as the first step on this direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 9,
+      "text": "We are definitely interested in studying how our approach can be applied to more complex tasks as future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 10,
+      "text": "3. A deeper dive into examining those latent representations and potentially visualizing those distances and how they correspond to different policy behaviors.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 11,
+      "text": "Thanks for the suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 12,
+      "text": "We have included a more detailed analysis with new visualizations in the updated paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 13,
+      "text": "i) We visualize the latent vectors obtained from demonstrations with probing and without probing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 14,
+      "text": "It indeed shows that with probing, we are able to find new behaviors that correspond to the new latent vectors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 15,
+      "text": "ii) We also show the correlation between the distance of two consecutive latent vectors m^{t-1} and m^t and, the KL divergence between the two corresponding policies KL(\\pi(a|s^{t+1},m^t) || \\pi(a|s^{t+1},m^{t-1})), i.e., how different the policy would have been if m^t didn\u2019t change.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 16,
+      "text": "The correlation is significant, and thus validates the idea.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 17,
+      "text": "4. 1) how well will this method work with a human acting as the demonstrator? and 2) how can this method work if you are not able to have access to a demonstrator long periods of time (or even at all)?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 18,
+      "text": "We focus on improving modeling machine agents, and applying the improved agent models for multi-agent tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 19,
+      "text": "The current form of our approach is not designed for learning from human demonstrations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 20,
+      "text": "However, there are ways to modify our approach towards that direction: i) learning probing policy with model-based RL; ii) incorporating inductive bias from humans (e.g., the learner knows a specific set of possible goals of the demonstrator and probes the demonstrator to test which goal it has).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 21,
+      "text": "This seems to be a good direction for future work, but we also think that the current research has provided promising results in simpler domains, and hopefully incites more research where human demonstrators are also involved by introducing this problem to the community.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 22,
+      "text": "5. I think this method demonstrates a method for improved collaborative and/or competitive performances given the fact that you already have a single agent with a learned policy.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 23,
+      "text": "Yes, in our experiment, we do assume that the opponent has a learned policy which is unknown to us.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxuz9BAnQ",
+      "rebuttal_id": "rkgV950DCm",
+      "sentence_index": 24,
+      "text": "We think that this is a quite general setting where multiple machine agents are interacting with each other but do not know each other\u2019s true policies and intentions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

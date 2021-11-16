@@ -1,0 +1,1074 @@
+{
+  "metadata": {
+    "forum_id": "HkgqFiAcFm",
+    "review_id": "Hyl_lXQF3X",
+    "rebuttal_id": "H1eabnIj67",
+    "title": "Marginal Policy Gradients: A Unified Family of Estimators for Bounded Action Spaces with Applications",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkgqFiAcFm&noteId=H1eabnIj67",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 1,
+      "text": "This paper derives a new policy gradient method for when continuous actions are transformed by a",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 2,
+      "text": "normalization step, a process called angular policy gradients (APG).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 3,
+      "text": "A generalization based on",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 4,
+      "text": "a certain class of transformations is presented.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 5,
+      "text": "The method is an instance of a",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 6,
+      "text": "Rao-Blackwellization process and hence reduces variance.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 7,
+      "text": "Detailed comments",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 8,
+      "text": "I enjoyed the concept and, while relatively niche, appreciated the work done here and do believe it has clear applications.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 9,
+      "text": "I am not convinced that the measure theoretic perspective is always",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 10,
+      "text": "necessary to convey the insights, although I appreciate the desire for technical correctness. Still,",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 11,
+      "text": "appealing to measure theory does reduces readership, and I encourage the authors to keep this in",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 12,
+      "text": "mind as they revise the text.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 13,
+      "text": "Generally speaking it seems like a lot of technicalities for a relatively simple result:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 14,
+      "text": "marginalizing a distribution onto a lower-dimensional surface.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 15,
+      "text": "The paper positions itself generally as dealing with arbitrary transformations T, but really is",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 16,
+      "text": "about angular transformations (e.g. Definition 3.1).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 17,
+      "text": "The generalization is relatively",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 18,
+      "text": "straightforward and was not too surprising given the APG theory.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 19,
+      "text": "The paper would gain in clarity",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 20,
+      "text": "if its scope was narrowed.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 21,
+      "text": "It's hard for me to judge of the experimental results of section 5.3, given that there are no other",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 22,
+      "text": "benchmarks or provided reference paper. As a whole, I see APG as providing a minor benefit over PG.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 23,
+      "text": "Def 4.4: \"a notion of Fisher information\" -- maybe \"variant\" is better than \"notion\", which implies there are different kinds of Fisher information",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 24,
+      "text": "Def 3.1 mu is overloaded: parameter or measure?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 25,
+      "text": "4.4, law of total variation -- define",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 26,
+      "text": "Overall",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 27,
+      "text": "This was a fun, albeit incremental paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 28,
+      "text": "The method is unlikely to set new SOTA, but I appreciated",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 29,
+      "text": "the appeal to measure theory to formalize some of the concepts.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 30,
+      "text": "Questions",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 31,
+      "text": "What does E_{pi|s} refer to in Eqn 4.1?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 32,
+      "text": "Can you clarify what it means for the map T to be a sufficient statistic for theta? (Theorem 4.6)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 33,
+      "text": "Experiment 5.1: Why would we expect APG with a 2d Gaussian to perform better than a 1d Gaussian",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 34,
+      "text": "on the angle?",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 35,
+      "text": "Suggestions",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 36,
+      "text": "Paragraph 2 of section 3 seems like the key to the whole paper -- I would make it more prominent.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 37,
+      "text": "I would include a short 'measure theory' appendix or equivalent reference for the lay reader.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 38,
+      "text": "I wonder if the paper's main aim is not actually to bring measure theory to the study of policy",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 39,
+      "text": "gradients, which would be a laudable goal in and of itself.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 40,
+      "text": "ICLR may not in this case be the right",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 41,
+      "text": "venue (nor are the current results substantial enough to justify this) but I do encourage authors",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 42,
+      "text": "to",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 43,
+      "text": "consider this avenue, e.g. in a journal paper.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 44,
+      "text": "= Revised after rebuttal =",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 45,
+      "text": "I thank the authors for their response.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 46,
+      "text": "I think this work deserves to be published, in particular because it presents a reasonably straightforward result that others will benefit from.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 47,
+      "text": "However, I do encourage further work to",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 48,
+      "text": "1) Provide stronger empirical results (these are not too convincing).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "sentence_index": 49,
+      "text": "2) Beware of overstating: the argument that the framework is broadly applicable is not that useful, given that it's a lot of work to derive closed-form marginalized estimators.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 0,
+      "text": "Thank you for the time and effort spent reviewing our paper, and for the detailed suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 1,
+      "text": "Below we repeat the questions/comments from the review and respond to each in turn.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 2,
+      "text": "\u201cThe paper positions itself generally as dealing with arbitrary transformations T, but really is about angular transformations (e.g. Definition 3.1).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 3,
+      "text": "The generalization is relatively straightforward and was not too surprising given the APG theory.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 4,
+      "text": "The paper would gain in clarity if its scope was narrowed.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 5,
+      "text": "Our MPG framework not only supports the angular transformation but also covers the recently proposed clipped transformation in CAPG [Fujita and Maeda, 2018].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 6,
+      "text": "The theoretical result is tighter than the one in [Fujita and Maeda, 2018], and it supports general transformations instead of only clipped actions.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 7,
+      "text": "\"I am not convinced that the measure theoretic perspective is always necessary to convey the insights, although I appreciate the desire for technical correctness.\" / \"Generally speaking it seems like a lot of technicalities for a relatively simple result: marginalizing a distribution onto a lower-dimensional surface.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 8,
+      "text": "We agree that the measure theoretic approach is not always necessary (indeed for angular actions, it is not needed), but it is necessary for a very common scenario -- clipped actions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 9,
+      "text": "Researchers and practitioners both almost always clip actions when using policy gradient algorithms for robotics control environments (read: MuJoCo tasks).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 10,
+      "text": "Recently, a reduced variance method was introduced by Fujita and Maeda (2018) for clipped action spaces.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 11,
+      "text": "Their algorithm is also a member of the marginal policy gradients family and our theoretical results for MPG significantly tighten the existing analysis of that algorithm.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 12,
+      "text": "\"It's hard for me to judge of the experimental results of section 5.3, given that there are no other benchmarks or provided reference paper. As a whole, I see APG as providing a minor benefit over PG.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 13,
+      "text": "For the results in Section 5.3, the issue is that currently, there are no benchmark environments for directional control.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 14,
+      "text": "We anticipate that in the future this may change (e.g. console and PC games often have directional controls).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 15,
+      "text": "\u201cWhat does E_{pi|s} refer to in Eqn 4.1?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 16,
+      "text": "The expectation is taken with respect to the policy \\pi conditioned on the current state s (s here is arbitrary, but fixed).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 17,
+      "text": "Stated differently, we are taking the expectation with respect to the distribution $\\pi(\\cdot | s,\\theta)$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 18,
+      "text": "\u201cCan you clarify what it means for the map T to be a sufficient statistic for theta? (Theorem 4.6)\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 19,
+      "text": "We have now removed this part of the statement because we are no longer absolutely certain of its correctness, and because it is not used anywhere else in the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 20,
+      "text": "\u201cExperiment 5.1: Why would we expect APG with a 2d Gaussian to perform better than a 1d Gaussian on the angle?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 21,
+      "text": "Because using a 1D Gaussian requires either (1) clipping the angle to [0,2\\pi) before execution in the environment and making updates using the clipped output or (2) using the sampled angle for updates and perform the clipping in the environment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 22,
+      "text": "In the first case, this approach is asymmetric in that does not place similar probability on $\\mu_{\\theta}(s) - \\epsilon$ and $\\mu_{\\theta}(s) + \\epsilon$ for $\\mu_{\\theta}(s)$ near to $0$ and $2\\pi$. In the second case, this requires approximating a periodic function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 23,
+      "text": "We include both these reasons at the start of Section 3.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          33,
+          34
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 24,
+      "text": "Lastly, thank you for the concrete suggestions:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 25,
+      "text": "\"Def 4.4: \"a notion of Fisher information\" -- maybe \"variant\" is better than \"notion\", which implies there are different kinds of Fisher information",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 26,
+      "text": "Def 3.1 mu is overloaded: parameter or measure?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 27,
+      "text": "4.4, law of total variation -- define \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 28,
+      "text": "We have addressed these and uploaded a new draft to reflect the changes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 29,
+      "text": "For the last suggestion, we currently define the law of total variance(variation) in the preliminaries so we did not repeat the definition in Section 4.4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl_lXQF3X",
+      "rebuttal_id": "H1eabnIj67",
+      "sentence_index": 30,
+      "text": "We now write \"law of total variance\" instead of \"law of total variation\" to avoid any ambiguity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "forum_id": "rJl2E3AcF7",
+    "review_id": "rJxPUFHc3m",
+    "rebuttal_id": "HJxF95J5aX",
+    "title": "Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJl2E3AcF7&noteId=HJxF95J5aX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 0,
+      "text": "In this paper the authors introduce a new technique for softmax inference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 1,
+      "text": "In a multiclass setting, the idea is to take the output of a NN and turn it into a gating function to choose one expert.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 2,
+      "text": "Then, given the expert, output a particular category.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 3,
+      "text": "The first level of sparsity comes from the first expert.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 4,
+      "text": "The second level of sparsity comes from every expert only outputting a limited set of output categories.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 5,
+      "text": "The paper is easy to understand but several sections (starting from section 2) could use an english language review (e.g. \"search right\" -> \"search for the right\", \"predict next word\" -> \"predict the next word\", ...) In section 3, can you be more specific about the gains in training versus inference time?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 6,
+      "text": "I believe the results all relate to inference but it would be good to get an overview of the impact of training time as well.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 7,
+      "text": "You motivate some of the work by the fact that the experts have overlapping outputs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 8,
+      "text": "Maybe in section 3.7 you can address how often that occurs as well?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 9,
+      "text": "Nits:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 10,
+      "text": "- it wasn't clear how the sparsity percentage on page 3 was defined?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "sentence_index": 11,
+      "text": "- can you motivate why you are not using perplexity in section 3.2?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 0,
+      "text": "Dear Reviewer:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 1,
+      "text": "Thank you for your valuable comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 2,
+      "text": "We have addressed typos in the revision accordingly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 3,
+      "text": "And please find our response as follows.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 4,
+      "text": "-  Can you be more specific about the gains in training versus inference time?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 5,
+      "text": "We would like to emphasize that the our goal is to speed up the inference time for softmax, so we do not include any comparisons in terms of training time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 6,
+      "text": "According to our experiments, most speedup can be achieved in few epochs (given all other layers are pre-trained) so that the training time increase is not significant compared to the original one.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 7,
+      "text": "- You motivate some of the work by the fact that the experts have overlapping outputs. Maybe in section 3.7 you can address how often that occurs as well?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 8,
+      "text": "Thanks for the suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 9,
+      "text": "We demonstrate that ambiguous words are often overlapped between clusters as illustrated in Figure 3(b).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 10,
+      "text": "We added one more Figure in Appendix B, Figure (b), to demonstrate the distribution of overlapping.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 11,
+      "text": "- It wasn't clear how the sparsity percentage on page 3 was defined?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 12,
+      "text": "Sorry for the possible confusion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 13,
+      "text": "The sparsity in page 3 means the percentage of pruned words.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 14,
+      "text": "We have added more clarifications in the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 15,
+      "text": "- Can you motivate why you are not using perplexity in section 3.2?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 16,
+      "text": "We use top-k accuracy, instead of perplexity, because approximating top-k is required for most inference tasks in practice (see [1]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 17,
+      "text": "Perplexity captures the normalized log-likelihood of all possible words, while top-k accuracy is a better measure for inference speedup for top-k retrieval.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 18,
+      "text": "For example, in some extreme cases, if a word only has a very small probability which makes it unpredictable at all (i.e. couldn\u2019t be retrieved by top-k for any reasonably small k)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 19,
+      "text": ", it could still have a huge impact in terms of perplexity, but has a much smaller impact on top-k accuracy, which seems more reasonable given the goal of top-k retrieval.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxPUFHc3m",
+      "rebuttal_id": "HJxF95J5aX",
+      "sentence_index": 20,
+      "text": "[1] Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS), NIPS 2014",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

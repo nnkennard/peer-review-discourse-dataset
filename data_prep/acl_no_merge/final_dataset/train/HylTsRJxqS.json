@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "forum_id": "S1ecYANtPr",
+    "review_id": "HylTsRJxqS",
+    "rebuttal_id": "H1lrdi14jH",
+    "title": "Representation Learning Through Latent Canonicalizations",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1ecYANtPr&noteId=H1lrdi14jH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 0,
+      "text": "This paper proposes a method for unsupervised learning  of data representations that can be manipulated to remove factors of variation via linear transformations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 1,
+      "text": "These transformations are called canonicalizations in the paper.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 2,
+      "text": "The canonicalizations are trained such that images for arbitrary values of the corresponding factor of variation are transformed into images with a fixed, canonical, value for that factor.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 3,
+      "text": "The paper proposes a model architecture based on a denoising autoencoder, where the canonicalizations are applied to the encoded representation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 4,
+      "text": "It also proposes a loss function and sampling scheme for training the model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 5,
+      "text": "The paper demonstrates the method on the dSprites dataset, showing that it can effectively learn linear canonicalizations, and that multiple of these canonicalizations can be applied to the same image representation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 6,
+      "text": "The paper goes on to test the method on a digit classification task, where the model is trained to learn a representation in a simulator for SVHN data where the transformations to be canonicalized can be controlled, and  used to train a classifier on unseen real data from the SVHN test set.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 7,
+      "text": "I think this paper should be accepted as it proposes a novel idea, which does not seem too difficult to reproduce, describes a simulator for synthetic data for digit recognition, and proposes it as a benchmark for learning representations, and provides experimental results that help in better understanding the representation learned by the model.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 8,
+      "text": "A couple things I thought were missing in the paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 9,
+      "text": "Did you try applying the classification loss to both the encoded representation and the canonicalized representation at the same time?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 10,
+      "text": "For Figure 2, Did you try applying canonicalizations in different orders? Do they give the same results?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 11,
+      "text": "Instead of trying to learn idempotency by gradient descent, you could try to parametrize the canonicalizations with a matrix X, such that C =  X (X^T X)^{-1} X^T. C will be idempotent (although restricted to be symmetric).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 12,
+      "text": "There might be other constructions that are more efficient and less restrictive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 13,
+      "text": "I'm not sure I understand the PCA figures. Can you please explain how the first principal component was used to generate them?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 14,
+      "text": "Minor comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 15,
+      "text": "* \"data  tripets\" on page 2",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "sentence_index": 16,
+      "text": "* Figure 5 should appear after Figure 4.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 0,
+      "text": "Q: Did you try applying the classification loss to both the encoded representation and the canonicalized representation at the same time?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 1,
+      "text": "A: Yes we did and interestingly, it didn't show improvement.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 2,
+      "text": "The results are reported in Appendix A, Table A1 in the row titled: \"Ours + classifier after\" and discussed in Section 4.2.4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 3,
+      "text": "Note that because the bypassed latent, z, is included along with the canonicalized latents, z_canon, the classifier is trained on both the original representation and the canonicalized representations together.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 4,
+      "text": "Q: For Figure 2, Did you try applying canonicalizations in different orders? Do they give the same results?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 5,
+      "text": "A: For our experiments, each training example was bypassed and canonicalized by four different transformations: C_1, C_2, C_1C_2, and C_2C_1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 6,
+      "text": "So latents are canonicalized in both possible orderings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 7,
+      "text": "We discuss this point at the bottom of page 4 after equation 6 and will further clarify.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 8,
+      "text": "Q: Instead of trying to learn idempotency by gradient descent, you could try to parametrize the canonicalizations with a matrix X, such that C =  X (X^T X)^{-1} X^T. C will be idempotent (although restricted to be symmetric).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 9,
+      "text": "There might be other constructions that are more efficient and less restrictive.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 10,
+      "text": "A: Structuring the matrix to enforce properties like idempotency is definitely an interesting direction to explore in future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 11,
+      "text": "While not equivalent, as a first step towards this, we did try to examine different levels of idempotency enforcement.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 12,
+      "text": "First, at the reconstruction loss, since pairs of canonicalizers are applied in different order we enforce the the decoded results are similar.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 13,
+      "text": "However, adding a stricter enforcement of similar values before decoding only hurt performance, hinting that the suggested idea of enforcing idempotency at the strictest level may hurt performance further.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 14,
+      "text": "Q: I'm not sure I understand the PCA figures. Can you please explain how the first principal component was used to generate them?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 15,
+      "text": "A: Treating a canonicalizer as a standard linear projection, we explore z - P*z which should contain only the factor of interest (intuitively it is the difference between a representation and a version of it stripped off of the specific factor so that the factor is isolated).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 16,
+      "text": "Creating a set of such latent samples (here we took all examples to be of the same digit for visualization purposes) we ran PCA to get a dimension with the most significant variance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 17,
+      "text": "If the above mentioned assumption indeed holds, the font should be the only change in the set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 18,
+      "text": "We order the samples according to that axis and plot them in a row from left to right.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylTsRJxqS",
+      "rebuttal_id": "H1lrdi14jH",
+      "sentence_index": 19,
+      "text": "We see that indeed the font (bottom row) and angle (top row) present a good correlation with the value along the axis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

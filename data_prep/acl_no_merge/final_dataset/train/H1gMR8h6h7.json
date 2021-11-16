@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "forum_id": "Skgge3R9FQ",
+    "review_id": "H1gMR8h6h7",
+    "rebuttal_id": "SylJ-xIopQ",
+    "title": "Controlling Over-generalization and its Effect on Adversarial Examples Detection and Generation",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Skgge3R9FQ&noteId=SylJ-xIopQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 0,
+      "text": "The paper propose to incorporate an additional class for adversarial and out-distribution samples in CNNs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 1,
+      "text": "The paper propose to incorporate natural out-distribution images and interpolated images to the additional class, but the problem of selecting the out-distribution images is itself an important problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 2,
+      "text": "The paper presents a very simple approaches for selecting the out-distribution images that relies on many hidden assumptions on the images source or the base classier, and the interpolation mechanism is also too simple and there is the implicit assumption of low complexity images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 3,
+      "text": "There exists more principled approaches for selecting out-distribution images that has not considered here like those based on uncertainty estimation or recently proposed direct out-distribution detectors.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 4,
+      "text": "In summary, the quality of the paper is poor and the originality of the work is low.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "sentence_index": 5,
+      "text": "The paper is easily readable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 0,
+      "text": "We are thankful for the reviewer 2 to provide us with his/her feedback,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 1,
+      "text": "The reviewer mentioned: \"the interpolation mechanism is also too simple\":",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 2,
+      "text": "We would like to highlight that despite the simplicity of interpolated samples, there has been demonstrated the effectiveness of using such samples on developing more regularized and generalized neural networks (Zhang et al, 2018) as well as on making them more secure",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 3,
+      "text": "(Zhao et. al. 2018)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 4,
+      "text": ".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 5,
+      "text": "Thus, we believe that simplicity does not necessarily lead to ineffectiveness.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 6,
+      "text": "The reviewer mentioned \u201cmany hidden assumptions on the images source or the base classier\u201d:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 7,
+      "text": "As this statement is not clear for us, we would appreciate if the reviewer could elaborate more on it.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 8,
+      "text": "The only assumption we made is on the fact that the out-distribution samples should be statistically and semantically different than the in-distribution samples.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 9,
+      "text": "Then among such out-distribution sets, we propose a measurement for identifying the most representative one among those available.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 10,
+      "text": "The reviewer stated \"There exists more principled approaches for *selecting* out-distribution images that has not considered here like those based on uncertainty estimation or recently proposed direct out-distribution detectors\":",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 11,
+      "text": "While there are the approaches that aim to detect out-distribution sets, they have not been designed for the selection purposes as we do.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 12,
+      "text": "By mentioning this statement, if the reviewer means the missing of some principled approaches like ODIN in our comparisons, we would like to inform the inclusion of ODIN results in the revised version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 13,
+      "text": "Reference:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 14,
+      "text": "- Zhao, Jake, and Kyunghyun Cho. \"Retrieval-Augmented Convolutional Neural Networks for Improved Robustness against Adversarial Examples.\" arXiv preprint arXiv:1802.09502 (2018).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 15,
+      "text": "- Zhang, H., Cisse, M., Dauphin, Y. N., & Lopez-Paz, D. (2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 16,
+      "text": "mixup: Beyond empirical risk minimization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gMR8h6h7",
+      "rebuttal_id": "SylJ-xIopQ",
+      "sentence_index": 17,
+      "text": "ICLR 2018 (arXiv preprint arXiv:1710.09412).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

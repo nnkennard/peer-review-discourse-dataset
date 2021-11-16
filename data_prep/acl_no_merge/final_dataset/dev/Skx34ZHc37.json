@@ -1,0 +1,732 @@
+{
+  "metadata": {
+    "forum_id": "SyxYEoA5FX",
+    "review_id": "Skx34ZHc37",
+    "rebuttal_id": "rkxr33DOTm",
+    "title": "Invariance and Inverse Stability under ReLU",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyxYEoA5FX&noteId=rkxr33DOTm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 0,
+      "text": "This paper presents an analysis of the inverse invariance of ReLU networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 1,
+      "text": "It makes the observation that one can describe the pre-image of an image point z = F(x) using linear algebra arguments.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 2,
+      "text": "They provide necessary conditions for the pre-image to be a singleton or a finite volume polytope.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 3,
+      "text": "They also provide upper-bounds on the singular values of a train network and measure those in standard CNNs.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 4,
+      "text": "The paper is well-written but the structure is a bit disconnected; most notably, I didn't see clearly how Section 2 and 3 fit together.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 5,
+      "text": "The proofs seem correct and rely mostly on elementary linear algebra argument; this simplicity makes the analysis quite interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 6,
+      "text": "The argument about a different kind of adversarial examples is also very interesting; instead of looking for small perturbation that affect the mapping in drastic ways, find large perturbations that in invariant directions of the network.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 7,
+      "text": "However, the experiments are overall not very useful to the comprehension of the paper and not that illustrative.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 8,
+      "text": "I have several questions for the authors:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 9,
+      "text": "- the conditions presented in Theorem 4, seem hard to check in practice; what is the time complexity of this operation? I believe that checking if A is omnidirectional is equivalent to an LP but how do you solve the combinatorial size of doing that over all set of indices?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 10,
+      "text": "- I understand the upper bounds on the singular values, but I am not sure how they relate to inverse stability.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 11,
+      "text": "Maybe more explanation and quantitative analysis (e.g. relating the volume of the preimage of an epsilon ball around z to the singular values) could be helpful.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 12,
+      "text": "- Is there actionable consequences one could draw from your papers? The way the results are presented seem like they are only useful inspection after training; are your results able to derive methods to enforce conditions on the pre-images for example?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 13,
+      "text": "In conclusion, this paper does an interesting and original analysis which can help us understand better the polytopes composing the input space.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 14,
+      "text": "The experiments are not very convincing or illustrative of the theoretical results in my opinion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "sentence_index": 15,
+      "text": "It is not clear how those observations can affect practical algorithms and this is something I hope the author can address.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 0,
+      "text": "We thank you for acknowledging the novelty our findings and your appreciation for the elementary nature of our theory.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 1,
+      "text": "----------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 2,
+      "text": "- Q: How do Section 2 & 3 fit together?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 3,
+      "text": "Although it is true that our paper can roughly be divided into two section, we want to stress that these sections are inextricably linked due to the nature of their topics, since we see invariance as a limit case of inverse stability.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 4,
+      "text": "We therefore think it is natural to study both of them.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 5,
+      "text": "However, the analysis of the limit case, invariance, admits more powerful tools (see e.g. Theorem 4), since one is only interested in whether a singular value is zero or not.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 6,
+      "text": "Hence, the invariance is qualitative, whereas for stability we need to quantify singular values.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 7,
+      "text": "-----------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 8,
+      "text": "-Q: Combinatorial problem to check Theorem 4:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 9,
+      "text": "While there are indeed a combinatorial number of possible tuples that the Theorem 4 describes, we can use the following trick in the design of the Algorithm 1 (Appendix A3) to circumvent these computations: The set of tuples (A, b) that form omnidirectional tuples is a null-set in all tuples of same form, we therefore ignore this case in our numerical analysis.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 10,
+      "text": "Hence, we only have to check whether we have a compact or unbounded preimage.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 11,
+      "text": "This can be done by simply checking whether A is omnidirectional or not.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 12,
+      "text": "----------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 13,
+      "text": "-Q: Upper bounds and inverse stability:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 14,
+      "text": "The smallest singular values are directly linked to inverse stability for points from the same input polytope (where the linearization is exact).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 15,
+      "text": "The upper bounds (Lemma 9) and the correlation effect are interesting, as they show how a well-conditioned matrix (subset of rows almost orthogonal) may become instable due to the removal of rows via ReLU.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 16,
+      "text": "If the correlation of some rows is arbitrarily small (but non-zero) between remaining and removed rows, the upper bounds can be arbitrarily small.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 17,
+      "text": "Thus, this Lemma provides an intuition how hard it is to globally control inverse stability with a vanilla architecture (linear mapping followed by ReLU).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 18,
+      "text": "However, when considering an epsilon ball around activations, two main questions arise: 1) Are all points in the ball reachable from the considered input polytope?",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 19,
+      "text": "2) Do points from other input polytopes map to the epsilon ball?",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 20,
+      "text": "If the second case holds, one would need to consider different linearizations of the network and thus extend the analysis to movements between the polytopes.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 21,
+      "text": "-> Added a comment in the newly written \u201cScope\u201d section in the revision",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 22,
+      "text": "-------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 23,
+      "text": "-Q: Actionable consequences from paper:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 24,
+      "text": "One consequence of our paper is that it is close to impossible (each layer need at least to double the number of neuron) to enforce invertibility and it is similarly hard to enforce compactness in ReLU layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 25,
+      "text": "This leads to the conclusion that if one wants invertibility or even just compactness reliably over the whole space, vanilla architectures using ReLU are not a good tool for the task.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 26,
+      "text": "Hence, our analysis can be seen as an argument for additional structure like dimension splitting in reversible networks (see e.g. Jacobsen et al. (2018)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 27,
+      "text": "These structures allow for guarantees as they are by design bijective, while vanilla architectures show a breadth of possible effects as shown in our analysis.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 28,
+      "text": "-> Added a comment to \u201cPractical Implications\u201d in the revision",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 29,
+      "text": "- Q: Illustrative experiments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 30,
+      "text": "We currently thinking about an experiment to better illustrate the intuition of our theory and would appreciate any suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 31,
+      "text": "We thank the reviewer for the helpful comments and we would appreciate further suggestions.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 32,
+      "text": "We added an illustrative example in the introduction to give an intuitive understanding of invariance, stability and their relationship.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx34ZHc37",
+      "rebuttal_id": "rkxr33DOTm",
+      "sentence_index": 33,
+      "text": "We would appreciate further suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

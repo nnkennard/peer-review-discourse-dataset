@@ -1,0 +1,757 @@
+{
+  "metadata": {
+    "forum_id": "B1ldb6NKDr",
+    "review_id": "Bkl6DFDQFS",
+    "rebuttal_id": "r1xvQWYqiS",
+    "title": "Multi-Agent Hierarchical Reinforcement Learning for Humanoid Navigation",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1ldb6NKDr&noteId=r1xvQWYqiS",
+    "annotator": "anno7"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 1,
+      "text": "This paper looks at the MARL problem in high-dimensional continuous control settings.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 2,
+      "text": "To improve learning in this multi-agent setting, they propose to pre-train a lower-level policy that takes as input foot-step goals and is executed for a fixed number of timestep, thereby simplifying both the learning and exploration.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 3,
+      "text": "I'm a bit unsure of how to evaluate this paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 4,
+      "text": "On the one hand, I believe it has several contributions:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 5,
+      "text": "- Proposing a new MARL - continuous control environment",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 6,
+      "text": "- Proposing a new lower-level policy for high-demensional continuous control environments, including how to learn it",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 7,
+      "text": "- Using it to perform MARL in this environment",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 8,
+      "text": "On the other hand, it is hard to say what the _main_ contribution is, which in turn makes it difficult to evaluate whether the experimental evaluation is sufficient:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 9,
+      "text": "Clearly, a main part of the paper is the work done to construct the hierarchical setup, including goal space, observation space and reward functions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 10,
+      "text": "However, this work, as far as I can tell, is separate from the MARL problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 11,
+      "text": "Furthermore, there are several similar ideas already published, so comparison against those (for example by J. Peng, N. Heess or J. Mere) either as argument or even better as experiment, would be helpful to evaluate the quality of the proposed hierarchy.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 12,
+      "text": "On the other hand, there is the application of the hierarchical setup to the MARL problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 13,
+      "text": "However, as far as I can tell, there is no difference between applying such a hierarchy to the MARL case and to the single agent problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 14,
+      "text": "Especially if the lower-level component of the hierarchy is pre-trained in a non-MARL setup, it can just be seen as part of the environment from the point of view of the MARL training, offerring limited new insight into MARL.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 15,
+      "text": "I believe in the second paragraph of 4.1 the authors provide some insight into this matter, however, I have to admit I do not understand this paragraph:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 16,
+      "text": "- Why does temporal correlation reduce the non-stationarity of the MARL problem?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 17,
+      "text": "- Why does structured exploration reduce the number of network parameters that need to be learned?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 18,
+      "text": "- Why does partial parameter sharing make it easier for each agent to estimate other agents potential changes in behavior?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 19,
+      "text": "In summary, I think this is interesting work, but a clearer explanation of the relationship between HRL and MARL, as well as a clearer main argument, supported by experimental evidence, would greatly improve this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 20,
+      "text": "Edit:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 21,
+      "text": "Thank you for your response.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 22,
+      "text": "Unfortunately, I don't feel like it sufficiently addresses my questions and concerns.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 23,
+      "text": "I do apologize if my original comment wasn't clear regarding the contribution part of the paper. What I was trying to say is not that I didn't see the individual contributions of the paper, but instead that the paper does multiple things simultaneously, without comparing against the relevant baselines for any of the individual contributions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 24,
+      "text": "Regarding my questions: I understand where the temporal correlation is coming from in an HRL setting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 25,
+      "text": "However, what was not clear to me is how this reduces the non-stationarity of MARL.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 26,
+      "text": "I also understand that HRL can reduce the number of parameters, but I don't see how structured exploration reduces the number of parameters.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 27,
+      "text": "And lastly, I also can see how parameter sharing can simplify the learning, but I still don't see how it would allow agents to estimate the behaviour change of other agents easier.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 28,
+      "text": "I feel like in the paragraph in questions, a lot of causes and effects are mixed up and more careful descriptions of the benefits of the algorithm would help.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "sentence_index": 29,
+      "text": "I want to re-iterate that I think that the submitted work by the authors is impressive and can provide valuable insights, but I believe it requires more work and more relevant baselines.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 0,
+      "text": "We are grateful for your time and comment on the work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 1,
+      "text": "We start by further explaining the contributions in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 2,
+      "text": "Our main contribution is the combination of MARL with HRL to enable the decentralized learning of controllers that can navigate and seek goals in a robotic humanoid simulation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 3,
+      "text": "The unique combination of methods allows us to learn these sophisticated controllers with far less data than methods without hierarchy (cite openAI Emergent Tool Use from Multi-Agent Interaction).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 4,
+      "text": "Second, we also consider the environment in the paper another contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 5,
+      "text": "Few multi-agent environments simulate dynamics, and none have articulated humanoid robots that observer their world using egocentric vision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 6,
+      "text": "We plan to release this environment with the work to allow other researchers to pursue and make progress on important complex tasks.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 7,
+      "text": "Many multi-agent problems have been studies using simple robot models (point-mass, etc), where more complex and realistic models have used the problem because significantly more challenging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 8,
+      "text": "However, often, an assumption can be made that the robots in the environment share similar morphology.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 9,
+      "text": "We propose a method that uses a form of goal-conditioned RL to learn task agnostic low-level policies that can simplify the share control structure across robots.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 10,
+      "text": "In most HRL methods, the lower level can be viewed as part of the environment, yet this restructuring of the environment enables faster and more capable learning.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 11,
+      "text": "Here we clarify some of the proposed advantages of the method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 12,
+      "text": "First, the use of HRL enables temporal correlation in action exploration that helps reduce the non-stationarity challenge.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 13,
+      "text": "The advantage of this temporal correlation is shown empirically in Figures 2 and 3 where the PPO policies do not improve on learning the tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 14,
+      "text": "This property can be understood to reduce the variance in the policy gradient.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 15,
+      "text": "Instead of having the policy sample an action every step instead, the low-level policy is triggered for $k$ timesteps with a goal proposal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 16,
+      "text": "For these $k$ timesteps, no noise is added to the low-level policy outputs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 17,
+      "text": "Similarly, this $k$-step structured exploration enables learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 18,
+      "text": "If we think of the policy as a type of VAE that is learning an encoder (high-level) that is trying to learn a good latent goal (z) that will result in the low-level performing the desired sequence of actions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 19,
+      "text": "The HRL structure is reducing the dimensionality of the control problem given a low-level designed to perform diverse behaviour wrt to the goal (cite Heess and DIAYN).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 20,
+      "text": "Last, the partial parameter sharing appears to make the learning problem easier.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 21,
+      "text": "We know it is challenging to learn Q functions, which implies that the centralized methods that use Q functions will not scale well.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 22,
+      "text": "We compare our method to MADDPG, a popular centralized method that works by treating the problem as a single agent problem with complete information.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 23,
+      "text": "In our case, this method results in a significant increase in network parameters for the Q function, which leads to poor learning performance, as can be seen in Figures 2 and 3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 24,
+      "text": "Our particular configuration allows our method to be decentralized, making the individual network for each agent more straightforward.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 25,
+      "text": "We are also interested in generalization to different numbers of agents after training, which is also problematic for centralized methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bkl6DFDQFS",
+      "rebuttal_id": "r1xvQWYqiS",
+      "sentence_index": 26,
+      "text": "In short, decentralized learning will allow for more general methods, and HRL enables the learning of sophisticated controllers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

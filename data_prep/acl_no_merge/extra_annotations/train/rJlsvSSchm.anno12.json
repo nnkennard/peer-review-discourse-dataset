@@ -1,0 +1,726 @@
+{
+  "metadata": {
+    "forum_id": "ryf6Fs09YX",
+    "review_id": "rJlsvSSchm",
+    "rebuttal_id": "ryerVgbtT7",
+    "title": "GO Gradient for Expectation-Based Objectives",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryf6Fs09YX&noteId=ryerVgbtT7",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 0,
+      "text": "This paper presents a gradient estimator for expectation-based objectives, which is called Go-gradient.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 1,
+      "text": "This estimator is unbiased, has low variance and, in contrast to other previous approaches, applies to either continuous and discrete random variables.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 2,
+      "text": "They also extend this estimator to problems where the gradient should be \"backpropagated\" through a nested combination of random variables and a (non-linear) functions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 3,
+      "text": "Authors present an extensive experimental evaluation of the estimator on different challenging machine learning problems.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 4,
+      "text": "The paper addresses a relevant problem which appears in many machine learning settings, as it is the problem of estimating the gradient of an expectation-based objective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 5,
+      "text": "In general, the paper is well written and easy to follow. And the experimental evaluation is extensive and compares with relevant state-of-the-art methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 6,
+      "text": "The main problem with this paper is that it is difficult to identify its main and novel contributions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 7,
+      "text": "1. In the case of continuous random variables, Go-gradient is equal to Implicit Rep gradients (Figurnov et al. 2018) and pathwise gradients (Jankowiack & Obermeyer,2018).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 8,
+      "text": "Furthermore, for the Gaussian case, Implicit Rep gradients (and Go-gradient too) are equal to the standard reparametrization trick estimator (Kingma & Welling, 2014).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 9,
+      "text": "This should be made crystal-clear in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 10,
+      "text": "What happens is that the authors arrive at this solution using a different approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 11,
+      "text": "In this sense, claims about the low-variance of GO-gradient wrt to other reparametrization baed estimators should be removed, as they are the same.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 12,
+      "text": "Moreover, I don't think some of the presented experiments are necessary.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 13,
+      "text": "Simply because for continuous variables similar experiments have been reported before",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 14,
+      "text": "(Figurnov et al. 2018, Jankowiack & Obermeyer,2018).",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 15,
+      "text": "2. It seems that the main novel contribution of the paper is to extend the ideas of (Figurnov et al. 2018, Jankowiack & Obermeyer,2018) to discrete variables. And this is a relevant contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 16,
+      "text": "And the experimental evaluations of this part are convincing and compare favourably with other state-of-the-art methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 17,
+      "text": "3. Authors should be much more clear about which is their original contribution to the problems stated in Section 4 and Section 5.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 18,
+      "text": "As authors acknowledge in Section 6",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 19,
+      "text": ".",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 20,
+      "text": "<<Stochastic back-propagation (Rezende et al., 2014; Fan et al., 2015), focusing mainly on re-parameterizable Gaussian random variables and deep latent Gaussian models, exploits the product rule for an integral to derive gradient backpropagation through several continuous random variables.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 21,
+      "text": ">>",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 22,
+      "text": "This is exactly what authors do in these sections.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 23,
+      "text": "Again it seems that the real contribution of this paper here is to extend this stochastic back-propagation (Rezende et al., 2014; Fan et al., 2015) ideas to discrete variables.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 24,
+      "text": "Although this extension seems to be easily derived using the contributions made at point 2.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "sentence_index": 25,
+      "text": "Summarizing, the paper addresses a relevant problem but they do not state which their main contributions are, and reintroduce some ideas previously published in the literature.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 0,
+      "text": "Thank you for your time and effort of reviewing our paper. Please see our response below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 1,
+      "text": "Our main contributions include:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 2,
+      "text": "(i) For single-layer random variables (RVs), we propose a unified gradient named GO by exploiting the integration-by-parts idea, which is applicable to continuous/discrete RVs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 3,
+      "text": "In the special case of single-layer continuous RVs where GO recovers Implicit Rep or pathwise gradients, we consider it\u2019s our contribution to provide a principled explanation (via integration-by-parts) why Implicit Rep and pathwise gradients have low Monte Carlo variance; or in other words, we prove that their implicit differentiation originates from integration-by-parts.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 4,
+      "text": "(ii) For multi-layer RVs, our main contribution is the discovery that with GO (or in other words, the introduced variable-nabla), one can back-propagate gradient information through a nested combination of nonlinear functions and general RVs (including non-reparameterizable continuous RVs, back-propagating through which is challenging).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 5,
+      "text": "Another interpretation of this contribution is that GO enables generalizing the deterministic chain rule to a statistical version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 6,
+      "text": "Here, we refer to deterministic chain rule as back-propagating gradient through deterministic functions (like neural networks) or reparameterizable RVs (like Gaussian).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 7,
+      "text": "By contrast, statistical chain rule is referred to as back-propagating gradient through more general RVs (including non-reparameterizable ones).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 8,
+      "text": "Of course, statistical chain rule recovers deterministic chain rule for deterministic functions and reparameterizable RVs, because GO recovers the standard Rep.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 9,
+      "text": "(iii) Another 2 minor contributions include Lemma 1 and Corollary 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 10,
+      "text": "In Lemma 1, we explicitly prove that our deep GO gradient contains the standard Rep as a special case, in general beyond Gaussian.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 11,
+      "text": "Note neither Implicit Rep nor pathwise gradients can recover Rep in general, because a neural-network-parameterized reparameterization usually leads to a nontrivial CDF.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 12,
+      "text": "In Corollary 1, we reveal the fact that the proposed method degrades into the classical back-propagation algorithm under specific settings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 13,
+      "text": "Finally, we believe it is interesting to create a consistent architecture, which unifies (a) a GO gradient which contains many popular gradients as special cases, and (b) a more general statistical chain rule developed based on GO which recovers the well-known deterministic chain rule under specific cases.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 14,
+      "text": "For your comments not addressed above, please see our additional response below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 15,
+      "text": "(1) We have made clearer the relationships among the standard Rep, Implicit Rep/pathwise, and our GO in the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 16,
+      "text": "In the revised paper we have explicitly pointed out that the experiments from (Figurnov et al. 2018, Jankowiack & Obermeyer,2018) additionally support our GO in the special case of single-layer continuous RVs.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 18,
+      "text": "(3) Please refer to our main contributions (ii)-(iii).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 19,
+      "text": "As stated in our paper, many works tried to solve the problem of stochastic/statistical back-propagation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 20,
+      "text": "We consider our contributions in Secs. 4 and 5 as one step toward that final goal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 21,
+      "text": "Please note that what\u2019s done in Secs. 4 and 5 is not straight-forward and has not been reported before.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 22,
+      "text": "Since stochastic back-propagation (Rezende et al., 2014; Fan et al., 2015) focuses mainly on reparameterizable RVs, deterministic chain rule as mentioned in main contribution (ii) can be readily applied.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 23,
+      "text": "By contrast, we target towards more general situations in Secs. 4 and 5 where deterministic chain rule might not be applicable, such as for non-parameterizable (continuous) RVs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 24,
+      "text": "We prove that one can utilize our GO to sequentially back-propagate gradient though non-parameterizable continuous RVs, namely the statistical chain rule mentioned in main contribution (ii).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          20,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 25,
+      "text": "We have revised the last paragraph of the Introduction to make a more explicit summation of our main contributions, as mentioned above.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlsvSSchm",
+      "rebuttal_id": "ryerVgbtT7",
+      "sentence_index": 26,
+      "text": "We hope your concerns have been addressed. If not, further discussion would be welcomed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

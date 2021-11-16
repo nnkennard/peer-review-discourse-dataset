@@ -1,0 +1,405 @@
+{
+  "metadata": {
+    "forum_id": "rylT0AVtwH",
+    "review_id": "r1gk4ck25B",
+    "rebuttal_id": "ryxqjgdujS",
+    "title": "Learning from Partially-Observed Multimodal Data with Variational Autoencoders",
+    "reviewer": "AnonReviewer5",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rylT0AVtwH&noteId=ryxqjgdujS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 0,
+      "text": "This paper proposes variational selective autoencoders (VSAE) to learn the joint distribution model of full data (both observed and unobserved modalities) and the mask information from arbitrary partial-observation data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 1,
+      "text": "To infer latent variables from partial-observation data, they introduce the selective proposal distribution that switches encoders depending on whether each input modality is observed.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 2,
+      "text": "This paper is well written, and the method proposed in this paper is nice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 3,
+      "text": "In particular, the idea of the selective proposal distribution is interesting and provides an effective solution to deal with the problem of missing modality in conventional multimodal learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 4,
+      "text": "The experiment is also well structured and shows higher performance than the existing models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 5,
+      "text": "However, I have some questions and comments, so I\u2019d like you to answer them.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 6,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 7,
+      "text": "- The authors state that x_j is sampled from the \"prior network\" to calculate E_x_j in Equation 10, but I didn\u2019t understand how this network is set up. Could you explain it in detail?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 8,
+      "text": "- The authors claim that adding p(m|z) to the objective function (i.e., generating m from the decoder) allows the latent variable to have mask information.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 9,
+      "text": "However, I don\u2019t know how effective this is in practice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 10,
+      "text": "Specifically, how performance differs compared to when p (m | z) is not used and the decoder p (x | z, m) is conditioned by the mask included in the training set instead of the generated mask?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "sentence_index": 11,
+      "text": "- Why did you not do image inpainting in higher-dimensional experiments like Ivanov et al. (2019), i.e., considering each pixel as a different modality? Of course, I know that Ivanov et al. require the full data as input during training, but I\u2019m interested in whether VSAE can perform inpainting properly even if trained given imperfect images.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 0,
+      "text": "(1) Prior Network:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 1,
+      "text": "During training phase, we sample from prior network to generate \"pseudo\" observations for unobserved modalities.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 2,
+      "text": "The pseudo observations are then used to estimate the conditional likelihood for such modalities (E_x_j in the ELBO).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 3,
+      "text": "Practically, we follow a two-stage method in our implementation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 4,
+      "text": "At each iteration, the first stage imputes unobserved modalities (with latent code sampled from approximate posterior for observed modalities, and prior for unobserved modalities), followed by the second stage to estimate ELBO based on the imputation and backpropagate corresponding gradients.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 5,
+      "text": "(2) Conditioning on Ground-Truth Mask:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 6,
+      "text": "We conduct experiments with decoder p(x|z, m) conditioned on the original mask in training set, and observe comparable performance and convergence time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 7,
+      "text": "The mask distribution might be easier to learn as compared to data distribution (since the mask is fully-observed)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 8,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 9,
+      "text": "However, we argue that jointly learning the mask distribution and data distribution provides us an opportunity to further analyze the missing mechanism and potentially can facilitate other down-stream tasks.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 10,
+      "text": "(3) Image Inpainting:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 11,
+      "text": "We appreciate the reviewer's suggestion on evaluate the effectiveness of our model on image inpainting task.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 12,
+      "text": "However, with our current setup, an encoder is trained for each modality respectively, making it difficult to scale to inpainting task, if we treat each pixel as an individual modality.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 13,
+      "text": "Nevertheless, we believe this is an interesting extension.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 14,
+      "text": "The backbone models and mathematical formulations can be very similar, if not the same.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gk4ck25B",
+      "rebuttal_id": "ryxqjgdujS",
+      "sentence_index": 15,
+      "text": "A potential solution could be to employ patch level encoders to reduce the total number of encoders needed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

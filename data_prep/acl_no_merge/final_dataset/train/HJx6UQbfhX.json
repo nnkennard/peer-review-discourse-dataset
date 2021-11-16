@@ -1,0 +1,517 @@
+{
+  "metadata": {
+    "forum_id": "SyVuRiC5K7",
+    "review_id": "HJx6UQbfhX",
+    "rebuttal_id": "r1xOHPbuAm",
+    "title": "LEARNING TO PROPAGATE LABELS: TRANSDUCTIVE PROPAGATION NETWORK FOR FEW-SHOT LEARNING",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyVuRiC5K7&noteId=r1xOHPbuAm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 0,
+      "text": "The paper studies few-host learning in a transductive setting: using meta learning to learn to propagate labels from training samples to test samples.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 1,
+      "text": "There is nothing strikingly novel in this work, using unlabeled test samples in a transductive way seem to help slightly.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 2,
+      "text": "However, the paper does cover a setup that I am not aware that was studied before.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 3,
+      "text": "The paper is written clearly, and the experiments seem solid.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 4,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 5,
+      "text": "-- What can be said about how computationally demanding the procedure is? running label propagation within meta learning might be too costly.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 6,
+      "text": "-- It is not clear how the  per-example scalar sigma-i is learned. (for Eq 2)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "sentence_index": 7,
+      "text": "-- solving Eq 3 by matrix inversion does not scale. Would be best to also show results using iterative optimization",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 0,
+      "text": "Please refer to our main response in an above comment that addresses the primary and common questions amongst all reviewers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 1,
+      "text": "Here we respond to your specific comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 2,
+      "text": "\"What can be said about how computationally demanding the procedure is? running label propagation within meta learning might be too costly. \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 3,
+      "text": ">>> In few-shot learning, episodic paradigm proposed by Matching Networks [1] is widely adopted by current researchers (we follow the same setting to make a fair comparison).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 4,
+      "text": "In each episode, a small subset of N-way K-shot Q-query examples is sampled from the training set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 5,
+      "text": "Typically, for 1-shot experiments, N=5, K=1, Q=15 and for 5-shot experiments, N=5, K=5, Q=15",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 6,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 7,
+      "text": "Thus, the number of training examples are Nx(K+Q) (80 for 1-shot and 100 for 5-shot)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 8,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 9,
+      "text": "Constructing label propagation matrix W involves both support and query examples (80 or 100).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 10,
+      "text": "So the dimension of W is either 80x80 or 100x100.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 11,
+      "text": "Running label propagation on such small matrix is quite efficient.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 12,
+      "text": "\"It is not clear how the  per-example scalar sigma-i is learned. (for Eq 2)\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 13,
+      "text": ">>> In Figure 4 of appendix A, we describe the detailed structure of the graph construction module.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 14,
+      "text": "After we get the per-example feature representation f_{\\varphi}(x_i) for x_i, we feed it into the graph construction module g_{\\phi}. The output of this module is a one-dimensional scalar.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 15,
+      "text": "f and g are learned in an end-to-end way in our approach.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 16,
+      "text": "\"solving Eq 3 by matrix inversion does not scale. Would be best to also show results using iterative optimization \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 17,
+      "text": ">>> We want to answer this question from two aspects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 18,
+      "text": "On one hand, few-shot learning assumes that training examples in each class are quite small (only 1 or 5).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 19,
+      "text": "In this situation, Eq (3) and the closed-form version can be efficiently solved, since the dimension of S is only 80x80 or 100x100.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 20,
+      "text": "On the other hand, there is plenty of prior work on the scalability and efficiency of label propagation, such as [2], [3], [4], which can extend our work to large-scale data.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 21,
+      "text": "On miniImagenet, we performed iterative optimization and got 53.05/68.75 for 1-shot/5-shot experiments with only 10 steps.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 22,
+      "text": "This is slightly worse than closed-form version (53.75/69.43), because of the inaccurate computation and unstable gradients caused by multiple step iterations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 23,
+      "text": "[1] Vinyals, Oriol, et al. \"Matching networks for one shot learning.\" NIPS. 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 24,
+      "text": "[2] Liang, De-Ming, and Yu-Feng Li. \"Lightweight Label Propagation for Large-Scale Network Data.\" IJCAI. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 25,
+      "text": "[3] Fujiwara, Yasuhiro, and Go Irie. \"Efficient label propagation.\" ICML. 2014.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx6UQbfhX",
+      "rebuttal_id": "r1xOHPbuAm",
+      "sentence_index": 26,
+      "text": "[4] Weston, Jason. \"Large-Scale Semi-Supervised Learning.\"",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "metadata": {
+    "forum_id": "HJeu43ActQ",
+    "review_id": "B1xtSy6t2Q",
+    "rebuttal_id": "rJlnpeEk0m",
+    "title": "NOODL: Provable Online Dictionary Learning and Sparse Coding",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJeu43ActQ&noteId=rJlnpeEk0m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 0,
+      "text": "The paper deals with the problem of recovering an exact solution for both the dictionary and the activation coefficients.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 1,
+      "text": "As other works, the solution is based on a proper initialization of the dictionary.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 2,
+      "text": "The authors suggest using Aurora 2015 as a possible initialization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 3,
+      "text": "The contribution improves Arora 2015 in that it converges linearly and recovers both the dictionary and the coefficients with no bias.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 4,
+      "text": "The main contribution is the use of a IHT-based strategy to update the coefficients, with a gradient-based update for the dictionary (NOODL algorithm).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 5,
+      "text": "The authors show that, combined with a proper initialization, this has exact recovery guaranties.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 6,
+      "text": "Interestingly, their experiments show that NOODL converges linearly in number of iterations, while Arora gets stuck after some iterations.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 7,
+      "text": "I think the paper is relevant and proposes an interesting contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 8,
+      "text": "The paper is well written and the key elements are in the body.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 9,
+      "text": "However, there is a lot of important material in the Appendix, which I think may be relevant to the readers.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 10,
+      "text": "It would be nice to have some more intuitive explanations at least of Theorem 1.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "sentence_index": 11,
+      "text": "Also, it is clear in the experiments the superiority with respect to Arora in terms of iterations (and error), but what about computational time?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 1,
+      "text": "As correctly observed by the reviewer, Arora et. al. 2015 suffers from a bias in estimation both in the analysis and in the empirical evaluations.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 2,
+      "text": "The source of this bias term is an irreducible error in the coefficient estimate (formed using the hard-thresholding step).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 3,
+      "text": "NOODL overcomes this issue by introducing a iterative hard-thresholding (IHT)-based coefficient update step, which removes the dependence of the error in estimated coefficient on this irreducible error, and ultimately the dictionary estimate.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 4,
+      "text": "Intuitively, this approach highlights the symbiotic relationship between the two unknown factors \u2014 the dictionary and the coefficients.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 5,
+      "text": "In other words, to make progress on one, it is imperative to make progress on the other.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 6,
+      "text": "To this end, in Theorem 1 we first show that the coefficient error only depends on the dictionary error (given an appropriate number of IHT iterations R), i.e. we remove the dependence on x_0 which is the source of bias in Arora et. al. 2015.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 7,
+      "text": "We have added the intuition corresponding to this in the revised paper after the statement of Theorem 1 in Section 3.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 8,
+      "text": "Analysis of Computational Time \u2014 We have added the average per iteration time taken by various algorithms considered in our analysis in Table~4 and Appendix E.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 9,
+      "text": "The primary takeaway is that although NOODL takes marginally more time per iteration as compared to other methods when accounting for just one (Lasso-based) sparse recovery for coefficient update, it (a) is in fact faster per iteration since it does not involve any computationally expensive tuning procedure to scan across regularization parameters; owing to its geometric convergence property (b) achieves orders of magnitude superior error at convergence, and as a result, (c) overall takes significantly less time to reach such a solution; see Appendix E for details.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 10,
+      "text": "We would like to add that since NOODL involves simple separable update steps, this computation time can be further lowered by distributing the processing of individual samples across cores of a GPU (e.g. via TensorFlow) by utilizing the architecture shown in Fig. 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 11,
+      "text": "We plan to release all the relevant code as a package in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 12,
+      "text": "In this revision, we have added comparison to Mairal '09, a popular online DL algorithm.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xtSy6t2Q",
+      "rebuttal_id": "rJlnpeEk0m",
+      "sentence_index": 13,
+      "text": "Further, we have also added a proof map, in addition to the Table 3, for easier navigation of the results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

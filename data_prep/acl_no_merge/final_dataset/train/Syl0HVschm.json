@@ -1,0 +1,426 @@
+{
+  "metadata": {
+    "forum_id": "HJlEUoR9Km",
+    "review_id": "Syl0HVschm",
+    "rebuttal_id": "BygvqqHKCQ",
+    "title": "Improved resistance of neural networks to adversarial images through generative pre-training",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJlEUoR9Km&noteId=BygvqqHKCQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 0,
+      "text": "Authors propose a novel combination of RBM feature extractor and CNN classifiers to gain robustness toward adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 1,
+      "text": "They first train a small mean field boltzmann machine on 4x4 patches of MNIST, then combine 4 of these into a larger 8x8 feature extractor.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 2,
+      "text": "Authors use the RBM 8x8 feature representation as a fixed convolutional layer and train a CNN on top of it.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 3,
+      "text": "The intuition behind the idea is that since RBMs are generative, the RBM layer will act as a denoiser.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 4,
+      "text": "One question which is not addressed is the reason for only one RBM layer.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 5,
+      "text": "In \"Stacks of convolutional Restricted Boltzmann Machines for shift-invariant feature learning\" by Norouzi et al, several RBM layers are trained greedily (same as here, only difference is contrastive loss vs mean field) and they achieve 0.67% error on MNIST.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 6,
+      "text": "Attacking CRBMs is highly relevant and should be included as a baseline.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 7,
+      "text": "The only set of experiments are comparisons on first 500 MNIST test images.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 8,
+      "text": "If the test set is not shuffled (by emphasis on first I assume not) these images are from training NIST (cleaner) set and may not include samples of all digits.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 9,
+      "text": "Authors should clarify the justification behind experimenting only on 'first 500 test images'.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 10,
+      "text": "Furthermore, as authors discussed the iterative weight sharing which increases the depth can vanish the gradient toward input.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 11,
+      "text": "Including at least one set of black box attacks is necessary to verify to what degree the vanishing gradient is the case here.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 12,
+      "text": "The iterative architecture is similar to the routing in CapsNet (Hinton 2018) in terms of weight sharing between successive layers.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 13,
+      "text": "Although their network was resilient toward white box attacks they suffered from black box attacks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "sentence_index": 14,
+      "text": "The boundary method on MNIST could be  weaker than a black box attack.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 0,
+      "text": "We thank the referee for their review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 1,
+      "text": "1. We are not training Restricted Boltzmann Machines (RBMs), but Boltzmann machines where the hidden units can be fully connected.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 2,
+      "text": "2. The complete connectivity graph for our Boltzmann machine, as presented in Fig 2, can be interpreted as having two hidden layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 3,
+      "text": "The graph has bipartite connectivity between the visible units and the first 128 hidden units and bipartite connectivity between the first 128 hidden units and the second 128 hidden units.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 4,
+      "text": "We thank the referee for bringing the article [V] to our attention and we now have acknowledged the prior work properly in our introduction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 5,
+      "text": "We agree that it would be very instructive to evaluate the model in [V] for adversarial resistance, but we would argue that this evaluation is beyond the scope of this article.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 6,
+      "text": "3. Due to the complexity of the network compared to e.g. LeNet and the higher adversarial resistance the optimisation procedure to find adversarial images takes a long time, making it hard to evaluate 10000 images for all training stages and different attacks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 7,
+      "text": "We have now evaluated the adversarial resistance throughout the article for 1000 images randomly selected from the 10000 MNIST test images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 8,
+      "text": "This should avoid placing too much emphasis on the cleaner images in the beginning of the MNIST test set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 9,
+      "text": "Fig.\u00a03 and other evaluations have been updated for the new test set.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 10,
+      "text": "4. To our knowledge the boundary method is the strongest black box attack.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 11,
+      "text": "The succesful transfer attack on CapsNet is based on transfer of adversarial images from a different model (LeNet).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 12,
+      "text": "We have implemented this attack and added it to our evaluation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syl0HVschm",
+      "rebuttal_id": "BygvqqHKCQ",
+      "sentence_index": 13,
+      "text": "[V] Norouzi, Mohammad Ranjbar, Mani Mori, Greg: Stacks of convolutional Restricted Boltzmann Machines for shift-invariant feature learning. 2009 IEEE Conference on Computer Vision and Pattern Recognition, 2735-2742 (2009).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

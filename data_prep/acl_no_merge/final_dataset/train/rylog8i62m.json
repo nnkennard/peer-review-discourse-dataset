@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "forum_id": "rkxQ-nA9FX",
+    "review_id": "rylog8i62m",
+    "rebuttal_id": "HkgOWxN0T7",
+    "title": "Theoretical Analysis of Auto Rate-Tuning by Batch Normalization",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxQ-nA9FX&noteId=HkgOWxN0T7",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 0,
+      "text": "The paper is well written and easy to follow. The topic is apt.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 1,
+      "text": "I don\u2019t have any comments except the following ones.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 2,
+      "text": "Lemma 2.4, Point 1: The proof is confusing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 3,
+      "text": "Consider the one variable vector case.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 4,
+      "text": "Assuming that there is only one variable w, then \\nabla L(w) is not perpendicular to w in general.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 5,
+      "text": "The Rayleigh quotient example L(w)  = w\u2019*A*w/ (w\u2019*w) for a symmetric matrix A, then \\nabla L(w) = (2/w\u2019*w)(Aw - L(w)*w), which is not perpendicular to w.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 6,
+      "text": "Even if we constrain ||w ||_2 = 1",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 7,
+      "text": ", then also  \\nabla L(w)  is not perpendicular to w.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 8,
+      "text": "Am I missing something?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 9,
+      "text": "What is G_t in Theorem 2.5. It should be defined in the theorem itself.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylog8i62m",
+      "sentence_index": 10,
+      "text": "There is another symbol G_g which is a constant.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 0,
+      "text": "Thanks for your positive feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 1,
+      "text": "(1).",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 2,
+      "text": "Lemma 2.4, Point 1: The gradient in your example is indeed perpendicular to w which can be seen as follows.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 3,
+      "text": "w\u2019 * \\nabla L(w) = w\u2019 * (2/w\u2019*w)(Aw - L(w)*w) =  (2/w\u2019*w)(w\u2019Aw - L(w)*(w\u2019*w)) =  (2/w\u2019*w)(w\u2019Aw - w\u2019Aw) = 0.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 4,
+      "text": "In case of one variable vector, our proof is to take the derivative of c on both sides of F(w) = F(cw), which is the definition of scale-invariance.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 5,
+      "text": "Then the left-hand side becomes 0 and the right-hand side becomes w\u2019 * \\nabla F(cw)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 6,
+      "text": "by chain rule.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 7,
+      "text": "Taking c = 1, we can conclude",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 8,
+      "text": "that w\u2019 * \\nabla F(w)  = 0.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 9,
+      "text": "(2)",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 10,
+      "text": ".",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 11,
+      "text": "Theorem 2.5: Sorry G_t should be G_t^{(i)}. We will correct this typo in the next revision of this paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 12,
+      "text": "For t = 0, G_t^{(i)} are all initialized to some value.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylog8i62m",
+      "rebuttal_id": "HkgOWxN0T7",
+      "sentence_index": 13,
+      "text": "The recursion formula for G_t^{(i)} is shown in equation (9).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

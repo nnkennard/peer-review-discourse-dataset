@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "forum_id": "HklAhi09Y7",
+    "review_id": "H1euiaMah7",
+    "rebuttal_id": "BJlwPu6hyE",
+    "title": "Question Generation using a Scratchpad Encoder",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HklAhi09Y7&noteId=BJlwPu6hyE",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 0,
+      "text": "Overall:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 1,
+      "text": "This paper introduces the Scratchpad Encoder, a novel addition to the sequence to sequence (seq2seq) framework and explore its effectiveness in generating natural language questions from a given logical form.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 2,
+      "text": "The proposed model enables the decoder at each time step to modify all the encoder outputs, thus using the encoder as a \u201cscratchpad\u201d memory to keep track of what has been generated so far and to guide future generation.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 3,
+      "text": "Quality and Clarity:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 4,
+      "text": "-- The paper is well-written and easy to read.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 5,
+      "text": "-- Consider using a standard fonts for the equations.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 6,
+      "text": "Originality :",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 7,
+      "text": "The idea of question generation: using logical form to generate meaningful questions for argumenting data of QA tasks is really interesting and useful.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 8,
+      "text": "Compared to several baselines with a fixed encoder, the proposed model allows the decoder to attentively write \u201cdecoding information\u201d to the \u201cencoder\u201d output.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 9,
+      "text": "The overall idea and motivation looks very similar to the coverage-enhanced models where the decoder also actively \u201cwrites\u201d a message (\u201ccoverage\u201d) to the encoder's hidden states.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 10,
+      "text": "In the original coverage paper (Tu et.al, 2016), they also proposed a \u201cneural network based coverage model\u201d where they used a general neural network output to encode attention history, although this paper works differently where it directly updates the encoder hidden states with an update vector from the decoder.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 11,
+      "text": "However, the modification is slightly marginal but seems quite effective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 12,
+      "text": "It is better to explain the major difference and the motivation of updating the hidden states.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 13,
+      "text": "-------------------",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 14,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 15,
+      "text": "-- In Equation (13), is there an activation function between W1 and W2?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "sentence_index": 16,
+      "text": "-- Based on Table 1, why did not evaluate the proposed model with beam-search?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1euiaMah7",
+      "rebuttal_id": "BJlwPu6hyE",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comments and for noting correctly that our modification is quite effective, particularly regarding the large improvements on human evaluations.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "rebuttal_id": "BJlwPu6hyE",
+      "sentence_index": 1,
+      "text": "Our method is simpler in both conception and implementation than coverage, while requiring less parameters and being twice as likely to be chosen as better by human judges.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "rebuttal_id": "BJlwPu6hyE",
+      "sentence_index": 2,
+      "text": "We agree with the reviewer on the simplicity of our method, which we believe to be an asset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "rebuttal_id": "BJlwPu6hyE",
+      "sentence_index": 3,
+      "text": "In addition to that, we believe the Scratchpad Encoder is fundamentally interesting as a mirror to the \u2018attentive read\u2019 common in seq2seq models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1euiaMah7",
+      "rebuttal_id": "BJlwPu6hyE",
+      "sentence_index": 4,
+      "text": "We also appreciate the reviewer taking their time to draw our attention to how to better emphasize the novelty and simplicity of our work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

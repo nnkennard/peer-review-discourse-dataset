@@ -1,0 +1,513 @@
+{
+  "metadata": {
+    "forum_id": "ByxHJeBYDB",
+    "review_id": "Hyxs5tB0FS",
+    "rebuttal_id": "HJlRC3djiB",
+    "title": "Forecasting Deep Learning Dynamics with Applications to Hyperparameter Tuning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ByxHJeBYDB&noteId=HJlRC3djiB",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 0,
+      "text": "The paper investigates the possibility of learning a model to predict the training behaviour of deep learning architectures from hyperparameter information and a history of training observations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 1,
+      "text": "The model can then be used by researchers or a reinforcement learning agent to make better hyperparameter choices.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 2,
+      "text": "The paper first adapts the Transformer model to be suitable to this prediction task by introducing a discretization scheme that prevents the transformer decoder's predictions from collapsing to a single curve.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 3,
+      "text": "Next, the problem is formalized as a partially-observable MDP with a discrete action set, and PPO and SimPLe are introduced.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 4,
+      "text": "The proposed model-based method is compared against a human and a model-free baseline training a Wide ResNet on CIFAR-10.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 5,
+      "text": "The model-based method achieves better validation error than the other baselines that use actual data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 6,
+      "text": "Next, the method is compared against a human and a model-free baseline training Transformer models on the Penn Treebank dataset.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 7,
+      "text": "While the human achieves the best performance at the end of the run, the proposed method appears to learn more quickly than the others and finishes with performance comparable to the model-free baseline.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 8,
+      "text": "Currently I lean towards accepting this paper for publication, despite a few issues.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 9,
+      "text": "It asks an interesting question: can we learn a model of the training dynamics to avoid actually having to do the training?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 10,
+      "text": "This could potentially prevent a lot of unnecessary computation and also lead to better-performing models.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 11,
+      "text": "It then shows some experimental evidence suggesting that this is possible.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 12,
+      "text": "Most importantly, I would like to see a measure of variance/uncertainty like confidence intervals included in the results; otherwise it's impossible to assess whether the results are likely to be significant or not. Other questions:",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 13,
+      "text": "1. In the PTB experiment, it looks like the human only adapts the learning rate and leaves the rest of the hyperparameters alone.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 14,
+      "text": "Why was this policy used as the baseline? It seems extremely basic and unlikely to truly lead to optimal performance.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 15,
+      "text": "2. Why were more baselines from the related work not included? I understand the experiments are a proof of concept, but it would be nice to get a feeling for what some of the other methods do.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 16,
+      "text": "3. How do PPO and SimPLe handle partial observability? Is it principled to apply them to partially-observable environments?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 17,
+      "text": "4. Why not use continuous actions with a parameterized policy (e.g. Gaussian)?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "sentence_index": 18,
+      "text": "5. Is it reasonable to assume that the learning dynamics of all deep learning architectures are similar enough that a model trained on one set of deep learning architectures and problems will generalize to new architectures and problems?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comprehensive review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 1,
+      "text": "We updated the paper with better results over more tasks, either matching or outperforming the human baseline in terms of final accuracy, and outperforming the model-free baseline in all cases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 2,
+      "text": "We also included results over multiple runs of all experiments, showing the minimum, maximum and mean accuracy.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 3,
+      "text": "1. While it is true that the manually-tuned baseline we provided is simple, it is a standard practice in the field to adjust the learning rate during training and keep the rest of the hyperparameters constant.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 4,
+      "text": "Adjusting all of them requires significantly more effort and is infeasible in many cases.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 5,
+      "text": "2. Due to time constraints, we have not benchmarked our method against more hyperparameter-tuning baselines yet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 6,
+      "text": "We agree that it would be a very valuable comparison and leave that for future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 7,
+      "text": "Nevertheless, please note that the human baselines we use for Transformer have been tuned by researchers using auto-tuners among other tools.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 8,
+      "text": "3. [1] successfully use PPO with an LSTM policy on a challenging, partially-observable environment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 9,
+      "text": "It is equally principled to use a Transformer policy, since both would operate on the same sequence of observations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 10,
+      "text": "The SimPLe algorithm runs PPO on an MDP approximated by a powerful model that handles stochasticity well, which is also a valid approach.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 11,
+      "text": "4. We updated the paper with a justification of our action discretization scheme.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 12,
+      "text": "Such a discretization has a number of benefits, including multi-modality, which cannot be achieved using a parameterized Gaussian policy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 13,
+      "text": "[2] show that discretization of the action space improves the average performance, stability and robustness to hyperparameters of reinforcement learning agents on a range of continuous control tasks.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 14,
+      "text": "5. While we have not included such transfer experiments in our current work, we do believe that a model trained on enough architectures and tasks will generalize to new ones.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 15,
+      "text": "For instance, in the updated version of the paper, we show that the learned policy employs similar learning rate and weight decay rate adjustment schemes across very different tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 16,
+      "text": "Substantiating this claim in the general case will likely require a large-scale study, which we plan to perform in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 17,
+      "text": "[1] OpenAI et al. \u201cLearning Dexterous In-Hand Manipulation\u201d, arXiv preprint arXiv:1808.00177 (2018)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyxs5tB0FS",
+      "rebuttal_id": "HJlRC3djiB",
+      "sentence_index": 18,
+      "text": "[2] Tang et al. \u201cDiscretizing Continuous Action Space for On-Policy Optimization\u201d, arXiv preprint 1901.10500 (2019)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

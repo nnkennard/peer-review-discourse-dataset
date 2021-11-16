@@ -1,0 +1,1497 @@
+{
+  "metadata": {
+    "forum_id": "HyGhN2A5tm",
+    "review_id": "H1l6suNjhX",
+    "rebuttal_id": "HJgc0z6z07",
+    "title": "Multi-Agent Dual Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyGhN2A5tm&noteId=HJgc0z6z07",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 1,
+      "text": "The paper proposes to modify the \"Dual Learning\" approach to supervised (and unsupervised) translation problems by making use of additional pretrained mappings for both directions (i.e. primal and dual).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 2,
+      "text": "These pre-trained mappings (\"agents\") generate targets from the primal to the dual domain, which need to be mapped back to the original input.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 3,
+      "text": "It is shown that having >=1 additional agents improves training of the BLEU score in standard MT and unsupervised MT tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 4,
+      "text": "The method is also applied to unsupervised image-to-image \"translation\" tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 5,
+      "text": "Positives and Negatives",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 6,
+      "text": "+1 Simple and straightforward method with pretty good results on language translation.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 7,
+      "text": "+2 Does not require additional computation during inference, unlike ensembling.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 8,
+      "text": "-1 The mathematics in section 3.1 is unclear and potentially flawed (more below).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 9,
+      "text": "-2 Diversity of additional \"agents\" not analyzed (more below).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 10,
+      "text": "-3 For image-to-image translation experiments, no quantitative analysis whatsoever is offered so the reader can't really conclude anything about the effect of the proposed method in this domain.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 11,
+      "text": "-4 Talking about \"agents\" and \"Multi-Agent\" is a somewhat confusing given the slightly different use of the same term in the reinforcement literature. Why not just \"mapping\" or \"network\"?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 12,
+      "text": "-1: Potential Issues with the Maths.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 13,
+      "text": "The maths is not clear, in particular the gradient derivation in equation (8).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 14,
+      "text": "Let's just consider the distortion objective on x (of course it also applies to y without loss of generality).",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 15,
+      "text": "At the very least we need another \"partial\" sign in front of the \"\\delta\" function in the numerator.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 16,
+      "text": "But again, it's not super clear how the paper estimates this derivative.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 17,
+      "text": "Intuitively the objective wants f_0 to generate samples which, when mapped back to the X domain, have high log-probability under G, but its samples cannot be differentiated in the case of discrete data.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 18,
+      "text": "So is the REINFORCE estimator used or something? Not that the importance sampling matter is orthogonal.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 19,
+      "text": "In the case of continuous data x, is the reparameterization trick used?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 20,
+      "text": "This should at the very least be explained more clearly.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 21,
+      "text": "Note that the importance sampling does not affect this issue.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 22,
+      "text": "-2: Diversity of Agents.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 23,
+      "text": "As with ensembles, clearly it only helps to have multiple agents (N>2) if the additional agents are distinct from f_1 (again without loss of generality this applies to g as well).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 24,
+      "text": "The paper proposes to use different random seeds and iterate over the dataset in a different order for distinct pretrained f_i.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 25,
+      "text": "The paper should quantify that this leads to diverse \"agents\".",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 26,
+      "text": "I suppose the proof is in the pudding; as we have argued, multiple agents can only improve performance if they are distinct, and Figure 1 shows some improvement as the number of agents are increase (no error bars though).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 27,
+      "text": "The biggest jump seems to come from N=1 -> N=2 (although N=4 -> N=5 does see a jump as well).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 28,
+      "text": "Presumably if you get a more diverse pool of agents, that should improve things.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 29,
+      "text": "Have you considered training different agents on different subsets of the data, or trying different learning algorithms/architectures to learn them?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "sentence_index": 30,
+      "text": "More experiments on the diversity would help make the paper more convincing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 1,
+      "text": "Summary: our response includes (1) Clarification on math equations; (2) Analysis on diversity of additional agents; (3) Quantitative analysis for image translation.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 2,
+      "text": "** Clarification on Mathematics in Section 3.1 **",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 3,
+      "text": "We apologize for the confusions in Section 3.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 4,
+      "text": "We have reorganized this section, as shown in our updated paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 5,
+      "text": "For your questions:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 6,
+      "text": "1. About equation 8, indeed there is a typo and should be a \"partial\" sign in front of the \"\\delta\" function in the numerator.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 7,
+      "text": "Thanks for pointing this out.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 8,
+      "text": "2. The details of derivative estimation can be found in Section 3.1 (especially equation 9 and 10 in our updated version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 9,
+      "text": "** Study on diversity of agents **",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 10,
+      "text": "1. You are right.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 11,
+      "text": "We obtained distinct \"agents\" f_i and g_i through multiple independent runs with different random seeds and different input orders of the training samples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 12,
+      "text": "As far as we know, there's no common quantitative metric to measure the diversity among models in NMT.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 13,
+      "text": "But we agree with you that intuitively, more diversity among agents leads to greater improvements.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 14,
+      "text": "2. Following your suggestions, we add a study on the diversity of agents (presented in Appendix A of the updated paper).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 15,
+      "text": "We design three group of agents with different levels of diversity: (E1) Agents with the same network structure trained by independent runs, i.e., what we use in Section 3.3; (E2) Agents with different architectures and independent runs; (E3) Homogeneous agents of different iteration, i.e., the checkpoints obtained at different (but close) iterations from the same run.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 16,
+      "text": "We evaluate the above three settings on IWSLT2014 De<->En dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 17,
+      "text": "The diversity of the above three settings would intuitively be (E2)>(E1)>(E3)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 18,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 19,
+      "text": "We present full results in Figure 4 (Appendix A), where the BLEU scores with Dual-5 model are:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 20,
+      "text": "--------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 21,
+      "text": "E1",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 22,
+      "text": "E2             E3",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 23,
+      "text": "--------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 24,
+      "text": "En -> De",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 25,
+      "text": "35.44",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 26,
+      "text": "35.56       34.97",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 27,
+      "text": "De -> En",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 28,
+      "text": "29.52",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 29,
+      "text": "29.58       29.28",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 30,
+      "text": "--------------------------------------------------------",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 31,
+      "text": "From the above results, we can see that diversity among agents indeed plays an important role in our method.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 32,
+      "text": "There are, of course, many other ways to introduce more diversity, including using different optimization strategies, or training with different subsets as you suggested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 33,
+      "text": "All of these can potentially bring further improvements to our framework, yet are not the focus of this work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 34,
+      "text": "From the current studies, we show that our algorithm is able to achieve substantial improvement with a reasonable level of diversity.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 35,
+      "text": "We leave more comprehensive studies on diversity to future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 36,
+      "text": "Please kindly refer to Appendix A for more detailed results.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 37,
+      "text": "** Quantitative analysis for image translation **",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 38,
+      "text": "Thanks for your suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 39,
+      "text": "We add two quantitative measures on image translation tasks: (1) We use the Fr\u00e9chet Inception Distance (FID score) [1], which measures the distance between generated images and real images to evaluate the painting to photos translation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 40,
+      "text": "(2) We use \"FCN-score\" evaluation on the cityscape dataset following [2].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 41,
+      "text": "The results are reported in Table 6 and Table 7 respectively.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 42,
+      "text": "Multi-agent dual learning framework can achieve better quantitative results than the baselines.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 43,
+      "text": "*",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 44,
+      "text": "* Term usage of \"multi-agents\" **",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 45,
+      "text": "Although with the same term, the \"multi-agent\" or \"agent\" in this paper has no relationship with multi-agent reinforcement learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 46,
+      "text": "You are right in that the term \"agent\" in our context refers to \"mapping\" or \"network\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 47,
+      "text": "To avoid further confusion in the discussion period, currently we decide not to change the term usage throughout the paper during rebuttal; instead, we will change the term after the acceptance/rejection decision.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 48,
+      "text": "You can check our updated paper with clarification and new experimental results.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 49,
+      "text": "Thanks for your time and valuable feedbacks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 50,
+      "text": "[1] Heusel, Martin, et al. \"Gans trained by a two time-scale update rule converge to a local nash equilibrium.\" Advances in Neural Information Processing Systems.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 51,
+      "text": "2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1l6suNjhX",
+      "rebuttal_id": "HJgc0z6z07",
+      "sentence_index": 52,
+      "text": "[2] Isola, Phillip, et al. \"Image-to-image translation with conditional adversarial networks.\" In CVPR, 2017",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

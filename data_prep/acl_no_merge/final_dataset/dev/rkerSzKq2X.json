@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "forum_id": "SkfMWhAqYQ",
+    "review_id": "rkerSzKq2X",
+    "rebuttal_id": "Skg7JULVRm",
+    "title": "Approximating CNNs with Bag-of-local-Features models works surprisingly well on ImageNet",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkfMWhAqYQ&noteId=Skg7JULVRm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 0,
+      "text": "This paper suggests a novel and compact neural network architecture which uses the information within bag-of-words features.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 1,
+      "text": "The proposed algorithm only uses the patch information independently and performs majority voting using independently classified patches.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 2,
+      "text": "The proposed method provides the state-of-the-art prediction accuracy unexpectedly, and several additional experiments show the state-of-the-art neural networks mainly learn without association between information in different patches.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 3,
+      "text": "The proposed algorithm is simple and does not provide completely new idea, but this paper has a clear contribution connecting the previous main idea of feature extraction, bag-of-words, and the prevailing blackbox algorithm, CNN.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 4,
+      "text": "The results in the paper are worth to be shared in the community and need further investigated.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 5,
+      "text": "The presented experiments look fair and reasonable to show the importance of the independent patch information (without association between them), and the presented experimental results show some state-of-the-art methods also perform with independent patch information.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "sentence_index": 6,
+      "text": "Comparison with attention models is necessary to compare the important patches obtained from conventional networks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkerSzKq2X",
+      "rebuttal_id": "Skg7JULVRm",
+      "sentence_index": 0,
+      "text": "Thanks a lot for appreciating our contribution!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "rebuttal_id": "Skg7JULVRm",
+      "sentence_index": 1,
+      "text": "> Comparison with attention models is necessary to compare the important patches obtained from conventional networks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "rebuttal_id": "Skg7JULVRm",
+      "sentence_index": 2,
+      "text": "In the paper  (section 4.3) we quantitatively show that the patches important to BagNets are also important for standard CNNs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkerSzKq2X",
+      "rebuttal_id": "Skg7JULVRm",
+      "sentence_index": 3,
+      "text": "Is that the direction you were thinking about? If you have a different experiment in mind we would like to kindly ask you for more details.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

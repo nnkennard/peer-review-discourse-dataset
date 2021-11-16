@@ -1,0 +1,365 @@
+{
+  "metadata": {
+    "forum_id": "SylWNC4FPH",
+    "review_id": "H1g05tby5H",
+    "rebuttal_id": "BJeNDds2iH",
+    "title": "Auto Completion of User Interface Layout Design Using Transformer-Based Tree Decoders",
+    "reviewer": "AnonReviewer1",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylWNC4FPH&noteId=BJeNDds2iH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 0,
+      "text": "This paper proposes an autocompletion model for UI layout based on adaptations of Transformers for tree structures and evaluates the models based on a few metrics on a public UI dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 1,
+      "text": "I like the area of research the authors are looking into and I think it's an important application. However, the paper doesn't answer key questions about both the application and the models:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 2,
+      "text": "1) There is no clear rationale on why we need a new model based on Transformers for this task.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 3,
+      "text": "What was wrong with LSTMs/GRUs as they've been used extensively for recursive problems including operations on trees?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 4,
+      "text": "Similarly, I'd have expected baselines that included those models in the evaluation section showing the differences in performance between the newly proposed Transformer model for trees and previously used methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 5,
+      "text": "2) The evaluation metrics used while borrowed from the language or IR fields doesn't seem to translate to UI design.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "sentence_index": 6,
+      "text": "UI layout is about visual and functional representation of an application so if one is seeking to evaluate different models, they need to relate to those.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 1,
+      "text": "- LSTM",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 2,
+      "text": "LSTMs are indeed a strong model for tree prediction on previous tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 3,
+      "text": "To allow the model to access ancestry nodes during decoding, one way is to concatenate the parent node latent representation with the input of each step for decoding children, and then feed the concatenated vector to LSTM (e.g., Dong & Lapata ACL 2016).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 4,
+      "text": "However, since the ancestry has a variable-number of nodes (as decoding proceeds)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 5,
+      "text": ", to directly access these nodes during decoding, attentional mechanisms would be an efficient way, which is one of our motivations to use Transformer models that are attention-based.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 6,
+      "text": "Of course, LSTM equipped with Attention would achieve the same benefit.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 7,
+      "text": "In addition, positional encoding in Transformer also allows us to easily model spatial locations of UI elements.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 8,
+      "text": "Our early experiments with LSTM did not yield good results on this spatial layout problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 9,
+      "text": "That said, we agree it is worth investigating the performance of LSTM on this problem further.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 10,
+      "text": "Since this is the first paper on this topic, we chose to focus on introducing the problem and providing Transformer-based approaches as a baseline for future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 11,
+      "text": "- Eval metrics",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 12,
+      "text": "We agree the IR-based metrics have limitations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 13,
+      "text": "This is why we provided multiple eval metrics including edit distances and next-N accuracy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 14,
+      "text": "The Edit Distance metric was designed by taking into account human factors in interaction tasks based on the key-stroke level GOMS models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g05tby5H",
+      "rebuttal_id": "BJeNDds2iH",
+      "sentence_index": 15,
+      "text": "We can clarify this further in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

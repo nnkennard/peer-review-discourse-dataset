@@ -1,0 +1,671 @@
+{
+  "metadata": {
+    "forum_id": "HklkeR4KPB",
+    "review_id": "rJljF0tRKS",
+    "rebuttal_id": "BklzQ8Pisr",
+    "title": "ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HklkeR4KPB&noteId=BklzQ8Pisr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 1,
+      "text": "The authors make three major contributions that improve MixMatch and achieve state-of-the-art in a semi-supervised image classification task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 2,
+      "text": "The major contributions include: (1) distribution alignment to calibrate the predicted distribution of unlabeled data; (2) augmentation anchoring to allow more aggressive data augmentation; and (3) CTAugment to train the augmentation policy alongside the semi-supervised model.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 3,
+      "text": "The authors conduct experiments on SVHN, CIFAR-10 and STL, and show significant improvements over the MixMatch baseline.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 4,
+      "text": "They also show good results (15.08% error rate) of training with 40 labeled data, in spite of very high variation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 5,
+      "text": "In the ablation study, they show the error rate drops as K (number of augmentation) increases.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 6,
+      "text": "They also conduct ablation studies on the design choices of their method.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 7,
+      "text": "Decision",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 8,
+      "text": "The decision for this paper is borderline, tending towards a weak accept.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 9,
+      "text": "Overall, the paper proposes some simple but interesting ideas, e.g. distribution environments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 10,
+      "text": "However, although the proposed method achieves good performance over various (smaller) benchmarks, the method seems ad-hoc and complicated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 11,
+      "text": "As pointed out in the weakness section, many design choices are not well motivated, and the effects of those designs are not well studied.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 12,
+      "text": "The tendency to accept is due to the overall strong results.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 13,
+      "text": "Strength",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 14,
+      "text": "1. Significant improvement over MixMatch baseline.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 15,
+      "text": "2. The proposed augmentation anchoring and distribution alignment can be easily integrated into existing work.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 16,
+      "text": "3. The proposed CTAugment method lifts the burden of training an RL data augmentation policy.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 17,
+      "text": "Weakness",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 18,
+      "text": "1. The objective of the update equation of CTAugment\u2019s learned weights seems contradicted with the purpose of how data augmentation is used in the consistency-based SSL method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 19,
+      "text": "In other words, the objective of the update equation encourages higher weights for the distortion parameter that leads to lower variation in the predicted distribution.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 20,
+      "text": "However, the idea of aggressive data augmentation is to generate data that has high variation in the model prediction, and then penalize the variation in the form of consistency loss.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 21,
+      "text": "The variation induced by aggressive augmentation is the root of the consistency loss that helps regularize the model.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 22,
+      "text": "2. The authors should provide ablation study and analysis of their CTAugment.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 23,
+      "text": "For example, they should compare with simple random augmentation policy.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 24,
+      "text": "It is also recommended to show the learned weights of the distortion parameter.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 25,
+      "text": "Also does larger K value when applied for vanilla MixMatch approach the results in ReMixMatch?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 26,
+      "text": "3. The authors should provide more detail of the setting in the ablation study.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 27,
+      "text": "For example, the setting of \u201cNo strong aug.\u201d and \u201cNo weak aug.\u201d are not clear.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 28,
+      "text": "4. The authors hypothesize that \u201cstronger augmentation can result in disparate predictions, so their average may not be a meaningful target.\u201d However, they do not show any analysis to support this hypothesis.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 29,
+      "text": "5. It is recommended to evaluate the method on larger datasets such as CIFAR-100.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 30,
+      "text": "It is not clear how well these methods scale, and for example using k=8 adds computation which may hinder training scalability.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 31,
+      "text": "Minor Comments",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 32,
+      "text": "1. For Table 2 and Table 3, it should be \u201cerror rate\u201d rather than \u201caccuracy\u201d.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "sentence_index": 33,
+      "text": "2. How is the loss weight \u03bbr tuned in the 40 labeled setting? How are the hyper-parameters tuned in general?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 0,
+      "text": "1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 1,
+      "text": "However, although the proposed method achieves good performance over various (smaller) benchmarks, the method seems ad-hoc and complicated.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 2,
+      "text": "As pointed out in the weakness section, many design choices are not well motivated, and the effects of those designs are not well studied.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 3,
+      "text": "A: While ReMixMatch comprises many components (some of which are new), we believe our ablation study justifies the reason why each component exists. If there are additional ablation experiments that you think would be helpful for us to run, please let us know.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 4,
+      "text": "2. The objective of the update equation of CTAugment\u2019s learned weights seems contradicted with the purpose of how data augmentation is used",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 5,
+      "text": "A: It is true that CTAugment at any point in time will only perform augmentations that the model correctly predicts.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 6,
+      "text": "However, we select augmentations where the probability the model output will change is less than 1.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 7,
+      "text": "As such, the augmentation boundary will grow progressively as the training process converges.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 8,
+      "text": "(We experimentally observe this fact: for example, rotation is initially only invariant up to +/- 13 degrees but throughout training becomes invariant to +/- 30 degrees.)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 9,
+      "text": "We don\u2019t aim to maximize the output variation at any instant, but instead ensure that by the end of training the model is invariant to large perturbations.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 10,
+      "text": "3. The authors should provide ablation study and analysis of their CTAugment.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 11,
+      "text": "A: As also discussed with reviewer 2, for space reasons we provided only a short description of CTAugment, and how it differs from AutoAugment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 12,
+      "text": "We updated the draft to include a longer treatment in the appendix.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 13,
+      "text": "4. The authors should provide more detail of the setting in the ablation study",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 14,
+      "text": "A: We agree with the reviewer the details are sparse.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 15,
+      "text": "We will include more details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 16,
+      "text": "To answer the reviewer\u2019s specific questions: \u201cNo strong aug.\u201d means that all augmentations were weak (as is done in MixMatch) and \u201cNo weak aug.\u201d means that all augmentations were strong. If there are other questions we will clarify any.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 17,
+      "text": "5. The authors hypothesize that \u201cstronger augmentation can result in disparate predictions, so their average may not be a meaningful target.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJljF0tRKS",
+      "rebuttal_id": "BklzQ8Pisr",
+      "sentence_index": 18,
+      "text": "A: See above, where we found that the experiment diverged in the \u201cNo weak aug.\u201d ablation (using strong augmentations only).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "forum_id": "HJeQbnA5tm",
+    "review_id": "SJllCbbahQ",
+    "rebuttal_id": "SkEt8Cdp7",
+    "title": "Noisy Information Bottlenecks for Generalization",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJeQbnA5tm&noteId=SkEt8Cdp7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 0,
+      "text": "This paper studies \"Noisy Information Bottlenecks\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 1,
+      "text": "The overall idea is that, if the mutual information between learned parameters and the data is limited, then this prevents overfitting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 2,
+      "text": "It proposes to create a \"bottleneck\" to limit the mutual information.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 3,
+      "text": "Specifically, the bottleneck is created by having the data depend on a noisy version of the parameters, rather than the true parameters and invoking the information processing inequality.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 4,
+      "text": "The paper gives an example of Gaussian mean field inference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 5,
+      "text": "Ultimately, the analysis boils down to looking at a signal-to-noise ratio of the algorithm, which looks very much like regularization.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 6,
+      "text": "I think this is a very interesting direction, but the present paper is somewhat unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 7,
+      "text": "In particular, the example in section 3.1 says that a noisy information bottleneck is introduced, but then says that the modified and unmodified models have \"training algorithms that are exactly equivalent.\" I think this example needs to be clarified.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 8,
+      "text": "Many of the parameters here are also unclear and not properly defined/introduced.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 9,
+      "text": "What is the relationship between $\\theta$ and $\\tilde\\theta$ exactly?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 10,
+      "text": "In this simple model, can we not calculate the mutual information directly (i.e., without the bottleneck)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 11,
+      "text": "The connection between mutual information and generalization has been studied in several contexts [see, e.g., the references in this paper and https://arxiv.org/abs/1511.05219 https://arxiv.org/abs/1705.07809 https://arxiv.org/abs/1712.07196 https://arxiv.org/pdf/1605.02277.pdf https://arxiv.org/abs/1710.05233 https://arxiv.org/pdf/1706.00820.pdf ] and further exploration is desirable.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 12,
+      "text": "This paper is giving an information-theoretic perspective on existing variational inference methods.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 13,
+      "text": "Such a perspective is interesting, but needs to be further developed and explained.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 14,
+      "text": "Specifically, how can mutual information in this context be formally linked to generalization/overfitting?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 15,
+      "text": "Also, the definition of mutual information used in this paper uses the inferred distribution q (e.g., in eq. 2), which is somewhat unusual.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 16,
+      "text": "As a result, constraining the model will alter the mutual information and I think the effect of this should be remarked on.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "sentence_index": 17,
+      "text": "Overall, I think this paper has some interesting ideas, but those need to be fleshed out and clearly explained in a future revision.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 0,
+      "text": "Thank you very much for the highly constructive review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 1,
+      "text": "> I think this is a very interesting direction, but the present paper is somewhat unclear. In particular, the example in section 3.1 says that a noisy information bottleneck is introduced, but then says that the modified and unmodified models have \"training algorithms that are exactly equivalent.\" I think this example needs to be clarified.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 2,
+      "text": "We realized that the naming was very confusing and consequently, we renamed \\tilde\\theta to \\tilde\\mu in the noise-injected model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 3,
+      "text": "Now,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 4,
+      "text": "- the original, noise-free model p has the structure \\theta -> D (no bottleneck) while",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 5,
+      "text": "- the adapted, noise-injected model p\u2019 has the structure \\mu -> \\tilde\\mu -> D (containing a bottleneck).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 6,
+      "text": "Hereby, \\tilde\\mu is a noise-corrupted version of the new parameters \\mu, and we obtain a limit on the mutual information between \\mu and D. We simplified Figure 2 and 8 to make this more clear.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 7,
+      "text": "To better characterize Gaussian mean field inference on the original model, we aim to find an inference procedure on p\u2019 so that both algorithms result in exactly the same outcome, e. g. the same calculations are executed when running the corresponding program.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 8,
+      "text": "We show that there is such an inference procedure on the noisy model, and it has the character of MAP.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 9,
+      "text": "Note that only if generative and inference model are adapted simultaneously we end up with equivalence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 10,
+      "text": "Hereby, \\mu (the mean of the Gaussian q) and \\theta (the original parameter in p) correspond to \\mu (the MAP point-mass of q\u2019) and \\tilde\\mu (the noise-injected version of \\mu in p\u2019).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 11,
+      "text": "> Many of the parameters here are also unclear and not properly defined/introduced.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 12,
+      "text": "What is the relationship between \\theta and \\tilde\\theta exactly?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 13,
+      "text": "In this example, \\theta and \\tilde\\theta never appear in the same model (they are part of p and p\u2019, respectively).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 14,
+      "text": "We realized that this is confusing and have therefore renamed \\tilde\\theta to \\tilde\\mu.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 15,
+      "text": "> In this simple model, can we not calculate the mutual information directly (i.e., without the bottleneck)?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 16,
+      "text": "This is an excellent question.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 17,
+      "text": "In fact, we believe that trying to construct noise-free deep models with a specific mutual information of data and parameters for the purpose of generalization would be an interesting research direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 18,
+      "text": "Due to nonlinearities in typical deep models, it is at least not obvious how to calculate the mutual information between data and parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 19,
+      "text": "The main challenge here would certainly be to come up with an effective estimator.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 20,
+      "text": "Relatedly, one would have to design priors and architecture to achieve a specific mutual information.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 21,
+      "text": "> The connection between mutual information and generalization has been studied in several contexts [see, e.g., the references in this paper [...]] and further exploration is desirable.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 22,
+      "text": "This paper is giving an information-theoretic perspective on existing variational inference methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 23,
+      "text": "Such a perspective is interesting, but needs to be further developed and explained.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 24,
+      "text": "Specifically, how can mutual information in this context be formally linked to generalization/overfitting?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 25,
+      "text": "We updated section 2.2 to relate to the references you mentioned.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 26,
+      "text": "They explore the link of limiting mutual information and generalization error mostly in theory (and in particular for adaptive analysis).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 27,
+      "text": "In contrast, we deploy this principle in a practical model structure that is easily applicable to many existing deep and variational learning approaches and provide empirical evidence of the validity of our framework.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 28,
+      "text": ">",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 29,
+      "text": "Also, the definition of mutual information used in this paper uses the inferred distribution q (e.g., in eq. 2), which is somewhat unusual.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 30,
+      "text": "As a result, constraining the model will alter the mutual information and I think the effect of this should be remarked on.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 31,
+      "text": "We want to emphasize that we do use the standard definition of mutual information.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 32,
+      "text": "Therefore, the bottleneck implied by Eq. 5 is purely a property of the generative model and not influenced by the approximate inference distribution q.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 33,
+      "text": "Eq. 2 is only introduced to provide additional motivation for our approach as it allows to characterize overfitting in variational inference.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJllCbbahQ",
+      "rebuttal_id": "SkEt8Cdp7",
+      "sentence_index": 34,
+      "text": "The guarantee derived in section 2.2 ties this quantity back to the mutual information from Eq. 5.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

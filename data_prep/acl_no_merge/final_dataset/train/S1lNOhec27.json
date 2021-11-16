@@ -1,0 +1,497 @@
+{
+  "metadata": {
+    "forum_id": "HJlEUoR9Km",
+    "review_id": "S1lNOhec27",
+    "rebuttal_id": "B1lA6qBKC7",
+    "title": "Improved resistance of neural networks to adversarial images through generative pre-training",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJlEUoR9Km&noteId=B1lA6qBKC7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 0,
+      "text": "The recent work of Schott et al (which the authors compare results to) proposed the use of Bayes rule inversion as a more robust mechanism for classification under different types of adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 1,
+      "text": "The probabilities are approximated with variational autoencoders.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 2,
+      "text": "During training the inference network is used, but during testing optimization based inference is carried out to compute loglikelihoods.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 3,
+      "text": "This paper focuses on the second part, with a different model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 4,
+      "text": "Specifically, it proposes a specific Boltzmann machine to be used as a first layer of neural networks for MNIST classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 5,
+      "text": "This Boltzmann machine is pre-trained in two-stages using mean field inference of the binary latent variables and gradient estimation of the parameters.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 6,
+      "text": "This pre-trained model is then incorporated into the neural net for MNIST classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 7,
+      "text": "The existence of couplings J_h among the hidden units means that we have to carry out mean field inference over several iterations to compute the output activations of the model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 8,
+      "text": "This is basically analogous to the optimization-based inference proposed by Schott et al. (As a detail, this optimization can be expressed as computation over several layers of a neural net.)",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 9,
+      "text": "The authors compare to the work of Schott for one type of attack.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 10,
+      "text": "It would be nice to see more detailed experiments as done in Schott.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 11,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 12,
+      "text": "1- Why not use a single Boltzmann machine with 128 fully connected latent variables? Could you add this experiment please.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 13,
+      "text": "2- Why is a two-stage pre-training (Figure 2) process needed? Why not just a single stage?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 14,
+      "text": "3- Is the key that you used only 679 patches containing 98% of occurrences in the dataset as the first stage? What if we vary this percentage? How sensitive are the results? Such experiments could be useful to understand better why your method appears to work well.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 15,
+      "text": "4- Could you please add the found J_h's to the appendix.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 16,
+      "text": "This architecture reminds me of the good old MRFs for image denoising.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 17,
+      "text": "Could it be that what we are seeing is the attack being denoised?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 18,
+      "text": "I am puzzled and looking forward to answers to the above questions. I don't yet understand what is the thing that makes this approach appear to work, or why you were able to drop the Bayes inference inversion altogether as done by Schott.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "sentence_index": 19,
+      "text": "Thanks in advance. I will re-adjust the review rating following your reply.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 0,
+      "text": "We thank the referee for their review and the summary of our results",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 1,
+      "text": "1. We have included some more attacks on the most robust model (a transfer attack and a Gaussian random noise attack).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 2,
+      "text": "2.",
+      "suffix": "\n\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 3,
+      "text": "(a) We have evaluated the adversarial resistance when training a Boltzmann machine with 256 fully connected latent variables directly on the 8x8 patches.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 4,
+      "text": "The version with only 128 hidden units was not able to reduce the relative entropy to the values of the larger, stacked machine.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 5,
+      "text": "We find that the model without stacking is not able to increase the adversarial resistance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 6,
+      "text": "It is possible that we are unable to complete the training due to the approximations involved.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 7,
+      "text": "For a small machine (16 units) of full hidden connectivity we can observe the noise rejection behaviour, as shown in appendix D.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 8,
+      "text": "(b) We have trained a machine with the same connectivity as the stacked machine directly on the 8x8 patches.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 9,
+      "text": "This training gives similar results to the training in stages.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 10,
+      "text": "(c) From the result in (b) we conclude that the particular manner of the pre-training does not matter.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 11,
+      "text": "Therefore also the choice of first training set (98% coverage or full coverage) does not influence adversarial resistance.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 12,
+      "text": "(d) There are a total of 28800 parameters in the Boltzmann machine.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 13,
+      "text": "We will gladly provide files with the trained weights and also fully trained neural networks on request.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 14,
+      "text": "3. We currently do not have a full explanation for the large adversarial resistance, but noise resistance must play a part in it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lNOhec27",
+      "rebuttal_id": "B1lA6qBKC7",
+      "sentence_index": 15,
+      "text": "The very strong rejection of Gaussian noise and the observations in Fig.\u00a04 point in this direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

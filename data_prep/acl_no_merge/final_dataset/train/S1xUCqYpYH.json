@@ -1,0 +1,585 @@
+{
+  "metadata": {
+    "forum_id": "SJeLopEYDH",
+    "review_id": "S1xUCqYpYH",
+    "rebuttal_id": "B1g4kymYjS",
+    "title": "V4D: 4D Convolutional Neural Networks for Video-level Representation Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJeLopEYDH&noteId=B1g4kymYjS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 0,
+      "text": "The paper proposes 4d convolution and an enhanced inference strategy to improve the feature interaction for video classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 1,
+      "text": "State-of-the-art performance is achieved on several datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 2,
+      "text": "However, there are still details and concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 3,
+      "text": "1. The paper should also talk about the details of ARNet and discuss the difference, as I assume they are the most related work",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 4,
+      "text": "2. during sampling, either training or testing, how do authors handle temporal overlap or make it overlap?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 5,
+      "text": "3. can you provide the training memory, inference speed, and total training time?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 6,
+      "text": "4. Most importantly, for table4, authors are comparing to the ResNet18 ARNet instead of ResNet50? which is better than the proposed method.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "sentence_index": 7,
+      "text": "5. lack of related work:  4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks, CVPR 2019.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 1,
+      "text": "We will address the issues you mentioned.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 2,
+      "text": "1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 3,
+      "text": "ARTNet is not very much related to our V4D.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 4,
+      "text": "Basically, ARTNet is an alternative for 3D CNNs by replacing 3D convolution layers with SMART blocks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 5,
+      "text": "The SMART blocks are two branch units, with one branch for learning static appearance features and one branch for learning motion features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 6,
+      "text": "ARTNet is a clip-based method for learning short-term representations while our V4D is a video-level method for learning both short-term and long-term representations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 7,
+      "text": "2.\tDuring training, we uniformly divide the whole video into U sections and randomly select one action unit from each section.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 8,
+      "text": "So there are no overlaps for training.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 9,
+      "text": "For testing, there might be overlapping during sampling due to the limit length of video.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 10,
+      "text": "However, our V4D inference algorithm in section 3.4 guarantees that only the non-overlapping action units will interact with each other during testing.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 11,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 12,
+      "text": "Sure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 13,
+      "text": "We train all the models with 8 GPUs of GTX 1080 with memory capacity of 11178MB.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 14,
+      "text": "For the inference speed, our V4D ResNet18 takes 0.67s per video and V4D ResNet50 takes 1.22s per video.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 15,
+      "text": "In addition, we also reported the GFLOPs of V4D and compared it with other typical methods in Table 2(b).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 16,
+      "text": "For training on Mini-Kinetics, V4D ResNet18 takes a bit more than 1 day while V4D ResNet50 takes a bit more than 3 days.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 17,
+      "text": "4.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 18,
+      "text": "We can only find the results of ARTNet ResNet18 in the published paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 19,
+      "text": "After communication with the authors of ARTNet, we confirm that there are no results published for ARTNet ResNet50.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 20,
+      "text": "So instead we implement ARTNet ResNet50 by ourselves and the top1 accuracy on Kinetics-400 is 74.3%.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 21,
+      "text": "This is still lower than our V4D ResNet50 whose top1 on Kinetics-400 is 77.4%.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 22,
+      "text": "Also, ARTNet ResNet18 reports an average metric of 81.4%, which is the average of top1 and top5 accuracy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 23,
+      "text": "While our V4D yields an average score of 85.3%.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 24,
+      "text": "5.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 25,
+      "text": "Thank you for providing this related work and we now cite this paper in the second version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 26,
+      "text": "This paper utilizes 4D CNN to process videos of point cloud so that their input is 4D data.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 27,
+      "text": "Instead, our V4D processes videos of RGB frames so that our input is 3D data.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 28,
+      "text": "This basically makes the methods and tasks quite different.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 29,
+      "text": "Actually we was going to cite this paper yet considering the significant difference we finally did not cite it in the original version.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xUCqYpYH",
+      "rebuttal_id": "B1g4kymYjS",
+      "sentence_index": 30,
+      "text": "Hopefully our rebuttal could stress your concerns. If there are still any possible issues, please don\u2019t hesitate to tell us and we will response as soon as possible.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

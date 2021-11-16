@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "forum_id": "BJGVX3CqYm",
+    "review_id": "Byxe-jVOhQ",
+    "rebuttal_id": "rkeBRN_AhX",
+    "title": "Mixed Precision Quantization of ConvNets via Differentiable Neural Architecture Search",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJGVX3CqYm&noteId=rkeBRN_AhX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 0,
+      "text": "This paper presents a new approach in network quantization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 1,
+      "text": "The key insights of this paper is quantizing different layers with different bit-widths, instead of using fixed 32-bit width for all layer weights and activation in previous works.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 2,
+      "text": "At the same time, this paper adopted the idea form both DARTS and ENAS with parameter sharing, and introduces a new differentiable neural architecture search framework.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 3,
+      "text": "As the authors proposed, this DNAS framework is able to search efficiently and effective through a large search space.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 4,
+      "text": "As demonstrated in the Experiment section of the paper, it achieves better validation accuracy than ResNet with much smaller model size and lower computational cost.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 5,
+      "text": "1. An improved gradient method in updating the network architecture and parameters",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 6,
+      "text": "compared to DARTS and ENAS.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 7,
+      "text": "It applies the Gumbel softmax to refine the sub-graph structure without training the entire super-net through the whole process.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 8,
+      "text": "The work is able to obtain the same level of validation accuracy on Cifar-10 as ResNet while reduce the model parameters by a large margin.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 9,
+      "text": "2. The work is in the middle ground of two previous works: ENAS by Pham et al. (2018) and DARTS by Liu et al. (2018).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 10,
+      "text": "However, there is no comparison with ENAS and DARTS in experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 11,
+      "text": "ENAS samples child networks from the super net to be trained independently while DARTS trains the entire super net together without decoupling child networks from the super net.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "sentence_index": 12,
+      "text": "By using Gumbel Softmax with an annealing temperature, The proposed DNAS pipeline behaves more like DARTS at the beginning of the search and behaves more like ENAS at the end.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Byxe-jVOhQ",
+      "rebuttal_id": "rkeBRN_AhX",
+      "sentence_index": 0,
+      "text": "Thank you for your review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "rebuttal_id": "rkeBRN_AhX",
+      "sentence_index": 1,
+      "text": "Your summary correctly and comprehensively reflects the gist of our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "rebuttal_id": "rkeBRN_AhX",
+      "sentence_index": 2,
+      "text": "One minor correction we would like to make is that our experiments are not only conducted on the Cifar-10 dataset.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "rebuttal_id": "rkeBRN_AhX",
+      "sentence_index": 3,
+      "text": "On ImageNet dataset, we were able to compress ResNet models with no or little accuracy loss, but reduce the model size by up to 21.1x and computational cost by up to 103.5x, better than previous baselines.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe-jVOhQ",
+      "rebuttal_id": "rkeBRN_AhX",
+      "sentence_index": 4,
+      "text": "Please let us know if you have further questions or concerns that we can help clarify.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

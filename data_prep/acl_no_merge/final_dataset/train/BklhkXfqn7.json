@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "forum_id": "Syf9Q209YQ",
+    "review_id": "BklhkXfqn7",
+    "rebuttal_id": "H1elMgJc0m",
+    "title": "Manifold regularization with GANs for semi-supervised learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Syf9Q209YQ&noteId=H1elMgJc0m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 0,
+      "text": "The paper tackles the problem of semi-supervised classification using GAN-based models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 1,
+      "text": "They proposed a manifold regularization by approximating the Laplacian norm using the stochastic finite difference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 2,
+      "text": "The motivation is that making the classifier invariant to perturbations along the manifold is more reasonable than random perturbations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 3,
+      "text": "The idea is to use GAN to learn the manifold.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 4,
+      "text": "The difficulty is that (the gradient of) Laplacian norm is impractical to compute for DNNs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 5,
+      "text": "They stated that another approximation of the manifold gradient, i.e. adding Gaussian noise \\delta to z directly (||f(z) - f(g(z+\\delta))||_F) has some drawbacks when the magnitude of noise is too large or too small.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 6,
+      "text": "The authors proposed another improved gradient approximation by first computing the normalized manifold gradient \\bar r(z) and then adding a tunable magnitude of \\bar r(z) to g(z), i.e., ||f(z) - f(g(z) +\\epsilon \\bar r(z) )||_F. Since several previous works Kumar et al. (2017) and Qi et al. (2018) also applied the idea of manifold regularization into GAN, the authors pointed out several advantages of their new regularization.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 7,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 8,
+      "text": "- The paper is clearly written and easy to follow. It gives some intuitive explanations of why their method works.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 9,
+      "text": "- The idea is simple and easy to implement based on a standard GAN.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 10,
+      "text": "- The authors conduct various experiments to show the interaction of the regularization and the generator.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 11,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 12,
+      "text": "- For semi-supervised classification, the paper did not report the best results in other baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 13,
+      "text": "E.g., in Table 1 and 2,  the best result of VAT (Miyato et al., 2017) is VAT+Ent, 13.15 for CIFAR-10 (4000 labels) and 4.28 for SVHN (1000 labels).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 14,
+      "text": "The performance of the proposed method is worse than the previous work but they claimed \"state-of-the-art\" results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 15,
+      "text": "The paper also misses several powerful baselines of semi-supervised learning, e.g. [1,2].",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 16,
+      "text": "The experimental results are not very convincing because many importance baselines are neglected.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 17,
+      "text": "- The paper does not have a significant novel contribution, but rather extends GANs (improved-GAN mostly) with a manifold regularization, which has been explored in many other works Kumar et al. (2017) and Qi et al. (2018).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 18,
+      "text": "I'm wondering whether other smoothness regularizations can achieve the same effect when applied to semi-supervised learning, e.g. spectral normalization[3].",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 19,
+      "text": "It would be better to compare with them.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 20,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 21,
+      "text": "[1] Adversarial Dropout for Supervised and Semi-Supervised Learning, AAAI 2018",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 22,
+      "text": "[2] Smooth Neighbors on Teacher Graphs for Semi-supervised Learning, CVPR 2018",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "sentence_index": 23,
+      "text": "[3] Spectral Normalization for Generative Adversarial Networks, ICLR 2018",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 0,
+      "text": "Thank you very much for your constructive comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 1,
+      "text": "First, with respect to baselines, we have updated the results tables to include the additional baselines mentioned, as well as runs for VAT(+EntMin) with lower numbers of labels on CIFAR-10.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 2,
+      "text": "After updating these baselines, we note that our method still achieves state-of-the-art performance in the regime where 1000 and 2000 labels are used for training on CIFAR-10, with and without data augmentation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 3,
+      "text": "We have also updated the text to tone down the claims.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 4,
+      "text": "In addition, we note that the highest performance in many of the mentioned baselines (and with VAT) are obtained with a combination of multiple approaches.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 5,
+      "text": "When our method is compared head-to-head against the proposed method in the mentioned papers, it is competitive and sometimes outperforms them, for instance, in experiments on CIFAR-10 with 4000 labels",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 6,
+      "text": "With augmentation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 7,
+      "text": "Adversarial Dropout [1] (11.32) vs ours (11.79 +/- 0.25)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 8,
+      "text": "Without augmentation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 9,
+      "text": "Improved GAN + SNTG [2] (14.93) vs ours (14.34 +/- 0.17)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 10,
+      "text": "Defining the best combination of techniques to achieve the highest performance is an interesting direction of future work; our preliminary experiments combining Mean Teacher with manifold regularization have shown some improvements and we will include the results in the final version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 11,
+      "text": "Second, with respect to novelty, we would like to re-iterate our contributions since they may not have been clear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 12,
+      "text": "First, while manifold regularization has been explored in (Kumar et al 2017) and (Qi et al 2018), we proposed an efficient and effective approximation of manifold regularization that is far easier to compute than the involved method in (Kumar et al 2017).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 13,
+      "text": "Moreover, we point out issues with the standard finite difference approximation to the Jacobian regularization and propose a solution to this problem by ignoring the magnitude of the gradient and using only the direction information.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 14,
+      "text": "Moreover, we showed manifold regularization provides significant improvements to image quality and linked it to gradient penalties used for stabilizing GAN training, which were not shown by (Qi et al 2018).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 15,
+      "text": "We did try to use spectral normalization but did not observe any gains for semi-supervised learning.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 16,
+      "text": "Finally we would like to emphasize the conceptual differences between our method and other smoothing methods like spectral normalization - such methods perform isotropic regularization, whilst ours performs anisotropic smoothing along the manifold directions of generated data-points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklhkXfqn7",
+      "rebuttal_id": "H1elMgJc0m",
+      "sentence_index": 17,
+      "text": "We showed through experiments using (isotropic) ambient regularization that anisotropic regularization is more beneficial in the case of semi-supervised learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

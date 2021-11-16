@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "forum_id": "Sklgs0NFvr",
+    "review_id": "rylDGP7Zjr",
+    "rebuttal_id": "rkg6_3D5jr",
+    "title": "Learning The Difference That Makes A Difference With Counterfactually-Augmented Data",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Sklgs0NFvr&noteId=rkg6_3D5jr",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 1,
+      "text": "The authors take two tasks,sentiment analysis and natural language inference, and identify datasets for them which they counterfactually augment it by asking people over the Amazon Mechanical Turk Platform to change either the sentiment (in the case of sentiment analysis) or the nature of relationship in the NLI task by making minimal changes to the text that produce the targeted changes.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 2,
+      "text": "Authors find that popular models trained on either fail on the other dataset while the models trained on both actually generalize much better.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 3,
+      "text": "This is because the original sample and its counterfactual pair the label changed , has the difference in the text that matters to the change and this pair could reduce spurious correlations that models might find in the data distribution.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 4,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 5,
+      "text": "This is a very interesting experiment and certainly the dataset that will be released would be extremely valuable to the community.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 6,
+      "text": "The one part (I dont have much NLP background but I do have a causality background) that I like most is that the new text generated are counterfactual in some real sense with respect to a real world generating process - that is people modifying text with changed targets.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 7,
+      "text": "A lot of existing work that claim to do counterfactual changes do not specify assumptions about the generating mechanism.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 8,
+      "text": "For counterfactuals to be valid they have to be intervention on the actual generating mechanism (or an assumed one) acting on a given unit (latent) that produced the current sample.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 9,
+      "text": "The paper in that respect (even if it does not explicitly specify relationship between counterfactuals and generating mechanisms) tries to be faithful to a \"strict causal notion\" by actually asking people to modify the text.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 10,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 11,
+      "text": "- I think the authors want to make an explicit connection to counterfactuals as understood in the causality community. Then they shy away from it saying they are inspired by it. May be a formal exposition in the supplement about counterfactuals and generating mechanisms could help readers from other communities (NLP) even it means repeating standard/synthetic examples. Its good to say what exactly in a counterfactual generation process, the \"people\" in amazon turk were substituting.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 12,
+      "text": "-  Is the romantic/ horror flips and their absence the only spurious thing in Figure 4 ?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 13,
+      "text": "-  In figure 6, it appears that BERT is sensitive to the domain - does it mean that it is bad ? - Authors indicate that ideally it must not be so. Because Table 3 results seem to indicate that BERT performs the best in almost all the cases .",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 14,
+      "text": "-  Can the authors highlight the best performances in each case in the Tables by a bold face.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "sentence_index": 15,
+      "text": "It helps easily eye ball the best performing model.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 0,
+      "text": "Thank you for the thoughtful review and positive assessment. We are glad to see that you appreciate the genuine flavor of causality in our paper and support our paper\u2019s acceptance.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 1,
+      "text": "We agree that a formal exposition introducing an NLP/deep learning audience to the basics of interventions and counterfactuals and expressing a toy DAG to explain the spurious associations between the review sentiment and the manifestation in text of other attributes of the review, including but not limited to the genre, actors, budget, etc. We are actively working on preparing this exposition and while it is not yet in the draft we plan to have it prepared in advance of the camera-ready version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 2,
+      "text": "We thank the reviewer for pointing out that we should have been more thorough in explaining that while genre is a clear example of such a spurious association, it is far from the only one captured in Figure 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 3,
+      "text": "Indeed, many other words, including \u201cwill\u201d, \u201cmy\u201d, \u201chas\u201d, \u201cespecially\u201d, \u201clife\u201d, \u201cworks\u201d, \u201cboth\u201d, \u201cit\u201d, \u201cits\u201d, \u201clives\u201d, \u201cgives\u201d, \u201cown\u201d, \u201cjesus\u201d, \u201ccannot\u201d, \u201ceven\u201d, \u201cinstead\u201d, \u201cminutes\u201d, \u201cyour\u201d, \u201ceffort\u201d, \u201cscript\u201d, \u201cseems\u201d, and \u201csomething\u201d, appear to be spuriously associated with sentiment and are captured by the original-only and revised-only classifiers as highly-weighted features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 4,
+      "text": ", Notably all of these features fall out from the highly-weighted features when our classifier is trained on counterfactually-augmented data.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 5,
+      "text": "Regarding the sensitivity of BERT models, Table 9 shows the ability of a model explicitly trained to differentiate between the original and the revised data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 6,
+      "text": "This is to shed some insight on how much the two differ (on account of our intervention).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 7,
+      "text": "Because the two indeed are different, we expect that a model should be able to differentiate them to some degree.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 8,
+      "text": "We note that a model class\u2019s ability to differentiate between the original and revised data when explicitly trained to do so may not necessarily be correlated with how susceptible that model is to breaking when evaluated out of sample.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylDGP7Zjr",
+      "rebuttal_id": "rkg6_3D5jr",
+      "sentence_index": 9,
+      "text": "We\u2019re grateful for your comments on exposition and will continue to address these points as we improve the draft.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

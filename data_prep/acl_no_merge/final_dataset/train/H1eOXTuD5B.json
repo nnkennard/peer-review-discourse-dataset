@@ -1,0 +1,1308 @@
+{
+  "metadata": {
+    "forum_id": "rylT0AVtwH",
+    "review_id": "H1eOXTuD5B",
+    "rebuttal_id": "Skl-7ddujB",
+    "title": "Learning from Partially-Observed Multimodal Data with Variational Autoencoders",
+    "reviewer": "AnonReviewer4",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rylT0AVtwH&noteId=Skl-7ddujB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 0,
+      "text": "The paper proposes a novel training method for variational autoencoders that allows using partially-observed data with multiple modalities.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 1,
+      "text": "A modality can be a whole block of features (e.g., a MNIST image) or just a single scalar feature.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 2,
+      "text": "The probabilistic model contains a latent vector per modality.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 3,
+      "text": "The key idea is to use two types of encoder networks: a unimodal encoder for every modality which is used when the modality is observed, and a shared multimodal encoder that is provided all the observed modalities and produces the latent vectors for the unobserved modalities.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 4,
+      "text": "The whole latent vector is passed through a decoder that predicts the mask of observed modalities, and another decoder that predicts the actual values of all modalities.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 5,
+      "text": "The \u201cground truth\u201d values for the unobserved modalities are provided by sampling from the corresponding latent variables from the prior distribution once at some point of training.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 6,
+      "text": "While I like the premise of the paper, I feel that it needs more work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 7,
+      "text": "My main concern is that sampling the target values for the unobserved modalities from the prior would almost necessarily lead to blurry synthetic \u201cground truth\u201d for these modalities, which in turn means that the model would produce underconfident predictions for them.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 8,
+      "text": "The samples from MNIST in Figure 3 are indeed very blurry, supporting this.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 9,
+      "text": "Furthermore, the claims of the model working for non-MCAR missingness are not substantiated by the experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 10,
+      "text": "I believe that the paper should currently be rejected, but I encourage the authors to revise the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 11,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 12,
+      "text": "* Generative modelling of partially observed data is a very important topic that would benefit from fresh ideas and new approaches",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 13,
+      "text": "* I really like the idea of explicitly modelling the mask/missingness vector. I agree with the authors that this should help a lot with non completely random missingness.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 14,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 15,
+      "text": "* The text is quite hard to read.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 16,
+      "text": "There are many typos (see below).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 17,
+      "text": "The text is over the 8 page limit, but I don\u2019t think this is justified.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 18,
+      "text": "For example, the paragraph around Eqn. (11) just says that the decoder takes in a concatenated latent vector.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 19,
+      "text": "The MNIST+SVHN dataset setup is described in detail, yet there is no summary of the experimental results, which are presented in the appendix.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 20,
+      "text": "* The approach taken to train on partially-observed data is described in three sentences after the Eqn. (10).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 21,
+      "text": "The non-observed dimensions are imputed by reconstructions from the prior from a partially trained model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 22,
+      "text": "I think that this is the crux of the paper that should be significantly expanded and experimentally validated.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 23,
+      "text": "It is possible that due to this design choice the method would not produce sharper reconstructions than the original samples from the prior.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 24,
+      "text": "Figures 3, 5 and 6 indeed show very blurry samples from the model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 25,
+      "text": "Furthermore, it is not obvious to me why these prior samples would be sensible at all, given that all modalities have independent latents by construction.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 26,
+      "text": "* The paper states multiple times that VAEAC [Ivanov et al., 2019] cannot handle partially missing data, but I don\u2019t think this is true, since their missing features imputation experiment uses the setup of 50% truly missing features.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 27,
+      "text": "The trick they use is adding \u201csynthetic\u201d missing features in addition to the real ones and only train on those.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 28,
+      "text": "See Section 4.3.3 of that paper for more details.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 29,
+      "text": "* The paper states that \u201cit can model the joint distribution of the data and the mask together and avoid limiting assumptions such as MCAR\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 30,
+      "text": "However, all experiments only show results in the MCAR setting, so the claim is not experimentally validated.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 31,
+      "text": "* The baselines in the experiments could be improved.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 32,
+      "text": "First of all, the setup for the AE and VAE is not specified.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 33,
+      "text": "Secondly, it would be good to include a GAN-based baseline such as GAIN, as well as some more classic feature imputation method, e.g. MICE or MissForest.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 34,
+      "text": "* The experiments do not demonstrate that the model learns a meaningful *conditional* distribution for the missing modalities, since the provided figures show just one sample per conditioning image.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 35,
+      "text": "Questions to the authors:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 36,
+      "text": "1. Could you comment on the differences in your setup in Section 4.1 compared to the VAEAC paper? I\u2019ve noticed that the results you report for this method significantly differ from the original paper, e.g. for VAEAC on Phishing dataset you report PFC of 0.24, whereas the original paper reports 0.394; for Mushroom it\u2019s 0.403 vs. 0.244. I\u2019ve compared the experimental details yet couldn\u2019t find any differences, for example the missing rate is 0.5 in both papers.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 37,
+      "text": "2. How do you explain that all methods have NRMSE > 1 on the Glass dataset (Table 1), meaning that they all most likely perform worse than a constant baseline?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 38,
+      "text": "Typos and minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 39,
+      "text": "* Contributions (1) and (2) should be merged together.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 40,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 41,
+      "text": "Page 2: to literature -> to the literature",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 42,
+      "text": "* Page 2: \u201cThis algorithm needs complete data during training cannot learn from partially-observed data only.\u201d",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 43,
+      "text": "* Equations (1, 2): z and \\phi are not consistently boldfaced",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 44,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 45,
+      "text": "Equations (4, 5): you can save some space by only specifying the factorization (left column) and merging the two equations on one row",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 46,
+      "text": "* Page 4, bottom: use Bernoulli distribution -> use factorized/independent Bernoulli distribution",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 47,
+      "text": "* Page 5, bottom: the word \u201csimply\u201d is used twice",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 48,
+      "text": "* Page 9: learn to useful -> learn useful",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 49,
+      "text": "* Page 9: term is included -> term included",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 50,
+      "text": "* Page 9: variable follows Bernoulli -> variable following Bernoulli",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 51,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "sentence_index": 52,
+      "text": "Page 9: conditions on -> conditioning on",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 0,
+      "text": "(1) Reconstruction from prior during training:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 1,
+      "text": "The crux of the proposed model is the selective proposal distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 2,
+      "text": "\"Pseudo\" sampling for unobserved modalities during training provides a way to facilitate model training process.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 3,
+      "text": "We evaluated the model under two training settings: (I) optimize the final ELBO without conditional log-likelihood for unobserved modalities x_u; and (II) optimize the final ELBO with  conditional log-likelihood of unobserved modalities.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 4,
+      "text": "This is realized by utilizing the \"pseudo\" sampling described before (and in the paper).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 5,
+      "text": "The results are comparable but the added term in setting II shows benefits on some datasets.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 6,
+      "text": "While setting I is solely based on the observed modalities, the setting II incorporates the unobserved modalities along with the observed ones.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 7,
+      "text": "By using the complete data, the setting II describes the complete ELBO corresponding to the partially observed multimodal data (in consideration).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 8,
+      "text": "(2) Comparison with VAEAC:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 9,
+      "text": "In order to establish fair comparison, we used the same backbone network structures and training criteria for all baseline models and our proposed VSAE.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 10,
+      "text": "Therefore, the implementation details differ from the original VAEAC paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 11,
+      "text": "We did our best to maintain the optimization details described in all baseline papers.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 12,
+      "text": "Experiments on VAEAC with partially-observed data are also conducted.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 13,
+      "text": "Results show that VAEAC under this setting can achieve comparable performance on categorical datasets: 0.245(0.002) on Phishing, 0.399(0.011) on Mushroom while the errors of VSAE are 0.237(0.001) on Phishing,  0.396(0.008) on Mushroom.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 14,
+      "text": "However, on numerical and bimodal datasets, partially trained VAEAC performs worse than VSAE :",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 15,
+      "text": "*VSAE:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 16,
+      "text": "0.455(0.003) on Yeast; 1.312(0.021) on Glass;0.1376(0.0002) on MNIST+MNIST; 0.1198(0.0001) on MNIST+SVHN;",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 17,
+      "text": "*VAEAC trained partially:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 18,
+      "text": "0.878(0.006) on Yeast; 1.846(0.037) on Glass;0.1402(0.0001) on MNIST+MNIST; 0.2126(0.0031) on MNIST+SVHN.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 19,
+      "text": "(3) Experiments under synthetic non-MCAR masking:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 20,
+      "text": "As mentioned by the reviewer, we conduct experiments on non-MCAR masking following state-of-the-art non-MCAR model MIWAE [2].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 21,
+      "text": "Same as MIWAE, we synthesize masks by defining some rules to specify the probability of a Bernoulli distribution.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 22,
+      "text": "Please refer to Table 3 and Appendix C.4 for updated comparison results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 23,
+      "text": "VSAE outperforms MIWAE under all MCAR, MAR and NMAR masking mechanisms.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 24,
+      "text": "(4) Baselines:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 25,
+      "text": "All baselines considered in the paper are designed to have comparable number of parameters (same or larger than our model) to make the comparison fair.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 26,
+      "text": "We have updated the baseline details in the Appendix B.3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 27,
+      "text": "Although GAN-based models show promising imputation results, they usually fail to model data distribution properly.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 28,
+      "text": "Therefore, we do not consider them as our baseline models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 29,
+      "text": "It is also important to note that VSAE is not a model designed only for imputation, but a generic framework to learn from partially-observed data for both imputation and generation.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 30,
+      "text": "(5) Conditional imputation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 31,
+      "text": "When performing imputation, we assume that the generation is not conditioned on the observed image, but only conditioned on the factorized latent variables.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 32,
+      "text": "Input an observed image to the model, we observe a \"conditional\" distribution if we independently sample from the latent variables.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 33,
+      "text": "See Figure.7 in updated Appendix C.2.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 34,
+      "text": "(6) Answers to the questions:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 35,
+      "text": "1. Please refer to point (2) for detailed explanation on comparison with VAEAC.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 36,
+      "text": "In summary, there are multiple reasons why the performance is not identical with the original VAEAC: (I) the back-bone structures are not the same; (II) training criteria (including batch size, learning rate, etc.) are not the same; and (III)  training/validation/test split is different.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 37,
+      "text": "We would like to emphasize that the aforementioned changes are necessary to establish fair comparison.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 38,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 39,
+      "text": "We adopt the calculation from [1] where NRMSE is RMSE normalized by the standard deviation of each feature followed by an average over all imputed features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 40,
+      "text": "The standard deviation of ground truth features does not guarantee NRMSE < 1.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 41,
+      "text": "[1] Ivanov et al.Variational Autoencoder with Arbitrary Conditioning, ICLR 2019",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eOXTuD5B",
+      "rebuttal_id": "Skl-7ddujB",
+      "sentence_index": 42,
+      "text": "[2] Mattei et al. MIWAE: Deep Generative Modelling and Imputation of Incomplete Data Sets, ICML 2019",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

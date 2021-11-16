@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "forum_id": "B1esx6EYvr",
+    "review_id": "r1x7498kcS",
+    "rebuttal_id": "Hkl_Uybzor",
+    "title": "A critical analysis of self-supervision, or what we can learn from a single image",
+    "reviewer": "AnonReviewer2",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1esx6EYvr&noteId=Hkl_Uybzor",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 0,
+      "text": "This paper explores self-supervised learning in the low-data regime, comparing results to self-supervised learning on larger datasets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 1,
+      "text": "BiGAN, RotNet, and DeepCluster serve as the reference self-supervised methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 2,
+      "text": "It argues that early layers of a convolutional neural network can be effectively learned from a single source image, with data augmentation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 3,
+      "text": "A performance gap exists for deeper layers, suggesting that larger datasets are required for self-supervised learning of useful filters in deeper network layers.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 4,
+      "text": "I believe the primary claim of this paper is neither surprising nor novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 5,
+      "text": "The long history of successful hand-designed descriptors in computer vision, such as SIFT [Lowe, 1999] and HOG [Dalal and Triggs, 2005], suggest that one can design (with no data at all) features reminiscent of those learned in the first couple layers of a convolutional neural network (local image gradients, followed by characterization of those gradients over larger local windows).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 6,
+      "text": "More importantly, it is already well established that it is possible to learn, from only a few images, filter sets that resemble the early layers of filters learned by CNNs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 7,
+      "text": "This paper fails to account for a vast amount of literature on modeling natural images that predates the post-AlexNet deep-learning era.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 8,
+      "text": "For example, see the following paper (over 5600 citations according to Google scholar):",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 9,
+      "text": "[1] Bruno A. Olshausen and David J. Field.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 10,
+      "text": "Emergence of simple-cell receptive field properties by learning a sparse code for natural images.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 11,
+      "text": "Nature, 1996.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 12,
+      "text": "Figure 4 of [1] shows results for learning 16x16 filters using \"ten 512x512 images of natural scenes\".",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 13,
+      "text": "Compare to the conv1 filters in Figure 2 of the paper under review.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 14,
+      "text": "This 1996 paper clearly established that it is possible to learn such filters from a small number of images.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 15,
+      "text": "There is long history of sparse coding and dictionary learning techniques, including multilayer representations, that follows from the early work of [1].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "sentence_index": 16,
+      "text": "The paper should at minimum engage with this extensive history, and, in light of it, explain whether its claims are actually novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 0,
+      "text": "We hope that the reviewer will change his opinion once we clarify the goal of our paper and explain how it relates to prior work, as we believe we are fundamentally on the same page.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 1,
+      "text": "We are well aware of SIFT, HOG, the results of Olshausen and Field on learning image filters from a few example images (some of us are sufficiently old to have implemented all such methods from scratch as grad students!) and no annotations, as well as Mallat\u2019s Scattering nets [1].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 2,
+      "text": "In fact, we discuss and evaluate Oyallon\u2019s 2017 implementation [2] of this at page 5 and table 2 in the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 3,
+      "text": "However, the existence of these methods does not detract from the message of this paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 4,
+      "text": "Our goal is to provide \u201ccritical analysis\u201d of current self-supervision methods because these *specific* tools are now very heavily researched.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 5,
+      "text": "Our paper sends a cautionary message: current self-supervised learning techniques cannot improve on what can be obtained from a single image plus transformations for early layers in a network, and only improves in a limited manner for deeper layers, despite ingesting millions of images (which is touted as their key advantage).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 6,
+      "text": "In particular, the claims are not limited to the first few layers as we show that one image recovers two thirds of the performance of deeper layers as well.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 7,
+      "text": "This message, which is a partially negative result, stands on its own, regardless of whether good low-level features can be obtained in some other ways (e.g. manually) and, we hope the reviewer will agree, should be known by the community.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 8,
+      "text": "Nevertheless, we also agree with the reviewer that it is interesting to put these findings in a broader context, so we are happy to expand the discussion of prior feature learning/design work further.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 9,
+      "text": "However, please note that none of this literature makes our specific findings on the limits of self-supervision obvious.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 10,
+      "text": "Furthermore, although this is a little besides the point, in the paper we do show in Table 2 that scattering transforms works as well as conv1, but that from conv2 onwards self-supervision on a single image does better, so even the claim that handcrafted features are equivalent to the first few layers in deep networks is not proven.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 11,
+      "text": "Also, the fact that Olshausens\u2019s filters resemble conv1 does not mean that they are equivalent to conv1 in recognition performance.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          9,
+          10,
+          11,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 12,
+      "text": "\u2014",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 13,
+      "text": "[1] J. Bruna and S. Mallat. \"Invariant scattering convolution networks.\" TPAMI 2013",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x7498kcS",
+      "rebuttal_id": "Hkl_Uybzor",
+      "sentence_index": 14,
+      "text": "[2] E. Oyallon, et al. \"Scaling the scattering transform: Deep hybrid networks.\" ICCV 2017",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

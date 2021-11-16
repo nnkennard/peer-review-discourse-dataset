@@ -1,0 +1,532 @@
+{
+  "metadata": {
+    "forum_id": "Bke-6pVKvB",
+    "review_id": "ByeZZKSxqB",
+    "rebuttal_id": "S1g_5Y3KoS",
+    "title": "Poisoning Attacks with Generative Adversarial Nets",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Bke-6pVKvB&noteId=S1g_5Y3KoS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ByeZZKSxqB",
+      "sentence_index": 0,
+      "text": "This paper tackles vulnerability to poisoning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "sentence_index": 1,
+      "text": "An important subtopic of adversarial ML.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "sentence_index": 2,
+      "text": "The authors propose using a GAN to generate poisoning data points, as an alternative to existing methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "sentence_index": 3,
+      "text": "While most (or all) of the paper is devoted to illustrate the effectiveness of the approach against *non-protected* ML. My only and biggest concern with this paper is that no defense mechanism has been tested against, and there are many in the literature. (see e.g. Diakonikolas et al ICML 2019).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "sentence_index": 4,
+      "text": "Thus my question for the rebuttal period: How would pGAN perform when defense mechanisms are deployed during the learning phase? (ideally, a thorough experiment illustrating the strength of pGAN against a few defense mechanisms would help re-evaluating the score)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 0,
+      "text": "Thank you very much for the feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 1,
+      "text": "We have updated the paper and included a new section (4.3) showing how pGAN attacks bypass 4 different defence mechanisms, including outlier detection (as in Paudice et al. 2018a), the PCA-based defence in Rubinstein et al. 2009 (Antidote), Sever (Diakonikolas et al ICML 2019), and label sanitization",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 2,
+      "text": "(Paudice et al. 2018b)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 3,
+      "text": ".",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 4,
+      "text": "From the reviewer\u2019s comments we noticed that, perhaps, the submitted paper, may not have sufficiently clearly explained that the approach is already targeting defences based on outlier detection and in particular that proposed in Paudice et al. 2018a.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 5,
+      "text": "We already assume that the defender is in control of a fraction of trusted (clean) data points to train the outlier detector, which is a strong assumption in favour of the defender.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 6,
+      "text": "To make this point clearer, we have also updated Figure 2 in the paper, showing the performance of pGAN for alpha = 0, i.e. when no detectability constraints are considered.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 7,
+      "text": "In the Figure, we can observe that both for MNIST and FMNIST the outlier detection is capable of detecting many poisoning points and the effect of the attack is reduced compared with the results for alpha = 0.1.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 8,
+      "text": "Different outlier-detection-based defences have already been proposed in the literature, such as Steinhardt et al. 2017 (\u201cCertified defenses for data poisoning attacks\u201d), Koh et al. 2018 (\u201cStronger data poisoning attacks break data sanitization defenses\u201d) or Paudice et al. 2018a, to cite some.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 9,
+      "text": "In our experiments we chose the scheme proposed by Paudice et al. 2018a, as it assumes a stronger model for the defender (as mentioned before), which, in our opinion helps to validate the effectiveness of pGAN to craft successful poisoning attacks even in cases where the defender is in control of a fraction of trusted (clean) data points.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 10,
+      "text": "Label sanitization (as proposed in Paudice et al. 2018b) completely fails to defend against pGAN attack, as shown in Figure 8 (right).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 11,
+      "text": "As pGAN produces poisoning points that are correlated, the KNN-based algorithm proposed to do the relabelling is not capable of detecting the poisoning points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 12,
+      "text": "Moreover, some of the genuine points from the target class are incorrectly relabelled, making the problem even worse.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 13,
+      "text": "The PCA-based defence proposed by Rubinstein et al. 2009 (Antidote) is also not capable of mitigating pGAN attack.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 14,
+      "text": "The detectability constraints included in our model prevents this defence to detect the generated poisoning points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 15,
+      "text": "In the supplement we have included an analysis of the sensitivity of this algorithm to the threshold to discard training points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 16,
+      "text": "We can observe that the error increases as we increase this threshold.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 17,
+      "text": "The \u201cSever\u201d defence (Diakonikolas et al. 2019 ICML) is also not robust against pGAN attack.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 18,
+      "text": "In Figure 8 (left) we can observe that the defence performs worse than the outlier detector and that, when the algorithm is not under attack, the performance slightly decreases, as the algorithm is removing genuine data points that are significant for the training process.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 19,
+      "text": "For FMNIST, Sever outperforms the outlier detector when the number of poisoning points is reduced, although the degradation of the algorithm as we increase the fraction of poisoning points is faster compared to the outlier detector and the PCA-based defence.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 20,
+      "text": "In the supplement we included the sensitivity analysis w.r.t. the parameter that controls the fraction of points to be discarded.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 21,
+      "text": "We can observe that, in this case, the difference in performance is not significant for the different values explored for this threshold.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 22,
+      "text": "In summary, the revised paper (see the new version uploaded) now provides a comprehensive comparison of different defence mechanisms and shows the effectiveness of pGAN to bypass all of them.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 23,
+      "text": "First in Figure 2 we show the effect of the attack for different values of alpha tested against the outlier-detection-based defence.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 24,
+      "text": "Then, we have provided an empirical evaluation of pGAN against 4 different defence mechanisms both in MNIST and FMNIST, showing how our attack bypasses all of these defences.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 25,
+      "text": "We thank the reviewer for this valuable comment, which has certainly helped us to improve the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 26,
+      "text": "We hope that the score can be revised to reflect this improvement.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByeZZKSxqB",
+      "rebuttal_id": "S1g_5Y3KoS",
+      "sentence_index": 27,
+      "text": "Thank you very much.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

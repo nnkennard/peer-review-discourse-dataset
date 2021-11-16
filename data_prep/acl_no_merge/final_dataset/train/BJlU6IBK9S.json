@@ -1,0 +1,1006 @@
+{
+  "metadata": {
+    "forum_id": "rylT0AVtwH",
+    "review_id": "BJlU6IBK9S",
+    "rebuttal_id": "rJxyl7dOoB",
+    "title": "Learning from Partially-Observed Multimodal Data with Variational Autoencoders",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rylT0AVtwH&noteId=rJxyl7dOoB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 0,
+      "text": "The paper proposed variational selective autoencoders (VSAE) to learn from partially-observed multimodal data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 1,
+      "text": "Overall, the proposed method is elegant; however, the presentation, the claim, and the experiments suffer from significant flaws.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 2,
+      "text": "See below for detailed comments.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 3,
+      "text": "[Pros]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 4,
+      "text": "1. The main idea of the paper is to propose a generative model that can handle partially-observed multimodal data during training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 5,
+      "text": "Specifically, prior work considered non-missing data during training, while we can't always guarantee that all the modalities are available.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 6,
+      "text": "Especially in the field of multimodal learning, we often face the issue of imperfect sensors.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 7,
+      "text": "This line of work should be encouraged.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 8,
+      "text": "2. In my opinion, the idea is elegant.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 9,
+      "text": "The way the author handles the missingness is by introducing an auxiliary binary random variable (the mask) for it.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 10,
+      "text": "Nevertheless, its presentation and Figure 1 makes this elegant idea seems over-complicated.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 11,
+      "text": "[Cons]",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 12,
+      "text": "1. [The claim] One of my concerns for this paper is the assumption of the factorized latent variables from multimodal data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 13,
+      "text": "Specifically, the author mentioned Tsai et al. assumed factorized latent variables from the multimodal data, while Tsai et al. actually assumed the generation of multimodal data consists of disentangled modality-specific and multimodal factors.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 14,
+      "text": "It seems to me; the author assumed data from one modality is generated by all the latent factors (see Eq. (11)), then what is the point for assuming the prior of the latent factor is factorized (see Eq. (4) and (5))?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 15,
+      "text": "One possible explanation is because we want to handle the partially-observable issues from multimodal data, and it would be easier to make the latent factors factorized (see Eq. (6)).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 16,
+      "text": "The author should comment on this.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 17,
+      "text": "2. [Phrasing.] There are too many unconcise or informal phrases in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 18,
+      "text": "For example, I don't understand what does it mean in \"However, if training data is complete, ..... handle during missing data during test.\" Another example would be the last few paragraphs on page 4; they are very unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 19,
+      "text": "Also, the author should avoid using the word \"simply\" too often (see the last few paragraphs on page 5).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 20,
+      "text": "3. [Presentation.] The presentation is undesirable. It may make the readers hard to follow the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 21,
+      "text": "I list some instances here.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 22,
+      "text": "a. In Eq. (3), it surprises me to see the symbol \\epsilon without any explanation.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 23,
+      "text": "b. In Eq. (6), it also surprises me to see no description of \\phi and \\psi.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 24,
+      "text": "The author should also add more explanation here,",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 25,
+      "text": "since Eq. (6)  stands a crucial role in the author's method.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 26,
+      "text": "c. Figure 1 is over-complicated.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 27,
+      "text": "d. What is the metric in Table 1 and 2?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 28,
+      "text": "The author never explains. E.g., link to NRMSE and PFC to the Table.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 29,
+      "text": "e. What are the two modalities in Table 2? The author should explain.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 30,
+      "text": "f. The author completely moved the results of MNIST-SVHN to Supplementary.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 31,
+      "text": "It is fine, but it seems weird that the author still mentioned the setup of MNIST+SVHN in the main text.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 32,
+      "text": "g. The author mentioned, in Table , the last two rows serve the upper bound for other methods.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 33,
+      "text": "While some results are even better than the last two rows.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 34,
+      "text": "The author should explain this.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 35,
+      "text": "h. Generally speaking, the paper does require a significant effort to polish Section 3 and 4.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 36,
+      "text": "4. [Experiments.] The author presented a multimodal representation learning framework for partially-observable multimodal data, while the experiments cannot corraborrate the claim.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 37,
+      "text": "First, I consider the tabular features as multi-feature data and less to be the multimodal data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 38,
+      "text": "Second, the synthetic image pairs are not multimodal in nature.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 39,
+      "text": "These synthetic setting can be used for sanity check, but cannot be the main part of the experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 40,
+      "text": "The author can perhaps consider the datasets used by Tsai et al. There are seven datasets, and they can all be modified to the setting of partially-observable multimodal data.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 41,
+      "text": "Also, since the synthetic image pairs are not multimodal in nature, it is unclear to me for what the messages are conveyed in Figure 3 and 4.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 42,
+      "text": "I do expect the paper be a strong submission after a significant effort in presentation and experimental designs.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "sentence_index": 43,
+      "text": "Therefore, I vote for weak rejection at this moment.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 0,
+      "text": "We would like to thank the reviewer for providing valuable and detailed feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 1,
+      "text": "We have addressed the clarity concerns in the updated paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 2,
+      "text": "Figure captions, metrics used in the table, etc, as mentioned in the presentation section of the review have been carefully examined and updated in the paper.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 3,
+      "text": "We will reorganize the experiment section to better present the comparisons under different experimental settings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 4,
+      "text": "(1) Factorized Latent Variables:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 5,
+      "text": "The factorization of latent space with respect to the modalities provides a way to differentiate observed and unobserved modalities.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 6,
+      "text": "Therefore, VSAE is capable of handling partially-observed data where the missing modalities can be arbitrary.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 7,
+      "text": "In addition, the embeddings are intuitively more meaningful as input to unimodal encoders is now limited to only observed modalities, eliminating the effect of missing modalities.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 8,
+      "text": "When performing imputation/generation, however, we want to capture the dependencies between modalities.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 9,
+      "text": "In other words, unobserved modalities should be imputed based on the information extracted from observed modalities.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 10,
+      "text": "For experiments, we design this by conditioning decoders on all latent variables, essentially accessing information from all observed modalities.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 11,
+      "text": "This is not in contradiction to the factorized latent variable assumption.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 12,
+      "text": "Instead, the encoders try to embed each modalities individually, while decoders learn the dependencies between different modalities.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 13,
+      "text": "(2) Multimodal Experiments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 14,
+      "text": "We apologize for unclear description of experimental settings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 15,
+      "text": "In general, we believe multi-modal data is more general than conventional image-text or video-text pairs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 16,
+      "text": "By unifying tabular data also as multi-modal (with each attribute as one modality), we show that VSAE provides us a principled way for imputation, capable of generalizing to more data families.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 17,
+      "text": "Specifically, we conducted experiments on two types of data:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 18,
+      "text": "(1) low-dimensional tabular data, and (2) high-dimensional data (pixel or text) as \"multimodal\" to better define the overall task of learning from partially-observed data.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 19,
+      "text": "Upon request, we have included more extensive experiments following [1] on MNIST/FashionMNIST, and [2] on CMU-MOSI/ICT-MMMO.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 20,
+      "text": "Results are reported in Table 10 and Table 11 (Appendix C.5).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 21,
+      "text": "As shown, VSAE consistently outperforms baseline models across the added experiments as well.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 22,
+      "text": "(3) Discussions on Comparison with Upper Bound Methods:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 23,
+      "text": "Models trained with fully-observed data in theory should have better performance, thus we treat them as upper bound methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 24,
+      "text": "However, it is very interesting to observe that in some cases, VSAE have superior performances.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 25,
+      "text": "One possible explanation is that missing modalities introduces extra noise into the model as regularizer, thereby, increasing the generalization ability.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 26,
+      "text": "However, detailed experiments and more discussions need to be carried out to back up this explanation.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 27,
+      "text": "[1] Wu et al. Multimodal Generative Models for Scalable Weakly-Supervised Learning, NeurIPS 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJlU6IBK9S",
+      "rebuttal_id": "rJxyl7dOoB",
+      "sentence_index": 28,
+      "text": "[2] Tsai et al. Learning Factorized Multimodal Representation, ICLR 2019.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

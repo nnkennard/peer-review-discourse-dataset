@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "forum_id": "SyeD0RVtvS",
+    "review_id": "Syx181Q7cB",
+    "rebuttal_id": "SyewKHsvsr",
+    "title": "DeepSFM: Structure From Motion Via Deep Bundle Adjustment",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyeD0RVtvS&noteId=SyewKHsvsr",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 0,
+      "text": "In this paper, the authors propose a physical driven architecture of DeepSFM to infer the structures from motion.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 1,
+      "text": "Extensive experiments on various datasets show that the model achieves the state-of-the-art performance on both depth and pose estimation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 2,
+      "text": "In general, the paper is clearly written but I still have several concerns.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 3,
+      "text": "1.\tThe paper is easy to follow but the authors are expected to clarify the rationality in integration of the loss function.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 4,
+      "text": "How the parameter of \\lambda_r, \\lambda_t, and \\lambda_r influence the performance.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 5,
+      "text": "It would be better if the authors could present some analysis.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 6,
+      "text": "2.\tThe experiments are rather insufficient.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 7,
+      "text": "The authors are expected to make more comprehensive analysis with the state-of-the-art methods, and also analyze why some alternative methods outperforms the proposed methods in table I and table II.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 8,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 9,
+      "text": "The experiments in section 4.3 are also expected to be improved.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "sentence_index": 10,
+      "text": "It is difficult to draw a conclusion that the method is better than other ones based on such limited experiments.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 0,
+      "text": "Thank you very much for your comments, which is very helpful for clarifying our contribution and improving the presentation of the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 1,
+      "text": "Please see the inline responses.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 2,
+      "text": "Q1: The paper is easy to follow but the authors are expected to clarify the rationality in integration of the loss function. How the parameter of \\lambda_r, \\lambda_t, and \\lambda_r influence the performance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 3,
+      "text": "It would be better if the authors could present some analysis.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 4,
+      "text": "A1: There are in general two rules to follow when choosing the lambda for optimization: 1) the loss term provides gradient in similar numerical range, such that no single loss should dominate the training since accuracies in depth and camera pose are both important to reach a good consensus.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 5,
+      "text": "2) we found in practice the camera rotation has higher impact on the accuracy of the depth probably but not the opposite.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 6,
+      "text": "This is presumably because that pose cost volume accumulate depth differences of all the pixels such that is more tolerant to the depth error.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 7,
+      "text": "To encourage better performance of pose, we set a relatively large \\lambda_r.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 8,
+      "text": "Note that all the losses are necessary to achieve good performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 9,
+      "text": "On the validation data, some preliminary experiments by grid search values of each lambda, show that the performance of our model is not very sensitive to various values of lambda.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 10,
+      "text": "Therefore we provide a combination of lambda that produces the model for our experiment, and presumably there could be other settings that may potentially further improve the performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 11,
+      "text": "We have added some insight to Section 3.5 about the loss function.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 12,
+      "text": "Q2: The authors are expected to make more comprehensive analysis with the state-of-the-art methods, and also analyze why some alternative methods outperforms the proposed methods in table I and table II.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 13,
+      "text": "A2: We thank the reviewer for the suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 14,
+      "text": "We add more analysis with the state of the art in Section 4.2, especially about the case that other methods outperforms our method.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 15,
+      "text": "Q3:The experiments in section 4.3 are also expected to be improved.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 16,
+      "text": "It is difficult to draw a conclusion that the method is better than other ones based on such limited experiments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 17,
+      "text": "A3: Thanks for this point.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 18,
+      "text": "However, the main experiments and the conclusions are in Sec. 4.2; and  thus Section 4.2 included  much more insights and discussion of our model Vs. the other baselines in the revised version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 19,
+      "text": "In contrast,  Section 4.3 lists the ablation study, where the purpose of experiments is to verify the necessity and sufficiency of some system design options of our model and demonstrate the behavior under controlled experiments, instead of comparing with other methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 20,
+      "text": "Specifically, we show the performance of our method with different number of iterations, with and without pose cost volume, and different numbers of the input view.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 21,
+      "text": "At the same time, we found that our method also outperforms other methods in some aspects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 22,
+      "text": "In Figure 2, the curves are going down, which means that our method can effectively reduce depth and pose error from DeMon.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 23,
+      "text": "The solid curves are consistently lower than dashed curves, which means our pose cost volume outperforms Steinbr\u00fccker et al. (2011) in pose estimation and further benefits depth estimation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 24,
+      "text": "In Figure 3, the blue curve is significant lower than orange curve, which means that our method is more robust in the situation with fewer views than COLMAP.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syx181Q7cB",
+      "rebuttal_id": "SyewKHsvsr",
+      "sentence_index": 25,
+      "text": "Even though, the main purpose is not to compare to others but provide some analysis on important model components.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

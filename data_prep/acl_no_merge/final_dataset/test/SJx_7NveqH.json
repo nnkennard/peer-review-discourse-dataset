@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "forum_id": "rJleKgrKwS",
+    "review_id": "SJx_7NveqH",
+    "rebuttal_id": "r1e3Nvr5sH",
+    "title": "Differentiable learning of numerical rules in knowledge graphs",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJleKgrKwS&noteId=r1e3Nvr5sH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 0,
+      "text": "This paper proposes an extension of NeuralLP that is able to learn a very restricted (in terms of expressiveness) set of logic rules involving numeric properties.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 1,
+      "text": "The basic idea behind NeuralLP is quite simple: traversing relationships in a knowledge graph can be done by multiplicating adjacency matrices, and which rules hold and which ones don't can be discovered by learning an attention distribution over rules from data.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 2,
+      "text": "The idea is quite clever: relationships between numeric data properties of entities, such as age and heigh, can also be linked by relationships such as \\leq and \\geq, and those relations can be treated in the same way as standard knowledge graph relationship by the NeuralLP framework.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 3,
+      "text": "A major drawback in applying this idea is that the corresponding relational matrix is expensive to both materialise, and use within the NeuralLP framework (where matrices are mostly sparse).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 4,
+      "text": "To this end, authors make this process tractable by using dynamic programming and by defining such a matrix as a dynamic computation graph by means of the cumsum operator.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 5,
+      "text": "Furthermore, authors also introduce negated operators, also by defining the corresponding adjacency matrices by means of computation graphs.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 6,
+      "text": "Authors evaluate on several datasets - two real world and two synthetic - often showing more accurate results than the considered baselines.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 7,
+      "text": "One thing that puts me off is that, in Table 2, AnyBurl (the single one baseline authors considered other than the original NeuralLP) yields better Hits@10 values than Neural-LP-N, but the corresponding bold in the results is conveniently omitted.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 8,
+      "text": "Another concern I have is that the expressiveness of the learned rules can be somehow limited, but this paper seems like a good star towards learning interpretable rules involving multiple modalities.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "sentence_index": 9,
+      "text": "Missing references - authors may want to consider citing https://arxiv.org/abs/1906.06187 as well in Sec. 2 - it seems very related to this work.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 0,
+      "text": "We are really thankful for the positive feedback. Here we give detailed answers to the Reviewer's concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 1,
+      "text": "1) - \"... in Table 2, AnyBurl ... yields better Hits@10 values than Neural-LP-N, but the corresponding bold in the results is conveniently omitted.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 2,
+      "text": "Thanks for pointing this out! We will make the presentation of the results consistent by highlighting the respective number.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 3,
+      "text": "2) - \"... the expressiveness of the learned rules can be somehow limited,...\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 4,
+      "text": "We remark that our framework supports rules with negation, comparison among numerical attributes and classification operators, where linear functions over attributes can be expressed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 5,
+      "text": "Such rules capture a fragment of answer set programs, where a limited form of aggregation [Faber et al., 2011] and restricted external computation functions [Eiter et al., 2012] are allowed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 6,
+      "text": "While these rules might not cover all possible knowledge constructs, they are still valuable and rather expressive for encoding correlations among numerical and relational features.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 7,
+      "text": "Moreover, to the best of our knowledge they have not been directly supported by previous works on rule learning.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 8,
+      "text": "3) - \"Missing references - authors may want to consider citing https://arxiv.org/abs/1906.06187 ...\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx_7NveqH",
+      "rebuttal_id": "r1e3Nvr5sH",
+      "sentence_index": 9,
+      "text": "Thanks for referring us to this important work! We will certainly add this reference to the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "forum_id": "SylGpT4FPS",
+    "review_id": "HkljIvR3tr",
+    "rebuttal_id": "r1eb20l9sB",
+    "title": "Last-iterate convergence rates for min-max optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylGpT4FPS&noteId=r1eb20l9sB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 0,
+      "text": "This paper shows that Hamiltonian gradient descent (HGD), which is gradient descent on the norm of the squared norm of the vector field, achieves linear convergence for a broader range of problems than bilinear and convex-strongly concave formulations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 1,
+      "text": "In particular, the authors show the result for convex-concave problems satisfying a \u201csufficiently bilinear\u201d condition that is related to the PL conditions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 2,
+      "text": "Finally, the authors argue that consensus optimization (CO) can be viewed as a perturbation of HGD when the parameter choice is big enough.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 3,
+      "text": "From this viewpoint they derive convergence rates for CO on the broader set of problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 4,
+      "text": "This provides some further theoretical justification of the success of CO on large scale GAN problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 5,
+      "text": "The paper is presented in a clear manner, with the objectives and analysis techniques delineated in the main paper.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 6,
+      "text": "This was helpful to get a sense of the main points before going through the appendix.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 7,
+      "text": "The objective of the paper is to extend the problem settings for which there is last iterate min-max convergence rates, which now exist for bilinear, strongly convex-strongly concave, and convex-strongly concave problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 8,
+      "text": "The authors achieve this by analyzing HGD and giving convergence rates for when a \u201csufficiently bilinear condition is satisfied\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 9,
+      "text": "The primary idea behind the proof techniques is to show that the objective (Hamiltonian) satisfies the PL condition.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 10,
+      "text": "I found this to be an interesting approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 11,
+      "text": "As a result, the main question in evaluating this paper is on the significance of the result and the generality of the \u201csufficiently bilinear\u201d condition.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 12,
+      "text": "I tend to lean toward the result carrying some significance since it does extend the class of problems for which the convergence rates exists.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 13,
+      "text": "However, the weakness is that the condition is opaque and it is not entirely clear how broad of class of problems this condition would apply to.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 14,
+      "text": "I do acknowledge that the authors did a reasonable job of trying to clear this up in section 3.2 and section G of the appendix.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 15,
+      "text": "It did still leave me wanting more with respect to the practical significance though.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 16,
+      "text": "Finally, I found the connection to CO valuable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 17,
+      "text": "In particular, since this paper does not show large-scale experiments, the connection serves to provide some more theoretical evidence for they CO performs well in practice.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "sentence_index": 18,
+      "text": "Post Author Response: Thanks for the response. I agree with your perspective and think this paper should be accepted.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkljIvR3tr",
+      "rebuttal_id": "r1eb20l9sB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "rebuttal_id": "r1eb20l9sB",
+      "sentence_index": 1,
+      "text": "Our paper indeed focuses on theoretical results, but we believe the theory has some practical implications as well.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          7,
+          11,
+          12,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "rebuttal_id": "r1eb20l9sB",
+      "sentence_index": 2,
+      "text": "In particular, while the exact form of the sufficiently bilinear condition may be somewhat unwieldy, the result gives concrete evidence that having higher bilinearity can aid convergence for certain algorithms, even for settings that are not purely bilinear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          7,
+          11,
+          12,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkljIvR3tr",
+      "rebuttal_id": "r1eb20l9sB",
+      "sentence_index": 3,
+      "text": "This indicates that one should pay attention to the magnitude and condition number of the off-diagonal of the Jacobian when constructing a min-max problem and choosing an algorithm to solve the problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          7,
+          11,
+          12,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

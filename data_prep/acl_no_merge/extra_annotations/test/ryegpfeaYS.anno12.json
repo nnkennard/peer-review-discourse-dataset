@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "forum_id": "rJehVyrKwH",
+    "review_id": "ryegpfeaYS",
+    "rebuttal_id": "SJlzQjkXjB",
+    "title": "And the Bit Goes Down: Revisiting the Quantization of Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehVyrKwH&noteId=SJlzQjkXjB",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 0,
+      "text": "This paper suggests a quantization approach for neural networks, based on the Product Quantization (PQ) algorithm which has been successful in quantization for similarity search.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 1,
+      "text": "The basic idea is to quantize the weights of a neuron/single layer with a variant of PQ, which is modified to optimize the quantization error of inner products of sample inputs with the weights, rather than the weights themselves.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 2,
+      "text": "This is cast as a weighted variant of k-means.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 3,
+      "text": "The inner product is more directly related to the network output (though still does not account for non-linear neuron activations) and thus is expected to yield better downstream performance, and only requires introducing unlabeled input samples into the quantization process.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 4,
+      "text": "This approach is built into a pipeline that gradually quantizes the entire network.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 5,
+      "text": "Overall, I support the paper and recommend acceptance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 6,
+      "text": "PQ is known to be successful for quantization in other contexts, and the specialization suggested here for neural networks is natural and well-motivated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 7,
+      "text": "The method can be expected to perform well empirically, which the experiments verify, and to have potential impact.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 8,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 9,
+      "text": "1. Can you comment on the quantization time of the suggested method? Repeatedly solving the EM steps can add up to quite an overhead.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 10,
+      "text": "Does it pose a difficulty? How does it compare to other methods?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "sentence_index": 11,
+      "text": "2. Can you elaborate on the issue of non-linearity? It is mentioned only briefly in the conclusion. What is the difficulty in incorporating it? Is it in solving equation (4)? And perhaps, how do you expect it to effect the results?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 2 for their support and questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 1,
+      "text": "We answer them below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 2,
+      "text": "Quantization time",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 3,
+      "text": "As we state in our paper, quantizing a ResNet-50 (quantization + finetuning steps) takes about one day on one Volta V100 GPU.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 4,
+      "text": "The time of quantization is around 1 to 2 hours, the rest being dedicated to finetuning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 5,
+      "text": "Thus, the time dedicated to quantization is relatively short, especially compared with the fine-tuning and even more with the initial network training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 6,
+      "text": "This is because we optimized our EM implementation in at least two ways as detailed below.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 7,
+      "text": "-\tThe E-step is performed on the GPU (see file src/quantization/distance.py, lines 61-75) with automatic chunking.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 8,
+      "text": "This means that the code chunks the centroids and the weight matrices into blocks, performs the distance computation on those blocks and aggregates the results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 9,
+      "text": "This falls within the map/reduce paradigm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 10,
+      "text": "Note that the blocks are automatically calculated to be the largest that fit into the GPU, such that the utilization of the GPU is maximized, so as to minimize the compute time.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 11,
+      "text": "-\tThe M-step involves calculating a solution of a least squares problem (see footnote 2 in our paper).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 12,
+      "text": "The bottleneck for this is to calculate the pseudo-inverse of the activations x. However, we fix x when iterating our EM algorithm, therefore we can factor the computation of the pseudo inverse of x before alternating between the E and the M steps (see file src/quantization/solver.py and in particular the docstring).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 13,
+      "text": "We provided pointers to the files in the code anonymously shared on OpenReview.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 14,
+      "text": "To our knowledge, these implementation strategies are novel in this context and were key in the development of our method to be able to iterate rapidly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 15,
+      "text": "Both strategies are documented in the code so that they can benefit to the community.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 16,
+      "text": "Incorporating the non-linearity",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 17,
+      "text": "As the Reviewer rightfully stated, optimally we should take the non-linearity in Equation (4) into account.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 18,
+      "text": "One could hope for a higher compression ratio.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 19,
+      "text": "Indeed, the approximation constraint on the positive outputs would stay the same (they have to be close to the original outputs).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 20,
+      "text": "On the other hand, the only constraint lying on the negative outputs is that they should remain negative (with a possible margin), but not necessarily close to the original negative outputs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 21,
+      "text": "However, our early experiments with this method resulted in a rather unstable EM algorithm.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryegpfeaYS",
+      "rebuttal_id": "SJlzQjkXjB",
+      "sentence_index": 22,
+      "text": "This direction may deserve further investigation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

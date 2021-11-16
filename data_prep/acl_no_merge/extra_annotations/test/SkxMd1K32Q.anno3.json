@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "forum_id": "SJfPFjA9Fm",
+    "review_id": "SkxMd1K32Q",
+    "rebuttal_id": "SJgu9sxfAQ",
+    "title": "ACCELERATING NONCONVEX LEARNING VIA REPLICA EXCHANGE LANGEVIN DIFFUSION",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJfPFjA9Fm&noteId=SJgu9sxfAQ",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 0,
+      "text": "PROS:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 1,
+      "text": "- The text is very well written, with a good balance between mathematical details and intuitions.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 2,
+      "text": "- I really like the high-level description of the algorithms and proof techniques",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 3,
+      "text": "CONS:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 4,
+      "text": "to be completely honest, I am not sure I have learnt anything new from the paper.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 5,
+      "text": "1) the proof techniques are very standard",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 6,
+      "text": "2) although there must be some small innovations, I thought that all the results had more or less been proven by Dupuis and co-authors:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 7,
+      "text": "a. large deviation principles",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 8,
+      "text": "b. the larger the swapping rate, the better (which motivated Dupuis & al to consider the infinite swapping limit.)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 9,
+      "text": "and",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 10,
+      "text": "c. Bakri & al methodology to prove convergence relying on the carre du champ is by now very standard and the proofs of the paper are only minor adaptations.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 11,
+      "text": "I must probably be missing something, and I encourage the authors to clarify what the main novelties are when compared to the several papers by Dupuis & al.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 12,
+      "text": "REMARKS:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "sentence_index": 13,
+      "text": "1) I do not really understand the emphasis on optimisation while all the proofs are related to the convergence to the stationary distributions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 0,
+      "text": "We really appreciate your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 1,
+      "text": "The main purpose of this paper is to introduce a new method to solve global optimization problem via replica exchange Langevin diffusion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 2,
+      "text": "We quantify the acceleration effect from the viewpoint of continuous time process.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 3,
+      "text": "Although this work is inspired from Dupuis's work, their setting is MCMC and they only investigate by large deviation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 4,
+      "text": "We quantify the acceleration effect by both large deviation and chi^2 divergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 5,
+      "text": "Besides, the large deviation rate function in our paper is different with that of Dupuis's since we use an alternative approach.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 6,
+      "text": "We choose such a form of rate function because it is connected to the Dirichlet form, and hence, the convergence of chi^2 divergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 7,
+      "text": "We acknowledge that our analysis tools is standard and not fancy in mathematics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 8,
+      "text": "However, this is not a mathematics conference after all.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 9,
+      "text": "One of our contribution is applying standard mathematical tools to a specific machine learning problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 10,
+      "text": "Finally, another contribution is that we propose a discretized algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 11,
+      "text": "Although Dupuis& et.al's work establishes beautiful and complicated mathematical theory for replica exchange Langevin diffusions, they does not consider the discretization at all.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 12,
+      "text": "In practice, we can only use the discretized one instead of the ideal continuous process to solve problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxMd1K32Q",
+      "rebuttal_id": "SJgu9sxfAQ",
+      "sentence_index": 13,
+      "text": "Our theory quantifies the discretization error and convergence rate and hence, ensures the validity to use the discretized algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "forum_id": "SylWNC4FPH",
+    "review_id": "rygHqoLsKB",
+    "rebuttal_id": "HylnnWjhor",
+    "title": "Auto Completion of User Interface Layout Design Using Transformer-Based Tree Decoders",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylWNC4FPH&noteId=HylnnWjhor",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 0,
+      "text": "The paper presents an auto completion for UI layout design.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 1,
+      "text": "The authors formulate the problem as partial tree completion, and investigate a range of variations of layout decoders based on Transformer.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 2,
+      "text": "The paper proposes two models: Pointer and Recursive Transformer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 3,
+      "text": "The paper designs three sets of metrics to measure the quality of layout prediction based on the literature and the domain specifics of user interface interaction.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 4,
+      "text": "The writing quality is readable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 5,
+      "text": "The presentation is nice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 6,
+      "text": "The task of auto completion for UI layout design is relatively new.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 7,
+      "text": "The paper misses the key baseline in Bayesian optimisation using tree structure [1] which can perform the prediction under the tree-structure dependencies.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 8,
+      "text": "[1] Jenatton, Rodolphe, et al. \"Bayesian optimization with tree-structured dependencies.\" Proceedings of the 34th International Conference on Machine Learning-Volume 70. JMLR. org, 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "sentence_index": 9,
+      "text": "NB: the reviewer has low confidence in evaluating this paper.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 0,
+      "text": "Thanks for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 1,
+      "text": "We missed this previous work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 2,
+      "text": "Jenatton et al. proposed an approach to predict tree structures by using Bayesian optimization to combine independent Gaussian Processes with a linear model that encodes a tree-based structure.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 3,
+      "text": "We have cited and discussed the work in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 4,
+      "text": "The focus of our work is to propose a new tree prediction problem (layout completion) and introduce Transformer-based approaches for addressing the problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rygHqoLsKB",
+      "rebuttal_id": "HylnnWjhor",
+      "sentence_index": 5,
+      "text": "It would be future work to investigate other tree-based models for this problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

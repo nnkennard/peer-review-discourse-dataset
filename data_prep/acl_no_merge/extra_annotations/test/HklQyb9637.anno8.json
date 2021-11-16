@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "forum_id": "SyVU6s05K7",
+    "review_id": "HklQyb9637",
+    "rebuttal_id": "SygOKWFYTm",
+    "title": "Deep Frank-Wolfe For Neural Network Optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyVU6s05K7&noteId=SygOKWFYTm",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 0,
+      "text": "This paper proposes a Frank-Wolfe based method, called DFW, for training Deep Network.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 1,
+      "text": "The DFW method linearizes the loss function into a smooth one, and also adopts Nesterov Momentum to accelerate the training.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 2,
+      "text": "Both techniques have been widely used in the literature for similar settings.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 3,
+      "text": "This paper mainly focuses on the algorithm part, but only empirically demonstrate the convergence results.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 4,
+      "text": "After reading the authors\u2019 feedback and the paper again, I think overall this is a good paper and should be of broader interest to the broader audience in machine learning community.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 5,
+      "text": "In Section 6.1, the authors mention the good generalization is due to large number of steps at a high learning rate. Can we possibly get any theoretical justification on this?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 6,
+      "text": "This paper uses multi class hinge loss as an example for illustration.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HklQyb9637",
+      "sentence_index": 7,
+      "text": "Can this approach be applied for structure prediction, for example, various ranking loss?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 1,
+      "text": "We provide answers below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 2,
+      "text": "* \u201cThe DFW linearizes the loss function into a smooth one, and also adopts Nesterov momentum to accelerate the training.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 3,
+      "text": "We would like to clarify this statement: one of the key ideas of the DFW algorithm is not to linearize the loss function $\\mathcal{L}$, but only the model $f$.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 4,
+      "text": "* \u201cBoth techniques have been widely used in the literature for similar settings\u201d.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 5,
+      "text": "We wish to clarify the main technical contributions of this paper, since the SVM smoothing and the application of Nesterov acceleration are not the main novelty of this work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 6,
+      "text": "We discuss the summary of contributions (available at the end of section 1 of the paper) in the context of technical novelty.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 7,
+      "text": "- Employing a composite framework allows us to use an efficient primal-dual algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 8,
+      "text": "As stated by Reviewer 1, this is novel in the context of deep neural networks: \u201cTo my knowledge, the submission is the first sound attempt to adapt this type of Dual-based algorithm for optimization of Deep Neural Network [..]\u201d.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 9,
+      "text": "- Crucially, our approach yields an update at the same computational cost per iteration as SGD and with the same level of parallelization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 10,
+      "text": "In contrast, in the closest approach to ours, the algorithm of Singh & Shawe-Taylor (2018) can only process a single sample at a time.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 11,
+      "text": "This results in an approach whose runtime is virtually multiplied by the batch-size (it would be slower by two orders of magnitude in typical classification settings, including for the experiments of this paper).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 12,
+      "text": "- We do not mean to claim that the application of Nesterov acceleration is a technical novelty in itself.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 13,
+      "text": "However, its use is subtle in our case (see appendix A.7) and it is empirically crucial for good performance, hence its mention in the paper.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 14,
+      "text": "- To the best of our knowledge, the hyper-parameter free smoothing approach that we propose in this work is novel (but is not the main contribution).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 15,
+      "text": "We have adapted the abstract and summary of contributions to focus on the main novelty, which is an optimization algorithm for deep neural networks with an optimal step-size at the same computational cost per iteration as SGD.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HklQyb9637",
+      "rebuttal_id": "SygOKWFYTm",
+      "sentence_index": 16,
+      "text": "If the reviewer remains concerned by a lack of novelty, we would be grateful if he/she could provide specific references so that we can compare them in detail with the DFW algorithm.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

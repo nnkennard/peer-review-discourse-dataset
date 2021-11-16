@@ -1,0 +1,1752 @@
+{
+  "metadata": {
+    "forum_id": "BJgK6iA5KX",
+    "review_id": "rked778JaQ",
+    "rebuttal_id": "rylM2EzFpX",
+    "title": "AutoLoss: Learning Discrete Schedule for Alternate Optimization",
+    "reviewer": "AnonReviewer4",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJgK6iA5KX&noteId=rylM2EzFpX",
+    "annotator": "anno5"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 0,
+      "text": "Summary: This paper proposes a meta-learning solution for problems involving optimizing multiple loss values.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 1,
+      "text": "They use a simple (small mlp), discrete, stochastic controller to control applications of updates among a finite number of different update procedures.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 2,
+      "text": "This controller is a function of heuristic features derived from the optimization problem, and is optimized using policy gradient either exactly in toy settings or in a online / truncated manor on larger problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 3,
+      "text": "They present results on 4 settings: quadratic regression, MLP classification, GAN, and multi-task MNT.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 4,
+      "text": "They show promising performance on a number of tasks as well as show the controllers ability to generalize to novel tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 5,
+      "text": "This is an interesting method and tackles a impactful problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 6,
+      "text": "The setup and formulation (using PG to meta-optimize a hyper parameter controller) is not extremely novel (there have been similar work learning hyper parameter controllers), but the structure, the problem domain, and applications are.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 7,
+      "text": "The experimental results are through, and provide compelling proof that this method works as well as exploration as to why the method works (analyzing output softmax).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 8,
+      "text": "Additionally the \"transfer to different models\" experiment is compelling.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 9,
+      "text": "Comments vaguely in order of importance:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 10,
+      "text": "1. I am a little surprised that this training strategy works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 11,
+      "text": "In the online setting for larger scale problems, your gradients are highly correlated and highly biased.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 12,
+      "text": "As far as I can tell, you are performing something akin to truncated back back prop through time with policy gradients.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 13,
+      "text": "The biased introduced via this truncation has been studied in great depth in [3] and shown to be harmful.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 14,
+      "text": "As of now, the greedy nature of the algorithm is hidden across a number of sections (not introduced when presenting the main algorithm).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 15,
+      "text": "Some comment as to this bias -- or even suggesting that it might exist would be useful.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 16,
+      "text": "As of now, it is implied that the gradient estimator is unbiased.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 17,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 18,
+      "text": "Second, even ignoring this bias, the resulting gradients are heavily correlated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 19,
+      "text": "Algorithm 1 shows no sign of performing batched updates on \\phi or anything to remove these corrections.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 20,
+      "text": "Despite these concerns, your results seem solid.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 21,
+      "text": "Nevertheless, further understanding as to this would be useful.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 22,
+      "text": "3. The structure of the meta-training loop was unclear to me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 23,
+      "text": "Algorithm 1 states S=1 for all tasks while the body -- the overhead section -- you suggest multiple trainings are required ( S>1?).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 24,
+      "text": "4. If the appendix is correct and learning is done entirely online, I believe the initialization of the meta-parameters would matter greatly -- if the default task performed poorly with a uniform distribution for sampling losses, performance would be horrible.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 25,
+      "text": "This seems like a limitation of the method if this is the case.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 26,
+      "text": "5. Clarity: The first half of this paper was easy to follow and clear. The experimental section had a couple of areas that left me confused. In particular:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 27,
+      "text": "5.1/Figure 1: I think there is an overloaded use of lambda?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 28,
+      "text": "My understanding as written that lambda is both used in the grid search (table 1) to find the best loss l_1 and then used a second location, as a modification of l_2 and completely separate from the grid search?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 29,
+      "text": "6. Validation data / test sets: Throughout this work, it is unclear what / how validation is performed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 30,
+      "text": "It seems you performing controller optimization (optimizing phi), on the validation set loss, while also reporting scores on this validation set.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 31,
+      "text": "This should most likely instead be a 3rd dataset.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 32,
+      "text": "You have 3 datasets worth of data for the regression task (it is still unclear, however, what is being used for evaluation), but it doesn't look like this is addressed in the larger scale experiments at all.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 33,
+      "text": "Given the low meta-parameter count of the I don't think this represents a huge risk, and baselines also suffer from this issue (hyper parameter search on validation set) so I expect results to be similar.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 34,
+      "text": "7. Page 4: \"When ever applicable, the final reward $$ is clipped to a given range to avoid exploding or vanishing gradients\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 35,
+      "text": "It is unclear to me how this will avoid these.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 36,
+      "text": "In particular, the \"exploding\" will come from the \\nabla log p term, not from the reward (unless you have reason to believe the rewards will grow exponentially).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 37,
+      "text": "Additionally, it is unclear how you will have vanishing rewards given the structure of the learned controller.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 38,
+      "text": "This clipping will also introduce bias, this is not discussed, and will probably lower variance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 39,
+      "text": "This is a trade off made in a number of RL papers so it seems reasonable, but not for this reason.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 40,
+      "text": "8. \"Beyond fixed schedules, automatically adjusting the training of G and D remains untacked\" -- this is not 100% true.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 41,
+      "text": "While not a published paper, some early gan work [2] does contains a dynamic schedule but you are correct that this family of methods are not commonplace in modern gan research.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 42,
+      "text": "9. Related work: While not exactly the same setting, I think [1] is worth looking at.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 43,
+      "text": "This is quite similar causing me pause at this comment: \"first framework that tries to learn the optimization schedule in a data-driven way\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 44,
+      "text": "Like this work, they also lean a controller over hyper-parameters (in there case learning rate), with RL, using hand designed features.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 45,
+      "text": "10. There seem to be a fair number of heuristic choices throughout.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 46,
+      "text": "Why is IS squared in the reward for GAN training for example? Why is the scaling term required on all rewards?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 47,
+      "text": "Having some guiding idea or theory for these choices or rational would be appreciated.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 48,
+      "text": "11. Why is PPO introduced?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 49,
+      "text": "In algorithm 1, it is unclear how PPO would fit into this?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 50,
+      "text": "More details or an alternative algorithm in the appendix would be useful.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 51,
+      "text": "Why wasn't PPO used on all larger scale models? Does the training / performance of the meta-optimizer (policy gradient  vs ppo) matter?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 52,
+      "text": "I would expect it would.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 53,
+      "text": "This detail is not discussed in this paper, and some details -- such as the learning rate for the meta-optimizer I was unable to find.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 54,
+      "text": "12. \"It is worth noting that all GAN K:1 baselines perform worse than the rest and are skipped in Figure 2, echoing statements (Arjovsky, Gulrajani, Deng) that more updates of G than D might be preferable in GAN training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 55,
+      "text": "\" I disagree with this statement.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 56,
+      "text": "The WGAN framework is built upon a loss that can be optimized, and should be optimized, until convergence (the discriminator loss is non-saturating) -- not the reverse (more G steps than D steps) as suggested here.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 57,
+      "text": "Arjovsky does discuss issues with training D to convergence, but I don't believe there is any exploration into multiple G steps per D step as a solution.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 58,
+      "text": "13. Reproducibility seems like it would be hard. There are a few parameters (meta-learning rates, meta-optimizers) that I could not find for example and there is a lot of complexity.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 59,
+      "text": "14: Claims in paper seem a little bold / overstating.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 60,
+      "text": "The inception gain is marginal to previous methods, and trains slower than other baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 61,
+      "text": "This is also true of MNT section -- there, the best baseline model is not even given equal training time!",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 62,
+      "text": "There are highly positive points here, such as requiring less hyperparameter search / model evaluations to find performant models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 63,
+      "text": "15. Figure 4a. Consider reformatting data (maybe histogram of differences? Or scatter plot).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 64,
+      "text": "Current representation is difficult to read / parse.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 65,
+      "text": "Typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 66,
+      "text": "page 2, \"objective term. on GANs, the AutoLoss: Capital o is needed.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 67,
+      "text": "Page 3: Parameter Learning heading the period is not bolded.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 68,
+      "text": "[1] Learning step size controllers for robust neural network training.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 69,
+      "text": "Christian Daniel et. al.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 70,
+      "text": "[2]http://torch.ch/blog/2015/11/13/gan.html",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 71,
+      "text": "[3] Understanding Short-Horizon Bias in Stochastic Meta-Optimization, Wu et.al.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rked778JaQ",
+      "sentence_index": 72,
+      "text": "Given the positives, and in-spite of the negatives, I would recommend to accept this paper as it discusses an interesting and novel approach when controlling multiple loss values.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 0,
+      "text": "Thanks for the detailed and encouraging feedback! We reply all comments below (relevant ones are put together):",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 1,
+      "text": ">> Comments #1, #11",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 2,
+      "text": "We mainly account the success of this simple training strategy to the simplicity of the model, the relatively low dimensionality of our input features, and the simplified action space (though all  three suffice to obtain a good controller in the current settings).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 3,
+      "text": "They make the training of the controller much easier compared to other RL tasks with higher dimensional features or larger output space.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 4,
+      "text": "We have added the detailed PPO-based training algorithm in Appendix A.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 5,
+      "text": "While AutoLoss is amenable to different policy optimization algorithms, we empirically find PPO performs better on NMT, but REINFORCE performs better on GANs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 6,
+      "text": "As to the online setting, thanks for pointing us to the \u201cshort-horizon bias\u201d paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 7,
+      "text": "We have indicated in the revision the existence of this bias -- this bias was observed on the GAN task -- overtraining G can increase IS in a short term, but may lead to divergence in a long term as G becomes too strong.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 8,
+      "text": "On the other hand, we didn\u2019t observe it harms on NMT task noticeably.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 9,
+      "text": "We hypothesize the tradeoff is insignificant on NMT, as in our multi-task setting, slightly over-optimizing one task objective usually does not have irreversible negative impact on the MT model (as long as the other objectives are optimized appropriately later on).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 10,
+      "text": ">> Comments #2, #3",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 11,
+      "text": "We\u2019d like to clarify that S=1 is consistent in the overhead section and Algorithm.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 12,
+      "text": "S controls how many sequences to generate to perform a (batched) policy update (i.e. S is the batch size), and we set S=1 for all tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 13,
+      "text": "Only T differs across tasks, but we always update \\phi whenever a reward is generated.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 14,
+      "text": "Back to comment #2: for regression and classification, we have experimented with larger S and found the improvement marginal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 15,
+      "text": "As each reward is generated via an independent experiment, the correlations among gradients are unobvious.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 16,
+      "text": "For large-scale tasks, we use memory replay to alleviate correlations in online settings (please see Algorithm 2 in Appendix A.1 in our revised version).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 17,
+      "text": "Performing batched update with a larger S might help reduce correlations; However, a large S, as a major drawback, requires performing ST (S>>1) steps of task model training, in order to perform one step of controller update.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 18,
+      "text": "This yields better per-step convergence, but longer overall training (wallclock) time for the controller to converge.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 19,
+      "text": "There might exist sweet spots for S where one can achieve both good per-step convergence and short training time, but we skip the search of S and simply use S=1 as it performs well.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 20,
+      "text": "It is worth noting that some recent literature uses a stochastic estimation of the policy gradient with batch size 1 as well, and report strong empirical results [1].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 21,
+      "text": "[1] Efficient Neural Architecture Search via Parameter Sharing.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 22,
+      "text": "ICML 2018",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 23,
+      "text": ">> Comment #4",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 24,
+      "text": "We observe the controller performance on all 4 tasks are insensitive to initialization.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 25,
+      "text": "A good initialization (e.g. in NMT, equally assigning probabilities to each loss at the start of the training) indeed leads to faster learning, but most experiments with random initializations manage to converge to a good optima,",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 26,
+      "text": "thanks to \\epsilon-greedy sampling used in training.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 27,
+      "text": ">> Comment #5",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 28,
+      "text": "They are the same -- there is a typo leading to confusion in the sentence \u201c...in Figure 1 where we set different \\lambda in l_2 = \\lambda |\\Theta|_2...\u201d; which should be \u201c...in Figure 1 where we set different \\lambda in l_2 = \\lambda |\\Theta|_1...\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 29,
+      "text": "We have fixed it in the latest version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 30,
+      "text": ">> Comment #6",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 31,
+      "text": "Please see the last paragraph in page 5.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 32,
+      "text": "For regression, classification and NMT, we split data into 5 partitions D_{train}^C, D_{val}^C, D_{train}^T, D_{val}^T, D_{test}. AutoLoss uses D_{train}^C and D_{val}^C to train the controller.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 33,
+      "text": "Once trained, the controller guides the training of a new task model on another two partitions D_{train}^T, D_{val}^T. Trained task models are evaluated on D_{test}. Baseline methods use the union of D_{train}^C, D_{val}^C, D_{train}^T, D_{val}^T for training/validation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 34,
+      "text": "For GANs that do not need a validation or test set, we follow the same setting in [1] for all methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 35,
+      "text": "[1] Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks. ICLR 2016.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 36,
+      "text": ">> Comment #7",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 37,
+      "text": "Thanks for pointing out -- we apologize for misusing \u201cexploding or vanishing gradients\u201d and have revised the paper to be accurate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 38,
+      "text": "We simply intended to clip the reward to reduce variances, and fount it effectively improved training.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 39,
+      "text": ">> Comment #8, #9",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          42
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 40,
+      "text": "Thanks for pointing us to these two works.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          42
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 41,
+      "text": "In [1], the authors investigate several features and develop a controller that can adaptively adjust the learning rate of the ML problem at hand, similarly in a data-driven way.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          42
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 42,
+      "text": "In [2], the authors propose to manually balance the training of G and D by monitoring how good G and D are, assessed by three quantities and realized by simple thresholding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 43,
+      "text": "By contrast, AutoLoss offers a more generic way to parametrize and learn the update schedule.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 44,
+      "text": "Hence, AutoLoss fits into more problems (as we\u2019ve shown in the paper).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 45,
+      "text": "We have appropriately revised the two claims and cited them in the latest version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          40,
+          43
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 46,
+      "text": ">> Comment #10",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 47,
+      "text": "Empirically, IS^2 or IS do not make much difference on the performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 48,
+      "text": "The scaling term is a flexible parameter that controls the scale of the reward which we do not tune very much though.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 49,
+      "text": ">> Comment #12",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          54
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 50,
+      "text": "Yes, in WGAN, it is preferable to train the critic till optimality.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          56
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 51,
+      "text": "We have revised the statement for accuracy -- we observe in our experiments, for DCGANs with the vanilla GAN objective (JSD), more generator training than discriminator training generally performs better (but this may not be an effective hint for other GAN objectives as they behave very differently).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          56
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 52,
+      "text": ">> Comment #13",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          58
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 53,
+      "text": "We have added Appendix A.8 to disclose all hyperparameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          58
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 54,
+      "text": "All code and model weights used in this paper will be made available.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          58
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 55,
+      "text": ">> Comment #14",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          59
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 56,
+      "text": "We\u2019ve revised our statements to be more accurate: for all GANs and NMT experiments, we observe AutoLoss reaches better final convergence; For GAN 1:1, GAN 1:9, AutoLoss trains faster; for NMT experiments, AutoLoss not only trains faster but also converges better.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          59,
+          60,
+          61,
+          62
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 57,
+      "text": "We\u2019d like to clarify that for all our GANs and NMT experiments, the stopping criteria of an experiment is either divergence or when we don\u2019t observe improvement of convergence for 20 continuous epochs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 58,
+      "text": "This is why in Fig.2, Fig.3(L) and Fig.4(c), it looks like that different methods are given different training time.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 59,
+      "text": ">> Comment #15",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rked778JaQ",
+      "rebuttal_id": "rylM2EzFpX",
+      "sentence_index": 60,
+      "text": "We have update Figure.4(b) to a scatter plot, and fixed mentioned typos in the current version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          66,
+          67
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

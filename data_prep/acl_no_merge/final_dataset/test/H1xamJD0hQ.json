@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "forum_id": "ByxZX20qFQ",
+    "review_id": "H1xamJD0hQ",
+    "rebuttal_id": "Hke6aByfA7",
+    "title": "Adaptive Input Representations for Neural Language Modeling",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByxZX20qFQ&noteId=Hke6aByfA7",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 0,
+      "text": "The authors extend an existing approach to adaptive softmax classifiers used for the output component of neural language models into the input component, once again allowing tying between the embedding and softmax.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 1,
+      "text": "This fills a significant gap in the language modeling architecture space, and the perplexity results bear out the advantages of combining adaptively-sized representations with weight tying.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 2,
+      "text": "While the advance is in some sense fairly incremental, the centrality of unsupervised language modeling to modern deep NLP (ELMo, BERT, etc.) implies that perplexity improvements as large as this one may have meaningful downstream effects on performance on other tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 3,
+      "text": "Some things I noticed:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 4,
+      "text": "- One comparison that I believe is missing (I could be misreading the tables) is comparing directly to Merity et al.'s approach (adaptive softmax but fixed embedding/softmax dimension among the bands). Presumably you're faster, but is there a perplexity trade-off?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 5,
+      "text": "- The discussion/explanation of the differing performance of tying or not tying each part of the embedding weights for the different datasets is confusing; I think it could benefit from tightening up the wording but mostly I just had to read it a couple times. Perhaps all that's complicated is the distinction between embedding and projection weights; it would definitely be helpful to be as explicit about that as possible upfront.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 6,
+      "text": "- The loss by frequency-bin plots are really fantastic.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 7,
+      "text": "You could also try a scatterplot of log freq vs. average loss by individual word/BPE token.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 8,
+      "text": "- Do you have thoughts as to why full-softmax BPE is worse than adaptive softmax word level?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "sentence_index": 9,
+      "text": "That goes against the current (industry) conventional wisdom in machine translation and large-scale language modeling that BPE is solidly better than word-level approaches because it tackles the softmax bottleneck while also sharing morphological information between words.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 1,
+      "text": "Q: \u201ccomparing directly to Merity et al.'s approach\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 2,
+      "text": "Merity et al.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 3,
+      "text": "share the input and output embeddings via an adaptive softmax where all words have the same embedding size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 4,
+      "text": "We reimplemented their approach and found that it did not perform very well in our experiments (25.48 PPL; Appendix A, Table 6, last row).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 5,
+      "text": "We found that sharing fixed size input and output embeddings for a flat softmax performs better (22.63 PPL; second to last row of Table 6).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 6,
+      "text": "This is likely because we train all words at every time step, which is not the case for an adaptive softmax with fixed size embeddings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 7,
+      "text": "Q: \u201cThe discussion/explanation of the differing performance of tying or not tying each part of the embedding weights for the different datasets is confusing\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 8,
+      "text": "We updated the paper and hope that the discussion is clearer now.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 9,
+      "text": "Thank you for the feedback!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 10,
+      "text": "Q: \u201cthoughts as to why full-softmax BPE is worse than adaptive softmax word level\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 11,
+      "text": "Full-softmax BPE is worse because we measure perplexity on the word-level.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 12,
+      "text": "This involves multiplying the probabilities of the individual BPE tokens.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1xamJD0hQ",
+      "rebuttal_id": "Hke6aByfA7",
+      "sentence_index": 13,
+      "text": "BPE token-level perplexity itself is actually significantly lower than word-level PPL (around 21.5 for GBW and around 18 for WikiText-103 for the models presented in the paper) but the two are not comparable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

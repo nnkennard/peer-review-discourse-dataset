@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "forum_id": "B1gHjoRqYQ",
+    "review_id": "B1xOut6DpQ",
+    "rebuttal_id": "S1loX4IlA7",
+    "title": "An Efficient and Margin-Approaching Zero-Confidence Adversarial Attack",
+    "reviewer": "AnonReviewer4",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1gHjoRqYQ&noteId=S1loX4IlA7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 0,
+      "text": "This paper proposes an efficient zero-confidence attack algorithm, MARGINATTACK, which uses the modified Rosen's algorithm to optimize the same objective as CW attack.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 1,
+      "text": "Under a set of conditions, the authors proved convergence of the proposed attack algorithm.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 2,
+      "text": "My main concern about this paper is why this algorithm has a better performance than CW attack?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 3,
+      "text": "I would suggest comparing with CW attack under different sets of hyper-parameters.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 4,
+      "text": "Minor comment:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "sentence_index": 5,
+      "text": "The theoretical proof depends on the convexity assumption, I would also suggest comparing the proposed attack with CW and other benchmarks on some simple models that satisfy the assumptions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 0,
+      "text": "Regarding your first concern on the comparison with CW: In short, MarginAttack is able to achieve a higher attack success rate than CW AND a shorter running time.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 1,
+      "text": "The paper may not make this point obvious enough probably because the curves are too thick to reveal the difference.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 2,
+      "text": "To show this point clearly, we would like to refer you to the results in our response to reviewer 3, where we scanned through the number of binary search steps and measure the success rate and running time.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 3,
+      "text": "As can be seen, MarginAttack has a higher success rate than all the versions of CW.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 4,
+      "text": "There is a success-rate-efficiency tradeoff in CW, as a smaller binary search step number leads to a lower success rate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 5,
+      "text": "However, even with 10 binary search steps, CW is still unable to outperform MarginAttack in terms of success rate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 6,
+      "text": "On the other hand, with very small numbers of binary search steps, CW still runs slower than MarginAttack.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 7,
+      "text": "Hope these results will clarify your major concern.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 8,
+      "text": "Regarding your minor concern:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 9,
+      "text": "In the theorem, we did not assume convexity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 10,
+      "text": "The assumption with the name 'convexity' is saying that the constraint set should not be 'too concave'.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 11,
+      "text": "Please check the following figure where we listed what decision boundaries are permitted by our theorem and what not.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 12,
+      "text": "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/anon181018/iclr2019_rebuttal/master/figure2.pdf",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 13,
+      "text": "As can be seen, the convexity assumption permits a wide variety of decision boundaries.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 14,
+      "text": "Among the few cases that it does not permit is the case where the decision boundary bends more than the L2 ball does.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xOut6DpQ",
+      "rebuttal_id": "S1loX4IlA7",
+      "sentence_index": 15,
+      "text": "In this case, the critical point becomes a local maximum rather than a local minimum.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

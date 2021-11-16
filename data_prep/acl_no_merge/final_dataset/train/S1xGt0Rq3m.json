@@ -1,0 +1,651 @@
+{
+  "metadata": {
+    "forum_id": "ByGOuo0cYm",
+    "review_id": "S1xGt0Rq3m",
+    "rebuttal_id": "BkesLOIt07",
+    "title": "Meta-Learning with Domain Adaptation for Few-Shot Learning under Domain Shift",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByGOuo0cYm&noteId=BkesLOIt07",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 0,
+      "text": "The authors proposed meta domain adaptation to address domain shift scenario in meta learning setup.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 1,
+      "text": "The proposed model combines few shot meta-learning with the adversarial domain adaptation to demonstrate performance improvements in several experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 2,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 3,
+      "text": "1. A new few shot learning with domain shift problem is studied in the paper.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 4,
+      "text": "2. A new model combining prototypical network with GAN and cycle-consistency loss for addressing meta-learning domain shift scenario.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 5,
+      "text": "The experimental improvements on omniglot seem quite substantial.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 6,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 7,
+      "text": "1. Can you clarify why the proposed approach is better than the Meta-RevGrad baseline?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 8,
+      "text": "It seems that both are using meta-learning with domain adaptation technique.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 9,
+      "text": "What happen for Meta-RevGrad + idt or Meta-RevGrad + revMap?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 10,
+      "text": "I feel the baseline in domain adaptation area is a bit limited.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 11,
+      "text": "2. How is the performance of a simpler baseline such as combining a subset of new domain as training set to train MAML or PN (probably in 5-shot, 5-class case)?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 12,
+      "text": "3. It seems the domain shift in the paper is less dramatic.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 13,
+      "text": "i.e., omniglot <-> omniglot-M. I wonder whether the proposed approach can still work in large domain shift such as omniglot to fashion-mnist etc.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 14,
+      "text": "4. The novelty of the model is relatively limited as it is a combination of previous techniques on a new problem.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 15,
+      "text": "Minor:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 16,
+      "text": "1. Where is L_da in Figure 2? In Figure 2, what\u2019s the unlabelled data from which testing tasks are drawn? Is it from meta-test data training set?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "sentence_index": 17,
+      "text": "2. In the caption of figure 2, there should be a space after `\":\".",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 0,
+      "text": "Overall:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 1,
+      "text": "We thank you for your time and appreciating the strengths of our work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 2,
+      "text": "Based on your guidance and suggestions, we have tried to do additional experiments to improve the quality of our work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 3,
+      "text": "Concern 1: Comparison to Meta-RevGrad",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 4,
+      "text": "Meta-RevGrad tries to achieve feature invariance at the embedding level.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 5,
+      "text": "Achieving such feature invariance for high-dimensional feature mapping can be a very weak constraint [1], causing limitation in performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 6,
+      "text": "Recently, generative approaches, following image-to-image translation have been shown achieve better domain adaptation, as this constrains the feature embedding to generate the data in a new domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 7,
+      "text": "Being a non-GAN based approach, concepts such idt (encouraging the styling network to behave as an identity when given a target domain instance as input) and revMap (constructing source instance back from generated target instance) are not applicable in this scenario, as no instances or images are being generated from a feature embedding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 8,
+      "text": "Concern 1, 2, 3: Experiments",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 9,
+      "text": "Thank you for these suggestions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 10,
+      "text": "Taking your comments and comments from other reviewers into account, we have made improvements to the experimental section.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 11,
+      "text": "Specifically:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 12,
+      "text": "\u201cDomain Adaptation Baselines\u201d,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 13,
+      "text": "We have now added additional domain adaptation baselines, designed in the setting suggested by Reviewer 2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 14,
+      "text": "\u201cSimple baseline \u2013 combining a subset of a new domain as training set\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 15,
+      "text": "We see the merit of this baseline, but there are several challenges in executing this.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 16,
+      "text": "Designing it in a fair way is tricky.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 17,
+      "text": "Using some labelled data in target domain maybe unfair, as we are not allowed to see meta-test data.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 18,
+      "text": "Moreover, this is likely to not work, as the meta-train data would be too large, and would dominate, and we do not have a clear way to set the weights.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 19,
+      "text": "\u201cDramatic Domain Shift, Omniglot to Fashion-MNIST\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 20,
+      "text": "This could be an interesting setting, but we don\u2019t think this will work very well, as the tasks are themselves completely different. We would not expect a character recognition model to transfer to a object recognition task, as the visual features are very different.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 21,
+      "text": "Minor:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 22,
+      "text": "Thanks for this; we have updated the draft to make the presentation clearer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 23,
+      "text": "Unlabelled data refers to only the domain of the meta-test data, but the meta-test data is never used in meta-training.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 24,
+      "text": "L_da is essentially the sum of L_gan and L_cycle.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xGt0Rq3m",
+      "rebuttal_id": "BkesLOIt07",
+      "sentence_index": 25,
+      "text": "[1] Shu, R., Bui, H.H., Narui, H. and Ermon, S. A DIRT-T Approach to Unsupervised Domain Adaptation. ICLR 2018",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

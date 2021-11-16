@@ -1,0 +1,512 @@
+{
+  "metadata": {
+    "forum_id": "H1xwNhCcYm",
+    "review_id": "BJe__C5d3Q",
+    "rebuttal_id": "ByxeVRhY0m",
+    "title": "Do Deep Generative Models Know What They Don't Know? ",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1xwNhCcYm&noteId=ByxeVRhY0m",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 0,
+      "text": "This paper displays an occurrence of density models assigning higher likelihood to out-of-distribution inputs compared to the training distribution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 1,
+      "text": "Specifically, density models trained on CIFAR10 have higher likelihood on SVHN than CIFAR10.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 2,
+      "text": "This is an interesting observation because the prevailing assumption is that density models can distinguish inliers from outliers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 3,
+      "text": "However, this phenomenon is not encountered when comparing MNIST and NotMNIST.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 4,
+      "text": "The SVHN/CIFAR10 phenomenon has also been shown in concurrent work [1].",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 5,
+      "text": "Given that you observed that SVHN has higher likelihood on all three model types (PixelCNN, VAE, Glow), why investigate a component specific to just flow-based models (the volume term)?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 6,
+      "text": "It seems reasonable to suspect that the phenomenon may be due to a common cause in all three model types.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 7,
+      "text": "For instance, the experiments seem to indicate that generalizing density estimation from CIFAR training set to CIFAR test set is likely challenging and thus the models underfit the true data distribution, resulting in the simpler dataset (SVHN) having higher likelihood.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 8,
+      "text": "Given the title of the paper, it would have been nice if this paper explored more than just MNIST vs NotMNIST and SVHN vs CIFAR10, so that the readers can gain a better feel for when generative models will be able to detect outliers.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 9,
+      "text": "For instance, a scenario where the data statistics (pixel means and variances) are nearly equivalent for both datasets would be interesting.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 10,
+      "text": "The second order analysis is good but it seems to come down to just a measure of the empirical variances of the datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 11,
+      "text": "This paper is well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 12,
+      "text": "I think the presentation of this density modelling shortcoming is a good contribution but leaves a bit to be desired.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 13,
+      "text": "[1] Choi, H. and Jang, E. Generative Ensembles for Robust Anomaly Detection.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 14,
+      "text": "https://arxiv.org/abs/1810.01392",
+      "suffix": "\n\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 15,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 16,
+      "text": "- Interesting observation of density modelling shortcoming",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 17,
+      "text": "- Clear presentation",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 18,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 19,
+      "text": "- Lack of a strong explanation for the results or a solution to the problem",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "sentence_index": 20,
+      "text": "- Lack of an extensive exploration of datasets",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 0,
+      "text": "Thanks again, Reviewer #2, for your insightful feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 1,
+      "text": "We respond to your other comments below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 2,
+      "text": "1.  \u201cWhy investigate a component specific to just flow-based models (the volume term)? It seems reasonable to suspect that the phenomenon may be due to a common cause in all three model types.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 3,
+      "text": "See general response #3.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 4,
+      "text": "2.  \u201cFor instance, the experiments seem to indicate that generalizing density estimation from CIFAR training set to CIFAR test set is likely challenging and thus the models underfit the true data distribution, resulting in the simpler dataset (SVHN) having higher likelihood.\u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 5,
+      "text": "We do not believe our models are necessarily underfit.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 6,
+      "text": "In fact, we found that Glow had a tendency to *overfit,* and that one must carefully set Glow\u2019s l2 penalty and choose its scale parametrization (exp vs sigmoid, see Appendix D) in order to prevent it from doing so.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 7,
+      "text": "We thought this overfitting to the training data could be a reason for the phenomenon and therefore we tuned our implementations to have reasonable generalization.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 8,
+      "text": "3.  \u201cIt would have been nice if this paper explored more than just MNIST vs NotMNIST and SVHN vs CIFAR10, so that the readers can gain a better feel for when generative models will be able to detect outliers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 9,
+      "text": "For instance, a scenario where the data statistics (pixel means and variances) are nearly equivalent for both datasets would be interesting.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 10,
+      "text": "See general response #1 in regards to data sets and additional results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 11,
+      "text": "Thank you for the suggestion of looking at data sets with similar statistics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 12,
+      "text": "We do this, in a way, with our second order analysis and the \u2018gray-ing\u2019 experiment in Figure 5 (b) (formerly Figure 6 (b) in the original draft).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 13,
+      "text": "Gray CIFAR-10 (blue dotted line) nearly overlaps with original SVHN (red solid line) in terms of their log p(x) evaluations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 14,
+      "text": "Figure 12 (formerly Figure 13) then shows the latent (empirical) distribution of the gray images, and we see that the gray CIFAR-10 latent variables nearly overlap with the SVHN latent variables.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 15,
+      "text": "This is to be expected though, given the overlapping p(x) histograms, since the probability assigned by CV-Glow (in comparison to other inputs) is fully determined by the position in latent space.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 16,
+      "text": "4.  \u201cThe second order analysis is good but it seems to come down to just a measure of the empirical variances of the datasets.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe__C5d3Q",
+      "rebuttal_id": "ByxeVRhY0m",
+      "sentence_index": 17,
+      "text": "See general response #2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

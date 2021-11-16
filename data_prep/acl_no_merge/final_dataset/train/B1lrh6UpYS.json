@@ -1,0 +1,738 @@
+{
+  "metadata": {
+    "forum_id": "BJg73xHtvr",
+    "review_id": "B1lrh6UpYS",
+    "rebuttal_id": "BJlcvhU8iS",
+    "title": "Constant Curvature Graph Convolutional Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=BJg73xHtvr&noteId=BJlcvhU8iS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 1,
+      "text": "The authors propose using non-Euclidean spaces for GCNs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 2,
+      "text": "This is inspired by the recent work into non-Euclidean, and especially hyperbolic, embeddings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 3,
+      "text": "A few papers have recently tried to go past embeddings into building non-Euclidean models, requiring the lifting of standard operations in Euclidean space to non-Euclidean settings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 4,
+      "text": "This has been done in particular in hyperbolic space, but some datasets benefit from more complex spaces.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 5,
+      "text": "The authors combine the mixed-curvature product formalism that uses products of Euclidean, hyperbolic, and spherical spaces for embeddings, but use these for GCN operations.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 6,
+      "text": "Doing this requires, in particular, developing a reasonable way to perform these operations in spherical space (since Euclidean is trivial and hyperbolic has been recently worked on).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 7,
+      "text": "The authors do a nice lifting via complex operations, and both the hyperbolic and spherical spaces can devolve into the flat Euclidean space when their curvature goes to 0.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 8,
+      "text": "The authors implement these GCNs, train the curvatures, and demonstrate performance improvements over Euclidean only versions on node classification on benchmark datasets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 9,
+      "text": "They also give a fairly nice introduction to all of these ideas in an extended appendix.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 10,
+      "text": "Strengths, Weaknesses, Recommendation:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 11,
+      "text": "This paper is reasonably interesting---it joins an effort to produce non-Euclidean models in a tractable way, which is fairly challenging, but could have a good impact.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 12,
+      "text": "On the plus side, it's great that the authors added the nice development for the spherical operations, since that will come in handy for many models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 13,
+      "text": "The experiments are also good.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 14,
+      "text": "On the downside, everything here is an extension of existing work, and the body of the paper is hard to read (though this may be inevitable, there's a lot of background to go over here).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 15,
+      "text": "Overall I recommend accepting it; I think it's a solid contribution.",
+      "suffix": "\n\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 16,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 17,
+      "text": "- I don't understand why the authors say that their space \"interpolates smoothly\" just because the limit in the curvature is the same from the left and right side.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 18,
+      "text": "For example, the absolute value function has the same limit from the left and the right at 0, but it's not differentiable there. Is it actually true that if we take the derivatives of the piecewise hyperbolic/spherical distance function that it's differentiable at c=0?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 19,
+      "text": "- There are a couple of recent papers that also consider hyperbolic GCNs, and in fact use  similar ideas for the aggregation and update steps (i.e., same lift to hyperbolic space).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 20,
+      "text": "However, these were recently NeurIPS papers, and the text is not yet out, so I don't think this should affect the authors' independent work (and also the product part is new).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 21,
+      "text": "I do recommend that the authors compare against those results in a future update of this work.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 22,
+      "text": "The papers are \"Hyperbolic Graph Convolutional Neural Networks\" by Chami et al and Hyperbolic Graph Neural Networks by Liu et al.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 23,
+      "text": "- One thing that I didn't see discussed by the authors is that there are subtle difference between hyperbolic and spherical spaces.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 24,
+      "text": "For example, the weighted midpoint of Def. 3.2 doesn't immediately extend to spherical space (or at least won't be unique).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 25,
+      "text": "As an example, consider S^2 and the mean of two antipodal points on it---there's many choices for the midpoint.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 26,
+      "text": "You probably have to limit the operation to a half-sphere (there's some ideas for this in Gu et al).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 27,
+      "text": "- For the synthetic tree, why is the number of edges 2(|V|-1) rather than |V|-1?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 28,
+      "text": "- Are the curvatures the same for each layer for the GCNs?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 29,
+      "text": "This is an interesting point to discuss (some of the NeurIPS papers I mentioned train the curvature for each layer).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 30,
+      "text": "Also, how do you select the number of factors of each type?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 31,
+      "text": "- Minor, but some of these citations can be updated.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 32,
+      "text": "The \"De Sa\" et al 2018 arxiv citation is really Sala et al and is an ICML '18 paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 33,
+      "text": "Similarly, Gulcehre et al is a 2019 ICLR paper, and so on. It's always good to get these right.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 34,
+      "text": "- Is there any actual empirical importance from recovering the Euclidean case exactly for 0 curvature?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 35,
+      "text": "The reason I ask is that my experience is that the hyperboloid is typically easier to work",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 36,
+      "text": "with",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 37,
+      "text": ".",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 38,
+      "text": "- One useful thing to point out in B.3.3 is that in general, it need not be a diffeomorphism for all of M for any manifold, which leads to non-uniqueness.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 39,
+      "text": "In differential geometry, the \"cut locus\" is the region beyond which there is this non-uniqueness.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "sentence_index": 40,
+      "text": "- In the appendix, the statement \"Sarkar (2011) show that a similar statement as in Theorem 2 holds for a very general class of trees\" is confusing to me. The \"general class\", as far as I know, is actually *all* trees, weighted or unweighted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 0,
+      "text": "We thank reviewer #3 for the extensive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 1,
+      "text": "We have incorporated it as stated below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 2,
+      "text": "We have significantly improved the exposition in this paper, ameliorated the discussion of the related work and added the suggested new interesting references, added theorems and more formal statements in the main text, compressed the appendix and enhanced the description of the experimental setup.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 3,
+      "text": "Proofs that the space \"interpolates smoothly with curvature\": we added formal proofs (see theorems 2 and 3) that all the operations are differentiable, i.e. the gradients are equal from both the left and right at 0, w.r.t. curvature, for the chosen models of hyperbolic and spherical geometry.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 4,
+      "text": "k-addition definiteness in the spherical setting: we have added the formal condition that the k-addition be well-defined, and a proof that for two points this condition indeed recovers x != y / (k ||y||^2) - see Theorem 1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 5,
+      "text": "Theorem 5 shows that our proposed left-matrix-multiplication is an intrinsic averaging for Riemannian manifolds of constant curvature, i.e. it does commute with isometries when the matrix A is right-stochastic, which is not the case of right-matrix-multiplication.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 6,
+      "text": "This is a desirable property for Riemannian vector averaging.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 7,
+      "text": "Theorem 6 shows that weighted combinations in the tangent space used in the very recent works of [1,2] (appeared after ICLR submission deadline) is also an intrinsic averaging for Riemannian manifolds of constant sectional curvature, i.e. it does commute with isometries.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 8,
+      "text": "Other comments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 9,
+      "text": "-Synthetic tree: contains |V| - 1 edges.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 10,
+      "text": "We corrected this mistake.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 11,
+      "text": "-Curvatures: are learned as we state in the paper section 4 and appendix F.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 12,
+      "text": "-Citations: fixed.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 13,
+      "text": "-Working with the Poincare ball as opposed to the hyperboloid model: this allows us to use gyrovector spaces which are defined either for the Poincare ball or the Klein model, as well as to connect those with the Riemannian geometry of the space.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 14,
+      "text": "Moreover, as we show in the paper, we can now smoothly interpolate between all constant curvature spaces which is beneficial for learning curvatures without a priori deciding on their signs.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 15,
+      "text": "-Statement about \u201cgeneral class of trees\u201d replaced by \u201call weighted or unweighted trees\u201d.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          40
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 16,
+      "text": "[1] Hyperbolic Graph Neural Networks, I. Chami et al., Neurips\u201919",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lrh6UpYS",
+      "rebuttal_id": "BJlcvhU8iS",
+      "sentence_index": 17,
+      "text": "[2] Hyperbolic Graph Convolutional Networks, Q. Liu et al., Neurips\u201919",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

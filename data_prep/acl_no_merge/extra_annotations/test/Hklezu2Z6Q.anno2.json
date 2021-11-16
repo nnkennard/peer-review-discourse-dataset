@@ -1,0 +1,766 @@
+{
+  "metadata": {
+    "forum_id": "Bkeuz20cYm",
+    "review_id": "Hklezu2Z6Q",
+    "rebuttal_id": "H1gYO-8SC7",
+    "title": "Double Neural Counterfactual Regret Minimization",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Bkeuz20cYm&noteId=H1gYO-8SC7",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 0,
+      "text": "The paper proposes a neural net implementation of counterfactual regret minimization where 2 networks are learnt, one for estimating the cumulative regret (used to derive the immediate policy) and the other one for estimating a cumulative mixture policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 1,
+      "text": "In addition the authors also propose an original MC sampling strategy which generalize outcome and external sampling strategies.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 2,
+      "text": "The paper is interesting and easy to read. My main concern is about the feasibility of using a neural networks to learn cumulative quantities.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 3,
+      "text": "The problem of learning cumulative quantities in a neural net is that we need two types of samples:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 4,
+      "text": "- the positive examples: samples from which we train our network to predict its own value plus the new quantity,",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 5,
+      "text": "but also:",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 6,
+      "text": "- the negative examples: samples from which we should train the network to predict 0, or any desired initial value.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 7,
+      "text": "However in the approach proposed here, the negative examples are missing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 8,
+      "text": "So the network is not trained to predict 0 (or any initial values) for a newly encountered state.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 9,
+      "text": "And since neural networks generalize (very well...) to states that have not been sampled yet, the network would predict an arbitrary values in states that are visited for the first time.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 10,
+      "text": "For example the network predicting the cumulative regret may generalize to large values at newly visited states, instead of predicting a value close to 0.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 11,
+      "text": "The resulting policy can be arbitrarily different from an exploratory (close to uniform) policy, which would be required to minimize regret from a newly visited state.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 12,
+      "text": "Then, even if that state is visited frequently in the future, this error in prediction will never be corrected because the target cumulative regret depends on the previous prediction.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 13,
+      "text": "So there is no guarantee this algorithm will minimise the overall regret.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 14,
+      "text": "This is a well known problem for exploration (regret minimization) in reinforcement learning as well (see e.g. the work on pseudo-counts [Bellemare et al., 2016, Unifying Count-Based Exploration and Intrinsic Motivation] as one possible approach based on learning a density model).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 15,
+      "text": "Here, maybe a way to alleviate this problem would be to generate negative samples (where the network would be trained to predict low cumulative values) by following a different (possibly more exploratory) policy.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 16,
+      "text": "Other comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 17,
+      "text": "- It does not seem necessary to predict cumulative mixture policies (ASN network).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 18,
+      "text": "One could train a mixture policy network to directly predict the current policy along trajectories generated by MC.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 19,
+      "text": "Since the samples would be generated according to the current policy \\sigma_t, any information nodes I_i would be sampled proportionally to \\pi^{\\sigma^t}_i(I_i), which is the same probability as in the definition of the mixture policy (4).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 20,
+      "text": "This would remove the need to learn a cumulative quantity.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 21,
+      "text": "- It would help to have a discussion about how to implement (7), for example do you use a target network to keep the target value R_t+r_t fixed for several steps?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 22,
+      "text": "- It is not clear how the initialisation (10) is implemented.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "sentence_index": 23,
+      "text": "Since you assume the number of information nodes is large, you cannot minimize the l2 loss over all states. Do you assume you generate states by following some policy? Which policy?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 0,
+      "text": "Thanks for your effort in providing this detailed and useful review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 1,
+      "text": "We present our clarification in the following:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 2,
+      "text": "Q1: the feasibility of using neural networks to learn cumulative quantities:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 3,
+      "text": "A: In each iteration, only a small subset of information sets are sampled, which may lead to the neural networks forgetting values for those unobserved information sets.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 4,
+      "text": "To avoid such catastrophic forgetting, we used the neural network parameters from previous iterations as initialization, which gives an online learning/adaptation to the update.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 5,
+      "text": "Furthermore, due to the generalization ability of the neural networks, even samples from a small number of information sets are used to update the new neural networks, we find that the newly updated neural networks can produce very good value for the cumulative regret and the strategy mixture.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 6,
+      "text": "(we give related discussion in section 3.1 and add much more experimental results in Figure 5, further details please see the revised paper.)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 7,
+      "text": "Q2: It does not seem necessary to predict cumulative mixture policies (ASN network)?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 8,
+      "text": "A: As you say, any information nodes I_i would be sampled proportionally to \\pi^{\\sigma^t}_i(I_i), which is the same probability as in the definition of the mixture policy (Eq.4).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 9,
+      "text": "Actually, if we have a large enough buffer to save all the sampled nodes, it\u2019s easy to inference the mixture policy accordingly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 10,
+      "text": "However, in the large game, this large memory is expensive and impossible.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 11,
+      "text": "Another method called reservoir sampling was used in NSFP to address a similar problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 12,
+      "text": "We borrow this idea to our method, however, the achieved mixture policy cannot converge to a low exploitability.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 13,
+      "text": "Actually, the third possible solution could employ the checkpoint of each current strategy, and mixture this current strategy accordingly.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 14,
+      "text": "Q3: It would help to have a discussion about how to implement (7), for example do you use a target network to keep the target value R_t+r_t fixed for several steps?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 15,
+      "text": "A: The optimization problem for the double neural networks is different from that in DQN, where the target network is fixed for several steps and only one step of gradient descent is performed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 16,
+      "text": "In our setting, both RSN and ASN perform several steps of gradient descent with stochastic mini-batch samples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 17,
+      "text": "Furthermore, in DQN, the Q-value for the greedy action is used in the update, while in our setting, we do not use greedy actions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 18,
+      "text": "Algorithm E gives further details on how to optimize the objectives in Equation 7 and Equation 8 (Further discussion please see the revised paper.)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 19,
+      "text": "Q4: It is not clear how the initialisation (10) is implemented.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 20,
+      "text": "Since you assume the number of information nodes is large, you cannot minimize the l2 loss over all states. Do you assume you generate states by following some policy? Which policy?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 21,
+      "text": "A: Generally, Eq.10 is an idea of behavior cloning algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 22,
+      "text": "Clone a good initialization, and then continuously update the two neural networks using our method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 23,
+      "text": "In the large extensive game, the initial strategy is obtained from an abstracted game which has a manageable number of information sets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 24,
+      "text": "The abstracted game is generated by domain knowledge, such as clustering similar hand strength cards into the  same buckets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hklezu2Z6Q",
+      "rebuttal_id": "H1gYO-8SC7",
+      "sentence_index": 25,
+      "text": "(refer to section 3.3 in the revised paper.)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

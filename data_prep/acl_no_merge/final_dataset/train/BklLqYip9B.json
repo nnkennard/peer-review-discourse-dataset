@@ -1,0 +1,1355 @@
+{
+  "metadata": {
+    "forum_id": "SklOypVKvS",
+    "review_id": "BklLqYip9B",
+    "rebuttal_id": "B1xD5RI1iB",
+    "title": "A Data-Efficient Mutual Information Neural Estimator for Statistical Dependency Testing",
+    "reviewer": "AnonReviewer4",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SklOypVKvS&noteId=B1xD5RI1iB",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 0,
+      "text": "Second update:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 1,
+      "text": "We thank the authors for updating their paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 2,
+      "text": "The work is now improving, and is on the right track for publication at a future conference.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 3,
+      "text": "There are a few comments on the new results, and suggestions for further improvement:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 4,
+      "text": "* The issue of possible false positives due to sample dependence in fMRI data has again been ignored in the rebuttal.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 5,
+      "text": "Without careful treatment of this effect, these results are vacuous.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 6,
+      "text": "* There is still no comparison with competing nonparametric tests on the fMRI data.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 7,
+      "text": "* the results linking the COCO and MINE estimators are interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 8,
+      "text": "Some statements don't make sense, however, eg. \"HSIC-based estimators tend to have loose confidence intervals due to the need to bound generalization error of kernels f and g on unseen data points.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 9,
+      "text": "\" First, f and g are functions, not kernels.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 10,
+      "text": "Second, testing with HSIC or COCO does not require generalisation to unseen data points: this is why testing is an easier problem than regression.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 11,
+      "text": "For HSIC testing, I am surprised to read in the footnote that the Gamma approximation report significantly more than 5% errors, especially given the Table 4 results that show the correct level.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 12,
+      "text": "In any case, I very strongly suggest using a permutation approach to obtain the test threshold for HSIC, which is by far the most robust and reliable method.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 13,
+      "text": "The Gamma approximation has no statistical guarantees, as stated explicitly in the HSIC testing paper of NeurIPS 2007.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 14,
+      "text": "Permutation gives a guarantee of the correct level.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 15,
+      "text": "See the NeurIPS paper for details.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 16,
+      "text": "Once you have verified the correct false positive rate for the permutation threshold, then you can compute the p-value on the alternative.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 17,
+      "text": "While the comparison with HSIC is a helpful one, it is also required to compare with the competing method closest to yours, i.e.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 18,
+      "text": "the Berrett  and Samworth test.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 19,
+      "text": "In addition, HSIC is a non-adaptive test, but your test is adaptive, so a fairer comparison would be to a modern adaptive test such as \"An Adaptive Test of Independence with Analytic Kernel Embeddings.\"",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 20,
+      "text": "*",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 21,
+      "text": "The false positive rate in the sanity check is far below the design level of 0.05.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 22,
+      "text": "This is as I expected, given the use of the Hoeffding bound.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 23,
+      "text": "This should be stated clearly in the main text, and not disclosed in the final sentence of the final page of the appendix.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 24,
+      "text": "====================",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 25,
+      "text": "Update: thank you for your rebuttal.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 26,
+      "text": "\"the necessary and sufficient condition of dependency, is more general and is complementary to other techniques that make stronger assumptions about the data. \"",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 27,
+      "text": "The alternative tests listed are nonparametric.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 28,
+      "text": "That is to say, unlike Pearson correlation, they do not make specific parametric assumptions on the nature of the dependence.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 29,
+      "text": "Rather they make generic smoothness assumptions (your test also makes such assumptions by the choice of neural network architecture).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 30,
+      "text": "Thus, comparison with the prior work in Statistics and Machine Learning is relevant, since these tests have the same aims and scope as your tests.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 31,
+      "text": "The cited Berrett and Samworth MI test uses a permutation approach to obtaining the test threshold, not an asymptotic approach  (see the results of Section 4 of that paper).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 32,
+      "text": "Several of the other cited tests also use a permutation approach for the test threhsold.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 33,
+      "text": "These tests are therefore relevant prior work.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 34,
+      "text": "\" If things change very little from one second to the next, the signals could be very similar and may not really be, intuitively, independent samples and may bias result of the study.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 35,
+      "text": "However, which independence assumptions to use is not in scope for our paper,",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 36,
+      "text": "because our fMRI study is trying to show that dependency testing works \"",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 37,
+      "text": "In the work cited by Chwialkowski et al, failure to account for the dependence between samples results in excessive false positives.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 38,
+      "text": "This is because, for dependent data, the effective sample size is reduced, and the tests must be made more conservative to correct for this effect.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 39,
+      "text": "It is therefore the case that the fMRI results may be false positives.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 40,
+      "text": "Re level:\"This proof could be experimentally verified ...\"  This should be verified. In particular, Hoeffding can be very loose in practice, which is likely to be observed in experiments.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 41,
+      "text": "======",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 42,
+      "text": "The authors propose a procedure for improving neural mutual information estimates, via a combination of data augmentation and cross validation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 43,
+      "text": "They then use these estimates in hypothesis testing, on low dimensional toy datasets and on high dimensional real-world fMRI data.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 44,
+      "text": "The improved training procedures for MI estimation are of interest, however the hypothesis testing parts of the paper could still be improved.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 45,
+      "text": "In hypothesis testing, it is important to verify that the test has the correct level (false positive rate).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 46,
+      "text": "This is all the more essential when the estimate has required optimisation over parameters.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 47,
+      "text": "It is not clear from the presentation that this has been confirmed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 48,
+      "text": "There are a number of prior approaches to testing for multivariate statistical dependence in the machine learning and statistics literature (including a 2017 paper which uses mutual information).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 49,
+      "text": "A small selection is given below, although a literature search will reveal many more papers.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 50,
+      "text": "In the absence of citation or comparison with any of the prior work on multivariate statistical dependence testing, the current submission is not suitable for publication.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 51,
+      "text": "In statistics:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 52,
+      "text": "---------------",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 53,
+      "text": "https://arxiv.org/abs/1711.06642",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 54,
+      "text": "Nonparametric independence testing via mutual information",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 55,
+      "text": "Thomas B. Berrett, Richard J. Samworth",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 56,
+      "text": "2017",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 57,
+      "text": "Measuring and testing dependence by correlation of distances",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 58,
+      "text": "G\u00e1bor J. Sz\u00e9kely, Maria L. Rizzo, and Nail K. Bakirov",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 59,
+      "text": "Ann. Statist.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 60,
+      "text": "Volume 35, Number 6 (2007), 2769-2794.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 61,
+      "text": "Large-scale kernel methods for independence testing",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 62,
+      "text": "Qinyi ZhangEmail Sarah Filippi, Arthur Gretton, Dino Sejdinovic",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 63,
+      "text": "Statistics and Computing",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 64,
+      "text": "January 2018, Volume 28, Issue 1, pp 113\u2013130| Cite as",
+      "suffix": "\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 65,
+      "text": "In machine learning:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 66,
+      "text": "---------------------",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 67,
+      "text": "Multivariate tests of association based on univariate tests",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 68,
+      "text": "Heller, Ruth and Heller, Yair",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 69,
+      "text": "Advances in Neural Information Processing Systems 29",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 70,
+      "text": "2016",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 71,
+      "text": "A Kernel Statistical Test of Independence",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 72,
+      "text": "Gretton, Arthur and Fukumizu, Kenji and Choon H. Teo and Song, Le and Sch\\\"{o}lkopf, Bernhard and Alex J. Smola",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 73,
+      "text": "Advances in Neural Information Processing Systems 20",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 74,
+      "text": "2008",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 75,
+      "text": "http://papers.nips.cc/paper/3201-a-kernel-statistical-test-of-independence.pdf",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 76,
+      "text": "http://proceedings.mlr.press/v70/jitkrittum17a/jitkrittum17a.pdf",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 77,
+      "text": "An Adaptive Test of Independence with Analytic Kernel Embeddings",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 78,
+      "text": "Wittawat Jitkrittum, Zolt\u00e1n Szab\u00f3, Arthur Gretton ; ICML 2017, PMLR 70:1742-1751",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 79,
+      "text": "Time dependence",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 80,
+      "text": "----------------",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 81,
+      "text": "It is also the case that if the variables have time dependence, then appropriate corrections must be made for the test threshold, to avoid excessive false positives.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 82,
+      "text": "Does the fMRI data exhibit time dependence?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 83,
+      "text": "For the case of multivariate statistical dependence testing, such corrections are described e.g. in:",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 84,
+      "text": "https://papers.nips.cc/paper/5452-a-wild-bootstrap-for-degenerate-kernel-tests.pdf",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 85,
+      "text": "A Wild Bootstrap for Degenerate Kernel Tests",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 86,
+      "text": "Kacper Chwialkowski, Dino Sejdinovic, Arthur Gretton",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "sentence_index": 87,
+      "text": "NeurIPS 2014",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 0,
+      "text": "Thank you for the detailed review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 1,
+      "text": "We appreciate your extremely useful pointers to existing dependency testing techniques, many of which are new to us. Before delving into them, here's our initial thoughts.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 2,
+      "text": "First and foremost, we would like to know more details on the reasoning behind the rejection rating.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 3,
+      "text": "It seems that the criticisms are on citations to other dependency testing approaches and time-dependency of fMRI data.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 4,
+      "text": "The suggestions are invaluable and we'll gladly include them (work in progress).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 5,
+      "text": "But comparison with them is not apples to apples , so we are not sure to what extent that adds value to our work, where we already compared to the KSG estimator for MI estimation and Pearson's correlation for dependency testing.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 6,
+      "text": "Comparing to other dependency testing approaches, our technique allows the use of arbitrary neural networks and directly tests MI>0, the necessary and sufficient condition of dependency, is more general and is complementary to other techniques that make stronger assumptions about the data.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 7,
+      "text": "We want to point out that a simple and most widely used dependency testing technique is Pearson's correlation through test of linear correlation (sufficient condition of dependency), which we compared to and show that our technique provides complementary value on sine wave and the fMRI dataset.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 8,
+      "text": "We are aware that low sample complexity dependency tests exist and can be achieved by making additional assumptions on data, and we discussed that in the conclusion section, but our technique makes less assumptions and is applicable to general datasets which may not satisfy stricter assumptions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 9,
+      "text": "We are very interested in the HSIC-based techniques which seem to be popular and we could show complementarity. But at the same time the conclusion will be the same, so we have question on what value does it add for the audience over Pearson's correlation.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 10,
+      "text": "Regarding other methods for dependency testing through mutual information, after following the line of work by Barrett et al. 2017, we reached this concise summary http://ims-vilnius2018.com/content/pdf/ivc293.pdf, which explains the smoothness assumptions made to data, as well as the fact that they used an asymptotic variance which holds when a large number of samples is given (page 2 top).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 11,
+      "text": "It implies that the resulting confidence intervals as well as the test results are asymptotic and not guaranteed, which puts the resulting statistical tests into question.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 12,
+      "text": "We have to admit that we did not thoroughly understand this line of work because of our background, so please comment if we are wrong about that.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 13,
+      "text": "Instead, our dependency test does not make assumptions about data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 14,
+      "text": "Our lower bound and its confidence interval are not asymptotic.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29,
+          30,
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 15,
+      "text": "Theorem 1 provides a guaranteed confidence interval for arbitrary number of samples (so do our baselines, MINE and Pearson's r).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29,
+          30,
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 16,
+      "text": "We compared with the KSG estimator, which also only has asymptotic confidence intervals in literature.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29,
+          30,
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 17,
+      "text": "In addition, the proof provided in our work is concise and is easy for readers to understand and verify.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27,
+          28,
+          29,
+          30,
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 18,
+      "text": "Regarding time dependence and test threshold, it's important and thanks for pointing it out! We think that there are two ways time affects dependency listed below.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 19,
+      "text": "1) First, we assume non-overlapping windows of TRs as the basis for computing number of i.i.d fMRI samples, but did not mention that in our current draft. We'll update and make it clear.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 20,
+      "text": "2) Second, we can see an argument on whether or not segments of fMRI signals qualify as i.i.d, although not sure if this is a problem for our MI estimation approach.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 21,
+      "text": "If things change very little from one second to the next, the signals could be very similar and may not really be, intuitively, independent samples and may bias result of the study.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 22,
+      "text": "However, which independence assumptions to use is not in scope for our paper, because our fMRI study is trying to show that dependency testing works and is complementary to Pearson's correlation, not so much on drawing neuroscience conclusions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 23,
+      "text": "On a side note, it may turn out that which independence assumptions to make is a deeper question that doesn't yet have a clear answer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 24,
+      "text": "Regarding the level of the test, our theorem 1 already provides a proof based on Hoeffding inequality.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklLqYip9B",
+      "rebuttal_id": "B1xD5RI1iB",
+      "sentence_index": 25,
+      "text": "This proof could be experimentally verified through computing MI on 300 test set samples and see how the estimate changes if there were >1million test set samples, repeat say 1000 times using different random seeds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          79,
+          81,
+          82,
+          83
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

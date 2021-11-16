@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "forum_id": "H1gR5iR5FX",
+    "review_id": "SJeDlWsjj7",
+    "rebuttal_id": "S1gN_2Yl0m",
+    "title": "Analysing Mathematical Reasoning Abilities of Neural Models",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1gR5iR5FX&noteId=S1gN_2Yl0m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 0,
+      "text": "This paper develops a framework for evaluating the ability of neural models on answering free-form mathematical problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 1,
+      "text": "The contributions are i) a publicly available dataset, and ii) an evaluation of two existing model families, recurrent networks and the Transformer.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 2,
+      "text": "I think that this paper makes a good contribution by establishing a benchmark and providing some preliminary results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 3,
+      "text": "I am biased because I once did exactly the same thing as this paper, although at a much smaller scale; I am thus happy to see such a public dataset.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 4,
+      "text": "The paper is a reasonable dataset/analysis paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 5,
+      "text": "Whether to accept it or not depends on what standard ICLR has towards such papers (ones that do not propose a new model/new theory).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 6,
+      "text": "I think that the dataset generation process is well-thought-out.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 7,
+      "text": "There are a large variety of modules, and trying to not generate either trivial or impossible problems is a plus in my opinion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 8,
+      "text": "The results and discussions in the main part of the paper are too light in my opinion; the average model accuracy across modules is not an interesting metric at all, although it does show that the Transformer performs better than recurrent networks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 9,
+      "text": "I think the authors should move a portion of the big bar plot (too low resolution, btw) into the main text and discuss it thoroughly.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 10,
+      "text": "Details on how to generate the dataset, however, can be moved into the appendix.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 11,
+      "text": "I am also not entirely satisfied by using accuracy as the only metric; how about using something like beam search to build a \"soft\", secondary metric?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 12,
+      "text": "One other thing I want to see is a test set with multiple different difficulty levels.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 13,
+      "text": "The authors try to do this with composition, which is good, but I am not sure whether that captures the real important thing - the ability to generalize, say learning to factorise single-variable polynomials and test it on factorising polynomials with multiple variables? And what about the transfer between these tasks (e.g., if a network learns to solve equations with both x and y and also factorise a polynomial with x, can it generalize to the unseen case of factorising a polynomial with both x and y)?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 14,
+      "text": "Also, is there an option for \"unsolvable\"?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "sentence_index": 15,
+      "text": "For example, the answer being a special \"this is impossible\" character for \"factorise x^2 - 5\" (if your training set does not use \\sqrt, of course).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 0,
+      "text": "Thank you for your suggestion of increasing the discussion of the results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 1,
+      "text": "We\u2019ve expanded the discussion of the results as much as possible.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 2,
+      "text": "For now we would prefer to keep the actual bar plot of individual module performance in the appendix in the interest of space, and keep the dataset description in the main part, as this was appreciated by the other two reviewers.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 3,
+      "text": "As you say, the ability to generalize is very important in mathematics.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 4,
+      "text": "The paper contains an extrapolation test set to do exactly this - these include generalization tests on larger numbers, longer sequences, more function compositions (which is similar to having more variables), etc (see Appendix B for more details).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 5,
+      "text": "We haven\u2019t attempted to be exhaustive in types of generalization, but the extrapolation test set can be extended in the future to allow for this.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 6,
+      "text": "None of the modules currently include \u201cunsolvable\u201d as an answer, but this is something that would definitely fit within the framework.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 7,
+      "text": "(As an aside: there would be no need to have a special character; we could simply select some consistent word like \u201cUnsolvable\u201d; neural models trained so far seem to have no problem outputting \u201cTrue\u201d or \u201cFalse\u201d.) More generally, there are many further types of problems, that could be included in the dataset - but we hope for now that the current range is comprehensive in types of reasoning required for school-level mathematics.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SJeDlWsjj7",
+      "rebuttal_id": "S1gN_2Yl0m",
+      "sentence_index": 8,
+      "text": "We always welcome contributions to the dataset that extend the range of questions in a consistent manner.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

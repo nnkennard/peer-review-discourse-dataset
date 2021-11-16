@@ -1,0 +1,665 @@
+{
+  "metadata": {
+    "forum_id": "HkfYOoCcYX",
+    "review_id": "SJgAEEpDhQ",
+    "rebuttal_id": "BJly3hutA7",
+    "title": "Double Viterbi: Weight Encoding for High Compression Ratio and Fast On-Chip Reconstruction for Deep Neural Network",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkfYOoCcYX&noteId=BJly3hutA7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 1,
+      "text": "This paper addresses the computational aspects of Viterbi-based encoding for neural networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 2,
+      "text": "In usual Viterbi codes, input messages are encoded via a convolution with a codeword, and then decoded using a trellis.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 3,
+      "text": "Now consider a codebook with n convolutional codes, of rate 1/k.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 4,
+      "text": "Then a vector of length n is represented by inputing a message of length k and receiving n encoded bits.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 5,
+      "text": "Then the memory footprint (in terms of messages) is reduced by rate k/n.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 6,
+      "text": "This is the format that will be used to encode the row indices in a matrix, with n columns.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 7,
+      "text": "(The value of each nonzero is stored separately.)",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 8,
+      "text": "However, it is clear that not all messages are possible, only those in the \"range space\" of my codes. (This part is previous work Lee 2018.)",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 9,
+      "text": "The \"Double Viterbi\" (new contribution) refers to the storage of the nonzero values themselves.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 10,
+      "text": "A weakness of CSR and CSC (carried over to the previous work) is that since each row may have a different number of nonzeros, then finding the value of any particular nonzero requires going through the list to find the right corresponding nonzero, a sequential task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 11,
+      "text": "Instead, m new Viterbi decompressers are included, where each row becomes (s_1*codeword_1 + s_2*codeword2 + ...) cdot mask, and the new scalar are the results of the linear combinations of the codewords.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 12,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 13,
+      "text": "- I think the work addressed here is important, and though the details are hard to parse and the new contributions seemingly small, it is important enough for practical performance.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 14,
+      "text": "- The idea is theoretically sound and interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 15,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 16,
+      "text": "- My biggest issue is that there is no clear evaluation of the runtime benefit of the second Viterbi decompressor.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 17,
+      "text": "Compressability is evaluated, but that was already present in the previous work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 18,
+      "text": "Therefore the novel contribution of this paper over Lee 2018 is not clearly outlined.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 19,
+      "text": "- It is extremely hard to follow what exactly is going on; I believe a few illustrative examples would help make the paper much clearer; in fact the idea is not that abstract.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "sentence_index": 20,
+      "text": "- Minor grammatical mistakes (missing \"a\" or \"the\" in front of some terms, suggest proofread.)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 0,
+      "text": "Thank you very much for the positive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 1,
+      "text": "We added the more experimental data of runtime analysis to address the Reviewer's main concern.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 2,
+      "text": "Q1. My biggest issue is that there is no clear evaluation of the runtime benefit of the second Viterbi decompressor.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 3,
+      "text": "Compressability is evaluated, but that was already present in the previous work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 4,
+      "text": "Therefore the novel contribution of this paper over [1] is not clearly outlined.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 5,
+      "text": "We conducted additional simulations to evaluate the runtime benefit of the proposed method compared to that of the method in [1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 6,
+      "text": "We generated random 512-by-512 matrices with pruning rate ranging from 70 % to 95 % and simulated the number of parameters fed to PEs in 10000 cycles.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 7,
+      "text": "The assumptions used for the simulation and analysis data have been updated in Figure 6c of the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 8,
+      "text": "We could observe that proposed parallel weight decoding based on the second Viterbi decompressor allowed 10 % to 40 % more parameters to be fed to PEs than the previous design [1].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 9,
+      "text": "The proposed method outperformed both baseline method and [1] in all simulation results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 10,
+      "text": "Please note that the data described in Figure 6c has been updated from Figure 7, and our method shows better performance in new data compared to the data shown in the original manuscript.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 11,
+      "text": "While preparing for the rebuttal, we realized that our simulation model did not fully exploit the parallelized weight and index decoding process of the proposed method.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 12,
+      "text": "After further optimization, we could observe that the parameter feeding rate of the proposed method increased compared to the reported data in original manuscript.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 13,
+      "text": "Therefore, we updated Figure 7 in original manuscript to Figure 6c in the updated manuscript according to the new data.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 14,
+      "text": "Q2. It is extremely hard to follow what exactly is going on; I believe a few illustrative examples would help make the paper much clearer; in fact the idea is not that abstract.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 15,
+      "text": "In the revision, we added the more precise mathematical description of the input and output of each block in Figure 1 and showed the change of the exact weight representation at each process.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 16,
+      "text": "We first prune weights in a neural network with the Viterbi-based pruning scheme [1], then we quantize the pruned weights with the alternating quantization method [2].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 17,
+      "text": "Our main contribution is the third process, which includes encoding each weight with the Viterbi algorithm, and retraining for the recovery of accuracy.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 18,
+      "text": "With our proposed method, the sparse and encoded weights are reconstructed to a dense matrix as described in Figure 2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 19,
+      "text": "Figure 2 illustrates the purpose of our proposed scheme, which is the parallelization of the whole sparse-to-dense conversion process with the VDs while maintaining the high compression rate.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 20,
+      "text": "Q3. Minor grammatical mistakes (missing \"a\" or \"the\" in front of some terms, suggest proofread.)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 21,
+      "text": "Thanks very much for the suggestions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 22,
+      "text": "We tried to fix grammatical mistakes as much as possible in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 23,
+      "text": "Reference",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 24,
+      "text": "[1] Dongsoo Lee, Daehyun Ahn, Taesu Kim, Pierce I. Chuang, and Jae-Joon Kim. Viterbi-based pruning for sparse matrix with fixed and high index compression ratio. International Conference on Learning Representations (ICLR), 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgAEEpDhQ",
+      "rebuttal_id": "BJly3hutA7",
+      "sentence_index": 25,
+      "text": "[2] Chen Xu, Jianqiang Yao, Zouchen Lin, Wenwu Qu, Yuanbin Cao, Zhirong Wang, and Hongbin Zha. Alternating multi-bit quantization for recurrent neural networks. International Conference on Learning Representations (ICLR), 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

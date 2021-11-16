@@ -1,0 +1,794 @@
+{
+  "metadata": {
+    "forum_id": "HyEl3o05Fm",
+    "review_id": "rkxwCK8chQ",
+    "rebuttal_id": "BkgZKhUX07",
+    "title": "Stochastic Adversarial Video Prediction",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyEl3o05Fm&noteId=BkgZKhUX07",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 0,
+      "text": "The paper introduces a generative model for video prediction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 1,
+      "text": "The originality stems from a new training criterion which combines a VAE and a GAN criteria.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 2,
+      "text": "At training time, the GAN and the VAE are trained simultaneously with a shared generator; at test time, prediction conditioned on initial frames is performed by sampling from a latent distribution and generating the next frames via an enhanced conv LST .",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 3,
+      "text": "Evaluations are performed on two movement video datasets classically used for benchmarking  this task - several quantitative evaluation criteria are considered.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 4,
+      "text": "The paper clearly states the objective and provides a nice general description of the method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 5,
+      "text": "The proposed model extends previous work by adding an adversarial loss to a VAE video prediction model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 6,
+      "text": "The evaluation compares different variants of this model to two recent VAE baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 7,
+      "text": "A special emphasis is put on the quantitative evaluation: several criteria are introduced for characterizing different properties of the models with a focus on diversity.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 8,
+      "text": "w.r.t. the baselines, the model behaves well for the \u201crealistic\u201d and \u201cdiversity\u201d measures.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 9,
+      "text": "The results are more mitigated for measures of accuracy.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 10,
+      "text": "As for the qualitative evaluation, the model corrects the blurring effect of the reference SV2P baseline, and produces quite realistic predictions on these datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 11,
+      "text": "The difference with the other reference model (SVG) is less clear.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 12,
+      "text": "While the general description of the model is clear, details are lacking.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 13,
+      "text": "It would probably help to position the VAE component more precisely w.r.t. one of the two baselines, by indicating the differences.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 14,
+      "text": "This would also help to explain the difference of performance/ behavior  w.r.t. these models (Fig. 5).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 15,
+      "text": "It seems that the discriminator takes a whole sequence as input, but some precision on how this done could be added.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 16,
+      "text": "Similarly, you did not indicate what the deterministic version of your model is.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 17,
+      "text": "The generator model with its warping component makes a strong hypothesis on the nature of the videos: it seems especially well suited for translations or for other simple geometric transformations characteristics of the benchmarking videos .",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 18,
+      "text": "Could you comment on the importance of this component? Did you test the model on other types of videos where this hypothesis is less relevant?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 19,
+      "text": "It seems that the baseline SVG makes use of simpler ConLSTM for example.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 20,
+      "text": "The description of the generator in the appendix is difficult to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 21,
+      "text": "I missed the point in the following sentence: \u201cFor each one-step prediction, the network has the freedom to choose to copy pixels from the previous frame, used transformed versions of the previous frame, or to synthesize pixels from scratch\u201d .",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 22,
+      "text": "Also, it is not clear from the discussion on z, whether sampling is performed once for each video of for each frame.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 23,
+      "text": "Overall, the paper proposes an extension of VAE based video prediction models and produces an extensive evaluation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "sentence_index": 24,
+      "text": "While the model seems to perform well, the originality and the improvement w.r.t. baselines are somewhat limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 0,
+      "text": "We thank reviewer 3 for the detailed feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 1,
+      "text": "We are glad that the reviewer found the extensive evaluation appropriate, and that our model behaves well for the realistic and diversity measures.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          6,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 2,
+      "text": "We now address all the individual questions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 3,
+      "text": "We added Section 3.5 to point out the differences between the VAE component of our model and the SV2P and SVG models from prior work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 4,
+      "text": "In Section 3.4, we clarified what frames the discriminator takes, and in Section 4.3 we added a description of the deterministic version of our model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 5,
+      "text": "In Section A.1.1, we provided a better description of how frames are predicted at each time step.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 6,
+      "text": "In Section 3.5 and A.1.2, we clarified that the latent variables are sampled at every time step.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 7,
+      "text": "We updated Section 4.4 to indicate that it is to be expected that although our SAVP model improves on diversity and realism, it also performs worse in accuracy compared to pure VAE models (both our own ablation and SVG from Denton & Fergus (2018)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 8,
+      "text": "A recent result [1] proves that there is a fundamental tradeoff between accuracy and realism, for all problems with inherent ambiguity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 9,
+      "text": "In fact, a recent challenge held at ECCV 2018 in such a problem [2] evaluates all algorithms on both of these axes, as neither adequately captures performance.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 10,
+      "text": "Note that proposing a generator architecture is not the goal of this paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 11,
+      "text": "Instead, we provide a systematic analysis of the effect of the loss function on this task (which could be applied to any generator).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 12,
+      "text": "We use a warping-based generator, from prior work (Ebert et al. 2017), and include a comparison to SVG for completeness.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 13,
+      "text": "In the updated draft, we clarify in Section 3.4 that the warping component assumes that videos can be described as transformation of pixels, but that any generator (including the one from Denton & Fergus (2018)) could be used with our losses.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 14,
+      "text": "Since evaluating generator architectures is not the emphasis of this paper, we did not test the importance of the warping component nor test on videos where this hypothesis is less suitable.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 15,
+      "text": "We have included a revised plot in Figure 14 at the end of the Appendix (note that this temporary plot will be incorporated to Figure 6), where we use the official implementation of SSIM and replace the VGG metric with the Learned Perceptual Image Patch Similarity (LPIPS) metric (Zhang et al., 2018).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 16,
+      "text": "LPIPS linearly calibrates  AlexNet feature space to better match human perceptual similarity judgements.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 17,
+      "text": "Aside for the first two predicted frames, our VAE ablation and the SVG model both achieve similar SSIM and LPIPS performance.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 18,
+      "text": "[1] Yochai Blau and Tomer Michaeli. The perception-distortion tradeoff. In Conference on Vision and Pattern Recognition (CVPR), 2018. https://arxiv.org/abs/1711.06077",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 19,
+      "text": "[2] Yochai Blau, Roey Mechrez, Radu Timofte, Tomer Michaeli, and Lihi Zelnik-Manor. 2018 PIRM Challenge on Perceptual Image Super-resolution. In Perceptual Image Restoration and Manipulation (PIRM) workshop at ECCV 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 20,
+      "text": "https://arxiv.org/abs/1809.07517",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 21,
+      "text": "We have included a revised plot in Figure 15 at the end of the Appendix (which will be incorporated to Figure 7) that fixes the KTH dataset preprocessing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 22,
+      "text": "Our VAE-only model now achieves substantially higher accuracy and diversity than SVG (Denton & Fergus, 2018).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 23,
+      "text": "As before, the GAN-only model mode-collapses and generates samples that lack diversity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 24,
+      "text": "Our SAVP method, which incorporates the variational loss, improves both sample diversity and similarities, compared to the GAN-only model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 25,
+      "text": "Our SAVP model also achieves higher accuracy than SVG.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 26,
+      "text": "The experiments from our original submission (1) cropped the videos into a square before resizing, and thus discarded information from the sides of the video, and (2) did not filter out the empty frames, and thus our models were trained on uninformative frames.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 27,
+      "text": "We fixed those issues to match the preprocessing used by Denton & Fergus (2018).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxwCK8chQ",
+      "rebuttal_id": "BkgZKhUX07",
+      "sentence_index": 28,
+      "text": "In addition, we have also included experiments where we condition on only 2 frames instead of 10 frames, in order to test on a setting with more stochasticity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

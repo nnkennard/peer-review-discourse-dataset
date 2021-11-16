@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "forum_id": "rygk9oA9Ym",
+    "review_id": "Sye4stm16X",
+    "rebuttal_id": "B1ld8lvop7",
+    "title": "3D-RelNet: Joint Object and Relational Network for 3D Prediction",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rygk9oA9Ym&noteId=B1ld8lvop7",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 0,
+      "text": "The paper is well-written with a few figures to illustrate the ideas and components of the proposed method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 1,
+      "text": "However, one of the main components in the proposed method is based on Tulsiani et al. CVPR'18.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 2,
+      "text": "The remaining components of the proposed method are not very new.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 3,
+      "text": "Hence, I am not very sure whether the novelty of the paper is significant.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 4,
+      "text": "Nevertheless, the performance of the proposed method is fairly good outperforming all baseline methods.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 5,
+      "text": "I also have a few questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 6,
+      "text": "1. How did you get the instance boxes, union boxes, and binary masks in testing?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "sentence_index": 7,
+      "text": "2. What are the training and inference time?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 0,
+      "text": "We are grateful for your feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 1,
+      "text": "We hope that the above discussion assuaged the reviewer\u2019s concerns regarding novelty and some unclear details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 2,
+      "text": "We briefly address the two questions regarding the setup:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 3,
+      "text": "During testing, in the setting with known GT boxes (Sec 4.2), we assume that the 2D instance boxes are given.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 4,
+      "text": "In the detection setting, the 2D instance boxes are the result of the learned detector.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 5,
+      "text": "Given the (detected or known) instance boxes, the union boxes and binary masks can be easily computed - the union box is just the larger box containing both instance boxes, and the mask highlights these instance boxes in the union box.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 6,
+      "text": "Training and Testing  Inference Time on a single GPU (Maxwell Titan X)",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 7,
+      "text": "1. Train time: 65 hrs",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sye4stm16X",
+      "rebuttal_id": "B1ld8lvop7",
+      "sentence_index": 8,
+      "text": "2. Test time: 0.55s per image",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

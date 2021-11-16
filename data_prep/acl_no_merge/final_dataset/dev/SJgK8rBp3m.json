@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "forum_id": "ryGgSsAcFQ",
+    "review_id": "SJgK8rBp3m",
+    "rebuttal_id": "r1x5UuwvJE",
+    "title": "Deep, Skinny Neural Networks are not Universal Approximators",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryGgSsAcFQ&noteId=r1x5UuwvJE",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 0,
+      "text": "This paper proves a theoretical limitation of narrow-and-deep neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 1,
+      "text": "It shows that, for any function that can be approximated by such networks, its level set (or decision boundary for binary classification) must be unbounded.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 2,
+      "text": "The conclusion means that if some problem's decision boundary is a closed set, then it cannot be represented by such narrow networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 3,
+      "text": "The intuition is relatively simple.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 4,
+      "text": "Under the assumptions of the paper, the neural network can always be approximated by a one-to-one mapping followed by a linear projection.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 5,
+      "text": "The image of the one-to-one mapping is homeomorphic to R^n, so that it must be an open topological ball.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 6,
+      "text": "The intersection of this open ball with a linear hyperplane must include the boundary of the ball, thus it extends to infinity in the original input space.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 7,
+      "text": "The critical assumptions here, which guarantees the one-to-one property of the network, are: 1) the network is narrow, and 2) the activation function can be approximated by a one-to-one function.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 8,
+      "text": "The authors claim that 2) captures a large family of activation functions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 9,
+      "text": "However, it does exclude some popular activation families, such as the polynomial activation, which were proven effective in multiple areas.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 10,
+      "text": "As a concrete example, the simple function f(x1,x2) = x_1^2 + x_2^2 has bounded level sets, but it can be represented by a narrow 2-layer neural network with the quadratic activation.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 11,
+      "text": "Overall, I feel that the result is interesting but it depends on a strong assumption and doesn't capture all interesting cases.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "sentence_index": 12,
+      "text": "It is also not clear how this theoretical result can shed insight on the empirical study of neural networks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgK8rBp3m",
+      "rebuttal_id": "r1x5UuwvJE",
+      "sentence_index": 0,
+      "text": "It's true that there are many activation functions that the result doesn't apply to, and in fact isn't true for.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgK8rBp3m",
+      "rebuttal_id": "r1x5UuwvJE",
+      "sentence_index": 1,
+      "text": "The selling point isn't the generality of the result, but rather the novelty of the approach and the potential it suggests for future work that would be more general.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

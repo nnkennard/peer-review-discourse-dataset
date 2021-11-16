@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "forum_id": "HyxJ1xBYDH",
+    "review_id": "BJloMuTnFr",
+    "rebuttal_id": "Syem-mAisB",
+    "title": "Learning-Augmented Data Stream Algorithms",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HyxJ1xBYDH&noteId=Syem-mAisB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 0,
+      "text": "The paper talks about calculating various statistics over data streams.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 1,
+      "text": "This is a very popular topic and is very relevant in big data analysis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 2,
+      "text": "A lot of work has been done in this general area and on the problems that are discussed in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 3,
+      "text": "The new idea in the paper is better streaming algorithms under the assumption that there is a \u201cheavy hitters\u201d oracle that returns data items that have a lot of representation in the stream.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 4,
+      "text": "The authors give provably better algorithms for the distinct elements problem, F_p moment problem (p > 2), and some more problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 5,
+      "text": "These are important problems in streaming data analysis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 6,
+      "text": "They improve the space bounds and interestingly in some cases the bounds are better than what is possible without the oracle assumption.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 7,
+      "text": "This also shows the power of such an oracle.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 8,
+      "text": "There are experimental results to demonstrate the efficiency of the algorithms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 9,
+      "text": "At a high level the work seems good and interesting for a large audience interested in streaming data analysis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 10,
+      "text": "I have not gone over the proofs in detail (much of which is in the appendix).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 11,
+      "text": "- Even though oracle results are interesting, to make it practical it may make sense to talk about a more realistic, weaker oracle where some of the queries may be incorrect.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "sentence_index": 12,
+      "text": "- It may even make sense to minimise the number of oracle calls which can be thought of as a resource and discuss the relationship between number of oracle calls and other resources such as space.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJloMuTnFr",
+      "rebuttal_id": "Syem-mAisB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments on our paper.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "rebuttal_id": "Syem-mAisB",
+      "sentence_index": 1,
+      "text": "- We have included the result concerning a noisy oracle for the F_p moment estimation problem in the paper.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "rebuttal_id": "Syem-mAisB",
+      "sentence_index": 2,
+      "text": "- We like the question of minimizing the number of oracle calls.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJloMuTnFr",
+      "rebuttal_id": "Syem-mAisB",
+      "sentence_index": 3,
+      "text": "This is an interesting open problem and we intend to explore it in future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

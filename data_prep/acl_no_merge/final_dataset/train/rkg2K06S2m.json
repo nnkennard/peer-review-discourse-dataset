@@ -1,0 +1,761 @@
+{
+  "metadata": {
+    "forum_id": "r1lrAiA5Ym",
+    "review_id": "rkg2K06S2m",
+    "rebuttal_id": "HyxE2PPcRm",
+    "title": "Backpropamine: training self-modifying neural networks with differentiable neuromodulated plasticity",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1lrAiA5Ym&noteId=HyxE2PPcRm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 0,
+      "text": "This work presents Backpropamine, a neuromodulated plastic LSTM training regime.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 1,
+      "text": "It extends previous research on differentiable Hebbian plasticity by introducing a neuromodulatory term to help gate information into the Hebbian synapse.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 2,
+      "text": "The neuromodulatory term is placed under network control, allowing it to be time varying (and hence to be sensitive to the input, for example).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 3,
+      "text": "Another variant proposes updating the Hebbian synapse with modulated exponential average of the Hebbian product.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 4,
+      "text": "This average is linked to the notion of an eligibility trace, and ties into some recent biological work that shows the role of dopamine in retroactively modulating synaptic plasticity.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 5,
+      "text": "Overall the work is nicely motivated and clearly presented.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 6,
+      "text": "There are some interesting ties to biological work -- in particular, to retroactive plasticity phenomena.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 7,
+      "text": "There should be sufficient details for a reader to implement this model, thought there are some minor details missing regarding the experimental setup, which will be addressed below.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 8,
+      "text": "The authors test their model on three tasks: cue-award association, maze learning, and Penn Treebank (PTB).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 9,
+      "text": "In the cue-award association task the retroactive and simple modulation networks perform well, while the non-modulated and non-plastics fail.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 10,
+      "text": "For the maze navigation task the modulated networks perform better than the non-modulated networks, though the effect is less pronounced.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 11,
+      "text": "Finally, on PTB the authors report improvements over baseline LSTMs.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 12,
+      "text": "One of the main claims of this paper is that neuromodulated plastic LSTMs...outperform standard LSTMs on a benchmark language modeling task\u201d, and that therefore \u201cdifferentiable neuromodulation of plasticity offers a powerful new framework for training neural networks\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 13,
+      "text": "This claim is unfortunately unfounded for a very important reason: the LSTM performance is not at all close to that which can be achieved by LSTMs in general.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 14,
+      "text": "The authors cite such models in the appendix (Melor et al), but claim that \u201cmuch larger models\u201d are needed, potentially with other mechanisms, such as dropout.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 15,
+      "text": "Though this may be true, these models still undermine the claim that \u201cneuromodulated plastic LSTMs...outperform standard LSTMs on a benchmark language modeling task\u201d.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 16,
+      "text": "This claim is simply not true, and more care is needed in reporting the results here in the wider context of the literature.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 17,
+      "text": "Also, I am left wondering what are considered the parameters of the models -- are only the neuromodulatory terms considered as the additional trainable parameters compared to baseline LSTMs? How are the Hebbian synapses themselves considered in this calculation?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 18,
+      "text": "If the Hebbian synapses are not considered, then the authors need a control with matched memory-capacities to account for the extra capacity afforded by the Hebbian synapses.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 19,
+      "text": "Given the ties between Hebbian synapses and attention (see Ba et al), an important control here could be an LSTM with Bahdanau (2014) style attention.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 20,
+      "text": "Finally, the style (font) of the paper does not adhere to the ICLR style template, and must be changed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 21,
+      "text": "Overall, the ideas presented in the paper are intriguing, and further research down this line is encouraged.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "sentence_index": 22,
+      "text": "However, in its current state the work lacks sufficiently strong baselines to support the paper\u2019s claims; thus, the merits of this approach cannot yet be properly assessed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 0,
+      "text": "Thank you to Reviewer 1 for noting the clarity of our presentation and reproducibility.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 1,
+      "text": "We also appreciate the constructive criticism and thought that went into your review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 2,
+      "text": "We spent a considerable amount of time trying to fulfill the reviewer\u2019s request to match state of the art (SOTA) on PTB.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 3,
+      "text": "To get SOTA on PTB, we need massive architectures, which considerable computing power and experimentation at the extreme limit of what is achievable for our team.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 4,
+      "text": "Still, we pursued two directions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 5,
+      "text": "First, we tried to reimplement an architecture similar to  Melis et al. 2017.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 6,
+      "text": "However, they did not publish their code, hyperparameters, or weights, requiring re-implementing and re-training from scratch.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 7,
+      "text": "We tried this path, but soon realized we would not be done in time (especially with a hyperparameter search).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 8,
+      "text": "We then tried to weave neuromodulation and differentiable plasticity into the architecture and code base of Merity et al., ICLR 2018 (also tied for SOTA).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 9,
+      "text": "However, while they could simply leverage existing PyTorch implementations of LSTMs (written in extremely fast C++), we had to re-implement LSTMs \u201cby hand\u201d (i.e. as a series of connected layers) in PyTorch to introduce plasticity and neuromodulation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 10,
+      "text": "As a result, our networks thus ran considerably slower, by more than 10x (not because our method is intrinsically slower, but just for lack of engineering optimizations on our bespoke Python implementations; we confirmed this by observing that a similar \u201chand-built\u201d reimplementation of simple, non-plastic LSTMs ran similarly slower, while producing results identical to Merity et al.).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 11,
+      "text": "These experiments are thus unfortunately still running.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 12,
+      "text": "For these reasons (and more provided below), we thus think it more fair (and necessary) to make such experiments the subject of a future paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 13,
+      "text": "That said, we still believe the results in the current paper demonstrate the benefits of our techniques on a sizable model, and thus it would benefit the community to allow people to know about, and build upon, these new methods and results.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 14,
+      "text": "The purpose of the present paper is to introduce a novel technique and show that it can produce an advantage in realistic settings, which we believe our PTB task confirms.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 15,
+      "text": "Our claim is that, all other things being equal (especially the number of parameters), a neuromodulated plastic LSTM outperformed a standard LSTM on this particular benchmark task.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 16,
+      "text": "We do **not** want to claim that our results are anywhere near SOTA.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 17,
+      "text": "We have modified our text to avoid possible misunderstandings (see end of next-to-last paragraph in Section 4).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 18,
+      "text": "Additionally, philosophically, If SOTA results are the bar for all papers to be accepted into conferences like ICLR, then those venues will be the exclusive domain of those with either the computation or time (i.e. large-scale resources) to dedicate to such results.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 19,
+      "text": "In that case, many cutting edge ideas will by necessity be excluded from the discussion, as will many research groups.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 20,
+      "text": "Moreover, insisting on papers to be SOTA to be accepted also likely encourages p-hacking and shoddy science to game the results (even if unintentionally), reducing the quality of science our community tries to build on.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 21,
+      "text": "Re: \"Parameters of the model\": All trainable parameters of the Hebbian synapses (alpha and w in Equation 1, plus the neuromodulation parameters) are included in this parameter count.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 22,
+      "text": "To equalize the number of parameters across architectures, we reduce the number of hidden units in the plastic models in comparison to the non-plastic baseline.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 23,
+      "text": "We have clarified this in the text.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 24,
+      "text": "Re: \"Attention\": Non-trainable, homogenous plasticity can indeed be compared to a form of attention, i.e. \u201cattending to the recent past\u201d in the words of Ba et al. 2016.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 25,
+      "text": "However, differentiable plasticity allows for the plasticity of each connection to be trained; as a result, different connections play different roles and it is not at all clear that the analogy with attention remains relevant (see e.g. the clever mechanisms automatically implemented by the trained plasticity connections in the image completion experiment of the Differentiable Plasticity paper, Miconi et al. 2018, sections 4.3 and S.3, which can hardly be described as simply \u201cattention\u201d)",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkg2K06S2m",
+      "rebuttal_id": "HyxE2PPcRm",
+      "sentence_index": 26,
+      "text": "Re: \"Style (font)\": We used the template and do not see the discrepancy. Can you clarify? We are happy to fix it.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

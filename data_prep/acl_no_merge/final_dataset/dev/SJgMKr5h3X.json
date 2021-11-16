@@ -1,0 +1,417 @@
+{
+  "metadata": {
+    "forum_id": "ByME42AqK7",
+    "review_id": "SJgMKr5h3X",
+    "rebuttal_id": "BkgSVo7VRm",
+    "title": "Efficient Multi-Objective Neural Architecture Search via Lamarckian Evolution",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByME42AqK7&noteId=BkgSVo7VRm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 0,
+      "text": "This paper proposes LEMONADE, a random search procedure for neural network architectures (specifically neural networks, not general hyperparameter optimization) that handles multiple objectives.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 1,
+      "text": "Notably, this method is significantly more efficient more efficient than previous works on neural architecture search.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 2,
+      "text": "The emphasis in this paper is very strange.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 3,
+      "text": "It devotes a lot of space to things that are not important, while glossing over the details of its own core contribution.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 4,
+      "text": "For example, Section 3 spends nearly a full page building up to a definition of an epsilon-approximate network morphism, but this definition is never used.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 5,
+      "text": "I don't feel like my understanding of the paper would have suffered if all Section 3 had been replaced by its final paragraph.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 6,
+      "text": "Meanwhile the actual method used in the paper is hidden in Appendices A.1.1-A.2.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 7,
+      "text": "Some of the experiments (eg. comparisons involving ShakeShake and ScheduledDropPath, Section 5.2) could also be moved to the appendix in order to make room for a description of LEMONADE in the main paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 8,
+      "text": "That said, those complaints are just about presentation and not about the method, which seems quite good once you take the time to dig it out of the appendix.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 9,
+      "text": "I am a bit unclear about how comparisons are made to other methods that do not optimize for small numbers of parameters? Do you compare against the lowest error network found by LEMONADE? The closest match in # of parameters?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 10,
+      "text": "Why is the second objective log(#params) instead of just #params when the introduction mentions explicitly that tuning the scales between different objectives is not needed in LEMONADE?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 11,
+      "text": "It seems like LEMONADE would scale poorly to more than 2 objectives, since it effectively requires approximating an #objectves-1 dimensional surface with the population of parents.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "sentence_index": 12,
+      "text": "How could scaling be handled?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 0,
+      "text": "Dear AnonReviewer3,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 1,
+      "text": "thank you for your positive review and constructive feedback!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 2,
+      "text": "We agree that the structure of the paper was not optimal and reorganized it along the lines you suggested (thanks for the suggestion!).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 3,
+      "text": "Below we address specific questions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 4,
+      "text": "\u201cI am a bit unclear about how comparisons are made to other methods that do not optimize for small numbers of parameters? Do you compare against the lowest error network found by LEMONADE? The closest match in # of parameters?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 5,
+      "text": "-> The latter: we compared with the models with the closest match in # of parameters.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 6,
+      "text": "\u201cWhy is the second objective log(#params) instead of just #params when the introduction mentions explicitly that tuning the scales between different objectives is not needed in LEMONADE?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 7,
+      "text": "-> We stated that defining a trade-off between objectives is not necessary (in case you are referring to this statement), which would, e.g., be necessary when one would scalarize objectives by using a weighted sum.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 8,
+      "text": "Rescaling an objective, however, is different as it is independent from other objectives: it only depends on that specific objective and which scale is important to the user and the application.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 9,
+      "text": "For the number of parameters, the log scale is natural to cover a large range of sizes: think of a plot of size vs. performance; in order to see anything for small sizes one would typically put the size on a log scale (and we indeed did, see, e.g., Figures 3 and 4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 10,
+      "text": "Therefore, it is most natural to also put the number of parameters on a log scale for LEMONADE.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 11,
+      "text": "\u201cIt seems like LEMONADE would scale poorly to more than 2 objectives, since it effectively requires approximating an #objectives-1 dimensional surface with the population of parents. How could scaling be handled?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 12,
+      "text": "-> We think having 4-6 objectives is a realistic dimensionality for NAS applications, and scaling to significantly more objectives (which would indeed be problematic for our method, but also for multi-objective optimization in general) is typically not necessary.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 13,
+      "text": "In response to this question, to demonstrate this, wee conducted a new experiment with 5 objectives (performance on Cifar 10, performance on Cifar 100, number of parameters, number of multiply-add operations, inference time) to show that LEMONADE can handle these realistic scenarios natively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 14,
+      "text": "We refer to the updated version of our paper for the results (Appendix 3,\u201cLEMONADE with 5 objectives\u201d), but in a nutshell the results are very positive and qualitatively resemble those for two objectives.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 15,
+      "text": "While we put this experiment into the appendix for now to not change the main paper too much compared to the submitted version, if the reviewers agree we would also be very happy to include this experiment in the main paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgMKr5h3X",
+      "rebuttal_id": "BkgSVo7VRm",
+      "sentence_index": 16,
+      "text": "We hope this clarifies your questions. Thanks again for the review!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "metadata": {
+    "forum_id": "HyEl3o05Fm",
+    "review_id": "Hyen_JS9nX",
+    "rebuttal_id": "rygvTCLQRX",
+    "title": "Stochastic Adversarial Video Prediction",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyEl3o05Fm&noteId=rygvTCLQRX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 0,
+      "text": "This paper proposes to extend VAE-GAN from the static image generation setting to the video generation setting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 1,
+      "text": "It\u2019s a well-written, simple paper that capitalizes on the trade-off between model realism and diversity, and the fact that VAEs and GANs (at least empirically) tend to lie on different sides of this spectrum.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 2,
+      "text": "The idea to extend the use of VAE-GANs to the video prediction setting is a pretty natural one and not especially novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 3,
+      "text": "However, the effort to implement it successfully is commendable and will, I think, serve as a good reference for future work on video prediction.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 4,
+      "text": "There are also several interesting design choices that I think are worth of further exposition.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 5,
+      "text": "Why, for example, did the authors only perform variational inference with the current and previous frames? Did conditioning on additional frames offer limited further improvement? Can the blurriness instead be attributable to the weak inference model?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 6,
+      "text": "Please provide a response to these questions.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 7,
+      "text": "If the authors have any ablation studies to back up their design choices, that would also be much appreciated, and will make this a more valuable paper for readers.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 8,
+      "text": "I think Figure 5 is the most interesting figure in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 9,
+      "text": "I would imagine that playing with the hyperparameters would allow one to traverse the trade-off between realism and diversity.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 10,
+      "text": "I think having such a curve will help sell the paper as giving the practitioner the freedom to select their own preferred trade-off.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 11,
+      "text": "I don\u2019t understand the claim that \u201cGANs prioritize matching joint distributions of pixels over per-pixel reconstruction\u201d and its implication that VAEs do not prioritize joint distribution matching.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 12,
+      "text": "VAEs prioritize matching joint distributions of pixels and latent space: min KL(q(z, x) || p(z, x)) and is a variational approximation of the problem min KL(q(x) || p(x)), where q(x) is the data distribution.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 13,
+      "text": "The explanation provided by the authors is thus not sufficiently precise and I recommend the retraction of this claim.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 14,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 15,
+      "text": "+ Well-written",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 16,
+      "text": "+ Natural extension of VAE-GANs to video prediction setting",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 17,
+      "text": "+ Establishes a good baseline for future video prediction work",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 18,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 19,
+      "text": "- Limited novelty",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "sentence_index": 20,
+      "text": "- Limited analysis of model/architecture design choices",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 0,
+      "text": "We thank reviewer 2 for the detailed feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 1,
+      "text": "We are glad that the reviewer found the VAE-GAN model to be a natural extension for the problem and that our work provides a good baseline for future work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 2,
+      "text": "We address the individual questions below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 3,
+      "text": "We changed Section 3.1 to explain that the posterior dependence on pairs of adjacent frames is to have temporally local latent variables that capture the ambiguity for only that transition, a sensible choice when using i.i.d. Gaussian priors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 4,
+      "text": "Another choice is to use temporally correlated latent variables, which would require a stronger prior (e.g. as in Denton & Fergus (2018)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 5,
+      "text": "For simplicity, we opted for the former.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 6,
+      "text": "The blurriness in a VAE can indeed be attributable to a weak inference model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 7,
+      "text": "Note that our VAE variant and both SVG variants are able to predict sharp robot arms in the BAIR dataset, but often blur out the small objects being pushed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 8,
+      "text": "We tried recurrent posteriors and learned priors with our models, and the results were similar.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 9,
+      "text": "We are now running additional experiments with a deeper encoder and with more filters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 10,
+      "text": "Although in principle a strong inference model could produce sharper images, an alternative approach is to use better losses, which is the approach we chose in this work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 11,
+      "text": "It is an interesting suggestion to experiment with the effect of the hyperparameters on the trade-off between realism and diversity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 12,
+      "text": "We are currently running experiments for various weightings of the KL loss and the adversarial loss, and we plan to include results that illustrate the trade-offs based on these hyperparameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 13,
+      "text": "We also plan to include results on the trade-offs between accuracy and realism.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 14,
+      "text": "In fact, a recent result [1] proves that this is a fundamental trade-off for all problems with inherent ambiguity.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 15,
+      "text": "The statement that \u201cGANs prioritize matching joint distributions of pixels over per-pixel reconstruction\" is a criticism of per-pixel losses, and not of VAEs in general. We clarified in the introduction that VAEs can indeed model joint distributions of pixels.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyen_JS9nX",
+      "rebuttal_id": "rygvTCLQRX",
+      "sentence_index": 16,
+      "text": "[1] Yochai Blau and Tomer Michaeli. The perception-distortion tradeoff. In Conference on Vision and Pattern Recognition (CVPR), 2018. https://arxiv.org/abs/1711.06077",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "metadata": {
+    "forum_id": "Byl8hhNYPS",
+    "review_id": "B1gYdNvCFS",
+    "rebuttal_id": "r1eQFhX4ir",
+    "title": "Neural Machine Translation with Universal Visual Representation",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Byl8hhNYPS&noteId=r1eQFhX4ir",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 0,
+      "text": "This paper provides an approach to use visual information to improve text only neural machine translation systems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 1,
+      "text": "The approach creates a \"topic word to images\" map using an existing image aligned translation corpora.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 2,
+      "text": "Given a source sentence, the model extracts relevant images, extracts their Resnet features and fuses them with the features generated from the word sequence.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 3,
+      "text": "The decoder uses these fused representation to generate the target sentence.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 4,
+      "text": "Overall, I like the approach, seems like it can be easily augmented to existing NMT systems.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 5,
+      "text": "One of the claims of the paper was to be able to use monolingual image aligned data.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 6,
+      "text": "However image captioning datasets are not mentioned.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 7,
+      "text": "It would make sense to use image captioning data to create the image lookup.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 8,
+      "text": "Also, what will be the performance of a standard image captioning system on the task ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 9,
+      "text": "I believe it will not be great, but I think for completeness, you should add such a baseline.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 10,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 11,
+      "text": "1. What is M in Algorithm 1 ?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "sentence_index": 12,
+      "text": "2. First paragraph in related work is very unrelated to the current subject, please remove.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 0,
+      "text": "Thanks for your constructive feedbacks! Please see our response below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 1,
+      "text": "1. About image captioning.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 2,
+      "text": "Yes. Image captioning dataset is absolutely available for creating the lookup table.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 3,
+      "text": "As you suggest, we use MS COCO Image captioning dataset to learn a lookup table and apply it to the EN-RO translation task to do the quick evaluation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 4,
+      "text": "As a result, the BLEU score is (33.55), which is comparable to the current lookup table (33.78) based on Multi30K, and outperforms the Trans. (base) (32.66).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 5,
+      "text": "Regarding the performance of the standard image captioning system, we train a caption model (Show, Attend, and Tell (Xu et al., 2015b)) with fine-tuned encoder (ResNet101) on the COCO dataset to encode the images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 6,
+      "text": "The result on EN-RO is 33.58.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 7,
+      "text": "We are a little bit uncertain if we have well understood this request because our task is text to text translation while image captioning is image to text.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 8,
+      "text": "If not, we are glad to address further.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 9,
+      "text": "2. About the minor comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 10,
+      "text": "(1)\tThis is typo. It is Q.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gYdNvCFS",
+      "rebuttal_id": "r1eQFhX4ir",
+      "sentence_index": 11,
+      "text": "(2)\tYes. We will remove it following your suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

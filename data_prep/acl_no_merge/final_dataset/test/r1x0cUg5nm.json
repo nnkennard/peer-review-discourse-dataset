@@ -1,0 +1,692 @@
+{
+  "metadata": {
+    "forum_id": "rJVoEiCqKQ",
+    "review_id": "r1x0cUg5nm",
+    "rebuttal_id": "rkxaglcwTm",
+    "title": "Deep Perm-Set Net: Learn to predict sets with unknown permutation and cardinality using deep neural networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJVoEiCqKQ&noteId=rkxaglcwTm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 0,
+      "text": "This paper looks to predict \"unstructured\" set output data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 1,
+      "text": "It extends Rezatofighi et al 2018 by modeling a latent permutation.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 2,
+      "text": "Unfortunately, there is a bit of an identity crisis happening in this paper. There are several choices that do not follow based on the data the paper considers.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 3,
+      "text": "1) The paper claims to want to predict unordered sets, yet the model is clearly indicating a dependence in the order of the outputs and the input p_m(\\pi | x_i, w) (1); this feels like a very odd choice to me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 4,
+      "text": "The outputs are either unordered sets, where you would have a permutation invariant (or exchangeable) likelihood, or they are ordered sequence where the order of the outputs does matter, as some are more likely than others.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 5,
+      "text": "2) The paper still makes very odd choices even if one ignores the above and wants to model some orderings as more likely than others.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 6,
+      "text": "The way the permutation, or the order of the data, accounts in the likelihood (2) does not make sense.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 7,
+      "text": "Conditioned on the permutation of the set, the points are exchangeable.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 8,
+      "text": "Let's just consider a 2 element \"set\" at the moment Y = (y_1, y_2).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 9,
+      "text": "Order matters, so either this is being observed as pi=(1, 2) or pi=(2, 1), both of which depend on the input x. However, the likelihood of the points does not actually depend on the order in any traditional sense of the word.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 10,
+      "text": "we have:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 11,
+      "text": "p_\\pi((1, 2) | x, w) p_y(y_1 |  x, w, (1, 2)) p_y(y_2 |  x, w, (1, 2)) + p_\\pi((2, 1) | x, w) p_y(y_1 |  x, w, (2, 1)) p_y(y_2 |  x, w, (2, 1))",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 12,
+      "text": "*Note that in here (as in eq. 2) the output distribution p_y does not know what the index is of what it is outputting, since it is iid.* So what does this mean? It means that the order (permutation) can only affect the distribution in an iid (exchangeable, order invariant) way.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 13,
+      "text": "Essentially the paper has just written a mixture model for the output points where there are as many components as permutations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 14,
+      "text": "I don't think this makes much sense, and if it was an intentional choice, the paper did a poor job of indicating it.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 15,
+      "text": "3) Supposing even still that one does want a mixture model with as many components as permutations, there are still some issues.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 16,
+      "text": "It is very unclear how the dependence on \\pi drops out when getting a MAP estimate of outputs in section 3.3.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 17,
+      "text": "This needs to be justified.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 18,
+      "text": "There are some stylistic shortcomings as well.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 19,
+      "text": "For example, the related works paper would read better if it wasn't one long block (i.e. break it into several paragraphs)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 20,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 21,
+      "text": "Also, the paper claims that it will use a super script m to denote a known cardinality, yet omits \\mathcal{Y}_i^{m_i} in the training set of the first sentence in 3.1.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 22,
+      "text": "But these and other points are minor.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "sentence_index": 23,
+      "text": "The paper should not be published until it can resolve or make sense of the methodological discrepancies between what it says it looks to do and what it actually does as described in points 1), 2), and 3) above.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 0,
+      "text": "We thank Maxwell for some clarification.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 1,
+      "text": "We believe AnonReviewer2 misunderstood some of the concepts and we will try to clarify them here and update the paper accordingly.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 2,
+      "text": "- predicting unordered sets",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 3,
+      "text": "The assumption is what is available as GT is a set.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 4,
+      "text": "This means we cannot infer any specific ordering from GT.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 5,
+      "text": "The proposed framework is very flexible as we don\u2019t need to enforce the problem to be necessarily orderless  (although it can be).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 6,
+      "text": "The reason we would like to learn  p_m(\\pi | x_i, w) is to infer the nature of the problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 7,
+      "text": "However, excluding the main experiment in supplementary material, we did enforce the problem to be orderless by removing O2 and the permutation loss.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 8,
+      "text": "This is equivalent to assume p_m(\\pi | x_i, w) is uniform (order does not matter) in Eq.2 and you can see O2 and its loss will be eliminated from Eq. 5 and 6.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 9,
+      "text": "However, we still require to solve Eq. 5 to find the best permutation based on f1 only, which is equivalent to use Hungarian to solve the assignments.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 10,
+      "text": "We also disagree with R3 that the problem is either unordered sets or there exist only one order to be correct.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 11,
+      "text": "There can exist multiple orders to be true, but not all.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 12,
+      "text": "This can be inferred by learning p_m(\\pi | x_i, w) from samples derived during training by Eq. 5.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 13,
+      "text": "- permutation in the likelihood (2) does not make sense:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 14,
+      "text": "In addition to what is explained by Maxwell, I add this clarification:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 15,
+      "text": "p_y(y_1 | x, w, (1, 2)) means the first output is assigned to the first ground truth, while p_y(y_1 | x, w, (2, 1)) mean the first output is assigned to the second ground truth.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 16,
+      "text": "These two scenarios are acctally generate very different gradient.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 17,
+      "text": "The same argument can be extended to p_y(y_2 | x, w, (1, 2)) and p_y(y_2 | x, w, (2, 1)).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 18,
+      "text": "- the dependence on \\pi drops out when getting a MAP estimate of outputs:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 19,
+      "text": "The permutation takes into the account when there is loss and a GT to compare as GT  annotations are permutated to be assigned to the outputs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 20,
+      "text": "During inference, we don\u2019t have loss and GT.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 21,
+      "text": "We just have the predicted outputs, e.g. cardinality, states and premutation and the order which we want to show the states will not change the value of the states.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 22,
+      "text": "We hope to have clarified all the technical misunderstandings.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x0cUg5nm",
+      "rebuttal_id": "rkxaglcwTm",
+      "sentence_index": 23,
+      "text": "We would like to point the reviewer again to our impressive results in the detection problem and ask him/her to reconsider his/her rating if the technical concerns are now clear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

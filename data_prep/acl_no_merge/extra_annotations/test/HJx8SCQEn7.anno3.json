@@ -1,0 +1,1014 @@
+{
+  "metadata": {
+    "forum_id": "H1xwNhCcYm",
+    "review_id": "HJx8SCQEn7",
+    "rebuttal_id": "Skgkfk6tRm",
+    "title": "Do Deep Generative Models Know What They Don't Know? ",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1xwNhCcYm&noteId=Skgkfk6tRm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 0,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 1,
+      "text": "- The finding that SVHN has larger likelihood than CIFAR according to networks is interesting.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 2,
+      "text": "- The empirical and theoretical analyses are clear, seem thorough, and make sense.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 3,
+      "text": "- Section 5 can provide some insight when the model is too rigid and too log-concave (e.g. Gaussian).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 4,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 5,
+      "text": "- The premises of the analyses are not very convincing, limiting the significance of the paper.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 6,
+      "text": "- In particular, Section 4 is a series of empirical analyses, based on one dataset pair.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 7,
+      "text": "In 3/4 of the pairs the author tried, this phenomenon is not there. Whether the findings generalize to other situations where the phenomenon appears is uncertain.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 8,
+      "text": "- It is good that Section 5 has some theoretical analysis. But I personally find it very disturbing to base it on a 2nd order approximation of a probability density function of images when modeling something as intricate as models that generate images.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 9,
+      "text": "At least this limitation should be pointed out in the paper.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 10,
+      "text": "- Some parts of the paper feel long-winded and aimless.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 11,
+      "text": "[Quality]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 12,
+      "text": "See above pros and cons.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 13,
+      "text": "A few less important disagreement I have with the paper:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 14,
+      "text": "- I don't think Glow necessarily is encouraged to increase sensitivity to perturbations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 15,
+      "text": "The bijection needs to map training images to a high-density region of the Gaussian, and that aspect would make the model think twice before making the volume term too large.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 16,
+      "text": "- Figure 6(a) clearly suggests that the data mean for SVHN and CIFAR are very different, instead of similar.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 17,
+      "text": "[Clarity]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 18,
+      "text": "In general, the paper is clear and easy to understand given enough reading time, but feels at times long-winded.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 19,
+      "text": "Section 2 background takes too much space.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 20,
+      "text": "Section 3 too much redundancy -- it just explains that SVHN has a higher likelihood when trained on CIFAR, and a few variations of the same experiment.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 21,
+      "text": "Section 4 seems to lack a high-level idea of what it want to prove -- the hypothesis around the volume term is dismissed shortly after, and it ultimately proves that we do not know what is the reason behind the high SVHN likelihood, making it look like a distracting side-experiment.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 22,
+      "text": "A few editorial issues:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 23,
+      "text": "- On page 4 footnote 2, as far as I know the paper did not define BPD.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 24,
+      "text": "- There are two lines of text between Fig. 4 and Fig. 5, which is confusing.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 25,
+      "text": "[Originality]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 26,
+      "text": "I am not an expert in this specific field (analyzing generative models), but I believe this analysis is novel.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 27,
+      "text": "However, there are papers empirically analyzing novelty detection using generative model -- should analyze or at least cite:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 28,
+      "text": "V\u00edt \u0160kv\u00e1ra et al. Are generative deep models for novelty detection truly better?",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 29,
+      "text": "^ at first glance, their AUROC is never under 0.5, indicating that this phenomenon did not appear in their experiments although a lot of inlier-novelty pairs are tried.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 30,
+      "text": "A part of the paper's contribution (section 5 conclusion) seem to overlap with others' work.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 31,
+      "text": "The section concludes that if the second dataset has small variances, it will get higher likelihood.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 32,
+      "text": "But this is too similar to the cited findings on page 6 (models assign high likelihood to constant images).",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 33,
+      "text": "[Significance]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 34,
+      "text": "The paper has a very interesting finding; pointing out and in-depth analysis of negative results should benefit the community greatly.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 35,
+      "text": "However, only 1 dataset pair is experimented -- there should be more to ensure the findings generalize, since Sections 3 and 4 rely completely on empirical analysis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 36,
+      "text": "According to the conclusions of the paper, such dataset pairs should be easy to find -- just find a dataset that \"lies within\" another. Did you try e.g. CIFAR-100 train and CIFAR-10 test?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "sentence_index": 37,
+      "text": "Section 5 is based on a 2nd order expansion on the $log p(x)$ given by a deep network -- I shouldn't be the judge of this, but from a realistic perspective this does not mean much.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 0,
+      "text": "Thanks again, Reviewer #3, for your thought-provoking critique.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 1,
+      "text": "We respond to your other comments below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 2,
+      "text": "1.  \u201cIn particular, Section 4 is a series of empirical analyses, based on one dataset pair\u2026.However, only 1 dataset pair is experimented -- there should be more to ensure the findings generalize, since Sections 3 and 4 rely completely on empirical analysis.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 3,
+      "text": "See general responses #1 and #3.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 4,
+      "text": "2.  \u201cIt is good that Section 5 has some theoretical analysis. But I personally find it very disturbing to base it on a 2nd order approximation of a probability density function of images when modeling something as intricate as models that generate images. At least this limitation should be pointed out in the paper\u2026",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 5,
+      "text": ".Section 5 is based on a 2nd order expansion on the $log p(x)$ given by a deep network -- I shouldn't be the judge of this, but from a realistic perspective this does not mean much.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 6,
+      "text": "See general response #2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 7,
+      "text": "We emphasize that we are not trying to approximate the density function, only approximate the difference and characterize its sign.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 8,
+      "text": "Moreover, the special structure of CV-Glow makes these derivative-based approximations better behaved and more tractable than an expansion of a generic deep neural network.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 9,
+      "text": "3.  \u201cSome parts of the paper feel long-winded and aimless\u2026.In general, the paper is clear and easy to understand given enough reading time, but feels at times long-winded.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 10,
+      "text": "Section 2 background takes too much space.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 11,
+      "text": "Section 3 too much redundancy",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 12,
+      "text": "-- it just explains that SVHN has a higher likelihood when trained on CIFAR, and a few variations of the same experiment.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 13,
+      "text": "We will attempt to make the writing more concise.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 14,
+      "text": "But we believe that most, if not all, of Section 2 is necessary in order to make the paper self-contained and accessible to someone who has never before seen invertible generative models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 15,
+      "text": "While we are fastidious in our experimental description in Section 3, we think it is necessary since this is the foundational section of the paper.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 16,
+      "text": "4.  \u201cI don't think Glow necessarily is encouraged to increase sensitivity to perturbations.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 17,
+      "text": "The bijection needs to map training images to a high-density region of the Gaussian, and that aspect would make the model think twice before making the volume term too large.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 18,
+      "text": "We are not saying that the model will totally disregard the latent density and attempt to scale the input to very large or infinite values.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 19,
+      "text": "Our point is made in the context of volume term which is only one of the terms in the change-of-variable objective.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 20,
+      "text": "The log volume term in the change-of-variable objective is maximizing the very quantity (the Jacobian\u2019s diagonal terms) that the cited work on derivative-based regularization penalties has sought to minimize.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 21,
+      "text": "The maximization of the derivatives in the objective directly implies increased sensitivity to perturbations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 22,
+      "text": "5.  \u201cFigure 6(a) [Figure 5(a) in revised draft] clearly suggests that the data mean for SVHN and CIFAR are very different, instead of similar.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 23,
+      "text": "We are not sure how you are drawing this conclusion; perhaps from the scale of the x-axis?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 24,
+      "text": "The histogram in Figure 6 (a) (original draft) has an x-axis covering the interval [0.4, 0.55], meaning the maximal difference between a mean in *any pair of dimensions* is 0.15.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 25,
+      "text": "Scaling back to pixel units, 0.15 * 255 = 38.25, meaning that 38.25 pixels is the maximum difference in means.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 26,
+      "text": "While this is not a difference of zero, we don\u2019t see how you could say this \u201cclearly suggests\u201d that the means are \u201cvery different.\u201d  In the latest draft, this figure---now Fig 5 (a)---has an x-axis that spans from 0-255.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 27,
+      "text": "Hopefully the overlap in the means in now conspicuous.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 28,
+      "text": "6.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 29,
+      "text": "\u201cHowever, there are papers empirically analyzing novelty detection using generative model -- should analyze or at least cite: V\u00edt \u0160kv\u00e1ra et al. Are generative deep models for novelty detection truly better? at first glance, their AUROC is never under 0.5, indicating that this phenomenon did not appear in their experiments although a lot of inlier-novelty pairs are tried.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 30,
+      "text": "Thank you for pointing us to this work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 31,
+      "text": "We cite it in the revised draft.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 32,
+      "text": "It looks like they test on UCI data sets of dimensionality less than 200, and therefore their results speak to a much different data regime than the one we are studying.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 33,
+      "text": "7.  \u201cA part of the paper's contribution (section 5 conclusion) seem to overlap with others' work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 34,
+      "text": "The section concludes that if the second dataset has small variances, it will get higher likelihood. But this is too similar to the cited findings on page 6 (models assign high likelihood to constant images).\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 35,
+      "text": "While we do also analyze constant images, we believe that our results for multiple data set pairs (FashionMNIST-MNIST, CIFAR10-SVHN, CelebA-SVHN, ImageNet-CIFAR10/CIFAR100/SVHN) and for multiple deep generative models (flow-based models, VAE, PixelCNN) is novel.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJx8SCQEn7",
+      "rebuttal_id": "Skgkfk6tRm",
+      "sentence_index": 36,
+      "text": "Our conclusions are arrived at through focused experimentation and a novel analytical expression applied to CV-Glow.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

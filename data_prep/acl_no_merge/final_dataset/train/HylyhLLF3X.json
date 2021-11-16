@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "forum_id": "rJNwDjAqYX",
+    "review_id": "HylyhLLF3X",
+    "rebuttal_id": "r1xr8BYm0m",
+    "title": "Large-Scale Study of Curiosity-Driven Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJNwDjAqYX&noteId=r1xr8BYm0m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 0,
+      "text": "In this paper, the authors presented a large experimental study of curiosity-driven reinforcement learning on various tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 1,
+      "text": "In the experimental studies, the authors also compared several feature space embedding methods, including identical mapping (pixels), random embedding, variational autoencoders and inverse dynamics features.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 2,
+      "text": "The authors found that in many of the tasks, learning based on intrinsic rewards could generate good performance on extrinsic rewards, when the intrinsic rewards and extrinsic rewards are correlated.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 3,
+      "text": "The authors also found that random features embedding, somewhat surprisingly, performs well in the tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 4,
+      "text": "Overall, the paper is well written with clarity.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 5,
+      "text": "Experimental setup is easy to understand.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 6,
+      "text": "The authors provided code, which could help other researchers reproduce their result.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 7,
+      "text": "Weaknesses:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 8,
+      "text": "1) as an experimental study, it would be valuable to compare the performance of curiosity-based learning versus learning based on well-defined extrinsic rewards.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 9,
+      "text": "The author is correct that in many tasks, well-behaved extrinsic rewards are hard to find.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 10,
+      "text": "But for problems with well-defined extrinsic rewards, such a comparison could help readers understand the relative performance of curiosity-based learning and/or how much headroom there exists to improve the current methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 11,
+      "text": "2) it is surprising that random features perform so well in the experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "sentence_index": 12,
+      "text": "The authors did provide literature in classification that had similar findings, but it would be beneficial for the authors to explore reasons that random features perform well in reinforcement learning.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 0,
+      "text": "We thank you for the constructive feedback and discuss some of your comments below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 1,
+      "text": "R3: \"it would be valuable to compare the performance of curiosity-based learning versus learning based on well-defined extrinsic rewards\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 2,
+      "text": "=> We would like to highlight that evaluating success of pure curiosity-driven exploration (no extrinsic rewards for training) by measuring the extrinsic score of game is just a proxy to evaluate exploration.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 3,
+      "text": "Our results show that exploration via curiosity has striking correlation with game scores.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 4,
+      "text": "But we expect that when environments have a well-defined (and well-shaped!) extrinsic reward, a policy trained using that extrinsic reward should outperform the policy trained with only curiosity especially when the performance is measured by the extrinsic return.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 5,
+      "text": "There are, however, examples, such as the Bowling Atari game, where a policy trained with only curiosity does *better* than a policy trained with extrinsic rewards.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 6,
+      "text": "The purely curious agent learns to play the game better than agents trained to maximize the (clipped) extrinsic reward directly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 7,
+      "text": "We think this is because the agent gets attracted to the difficult-to-predict flashing of the scoreboard occurring after the strikes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 8,
+      "text": "We expect such examples to come from environments with misleading or poorly-shaped extrinsic rewards.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 9,
+      "text": "R3: \"...it would be beneficial for the authors to explore reasons that random features perform well in reinforcement learning.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 10,
+      "text": "=> In the paper, Section 2.1, we discuss that random features have advantages that they are they are stable, compact, and tend to include most relevant information about the observation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 11,
+      "text": "However, in our opinion, a more interesting question is not why random features perform so well, but rather why the feature learning methods perform so poorly (relative to this baseline).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 12,
+      "text": "Learning the features introduces non-stationarity that confounds the effects of learning the dynamics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HylyhLLF3X",
+      "rebuttal_id": "r1xr8BYm0m",
+      "sentence_index": 13,
+      "text": "We believe that if methods are developed to address this non-stationarity, or environments that are more visually complex are used, then the benefits of the learning the features will become more noticeable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

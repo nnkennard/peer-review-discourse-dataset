@@ -1,0 +1,1163 @@
+{
+  "metadata": {
+    "forum_id": "SJz6MnC5YQ",
+    "review_id": "ryl8Oq-53X",
+    "rebuttal_id": "SJlERxAm67",
+    "title": "DEEP GRAPH TRANSLATION",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJz6MnC5YQ&noteId=SJlERxAm67",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 0,
+      "text": "This paper addresses the important / open problem of graph generation, and specifically in a conditional/transductive setting.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 1,
+      "text": "Graph generations is a new topic, it is difficult, and has many important applications, for instance generating new molecules for drug development.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 2,
+      "text": "As stated by the authors, this is a relatively open field: there are not many papers in this area, with most approaches today resorting to domain specific encodinings, or \"flattening\" of graphs into sequences to then allow for the use recurrence (like in MT); this which per se is an rather coarse approximation to graph topology representations, thus fully motivating the need for new solutions that take graph-structure into account.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 3,
+      "text": "The setting / application of this method to graph synthesis of suspicious behaviours of network users, to detect intrusion, effectively a Zero-shot problem, is super interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 4,
+      "text": "The main architectural contribution of this paper are graph-deconvolutions, practically a graph-equivalent of CNN's depth-to-space - achieved by means of transposed structural matrix multiplication of the hidden GNN (graph-NN) activation - simple, reasonable and effective.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 5,
+      "text": "While better than most of the baseline methods, the N^2 memory/computational complexity is not bad, but still too high to scale to very large graphs.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 6,
+      "text": "Results are provided on relatively new tasks so it's hard to compare fully to previous methods, but the authors do make an attempt to provide comparisons on synthetic graphs and intrusion detection data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 7,
+      "text": "The authors do published their code on GitHub with a link to the datasets as well.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 8,
+      "text": "As previously mentioned in public comments on this forum, some points in the paper are not very clear; specifically regarding the loss function, the definition of \"edge-to-edge\" convolutions and generally the architectural choice related to the conditional GAN discriminator.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 9,
+      "text": "Clarifications of these points, and more in general the philosophy behind the architectural choices made, would make this paper a much clearer accept.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 10,
+      "text": "Thank you!",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 11,
+      "text": "ps // next my previous public comments, in detail, repeated ...",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 12,
+      "text": "--",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 13,
+      "text": "- the general architecture, and specifically the logic behind the edge-to-edge convolution, and generally the different blocks in fig.1 \"graph translator\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 14,
+      "text": "- how exactly do you do a L1 loss on graphs? I'd have to assume the topology of the graph is unchanged between Gy and T(Gx) ~ and then maybe take L1 of weight matrix? But then is this general enough ~ given your stated goal of modeling different topologies? Either ways, more explanation / and perhaps equations to clarify this loss would be very helpful.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 15,
+      "text": "- why do you need a conditional GAN discriminator, if you already model similarity by L1?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 16,
+      "text": "Typically one would use a GAN-D() to model \"proximity\" to the source-distribution, and then a similarity loss (L1 in your case) to model \"proximity\" to the actual input sample, in the case of trasductional domains.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 17,
+      "text": "Instead here you seem to suggest to use L1 and GAN to do basically the same thing, or with significant overlap anyways.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 18,
+      "text": "This is confusing to me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 19,
+      "text": "Please explain the logic for this architectural choice.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "sentence_index": 20,
+      "text": "-  could you please explain the setting for the \u201cgold standard\u201d experiment. I'd have to assume, for instance, you train a GNN in a supervised way by using both source (non-suspicious) and target (suspicious) behaviour, and label accordingly? That said I am not 100% sure of this problem setting.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 0,
+      "text": "Dear Reviewer:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 1,
+      "text": "Thanks very much for your comments and questions. We would like to explain them in detail and modify our paper accordingly.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 2,
+      "text": "----------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 3,
+      "text": "Q: First, the general architecture, and specifically the logic behind the edge-to-edge convolution, and generally the different blocks in fig.1 \"graph translator\".",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 4,
+      "text": "A: General architecture: The whole framework includes a translator and a discriminator.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 5,
+      "text": "(1) Translator.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 6,
+      "text": "Translator consists of an encoder, a decoder, and a skip network, which first learn the representation of the graph and then decode it back to the target graph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 7,
+      "text": "See details in the third part of the answer.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 8,
+      "text": "(2) Discriminator.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 9,
+      "text": "Our discriminator aims to classify the generated graphs and the real target graphs given the input graph.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 10,
+      "text": "(3) The translator and discriminator are trained together, and the final goal is that the discriminator cannot distinguish the generated graphs and real target graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 11,
+      "text": "After training such a model, the translator will be used in the test phase.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 12,
+      "text": "The logic behind edge-to-edge convolution:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 13,
+      "text": "(1) Generally speaking, the purpose of edge-to-edge convolution layers is to aggregate the neighborhood information of nodes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 14,
+      "text": "Specifically, the n-th edge-to-edge convolution layer aggregates the n-th hop connection information of nodes related to each edge.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 15,
+      "text": "(2) Different from image convolution, for each hidden channel, we have two filters, one is a column vector while the other is a row vector.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 16,
+      "text": "To learn the nth hop information of edge <i,j>, row filter aggregates all the (n-1)-th hop information of outgoing edges of node i and column filter aggregates all the (n-1)-th hop information of incoming edges of node j.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 17,
+      "text": "(3)  Edge-to-edge layers are important to extract some higher-level graph features, e.g., the n-hop reachability from a node to another; n-hop in-degree and out-degree, and many other higher-order patterns.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 18,
+      "text": "Different blocks in the graph translator:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 19,
+      "text": "Translator consists of an encoder, a decoder, and a skip network.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 20,
+      "text": "(1) Encoder.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 21,
+      "text": "The encoder does n-hop edge information aggregation from the input graphs using edge-to-edge layers and then uses the edge-to-node layer to learn the latent representation of nodes.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 22,
+      "text": "(2) Decoder.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 23,
+      "text": "Reversely, the graph decoder first uses node-to-edge layers to decode the node representations to aggregated edge information and then further decode that into adjacency matrix, which is the final generated graphs.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 24,
+      "text": "(3) Skip-network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 25,
+      "text": "Over the encoder-decoder framework, we also added skip-network (the black line of Fig.1) which can directly map the edge aggregation information in every hop from the input graph to the output graph so that can preserve the local information in every resolution (i.e., every hop).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 26,
+      "text": "----------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 27,
+      "text": "Q: how exactly do you do a L1 loss on graphs? I'd have to assume the topology of the graph is unchanged between Gy and T(Gx) ~ and then maybe take L1 of weight matrix? But then is this general enough ~ given your stated goal of modeling different topologies?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 28,
+      "text": "Either ways, more explanation / and perhaps equations to clarify this loss would be very helpful.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 29,
+      "text": "A: (1) L1 norm is applied to the weight matrix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 30,
+      "text": "Our methodology is still general enough which is achieved by a trade-off between L1 loss and adversarial loss (GAN-D), which jointly enforces Gy and T(Gx) to follow a similar topological pattern but may not necessarily the same.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 31,
+      "text": "Specifically, L1 makes T(Gx) share the same rough outline of sparsity pattern like Gy, while under this outline, adversarial loss allows the T(Gx) to vary to some degree.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 32,
+      "text": "(2) Combining L1 loss and adversarial loss is well-recognized and validated.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 33,
+      "text": "Works on image-translation have proposed and utilized L1 loss and adversarial loss jointly in GAN, for example, reference [1] (with 600+ citations) and reference [2] (with 1300+ citations).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 34,
+      "text": "They have done extensive experiments to show the advantage of such a strategy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 35,
+      "text": "Furthermore, in our experiments, we found the performance when using L1 loss and adversarial loss jointly is better than using either of them.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 36,
+      "text": "------[1] Pathak, D., Krahenbuhl, P., Donahue, J., Darrell, T., & Efros, A. A. (2016). Context encoders: Feature learning by inpainting. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2536-2544).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 37,
+      "text": "------[2]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 38,
+      "text": "Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translation with conditional adversarial networks. arXiv preprint.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 39,
+      "text": "-----------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 40,
+      "text": "Q: Third, and slightly related to the previous point, why do you need a conditional GAN discriminator, if you already model similarity by L1?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 41,
+      "text": "Typically one would use a GAN-D() to model \"proximity\" to the source-distribution, and then a similarity loss (L1 in your case) to model \"proximity\" to the actual input sample, in the case of traditional domains.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 42,
+      "text": "Instead, here you seem to suggest using L1 and GAN to do basically the same thing, or with significant overlap anyways.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 43,
+      "text": "This is confusing to me.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 44,
+      "text": "Please explain the logic for this architectural choice.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 45,
+      "text": "A:(1) The logic of using both of them has been explained in the answer to the last question.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 46,
+      "text": "(2) The logic has been well-utilized and verified in the image-translation domain. Again please see the details in the answer to the last question.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 47,
+      "text": "(3)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 48,
+      "text": "Our ablation experiment also demonstrates the similar advantage of using both losses for graph translation than only using L1 loss.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 49,
+      "text": "Specifically, the proposed GT-GAN that uses both loses outperformed the S-Generator that only uses L1 loss on all three datasets by 10% in accuracy on average as shown in Table 2,3 and 4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 50,
+      "text": "-----------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 51,
+      "text": "Q: Four, could you please explain the setting for the \u201cgold standard\u201d experiment. I'd have to assume, for instance, you train a GNN in a supervised way by using both source (non-suspicious) and target (suspicious) behavior, and label accordingly? That said I am not 100% sure of this problem setting.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 52,
+      "text": "A: Yes, \u201cgold standard\u201d method is directly trained based on real target graphs instead of generated ones.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 53,
+      "text": "Specifically, as you know, all the comparison methods in our paper are generative models which generate graphs, and our experiment is to evaluate how real the generated graphs are.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 54,
+      "text": "One way to evaluate this is by \u201cindirect evaluation\u201d, where we use the graphs generated by different comparison methods as training data to train a classifier based on KCNN (see reference (Nikolentzos, et al.,2017) in the paper), and then compare which model generates \u201cmore-real graphs\u201d by testing their corresponding trained classifier on test set which consists of real graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 55,
+      "text": "In \u201cgold standard\u201d method, it directly uses the real graphs to train the classifier (still based on KCNN), so it is expected to get the best performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 56,
+      "text": "Therefore, \u201cgold standard\u201d method acts as the \u201cbest-possible-performer\u201d, and is used as a benchmark to evaluate all the different generative models on how \u201creal\u201d the graphs they can generate: the closer (and better) their performance is to the \u201cgold standard\u201d one, the \u201cmore real\u201d their generated graphs are.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 57,
+      "text": "We hope we were able to answer everything to your satisfaction, please let us know if there are any more open points.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryl8Oq-53X",
+      "rebuttal_id": "SJlERxAm67",
+      "sentence_index": 58,
+      "text": "Thank you once again!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

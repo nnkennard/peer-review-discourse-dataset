@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "forum_id": "r1gfQgSFDr",
+    "review_id": "Hyg3Zr60FS",
+    "rebuttal_id": "HylKa4cYjH",
+    "title": "High Fidelity Speech Synthesis with Adversarial Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=r1gfQgSFDr&noteId=HylKa4cYjH",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 0,
+      "text": "This paper puts forth adversarial architectures for TTS.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 1,
+      "text": "Currently, there aren't many examples (e.g. Donahue et al,  Engel et al. referenced in paper) of GANs being used successfully in TTS, so this papers in this area are significant.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 2,
+      "text": "The architectures proposed are convolutional (in the manner of Yu and Koltun), with increasing receptive field sizes taking into account the long term dependency structure inherent in speech signals.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 3,
+      "text": "The input to the generator are linguistic and pitch signals - extracted externally, and noise.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 4,
+      "text": "In that sense, we are working with a conditional GAN.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 5,
+      "text": "I found the discriminator design very interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 6,
+      "text": "As the comment below notes, it is a sort of patch GAN discriminator (See pix2pix, and this comment from Philip Isola - https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix/issues/39) and that is could be quite significant in that it classifies at different scales.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 7,
+      "text": "In the image world, having a single discriminator for the whole model would not take into account local structure of the images.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 8,
+      "text": "Likewise, perhaps we can imagine something similar in the case of audio at varying scales - in fact, audio dependencies are even more long range.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 9,
+      "text": "That might be one reason why the variable window sizes work here.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 10,
+      "text": "The paper also presents to image analogues for metrics based on FID and the KID, with the features being taken from DeepSpeech2.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 11,
+      "text": "I found the speech sample presented very convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 12,
+      "text": "In general, the architectures are also presented quite clearly, so it seems that we might be able to reproduce these experiments in our own practice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 13,
+      "text": "It is also promising that producing good speech could be achieved by a non-autoregressive or attention based architecture.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "sentence_index": 14,
+      "text": "The authors mention that they hardly encounter any issues with training stability and mode collapse. Is that because of the design of the multiple discriminator architecture?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyg3Zr60FS",
+      "rebuttal_id": "HylKa4cYjH",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyg3Zr60FS",
+      "rebuttal_id": "HylKa4cYjH",
+      "sentence_index": 1,
+      "text": "Please refer to the joint response in regards to training stability and mode collapse.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

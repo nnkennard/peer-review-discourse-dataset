@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "forum_id": "B1fpDsAqt7",
+    "review_id": "H1gUmqkh3Q",
+    "rebuttal_id": "Sklfd2fSpX",
+    "title": "Visual Reasoning by Progressive Module Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1fpDsAqt7&noteId=Sklfd2fSpX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 0,
+      "text": "[Summary]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 1,
+      "text": "This paper presents a multi-task learning approach for VQA that represent a solver for each task as a neural module that calls existing modules in a program manner.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 2,
+      "text": "The authors manually design the task hierarchy and propose a progressive module network to recursive calls the lower modules and gather the information by soft-attention.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 3,
+      "text": "The final prediction uses all the states and question to infer the final answers.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 4,
+      "text": "The authors verify the effectiveness of the proposed method on the performance of different tasks and modules.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 5,
+      "text": "Experiment on VQA shows the proposed model benefits from utilizing different modules.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 6,
+      "text": "The authors also qualitatively show the model's reasoning process and human study on judging answering quality.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 7,
+      "text": "[Strength]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 8,
+      "text": "1. The proposed method is novel and explores to use the existing modules as a black box for visual question answering.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 9,
+      "text": "This is different from most existing work.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 10,
+      "text": "2: By examing different modules, the proposed method is more interpretable compare to canonical methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 11,
+      "text": "3: The experiment results are good, especially for the counting problem.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 12,
+      "text": "[Weakness]",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 13,
+      "text": "1. The title of the paper is \"visual reasoning by progressive module networks.\" The title may be a little overstated since the major task is focused on visual question answering (VQA).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 14,
+      "text": "2. Annotation is not clear in this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 15,
+      "text": "For example, on page 3, Query transmitter and receiver, \"the output o_k = M_k(q_k) received from M_k is modified using receiver function as v_k = R_{k->n}(s^t, o_k).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 16,
+      "text": "\" There are multiple new variables in this paragraph, without specifying the dimension and meaning for each attribute, it's really hard to understand.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 17,
+      "text": "On page 4, State update function, what is the meaning of variable \"Epsilon\" in the equation?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 18,
+      "text": "From the supplementary, it seems Epsilon means the environment?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 19,
+      "text": "3. On the object counting task, the query transmitter needs to produce a query for a relationship module.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 20,
+      "text": "The authors mentioned that this is softly calculated by softmax on the importance score.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 21,
+      "text": "Since q_rel require one hot vector as input, how to sample the q_rel given the importance score and how backprob the gradient in this case?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 22,
+      "text": "4. The cider score of image captioning is 109 compared to the baseline 108.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 23,
+      "text": "The explanation is the COCO dataset has a fixed set of 80 object categories and does not benefit from training the diverse data.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 24,
+      "text": "Since the input visual feature is the same, the only difference is the proposed model has additional label embedding as input.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 25,
+      "text": "My assumption is the visual feature already contains the label information for image captioning.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 26,
+      "text": "5. On relational detection task, is there a way to compare with the STOA method on some specific data split? This will leads to much more convincing results.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 27,
+      "text": "6. Similar as above question, on the object counting task, is there a way to compare with previous counting methods?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 28,
+      "text": "7. In Table 4, the accuracy of number on Zhang et.al is 49.39, which is higher than other methods, while on test-dev, the accuracy is 51.62, which is lower than others.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "sentence_index": 29,
+      "text": "Is the number right?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and feedback. We will certainly clarify them in the final paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 1,
+      "text": "1. Title of the paper",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 2,
+      "text": "- We agree that the main highest-level task that we show is VQA, even though our method is more general.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 3,
+      "text": "Our title aimed to convey that we showcase PMN on a host of increasingly complex visual reasoning tasks such as relationship detection, counting, and captioning, as well as VQA.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 4,
+      "text": "Our focus is on VQA as it happens to be one of the most complex visual reasoning tasks that can leverage each of the (relatively) simpler tasks.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 5,
+      "text": "2. Description of variables",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 6,
+      "text": "- Thanks for the feedback.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 7,
+      "text": "Epsilon means the environment, some of the definitions are written in Section 3, but we agree that it can be somewhat challenging to interpret as there are many variables.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 8,
+      "text": "We edited the text to address variables more gently and to explain the arrow sign.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 9,
+      "text": "3. Query for the relationship module",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 10,
+      "text": "- The relationship module is fed an N-dimensional (corresponding to N image regions) one-hot vector as input during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 11,
+      "text": "When it is called by other task modules (such as counting), an N-dimensional probability vector is computed using softmax on image regions (see A.4, point 3) and not using the importance scores.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 12,
+      "text": "This acts as a soft version of the one-hot sampled vector so that we can backpropagate gradients.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 13,
+      "text": "4. CIDEr score of captioning",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 14,
+      "text": "- That may be true to some extent.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 15,
+      "text": "However, we think that explicit label information might still be useful since the visual features (environment) are from Faster RCNN and contain diverse information such as edges, background, color, and size.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 16,
+      "text": "5 and 6.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 17,
+      "text": "Comparison with SOTA models for counting and relationship detection",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 18,
+      "text": "- To the best of our knowledge, Zhang et al. (2018) is the SOTA method on counting in the context of visual question answering.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 19,
+      "text": "Our counting module leverages that but achieves higher performance on the number questions - 54.39% with ensembling and 52.12% without vs. 51.62% of Zhang et al. (2018).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 20,
+      "text": "Note that 51.62% of Zhang et al. (2018) is from a single highly regularized model that provides small gains from ensembling.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 21,
+      "text": "This shows that additional modules help.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 22,
+      "text": "Kim et al. (2018) which is concurrent to our work shows similar performance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 23,
+      "text": "For the relationship detection task, other works such as Lu et al. (2016) unfortunately have a different setup which makes direct comparison difficult.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 24,
+      "text": "7. Table 4, accuracies are from Zhang et al. 2018",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 25,
+      "text": "- Yes, the numbers are from their paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 26,
+      "text": "One possible explanation for this could be their use of high regularization for a single model instead of ensembling.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 27,
+      "text": "Thus, the performance improvement from training on the train set (evaluating on validation) to training on train+val (evaluating on test-dev) is smaller.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 28,
+      "text": "(Zhang et al. 2018) Learning to Count Objects in Natural Images for Visual Question Answering",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 29,
+      "text": "(Kim et al. 2018) Bilinear Attention Networks",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1gUmqkh3Q",
+      "rebuttal_id": "Sklfd2fSpX",
+      "sentence_index": 30,
+      "text": "(Lu et al. 2016) Visual Relationship Detection with Language Priors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

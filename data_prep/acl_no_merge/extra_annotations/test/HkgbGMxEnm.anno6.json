@@ -1,0 +1,832 @@
+{
+  "metadata": {
+    "forum_id": "BkzeUiRcY7",
+    "review_id": "HkgbGMxEnm",
+    "rebuttal_id": "rJlQL4SGC7",
+    "title": "M^3RL: Mind-aware Multi-agent Management Reinforcement Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BkzeUiRcY7&noteId=rJlQL4SGC7",
+    "annotator": "anno6"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 0,
+      "text": "This paper studies the problem of coordinating many strategic agents with private valuation to perform a series of common goals.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 1,
+      "text": "The algorithm designer is a manager who can assign goals to various agents but cannot see their valuation or control them explicitly.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 2,
+      "text": "The manager has a utility function for various goals and wants to maximize the total revenue.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 3,
+      "text": "The abstract problem is well-motivated and significant and is an entire branch of study called algorithmic mechanism design.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 4,
+      "text": "However often many assumptions have to be made to make the problem mathematically tractable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 5,
+      "text": "In this paper, the authors take an empirical approach by designing an RL framework that efficiently maximizes rewards across many episodes.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 6,
+      "text": "Overall I find the problem interesting, well-motivated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 7,
+      "text": "The paper is well-written and contains significant experiments to support its point.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 8,
+      "text": "However, I do not have the necessary background in the related literature to assess the significance of the methods proposed compared to prior work and thus would refrain from making a judgment on the novelty of this paper in terms of methodology.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 9,
+      "text": "Here are some of my comments/questions to the author on this paper.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 10,
+      "text": "(1) I want to clarify how the skills of the agents play a role in the problem setup. Does it show up in the expression for the manager's reward?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 11,
+      "text": "In particular, does it affect the Indicator for whether a goal is completed Eq. (2) via a process that need not be explicitly modeled but can be observed via a feedback of whether or not the goal is completed?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 12,
+      "text": "So in the case of resource collection example, the skill set is a binary value for each resource, whether it can be collected or not?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 13,
+      "text": "(2) Related to the first point, the motivation for modeling the agents as maximizing their utility is the assumption that agents do not know their skills. I am wondering, is this really justified? Over the course of episodes, can the agents learn their skills based on the relationship between their intention and the goals they achieve? In the resource collection example, when they reach a resource and are not able to collect it, they understand that they do not have the corresponding skill.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 14,
+      "text": "Is there a way to extrapolate the results from this paper to such a setting?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 15,
+      "text": "(3) I am slightly concerned about the sample complexity of keeping track of the probability of worker i finishing goal g within t steps with a bonus b. This scales linearly in parameters which usually would be large (such as the number of time-steps).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 16,
+      "text": "Are there alternate ways to overcome maintaining the UCB explicitly, especially for the number of time-steps?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 17,
+      "text": "Some minor comments on the presentation.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 18,
+      "text": "(1) What are the units for rewards in the plots? Is it the average per episode reward? It would be good to mention this in the caption.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 19,
+      "text": "(2) There are a few typos in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 20,
+      "text": "Some I could catch was,",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 21,
+      "text": "- Last line in Page 5: \"quantitative\" -> \"quantity\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 22,
+      "text": "- Page 8: skills nad preferences -> skills and preferences",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "sentence_index": 23,
+      "text": "- Page 8: For which we combining -> for which we combine",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 0,
+      "text": "Thank you for your reviews.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 1,
+      "text": "Here are our responses to your questions:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 2,
+      "text": "1. Clarify how the skills of agents play a role in the problem setup",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 3,
+      "text": "We clarify the definition of skills and how it influences the manager\u2019s decision as follows.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 4,
+      "text": "i) As defined in Section 3, an agent\u2019s skill depends on its state transition probabilities and its policy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 5,
+      "text": "The state transition probabilities define if a resource can be collected by an agent (i.e., whether the \u201ccollect\u201d action executed by this agent will have real effect), and it is equivalent to a binary value for each resource in Resource Collection.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 6,
+      "text": "The agent\u2019s skill also depends on its policy because it affects how fast an agent can achieve a goal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 7,
+      "text": "E.g., when the agent has a suboptimal policy, it may not be able to reach a goal within the time limit even though it actually can collect the resource if given more time.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 8,
+      "text": "ii) The skills are completely hidden from the manager.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 9,
+      "text": "It can be inferred by the manager based on the performance history, and also on the estimated worker policies by IL.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 10,
+      "text": "However, only checking whether a goal is reached is not sufficient to determine skills.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 11,
+      "text": "Failing to reach a goal may be a result of several reasons -- it may be because i) the bonus in the contract is too low, ii) the contract terminates prematurely before the agent can reach the goal, or iii) the assigned task depends on another task which has not been finished yet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 12,
+      "text": "So the manager needs to infer agents\u2019 skills, preferences, and the task dependency jointly through multiple trials.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 13,
+      "text": "2. Is maximizing utility justified?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 14,
+      "text": "Maximizing utility is actually the setup in similar problems in economics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 15,
+      "text": "Just like those problems (e.g., mechanism design), this paper focuses on scenarios where agents won\u2019t truthfully or clearly reveal its skills and preferences to the manager, and do not always behave optimally.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 16,
+      "text": "As we stated in the paper, maximizing utility is more realistic, and typically the span of the decision making process of the manager is much shorter than the time needed for improving worker agents.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 17,
+      "text": "Let\u2019s consider a simple scenario.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 18,
+      "text": "An agent is unable to collect a certain kind of resource.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 19,
+      "text": "By maximizing its utility, it may still accept the contract and go to that resource.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 20,
+      "text": "Once a resource is occupied by this agent, other agents can no longer collect it according to our setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 21,
+      "text": "This means that the resource will never be really collected.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 22,
+      "text": "As an empirical evidence,  you may compare the S2 and S3 settings with S1 in Resource Collection.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 23,
+      "text": "In S2 and S3, workers may prefer a task that it can not perform, which should never happen in the case of maximizing return.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 24,
+      "text": "As a result (shown in Figure 4b and Figure 4c), the training difficult significantly increases.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 25,
+      "text": "3. Are there alternate ways to overcome maintaining the UCB explicitly, especially for the number of time-steps?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 26,
+      "text": "Yes, there are ways to overcome this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 27,
+      "text": "First, we can define small time intervals instead of maintaining statistics for each step (i.e., combining statistics in every dT consecutive steps will reduce the complexity to 1 / dT of the original size).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 28,
+      "text": "Note that this has been done in results shown in Appendix C.1, where dT also means that for every dT steps, the manager can only change the contracts once.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 29,
+      "text": "Second, we may define a maximum number of steps to be considered in the performance history, which can be determined by the upper bound of the execution time for a subtask, and can be smaller than the step limit of the whole episode.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 30,
+      "text": "4. What are the units for rewards in the plots?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 31,
+      "text": "It is the average per episode.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 32,
+      "text": "The reward is defined as in Section 5.1.1 and Section 5.1.2 without any rescaling.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 33,
+      "text": "We have added this in the caption.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 34,
+      "text": "5. Typos",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkgbGMxEnm",
+      "rebuttal_id": "rJlQL4SGC7",
+      "sentence_index": 35,
+      "text": "Thank you for pointing out these typos. We will fix them in the next revision.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

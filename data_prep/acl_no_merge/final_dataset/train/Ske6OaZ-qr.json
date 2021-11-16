@@ -1,0 +1,802 @@
+{
+  "metadata": {
+    "forum_id": "B1esx6EYvr",
+    "review_id": "Ske6OaZ-qr",
+    "rebuttal_id": "Syg3upgMjH",
+    "title": "A critical analysis of self-supervision, or what we can learn from a single image",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1esx6EYvr&noteId=Syg3upgMjH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 0,
+      "text": "Update 11/21",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 1,
+      "text": "With the additional experiments (testing a new image, testing fine-tuning of hand-crafted features), additions to related work, and clarifications, I am happy to raise my score to accept.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 2,
+      "text": "Overall, I think this paper is a nice sanity check on recent self-supervision methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 3,
+      "text": "In the future, I am quite curious about how these mono-image learned features would fare on more complex downstream tasks (e.g., segmentation, keypoint detection) which necessarily rely less on texture.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 4,
+      "text": "Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 5,
+      "text": "This paper seeks to understand the role of the *number of training examples* in self-supervised learning with images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 6,
+      "text": "The usefulness of the learned features is evaluated with linear probes at each layer for either ImageNet or CiFAR image classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 7,
+      "text": "Empirically, they find that a single image along with heavy data augmentation suffices for learning the first 2-3 layers of convolutional weights, while later layers improve with more self-supervised training images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 8,
+      "text": "The result holds for three state-of-the-art self-supervised methods, tested with two single-image training examples.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 9,
+      "text": "In my view, learning without labels is an important problem, and it is interesting what can be learned from a single image and simple data augmentation strategies.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 10,
+      "text": "Comments / Questions",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 11,
+      "text": "It seems to me that for completeness, Table 4 should include the result of training a supervised network on top of random conv1/2 and Scattering network features, because this experiment is actually testing what we want - performance of the features when fine-tuned for a downstream task.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 12,
+      "text": "So for example, even if a linear classifier on top of Scattering features does poorly, if downstream fine-tuning results in the same performance as another pre-training method, then Scattering is a perfectly fine approach for initial features.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 13,
+      "text": "Could the authors please either correct this logic or provide the experiments?",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 14,
+      "text": "Further, it seems that the results in Table 4 might be a bit obscured by the size of the downstream task dataset.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 15,
+      "text": "I wonder if the learned features require fewer fully supervised images to obtain the same performance on the downstream task?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 16,
+      "text": "Can the authors clarify how the neural style transfer experiment is performed?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 17,
+      "text": "The method from Gatys et al. requires features from different layers of the feature hierarchy, including deeper layers.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 18,
+      "text": "Are all these features taken directly from the self-supervised network or is it fine-tuned in some way?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 19,
+      "text": "While I appreciate the computational burden of testing more images, it does feel that Image A and B are quite cherry-picked in being very visually diverse.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 20,
+      "text": "Because of this, it seems like a precise answer to what makes a good single training image remains unknown.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 21,
+      "text": "I wonder how feasible it is to find a proxy metric that corresponds to the performance on downstream tasks which is expensive to compute.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 22,
+      "text": "It might be interesting to try to generate synthetic images (or modify real ones) that are good for this purpose and observe their properties.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 23,
+      "text": "I disagree with the claim of practicality in the introduction (page 2, top).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 24,
+      "text": "While training on one image does reduce the burden of number of images, the computational burden remains the same. And as mentioned above, it doesn\u2019t seem likely that *any* image would work for this method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 25,
+      "text": "Finally, more images are needed to learn the deeper layers for the downstream task anyway.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "sentence_index": 26,
+      "text": "The paper is well-written and clear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their time and detailed reading of the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 1,
+      "text": "In the following, we address each of the reviewers comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 2,
+      "text": "> Table 4 should include the result of training a supervised network on top of random conv1/2 and Scattering network features [\u2026] Scattering is a perfectly fine approach for initial features.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 3,
+      "text": "Our aim is to investigate the \u201cpower\u201d (or lack thereof) of current self-supervision techniques when applied to standard deep network models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 4,
+      "text": "This is of interest because self-supervision is a hot topic of research.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 5,
+      "text": "Finding whether e.g. the Scattering Transform can replace the first few layers of a network is interesting, for example to know if handcrafted features can also do as well as (self) supervision for the first few layers, but not susbtitutive of our core investigation (furthermore, we also look ad deeper layers, where these features are unlikely to be competitive).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 6,
+      "text": "Still, such an experiment can help put our findings in context.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 7,
+      "text": "This is why we do include them in Table 2 of the paper, where we show that scattering is not quite as good as even single-image self-supervision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 8,
+      "text": "We do think that the suggestion of finetuning/retraining the rest of the model is also interesting after replacing the first few layers is also interesting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 9,
+      "text": "Still, we think that this can complement but not replace linear probing as the latter is a more direct way of finding what the probed layers can do.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 10,
+      "text": "For instance, it is likely possible to learn a good network even by replacing the first layer with the identity function \u2014 it is just a slightly less deep model.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 11,
+      "text": "For these two reasons, we are running the requested experiments and we hope to be able to update Table 4 in the following days.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 12,
+      "text": "> Can the authors clarify how the neural style transfer experiment is performed?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 13,
+      "text": "Indeed, the method by Gatys et al. uses deeper layers as well, which we also use \u2014 straight from the self-supervised method, without fine-tuning or anything else.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 14,
+      "text": "We will update the paper with these details.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 15,
+      "text": "> While I appreciate the computational burden of testing more images, it does feel that Image A and B are quite cherry-picked in being very visually diverse. [...]  It might be interesting to try to generate synthetic images (or modify real ones) that are good for this purpose and observe their properties.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 16,
+      "text": "Thank you, finding the best single training image, or finding useful synthetic images, are both very interesting ideas. While we are happy to consider doing so as a next step, it is next to impossible to do so in time for the rebuttal (we do not have access to thousands of GPUs).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 17,
+      "text": "Nevertheless, we would argue that the paper stands on by making some interesting observation on the ability of self-supervision to extract useful information from more than one (or few) images, and by investigating the role of data augmentation in this process.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 18,
+      "text": "We hope that the reviewer will agree that the community will be interested in hearing about these findings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 19,
+      "text": "> I disagree with the claim of practicality in the introduction (page 2, top). While training on one image does reduce the burden of number of images, the computational burden remains the same.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 20,
+      "text": "Our intention wasn\u2019t to say that we can save compute time, but data collection effort (which is also a practical issue in some applications).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 21,
+      "text": "Nevertheless, we agree that our findings have mostly a theoretical value, so we have adjusted the wording to reflect that.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 22,
+      "text": "> And as mentioned above, it doesn\u2019t seem likely that *any* image would work for this method.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 23,
+      "text": "It is true that we did not quite prove that, so we have reworded the text to tone down this claim.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 24,
+      "text": "To be a bit more specific, obviously a blank image would not work, and textureless images would probably not work well either.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 25,
+      "text": "However, we did use in the paper the first two images we manually selected from Google Image Search (while we did select images with some texture, they have not been otherwise been optimized for good performance in our evaluation)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 26,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 27,
+      "text": "Thus, we think that it is extremely likely that many other images would work just as well.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 28,
+      "text": "> Finally, more images are needed to learn the deeper layers for the downstream task anyway.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske6OaZ-qr",
+      "rebuttal_id": "Syg3upgMjH",
+      "sentence_index": 29,
+      "text": "True, but even for deeper layers a single image achieves two thirds of the performance that self-supervision can squeeze out of a million images, which we think is interesting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

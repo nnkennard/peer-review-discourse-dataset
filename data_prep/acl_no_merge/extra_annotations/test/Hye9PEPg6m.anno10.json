@@ -1,0 +1,612 @@
+{
+  "metadata": {
+    "forum_id": "rkGG6s0qKQ",
+    "review_id": "Hye9PEPg6m",
+    "rebuttal_id": "ryezN9__TQ",
+    "title": "The GAN Landscape: Losses, Architectures, Regularization, and Normalization",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkGG6s0qKQ&noteId=ryezN9__TQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 0,
+      "text": "The paper studies several different techniques for training GANs: the architecture chosen, the loss function of the discriminator and generator,",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 1,
+      "text": "and training techniques: normalization methods, ratio between updates of discriminator and generator, and regularization.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 2,
+      "text": "The method is performing an empirical training study on three image datasets, modifying the training procedure (e.g. changing one of the parameters) and using different metrics to evaluate the performance of the trained network.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 3,
+      "text": "Since the space of possible hyper-parameters , training algorithms, loss functions and network architecture is huge , the authors set a default training procedure, and in each numerical experiment freeze all techniques and parameters",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 4,
+      "text": "except for one or two which they modify and evaluate.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 5,
+      "text": "The results of the paper do not give major insights into what are the preferred techniques for training GANs, and certainly not why and under what circumstances they'll work.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 6,
+      "text": "The authors recommend using non-saturated GANs loss and spectral normalization when training on new datasets, because these techniques achieved good performance metrics in most experiments.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 7,
+      "text": "But there is no attempt to generalize the findings (e.g. new datasets not from original study, changing other parameters and then evaluating again if these techniques help etc.), not clear",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 8,
+      "text": "if the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 9,
+      "text": "improvement in performance is statistically significant, how robust it is to changes in other parameters etc.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 10,
+      "text": "The authors also rely mostly on the FID metric, but do not show if and how there is improvement upon visual inspection of the generated images (i.e. is resolution improved, is fraction of images that look clearly 'unnatural' reduced etc.)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 11,
+      "text": "The writing is understandable for the most part, but the paper seems to lack focus - there is no clear take home message.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 12,
+      "text": "The authors use numerous jargon words to describe the techniques studied (e.g. dragon penalty, gradient penalty, spectral normalization, Gaussian process regression in the bandit setting) but they do not explain them,",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 13,
+      "text": "give mathematical formulations, or insights into their advantages/disadvantages, making it hard to the non-expert reader to understand what are these techniques and why are they introduced.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "sentence_index": 14,
+      "text": "With lack of clear novel insights, or at least more systematic study on additional datasets of the 'winning' techniques and a sensitivity analysis, the paper does not give a valuable enough contribution to the field to merit publication.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 0,
+      "text": "Thank you for the time. We would like to take this opportunity to correct some factually incorrect statements below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 1,
+      "text": "[Q] The results of the paper do not give major insights into what are the preferred techniques for training GANs, and certainly not why and under what circumstances they'll work.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 2,
+      "text": "[A]  We respectfully disagree.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 3,
+      "text": "To our knowledge, this is only the second work which attempts to fairly and systematically compare GANs in a large-scale setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 4,
+      "text": "The main conclusions of our work (about NS-GAN, spectral normalization, and gradient penalty) hold across several datasets and architectures.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 5,
+      "text": "[Q] But there is no attempt to generalize the findings (e.g. new datasets not from original study, changing other parameters and then evaluating again if these techniques help etc.),",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 6,
+      "text": "[A] We again respectfully disagree -- both LSUN and CelebaHQ are used for the first time in such a large-scale evaluation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 7,
+      "text": "In fact, none of the techniques were previously evaluated on CelebaHQ.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 8,
+      "text": "Furthermore, even if some data sets, such as LSUN, were used previously, the comparison to other works was always done by the authors of the new method usually with additional changes, such as architectural decisions and optimization tricks.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 9,
+      "text": "[Q] Not clear if the improvement in performance is statistically significant, how robust it is to changes in other parameters etc.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 10,
+      "text": "[A] In this we take care of systematically evaluating various design decisions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 11,
+      "text": "While the space of design decisions is too large to search over, we focus on the main design choices and provide some conclusions in this context.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 12,
+      "text": "Performance improvements obtained by both spectral norm and gradient penalty are statistically significant as seen in the plots -- the performance with respect to the baseline is far outside of the two standard errors of the median in most settings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 13,
+      "text": "[Q] The authors also rely mostly on the FID metric, but do not show if and how there is improvement upon visual inspection of the generated images (i.e. is resolution improved, is fraction of images that look clearly 'unnatural' reduced etc.)",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 14,
+      "text": "[A] FID was shown to correlate well with perceived image quality (e.g. precision) and mode coverage (recall).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 15,
+      "text": "The evidence can be found in [1], and [2].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 16,
+      "text": "As such, a reduction in FID corresponds both to improved image quality, as well as improved mode coverage.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 17,
+      "text": "IN practice, a 10% drop in FID is visible to a human, and samples can be seen in the Appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 18,
+      "text": "While it is not a perfect metric, it is arguably useful for sample-based relative comparison of generative models.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 19,
+      "text": "[1] https://arxiv.org/abs/1711.10337",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 20,
+      "text": "[2] https://arxiv.org/abs/1806.00035",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 21,
+      "text": "[Q] The authors use numerous jargon words to describe the techniques studied (e.g. dragon penalty, gradient penalty, spectral normalization, Gaussian process regression in the bandit setting) but they do not explain them, give mathematical formulations, making it hard to the non-expert reader to understand what are these techniques and why are they introduced.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 22,
+      "text": "[A] Most of these are described in Section 2 (in particular, discussion on regularization and penalties is in Section 2.2).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 23,
+      "text": "Describing all aspects of these techniques would require substantially more space and hence we refer to the original work for precise formulation.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 24,
+      "text": "[Q] With lack of clear novel insights, or at least more systematic study on additional datasets of the 'winning' techniques and a sensitivity analysis, the paper does not give a valuable enough contribution to the field to merit publication.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 25,
+      "text": "[A] We respectfully disagree: we believe that for GAN practitioners our paper presents many useful insights, namely: NS-GAN performs well, spectral norm is a good default normalization technique, gradient penalty should also be considered, even in combination with spectral norm but will cost substantially more in terms of computational resources, popular metrics such as KID and FID result in the same relative ordering of the models so there is no point in computing both, most resnet tricks do not matter, etc.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 26,
+      "text": "All of these insights are supported by a fair and unbiased rigorous experimental process.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye9PEPg6m",
+      "rebuttal_id": "ryezN9__TQ",
+      "sentence_index": 27,
+      "text": "On top of that, our experiments are reproducible (as already reported by other works), we shared the resulting code and the pre-trained models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

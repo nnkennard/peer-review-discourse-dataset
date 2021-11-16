@@ -1,0 +1,458 @@
+{
+  "metadata": {
+    "forum_id": "HJlWWJSFDH",
+    "review_id": "BJeDySijKr",
+    "rebuttal_id": "rJgKcidXir",
+    "title": "Strategies for Pre-training Graph Neural Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJlWWJSFDH&noteId=rJgKcidXir",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 0,
+      "text": "The paper proposes pre-training strategies (PT) for graph neural networks (GNN) from both node and graph levels.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 1,
+      "text": "Two new large-scale pre-training datasets are created and extensive experiments are conducted to demonstrate the benefits of PT upon different GNN architectures.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 2,
+      "text": "I am relative positive for this work.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 3,
+      "text": "Detail review of different aspects and questions are as follows.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 4,
+      "text": "Novelty: As far as I know, this work is among the earliest works to think about GNN pre-training.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 5,
+      "text": "The most similar paper at the same period is [Z Hu, arXiv:1905.13728]",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 6,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 7,
+      "text": "I read both papers and found they have similar idea about PT although they have different designs.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 8,
+      "text": "This paper leverages graph structure (e.g., context neighbors) and supervised labels/attributes (e.g., node attributes, graph labels) for PT.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 9,
+      "text": "These strategies are not surprising for me and the novelty is incremental.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 10,
+      "text": "Experiment: The experiments are overall good.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 11,
+      "text": "The authors created two new large scale pre-training graph datasets.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 12,
+      "text": "Experimental results of different GNN architectures w/o different PT for different tasks are provided.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 13,
+      "text": "Comparing to non-pretraining GNN, the improvements are significant for most cases.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 14,
+      "text": "Writing: The writing is good and easy to follow.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 15,
+      "text": "Questions: I would like to see more discussion about difference between this work and [Z Hu, arXiv:1905.13728].",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "sentence_index": 16,
+      "text": "Comparing to the other work, what are strengths of this work? In addition, have the authors compared the performances of their work and [Z Hu, arXiv:1905.13728] using the same data?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for acknowledging the novelty of our work and for noting that our experiments are thorough.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 1,
+      "text": "Thank you for pointing out a related preprint by Z. Hu et al. [arXiv:1905.13728].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 2,
+      "text": "We note the work by Z. Hu et al. was developed independently and concurrently to our work here, and we were not aware of it at the time of writing our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 3,
+      "text": "We shall cite the preprint and include a discussion in our paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 4,
+      "text": "Briefly, the key difference between our work and that of Hu et al. is that Hu et al. consider a more restrictive setting where graphs are completely unlabeled (i.e., graphs have no node features).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 5,
+      "text": "Hu et al. then focus on extracting generic graph properties of unlabeled graphs by pre-training on randomly-generated graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 6,
+      "text": "While the approach is interesting, the limitation of such an approach is that it improves performance only marginally over ordinary supervised classification of the original attributed graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 7,
+      "text": "This is because it is hard for random unlabeled graphs to capture domain-specific knowledge that is useful for a specific application.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 8,
+      "text": "Moreover, in practice, graphs tend to have labels together with rich node and edge attributes, but Hu et al.\u2019s approach cannot naturally leverage such attribute information, which then results in limited gains.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 9,
+      "text": "In principle, we could compare our approach against Hu et al., however, right now, this would be extremely challenging because of the following reasons.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 10,
+      "text": "(1) We cannot find a public implementation of Hu et al.\u2019s approach for reliable comparison.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 11,
+      "text": "(2) Reimplementing their method requires knowledge of many specific implementational details and design choices (feature extraction, graph generation, etc.), which are not discussed in their preprint.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 12,
+      "text": "(3) Finally, their pre-trained GNN operates on unlabeled graphs, and so it cannot be directly applied to our datasets of labeled graphs.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 13,
+      "text": "Lastly, in contrast to Hu et al., our work focuses on important real-world domains, where one wants to pre-train GNNs by utilizing the abundant graph, node, and edge attributes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 14,
+      "text": "Importantly, our approach is able to learn a domain-specific data distribution that is useful for downstream prediction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeDySijKr",
+      "rebuttal_id": "rJgKcidXir",
+      "sentence_index": 15,
+      "text": "We demonstrate on two application domains that such practical settings (i.e., labeled graphs with naturally-given node and edge attributes) are very important to consider and that our pre-training can substantially improve model performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

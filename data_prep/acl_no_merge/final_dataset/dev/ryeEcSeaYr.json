@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "forum_id": "r1e74a4twH",
+    "review_id": "ryeEcSeaYr",
+    "rebuttal_id": "Bke8tvvLsH",
+    "title": "CZ-GEM:  A  FRAMEWORK  FOR DISENTANGLED REPRESENTATION LEARNING",
+    "reviewer": "AnonReviewer3",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=r1e74a4twH&noteId=Bke8tvvLsH",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 0,
+      "text": "This paper proposes a hybrid technique for rendering \u201ccontrol-variate\u201d and class-conditional image in two steps, first by generating an approximate rendering of the image (\u201cY\u201d) conditional on the control variate and then filling in the details with a conditional GAN dependent on a latent noise variable Z (although I note that the caption of Figure 2 which identifies \u201cZ\u201d as the identity makes this rather confusing).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 1,
+      "text": "To ensure that Z is used to explain aspects of the model that are separate from the controlled variation, Z is combined in the refinement model at later steps (since otherwise the posterior over Z and Y conditional on X could induce entanglement between the variables).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 2,
+      "text": "In the \u201csupervised\u201d setting where the control variates are observed, Y can be learned as a simple regression problem independent of the other parts of the model, and this two-stage refinement process is demonstrated (using inception scores) to generate convincing samples, including when C consists of up to 10 control variates.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 3,
+      "text": "In the unsupervised setting, a beta-VAE is used to learn a disentangled representation of X as a proxy for C, but then the data is regenerated using a two step process.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 4,
+      "text": "Readability suggestion: the paper starts with a very nice motivating example, but when the setup is provided, i.e., that (x,c) pairs are the input to the learner, the intended content of c is not immediately clear- control variates could assume anything from general context information to privileged information.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 5,
+      "text": "A similarly informative example would be great!",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 6,
+      "text": "Clarification regarding lemma 1: it seems that if the true posterior cannot be expressed by q, a gap will necessarily remain, even in the \u201climit\u201d of perfect learning. Is this correct?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 7,
+      "text": "Overall: this paper makes a convincing case that it can be used to generate higher quality images, but not that this improves the quality of the disentangled representations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "sentence_index": 8,
+      "text": "In fact, the separate training seems to make this unlikely.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 0,
+      "text": "-- We will add further clarification regarding what C, Z represent.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 1,
+      "text": "-- As rightly mentioned by the reviewer, our method can handle very high dimensional control variates.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 2,
+      "text": "-- Lemma 1: Yes, your assumption is correct in general for variational posterior.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 3,
+      "text": "-- Improving disentangled representation learning over beta-VAE: Beta-VAE obtains disentangled representations by explicitly posing a trade-off between the \u2018quality of disentanglement\u2019 (factorisation of the posterior) vs. the image reconstruction quality.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 4,
+      "text": "Our method removes this trade-off\u2014-we decouple \u2018disentanglement of the latents\u2019 from \u2018generation quality\u2019, specifically by having a two-stage training process.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 5,
+      "text": "This allows us to potentially have much higher disentanglement, while still maintaining image quality, unlike beta-VAE where the quality of generation would necessarily be compromised.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeEcSeaYr",
+      "rebuttal_id": "Bke8tvvLsH",
+      "sentence_index": 6,
+      "text": "We would like to emphasize that this is possible only because of the two-stage training process (please see comments to Reviewer 2 regarding d-separation).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

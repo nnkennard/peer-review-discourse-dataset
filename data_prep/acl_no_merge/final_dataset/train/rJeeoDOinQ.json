@@ -1,0 +1,2177 @@
+{
+  "metadata": {
+    "forum_id": "rkeSiiA5Fm",
+    "review_id": "rJeeoDOinQ",
+    "rebuttal_id": "HyV6CRt6m",
+    "title": "Deep Learning 3D Shapes Using Alt-az Anisotropic 2-Sphere Convolution",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkeSiiA5Fm&noteId=HyV6CRt6m",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 0,
+      "text": "# Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 1,
+      "text": "This paper proposes a new kind of spherical convolution for use in spherical CNNs, and evaluates it on rigid and non-rigid 3D shape recognition and retrieval problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 2,
+      "text": "Previous work has either used general anisotropic convolution or azimuthally isotropic convolution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 3,
+      "text": "The former produces feature maps on SO(3), which is deemed undesirable because processing 3-dimensional feature maps is costly.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 4,
+      "text": "The latter produces feature maps on the sphere, but requires that filters be circularly symmetric / azimuthally isotropic, which limits modeling capacity.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 5,
+      "text": "This paper proposes an anisotropic spherical convolution that produces 2D spherical feature maps.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 6,
+      "text": "The paper also introduces an efficient way of processing geodesic / icosahedral spherical grids, avoiding complicated spectral algorithms.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 7,
+      "text": "# Strengths",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 8,
+      "text": "The paper has several strong points.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 9,
+      "text": "It is well written, clearly structured, and the mathematics is clear and precise while avoiding unnecessary complexity.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 10,
+      "text": "Much of the relevant related work is discussed, and this is done in a balanced way.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 11,
+      "text": "Although it is not directly measured, it does seem highly likely that the alt-az convolution is more computationally efficient than SO(3) convolution, and more expressive than isotropic S2 convolution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 12,
+      "text": "The most important contribution in my opinion is the efficient data structure presented in section 4, which allows the spherical convolution to be computed efficiently on GPUs for a grid that is much more homogeneous than the lat/lon grids used in previous works (which have very high resolution near the poles, and low resolution at the equator).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 13,
+      "text": "The idea of carving up the icosahedral grid in just the right way, so that the spherical convolution can be computed as a planar convolution with funny boundary conditions, is very clever, elegant, and practical.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 14,
+      "text": "# Weaknesses",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 15,
+      "text": "There is however a misunderstanding about the properties of the alt-az convolution that must be cleared up before this paper can be published.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 16,
+      "text": "To start with, the set of rotations R(phi, nu, 0) called the alt-az group in this paper is not a group in the mathematical sense.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 17,
+      "text": "This easy to see, because a composition of rotations of the form Rz(phi) Ry(nu) is not generally of that form.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 18,
+      "text": "For instance we can multiply Rz(phi) Ry(nu) by the element Rz(omega)Ry(0) = Rz(omega), which gives the element Rz(phi) Ry(nu) Rz(omega).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 19,
+      "text": "As noted in the paper, this is a general element of SO(3) (and hence not in the set of alt-az rotations)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 20,
+      "text": ".",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 21,
+      "text": "So the closure axiom of a group is violated.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 22,
+      "text": "This matters, because the notion of equivariance really only makes sense for a group.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 23,
+      "text": "If a layer l satisfies l R = R l  (for R a alt-az rotation), then it automatically satisfies l RR' = RR' l, which means l is equivariant to the whole group generated by the set of alt-az rotations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 24,
+      "text": "As we saw before, this is the whole rotation group.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 25,
+      "text": "This would mean that the layer is actually SO(3)-equivariant, but it has been proven [1], that any rotation equivariant layer between scalar spherical feature maps can be expressed as an azimuthally isotropic convolution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 26,
+      "text": "Since the alt-az convolution is not isotropic and maps between scalars on S2, it cannot be equivariant.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 27,
+      "text": "This also becomes apparent in the experiments section, where rotational data augmentation is found to be necessary.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 28,
+      "text": "The paper does not contain an attempted proof of equivariance, and if one tries to give one, the impossibility of doing so will become apparent.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 29,
+      "text": "I note that the alt-az convolution *is* equivariant to rotations in the subgroup SO(2) of rotations around the Z-axis.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 30,
+      "text": "Another somewhat jarring fact about the alt-az convolution is that it is not well defined on the south pole.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 31,
+      "text": "The south pole can be represented by any pair of coordinates of the form phi in [0, 2pi], nu = +/- pi.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 32,
+      "text": "But it is easy to see that eq. 10 will give different results for each of these coordinates, because they correspond to different rotations of the filter about the Z-axis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 33,
+      "text": "This is ultimately due to the fact that the set of alt-az rotations is not the same as the set of points on the sphere, topologically speaking.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 34,
+      "text": "The set of points on the sphere can only be viewed as the quotient SO(3)/S(2).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 35,
+      "text": "The paragraph motivating the alt-az convolution on page 4 is not very clear, and some claims are questionable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 36,
+      "text": "I agree that local SO(2) invariance is too limiting. But it is not true that rotating filters is not effective in planar/volumetric CNNs, as shown by many recent papers on equivariant networks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 37,
+      "text": "I would suggest rewriting this paragraph to make it clearer and less speculative, and acknowledge that although rotating filters might increase computational complexity, it has often been shown very effective.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 38,
+      "text": "# Other comments",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 39,
+      "text": "The experiments show that the method is quite effective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 40,
+      "text": "For instance, the SHREC17 results are on par with Cohen et al. and Esteves et al., presumably at a significantly reduced computational cost.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 41,
+      "text": "That they do not substantially outperform these and other methods",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 42,
+      "text": "is likely due to the input representation, which is lossy, leading to a maximal performance shared by all three methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 43,
+      "text": "An application to omnidirectional vision might more clearly show the strength of the method, but this would be a lot of work so I do not expect the authors to do that for this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 44,
+      "text": "It would be nice to see a more direct comparison between the three definitions of spherical convolution (general SO3, isotropic S2, and anisotropic S2).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 45,
+      "text": "Right now, the numbers reported in Cohen et al. and Esteves et al. are copied over, but there are probably many differences between the precise setup and architectures used in these papers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 46,
+      "text": "It would be interesting to see what happens if one uses the same architecture on a number of problems, changing only the convolution in each case.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 47,
+      "text": "Initially, I was a bit puzzled about why SO(3) augmentation seems to reduce accuracy in table 1.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 48,
+      "text": "I think this is because SO(3) augmentation actually makes the classification problem harder if the input is initially aligned.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 49,
+      "text": "Some more explanation / discussion would be good.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 50,
+      "text": "It would be nice to explain the spherical parameterization in more detail. Is this operation itself rotation equivariant?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 51,
+      "text": "Typos & minor issues",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 52,
+      "text": "- Abstract: \"to extract non-trivial features\".",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 53,
+      "text": "The word non-trivial really doesn't add anything here.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 54,
+      "text": "Similarly \"offers multi-level feature extraction capabilities\" is almost meaningless since all DL methods can be said to do so.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 55,
+      "text": "- Below eq. 5, D_R^{-1} should equal D_R(-omega, -nu, -phi).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 56,
+      "text": "The order is reversed when inverting.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 57,
+      "text": "- \"Different notations of convolutions\" -> notions",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 58,
+      "text": "- \"For spherical functions there is no consistent and well defined convolution operators.\" As discussed above, the issue is quite a bit more subtle. There are exactly two well-defined convolution operators, but they have some characteristics deemed undesirable by the authors.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 59,
+      "text": "- \"rationally symmetric\" -> rotationally",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 60,
+      "text": "- \"exact hierarchical spherical patterns\" -> extract",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 61,
+      "text": "- It seems quite likely that the unpacking of the icosahedral/hexagonal grid as done in this paper has been studied before in other fields.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 62,
+      "text": "References would be in order. Similarly, hexagonal convolution has a history in DL and outside.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 63,
+      "text": "- Bottom of page 7, capitalize \"for\".",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 64,
+      "text": "- \"principle curvatures\" -> principal.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 65,
+      "text": "- \"deferent augmentation modes\" -> different",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 66,
+      "text": "- \"inspite\" -> in spite",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 67,
+      "text": "- \"reprort\" -> report",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 68,
+      "text": "- \"utlize\" -> utilize",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 69,
+      "text": "- \"computer the convolution\" -> compute",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 70,
+      "text": "# Conclusion",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 71,
+      "text": "Although the alt-az convolution lacks the mathematical elegance of the general anisotropic and azimuthally isotropic spherical convolutions, it still seems like a practically useful operation for some kinds of data, particularly when implemented using the homogeneous icosahedral/hexagonal grid and fast algorithm presented in this paper.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 72,
+      "text": "Hence, I would wholeheartedly recommend acceptance of this paper if the authors correct the factual errors (e.g. the claim of SO(3)-equivariance) and provide a clear discussion of the issues.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 73,
+      "text": "For now I will give an intermediate rating to the paper.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "sentence_index": 74,
+      "text": "[1] Kondor, Trivedi, \"On the Generalization of Equivariance and Convolution in Neural Networks to the Action of Compact Groups\"",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 0,
+      "text": "Thank you very much for your encouraging review and helpful comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 1,
+      "text": "We will make revisions to address the several points you have raised in your review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 2,
+      "text": "Below we first address the main concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 3,
+      "text": "Q1: \u201cAlt-az\u201d rotation is not a group.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 4,
+      "text": "A1: Thank you for pointing this out.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 5,
+      "text": "You are correct.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 6,
+      "text": "The Alt-az rotation, according to our definition, is not a group.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 7,
+      "text": "SO(3)  is a group which can be parametrized by a 3-sphere .",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 8,
+      "text": "But when we reduce one parameter from it, it is not a group anymore mathematically; the composition of two alt-az rotations becomes a general rotation in SO(3).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 9,
+      "text": "In the new revision, we will use the term alt-az rotation in \u201cquotient SO(3)/SO(2)\u201d  instead of alt-az rotation group.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 10,
+      "text": "Moreover, the quotient SO(3)/SO(2) is isomorphic to $S^2$ and to avoid the ill-definition on the two poles (the two degenerate points), we will add a constraint to the alt-az rotation, i.e. $\\phi=0, if \\theta=0 or \\theta=\\pi$. This is because, when the altitude rotation is zero or PI, the azimuth rotation is meaningless in a alt-az rotation and is therefore fixed as zero.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 11,
+      "text": "If $\\theta=0 or \\theta=pi, and \u201c\\phi \\neq 0$, this rotation belongs to the azimuthal rotation in SO(2) group.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 12,
+      "text": "(Q2) Equivariance property of the Alt-az convolution",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 13,
+      "text": "We think we can still have the equivariance property but only for single alt-az rotation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 14,
+      "text": "Notice the definition of alt-az convolution do not use any composite rotation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 15,
+      "text": "Here is our tentative proof:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 16,
+      "text": "Under the definition of alt-azimuth anisotropic convolution and using the unitary property (5) of rotation operators, we have (assume the number of channels K=1 for simplicity, assume Q and R be both alt-az rotations):",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 17,
+      "text": "************************************************",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 18,
+      "text": "\\begin{equation}",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 19,
+      "text": "\\begin{aligned}",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 20,
+      "text": "& (h \\star D_{Q} f) (R)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 21,
+      "text": "\\\\",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 22,
+      "text": "&",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 23,
+      "text": "= \\int_{S^2}(D_Rh)(\\hat{u})f(Q^{-1}\\hat{u})ds(\\hat{u}) \\\\",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 24,
+      "text": "&",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 25,
+      "text": "=\\int_{S^2}h(R^{-1}\\hat{u})f(Q^{-1}\\hat{u})ds(\\hat{u}) \\\\",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 26,
+      "text": "&",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 27,
+      "text": "=\\int_{S^2}h(R^{-1}Q\\hat{u})f(\\hat{u})ds(\\hat{u}) \\\\",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 28,
+      "text": "&",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 29,
+      "text": "=\\int_{S^2}h((Q^{-1}R)^{-1}\\hat{u})f(\\hat{u})ds(\\hat{u}) \\\\",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 30,
+      "text": "&",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 31,
+      "text": "=(h \\star f)(Q^{-1}R) = D_{Q}( h \\star f)(R)",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 32,
+      "text": "\\end{aligned}",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 33,
+      "text": "\\end{equation}",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 34,
+      "text": "**************************************************",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 35,
+      "text": "This means that for a single alt-az rotation of input spherical image; the output of a convolution layer will rotate in the same way.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 36,
+      "text": "Although the property doesn\u2019t hold if one performs multiple alt-az rotations to the input spherical image, it is still valuable because we assume the different SO(3) orientation of an input 3D shape is from a composite of an azimuthal rotation and an alt-az rotation, the azimuthal rotation is treated by data augmentation and the single alt-az rotation is treated by the network equivariance and invariance.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 37,
+      "text": "Q3: alt-az convolution is not well defined on the south pole",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 38,
+      "text": "A3: Yes, we agree that our original definition of alt-az convolution is not well defined on both north and south poles.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 39,
+      "text": "Therefore, in the new revision, we will add the constraints to the definition of alt-az rotation and make it one-to-one corresponds to the set points on $S^2$. See A1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 40,
+      "text": "Q4: The paragraph motivating the alt-az convolution on page 4 is not very clear.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 41,
+      "text": "A4: Thanks for the comments, as you suggested, we will rewrite this paragraph in the new version, and acknowledge the importance and effectiveness of the recent work on the group equivariance and rotation invariant networks.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 42,
+      "text": "Q5: It would be nice to see a more direct comparison between the three definitions of spherical convolution (general SO3, isotropic S2, and anisotropic S2)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 43,
+      "text": "A5: The two related papers (Cohen et al 2018 for general SO3 and Esteves, and Esteves et al 2018 for isotropic S2) both use lat-lon grid and Fourier domain convolution, while ours uses a icosahedron-sphere grid and direct spherical domain convolution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 44,
+      "text": "The use of different sampling in the input spherical image, and the use of filters are totally different.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 45,
+      "text": "We think a direct comparison should be done in one of the following ways : (a) perform the three types of spherical convolution all using icosahedron-sphere grid and then convolve in the spherical domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 46,
+      "text": "(b) perform the three types of spherical convolution all using lat-lon grid and convolve in the Fourier domain.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 47,
+      "text": "For the first type of direct comparison, to implement isotropic spherical convolution (Type II), we should make the geodesic disc filter share an identical weight along the angular direction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 48,
+      "text": "To implement a general SO(3) spherical convolution, we should add a rotation degree of freedom into our disc filter.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 49,
+      "text": "We are conducting this experiment and if the time and paper page limit are allowed, we will report the comparison result in the revised version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 50,
+      "text": "Otherwise, we will put it into our future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 51,
+      "text": "For the second type of direct comparison, we need to conduct alt-az spherical convolution in the Fourier domain, this is possible by determining the spherical harmonic coefficient, $<g_0, Y_l^m> $ for the alt-az convolution in terms of the spherical harmonic coefficient of input spherical signal $f$ and the filter $h$. This comparison needs re-designing of our network and we can not finish it within the rebuttal period, we\u2019ll leave it for future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 52,
+      "text": "Q6: Initially, I was a bit puzzled about why SO(3) augmentation seems to reduce accuracy in table 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 53,
+      "text": "I think this is because SO(3) augmentation actually makes the classification problem harder if the input is initially aligned.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 54,
+      "text": "Some more explanation / discussion would be good.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 55,
+      "text": "A6: Theoretically, our method will be rotation invariant with only AZ rotation, it will be full rotation invariant with SO(2) rotation augmentation about an arbitrary axis .",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 56,
+      "text": "In table I, we believe the reason alt-az augmentation performs better because it contains more training data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 57,
+      "text": "SO(3) augmentation underperforms the AZ augmentation because several random SO(3) rotation augmentation might not be able to cover all the relative rotation wrt the filter's orientation (see appendix).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          47,
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 58,
+      "text": "Q7: It would be nice to explain the spherical parameterization in more detail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 59,
+      "text": "Is this operation itself rotation equivariant?",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 60,
+      "text": "A7: Due to the page limit of the conference paper, we could not explain the spherical parameterization method in detail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 61,
+      "text": "This operation is theoretically rotation equivariant.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 62,
+      "text": "Spherical parameterization establishes a map that transforms the points of a closed surface into the points on the unit sphere.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 63,
+      "text": "A good spherical mapping for a closed surface should satisfy the following properties:bijective mapping and least distortion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 64,
+      "text": "Bijective mapping is the most important but most difficult in this process which implies that the resulting map is one-to-one, fold-free, and therefore feature preserving (information lossless).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 65,
+      "text": "Least distortion seeks a good sampling rate such that interesting features of the model receive enough real estate on the sphere in order to be accurately sampled.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 66,
+      "text": "We achieved the bijective mapping by adapting a coarse-to-fine strategy with minor modifications (See http://hhoppe.com/proj/sphereparam/).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 67,
+      "text": "The minimizing of the map distortion is obtained using the authalic parameterization proposed in Sinha et al 2016.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 68,
+      "text": "This process is rotation equivariant because the initial bijective mapping is depends on the object orientation and the authalic remeshing does not change the orientation of the spherical embeddings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 69,
+      "text": "Spherical parameterization is a good way to retain geometric and topological information of original shapes (compared to the spherical projection method), but currently it works only for genus-0 closed object, extending it to 3d shapes with arbitrary topology is still an unsolved problem, that is why we could not adapt this method for dataset such as ModelNET and Shrec\u201917, they contain 3D objects with arbitrary topology.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          50
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 70,
+      "text": "(Q8) Other typos and minor issues",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeeoDOinQ",
+      "rebuttal_id": "HyV6CRt6m",
+      "sentence_index": 71,
+      "text": "We will correct all the typos and other minor issues in the revised paper, thank you again for the detailed review. WE really appreciate your help.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

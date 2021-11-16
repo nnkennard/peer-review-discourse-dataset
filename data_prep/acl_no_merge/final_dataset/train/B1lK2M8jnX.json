@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "forum_id": "Bklzkh0qFm",
+    "review_id": "B1lK2M8jnX",
+    "rebuttal_id": "HJes1ogi67",
+    "title": "Relational Graph Attention Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Bklzkh0qFm&noteId=HJes1ogi67",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 0,
+      "text": "This work extends Schlichtkrull et al. (2018) by adding attention in two distinct ways: attention between pairs of nodes per relation, and attention between pairs of nodes averaged over all relations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 1,
+      "text": "The paper is well written and the equations easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 2,
+      "text": "The results are not strong. And, unfortunately, the model contribution currently is too modest.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 3,
+      "text": "Inductive task results: Wu et al. (2018) reports that for Tox21 (Duvenauld et al. 2015) is the best-performing approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 4,
+      "text": "We should see the performance on other datasets  (e.g., some of the other datasets in Wu et al. (2018)).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 5,
+      "text": "My introduction suggestion: do not talk about Convolutional neural networks (CNNs). There is a *lot* of work on graph convolutional networks (GCNs).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 6,
+      "text": "Reading it feels like reading about lattices when the work is about general graphs, and lattices provide no intuition about the proposed solution.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 7,
+      "text": "--- After rebuttal ---",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "sentence_index": 8,
+      "text": "Still not convinced of the value of the work to the community. Will keep my score the same.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 0,
+      "text": "Dear Reviewer 2, thank you for your constructive feedback and for taking the time to review our work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 1,
+      "text": "Your specific points are addressed below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 2,
+      "text": "> \u201cThe results are not strong. And, unfortunately, the model contribution currently is too modest.\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 3,
+      "text": "Indeed, the model is a minor contribution and, especially in light of a more thorough evaluation of RGCN, the sum attention RGAT results do not improve on those in Schlichtkrull et al. (2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 4,
+      "text": "However, we would like to highlight that despite being a simple modification, the implementation of such a model that is trainable in a reasonable time frame is non-trivial.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 5,
+      "text": "We plan to make our implementation public to aid future research in the area.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 6,
+      "text": "To generalise the model, following the recommendations in one of the comments, we have investigated applying the Transformer-style dot product attention that was presented in GaAN: Gated Attention Networks for Learning on Large and Spatiotemporal Graphs",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 7,
+      "text": "(Zhang et al. 2018)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 8,
+      "text": ".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 9,
+      "text": "We believe that this additional investigation, accompanied by marginally improved results on Tox21 for dot product attention (Mean test AUCs: WIRGAT 0.838 +/- 0.007, ARGAT 0.837 +/- 0.007) enhance model contributions of the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 10,
+      "text": "We also consider the poor results on MUTAG to be significant and informative for the rest of the community in developing more powerful models that can be applied to relational graphs.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 11,
+      "text": "> \u201cWe should see the performance on other datasets  (e.g., some of the other datasets in Wu et al. (2018)\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 12,
+      "text": "We agree that including experiments on the other data sets presented in Wu et al. (2018) would be a valuable addition to the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 13,
+      "text": "Unfortunately, we are unable to perform the required thorough hyperparameter exploration required to draw meaningful conclusions within the remaining time of the rebuttal period.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 14,
+      "text": "This is something we will investigate in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 15,
+      "text": "> \u201cMy introduction suggestion: do not talk about Convolutional neural networks (CNNs).\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 16,
+      "text": "Thank you for this stylistic critique.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 17,
+      "text": "We see how the approach taken did not provide an intuition about the problem as well as it could have.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 18,
+      "text": "We agree with your point regarding the wealth of graph neural network studies.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 19,
+      "text": "We feel that the field of geometric deep learning, from which part of the direction of this work originated, is important to keep as part of the development of graph-based machine learning models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 20,
+      "text": "Some recent publications in the area of graph based ML have put less emphasis on geometric deep learning, the generalisations of convolutions from grids to graph, and the modifications of convolutions to achieve non-basis dependent methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 21,
+      "text": "We felt that it is important to keep these concepts associated with the field of graph based ML.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 22,
+      "text": "This introduction could, however, talk less in detail about CNNs themselves, and deal more with graphs - the main focus of the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 23,
+      "text": "We will produce a reworked introduction where graphs play a larger role.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1lK2M8jnX",
+      "rebuttal_id": "HJes1ogi67",
+      "sentence_index": 24,
+      "text": "This should provide a more intuitive introduction to our work, whilst maintaining cornerstone concepts.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

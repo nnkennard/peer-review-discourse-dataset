@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "forum_id": "SJl8gnAqtX",
+    "review_id": "Syxz3gT_2Q",
+    "rebuttal_id": "B1l3_3TepQ",
+    "title": "Prob2Vec: Mathematical Semantic Embedding for Problem Retrieval in Adaptive Tutoring",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJl8gnAqtX&noteId=B1l3_3TepQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 0,
+      "text": "This paper proposes a method for mathematical problem embedding, which firstly decomposes problems into concepts by an abstraction step and then trains a skip-gram model to learn concept embedding.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 1,
+      "text": "A problem can be represented as the average concept (corresponding to those in the problem) embeddings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 2,
+      "text": "To handle the imbalanced dataset, a negative pre-training method is proposed to decrease false and false positives.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 3,
+      "text": "Experimental results show that the proposed method works much better than baselines in similar problem detection, on an undergraduate probability data set.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 4,
+      "text": "Strong points:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 5,
+      "text": "(1)\tThe idea of decomposing problems into concepts is interesting and also makes sense.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 6,
+      "text": "(2)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 7,
+      "text": "The training method for imbalanced datasets is impressive.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 8,
+      "text": "Concerns or suggestions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 9,
+      "text": "1.\tThe main idea of using contents to represent a problem is quite simple and straightforward.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 10,
+      "text": "The contribution of this paper seems more on the training method for imbalanced data sets.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 11,
+      "text": "But there are no comparisons between the proposed training method and previous related works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 12,
+      "text": "Actually, imbalance data sets are common in machine learning problems and there are many related works.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 13,
+      "text": "The comparisons are also absent in experiments.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 14,
+      "text": "2.\tThe experimental data set is too small, with only 635 problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 15,
+      "text": "It is difficult to judge the performance of the proposed model based on so small data set.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 16,
+      "text": "3.\tThe proposed method, which decomposes a problem into multiple concepts, looks general for many problem settings.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 17,
+      "text": "For example, representing a movie or news article by tags or topics.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 18,
+      "text": "In this way, the proposed method can be tested in a broader domain and on larger datasets.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "sentence_index": 19,
+      "text": "4.\tFor the final purpose, comparing problem similarity, I am wondering what the result will be if we train a supervised model based problem-problem similarity labels?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 0,
+      "text": "1- The idea of using concepts to represent a problem is simple, but using it along with neural network based embedding gives us the opportunity to gain concept continuity as discussed on the last paragraph on page 7 and table 2, which is an active field of research in education.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 1,
+      "text": "The focus of this work is on problem embedding and its application in a recommendation system that uses problem embedding to project students\u2019 performance for the problems they solved onto the problems that they have not solved yet.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 2,
+      "text": "Using the evaluation on unseen problems, a problem is recommended that is within the capacity of students close to their boundary to help them learn, and at the same time we cover all the concepts necessary for them to learn.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 3,
+      "text": "In the meanwhile, we got the interesting idea of negative pre-training on training with imbalanced training data and tested our hypothesis and included in the paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 4,
+      "text": "Due to space limit, we did not include the literature review and comparison of other methods in terms of memory use and training complexity, but you can find them in the response of a previous comment below titled \u201cResponse to Question on Negative Pre-Training\u201d on this page to see the comparison.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 5,
+      "text": "We can include the literature review for training on imbalanced data sets as well as comparison of other methods with negative pre-training in terms of memory use and training complexity in the final version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 6,
+      "text": "In summary, a) oversampling extremely suffers from over-fitting, b) SMOTE method that generates synthetic data sample is not feasible in word space, so the generated synthetic data (that are mathematical problems) are not of use for our training purpose, c) borderline-SMOTE both suffers from the same issue as SMOTE and its high complexity for finding the pairwise distance between all data samples, which is a burden in high dimensional data, and d) hybrid methods need m >> 1 weak learners in contrast to negative pre-training that uses a single learner.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 7,
+      "text": "Memory use and training time is an issue for hybrid method when the weak learners are deep neural networks with too many parameters.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 8,
+      "text": "We are currently running a broader experiment for negative pre-training on other data sets to gain more insight on it, but for the purpose of the task proposed in this work, it outperforms one-shot learning, which cannot be said that is the state-of-the art, but is a common practice. There is no notion of state-of-the-art in training on imbalanced data sets since due to our best knowledge, there is no method that outperforms all the other ones, and the performance of different methods depends more on the nature of the data set.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 9,
+      "text": "2- The data set being small",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 10,
+      "text": "is the nature of the application since creating mathematical problems is a creative process, so it is hard to have a very big data set.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 11,
+      "text": "The Prob2Vec method is performing well on this not relatively big data set, which is our goal, but if we have a bigger data set (as we have right now with more than 2400 problems), Prob2Vec may even have a better performance since with more data we can have a more precise concept and problem embedding.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 12,
+      "text": "3- Thanks for your suggestion.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 13,
+      "text": "4- It is difficult for humans to determine a similarity score consistent across a large enough training set, so it is not feasible to simply apply supervised methods to learn a similarity score for problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Syxz3gT_2Q",
+      "rebuttal_id": "B1l3_3TepQ",
+      "sentence_index": 14,
+      "text": "Even if problem-problem similarity annotation is feasible, a lot of effort should go into the annotation, which is not scalable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "forum_id": "SklgTkBKDr",
+    "review_id": "BJl-jwU6tB",
+    "rebuttal_id": "SJgNfb_tor",
+    "title": "Neural Non-additive Utility Aggregation",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SklgTkBKDr&noteId=SJgNfb_tor",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 0,
+      "text": "This paper studies non-additive utility aggregation for sets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 1,
+      "text": "The problem is very interesting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 2,
+      "text": "Choquet Integral is used to deal with set input.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 3,
+      "text": "The authors propose two architectures.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 4,
+      "text": "The two architectures, though not novel enough, are towards representing \u201cnon-additive utility\u201d.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 5,
+      "text": "However, the experimental comparison is not fair, the description of the model (e.g. how Choquet is integrated into the model and help to learn \u201cintermediate meaningful results\u201d) is not clear, some claims are not true.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 6,
+      "text": "First, the authors claim that they are the first to combine Choquet integral with deep learning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 7,
+      "text": "However, there are a few, though not many, works in the literature trying to combine Choquet integral with deep learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 8,
+      "text": "For example, \u201cFuzzy Choquet Integration of Deep Convolutional Neural Networks for Remote Sensing\u201d by Derek T. Anderson et al.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 9,
+      "text": "Second, the authors claim they are using/motivated by Choquet integral, but do not have any (appendix) sections to explain how this mathematical tool is really integrated into their models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 10,
+      "text": "How do you guarantee that the representation learned by the neural network still obeys the property of Choquet integral? What is your loss or your algorithm?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 11,
+      "text": "These need to be further clarified.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 12,
+      "text": "Third, the comparison to baseline and \u201cDeepSet\u201d is not fair.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 13,
+      "text": "According to the illustration, it seems that you first obtain \u201cfeatures/representations\u201d.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 14,
+      "text": "Then the representations are fed to the four architectures you listed in figure one.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 15,
+      "text": "RNN-based approaches are with better \u201ccomplexity\u201d comparing to your sum baseline and \u201cDeepset\u201d approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "sentence_index": 16,
+      "text": "So, I have some doubts about the experimental results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 0,
+      "text": "Thanks a lot for your review and for pointing us to the reference, we will add and discuss this work in our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 1,
+      "text": "The referenced paper mimics the Choquet integral to fuse different neural networks such as CaffeNet, GoogLeNet, and ResNet50 that have been pre-trained for classification problems and can be viewed as ensemble method for multiple noisy classifiers.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 2,
+      "text": "Contrary, we are interested in regression problems that have inherent non-additive effect such as automatic summarization.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 3,
+      "text": "Furthermore, the referenced paper is much closer to the Choquet as we intent to be.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 4,
+      "text": "As we describe in the paper, the proposed architectures are only inspired by the Choquet integral.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 5,
+      "text": "This idea can be found in both of our architectures.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 6,
+      "text": "In Figure 1c, u_i and in Figure 1d g_i * u_i model these meaningful intermediate values.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 7,
+      "text": "We do not claim that we obtain any theoretical guarantees or properties of the Choquet integral.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 8,
+      "text": "\"How do you guarantee that the representation learned by the neural network still obeys the property of Choquet integral?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 9,
+      "text": "As described above, the proposed approaches are inspired by the way Choquet integrals handle non-additive utility aggregations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 10,
+      "text": "We do not claim that we obtain any theoretical guarantees or properties of the Choquet integral.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 11,
+      "text": "Furthermore, the main idea of this work is to not learn a representation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 12,
+      "text": "Instead, we propose to predict many meaningful intermediate values that can simply be summed to obtain a set utility.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 13,
+      "text": "\"What is your loss or your algorithm?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 14,
+      "text": "We describe in Section 3.3 that we use mean squared error (MSE) and mean absolute error (MAE) in our experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 15,
+      "text": "We use MSE because it is usually used in regression problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 16,
+      "text": "We were also interested in the mean absolute error because minimizing this loss might be more appropriate in a task such as automatic summarization, in which we don't want to punish a model strong if it makes a few severe mistakes compared to making many small mistakes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 17,
+      "text": "We also describe in Section 3.3. that we use Adam as optimizer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 18,
+      "text": "\"According to the illustration, it seems that you first obtain \u201cfeatures/representations\u201d. Then the representations are fed to the four architectures you listed in figure one.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 19,
+      "text": "This is correct.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 20,
+      "text": "\"RNN-based approaches are with better \u201ccomplexity\u201d comparing to your sum baseline and \u201cDeepset\u201d approach.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 21,
+      "text": "We also compare against an RNN-based approach (abbreviated with \"RNN\" in the paper).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 22,
+      "text": "The RCN approach is the smallest modification one can make to implement our idea into a standard RNN.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 23,
+      "text": "Hence, we think that the comparison is fair and meaningful.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 24,
+      "text": "Furthermore, we demonstrate in the extrapolation experiments that standard RNNs tend to overfit.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 25,
+      "text": "The simple sum baselines and deepsets perform better in this experiments.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJl-jwU6tB",
+      "rebuttal_id": "SJgNfb_tor",
+      "sentence_index": 26,
+      "text": "Hence, a \"better\" complexity turns out to be prone to overfitting, which shows that larger models are not necessarily better.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

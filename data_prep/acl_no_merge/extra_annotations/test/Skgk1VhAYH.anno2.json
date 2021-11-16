@@ -1,0 +1,642 @@
+{
+  "metadata": {
+    "forum_id": "Bke-6pVKvB",
+    "review_id": "Skgk1VhAYH",
+    "rebuttal_id": "SJxAr92tjS",
+    "title": "Poisoning Attacks with Generative Adversarial Nets",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Bke-6pVKvB&noteId=SJxAr92tjS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 0,
+      "text": "This paper introduces a new generative poisoning attack method against machine learning classifiers.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 1,
+      "text": "The authors propose pGAN with three components to maximum the error of classification and guarantee undistinguished poisoning data for the discriminator.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 2,
+      "text": "The experimental results show that the hyperparameter \\alpha significantly affects the poisoning data distribution and pGAN leads to specific error in a classification task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 3,
+      "text": "This paper should be weekly accepted, considering the following aspects.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 4,
+      "text": "Positive points: (1) The experiments seem solid.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 5,
+      "text": "The overall performance with different parameters and the corresponding error type have been evaluated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 6,
+      "text": "(2) The error-specific and performance-control characteristics of pGAN seem to be interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 7,
+      "text": "(3) The paper is well organized.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 8,
+      "text": "Negative points: (1) The authors should provide more justification on equation-3.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 9,
+      "text": "Why do the authors directly average different loss for the discriminator and the classifer?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 10,
+      "text": "(2) The function of the discriminator is not very clear, especially for the classification error test.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 11,
+      "text": "Does the discriminator exclude the poisoning data according to certain rule?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 12,
+      "text": "It would make more sense if the classification error measured from the data the discriminator selects.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 13,
+      "text": "(3) pGAN can produce error-specific attack without sufficient justifications.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 14,
+      "text": "Why can pGAN lead to the inclination? Is it possible for pGAN to control the specific error tendency?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 15,
+      "text": "(4) For the error-specific attack task, it would be better to provide an ablation experiment.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 16,
+      "text": "For example, authors could implement pGAN by ignoring the detectability of the discriminator (i.e. \\alpha=0) or typical pGAN when they compare with the label-flip operation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "sentence_index": 17,
+      "text": "Please explain which component contribute to the error-specific inclination.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 0,
+      "text": "Thank you very much for your comments and your feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 1,
+      "text": "We provide our reply to your questions below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 2,
+      "text": "(1) In equation (3) we are using scalarization, a well-known technique to solve multi-objective optimization problems (see for example Boyd\u2019s book \u201cConvex optimization\u201d Ch. 4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 3,
+      "text": "In this case, the maximization problem is a multi-objective optimization problem including both the parameters of the discriminator and of the classifier.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 4,
+      "text": "The parameter alpha controls the importance/priority of each of the objectives.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 5,
+      "text": "The parameter alpha also allows to control the detectability constraints for the attack, which allows us to test the robustness of learning algorithms and defences in different settings, considering more or less aggressive adversaries.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 6,
+      "text": "This is common in most security settings to test system\u2019s robustness and resilience in different attack scenarios.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 7,
+      "text": "(2) In pGAN the discriminator allows to model detectability constraints for the poisoning points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 8,
+      "text": "In other words, to evade detection or removal of points by algorithms that defend against poisoning attacks, such as the defences we used in our experiment, we want our attack points to be close to the distribution of the genuine data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 9,
+      "text": "However, please, note that the discriminator\u2019s loss is decoupled from the classifier\u2019s loss.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 10,
+      "text": "In contrast, the generator is the element that competes with both the discriminator and the classifier.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 11,
+      "text": "On the other side, the discriminator does not exclude poisoning data or select any data point but helps to guide the generator to craft poisoning points that are difficult to detect.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 12,
+      "text": "In other words, the discriminator does not filter out the points that are used to train the classifier during the training of pGAN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 13,
+      "text": "It is not clear to us what the reviewer refers to when mentioning measuring the classification error from the data the discriminator selects, as the discriminator does not \u201cselect\u201d any data point, but just aim to classify genuine from fake data points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 14,
+      "text": "We would be happy to provide further clarifications on this point if needed.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 15,
+      "text": "(3)-(4) To some extent pGAN can control the specific errors produced in the system, as shown both in Figures 5 and 6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 16,
+      "text": "But the changes produced in the system may also depend on the characteristics of the dataset and the learning algorithms used.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 17,
+      "text": "pGAN produces poisoning attack points that are close to the decision boundary, \u201cpushing the decision boundary away\u201d from the source class (i.e. the same class as the labels of the poisoning points) towards the samples of the target class.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 18,
+      "text": "Then, we can expect an increase of the false positive rate, which is shown in Figure 6 (centre).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 19,
+      "text": "At some point, when the fraction of poisoning points increases significantly the decision boundary starts to change in a different (and possibly more abrupt way), so that the false negatives also start to increase.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 20,
+      "text": "In Figure 6 (right) this happens when the fraction of poisoning points is larger than 25%.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 21,
+      "text": "In contrast, the label flipping attack is less subtle as it does not consider detectability constraints.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 22,
+      "text": "The attack points are therefore not necessarily close to the decision boundary, and thus, the changes produced in the algorithm are more unpredictable and affect the errors for the two classes.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 23,
+      "text": "If there are points that, in your view, require further clarification, please let us know.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgk1VhAYH",
+      "rebuttal_id": "SJxAr92tjS",
+      "sentence_index": 24,
+      "text": "Thank you very much.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

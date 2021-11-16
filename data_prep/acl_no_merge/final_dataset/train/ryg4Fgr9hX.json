@@ -1,0 +1,617 @@
+{
+  "metadata": {
+    "forum_id": "S1g9N2A5FX",
+    "review_id": "ryg4Fgr9hX",
+    "rebuttal_id": "Bkggfq0VTm",
+    "title": "Interpretable Continual Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=S1g9N2A5FX&noteId=Bkggfq0VTm",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 0,
+      "text": "This paper proposes an extension to the continual learning framework using existing variational continual learning (VCL) as the base method.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 1,
+      "text": "In particular, it proposes to use the weight of evidence (WE) (from Zintgraf et al 2017) for each task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 2,
+      "text": "Firstly, this WE can be used to visualize the learned model (as used in Zintgraf et. al. 2017).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 3,
+      "text": "The novelty of this paper is:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 4,
+      "text": "1. to use this WE from the current task to generate a silence map (by smoothing the WE) for the next task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 5,
+      "text": "This is interpreted the learned the learned attention region.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 6,
+      "text": "Such an approach is named Interpretable COntinual Learning (ICL)",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 7,
+      "text": "2. The paper proposes a metric for the saliency map naming FSM which is an extension of existing metric SSR.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 8,
+      "text": "The extension is to take pixel count to compute the area instead of using rectangular region area, as well as taking the distance between pixels into account.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 9,
+      "text": "This metric can be used to evaluate the level of catastrophic forgetting.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 10,
+      "text": "Pro:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 11,
+      "text": "In general, the idea is very intuitive and make sense.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 12,
+      "text": "The paper also demonstrates superior performance with the proposed method on continual learning on all classic tasks comparing with VCL and EWC.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 13,
+      "text": "The presentation is very easy to follow.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 14,
+      "text": "It seems like a valid and flexible extension that can be used in other continual learning frameworks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 15,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 16,
+      "text": "The theoretical contribution is very limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 17,
+      "text": "The work is rather incremental from current state-of-the-art methods.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 18,
+      "text": "There should be a better discussion of related work on the topic.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 19,
+      "text": "The paper currently only mentions the most related work for the proposed method,  using the whole section 2 to describe VCL and use section 3 to describe FSM and half of section 5 to describe SSR.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 20,
+      "text": "A general overview of related work in these directions are needed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 21,
+      "text": "Other:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 22,
+      "text": "1. The paper should also consider more recently proposed evaluation metrics such as discussed in https://arxiv.org/pdf/1805.09733.pdf",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "sentence_index": 23,
+      "text": "2. The author should try to avoid using yellow color in plots.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their time and welcome feedback, which we are incorporating into the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 1,
+      "text": "R: - Theoretical contribution",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 2,
+      "text": "A:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 3,
+      "text": "-- Just a clarification regarding the first contribution: WE from the current task is not used to generate a saliency map for the next task; it is instead used to instruct the learner of the next task about which input areas are more important than others via the attention mechanism.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 4,
+      "text": "This becomes a part of the future learning procedure, not just a post hoc visualisation method as in the original WE .",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 5,
+      "text": "As such, the first contribution is not solely about generating new visualisations; it is more about using the learned saliency maps from the past to attend in future learners.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 6,
+      "text": "We therefore believe that the potential of this first contribution as a conceptual framework via which a learner can understand, attend, and then enhance its attention for future tasks, is not small.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 7,
+      "text": "-- Importantly, we are the first to combine interpretability with continual learning and show that interpretability can help continual learning. It is a significant step to bring these two communities together.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 8,
+      "text": "-- It is worth noting that VCL has achieved very good results on most of these benchmarks, so it is very hard to outperform it with a large margin.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 9,
+      "text": "Nevertheless, although the experimental increases might not seem dramatic, they are statistically significant (we have added the statistical significance results to the appendix in the revised version).",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 10,
+      "text": "R: - Related work",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 11,
+      "text": "A:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 12,
+      "text": "-- Thank you.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 13,
+      "text": "In addition to the locations specified by the reviewer, the first two paragraphs of Section 1 (especially the second paragraph) discuss several other related works.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 14,
+      "text": "We have added more to the revised version.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 15,
+      "text": "R: - https://arxiv.org/pdf/1805.09733.pdf",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 16,
+      "text": "A:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 17,
+      "text": "-- Thank you. We have cited the paper in the revised version, and plan to take it into further consideration in future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 18,
+      "text": "R: - Yellow color in plots",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 19,
+      "text": "A:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg4Fgr9hX",
+      "rebuttal_id": "Bkggfq0VTm",
+      "sentence_index": 20,
+      "text": "-- We have changed the yellow colour in Figures 2, 3 and 4 to black. Yellow is now no longer used in any plots.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

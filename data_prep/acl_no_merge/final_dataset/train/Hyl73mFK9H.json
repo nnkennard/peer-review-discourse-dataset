@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "forum_id": "SyxD7lrFPH",
+    "review_id": "Hyl73mFK9H",
+    "rebuttal_id": "BJxED1cGsB",
+    "title": "Frequency Pooling: Shift-Equivalent and Anti-Aliasing Down Sampling",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyxD7lrFPH&noteId=BJxED1cGsB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 0,
+      "text": "This paper researches the pooling operation, which is an important component in convolutional neural networks (CNN) for image classification.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 1,
+      "text": "Taking the perspective from signal processing, this paper proposes a pooling operation called frequency pooling (F-pooling).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 2,
+      "text": "The key motivation is to make the pooling operation shift-equivalent and anti-aliasing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 3,
+      "text": "This paper gives an improved definition on shift-equivalent functions and shows that the proposed F-pooling is optimal in the sense of reconstructing the orignal signal.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 4,
+      "text": "The F-pooling is then implemented with matrix multiplications and tested with recent convolutional neural networks for image classifiation on CIFAR-100 and a subset of ImageNet dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 5,
+      "text": "It is interesting to take the perspective from signal processing to give pooling operation in CNN a formal treatment.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 6,
+      "text": "As indicated in the recent literature, enforcing shift-invariance does help to improve the performance of a CNN on classification accuracy and the robustness with respect to image shift.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 7,
+      "text": "At the same time, this work can be further enhanced at the following aspects:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 8,
+      "text": "1. This work can make it clearer in principle how anti-aliasing contributes to improving the classification performance and robustness.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 9,
+      "text": "This will help to make this paper more self-contained.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 10,
+      "text": "2. When showing the optimality of F-pooling in Section 2.3, the criterion is to reconstruct the original signal x.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 11,
+      "text": "Considering that the ultimate goal is classification, the information to be maximally preserved through each operation through the layers shall be the information that relates to the class label y. In light of this, some justification and explanation shall be provided for using this criterion for optimality.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 12,
+      "text": "3. The experimental study is weak.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 13,
+      "text": "Experiments could be conducted on more benchmark datasets with more CNN architectures to convincingly show the effectiveness of the proposed F-pooling.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 14,
+      "text": "Also, from the three Tables in the experimental part, the improvement of F-pooling over AA-pooling (developed by the main reference of this work) does not seem to be significant or consistent.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 15,
+      "text": "For example, in Table 2, the F-pooling only wins at either accuracy (marginally) or consistency, but not both.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 16,
+      "text": "In Table 3, the F-pooling consistently shows inferior classification performance, although obtaining slightly higher consistency.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "sentence_index": 17,
+      "text": "This makes the advantage of F-pooling over the existing AA-pooling unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 0,
+      "text": "We think your suggestions are very meaningful. We respond to them one by one:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 1,
+      "text": "1. We will explain anti-aliasing in our updated paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 2,
+      "text": "Roughly, anti-aliasing is helpful for signal reconstruction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 3,
+      "text": "However, we can\u2019t provide a strict treatment of how anti-aliasing relates to classification.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 4,
+      "text": "But we have intuitions: first, we believe reconstruction relates to classification (see our next response); second, frequency components are orthogonal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 5,
+      "text": "Aliasing means different components are mixed again.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 6,
+      "text": "This may mislead the next layers for processing.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 7,
+      "text": "2. To our knowledge, researchers haven\u2019t fully understood the whole process of image classification until now.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 8,
+      "text": "Thus, we can\u2019t provide a strict treatment of how reconstruction optimality relates to classification optimality.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 9,
+      "text": "But we have intuitions and empirical evidence of their relation: convolution layers are used to transform a signal which makes it easier to be classified.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 10,
+      "text": "So if we accept that the feature extracted by previous convolution layers is useful, then it is best to keep it as much as possible for the current pooling layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 11,
+      "text": "In this way, it is reasonable to assume that reconstruction optimality is consistent with classification optimality.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 12,
+      "text": "On the other hand, it is difficult to directly define classification optimality for an intermediate layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 13,
+      "text": "Moreover, several works, such as [1] have shown that using self reconstruction loss as an auxiliary is helpful for classification.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 14,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 15,
+      "text": "Please refer to our general response.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 16,
+      "text": "With suitable settings, the shift consistency of F-pooling is much better.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyl73mFK9H",
+      "rebuttal_id": "BJxED1cGsB",
+      "sentence_index": 17,
+      "text": "[1] Semi-Supervised Learning with Ladder Networks, NIPS2015",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

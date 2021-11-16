@@ -1,0 +1,809 @@
+{
+  "metadata": {
+    "forum_id": "HJlWWJSFDH",
+    "review_id": "BkxPCGTX9B",
+    "rebuttal_id": "SJlhViuQsH",
+    "title": "Strategies for Pre-training Graph Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJlWWJSFDH&noteId=SJlhViuQsH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 0,
+      "text": "The authors introduce strategies for pre-training graph neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 1,
+      "text": "Pre-training is done at the node level as well as at the graph level.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 2,
+      "text": "They evaluate their approaches on two domains, biology and chemistry on a number of downstream tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 3,
+      "text": "They find that not all pre-training strategies work well and can in fact lead to negative transfer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 4,
+      "text": "However, they find that pre-training in general helps over non pre-training.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 5,
+      "text": "Overall, this paper was well written with useful illustrations and clear motivations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 6,
+      "text": "The authors evaluate their models over a number of datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 7,
+      "text": "Experimental construction and analysis also seems sound.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 8,
+      "text": "I would have liked to see a bit more analysis as to why some pre-training strategies work over others.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 9,
+      "text": "However, the authors mention that this is in their planned future work.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 10,
+      "text": "Also, in figure 4, the authors mention that their pre-trained models tend to converge faster.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "sentence_index": 11,
+      "text": "However, this does not take into account the time already spent on pre-training. Perhaps the authors can include some results as to the total time taken as well as amortized total time over a number of different downstream tasks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for insightful feedback and for noting that our\u200b experiments \u200bare\u200b \u200bsolid\u200b and our setup and analyses are sound.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 1,
+      "text": "The reviewer asks great questions, and we provide the answers below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 2,
+      "text": "RE: Total running time",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 3,
+      "text": "The reviewer raises an interesting point about total training time, which includes the time to pre-train a GNN and the time to fine-tune it on a downstream task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 4,
+      "text": "To address this point, below, we give the results of the total training time as well as the amortized total time over different downstream tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 5,
+      "text": "We will include detailed results and a discussion in the final version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 6,
+      "text": "We note that although pre-training does take some time, it is a one-time-effort only.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 7,
+      "text": "That is, we pre-train a GNN model only once and then reuse it many times by fine-tuning the model on any number of downstream prediction tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 8,
+      "text": "Overall, we find that GNNs, once pre-trained, tend to converge much faster on downstream tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 9,
+      "text": "Most importantly, we find (details below) that validation set performance converges 5-12 times more quickly when GNNs are pre-trained.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 10,
+      "text": "We emphasize that this cannot be achieved by mere training of (non-pre-trained) GNNs longer.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 11,
+      "text": "The following summarizes training time for chemistry and biology datasets.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 12,
+      "text": "1) Chemistry dataset (single GPU implementation)",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 13,
+      "text": "**",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 14,
+      "text": "Pre-training**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 15,
+      "text": "\u2014 Self-supervised pre-training: 24 hours",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 16,
+      "text": "\u2014 Supervised pre-training: 11 hours",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 17,
+      "text": "**Fine-tuning on MUV dataset** [Time to achieve the best validation set AUC]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 18,
+      "text": "\u2014 From random initialization (i.e., no pre-training):",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 19,
+      "text": "1 hour; 74.9% AUC",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 20,
+      "text": "\u2014 From a pre-trained GNN:",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 21,
+      "text": "5 minutes; 85.3% AUC",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 22,
+      "text": "2) Biology dataset",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 23,
+      "text": "**",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 24,
+      "text": "Pre-training**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 25,
+      "text": "\u2014 Self-supervised pre-training:  3.8 hours",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 26,
+      "text": "\u2014 Supervised pre-training: 2.5 hours",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 27,
+      "text": "**Fine-tuning** [Time to achieve the best validation set AUC]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 28,
+      "text": "\u2014 From random initialization (i.e., no pre-training):",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 29,
+      "text": "50 minutes; 84.8% AUC",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 30,
+      "text": "\u2014 From a pre-trained GNN:",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 31,
+      "text": "10 minutes; 88.8% AUC",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 32,
+      "text": "On chemistry dataset, we see that fine-tuning a pre-trained GNN on the MUV required only 5 min.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 33,
+      "text": "This is in sharp contrast with training a GNN from scratch, which required 12x more time, yet it gave a worse performance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 34,
+      "text": "We can reach similar conclusions on the biology dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 35,
+      "text": "We thus recommend using pre-trained models whenever possible as they can give better performance and can be reused for any number of downstream tasks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 36,
+      "text": "We shall add these results and explanations to the final version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 37,
+      "text": "RE: Analysis of different pre-training strategies",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 38,
+      "text": "Thank you for bringing up this valuable point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 39,
+      "text": "We agree that it is important to understand why some pre-training strategies work better over others.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 40,
+      "text": "Our key insight backed up with extensive empirical evidence is that a combination of graph-level and node-level methods (Figure 1) is important because it allows the model to capture both local and global semantics of graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkxPCGTX9B",
+      "rebuttal_id": "SJlhViuQsH",
+      "sentence_index": 41,
+      "text": "Further, we find that our structure-based node-level methods (Context Prediction and Attribute Masking) are preferred over position-based node-level methods (Edge Prediction, Deep Graph Infomax). As future work, we plan to further investigate what graph-level and node-level methods are most useful in different domains, and understand what domain-specific knowledge has been learned by the pre-trained models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

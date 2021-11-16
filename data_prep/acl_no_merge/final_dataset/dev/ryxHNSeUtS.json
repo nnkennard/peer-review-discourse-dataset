@@ -1,0 +1,640 @@
+{
+  "metadata": {
+    "forum_id": "HJlQ96EtPr",
+    "review_id": "ryxHNSeUtS",
+    "rebuttal_id": "H1xBls0PjH",
+    "title": "FleXOR: Trainable Fractional Quantization",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJlQ96EtPr&noteId=H1xBls0PjH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 1,
+      "text": "The authors propose quantize the weights of a neural network by enabling a fractional number of bits per weight.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 2,
+      "text": "They use a network of differentiable XOR gates that maps encrypted weights to higher-dimensional decrypted weights to decode the parameters on-the-fly and learn both the encrypted weights and the scaling factors involved in the XOR networks by gradient descent.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 3,
+      "text": "Strengths of the paper:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 4,
+      "text": "- The method allows for a fractional number of bits per weights and relies of well-known differentiable approximations of the sign function.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 5,
+      "text": "Indeed, virtually any number of bits/weights can be attained by varying the ratio N_in/N_out.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 6,
+      "text": "- The papers displays good results on ImageNet for a ResNet-18.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 7,
+      "text": "Weaknesses of the paper:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 8,
+      "text": "- Some arguments that are presented could deserve a bit more precision.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 9,
+      "text": "For instance, quantizing to a fractional number of bits per weights per layer is in itself interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 10,
+      "text": "However, if we were to quantize different layers of the same network with distinct integer  ratio of bits per weights (say 1 bit per weight for some particular layers and 2 bits per weight for the other layers), the average ratio would also be fractional (see for instance \"Hardware-aware Automated Quantization with Mixed Precision\", Wang et al., where the authors find the right (integer) number of bits/weights per layer using RL).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 11,
+      "text": "Similarly, using vector quantization does allow for on-chip low memory: we do not need to re-instantiate the compressed layer but we can compute the forward in the compressed domain (by splitting the activations into similar block sizes and computing dot products).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 12,
+      "text": "- More extensive and thorough experiments could improve the impact of the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 13,
+      "text": "For instance, authors could compress the widely used (and more challenging) ResNet-50 architecture, or try other tasks such as image detection (Mask R-CNN).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 14,
+      "text": "The table is missing results from: \"Hardware Automated Quantization\", Wang et al ; \"Trained Ternary Quantization\", Zhu et al ; \"Deep Compression\",  Han et al; \"Ternary weight networks\", Li et al (not an extensive list).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 15,
+      "text": "- Similarly, providing some code and numbers for inference time would greatly strengthen the paper and the possible usage of this method by the community.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 16,
+      "text": "Indeed, I wonder what the overhead of decrypting the weights on-the-fly is (although it only involves XOR operations and products)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 17,
+      "text": "- Small typos: for instance, two points at the very end of section 5.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 18,
+      "text": "Justification fo rating:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 19,
+      "text": "The proposed method is well presented and illustrated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "sentence_index": 20,
+      "text": "However, I think the paper would need either (1) more thorough experimental results (see comments above, points 2 and 3 of weaknesses) or (2) more justifications for its existence (see comments above, point 1 of weaknesses).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 0,
+      "text": "We would like to thank you for the review and comments.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 1,
+      "text": "We revised the manuscript to address your concerns.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 2,
+      "text": "Below we summarized your concerns/questions with our answers.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 3,
+      "text": "Q1: Some arguments that are presented could deserve a bit more precision.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 4,
+      "text": "A1: We acknowledge that quantization is a very active research area in model compression and there are numerous quantization techniques with unique and distinct characteristics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 5,
+      "text": "We could not introduce and discuss lots of exciting quantization techniques such as vector quantization due to the limited space.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 6,
+      "text": "We feel that introducing other quantization techniques in details would make the paper distracted since those techniques cannot be compared with compression ratio only (i.e., inference architecture, computation methods, and storage design would be different).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 7,
+      "text": "Instead, we added more thorough introduction to binary codes in Section 1 to explain unique computational advantages of using binary codes.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 8,
+      "text": "We introduced \"Hardware-aware Automated Quantization with Mixed Precision\" in Section 1 since fractional quantization on average is available as you pointed out, while FleXOR can also employ different quantization bits for each layer (i.e., we believe HAQ method can be applied on top of FleXOR).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 9,
+      "text": "Q2: More extensive and thorough experiments could improve the impact of the paper.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 10,
+      "text": "A2: We agree that including extensive quantization methods and model architectures would greatly improve the impact of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 11,
+      "text": "Unfortunately, as we discussed above, our goal in this paper is to improve quantization schemes based on binary codes.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 12,
+      "text": "Including quantization methods of different assumptions may require much lengthy discussions that make comparisons a lot complicated.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 13,
+      "text": "For example, \"Hardware-aware Automated Quantization\" could be additionally applied to binary codes, and FleXOR is not conflicted with such an architectural techniques to improve compression ratio.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 14,
+      "text": "Deep compression, TTQ, and TWN involve weight pruning that deserves large space for discussions (nonetheless, we compared TWN, TTQ, and BinaryRelax using ternary quantization scheme in Table 5 of Appendix).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 15,
+      "text": "Deep compression also includes CSR format and Huffman coding which would make comparisons more complicated.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 16,
+      "text": "We chose a few representative quantization methods mainly based on binary codes to facilitate fair and focused comparisons, and correspondingly, ResNet models on CIFAR-10 and ImageNet are selected for our experiments since most previous works (of binary codes) commonly include those models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 17,
+      "text": "For example, we could not include HAQ in the paper for experimental results, because HAQ chooses MobileNet and ResNet-50 only as model architectures while comparisons are made with only PACT and Deep Compression methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 18,
+      "text": "Q3: Providing some code and numbers for inference time would be great.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 19,
+      "text": "A3: Due to the internal policy of our organization, we cannot open our codes publicly at this moment. Hence, we provide a link to anonymous code to the reviewers only until we get an approval for public release.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 20,
+      "text": "Please refer to our message available to the reviewers only.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 21,
+      "text": "Overhead of weight decryption on-the-fly is extremely small even with CPUs or GPUs, since decryption involves only a binary matrix multiplication over GF(2), which can be easily supported by existing SIMD or vector operations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxHNSeUtS",
+      "rebuttal_id": "H1xBls0PjH",
+      "sentence_index": 22,
+      "text": "Since a binary matrix is too small (e.g., 10x8), computational overhead is just ignorable compared with other computations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

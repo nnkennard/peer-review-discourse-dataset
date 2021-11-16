@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "forum_id": "B1gabhRcYX",
+    "review_id": "SJx-VMJcnm",
+    "rebuttal_id": "H1ljP2vqAQ",
+    "title": "BA-Net: Dense Bundle Adjustment Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 9,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1gabhRcYX&noteId=H1ljP2vqAQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 0,
+      "text": "This paper presents a novel approach to bundle adjustment, where traditional geometric optimization is paired with deep learning.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 1,
+      "text": "Specifically, a CNN computes both a multi-scale feature pyramid and a depth prediction, expressed as a linear combination of \"depth bases\".",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 2,
+      "text": "These values are used to define a dense re-projection error over the images, akin to that of dense or semi-dense methods.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 3,
+      "text": "Then, this error is optimized with respect to the camera parameters and depth linear combination coefficients using Levenberg-Marquardt (LM).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 4,
+      "text": "By unrolling 5 iterations of LM and expressing the dampening parameter lambda as the output of a MLP, the optimization process is made differentiable, allowing back-propagation and thus learning of the networks' parameters.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 5,
+      "text": "The paper is clear, well organized, well written and easy to follow.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 6,
+      "text": "Even if the idea of joining BA / SfM and deep learning is not new, the authors propose an interesting novel formulation.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 7,
+      "text": "In particular, being able to train the CNN with a supervision signal coming directly from the same geometric optimization process that will be used at test time allows it to produce features that  will make the optimization smoother and the convergence easier.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 8,
+      "text": "The experiments are quite convincing and seem to clearly support the efficacy of the proposed method.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 9,
+      "text": "I don't really have any major criticism, but I would like to hear the authors' opinions on the following two points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 10,
+      "text": "1) In page 5, the authors write \"learns to predict a better damping factor lambda, which gaurantees that the optimziation will converged to a better solution within limited iterations\".",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 11,
+      "text": "I don't really understand how learning lambda would _guarantee_ that the optimization will converge to a better solution.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 12,
+      "text": "The word \"guarantee\" usually implies that the effect can be somehow mathematically proved, which is not done in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 13,
+      "text": "2) As far as I can understand, once the networks are learned, possibly on pairs of images due to GPU memory limitations, the proposed approach can be easily applied to sets of images of any size, as the features and depth predictions can be pre-computed and stored in main system memory.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "sentence_index": 14,
+      "text": "Given this, I wonder why all experiments are conducted on sets of two to five images, even for Kitti where standard evaluation protocols would demand predicting entire sequences.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and appreciation, and would like to answer the reviewer\u2019s questions as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 1,
+      "text": "Q1. The use of the word \u201cguarantees\u201d is imprecise:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 2,
+      "text": "Thanks for pointing out this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 3,
+      "text": "We have adjusted the word.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 4,
+      "text": "A theoretical analysis will be an interesting future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 5,
+      "text": "Q2. Whole sequence reconstruction results:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 6,
+      "text": "Our current implementation only allows up to 5 images in a single 2015 TITANX GPU with 12GB memories.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 7,
+      "text": "This is because we implemented the whole pipeline using tensorflow in python, which is memory inefficient, especially during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 8,
+      "text": "Each image takes about 2.3GB memory on average, and most of the memory is consumed by the CNN features and matrix operation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 9,
+      "text": "But it is straightforward to concatenate multiple 5-frame segments to reconstruct a complete sequence, which is demonstrated in the comparison with CodeSLAM in Figure 7 of the revised version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx-VMJcnm",
+      "rebuttal_id": "H1ljP2vqAQ",
+      "sentence_index": 10,
+      "text": "It is also straightforward to implement our BA-Layer in CUDA directly to reduce the memory consumption of matrix operation and push the number of frames.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

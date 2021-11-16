@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "forum_id": "SJeq9JBFvH",
+    "review_id": "r1xxdbB9KH",
+    "rebuttal_id": "H1lPXEMuoH",
+    "title": "Deep probabilistic subsampling for task-adaptive compressed sensing",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJeq9JBFvH&noteId=H1lPXEMuoH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 0,
+      "text": "The paper proposes a learning-based adaptive compressed sensing framework in which both the sampling and the task functions (e.g., classification) are learned jointly end-to-end.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 1,
+      "text": "The main contribution includes using the Gumbel-softmax trick to relax categorical distributions and use back-propagation to estimate the gradient jointly with the tas neural network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 2,
+      "text": "The proposed solution has the flexibility of able to be used in several different tasks, such as inverse problems ( super-resolution or image completion) or classification tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 3,
+      "text": "The paper is very well written.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 4,
+      "text": "The paper locates itself well in current baselines and explains Experiments mostly well.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 5,
+      "text": "However, there are significant limitations in demonstrating the effectiveness/impact of the proposed technique:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 6,
+      "text": "1) The only comparison to another non-fixed sampling baseline is Kool et al. 2019.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 7,
+      "text": "The visualization and a thorough comparison were missing in MNIST classification.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 8,
+      "text": "This baseline was also missing in image reconstruction.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 9,
+      "text": "2) Compressive Sensing incorporates vast literature of algorithms focusing on different aspects of improvements; algorithms focused on classification and inverse problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 10,
+      "text": "Even if done disjointly, how does the proposed joint learning is compared to those algorithms in these domains?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "sentence_index": 11,
+      "text": "3) Top row of Figure 3 nicely explains how the learned sampling paradigm performs compared to other mechanisms (such as uniform, random, low-pass). But there is no comparision against other non-fixed techniques.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the positive and constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 1,
+      "text": "Below we answer the questions and concerns:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 2,
+      "text": "Question 1:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 3,
+      "text": "We agree with the referee and will therefore include a visualization of the trained distributions using Gumbel top-k sampling and a realization of the sampling pattern.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 4,
+      "text": "We are currently running experiments to obtain Gumbel top-k results for the \u2018lines and circles\u2019 and CIFAR10 experiments as well.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 5,
+      "text": "Since we did not sufficiently emphasize that leveraging Gumbel top-k sampling for learning signal subsampling matrices is part of the novelty of the present work, we clarified this in the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 6,
+      "text": "In fact, using Gumbel top-k sampling in this context can be seen as a constrained version of DPS, with shared weights across the M distributions.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 7,
+      "text": "To also include previously-published baselines, we are currently running experiments with the recently proposed LOUPE method by Bahadir et al. (2019).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 8,
+      "text": "Question 2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 9,
+      "text": "Indeed, the notion of compressed sensing has spurred vast work, ranging from sensing strategies to signal recovery algorithms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 10,
+      "text": "On the sensing side, sampling strategies are typically designed to satisfy the Restricted Isometry Property (RIP); describing isometry of the sensing matrix given K-sparse vectors, and thereby providing signal recovery guarantees, given an appropriate algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 11,
+      "text": "On the algorithm side, sparsity in some basis transform is typically exploited, leveraging a wide variety of optimization algorithms spanning from proximal gradient methods to projection-over-convex-set and greedy algorithms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 12,
+      "text": "More recently, deep learning methods have been proposed for fast signal recovery from CS measurements, yielding state-of-the-art results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 13,
+      "text": "In this context, DPS adopts current practices in data-driven CS recovery, but extends this to incorporate subsampling (the sensing) in an end-to-end pipeline.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 14,
+      "text": "Such an end-to-end (sampling-to-any-task) learning strategy opens up opportunities for data-driven optimization of sensing strategies beyond theoretically-established results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 15,
+      "text": "As pointed out by the referee, the shortcomings of disjoint optimization in classical CS are perhaps most evident when high-level tasks such as classification are part of the pipeline.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 16,
+      "text": "As such, we are currently running additional experiments to better illustrate this.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 17,
+      "text": "Question 3:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 18,
+      "text": "We agree with the reviewer that such a comparison might be of interest.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 19,
+      "text": "As such, we are currently running additional experiments to include a comparison to Gumbel top-k (as we did for the MNIST classification case) as well as the method proposed by Bahadir et al. (2019).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 20,
+      "text": "Notably, and unlike our method, the latter approach does not permit setting a specific subsampling rate, with this rate is only being indirectly controlled via hyperparameter settings.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 21,
+      "text": "As a follow-up on our answer regarding the second question, we would like to mention that we added a case in the MNIST classification experiment (DPS-topk), in which we jointly train a reconstruction network with a subsampling pattern.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 22,
+      "text": "We subsequently train the classifier network on the reconstructed images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xxdbB9KH",
+      "rebuttal_id": "H1lPXEMuoH",
+      "sentence_index": 23,
+      "text": "It shows that learning a task-adaptive (classification in this case) sampling pattern outperforms disjoint learning of sampling and the task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "metadata": {
+    "forum_id": "B1xybgSKwB",
+    "review_id": "Skx8qjXJcr",
+    "rebuttal_id": "ryg1CRZ3oH",
+    "title": "Self-Attentional Credit Assignment for Transfer in Reinforcement Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1xybgSKwB&noteId=ryg1CRZ3oH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 0,
+      "text": "This paper proposes a novel transfer learning mechanism through credit assignment, in which an offline supervised reward prediction model is learned from previously-generated trajectories, and is used to reshape the reward of the target task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 1,
+      "text": "The paper introduces an interesting new direction in transfer learning for reinforcement learning, that is robust to the differences in the environtment dynamics.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 2,
+      "text": "I have the following questions/concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 3,
+      "text": "1. The authors insist that their fous is on transfer and not competing on credit assignment. If accurate credit assignment leads to better transfer, shouldn't achieving the best credit assignment model (thus competing in credit assignment) lead to better transfer results?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 4,
+      "text": "2. What effect does the window size for transforming states to observations have on the performance of SECRET?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 5,
+      "text": "3. On a high-level, how does SECRET compare to transfer through relational deep reinforcement learning: https://arxiv.org/abs/1806.01830? Relational models use self-attention mechanisms to extract and exploit relations between entities in the scenes for better generalization and transfer.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 6,
+      "text": "Although SECRET intentionally avoids using relations, I think a discussion around relational models for RL is warranted.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 7,
+      "text": "I'm curious what happens if SECRET is allowed to exploit relations in the environment.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 8,
+      "text": "4. What happens if the reward model uses very few trajectories and is not able to predict good rewards? Does transfer through credit assignment become detrimental?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 9,
+      "text": "In other words, in a real-world scenario, how I do know when to start using SECRET, or when am I better off learning from environment rewards alone? Especially given that SECRET requires 40000 trajectories in the source domain.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 10,
+      "text": "5. Are the samples generated in the target domain for collecting attention weights included in the number of episodes when evaluating SECRET?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 11,
+      "text": "For example, in Figure 4. I believe the number of episodes required to collect those target samples should be added to the number of episodes when using SECRET since the agent must interact with the environment in the target domain.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "sentence_index": 12,
+      "text": "6. On a lighter note, I don't believe using a coffe-brewing machine has a 'universally invariant structure' of coffee-making. That's a luxurious way of making coffee :) In the developing world, we still need to boil water, pour coffee powder in it, etc., all without a coffee-brewing machine.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 0,
+      "text": "1. We believe that the transferability of SECRET is due to two major aspects: 1) that we keep representations for the credit assignment separate from those for the RL task and 2) that we use a self-attentional architecture, which was shown to transfer in settings other than RL.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 1,
+      "text": "Better credit assignment is desirable and should arguably lead to better transfer results in the case of SECRET.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 2,
+      "text": "Nevertheless, it is not necessarily true for other credit assignment methods available because they are designed for the online setting and intricately coupled with an RL agent.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 3,
+      "text": "The focus of the paper being on transfer, we proposed a transfer method relying on credit assignment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 4,
+      "text": "In our opinion, comparing its credit assignment capabilities to other existing methods is outside of the scope of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 5,
+      "text": "2. We included the results of varying the window size in the new Appendix B.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 6,
+      "text": "Briefly, with bigger windows, there is less partial observability, and the attention no longer matches the trigger.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 7,
+      "text": "Please see the new appendix for more details.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 8,
+      "text": "3. Relational Deep RL ([1]) uses spatial self-attention to infer and leverage relations between \"objects\" (pixel representations).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 9,
+      "text": "Crucially, it does not make use of the sequential aspect of the RL task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 10,
+      "text": "Instead, SECRET relies on temporal credit assignment, which could be presented as a form of temporal relations (as dictated by the reward function).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 11,
+      "text": "Those are very different approaches to handling relations (if SECRET can be deemed as relational).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 12,
+      "text": "We think it would indeed be an interesting research direction to combine both spatial and temporal aspects for credit assignment or relational reasoning.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 13,
+      "text": "4. There are two different aspects here: 1) the reward model could be trained on very few trajectories in the source domain, or 2) it could be applied on very few trajectories to build the potential function in the target domain.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 14,
+      "text": "For 1), in practice, we only redistribute the nonzero rewards that were successfully predicted by the reward model, so insufficient prediction capabilities are not a problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 15,
+      "text": "We added a sentence in the main text to mention the fact that we consider correctly predicted nonzero rewards.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 16,
+      "text": "If the model does not manage to predict nonzero rewards, then SECRET falls back to the Vanilla RL case.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 17,
+      "text": "In the worst case scenario, SECRET could predict a small proportion of the nonzero rewards and assign wrong credit, which could lead to a slowed down procedure.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 18,
+      "text": "For 2), the potential function used in SECRET relies on trajectories with nonzero rewards.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 19,
+      "text": "In the worst case scenario, the potential function could not reflect accurately the structure of the MDP and lead to a slowed down learning procedure.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 20,
+      "text": "We now include two additional experiments in Appendix B.3 that explore both scenarios.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 21,
+      "text": "We show that with a small number of trajectories, either in the source or the target domain, the performance of the agent does not drop too much.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 22,
+      "text": "5. The samples generated in the target domain are not included in the number of episodes reported in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 23,
+      "text": "While debatable, our motivation to do so is that we use the same fixed policy we used in the source domain to generate those trajectories.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 24,
+      "text": "Note that there is no learning procedure involved during the collection of the target samples.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 25,
+      "text": "6. Maybe a follow-up to consider for the coffee test is to adapt from using a coffee-brewing machine to making it from scratch :)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx8qjXJcr",
+      "rebuttal_id": "ryg1CRZ3oH",
+      "sentence_index": 26,
+      "text": "[1] Zambaldi V., Raposo D., Santoro A., Bapst V., Li Y., Babuschkin I., Tuyls K., Reichert D., Lillicrap T., Lockhart E., Shanahan M., Langston V., Pascanu R., Botvinick M., Vinyals O., Battaglia P. - Deep Reinforcement Learning with Relational Inductive Biases. ICLR 2019.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

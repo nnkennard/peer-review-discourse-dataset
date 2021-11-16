@@ -1,0 +1,867 @@
+{
+  "metadata": {
+    "forum_id": "ryxUMREYPr",
+    "review_id": "HJlStebC5r",
+    "rebuttal_id": "B1lO4M2jsr",
+    "title": "Is There Mode Collapse? A Case Study on Face Generation and Its Black-box Calibration",
+    "reviewer": "AnonReviewer3",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ryxUMREYPr&noteId=B1lO4M2jsr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 0,
+      "text": "This work addresses the important problem of generation bias and a lack of diversity in generative models, which is often called model collapse.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 1,
+      "text": "It proposed a new metric to measure the diversity of the generative model's \"worst\" outputs based on the sample clustering patterns.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 2,
+      "text": "Furthermore, it proposed two blackbox approaches to increasing the model diversity through resampling the latent z. Unlike most existing works that address the model collapse problem, a blackbox approach does not make assumptions about having access to model weights or the artifacts produced during model training, making it more widely applicable than the white-box approaches.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 3,
+      "text": "In terms of experiment setup, the authors chooses face generation as the area to investigate and measures the diversity by detecting the generated face identity.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 4,
+      "text": "With the proposed methods, the authors showed that most STOA methods have a wide gap between the top p faces of the most popular face identities and randomly sampled faces.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 5,
+      "text": "It further showed that the proposed blackbox approaches increases the proposed diversity metric without sacrificing image quality.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 6,
+      "text": "The proposed diversity measuring metric is lacking both in terms of experimental proofs and intuitive motivations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 7,
+      "text": "While the black-box calibration of a GAN model may be attractive under specific settings, the authors did not consider the restrictions under those situations and their design may be hard to implement as a result.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 8,
+      "text": "For those reasons, I propose to REJECT this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 9,
+      "text": "Missing key experiments that will provide more motivation that 1. the new metric reflects human perception of diversity 2. the new metric works better than existing ones:",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 10,
+      "text": "1. Please provide experiments and/or citation for using the face identity as a proxy for face image diversity.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 11,
+      "text": "this is important since all your experiments rely on that assumption.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 12,
+      "text": "2. Were there experiments that applies your metric to the training datasets like CelebA and FFHQ? In theory your metric should show no gap between N_R_obs and N_R_ref measured on the training dataset since that's the sampled ground truth.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 13,
+      "text": "Missing assumptions about blackbox calibration approaches:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 14,
+      "text": "1. If we do not have access to the model parameter, the training data, or the artifacts during training like the discriminator, what are some of the real world situations that fit this description? In those cases, is it too much to assume that we can control the random seed input to G?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 15,
+      "text": "2. Is it reasonable to assume some constraints on how much data we can get from the blackbox generator?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 16,
+      "text": "A website that just exposes the image generation API may not allow you to ping their service 100k times to improve the generation diversity. If you are allowed to do that, it may be reasonable to assume that you can contact the API provider to get access to the rest of the model.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 17,
+      "text": "Minor improvements that did not have a huge impact on the score",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 18,
+      "text": "1. I found the argument about FID in section 2.1 unconvincing. Are there proofs or citations for the claim that real images don't follow multivariate gaussian distribution after applying FID? Copying is indeed an issue that FID cannot detect, but it may be tangential to model collapse for real world concerns like privacy.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 19,
+      "text": "2. The statement \"IS, FID and MODE score takes both visual fidelity and diversity into account.\" under \"Evaluation of Mode Collapse\" is contradictory to the description in sec 2.1 that IS in fact does not measure diversity.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "sentence_index": 20,
+      "text": "3. You may want to consider stating the work as \"a pilot study\" (sec 6.) earlier in the abstract or in the introduction, so that the reader knows what to expect.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 0,
+      "text": "Thank you for your careful reading and comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 1,
+      "text": "Q1: Missing assumptions about the black-box calibration approaches",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 2,
+      "text": "We thank R1 and R2 for endorsing the merit of our proposed black-box calibration.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 3,
+      "text": "The black-box calibration assumes no read/write to model weights or availability training data, but access to the sampling of random seed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 4,
+      "text": "The black-box calibration is useful for both model user and API owner.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 5,
+      "text": "Model owner: We suppose that the dense mode happens to be close to a specific training image, thus violating privacy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 6,
+      "text": "The model owner would like to calibrate the model to alleviate the mode collapse.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 7,
+      "text": "In such a situation, training data may no longer be accessible since it contains private information, e.g. human faces or person images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 8,
+      "text": "Retraining consumes much time and energy, especially for complex models trained on a huge dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 9,
+      "text": "Besides, we empirically validate that the dense mode is not caused by imbalanced data or randomness during initialization/optimization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 10,
+      "text": "So retraining won't work for dense-mode alleviation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 11,
+      "text": "Our proposed black-box calibration has an advantage over retraining with minimum time and energy cost and no touching training data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 12,
+      "text": "Moreover, the calibration can target any dense mode for alleviation.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 13,
+      "text": "API owner: For enterprise users having access to the face image generation service via cloud API, they are given the ping service for a huge number of times or not even restricted.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 14,
+      "text": "Black-box calibration enables the API owner to customize the model's sampling process to meet the users' needs.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 15,
+      "text": "Q2: Missing key experiments that will provide more motivation that 1. face identity can be used as a proxy for face image diversity; 2. applying our proposed metric to the training datasets should show no gap between $\\mathcal{R}_{obs}$ and $\\mathcal{R}_{ref}$:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 16,
+      "text": "1. Face identity as a proxy for face image diversity",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 17,
+      "text": "We would like to clarify that we are not using the identity label as a proxy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 18,
+      "text": "Instead, we are using the embedding features obtained from the neural network trained on the face recognition task.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 19,
+      "text": "We claim that the embedding features have rich semantics of all kinds of facial attributes, e.g. age, gender, race and so on.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 20,
+      "text": "The rich semantics of the face embedding feature can be validated by its strong transferability on other visual tasks, e.g. gender/race classification and age regression.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 21,
+      "text": "Prior studies [Savchenko, Andrey V, \"Efficient facial representations for age, gender and identity recognition in organizing photo albums using multi-output ConvNet\" (2019)] have shown that transfer learning using neural networks pretrained on face recognition can produce highly effective results for gender recognition and age estimation.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 22,
+      "text": "2. Applying our metric on the training set of FFHQ",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 23,
+      "text": "FFHQ is a public face dataset contains $56,138$ images, without repeating identities.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 24,
+      "text": "We first randomly pick $1k$ images to form the S set and sort the S set according to the number of neighbors within distance 0.3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 25,
+      "text": "We choose the sample at percentile $0.01\\%, 0.1\\%, 1\\%, 10\\%, 20\\%, 30\\%, 40\\%, 50\\%, 60\\%, 70\\%, 80\\%, 90\\%$. We conduct the neighboring analysis on these selected samples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 26,
+      "text": "We still observe a gap between $\\mathcal{R}_{obs}$ and $\\mathcal{R}_{ref}$, which demonstrates that FFHQ dataset has dense mode, even without repeating identities.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 27,
+      "text": "Furthermore, we would like to clarify that our metric is proposed to measure the collapse of GAN's learned distribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 28,
+      "text": "We have empirically shown in the paper that the mode collapse still occurs despite balanced training data.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 29,
+      "text": "You can check the details in the appendix of the paper, the paragraph of \"Applying Our Proposed Metric on FFHQ\".",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 30,
+      "text": "Q3: Minor improvements",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 31,
+      "text": "1. Proof or citation for the flaws of FID",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 32,
+      "text": "There is a recently published survey paper that can back our claim. It is [Ali Borji, \"Pros and Cons of GAN Evaluation Measures\" (Arxiv 18)]",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 33,
+      "text": "2. The contradiction between the two statements",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 34,
+      "text": "We use the word \"loss of diversity\" since IS's measuring of diversity is limited.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 35,
+      "text": "E.g., on ImageNet with 1000 classes, it can not rule out the case when then generator simply repeating the same image for each different class.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlStebC5r",
+      "rebuttal_id": "B1lO4M2jsr",
+      "sentence_index": 36,
+      "text": "3. We take your advice and will address this piece of work as a \"pilot study\" in the final version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

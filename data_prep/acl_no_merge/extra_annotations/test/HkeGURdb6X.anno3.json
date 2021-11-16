@@ -1,0 +1,630 @@
+{
+  "metadata": {
+    "forum_id": "r1eJssCqY7",
+    "review_id": "HkeGURdb6X",
+    "rebuttal_id": "HJxBzN0-Tm",
+    "title": "TabNN: A Universal Neural Network Solution for Tabular Data",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1eJssCqY7&noteId=HJxBzN0-Tm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 0,
+      "text": "Summary: This paper introduces a new Neural Network training procedure, designed for tabular data, that seeks to leverage feature clusters extracted from GBDTs.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 1,
+      "text": "Strengths: The idea of leveraging feature groups in a neural network structure; the novelty of the RESE model;",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 2,
+      "text": "Weaknesses: The main weakness of the paper is that the performance gains are extremely low compared to the next contender; perhaps they are statistically significant (this cannot be determined), but it's unclear why we wouldn't use GBDT.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 3,
+      "text": "Minor typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 4,
+      "text": "(abstract)",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 5,
+      "text": "- \"NN has achieved\" => \"Neural Networks have achieved\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 6,
+      "text": "- \"performances\" => performance",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 7,
+      "text": "- \"explicitly leverages\" => \"explicitly leverage\"",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 8,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 9,
+      "text": "- (top of p. 2) What exactly is the difference between \"implicit feature combinations\" and \"explicit (?), expressive feature combinations\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 10,
+      "text": "- (top of p. 2) \"encourage parameter sharing\" - between what and what? at which level? [reading on, I realized this applies to groups of features; it should maybe be made clear earlier]",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 11,
+      "text": "- what is the benefit brought by the 'Structural Knowledge' transfer? is this quantified anywhere? based on the description, I don't understand if this is an add-on to TabNN or whether it is incorporated in TabNN.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "sentence_index": 12,
+      "text": "Recommendations for the authors: Would it be possible to provide an analysis of the cases when TabNN is expected to outperform GBDT by a sizable margin? Or, if not, are there other reasons why using a neural network would make more sense than just simply running GBDT?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 0,
+      "text": "Thanks for your efforts in reviewing our paper and the valuable comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 1,
+      "text": "We attempt to address your concerns in the following.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 2,
+      "text": "1. Response to the \"Weaknesses\" part and the comparison with GBDT",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 3,
+      "text": "As stated in the response to review 1, our goal is not inventing a model to beat GBDT but developing a model to cover the scenarios not suitable for GBDT such as some applications need online updating.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 4,
+      "text": "\"The next contender\" model in your comment is the GBDT, which indeed works well for tabular data.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 5,
+      "text": "However, GBDT suffers from two shortages, as stated in Section 2 and the responses to reviewer 3.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 6,
+      "text": "These 2 shortages make GBDT very hard to be used in many real-world scenarios.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 7,
+      "text": "For example, in an online recommender system, we need to update the model frequently to achieve the satisfying real-time performance.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 8,
+      "text": "In this case, GBDT will be very inefficient as it needs to be re-trained from scratch.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 9,
+      "text": "In contrast, NN can be learned by mini-batch fashion and therefore can learn from streaming data naturally.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 10,
+      "text": "The proposed TabNN can overcome these shortages and achieve comparable accuracy with GBDT.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 11,
+      "text": "Moreover, compared with previous NN based solutions for tabular data, TabNN outperforms them significantly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 12,
+      "text": "Therefore, TabNN is a better general solution for tabular data as it can cover more scenarios.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 13,
+      "text": "2. Difference between \"implicit feature combinations\" and \"explicit feature combinations\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 14,
+      "text": "The main difference lies in whether the feature combination information is explicitly introduced into model structure or not.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 15,
+      "text": "For example, in FCNN, as all features are connected to the neurons in the next layer, there are no feature combination information in the model structure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 16,
+      "text": "Although the feature combination information are not explicitly provided, one neuron in FCNN can learn a linear combination of its input features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 17,
+      "text": "Thus, we say there are \"implicit feature combinations\" in FCNN.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 18,
+      "text": "In TabNN, we leverage GBDT to find feature combinations and then construct model structure according to them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 19,
+      "text": "Thus, we say there are \"explicit feature combinations\" in TabNN.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 20,
+      "text": "\"Implicit feature combinations\" is not efficient as it introduces much more trainable parameters, and has a risk of over-fitting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 21,
+      "text": "In contrast, \"explicit feature combinations\" let model focus on the more important feature combinations and is more efficient.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 22,
+      "text": "The successful CNN model also uses \"explicit feature combinations\", as it only combines the local pixels.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 23,
+      "text": "3. About \"encourage parameter sharing\".",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 24,
+      "text": "Yes, we use parameter sharing in the one cluster of feature groups.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 25,
+      "text": "We will clarify this in the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 26,
+      "text": "4. Benefits brought by the \"Structural Knowledge\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 27,
+      "text": "We had compared the benefit brought by the 'Structural Knowledge' in the experiment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 28,
+      "text": "The difference between TabNN (S) and TabNN (R), as shown in Table 3, implies that that the structural knowledge from GBDT yields a large contribution to the performance of TabNN.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeGURdb6X",
+      "rebuttal_id": "HJxBzN0-Tm",
+      "sentence_index": 29,
+      "text": "The \"Structural Knowledge\" is in TabNN by default. We will clarify this in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

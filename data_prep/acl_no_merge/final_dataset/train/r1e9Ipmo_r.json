@@ -1,0 +1,830 @@
+{
+  "metadata": {
+    "forum_id": "rylwJxrYDS",
+    "review_id": "r1e9Ipmo_r",
+    "rebuttal_id": "ryllakFnsS",
+    "title": "vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rylwJxrYDS&noteId=ryllakFnsS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 0,
+      "text": "Overview:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 1,
+      "text": "This paper considers unsupervised (or self-supervised) discrete representation learning of speech using a combination of a recent vector quantized neural network discritization method and future time step prediction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 2,
+      "text": "Discrete representations are fine-tuned by using these as input to a BERT model; the resulting representations are then used instead of conventional speech features as the input to speech recognition models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 3,
+      "text": "New state-of-the-art results are achieved on two datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 4,
+      "text": "Strengths:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 5,
+      "text": "The core strength of this paper is in the results that are achieved on standard speech recognition benchmarks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 6,
+      "text": "The results indicate that, while discritization in itself does not give improvements, coupling this with the BERT-objective results in speech features which are better in downstream speech recognition than standard features. I think the main technical novelty is in combining discritization with future time step prediction (but see the weakness below).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 7,
+      "text": "Weaknesses:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 8,
+      "text": "The main weakness of the paper is that it does not situate itself within existing literature in this area.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 9,
+      "text": "Over the last few years, researchers in the speech community have invested significant effort in learning better speech representations, and this is not discussed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 10,
+      "text": "See e.g. [1].",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 11,
+      "text": "Even more importantly, very recently there has been a number of papers investigating discrete representations of speech; see the review [2].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 12,
+      "text": "Some of these papers specifically use VQ-VAEs [3].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 13,
+      "text": "[4] actually compares VQ-VAE and the Gumbel-Softmax approach.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 14,
+      "text": "These studies should be mentioned.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 15,
+      "text": "This paper is different in that it incorporates future time step prediction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 16,
+      "text": "But context prediction has also been considered before, also for speech [5, 6, 7].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 17,
+      "text": "This paper can be situated as a new contribution combining these two strands of research.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 18,
+      "text": "In the longer run it would be extremely beneficial to the community if this approach is applied to the standard benchmarks as set out in [2].",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 19,
+      "text": "As a minor weakness, some parts of the paper is not described in enough detail and the motivation is weak or not exactly clear (see detailed comments below).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 20,
+      "text": "Overall assessment:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 21,
+      "text": "I think the results as well as the new combination of existing approaches in the paper warrants publication. But it should be amended significantly to situate itself within the existing literature. I therefore award a \"weak accept\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 22,
+      "text": "Detailed questions and suggestions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 23,
+      "text": "- Section 1: As motivation for this work, it is stated that \"we aim to make well performing NLP algorithms more widely applicable\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 24,
+      "text": "As noted above, some NLP-like ideas (such as prediction of future speech segments, stemming from text-based language modelling) have already been considered within the speech community.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 25,
+      "text": "Rather than motivating the work in this way, it might be helpful to focus the contribution as a combination of future time step prediction and discretization (both of which have been considered in previous work, but not in combination).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 26,
+      "text": "- Section 4: Would it be possible to train the vq-wav2vec model jointly with BERT, i.e. as one model? I suspect it would be difficult since, for the masking objective, the discrete units are already required, but maybe there is a scheme where this could work.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 27,
+      "text": "- Section 2.2: Similarly to the above question, would there be a way to incorporate the BERT principles directly into an end-to-end model, e.g. by randomly masking some of the continuous input speech?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 28,
+      "text": "- Section 3.3: What exactly does \"mode collapse\" refer to in this context? Would this be using only one codebook entry, for instance?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 29,
+      "text": "- Section 6: It seems that in all cases to obtain improvements from discritization, BERT is required on top of the vq-wav2vec discrete symbols.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 30,
+      "text": "Is it possible that the output acoustic model is simply better-matched to continuous rather than discrete input (direct vq-wav2vec gives discrete while BERT gives continuous)? Would it make sense to train the wav2vec acoustic model on top of the vqvae codebook entries (e) instead of directly on the symbols?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 31,
+      "text": "Typos, grammar and style:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 32,
+      "text": "- \"gumbel\" -> \"Gumbel\" (throughout; or just be consistent in capitalization)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 33,
+      "text": "- \"which can be mitigated my workarounds\" -> \"which can be mitigated *by*",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 34,
+      "text": "workarounds\"",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 35,
+      "text": "- \"work around\" -> \"workaround\"",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 36,
+      "text": "Missing references:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 37,
+      "text": "1. Versteegh, M., Anguera, X., Jansen, A. & Dupoux, E. (2016). The Zero Resource Speech Challenge 2015: Proposed Approaches and Results. In SLTU-2016 Procedia Computer Science, 81, (pp 67-72).",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 38,
+      "text": "2. https://arxiv.org/abs/1904.11469",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 39,
+      "text": "3. https://arxiv.org/abs/1905.11449",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 40,
+      "text": "4. https://arxiv.org/abs/1904.07556",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 41,
+      "text": "5. https://arxiv.org/abs/1904.03240",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 42,
+      "text": "6. https://arxiv.org/abs/1807.03748 (this paper is cited)",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 43,
+      "text": "7. https://arxiv.org/abs/1803.08976",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "sentence_index": 44,
+      "text": "Edit: Based on the feedback from the authors, I changed my rating from a 'weak accept' to an 'accept'.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 0,
+      "text": "Thank you for the fruitful comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 1,
+      "text": "We addressed your main concern and updated Section 1 of the paper to better situate it in the existing literature.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 2,
+      "text": ">> Would it be possible to train the vq-wav2vec model jointly with BERT, i.e. as one model? [...] Similarly to the above question, would there be a way to incorporate the BERT principles directly into an end-to-end model, e.g. by randomly masking some of the continuous input speech?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 3,
+      "text": "The focus of this paper is a quantization approach for audio.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 4,
+      "text": "Replacing the two-step training process by an adaptation of BERT to continuous data (using a wav2vec/CPC-like objective function instead of the cross entropy) is an interesting direction for future work (and we amended the future work section accordingly).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 5,
+      "text": "However, our current paper is a proof of concept that a pre-training scheme based on masked inputs (BERT) can improve over previous methods in the speech domain.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 6,
+      "text": ">> What exactly does \"mode collapse\" refer to in this context?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 7,
+      "text": "In several configurations (especially for one and two groups) considerably less codewords than theoretically possible are used.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 8,
+      "text": "We loosely refer to mode collapse as the phenomenon when very few codewords per group are used (cf. Appendix A).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 9,
+      "text": "We updated the paper to also refer to the appendix where we outline the number of codewords that the model uses.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 10,
+      "text": "We observed that in the \u201cfew group regime\u201d (G=1...4), only a few of the available centroids per group are used and refer to this phenomenon as mode collapse \u2014 for BERT training, this is actually favorable e.g. in the G=2, V=320 setting as it yields a codebook of acceptable size for NLP model training (13.5k/23k).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 11,
+      "text": "Mode collapse could potentially be circumvented by strategies like embedding re-initialization used in classical k-means and this is an interesting avenue for future work.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 12,
+      "text": ">> [...] BERT is required on top of the vq-wav2vec discrete symbols.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 13,
+      "text": "Is it possible that the output acoustic model is simply better-matched to continuous rather than discrete input (direct vq-wav2vec gives discrete while BERT gives continuous)? Would it make sense to train the wav2vec acoustic model on top of the vqvae codebook entries (e) instead of directly on the symbols?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 14,
+      "text": "We actually did what you suggest: when we train acoustic models on top of vq-wav2vec, we input the dense embedding vectors corresponding to the discrete codewords.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 15,
+      "text": "On the other hand, we also trained an NLP sequence to sequence (Section 6.3) which takes the quantized audio codes as input and then generates the transcriptions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 16,
+      "text": "This gives reasonable accuracy and suggests that the discrete codes by themselves, and without the learned continuous representations, are useful.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 17,
+      "text": "We clarified this in the updated version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 18,
+      "text": "We believe the reason the dense embeddings for the discrete codewords work less well",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 19,
+      "text": "is because they do not encode as much detailed context information as a representation built by wav2vec or BERT.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1e9Ipmo_r",
+      "rebuttal_id": "ryllakFnsS",
+      "sentence_index": 20,
+      "text": "The information in the codebook is ultimately less detailed than a context vector specific to the current input sequence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

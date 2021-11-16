@@ -1,0 +1,780 @@
+{
+  "metadata": {
+    "forum_id": "rJehVyrKwH",
+    "review_id": "rklaWryJoH",
+    "rebuttal_id": "rkxdLt17jr",
+    "title": "And the Bit Goes Down: Revisiting the Quantization of Neural Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehVyrKwH&noteId=rkxdLt17jr",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 0,
+      "text": "The suggested method proposes a technique to compress neural networks bases on PQ quantization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 1,
+      "text": "The algorithm quantizes matrices of linear operations, and, by generalization, also works on convolutional networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 2,
+      "text": "Rather than trying to compress weights (i.e. to minimize distance between original and quantized weights), the algorithm considers a distribution of unlabeled inputs and looks for such quantization which would affect output activations as little as possible over that distribution of data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 3,
+      "text": "The algorithm works by splitting each column of W_ij into m equal subvectors, learning a codebook for those subvectors, and encoding each of those subvectors as one of the words from the codebook.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 4,
+      "text": "The method provides impressive compression ratios (in the order of x20-30) but at the cost of a lower performance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 5,
+      "text": "Whether this is a valuable trade-off is highly application dependent.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 6,
+      "text": "Overall I find the paper interesting and enjoyable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 7,
+      "text": "However, as I am not an expert in the research area, I can not assess how state of the art the suggested method is.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 8,
+      "text": "There are a few other questions that I think would be nice to answer. I will try to describe them below:",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 9,
+      "text": "Suppose we have a matric W_{ij} with dimensions NxM where changing i for a given j defines a column.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 10,
+      "text": "By definition, linear operation is defined",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 11,
+      "text": "y_i = sum_j W_ij x_j .",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 12,
+      "text": "Now say each column of matrix W is quantized into m subvectors.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 13,
+      "text": "We can express W_ij in the following way:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 14,
+      "text": "W_ij = (V^1_ij + V^2_ij + ... V^m_ij)x_j where V^m_ij is zero everywhere except for the rows covering a given quantized vector.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 15,
+      "text": "For example, if W had dimensions of 8x16 and m=4,",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 16,
+      "text": "V^2_{3,j}=0, for all j",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 17,
+      "text": ", V^2_{4,j}=non_zero, V^2_{7,j}=non_zero, V^2_{8,j}=0, V^2_{i=4:8,j}=one_of_the_quantized_vectors.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 18,
+      "text": "y_i = sum_j W_ij x_j = sum_k sum_j (V^k_ij) x_j =def= sum_k z^k_i where z^k are partial products: z^k_i=0 for i<k*N/m and i>(k+1)N/m",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 19,
+      "text": "Thus, the suggested solution effectively splits the output vector y_i into m sections, defines sparse matrices V^k_{ij} 1<=k<=m, and performs column-wise vector quantization for these matrices separately.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 20,
+      "text": "Generally, it is not ovious or given that the current method would be able to compress general matrices well, as it implicitly assumes that weight W_{ij} has a high \"correlation\" with weights W_{i+kN/m,j} (which I call \"vertical\" correlation), W_{i,k+some_number} (which I call \"horizontal\" correlation) and W_{i+kN/m,k+some_number} (which I call \"other\" correlation).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 21,
+      "text": "It is not given that those kind of redundancies would exist in arbitrary weight matrices.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 22,
+      "text": "Naturally, the method will work well when weight matrices have a lot of structure and then quantized vectors can be reused.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 23,
+      "text": "Matrices can have either \"horizontal\" or \"vertical\" redundancy (or \"other\" or neither).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 24,
+      "text": "It would be very interesting to see which kind of redundancy their method managed to caprture.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 25,
+      "text": "In the 'horizontal' case, it should work well when inputs have a lot of redundancy (say x_j' and x_j'' are highly correlated making it possible to reuse code-words horizontally within any given V^k: V^k_ij'=V^k_ij'').",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 26,
+      "text": "However, if thise was the case, it would make more sense to simply remove redundancy by prunning input vector x_j by removing either x_j' or x_j'' from it.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 27,
+      "text": "This can be dome by removing one of the outputs from the previous layer.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 28,
+      "text": "This can be a symptom of a redundant input.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 29,
+      "text": "Another option is exploiting \"vertical\" redundancy: this happens when output y_i' is correlated with output y_{i'+N/m}. This allows the same code-word to be reused vertically.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 30,
+      "text": "This can be a symptom of a redundant output.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 31,
+      "text": "It could also be the case that compressibility could be further subtantially improved by trying different matrix row permutations.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 32,
+      "text": "Also, if one notices that y_i' ir correlated with y_i'', it might make sense to permute matrix rows in such a way that both rows would end up a multiple N/m apart.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 33,
+      "text": "It would be interesting to see how this would affect compressibility.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 34,
+      "text": "The third case is when code words are reused in arbitrary cases.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 35,
+      "text": "Generally, I think that answering the following questions would be interesting and could guide further research:",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 36,
+      "text": "1. It would be very interesting to know what kind of code-word reusa patterns the algorithm was able to capture, as this may guide further research.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "sentence_index": 37,
+      "text": "2. How invariance copressibility is under random permutations of matrix rows (thus also output vectors)?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 1 for their insightful questions and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 1,
+      "text": "We agree that Product Quantization (PQ) is key to get \u201cimpressive compression ratio\u201d while maintaining competitive accuracy, provided that there is some special structure and redundancy in the weights and the way we quantize them.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 2,
+      "text": "Which kind of redundancy does our method capture?",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 3,
+      "text": "As rightfully stated by Reviewer 1, choosing which elementary blocks to quantize in the weight matrices is crucial for the success of the method (what the Reviewer calls \u201chorizontal/vertical/other\u201d correlation)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 4,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 5,
+      "text": "In what follows, let us focus on the case of convolutional weights (of size C_out x C_in x K x K).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 6,
+      "text": "As we state in our paper: \u201cThere are many ways to split a 4D matrix in a set of vectors and we are aiming for one that maximizes the correlation between the vectors since vector quantization-based methods work the best when the vectors are highly correlated",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 7,
+      "text": "\u201d",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 8,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 9,
+      "text": "We build on previous work that have documented the *spatial redundancy* in the convolutional filters [1], hence we use blocks of size K x K. Therefore, we rely on the particular nature of convolutional filters to exploit their spatial redundancy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 10,
+      "text": "We have tried other ways to split the 4D weights into a set of vectors to in preliminary experiments, but none was on par with the proposed choice.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 11,
+      "text": "We agree with Reviewer 1 that the method would probably not yield as good a performance for arbitrary matrices.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 12,
+      "text": "Using row permutations to improve the compressibility?",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 13,
+      "text": "This is a very good remark.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 14,
+      "text": "Indeed, redundancy can be artificially created by finding the *right* permutation of rows (when we quantize using column blocks for a 2D matrix).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 15,
+      "text": "Yet in our preliminary experiments, we observed that PQ performs systematically worse both in terms of reconstruction error and accuracy of the network that when applying a random permutation to a convolutional filter.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 16,
+      "text": "This confirms that our method captures the spatial redundancy of the convolutional filters as stated in the first point.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklaWryJoH",
+      "rebuttal_id": "rkxdLt17jr",
+      "sentence_index": 17,
+      "text": "[1] Exploiting linear structure within convolutional networks for efficient evaluation, Denton et al.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

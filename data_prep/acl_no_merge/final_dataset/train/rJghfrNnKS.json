@@ -1,0 +1,761 @@
+{
+  "metadata": {
+    "forum_id": "HyeAPeBFwS",
+    "review_id": "rJghfrNnKS",
+    "rebuttal_id": "r1lA7pumoH",
+    "title": "Quantifying uncertainty with GAN-based priors",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HyeAPeBFwS&noteId=r1lA7pumoH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 0,
+      "text": "The paper studies the Bayesian inferences with the generative adversarial network (GAN).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 1,
+      "text": "In the first half of the paper, the general framework of the Bayes estimation is introduced.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 2,
+      "text": "Then, The authors proposed how to incorporate GAN to the Bayesian inference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 3,
+      "text": "Some computational methods for calculating the mean of the statistic under the posterior distribution are described.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 4,
+      "text": "Then, numerical experiments using MNIST and Celeb-A datasets are presented.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 5,
+      "text": "Though the Bayesian inference using GAN is a natural idea, learning algorithms proposed in this paper are simple and are not intensively developed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 6,
+      "text": "In numerical experiments, there is no comparison with major competitors besides random sampling in the active learning setup.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 7,
+      "text": "Hence, the effectiveness and advantage of the proposed methods are not clear.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 8,
+      "text": "- In active learning, the proposed method should be compared with other methods such as Bayesian DNN using dropout, etc.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "sentence_index": 9,
+      "text": "- How does the estimation accuracy of GAN relate to the estimation accuracy of the proposed method? Showing a quantitative description would be nice.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 0,
+      "text": "Thank you for your valuable feedback!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 1,
+      "text": "After carefully reading it, we plan to modify the manuscript as discussed below (the planned changes are shown by **",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 2,
+      "text": "\u2026 *",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 3,
+      "text": "*",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 4,
+      "text": ")",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 5,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 6,
+      "text": "We would appreciate it if you could let us know whether the proposed changes address your concerns, or whether we have misinterpreted your comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 7,
+      "text": "\u2022",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 8,
+      "text": "You have raised an interesting question about how the accuracy of the GAN impacts the accuracy of the proposed method.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 9,
+      "text": "In order to address this, we have developed analytical estimates for the error in the point estimates computed using the proposed approach and show that these are intimately tied to error in computing the point estimates for the prior using the GAN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 10,
+      "text": "We have also demonstrated that as the generator and the discriminator of the GAN become more expressive this error tends to zero, and the exact point estimates, for both the prior and the posterior, are recovered. ** In the revised manuscript, we will include this mathematical analysis in the Appendix and refer to it in the main text. **",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 11,
+      "text": "\u2022",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 12,
+      "text": "We note that our method of inferring the desired image from the measured image is an unsupervised method; for training we only need a set of desired images  to construct the prior.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 13,
+      "text": "We are not aware of any other unsupervised learning approach for solving these types of problems with quantified uncertainty.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 14,
+      "text": "In that regard, the calculation of point-wise variance (our metric of uncertainty) is possible only using our approach, and therefore a direct comparison is not possible, since other supervised methods (explained below) cannot work in this setting where only set of desired images are available. ** We will clarify this unique aspect in the revised version of the manuscript. **",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 15,
+      "text": "\u2022\tThere has been some work on computing the uncertainty in an inferred image within a supervised learning framework where pairs of measured and desired images are used for training the network [1, 2].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 16,
+      "text": "In these articles the authors have used methods like Bayesian dropout and variational autoencoder to compute uncertainty in the inferred images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 17,
+      "text": "*",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 18,
+      "text": "* We will refer to these works in the revised version to better orient reader.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 19,
+      "text": "*",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 20,
+      "text": "*",
+      "suffix": "\n\n\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 21,
+      "text": "[1]. A. Kendall and Y. Gal, \u201cWhat Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 22,
+      "text": "\u201d, NIPS (2017).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 23,
+      "text": "[2]. Kohl, S.A., Romera-Paredes, B., Meyer, C., Fauw, J.D., Ledsam, J.R., Maier-Hein, K.H., Eslami, S.M., Rezende, D.J., & Ronneberger, O. \u201cA Probabilistic U-Net for Segmentation of Ambiguous Images\u201d, NeurIPS (2018).",
+      "suffix": "\n\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 24,
+      "text": "Thank you for your valuable feedback! After carefully reviewing it, we have modified manuscript as discussed below (description of changes is enclosed within ** ... **).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 25,
+      "text": "\"Though the Bayesian inference using GAN is a natural idea, learning algorithms proposed in this paper are simple and are not intensively developed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 26,
+      "text": "In numerical experiments, there is no comparison with major competitors besides random sampling in the active learning setup.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 27,
+      "text": "Hence, the effectiveness and advantage of the proposed methods are not clear.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 28,
+      "text": "We have addressed this by responding to the specific questions below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 29,
+      "text": "\"- In active learning, the proposed method should be compared with other methods such as Bayesian DNN using dropout, etc. \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 30,
+      "text": "We are not aware of any other methods for computing uncertainty in recovered images that have been used to drive an active learning task in image inpainting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 31,
+      "text": "While methods based on dropout (\\cite{Kendall2017a, Kendall2019}) or variational inference (\\cite{Kohl2018a}) could be extended to accomplish this, this has not been done thus far.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 32,
+      "text": "**We have added this comment in Section 3.1**",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 33,
+      "text": "Another big difference between the methods mentioned above and our approach is that while they require image pairs (true and corrupted images) for training, our approach only requires uncorrupted images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 34,
+      "text": "Thus while our algorithm relies on unsupervised learning, the other algorithms fall under the category of supervised learning.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 35,
+      "text": "*",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 36,
+      "text": "*We have also clarified this within the \"Our Contributions\" Section**",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 37,
+      "text": "\"- How does the estimation accuracy of GAN relate to the estimation accuracy of the proposed method? Showing a quantitative description would be nice.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 38,
+      "text": "We thank the reviewer for raising this important question.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 39,
+      "text": "*",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJghfrNnKS",
+      "rebuttal_id": "r1lA7pumoH",
+      "sentence_index": 40,
+      "text": "*We have addressed it thoroughly in Appendix A. We have provided a proof that demonstrates the weak convergence of the posterior density calculated using our method to the true posterior density as the number of weights in the discriminator and generator components of the GAN is increased.**",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

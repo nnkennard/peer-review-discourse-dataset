@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "forum_id": "r1lohoCqY7",
+    "review_id": "SkgtrSEZ67",
+    "rebuttal_id": "BylBDAB5aQ",
+    "title": "Learning-Based Frequency Estimation Algorithms",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1lohoCqY7&noteId=BylBDAB5aQ",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 0,
+      "text": "The authors are proposing an end-to-end learning-based framework that can be incorporated into all classical frequency estimation algorithms in order to learn the underlying nature of the data in terms of the frequency in data streaming settings and which does not require labeling.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 1,
+      "text": "According to my understanding, the other classical streaming algorithms also do not require labeling but the novelty here I guess lie in learning the oracle (HH) which feels like a logical thing to do as such learning using neural networks worked well for many other problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 2,
+      "text": "The problem formulation and applications of this research are well explained and the paper is well written for readers to understand.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 3,
+      "text": "The experiments show that the learning based approach performs better than their all unlearned versions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 4,
+      "text": "But the only negative aspect is the basis competitor algorithms are very simple in nature without any form of learning and that are very old.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "sentence_index": 5,
+      "text": "So, I am not sure if there are any new machine learning based frequency estimation algorithms.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkgtrSEZ67",
+      "rebuttal_id": "BylBDAB5aQ",
+      "sentence_index": 0,
+      "text": "Thank you for the thoughtful comments. We are glad that you found our problem interesting, and problem formulation/applications of this research well explained.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          0,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "rebuttal_id": "BylBDAB5aQ",
+      "sentence_index": 1,
+      "text": "Regarding the competing algorithms:  Both algorithms that we compare to, Count-Sketch and Count-Min, are state-of-the-art hashing-based algorithms (see e.g., Cormode & Hadjieleftheriou (2008)).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "rebuttal_id": "BylBDAB5aQ",
+      "sentence_index": 2,
+      "text": "Further, they are widely used in practice for processing internet traffic, large databases, query logs, web document repositories, etc.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "rebuttal_id": "BylBDAB5aQ",
+      "sentence_index": 3,
+      "text": "To the best of our knowledge, our paper is the first to use machine learning to design better sketches for any streaming problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgtrSEZ67",
+      "rebuttal_id": "BylBDAB5aQ",
+      "sentence_index": 4,
+      "text": "We tried to cover related work thoroughly in section 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

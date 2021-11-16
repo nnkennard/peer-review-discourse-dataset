@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "forum_id": "Syx72jC9tm",
+    "review_id": "rJgbJ0v52m",
+    "rebuttal_id": "SkgCXcb16X",
+    "title": "Invariant and Equivariant Graph Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 9,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Syx72jC9tm&noteId=SkgCXcb16X",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 0,
+      "text": "This paper explores maximally expressive linear layers for jointly exchangeable data and in doing so presents a surprisingly expressive model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 1,
+      "text": "I have given it a strong accept because the paper takes a very well-studied area (convolutions on graphs) and manages to find a far more expressive model (in terms of numbers of parameters) than what was previously known by carefully exploring the implications of the equivariance assumptions implied by graph data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 2,
+      "text": "The result is particularly interesting because the same question was asked about exchangeable matrices (instead of *jointly* exchangeable matrices) by Hartford et al. [2018] which lead to a model with 4 bases instead of the 15 bases in this model, so the additional assumption of joint exchangeability (i.e. that any permutations applied to rows of a matrix must also be applied to columns - or equivalently, the indices of the rows and columns of a matrix refer to the same items / nodes) gives far more flexibility but without losing anything with respect to the Hartford et al result (because it can be recovered using a bipartite graph construction - described below).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 3,
+      "text": "So we have a case where an additional assumption is both useful (in that it allows for the definition of a more flexible model) and benign (because it doesn't prevent the layer from being used on the data explored in Hartford et al.).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 4,
+      "text": "I only have a couple of concerns:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 5,
+      "text": "1 - I would have liked to see more discussion about why the two results differ to give readers intuition about where the extra flexibility comes from.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 6,
+      "text": "The additional parameters of this paper come from having parameters associated with the diagonal (intuitively: self edges get treated differently to other edges) and having parameters for the transpose of the matrix (intuitively: incoming edges are different to outgoing edges).",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 7,
+      "text": "Neither of these assumptions apply in the exchangeable setting (where the matrix may not be square so the diagonal and transpose can't be used).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 8,
+      "text": "Because these differences aren't explained, the synthetic tasks in the experimental section make this approach look artificially good in comparison to Hartford et al.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 9,
+      "text": "The tasks are explicitly designed to exploit these additional parameters - so framing the synthetic experiments as, \"here are some simple functions for which we would need the additional parameters that we define\" makes sense; but arguing that Hartford et al. \"fail approximating rather simple functions\" (page 7) is misleading because the functions are precisely the functions on which you would expect Hartford et al. to fail (because it's designed for a different setting).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 10,
+      "text": "2 - Those more familiar of the graph convolution literature will be more familiar with GCN [kipf et al. 2016] / GraphSAGE [Hamilton et al. 2017] / Monti et al [2017] / etc.. Most of these approaches are more restricted version of this work / Hartford et al. so we wouldn't expect them to perform any differently from the Hartford et al.  baseline on the synthetic dataset, but including them will strengthen the author's argument in favour of the work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 11,
+      "text": "I would have also liked to see a comparison to these methods in the the classification results.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 12,
+      "text": "3 - Appendix A - the 6 parameters for the symmetric case with zero diagonal reduces to the same 4 parameters from Hartford et al. if we constrained the diagonal to be zero in the output as well as the input.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 13,
+      "text": "This is the case when you map an exchangeable matrix into a jointly exchangeable matrix by representing it as a bipartite graph [0, X; X^T, 0].",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "sentence_index": 14,
+      "text": "So the two results coincide for the exchangeable case. Might be worth pointing this out.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the detailed review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 1,
+      "text": "Below we address the main concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 2,
+      "text": "--------------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 3,
+      "text": "Q:\u201dso",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 4,
+      "text": "framing the synthetic experiments as, \"here are some simple functions for which we would need the additional parameters that we define\" makes sense; but arguing that Hartford et al. \"fail approximating rather simple functions\" (page 7) is misleading because the functions are precisely the functions on which you would expect Hartford et al. to fail\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 5,
+      "text": "A: We agree with the reviewer and will change our wording accordingly.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 6,
+      "text": "--------------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 7,
+      "text": "Q:\u201dI would have liked to see more discussion about why the two results differ to give readers intuition about where the extra flexibility comes from\u201d.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 8,
+      "text": "\u201cthe two results coincide for the exchangeable case\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 9,
+      "text": "A: We agree with the reviewer that such a discussion will be helpful to the reader. We will add such a discussion (in addition to the short discussion at the end of Appendix 1).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 10,
+      "text": "--------------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 11,
+      "text": "Q: Comparison to popular graph convolution methods (GCN [kipf et al. 2016] / GraphSAGE [Hamilton et al. 2017] / Monti et al [2017] / etc.).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgbJ0v52m",
+      "rebuttal_id": "SkgCXcb16X",
+      "sentence_index": 12,
+      "text": "A: As discussed in our response to Reviewer 2, We will add a theoretical result that shows that our model is at least as powerful in terms of universality as [Kipf & Welling ICLR 2017].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

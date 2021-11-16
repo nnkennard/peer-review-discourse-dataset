@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "forum_id": "HJxdTxHYvB",
+    "review_id": "rJeb2tXkqB",
+    "rebuttal_id": "r1lSZ9qnir",
+    "title": "BREAKING  CERTIFIED  DEFENSES:  SEMANTIC  ADVERSARIAL  EXAMPLES  WITH  SPOOFED  ROBUSTNESS  CERTIFICATES",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJxdTxHYvB&noteId=r1lSZ9qnir",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 0,
+      "text": "The paper presents a new attack, called the shadow attack, that can maintain the imperceptibility of adversarial samples when out of the certified radius.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 1,
+      "text": "This work not only aims to target the classifier label but also the certificate by adding large perturbations to the image.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 2,
+      "text": "The attacks produce a 'spoofed' certificate, so though these certified systems are meant to be secure, can be attacked.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 3,
+      "text": "Theirs seem to be the first work focusing on manipulating certificates to attack strongly certified networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 4,
+      "text": "The paper presents shadow attack, that is a generalization of the PGD attack.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 5,
+      "text": "It involves creation of adversarial examples, and addition of few constraints that forces these perturbations to be small, smooth and not many color variations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 6,
+      "text": "For certificate spoofing the authors explore different spoofing losses for l-2(attacks on randomized smoothing) and l-inf(attacks on crown-ibp) norm bounded attacks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 7,
+      "text": "Strengths: The paper is well written and well motivated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 8,
+      "text": "The work is novel since most of the current work focus on the imperceptibility and misclassification aspects of the classifier, but this work addresses attacking the strongly certified networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "sentence_index": 9,
+      "text": "Weakness: It would be good to see some comparison to the state of the art",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJeb2tXkqB",
+      "rebuttal_id": "r1lSZ9qnir",
+      "sentence_index": 0,
+      "text": "Thank you for the encouraging review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "rebuttal_id": "r1lSZ9qnir",
+      "sentence_index": 1,
+      "text": "[R3: Weakness: It would be good to see some comparison to the state of the art ]",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "rebuttal_id": "r1lSZ9qnir",
+      "sentence_index": 2,
+      "text": "With regards to your comment on attacking the current state of the art method for smoothed classifiers, we have added new results to the resubmission (Appendix B), in which we attack the adversarially trained smooth classifier [1].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJeb2tXkqB",
+      "rebuttal_id": "r1lSZ9qnir",
+      "sentence_index": 3,
+      "text": "[1]. Salman et al., \u201cProvably Robust Deep Learning via Adversarially Trained Smoothed Classifiers\u201d, NeurIPS 2019",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "metadata": {
+    "forum_id": "BkzeUiRcY7",
+    "review_id": "Hye-Lo29hm",
+    "rebuttal_id": "H1lU9Hrf0X",
+    "title": "M^3RL: Mind-aware Multi-agent Management Reinforcement Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BkzeUiRcY7&noteId=H1lU9Hrf0X",
+    "annotator": "anno6"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 0,
+      "text": "This paper studies the problem of generating contracts by a principal to incentive agents to optimally accomplish multiagent tasks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 1,
+      "text": "The setup of the environment is that the agents have certain skills and preferences for activities, which the principal must learn to act optimally.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 2,
+      "text": "The paper takes a combined approach of agent modeling to infer agent skills and preferences, and a deep reinforcement learning approach to generate contracts.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 3,
+      "text": "The evaluation of the approach is fairly thorough.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 4,
+      "text": "The main novel contribution of the paper is to introduce the principal-agent problem to the deep multiagent reinforcement learning literature.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 5,
+      "text": "My concerns are:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 6,
+      "text": "- The paper should perform a literature search on related work from operations research, including especially principal-agent problems, which are not currently surveyed, and perhaps also optimal scheduling problems.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 7,
+      "text": "- How do the problems introduced either map onto real applications or map onto environments studied in existing literature (such as in operations research)?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 8,
+      "text": "- More details should be given on the mind tracker module.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 9,
+      "text": "- Is it necessary to use deep reinforcement learning for contract generation?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 10,
+      "text": "If the agent modeling is good, the optimal contracts look like they are probably simple to compute directly in the environments studied.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "sentence_index": 11,
+      "text": "Overall, the paper is somewhat interesting and relatively technically sound, but the contribution seems marginal. The problems studied seem pulled out a hat, when they could be situated in specific existing literature.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 1,
+      "text": "We respond to your questions and concerns as follows.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 2,
+      "text": "1. Connection with principal-agent problems.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 3,
+      "text": "Thank you for pointing this out.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 4,
+      "text": "We really appreciate it.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 5,
+      "text": "The problem we address is indeed closely connected to principal-agent problems, or moral hazard problems in economics, which considers whether the agent makes the best choice for what the principal delegates (e.g., a plumber might make more money by suggesting an overhaul rather than a short-term fix).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 6,
+      "text": "In this setting, there are a lot of issues to be modeled, e.g., information asymmetry between principals and agents, how to setup incentive cost, how to infer agents\u2019 types and how to monitor their behaviors, etc.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 7,
+      "text": "Traditional approaches [1] in economics build mathematical models to address these issues separately, leading to complicated models with many tunable parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 8,
+      "text": "In comparison, our paper provides a practical end-to-end computational framework to address this problem in a data-driven way, once the agents\u2019 utility function is written down as a combination of principal\u2019s request and its own preference (Eqn. 1).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 9,
+      "text": "Moreover, this framework is adaptive to changes of agents\u2019 preferences and capabilities, which very few papers in economics have addressed.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 10,
+      "text": "Because of the connection to principal-agent problems and the data-driven nature of the proposed method, there could be a broad number of practical applications.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 11,
+      "text": "We will incorporate a more thorough literature reviews in the next revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 12,
+      "text": "[1] The theory of incentives: the principal-agent model, Jean-Jacques Laffont, 2001",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 13,
+      "text": "2. More details should be given on the mind tracker module.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 14,
+      "text": "We will explain more implementation details in the appendix in the next revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 15,
+      "text": "We will also release the code.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 16,
+      "text": "3. Is it necessary to use deep reinforcement learning for contract generation?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 17,
+      "text": "As stated in the introduction, one of the main points of this work is about incomplete information.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 18,
+      "text": "I.e., we do not know the true agent models and their mental states, and also do not assume that the task dependency is known.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 19,
+      "text": "In real world problems, we indeed can not assume that a manager knows the exact nature of other agents.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 20,
+      "text": "So we want to train a manager that can quickly model worker agents through observations and simultaneously generate optimal contracts.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 21,
+      "text": "In contrast, traditional methods do not consider task dependency, and usually assume agent types are either known or follow a given distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 22,
+      "text": "Also, deep models are flexible enough to handle complicated interactions between agents and changes of settings.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hye-Lo29hm",
+      "rebuttal_id": "H1lU9Hrf0X",
+      "sentence_index": 23,
+      "text": "Thus, deep RL is a more suitable approach than traditional methods under the incomplete information setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

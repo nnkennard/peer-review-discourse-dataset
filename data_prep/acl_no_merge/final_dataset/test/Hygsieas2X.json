@@ -1,0 +1,320 @@
+{
+  "metadata": {
+    "forum_id": "HylTBhA5tQ",
+    "review_id": "Hygsieas2X",
+    "rebuttal_id": "rkxhfWj1C7",
+    "title": "The Limitations of Adversarial Training and the Blind-Spot Attack",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HylTBhA5tQ&noteId=rkxhfWj1C7",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 0,
+      "text": "This paper provides some insights on influence of data distribution on robustness of adversarial training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 1,
+      "text": "The paper demonstrates through a number of analysis that the distance between the training an test data sets plays an important role on the effectiveness of adversarial training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 2,
+      "text": "To show the latter, the paper proposes an approach to measure the distance between the two data sets using combination of nonlinear projection (e.g. t-SNE), KDE, and K-L divergence.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 3,
+      "text": "The paper also shows that under simple transformation to the test dataset (e.g. scaling), performance of adversarial training reduces significantly due to the large gap between training and test data set.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 4,
+      "text": "This tends to impact high dimensional data sets more than low dimensional data sets since it is much harder to cover the whole ground truth data distribution in the training dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 5,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 6,
+      "text": "- Provides insights on why adversarial training is less effective on some datasets.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 7,
+      "text": "- Proposes a metric that seems to strongly correlate with the effectiveness of adversarial training.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 8,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 9,
+      "text": "- Lack of theoretical analysis. It could have been nice if the authors could show the observed phenomenon analytically on some simple distribution.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 10,
+      "text": "- The marketing phrase \"the blind-spot attach\" falls short in delivering what one may expect from the paper after reading it.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 11,
+      "text": "The paper would read much better if the authors better describe the phenomena based on the gap between the two distribution than using bling-spot.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 12,
+      "text": "For some dataset, this is beyond a spot, it could actually be huge portion of the input space!",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 13,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 14,
+      "text": "- I believe one should not compare the distance shown between the left and right columns of Figure 3 as they are obtained from two different models.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 15,
+      "text": "Though the paper is not suggesting that, it would help to clarify it in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 16,
+      "text": "Furthermore, it would help if the paper elaborates why the distance between the test and training dataset is smaller in an adversarially trained network compared to a naturally trained network.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 17,
+      "text": "- Are the results in Table 1 for an adversarially trained network or a naturally trained network?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 18,
+      "text": "Either way, it could be also interesting to see the average K-L divergence between an adversarially and a naturally trained network on the same dataset.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "sentence_index": 19,
+      "text": "- Please provide more visualization similarly to those shown in Fig 4.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 0,
+      "text": "Thank you for your insightful comments to help us improve our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 1,
+      "text": "First of all, we would like to mention that we add more experiments on two additional state-of-the-art strong and certified defense methods, and observe that they are also vulnerable to our proposed attacks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 2,
+      "text": "Please see our reply to all reviewers.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 3,
+      "text": "Here are our responses to your concerns in \u201cCons\u201d and \u201cMinor comments\u201d.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 4,
+      "text": "Although we were not able to provide theoretical analysis in this paper, our proposed attacks are very effective on state-of-the-art adversarial training methods, and we believe our conclusions",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hygsieas2X",
+      "rebuttal_id": "rkxhfWj1C7",
+      "sentence_index": 5,
+      "text": "Currently, there is relatively few theoretical analysis in this field in general, and many analysis makes unpractical assumptions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

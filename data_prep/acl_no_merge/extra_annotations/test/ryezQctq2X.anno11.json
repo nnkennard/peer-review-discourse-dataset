@@ -1,0 +1,978 @@
+{
+  "metadata": {
+    "forum_id": "ByeWdiR5Ym",
+    "review_id": "ryezQctq2X",
+    "rebuttal_id": "BJg8KpGm0X",
+    "title": "Adaptive Convolutional Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByeWdiR5Ym&noteId=BJg8KpGm0X",
+    "annotator": "anno11"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 0,
+      "text": "This paper presents a pretty cool idea for enabling \"adaptive\" kernels for CNNs which allow dramatic reduction in the size of models with moderate to large performance drops.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 1,
+      "text": "In at least one case, the training time is also significantly reduced (2x).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 2,
+      "text": "The best part about this paper is that the size of the models are much smaller; but the paper does offer any explanation of the value of this.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 3,
+      "text": "For example, even a 1% drop in accuracy can be unacceptable; but in some applications (like cell phones and IOT devices) model size is critical.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 4,
+      "text": "The authors' should add some wording to explain this value.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 5,
+      "text": "The \"adaptive\"kernels the the authors talk about",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 6,
+      "text": "are really a new class of nonlinear kernels.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 7,
+      "text": "It would be very interesting to see a discussion of the class of functions these nonlinear kernels represent.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 8,
+      "text": "This kind of discussion would give the reader  motivation for the choice of function, ideas for how to improve in this class of functions, and insight into why it works.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 9,
+      "text": "The method presented is interesting; but it is not clear that it is present with enough detail for it's results to be replicated.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 10,
+      "text": "It would be nice if the authors pointed to a git repository with their code an experiments.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 11,
+      "text": "More importantly, the results presented are quite meager.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 12,
+      "text": "If this is a method for image recognition, it would be better to present results for a more substantial image recognition problem than MNIST and CIFAR-10.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 13,
+      "text": "And the analysis of the \"dynamic range\" of the algorithim is missing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 14,
+      "text": "How do performance and model size trade off?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 15,
+      "text": "How were the number of layers and kernels chosen?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 16,
+      "text": "Was the 5x10x20x10 topology used for MNIST the only topology tried?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 17,
+      "text": "That would be very surprising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 18,
+      "text": "What is the performance on all of the other topologies tried for the proposed algorithm?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 19,
+      "text": "Was crossvalidation used to select the topology?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 20,
+      "text": "If so, what was the methodology.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 21,
+      "text": "Additionally, some readers may find this paper a little difficult to read due to (1) lack of clarity in the writing, e.g., the first three paragraphs in Section 3; (2) omitted details, e.g., how much overlap exists between kernels (Figs. 1, 2, and 4 suggests there is no overlap - this should be made clear); and (3) poor grammar and nonstandard terminology, e.g., the authors' use of the word \"energy\" and the phrase \"degradation problem\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 22,
+      "text": "All of these issues should be addressed in a future version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 23,
+      "text": "Not sure why Eqns. 2 and 9 need any parentheses",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "sentence_index": 24,
+      "text": ".  They should be removed.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 0,
+      "text": "The best part about this paper is that the size of the models are much smaller; but the paper does offer any explanation of the value of this.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 1,
+      "text": "For example, even a 1% drop in accuracy can be unacceptable; but in some applications (like cell phones and IOT devices) model size is critical.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 2,
+      "text": "The authors' should add some wording to explain this value.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 3,
+      "text": "R) Thank you this good observation (Added to the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 4,
+      "text": "The \"adaptive\"kernels the the authors talk about",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 5,
+      "text": "are really a new class of nonlinear kernels.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 6,
+      "text": "It would be very interesting to see a discussion of the class of functions these nonlinear kernels represent.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 7,
+      "text": "This kind of discussion would give the reader  motivation for the choice of function, ideas for how to improve in this class of functions, and insight into why it works.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 8,
+      "text": "The method presented is interesting; but it is not clear that it is present with enough detail for it's results to be replicated.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 9,
+      "text": "It would be nice if the authors pointed to a git repository with their code an experiments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 10,
+      "text": "R) Now we have a pytorch version of the code at https://github.com/adapconv/adaptive-cnn",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 11,
+      "text": "With MNIST and CIFAR.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 12,
+      "text": "More importantly, the results presented are quite meager.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 13,
+      "text": "If this is a method for image recognition,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 14,
+      "text": "1)\tit would be better to present results for a more substantial image recognition problem than MNIST and CIFAR-10.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 15,
+      "text": "R) We added a new experiment for a real life application; testing different topologies.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 16,
+      "text": "2)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 17,
+      "text": "And the analysis of the \"dynamic range\" of the algorithim is missing.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 18,
+      "text": "R) New data was added to the paper exercising multiple topologies, in a wider range of applications.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 19,
+      "text": "3) How do performance and model size trade off?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 20,
+      "text": "R)     A new experiment added to the paper shows the accuracy degradation vs model compression",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 21,
+      "text": "4) How were the number of layers and kernels chosen?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 22,
+      "text": "R)We started with the original topology replacing convolutional kernels by the Adaptive kernels, then we reduced kernel by kernel, retraining the model each time to match the accuracy (with small drop).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 23,
+      "text": "But our proposal is not the topology is the new type of filters, so many topologies can be improved using this type of filters, for instance an Adaptive ResNet.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 24,
+      "text": "5) Was the 5x10x20x10 topology used for MNIST the only topology tried?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 25,
+      "text": "R)We tested many, and we think that we can continue reducing the model, but our purpose is not to present a topology, our purpose was to show the advantages of Adaptive convolutions, having a model 66X smaller, 2X less MAC operations and trained 2X faster give us the clue that many researchers can explore on their own topologies and get benefits of it.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 26,
+      "text": "6) That would be very surprising.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 27,
+      "text": "What is the performance on all of the other topologies tried for the proposed algorithm?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 28,
+      "text": "R) A table comparing different topologies is included in the new version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 29,
+      "text": "7) Was crossvalidation used to select the topology?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 30,
+      "text": "If so, what was the methodology.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 31,
+      "text": "We started with the reference topology like: ResNet18, LeNet, etc. then we reduce the number of kernels and layers keeping similar accuracy.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 32,
+      "text": "Additionally, some readers may find this paper a little difficult to read due to (1) lack of clarity in the writing, e.g., the first three paragraphs in Section 3; (2) omitted details, e.g.,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 33,
+      "text": "1)how much overlap exists between kernels (Figs. 1, 2, and 4 suggests there is no overlap - this should be made clear);",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 34,
+      "text": "R)That is right, there is not overlap.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 35,
+      "text": "and (3) poor grammar and nonstandard terminology, e.g., the authors' use of the word \"energy\" and the phrase \"degradation problem\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 36,
+      "text": "All of these issues should be addressed in a future version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 37,
+      "text": "R) Terms like \u201cenergy\u201d  were removed from the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 38,
+      "text": "We didn\u2019t invent the terminology \u201cdegradation problem\u201d it was used here https://arxiv.org/pdf/1512.03385.pdf, you want us to remove it?",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 39,
+      "text": "(Fixed on the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 40,
+      "text": "Not sure why Eqns. 2 and 9 need any parentheses",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 41,
+      "text": ".  They should be removed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryezQctq2X",
+      "rebuttal_id": "BJg8KpGm0X",
+      "sentence_index": 42,
+      "text": "(Fixed on the paper)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

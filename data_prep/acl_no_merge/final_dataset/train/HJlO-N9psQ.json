@@ -1,0 +1,705 @@
+{
+  "metadata": {
+    "forum_id": "B1lwSsC5KX",
+    "review_id": "HJlO-N9psQ",
+    "rebuttal_id": "H1gBJFp-AQ",
+    "title": "D\u00e9j\u00e0 Vu: An Empirical Evaluation of the Memorization Properties of Convnets",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1lwSsC5KX&noteId=H1gBJFp-AQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 0,
+      "text": "I read the other reviewers' comments as well as the rebuttal.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 1,
+      "text": "I think that the other reviewers make a number of valid points, especially with regards to the theoretical analysis of the paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 2,
+      "text": "Therefore, I do not feel confident in championing this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 3,
+      "text": "PS: I am downgrading my confidence in my evaluation.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 4,
+      "text": "---",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 5,
+      "text": "Paper 93 proposes an empirical evaluation of the memorization properties of convnets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 6,
+      "text": "More specifically, it evaluates three aspects:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 7,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 8,
+      "text": "First it evaluates whether convnets can learn to distinguish images from two different sets by training a binary classifier.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 9,
+      "text": "The conclusion is that, indeed, deep convnets can learn to make such a decision. As could be guessed from intuition, the larger the capacity of the network and the smaller the size of the sets, the higher the accuracy.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 10,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 11,
+      "text": "Second, it evaluates whether we can detect that a group of samples of a dataset was used to train a model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 12,
+      "text": "For this purpose, it is proposed to compute the distribution of maximal activation scores of the output softmax layer and to make use of the Kolmogorov-Smirov distance between the cumulative distributions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 13,
+      "text": "It is shown experimentally that one can detect (even partial) leakage with such a technique.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 14,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 15,
+      "text": "Third, it evaluates whether we can detect that a single images was used to train a convnet.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 16,
+      "text": "Two simple techniques are proposed.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 17,
+      "text": "The first one considers that a sample is part of the training set if it correctly classified.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 18,
+      "text": "The second one considers that a sample is part of the training set if its loss is below a threshold.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 19,
+      "text": "It is shown experimentally that one can make such a decision with moderate accuracy.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 20,
+      "text": "On the positive side:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 21,
+      "text": "-\tThis is a topic that should be of broad interest to the ICLR community.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 22,
+      "text": "-\tThe paper is generally well-written.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 23,
+      "text": "-\tThe experiments are reported on large-scale datasets on high-capacity networks which is more realistic than small-scale settings.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 24,
+      "text": "On the negative side:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 25,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 26,
+      "text": "It is unclear whether the data augmentation techniques is applied only at training time or also at test time.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 27,
+      "text": "In other words: at test time, do you present the original images only or transformed images too?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 28,
+      "text": "-\tIn section 4, it is unclear why only the maximal activation of the softmax layer is used to characterize a sample? Why not considering the full distribution that should contain richer information? Why just focusing on the output layer and why not using the info available at intermediate layers?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 29,
+      "text": "-\tSection 5 is somewhat less clear than the previous sections.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 30,
+      "text": "The authors should more clearly define what the private, public and evaluation sets are, right from the beginning.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "none",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 31,
+      "text": "The purpose of the public set is explained only in section 5.2.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 32,
+      "text": "-\tThe experimental results of section 5.2 are somewhat disappointing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 33,
+      "text": "Even with no data augmentation, and even with the original networks, membership can only be assessed with a 90% accuracy.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 34,
+      "text": "Results are much lower in less favorable cases, sometimes close to random (see last line of Table 3).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 35,
+      "text": "This seems to be too low to be of practical use.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 36,
+      "text": "This might be because the Bayes and MAT attacks are too simplistic.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "sentence_index": 37,
+      "text": "Again, why not using the distribution of the outputs of all layers? Why focusing only on the output of the last layer?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 1,
+      "text": "We address the different remarks below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 2,
+      "text": "\u201cIt is unclear whether the data augmentation techniques is applied only at training time or also at test time. In other words: at test time, do you present the original images only or transformed images too?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 3,
+      "text": "We apply the data augmentation both at training and test time.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 4,
+      "text": "\u201cIn section 4, it is unclear why only the maximal activation of the softmax layer is used to characterize a sample? Why not considering the full distribution that should contain richer information? Why just focusing on the output layer and why not using the info available at intermediate layers?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 5,
+      "text": "We agree that the full distribution of the softmax layer provides more information, but there is no straightforward way to extend the Kolmogorov-Smirnov distance to multi-dimensional distributions, beyond the two- and three-dimensional cases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 6,
+      "text": "We focus on confidence as a proxy to the loss, and we assume that the loss is the quantity that should be the most different between training and testing, as the optimization phase explicitly minimizes the loss on the training set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 7,
+      "text": "Moreover, early experiments showed that using the outputs of intermediate layers provide no improvement for membership inference (on preliminary CIFAR-10 experiments, we obtained respectively 67.7 accuracy with the output layer and 66.5 when using all layers).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          28
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 8,
+      "text": "\u201cSection 5 is somewhat less clear than the previous sections. The authors should more clearly define what the private, public and evaluation sets are, right from the beginning. The purpose of the public set is explained only in section 5.2.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 9,
+      "text": "We will update this section to make it clearer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 10,
+      "text": "\u201cThe experimental results of section 5.2 are somewhat disappointing. Even with no data augmentation, and even with the original networks, membership can only be assessed with a 90% accuracy.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 11,
+      "text": "Results are much lower in less favorable cases, sometimes close to random (see last line of Table 3).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          34
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 12,
+      "text": "This seems to be too low to be of practical use.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 13,
+      "text": "This might be because the Bayes and MAT attacks are too simplistic.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 14,
+      "text": "Again, why not using the distribution of the outputs of all layers? Why focusing only on the output of the last layer?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 15,
+      "text": "We agree that better performance could be obtained by running the initial model for more epochs, but our goal is to stay close to the standard training of Imagenet models, i.e. 90 epochs with an initial learning rate of 0.1, divided by 10 every 30 epochs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 16,
+      "text": "We emphasize that the last line of Table 3 corresponds to the most difficult setup, where the network has been trained with a strong data-augmentation, and we only use the intermediate layers of the network (which amounts to less than 62% of the parameters for e.g. Resnet101), this is why the performance is significantly impacted.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlO-N9psQ",
+      "rebuttal_id": "H1gBJFp-AQ",
+      "sentence_index": 17,
+      "text": "We experimented with more sophisticated models, and it did not bring any improvement (see shadow models in appendix E, e.g. the performance before the softmax layer is 58.2 for Resnet101 and 60.8 for our method).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

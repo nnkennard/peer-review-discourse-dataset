@@ -1,0 +1,676 @@
+{
+  "metadata": {
+    "forum_id": "SylGpT4FPS",
+    "review_id": "BkgIGYrAKS",
+    "rebuttal_id": "r1ls4aeqoH",
+    "title": "Last-iterate convergence rates for min-max optimization",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylGpT4FPS&noteId=r1ls4aeqoH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 0,
+      "text": "*Summary*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 1,
+      "text": "This paper study the convergence of Hamiltonian gradient descent (HGD) on minmax games.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 2,
+      "text": "The paper show that under some assumption on the cost function of the min max that are (in some sense) weaker than strong convex-concavity.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 3,
+      "text": "More precisely, they use the \u2018bilinearity\u2019 of the objective (due to the interaction between the players) to prove that the squared norm of the vector field of the game follows some Polyak Lojasiewicz condition.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 4,
+      "text": "Thus the proof is concluded by the linear (resp. sublinear) convergence of gradient descent (resp. stochastic GD) under PL assumption.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 5,
+      "text": "*Decision*",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 6,
+      "text": "I think that is work is clearly very interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 7,
+      "text": "The fact to prove linear convergence rate without strong-convex-concavity is quite surprising. And this paper brings nice tools to analyse HGD.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 8,
+      "text": "Also the result on Stochastic HGD is very interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 9,
+      "text": "However, I am wondering whether this paper is perfectly suited to ICLR conference due to the lack of experiment, practical implication given by the theory, or theory in the non-convex setting (I know that the latter is a huge open question and I am not criticizing the absence of theory in the non-convex-concave setting).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 10,
+      "text": "One way to improve to work would be to provide practical takeaways from the theory or to provide experiments in the main paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 11,
+      "text": "Regarding the practical limitation of this work:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 12,
+      "text": "- the sufficient bilinearity condition are hard to meet in practice. (even for convex-concave problems)",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 13,
+      "text": "- In a non-convex-concave setting, Hamiltonian gradient descent is attracted the any stationary point, even \u201clocal maxima\u201d (or the equivalent in the minmax setting).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 14,
+      "text": "Making this algorithm not very practical.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 15,
+      "text": "(However, CO is)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 16,
+      "text": "However, I really think that the community is currently lacking of understanding on minmax optimization and that we need better training method in many practical emergent frameworks that are minmax (such as GANs or multi agent learning). That is why, I would vote for a weak accept.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 17,
+      "text": "*Questions*",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 18,
+      "text": "- What are the practical implication of your work ? for instance does it say anything on how to tune $\\gamma$ for CO ?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 19,
+      "text": "*Remarks*",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 20,
+      "text": "- It is claimed that Theorem 3.4 gives the first linear convergence rate for minmax that does not require strong-convex or linearity.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 21,
+      "text": "Note that, recently [1] seem to propose a result on extragradient in the same vein (i.e. without strong convexity or linearity).",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 22,
+      "text": "- (Minor) $\\alpha$ not alway have the same unit: Thm 3.2 it is proportional to a strong convexity and in Lemma 4.7 it is proportional to a strong convexity squared (actually the PL of the squared norm of the gradient).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 23,
+      "text": "For clarity it might be interesting to use the notation $\\alpha^2$ in Lemma 4.7.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 24,
+      "text": "The same way for unit consistency I would use $L_H^2$ instead of $L_H$",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 25,
+      "text": "[1] Azizian, Wa\u00efss, et al. \"A Tight and Unified Analysis of Extragradient for a Whole Spectrum of Differentiable Games.\" arXiv preprint arXiv:1906.05945 (2019).",
+      "suffix": "\n\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 26,
+      "text": "=== After rebuttal =",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 27,
+      "text": "==",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 28,
+      "text": "I've read the authors's response.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 29,
+      "text": "The concern raised by reviewer 3 is very important.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 30,
+      "text": "The descent lemma used by the author is not valid for the stochastic result.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 31,
+      "text": "The authors should address that in their revision.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "sentence_index": 32,
+      "text": "I however maintain my grade.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 1,
+      "text": "As the reviewer points out, the community currently lacks a strong theoretical understanding of minmax optimization, and we believe our work helps to fill this gap.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 2,
+      "text": "We comment on the practical implications of our work below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 3,
+      "text": "1) While the exact form of the sufficiently bilinear condition may be somewhat unwieldy, the result gives concrete evidence that having higher bilinearity can aid convergence for certain algorithms, even for settings that are not purely bilinear.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 4,
+      "text": "This indicates that one should pay attention to the magnitude and condition number of the off-diagonal of the Jacobian when constructing a min-max problem and choosing an algorithm to solve the problem.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 5,
+      "text": "2) In non-convex-concave settings, HGD will converge to all types of stationary points, as the reviewer points out.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 6,
+      "text": "We propose some modifications to HGD to allow it to work in non-convex settings in Appendix A, which essentially amount to explicitly determining the local curvature of the problem and running a modified algorithm, such as Hamiltonian Gradient Ascent, near undesirable critical points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 7,
+      "text": "This would allow us to show similar local convergence guarantees to those proven by other works in the area (see Appendix A).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 8,
+      "text": "However, as the reviewer points out as well, the HGD analysis is also useful because it implies similar convergence results for CO, which is a practical algorithm.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 9,
+      "text": "3) Our result for CO shows that as long as $\\gamma \\ge 4L_g/\\alpha$, then CO will converge in sufficiently bilinear settings (currently it\u2019s written as $\\gamma = 4L_g/\\alpha$ but we will change this in the final version).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 10,
+      "text": "This indicates that increasing $\\gamma$ may speed up convergence when we are in a sufficiently bilinear region (and in particular, the algorithm may not converge if $\\gamma$ is too small and the region has a very large bilinear term).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 11,
+      "text": "If $\\gamma$ is too large, CO will converge to stationary points that are not local min-maxes, so these two phenomena must be traded off.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 12,
+      "text": "One could potentially detect which regime one is in by computing a few eigenvalues of the Jacobian (using a logarithmic number of Hessian-vector products) during or after training.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 13,
+      "text": "Other comments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 14,
+      "text": "-We thank the reviewer for pointing out Azizian et al. 2019.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 15,
+      "text": "This work was released concurrently to ours on Arxiv and indeed seems to have some similar findings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 16,
+      "text": "We will include a reference to it in our revised version.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 17,
+      "text": "-We thank the reviewer for the comment on notation and will incorporate it into the final version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 18,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgIGYrAKS",
+      "rebuttal_id": "r1ls4aeqoH",
+      "sentence_index": 19,
+      "text": "Azizian, Wa\u00efss, et al. \"A Tight and Unified Analysis of Extragradient for a Whole Spectrum of Differentiable Games.\" arXiv preprint arXiv:1906.05945 (2019).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

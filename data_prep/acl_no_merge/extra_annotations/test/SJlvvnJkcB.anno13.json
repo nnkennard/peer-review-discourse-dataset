@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "forum_id": "rkgqm0VKwB",
+    "review_id": "SJlvvnJkcB",
+    "rebuttal_id": "ryeNd3WQsr",
+    "title": "End-to-end named entity recognition and relation extraction using pre-trained language models",
+    "reviewer": "AnonReviewer1",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkgqm0VKwB&noteId=ryeNd3WQsr",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 0,
+      "text": "The paper proposes an end-to-end joint model for named entity recognition (NER) and relation extraction (RE), using pre-trained language models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 1,
+      "text": "The model is very simple, with the key is to use BERT and take NER output as input to RE.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 2,
+      "text": "The experimental results show the model, without the need for handcrafted features, get state-of-the-art results on five datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 3,
+      "text": "Although the paper is well written and shows good results, I would reject the paper because:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 4,
+      "text": "- the idea is trivial and simple. I don't think there's significant novelty here: all the components are existing and combining them seems very trivial to me.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 5,
+      "text": "- the good performance seems to be from BERT rather than the model's structure (table 2 suggests that). I thus think the contribution of the paper is pretty not significant.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "sentence_index": 6,
+      "text": "I think the paper does not fit this conference. It is better to be presented in a Demonstration section at a *ACL conference.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 0,
+      "text": "Hello,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 1,
+      "text": "Thank you for reviewing our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 2,
+      "text": "Regarding your comments about the triviality of our paper,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 3,
+      "text": "We undertook an extensive initial phase of experiments where we discovered non-trivial contributions for achieving SOTA performance and fast convergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 4,
+      "text": "In particular:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 5,
+      "text": "- To the best of our knowledge, our specific implementation of entity pre-training is novel.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 6,
+      "text": "Our technique can be ported to other neural, multi-task setups with a strong dependence between tasks (e.g. where a model must learn to perform some task before attempting to learn one or more dependent tasks jointly).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 7,
+      "text": "For example, we have already begun porting this scheme to a neural cross-lingual summarization project of ours.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 8,
+      "text": "Entity pre-training accounted for a 0.63% increase in our ablation experiment.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 9,
+      "text": "On the CoNLL04 test set, it accounts for a 1.26% boost in performance, which is large relative to historic improvement on this corpus [1].",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 10,
+      "text": "- As opposed to previous models (e.g. [2], [3]) we were able to drop all recurrent architectures, which reduced training times substantially.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 11,
+      "text": "Our work is one of the first architectures for joint NER and RE to do this.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 12,
+      "text": "Because previous papers do not report their training times, we contacted the authors of a comparable method [4] for their training times and found that our method converged between 3-35X times faster for the ACE04, ADE, and CoNLL04 corpora (keeping in mind that we did not train on the same hardware).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 13,
+      "text": "The large range in our estimate is because [4] trained for a wide range (60-200) of epochs.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 14,
+      "text": "Our model serves as a strong baseline for future studies on joint NER and RE architectures and provides guidance on how to best integrate a pre-trained language model into such an architecture.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 15,
+      "text": "For the ADE corpus in particular, we advance SOTA RE performance by >10%, which is substantially larger than improvements have been historically [5].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 16,
+      "text": "It is also complementary to [6] (published in ACL this year), by demonstrating similar performance without the need for templated queries, which, as pointed out in our introduction, may become a limiting factor where domain expertise is required to craft such questions (e.g., for biomedical or clinical corpora).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 17,
+      "text": "Regarding your comments on a System Demonstration submission to ACL,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 18,
+      "text": "Our paper is a methodological advancement, not a system, tool, or demonstration [7] and is not suitable for submission to System Demonstrations at ACL.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 19,
+      "text": "[1] https://paperswithcode.com/sota/relation-extraction-on-conll04",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 20,
+      "text": "[2] https://link.springer.com/chapter/10.1007/978-3-030-15712-8_47",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 21,
+      "text": "[3] https://arxiv.org/abs/1804.07847",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 22,
+      "text": "[4] https://www.sciencedirect.com/science/article/pii/S095741741830455X",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 23,
+      "text": "[5] https://paperswithcode.com/sota/relation-extraction-on-ade-corpus",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 24,
+      "text": "[6] https://arxiv.org/abs/1905.05529",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlvvnJkcB",
+      "rebuttal_id": "ryeNd3WQsr",
+      "sentence_index": 25,
+      "text": "[7] https://aclweb.org/portal/content/acl-2020-call-system-demonstrations",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

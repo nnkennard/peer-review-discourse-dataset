@@ -1,0 +1,944 @@
+{
+  "metadata": {
+    "forum_id": "B1gabhRcYX",
+    "review_id": "SylPHRPDnQ",
+    "rebuttal_id": "rkxhFe_qAm",
+    "title": "BA-Net: Dense Bundle Adjustment Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1gabhRcYX&noteId=rkxhFe_qAm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 0,
+      "text": "I believe that the authors have a solid contribution that can be interesting for the ICLR community.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 1,
+      "text": "Therefore, I recommend to accept the paper but after revision because the presentation and explanation of the ideas contain multiple typos and lacking some details (see bellow).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 2,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 3,
+      "text": "The authors propose a new method called BA-Net to solve the SfM problem by explicitly incorporating geometry priors into a machine learning task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 4,
+      "text": "The authors focus on the Bundle Adjustment process.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 5,
+      "text": "Given several successive frames of a video sequence (2 frames but can be extended up to 5), BA-Net jointly estimates the depth of the first frame and the relative camera motion (between the first frame and the next one).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 6,
+      "text": "The method is based on a convolutional neural network which extracts the features of the different pyramid levels of the two images and in parallel computes the depth map of the first frame.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 7,
+      "text": "The proposed network is based on the DRN-54 (Yu et al., 2017) as a feature extractor.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 8,
+      "text": "This is complemented by the linear combination of depth bases obtained from the first image.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 9,
+      "text": "The features and the initial depth then passed to the optimization layer called BA-layer where the feature re-projection error is minimized by the modified LM algorithm.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 10,
+      "text": "The authors adapt the standard multi-view geometry constraints by a new concept of feature re-projection error in the BA framework (BA-layer) which they made differentiable.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 11,
+      "text": "Differentiable optimization of camera motion and image depth via LM algorithm is now possible and can be used in various other DL architectures (ex. MVS-Net can probably benefit from BA-layer).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 12,
+      "text": "The authors also propose a novel depth parametrization in the form of linear combination of depth bases which reduces the number of parameters for the learning task,",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 13,
+      "text": "enables integration into the same backbone net as used or feature pyramids and makes it possible to jointly train the depth generator and the BA-layer.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 14,
+      "text": "Originally the proposed approach depicts the network operating in the two-view settings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 15,
+      "text": "The extensibility to more views is also possible and, as shown by authors, proved to improve performance.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 16,
+      "text": "It is, however, limited by the GPU capacity.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 17,
+      "text": "Overall, the authors came up with an interesting approach to the standard BA problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 18,
+      "text": "They have managed to inject the multi-view geometry priors and BA into the DL architecture.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 19,
+      "text": "Major comments regarding the paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 20,
+      "text": "It would be interesting to know the evaluation times for the BA-net and more importantly to have some implementation details to ensure reproducibility.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 21,
+      "text": "Minor comments regarding the paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 22,
+      "text": "-\tThe spacing between sections is not consistent.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 23,
+      "text": "-\tFigures 1 is way too abstract given the complicated set-up of the proposed architecture.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 24,
+      "text": "It would be nice to see more details on the subnet for depth estimator and output of the net.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 25,
+      "text": "Overall it would be helpful for reproducibility if authors can visualize all the layers of all the different parts of the network as it is commonly done in the DL papers.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 26,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 27,
+      "text": "Talking about proposed formulation of BA use either of the following and be consistent across the paper:",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 28,
+      "text": "Featuremetric BA / Feature-metric BA / Featuremetric BA / \u2018Feature-metric BA\u2019",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 29,
+      "text": "-\tTalking about depth parametrization use \u2018basis\u2019 or \u2018bases\u2019 not both and clearly defined the meaning of this important notion.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 30,
+      "text": "-\tAttention should be given to the notation in formulas (3) and (4).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 31,
+      "text": "The projection function there is no longer accepts a 3D point parametrized by 3 variables.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 32,
+      "text": "Instead only depth is provided.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 33,
+      "text": "In addition, the subindex \u20181\u2019 of the point \u2018q\u2019 is not explained.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 34,
+      "text": "-\tMore attention should be given to the evaluation section.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 35,
+      "text": "Specifically to the tables (1 and 2) with quantitative results showing the comparison to other methods.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 36,
+      "text": "It is not clear how the depth error is measured and it would be nicer to have the other errors explained exactly as they referred in the tables (e.g. ATE?).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 37,
+      "text": "-\tHow the first camera pose is initialized?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 38,
+      "text": "-\tIn Figure 2.b I\u2019m surprised by the difference obtained in the feature maps for images which seems very similar (only the lighting seems to be different). Is it three consecutive frames?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "sentence_index": 39,
+      "text": "-\tAttention should be given to the grammar, formatting in particular the bibliography.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 1,
+      "text": "We have revised the paper according to the suggestions and would like to clarify several things:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 2,
+      "text": "Q1. Evaluation Time:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 3,
+      "text": "We have added the detailed running time for each component in Table 3 in Appendix A of the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 4,
+      "text": "Q2. Implementation Details:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 5,
+      "text": "We will share all the source code to make sure it is reproducible.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 6,
+      "text": "Meanwhile, we have included more details as suggested in Appendix A, including a visualization of all layers of the different parts of the network. If 1-2 extra pages are allowed, we can include those details to the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 7,
+      "text": "Q3. Figure 1 is too abstract:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 8,
+      "text": "We have updated the figure to make it more intuitive and contains more details.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 9,
+      "text": "Q4. The top row of Figure 2b is confusing:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          38
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 10,
+      "text": "We apologize for the confusion caused.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          38
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 11,
+      "text": "Shown at the top row of Figure 2b are not three consecutive frames.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          38
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 12,
+      "text": "They are the R, G, B channels of a single frame.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          38
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 13,
+      "text": "To avoid confusing, we use different colors for them and explained that in the figure.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          38
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 14,
+      "text": "Q5. How the first camera pose is initialized?:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 15,
+      "text": "All the camera pose including the first camera are initialized with identity rotation and zero translation, which are aligned with the coordinate system of the first camera.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 16,
+      "text": "We clarified this at the end of Section 4.3 in the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          37
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 17,
+      "text": "Q6. Evaluation metrics are not clear:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 18,
+      "text": "To facilitate comparisons with other methods, we use the evaluation metrics in previous works in Table 1 and 2, so that we can cite the results of previous methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 19,
+      "text": "As we described in the paper, the depth metric are the same as Eigen and Fergus (2015).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 20,
+      "text": "The translation metrics(ATE) are the same as [Wang et al. 2018, Zhou et al. 2017].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 21,
+      "text": "In the revised version, we briefly introduce the definition of these metrics at the beginning of each paragraph in Section 5.2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35,
+          36
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 22,
+      "text": "Q7. Attention should be given to the notation in formulas (3) and (4):",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 23,
+      "text": "We changed the parameters from \u2018d\u2019 to \u2018d \\cdot p\u2019 which is a 3D point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 24,
+      "text": "We also removed the redundant subindex \u20181\u2019, because all points \u2018q\u2019 are on the first frame.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 25,
+      "text": "Q8. Terminology consistency through the paper:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 26,
+      "text": "Thanks for the suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 27,
+      "text": "We consistently use the term \u201cfeature-metric BA\u201d and \u201cbasis depth maps\u201d through the paper now.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 28,
+      "text": "Q9. Typos, Grammar, Format, and Bibliography:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          39
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPHRPDnQ",
+      "rebuttal_id": "rkxhFe_qAm",
+      "sentence_index": 29,
+      "text": "Thanks for pointing them out. We have revised the paper to fix these problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          39
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

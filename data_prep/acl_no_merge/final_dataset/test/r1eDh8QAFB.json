@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "forum_id": "Bke-6pVKvB",
+    "review_id": "r1eDh8QAFB",
+    "rebuttal_id": "B1gwOohtjr",
+    "title": "Poisoning Attacks with Generative Adversarial Nets",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Bke-6pVKvB&noteId=B1gwOohtjr",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 0,
+      "text": "This paper proposed a method pGAN based on Generative Adversarial Networks to generate poisoning examples in order to degrade the performance of classifiers when trained on the poisoned training data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 1,
+      "text": "The authors evaluated pGAN on both synthetic datasets and commonly used MNIST and Fashion MNIST datasets in machine learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 2,
+      "text": "The paper is self-contained and easy to read. My main concern is on the experiment results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 3,
+      "text": "The detailed questions are as follows:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 4,
+      "text": "Q1: Has the authors tried more complicated datasets such as CIFAR-10 to evaluate the pGAN method? It would make the paper more convincing to add results on more complex datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 5,
+      "text": "Q2: Can the authors structure the experimental results with different sections? Currently it is just a single section which is difficult to read.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 6,
+      "text": "Q3: The authors noticed that \u201cBut, as we decrease the value of \u03b1, the distribution of red points shifts towards the region where both green and blue distributions overlap\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 7,
+      "text": "This observation is interesting as it finds that the poisoned input tends to lie on the overlap of two classes.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 8,
+      "text": "But this can easily lead to a defense method: remove those training examples that are close to the other class.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 9,
+      "text": "This defense mechanism can be used together with other sanitization approaches.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 10,
+      "text": "So I would like to see how would pGAN perform in this case?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 11,
+      "text": "Q4: The authors mentioned \u201cComparison with existing poisoning attacks in the research literature is challenging: Optimal poisoning attacks as in Munoz-Gonzalez et al. (2017) are computationally very expensive for the size of the networks and datasets used in our experiments in Fig. 2.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 12,
+      "text": "\u201d",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 13,
+      "text": ".",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 14,
+      "text": "However, I can not agree because you can simply generate poisoned data and train the neural networks on the poisoned data regardless of the underlying approach that is targeted in generating the poisoned data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 15,
+      "text": "This would be an effective baseline to compare. (Correct me if I am wrong here.)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 16,
+      "text": "I will change my score if the authors can address my concerns here.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 17,
+      "text": "================================================================",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "sentence_index": 18,
+      "text": "Thanks for the rebuttal. I am more convinced now.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 0,
+      "text": "Thank you very much for your feedback. We have revised and updated the paper following your suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 1,
+      "text": "Here are our reply to your comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 2,
+      "text": "(Q1) Thank you very much for the suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 3,
+      "text": "We have included experimental results evaluating pGAN on CIFAR-10.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 4,
+      "text": "The results are shown in Figure 4 in the updated version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 5,
+      "text": "(Q2) Following your recommendation, we have structured the section with the experimental results in different subsections.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 6,
+      "text": "(Q3) The observation from the reviewer is correct: pGAN aims to inject poisoning points in regions that are close to the decision boundary, especially in those where the data distributions overlap more.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 7,
+      "text": "Points that are far away from the decision boundary may be detected by the discriminator, outlier detection or other defensive algorithms that could be used.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 8,
+      "text": "Defences aiming to remove points that are close to the decision boundary could be effective to remove poisoning points generated with pGAN, but these defences will suffer from a significant loss in performance, especially when the algorithm is not under attack.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 9,
+      "text": "For example, in SVMs, support vectors are points that are close to the decision boundary.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 10,
+      "text": "If we remove these points, as suggested by the reviewer, we would obtain different support vectors that would lead to suboptimal solutions with significantly degraded performance.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 11,
+      "text": "With regards to addressing the more general point of the performance of pGAN when state-of-the-art defences are used, we have updated the paper to include a new section (4.3) where we show that pGAN is capable of bypassing 4 different defence mechanisms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 12,
+      "text": "This supports the effectiveness of our attack.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 13,
+      "text": "(Q4) Munoz-Gonzalez et al. (2017) showed an experiment using a Convolutional neural network with 450,000 parameters, trained with 1,000 training points and injecting 10 poisoning points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 14,
+      "text": "In our case, for the experiment with MNIST in Figure 2, we used a deep neural network with more than 40,000,000 parameters, 1,000 training points, injecting up to 400 poisoning points.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 15,
+      "text": "As the reviewer can observe the scale of the experimental evaluation is significantly different.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 16,
+      "text": "The computational complexity of the attack in Munoz-Gonzalez et al. (2017) makes the experimental evaluation intractable for the settings considered in our experiments.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 17,
+      "text": "On the other side, Paudice et al. (2018a) showed that, in many cases, if we don\u2019t consider appropriate detectability constraints, the attack points generated by optimal attack strategies formulated as bilevel optimization problems can be effectively filtered out with appropriate outlier detection, resulting in blunt attacks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 18,
+      "text": "This is not the case for pGAN, which is capable of bypassing different defences, including the outlier detection scheme proposed by Paudice et al. (2018a).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 19,
+      "text": "Although defences based on outlier detection can be bypassed, as shown by Koh et al. (2017) (Stronger poisoning attacks break data sanitization defences), the complexity of the bilevel problem significantly increases compared to Munoz-Gonzalez et al. (2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 20,
+      "text": "Thus, applying the attack strategy proposed by Koh et al. (2017) is also computationally intractable in our experimental settings.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 21,
+      "text": "One of the main advantages of pGAN is the possibility of generating poisoning attacks at scale with detectability constraints capable of targeting large deep networks, where strategies relying on bilevel optimization have a limited applicability.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 22,
+      "text": "Please, let us know if there are aspects that remain unclear or that require further clarification.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eDh8QAFB",
+      "rebuttal_id": "B1gwOohtjr",
+      "sentence_index": 23,
+      "text": "Thank you very much.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

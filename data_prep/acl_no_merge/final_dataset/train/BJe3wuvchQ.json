@@ -1,0 +1,318 @@
+{
+  "metadata": {
+    "forum_id": "ryxSrhC9KX",
+    "review_id": "BJe3wuvchQ",
+    "rebuttal_id": "BylNJ83Z0Q",
+    "title": "Revealing interpretable object representations from human behavior",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryxSrhC9KX&noteId=BylNJ83Z0Q",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 0,
+      "text": "This is an interesting paper with a new approach to learn a sparse, positive (and hence interpretable) semantic space that maximizes human similarity judgements, by training to specifically maximize the prediction of human similarity judgements.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 1,
+      "text": "The authors have collected the dataset themselves and have rating of sets of 3 objects from 1854 unique objects.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 2,
+      "text": "They end up with a space (SPoSE) with relatively low dimensionality with respect to usual word embeddings (49 dimension) but perhaps not surprising when considering the small size of the words to embed.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 3,
+      "text": "The authors run a set of experiment to show the usefulness of SPoSE.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 4,
+      "text": "The most interesting one is the prediction of its dimensions by the CSLB features, which reveals a nice clustering in the different SPoSE dimensions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 5,
+      "text": "Perhaps the results would be a little more convincing if additional common word embeddings were also tested.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 6,
+      "text": "Due to the different objects used in the different datasets, some of the experiments have a smaller set of words.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 7,
+      "text": "A good extension of this work would be to combine a text-derived embedding  or the synsets to interpolate the SPoSE dimensions for missing words in the original set.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 8,
+      "text": "Or perhaps the object similarity ratings could be used in a semi-supervised setting to inform the learning of a co-occurence word embedding.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 9,
+      "text": "This will allow the model to better describe a larger set of words.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "sentence_index": 10,
+      "text": "Another possible extension is to test this larger set of words on a non-behavioral NLP task to show possible improvements that the behavioral data and the interpretable space give.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their positive evaluation of our study.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 1,
+      "text": "We agree that the prediction from CSLB features is particularly interesting, and we are currently working on improving this further by interpolating to other objects in a semi-supervised manner (similar to what was proposed by the reviewer).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 2,
+      "text": "We also strongly agree that testing additional embeddings would be very interesting!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 3,
+      "text": "For the present work, we focused on synset embeddings because they represent a closer match to the meaning of each individual object than word embeddings would and provide a one-to-one match for the meanings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 4,
+      "text": "For example, our list contains four different meanings for the object named by the word \u201cbaton\u201d, referring to (1) an item in relay races, (2) in twirling, (3) a weapon used by police, and (4) an item used by a musical conductor.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 5,
+      "text": "Due to the novelty of this line of research, to our knowledge there are no other synset embeddings available than the ones we used, and we included both a 50d dense and a 300d dense version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 6,
+      "text": "In addition, we would have liked to include sparse positive synset embeddings as a reference, however those are currently not available; for that reason, we included NNSE word embeddings instead.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 7,
+      "text": "In the future, we would like to add sparse positive synset embeddings and test their interpretability relative to our similarity embedding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 8,
+      "text": "We hope this will underline the unique contribution of a behavior-based similarity embedding presented here.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 9,
+      "text": "In addition, we would like to thank the reviewer for their idea on how to extend the embedding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 10,
+      "text": "Indeed, we are currently working on predicting similarities for other concepts and images from pretrained synset vectors and activations in deep convolutional neural networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJe3wuvchQ",
+      "rebuttal_id": "BylNJ83Z0Q",
+      "sentence_index": 11,
+      "text": "However, this effort is still in its early stages and beyond the scope of the present work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

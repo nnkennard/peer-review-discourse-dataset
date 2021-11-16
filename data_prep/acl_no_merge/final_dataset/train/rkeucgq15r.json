@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "forum_id": "rkgyS0VFvr",
+    "review_id": "rkeucgq15r",
+    "rebuttal_id": "r1gNsdHnjH",
+    "title": "DBA: Distributed Backdoor Attacks against Federated Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkgyS0VFvr&noteId=r1gNsdHnjH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 0,
+      "text": "The authors introduce the idea of distributed backdoor attacks in the FL framework, in which the dishonest participants in FL add local triggers to their training data to influence the global model to classify triggered images in a desired way.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 1,
+      "text": "They show empirically that the learned models then are more likely to be successfully forced to misclassified images in which all the local triggers are present at test time, than are models learned using centralized backdoor attacks, where all attackers use the same trigger pattern (one of the same size as the concatenation of the local triggers, to be fair in the comparison).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 2,
+      "text": "They then demonstrate that because the local triggers cause smaller corruptions in the model coefficients, these distributed attacks survive robust FL training algorithms (namely FoolsGold, and a recent robust regression based method) more often than centralized attacks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 3,
+      "text": "Similar experiments are conducted on the Loan text dataset, using appropriate analogs of local triggers, with similar results.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 4,
+      "text": "The paper contributes a novel model for conducting backdoor attacks in the FL setup, and shows that this model is more successful at attacking when training using robust FL algorithms than the standard centralized backdoor attack model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeucgq15r",
+      "sentence_index": 5,
+      "text": "I lean towards accept, as this is a realistic attack model, and as such can further stimulate research into the robustification of FL model aggregation algorithms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkeucgq15r",
+      "rebuttal_id": "r1gNsdHnjH",
+      "sentence_index": 0,
+      "text": "Thank you for your appreciation of our work!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

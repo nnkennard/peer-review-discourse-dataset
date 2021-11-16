@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "forum_id": "Hkl5aoR5tm",
+    "review_id": "HJgjezT1Tm",
+    "rebuttal_id": "Bkgu7f_Dp7",
+    "title": "On Self Modulation for Generative Adversarial Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hkl5aoR5tm&noteId=Bkgu7f_Dp7",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 1,
+      "text": "The manuscript proposes a modification of generators in GANs which improves performance under two popular metrics for multiple architectures, loss, benchmarks, regularizers, and hyperparameter settings.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 2,
+      "text": "Using the conditional batch normalization mechanism, the input noise vector is allowed to modulate layers of the generator.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 3,
+      "text": "As this modulation only depends on the noise vector, this technique does not require additional annotations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 4,
+      "text": "In addition to the extensive experimentation on different settings showing performance improvements, the authors also present an ablation study, that shows the impact of the method when applied to different layers.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 5,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 6,
+      "text": "- The idea is simple.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 7,
+      "text": "The experimentation is extensive and results are convincing in that they show a clear improvement in performance using the method in a large majority of settings.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 8,
+      "text": "- I also like the ablation study showing the impact of the method applied at different layers.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 9,
+      "text": "Requests for clarification/additional information:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 10,
+      "text": "- I might have missed that, but are the authors offering an interpretation of their observation that the performance of the self-modulation model performs worse in the combination of spectral normalization and the SNDC architecture?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 11,
+      "text": "- The ablation study shows that the impact is highest when modulation is applied to the last layer (if only one layer is modulated).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 12,
+      "text": "It seems modulation on layer 4 comes in as a close second.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 13,
+      "text": "I am curious about why that might be.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 14,
+      "text": "- I would like to see some more interpretation on why this method works.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 15,
+      "text": "- Did the authors inspect generated samples of the baseline and the proposed method? Is there a notable qualitative difference?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "sentence_index": 16,
+      "text": "Overall, the idea is simple, the explanation is clear and experimentation is extensive. I would like to see more commentary on why this method might have long-term impact (or not).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 0,
+      "text": "We would like to thank the reviewer for the time and useful feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 1,
+      "text": "Our response is given below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 2,
+      "text": "- Interpretation of self-modulation model performs worse in the combination of spectral normalization and the SNDC architecture.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 3,
+      "text": "Overall, self-modulation appears to yield the most consistent improvement for the deeper ResNet architecture, than the shallower, more poorly performing, SNDC architecture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 4,
+      "text": "Self-modulation doesn\u2019t help in the SNDC/Spectral Norm setting on the Bedroom data, where the SNDC architecture appears to perform very poorly compared to ResNet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 5,
+      "text": "For the other three datasets, self-modulation helps in this setting though.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 6,
+      "text": "- The ablation study shows that the impact is highest when modulation is applied to the last layer (if only one layer is modulated).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 7,
+      "text": "It seems modulation on layer 4 comes in as a close second.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 8,
+      "text": "I am curious about why that might be.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 9,
+      "text": "Figure 4 in the Appendix contains the equivalent of Figure 2(c) for all datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 10,
+      "text": "Considering all datasets: (1) Adding self-modulation to all layers performs best.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 11,
+      "text": "(2) In terms of median performance, adding it to the layer farthest from the input is the most effective.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 12,
+      "text": "We believe that the apparent significance of layer 4 in Figure 2(c) is statistical noise.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 13,
+      "text": "- I would like to see some more interpretation on why this method works.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 14,
+      "text": "We consider self-modulation as an architectural change in the line of changes such as residual connections or gating: simple, yet widely applicable and robust.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 15,
+      "text": "As a first step, we provide a careful empirical evaluation of its benefits.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 16,
+      "text": "While we have provided some diagnostics statistics, understanding deeply why this method helps will fuel interesting future research.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 17,
+      "text": "Similar to residual connections, gating, dropout, and many other recent advances, more fundamental understanding will happen asynchronously and should not gate its adoption and usefulness for the community.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 18,
+      "text": "- Did the authors inspect generated samples of the baseline and the proposed method? Is there a notable qualitative difference?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 19,
+      "text": "A 10% change in FID is visually noticeable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 20,
+      "text": "However, we note that FID rewards both improvements in sample quality (precision) and mode coverage (recall), as discussed in Sec 5 of [1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 21,
+      "text": "While we can easily assess the former by visual inspection, the latter is extremely challenging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 22,
+      "text": "Therefore, an improvement in FID may not always be easily visible, but may indicate a better generative model of the data.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 23,
+      "text": "[1] https://arxiv.org/abs/1806.00035",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 24,
+      "text": "- Overall, the idea is simple, the explanation is clear and experimentation is extensive. I would like to see more commentary on why this method might have long-term impact (or not).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 25,
+      "text": "We view this contribution as a simple yet generic architecture modification which leads to performance improvements.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgjezT1Tm",
+      "rebuttal_id": "Bkgu7f_Dp7",
+      "sentence_index": 26,
+      "text": "Similarly to residual connections, we would like to see it used in GAN generator architectures, and more generally in decoder architectures in the long term.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

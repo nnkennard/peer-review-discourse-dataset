@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "forum_id": "SylWNC4FPH",
+    "review_id": "r1edRi1-9r",
+    "rebuttal_id": "BJxCz0ihsr",
+    "title": "Auto Completion of User Interface Layout Design Using Transformer-Based Tree Decoders",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SylWNC4FPH&noteId=BJxCz0ihsr",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 0,
+      "text": "Summary: This paper introduces the task of using deep learning for auto-completion in UI design.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 1,
+      "text": "The basic idea is that given a partially completed tree (representing the design state of the UI), the goal is to predict or \"autocomplete\" the final tree.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 2,
+      "text": "The authors propose a transformer-based solution to the task, considering three variants: a vanilla approach where the tree is flattened to a sequence, a pointer-network style approach, and a recursive transformer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 3,
+      "text": "Preliminary experiments indicate that the recursive model performs best and that the task is reasonable difficulty.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 4,
+      "text": "Assessment: Overall, this is a borderline paper, as the task is interesting and novel, but the presentation is lacking in technical detail and there is a lack of novelty on the modeling side.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 5,
+      "text": "In particular, the authors spend a bulk of the paper describing the three different baselines they implement.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 6,
+      "text": "However, despite the fact that most of the paper is dedicated to the explanation of these baselines.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 7,
+      "text": "There is not sufficient detail to reproduce the models based on the paper alone.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 8,
+      "text": "Indeed, without referencing the original Pointer Network and (and especially the) Transformer papers, it would not be possible to understand this paper at all.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 9,
+      "text": "Further technical background and detail would drastically improve the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 10,
+      "text": "Moreover, it seems strange that significant space was used to give equations describing simple embedding lookups (i.e., matrix multiplications with one-hot vectors), but the basic technical foundations of Transformers were not adequately explained.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 11,
+      "text": "In addition, only the transformer baselines were considered, and it would seem natural to consider LSTM-based baselines, or some other related techniques.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 12,
+      "text": "In general, the space that was used to explain the Transformer baselines---which are essentially straightforward ways to adapt transformers to this task---could have been used to give more detail on the dataset.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 13,
+      "text": "For example, one question is how often a single partial tree has multiple possible completions in the data.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 14,
+      "text": "A major issue---mainly due to the lack of technical details and the lack of promise to provide code/data (unless I missed this)---is that the paper does not appear to be reproducible. Given the intent to have this be a new benchmark, ensuring reproducibility seems critical.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 15,
+      "text": "Reasons to accept:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 16,
+      "text": "- Interesting new application of GNNs",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 17,
+      "text": "Reasons to reject:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 18,
+      "text": "- Incremental modeling contribution",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 19,
+      "text": "- Lack of sufficient technical detail on models and dataset",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "sentence_index": 20,
+      "text": "- Does not appear to be reproducible",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 1,
+      "text": "We have revised the paper to address the issues you brought up.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 2,
+      "text": "- Contribution",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 3,
+      "text": "We developed our approach based on Transformer models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 4,
+      "text": "We agree with the reviewer that the model novelty is relatively incremental.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 5,
+      "text": "However, the focus of the paper is to contribute a new prediction problem and adapts and applies the Transformer model for this problem to establish a benchmark for future exploration, which we believe has values.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 6,
+      "text": "- Benchmark & Reproducible",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 7,
+      "text": "The data that our experiments used is an open dataset:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 8,
+      "text": "https://storage.cloud.google.com/crowdstf-rico-uiuc-4540/rico_dataset_v0.1/semantic_annotations.zip",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 9,
+      "text": "We will release our data preprocessing, and model code, including all the eval metrics to ensure the work is reproducible.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          20
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 10,
+      "text": "- Technical details",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 11,
+      "text": "Thanks for pointing out the issues with our presentations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 12,
+      "text": "We agree much detail on embeddings can be condensed or moved to Appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 13,
+      "text": "We included embedding details in the paper because a reviewer from the venue we previously submitted to requested these details to be in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 14,
+      "text": "We revised the notations in the paper to make formulation clearer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 15,
+      "text": "In addition, we added more details about the data as you suggested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 16,
+      "text": "Given a partial tree, there can be more than one way to complete the layout.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 17,
+      "text": "Given a 10%, 50% and 80% BFS partial layout, the mean number of completions of the layout is 2.97, 1.23 and 1.17 respectively.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1edRi1-9r",
+      "rebuttal_id": "BJxCz0ihsr",
+      "sentence_index": 18,
+      "text": "Given a 10%, 50% and 80% DFS partial layout, the mean number of completions is 3.63, 1.24, and 1.17 respectively.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

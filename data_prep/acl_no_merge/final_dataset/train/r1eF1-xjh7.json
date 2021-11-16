@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "forum_id": "H1gR5iR5FX",
+    "review_id": "r1eF1-xjh7",
+    "rebuttal_id": "BJeVJhFxRX",
+    "title": "Analysing Mathematical Reasoning Abilities of Neural Models",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1gR5iR5FX&noteId=BJeVJhFxRX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 0,
+      "text": "This paper presents a new synthetic dataset to evaluate the mathematical reasoning ability of sequence-to-sequence models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 1,
+      "text": "It consists of math problems in various categories such as algebra, arithmetic, calculus, etc.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 2,
+      "text": "The dataset is designed carefully so that it is very unlikely there will be any duplicate between train/test split and the difficulty can be controlled.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 3,
+      "text": "Several models including LSTM, LSTM + Attention, Transformer are evaluated on the proposed dataset.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 4,
+      "text": "The result showed some interesting insights about the evaluated models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 5,
+      "text": "The evaluation of mathematical reasoning ability is an interesting perspective.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 6,
+      "text": "However, the un-standard design of the LSTM models makes it unclear whether the comparisons are solid enough.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 7,
+      "text": "The paper is relatively well-written, although the description of the neural models can be improved.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 8,
+      "text": "The generation process of the dataset is well thought out.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 9,
+      "text": "The insights from the analysis of the failure cases are intriguing, but it also points out that the neural networks models are not really performing mathematical reasoning since the generalization is very limited.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 10,
+      "text": "One suggestion is that it might be useful to also release the structured (parsed) form besides the freeform inputs and outputs, for analysis and for evaluating structured neural network models like the graph networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 11,
+      "text": "My main concerns are about the evaluation and comparison of standard neural models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 12,
+      "text": "The use of \u201cblank inputs (referred to as \u201cthinking steps\u201d)\u201d in \u201cSimple LSTM\u201d and \u201cAttentional LSTM\" doesn\u2019t seem to be a standard approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 13,
+      "text": "In the attentional LSTM, the use of \u201cparse LSTM\u201d is also not a standard approach in seq2seq models and doesn\u2019t seem to work well in the experiment (similar result to \u201cSimple LSTM\").",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 14,
+      "text": "I think these issues are against the goal of evaluating standard neural models on the benchmark and will raise doubts about the comparison between different models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 15,
+      "text": "With some improvements in the evaluation and comparison, I believe this paper will be more complete and much stronger.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 16,
+      "text": "typo:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "sentence_index": 17,
+      "text": "page 3: \u201cfreefrom inputs and outputs\u201d -> \u201cfreeform inputs and outputs\u201d",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 0,
+      "text": "Thank you for your detailed review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 1,
+      "text": "On releasing a structured (parsed) form of the dataset: we agree that examining performance on structured input is a very useful exploration direction, that can give insight into what effect parsing has on ease of training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 2,
+      "text": "We feel, however, that there\u2019s no single canonical choice for the structure that may be suitable for all types of networks (e.g., tree networks, graph networks, etc), or different levels of structure that aid the network to different amounts, from completely unstructured to tree-like structures that essentially determine the required order of calculation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 3,
+      "text": "For example, in the question type of \u201cmultiple function composition\u201d, one could have a structure that lists the functions, and also the desired composition order; or one could actually have a tree structure with the functions already embedded in the correct composition order (which we suspect would be quite easy to learn models on).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 4,
+      "text": "In lieu of this, we hope the released dataset source code will allow researchers to easily tailor the dataset to their specific problems and models.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 5,
+      "text": "We have rewritten the section describing the neural models, with clearer terminology, and the differences between the different models made much more explicit.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 6,
+      "text": "Thank you for pointing this out, and please let us know if any parts are still unclear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 7,
+      "text": "The \u201cattentional LSTM\u201d model is just the standard encoder/decoder+attention architecture prevalent in neural machine translation as introduced in \u201cNeural machine translation by jointly learning to align and translate\u201d (Bahdanau et al).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 8,
+      "text": "However, we confusingly used the terms \u201cparser\u201d instead of \u201cencoder\u201d, and we have fixed the description.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 9,
+      "text": "On running the decoding LSTM for a few steps before outputting the answer: we found that it was one of the few (relatively simple) architectural changes to the standard recurrent encoder/decoder setup that significantly helped performance (thus the performance on the standard architecture can be taken to be slightly worse than the numbers reported in the paper for the architecture with \u201cthinking steps\u201d), but we also realize that it is not a widespread architectural change. (Possibly the need for this is less in standard machine translation tasks.) Since your review, we have also ran experiments using the published architecture introduced in \u201cAdaptive Computation Time for Recurrent Neural Networks\u201d (Graves).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 10,
+      "text": "This architecture has an adaptive number of \u201cthinking\u201d steps at every timestep dependent on the input, learnt via gradient descent.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 11,
+      "text": "More specifically we investigated the use of this for both the recurrent encoder and decoder (replacing the single fixed number of \u201cthinking\u201d steps at the start of the decoder).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 12,
+      "text": "After some tuning, its test performance was still around 3% worse than the same architecture without adaptive computation time.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 13,
+      "text": "We\u2019ve updated the paper to mention this.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 14,
+      "text": "Please refer to the updated PDF of the paper to see these changes.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eF1-xjh7",
+      "rebuttal_id": "BJeVJhFxRX",
+      "sentence_index": 15,
+      "text": "We hope that you will agree that, with your kind feedback, the changes above strengthen the paper's claims and clarity, and that you are willing to reconsider your assessment on these grounds.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

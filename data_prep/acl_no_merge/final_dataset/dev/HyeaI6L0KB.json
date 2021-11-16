@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "forum_id": "rkeNfp4tPr",
+    "review_id": "HyeaI6L0KB",
+    "rebuttal_id": "Sye_nW4IjB",
+    "title": "Escaping Saddle Points Faster with Stochastic Momentum",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkeNfp4tPr&noteId=Sye_nW4IjB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 0,
+      "text": "This paper makes an interesting theoretical contribution; namely, that SGD with momentum (and with a slight modification to the step-size rule) is guaranteed to quickly converge to a second-order stationary point, implying it quickly escapes saddle points.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 1,
+      "text": "SGD with momentum is widely used in the practice of deep learning, but a theoretical analysis has remained largely elusive.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 2,
+      "text": "This paper sheds light theoretical properties justifying its use for deep learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 3,
+      "text": "Although the paper makes assumptions (e.g., twice differentiable, with smooth Hessian) that are not valid for the most widely-used deep learning models, the theoretical contributions of this paper should nonetheless be of interest to researchers in optimization for machine learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 4,
+      "text": "I recommend it be accepted.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 5,
+      "text": "The experiments reported in the paper, including those used to validate the required properties, are for small toy problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 6,
+      "text": "This is reasonable given that the main contribution of the paper is theoretical.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 7,
+      "text": "However, I would have given a higher rating if some further exploration of the validity of these properties was carried out for problems closer to those of interest to the broader ICLR community.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 8,
+      "text": "Even if the assumptions aren't satisfied everywhere for typical deep networks, they may be satisfied at most points encountered during training, which would make the contribution even more compelling.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 9,
+      "text": "This may also help to understand some of the limitations of this analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "sentence_index": 10,
+      "text": "One other limitation seems to be that Theorem 1 requires using a step size which seems to be much smaller than what one may hope to use in practice. Can you comment on this?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 0,
+      "text": "We thank for your valuable comments and suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 1,
+      "text": "=== Regarding to the assumptions, specifically, twice differentiable/smooth Hessian =",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 2,
+      "text": "=",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 3,
+      "text": "=",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 4,
+      "text": "Twice differentiable/smooth Hessian are only used for analyzing the process of escaping saddle points.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 5,
+      "text": "So we conjecture that one can relax the assumptions and introduce the notions like ``locally twice differentiable'' and ``locally smooth Hessian'', meaning that the assumptions only need to hold in the region of the saddle points.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 6,
+      "text": "Since the gradient norm in the region of the saddle points is small, it implies that the Hessian should not change too much and ``locally smooth Hessian'' should make sense.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 7,
+      "text": "However, we are not aware of any related works of escaping saddle points introducing any measures of ``locally smooth Hessian''.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 8,
+      "text": "You might actually point out a good research direction.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 9,
+      "text": "=== Regarding to the empirical results/experiments ===",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 10,
+      "text": "We appreciate your acknowledgment of our contributions and pointing out that the properties may only need to be satisfied at some critical points during training deep neural nets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 11,
+      "text": "We will keep updating the paper and conducting more thorough experiments.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 12,
+      "text": "=== Regarding to the small step size ===",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 13,
+      "text": "We think that it is a gap, for which people in the community haven't have any good remedies yet.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 14,
+      "text": "Almost all of the theoretical works in nonconvex optimization and deep learning require a small step size (e.g. works of natural tangent kernel, works of showing the global convergence for a two layer neural net).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyeaI6L0KB",
+      "rebuttal_id": "Sye_nW4IjB",
+      "sentence_index": 15,
+      "text": "Nevertheless, we want to note that the step size $\\eta = O(\\epsilon^5)$ in our paper is of the same order as the closely related work (Daneshmand et al. 2018) of escaping saddle points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

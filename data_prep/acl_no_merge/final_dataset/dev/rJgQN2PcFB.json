@@ -1,0 +1,1015 @@
+{
+  "metadata": {
+    "forum_id": "SyeD0RVtvS",
+    "review_id": "rJgQN2PcFB",
+    "rebuttal_id": "HkgvEdjDoB",
+    "title": "DeepSFM: Structure From Motion Via Deep Bundle Adjustment",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyeD0RVtvS&noteId=HkgvEdjDoB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 0,
+      "text": "The paper tackles Structure from Motion, one of the canonical problems in computer vision, and proposes an approach that brings together geometry and physics on one hand and deep networks on the other hand.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 1,
+      "text": "Camera unprojection and warping (of depth maps and features) are used to build a cost volume onto hypothetical planes perpendicular to the camera axis.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 2,
+      "text": "Similarly, various camera poses are sampled around an initial guess.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 3,
+      "text": "A deep network regresses form the cost volume to a camera pose and a depth map.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 4,
+      "text": "The method can be applied iteratively, using the outputs of the current stage as the initial guess of the next one.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 5,
+      "text": "Training is supervised, and the the results are evaluated on multiple datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 6,
+      "text": "I am inclined to recommend accepting the paper for publication, because it addresses a canonical problem, outperforms the state of the art on multiple datasets and brings together geometry / physics and deep learning, which is IMO very a promising and underexplored direction.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 7,
+      "text": "I found the method section a bit difficult to read though, and even after several readings I cannot get my head around it. Specifically, here are some issues that I hope the Authors could clarify.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 8,
+      "text": "1. In Sec. 3 the Authors write \"We then sample the solution space for depth and pose respectively around their initialization\".",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 9,
+      "text": "However in Sec 3.2 they write \"we uniformly sample a set of L virtual planes {dl} Ll=1 in the inverse-depth space\".",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 10,
+      "text": "In what way are the planes \"around their initialization\"? If the initial depth map spans over multiple orders of magnitude, will the planes be uniformly sampled between the minimum and maximum disparity of the initial map?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 11,
+      "text": "If yes, it seems that the initial depth map is not really needed, just its minimum and maximum value is needed, but then how come the method can be applied iteratively with respect to depth?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 12,
+      "text": "2. The Authors mention that depth maps are warped onto the virtual planes using differentiable bilinear interpolation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 13,
+      "text": "Is there a mechanism to protect from interpolating across discontinuities? If no, were bleeding edge artifacts observed?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 14,
+      "text": "3. In the introduction, the Authors point that prior methods have trouble dealing with textureless, reflective or transparent approaches, but it's not clear form the paper where it addresses these cases, and if yes, what is the mechanism for that.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 15,
+      "text": "Lastly, if the authors are not planning to release the code, the implementation details section is a bit too high-level and does not contain enough details to reimplement the Author's technique.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 16,
+      "text": "For example, \"our network learns a cost volume of size L \u00d7 W \u00d7 H using several 3D convolutional layers with kernel size 3 \u00d7 3 \u00d7 3\"",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "sentence_index": 17,
+      "text": "- more details about this network are needed, as well as the others in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and appreciation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 1,
+      "text": "We have revised the paper according to the suggestions and would like to clarify as follows:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 2,
+      "text": "Q1: In Sec. 3 the Authors write \"We then sample the solution space for depth and pose respectively around their initialization\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 3,
+      "text": "However in Sec 3.2 they write \"we uniformly sample a set of L virtual planes {dl} Ll=1 in the inverse-depth space\".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 4,
+      "text": "In what way are the planes \"around their initialization\"? If the initial depth map spans over multiple orders of magnitude, will the planes be uniformly sampled between the minimum and maximum disparity of the initial map?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 5,
+      "text": "If yes, it seems that the initial depth map is not really needed, just its minimum and maximum value is needed, but then how come the method can be applied iteratively with respect to depth?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 6,
+      "text": "A1. Thank you for pointing this out. \"We then sample the solution space for depth and pose respectively around their initialization\" is a writing mistake and we have corrected it in our new version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 7,
+      "text": "Only the solution space for pose is sampled around initialization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 8,
+      "text": "We uniformly sample planes in the inverse-depth(disparity) space between a fixed minimum and maximum range.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 9,
+      "text": "The initial depth is used for maintaining geometric consistency.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 10,
+      "text": "The depth, under such a situation, could still be improved through iterations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 11,
+      "text": "Since the pose is improved over the iteration, the depth cost-volume would be updated accordingly, and better depth can be inferred from the more accurate cost-volume.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 12,
+      "text": "Q2: The Authors mention that depth maps are warped onto the virtual planes using differentiable bilinear interpolation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 13,
+      "text": "Is there a mechanism to protect from interpolating across discontinuities? If no, were bleeding edge artifacts observed?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 14,
+      "text": "A2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 15,
+      "text": "We thank the reviewer for pointing out the potential problem of our warping method on the depth maps.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 16,
+      "text": "Since depth maps often have discontinuities, we agree with Review #3 that differentiable bilinear interpolation may do damage to the geometry consistency and smooth the edges.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 17,
+      "text": "We also updated our experiment results with nearest neighbor instead of bilinear interpolation for depth warping, and revised the corresponding results (Tab. 1-3) and figures in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 18,
+      "text": "Notably, our results can get slightly improved by the updated nearest neighbour method inspired by the question asked by Reviewer#3.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 19,
+      "text": "To verify this, we added an experiment in Appendix C, which runs nearest neighbor sampling instead of bilinear interpolation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 20,
+      "text": "With nearest neighbor warping method, the performance of our model on DeMoN MVS dataset gains a slight boost with retraining.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 21,
+      "text": "Here are the comparisons:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 22,
+      "text": "MVS dataset",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 23,
+      "text": "L1-inv     sc-inv     L1-rel     Rot     Trans",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 24,
+      "text": "Ours (bilinear)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 25,
+      "text": "0.023",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 26,
+      "text": "0.134",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 27,
+      "text": "0.079",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 28,
+      "text": "2.867    9.910",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 29,
+      "text": "Nearest neighbor(retained)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 30,
+      "text": "0.021",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 31,
+      "text": "0.129",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 32,
+      "text": "0.076",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 33,
+      "text": "2.824    9.881",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 34,
+      "text": "This shows that nearest neighbor sampling is indeed more geometrically meaningful for depth.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 35,
+      "text": "We updated the method to use nearest sampling and update the result accordingly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 36,
+      "text": "We also discussed the strengths and weaknesses briefly of each interpolation method in Appendix C.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 37,
+      "text": "Q3: In the introduction, the Authors point that prior methods have trouble dealing with textureless, reflective or transparent approaches, but it's not clear form the paper where it addresses these cases, and if yes, what is the mechanism for that.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 38,
+      "text": "A3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 39,
+      "text": "Empirically, learning based method may outperforms traditional feature matching methods on these situations since it relies on image priors.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 40,
+      "text": "In addition, our method has geometry consistency between multiview depth maps as the input, which encourages local smoothness and consistency to some extent.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 41,
+      "text": "In some textureless, reflective or transparent cases that feature matching methods does not work, our method gains extra information from the initial depth maps of other views by the depth consistency part of the cost volume.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 42,
+      "text": "In Appendix D, Figure 8, some qualitative comparisons with COLMAP[1] are provided as an argument.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 43,
+      "text": "We have updated our paper and show more visual examples in Appendix D, Figure 9.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 44,
+      "text": "Q4: the implementation details section is a bit too high-level and does not contain enough details to reimplement the Author's technique.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 45,
+      "text": "A4. Thanks for your suggestions, we will release code upon the acceptance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 46,
+      "text": "Furthermore, we have put more details about model architecture as in Appendix A Figure 4 and Figure 6.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgQN2PcFB",
+      "rebuttal_id": "HkgvEdjDoB",
+      "sentence_index": 47,
+      "text": "[1] Johannes L Schonberger and Jan-Michael Frahm. Structure-from-motion revisited. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 4104\u20134113, 2016.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

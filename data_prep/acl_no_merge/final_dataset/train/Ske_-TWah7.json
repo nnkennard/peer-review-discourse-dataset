@@ -1,0 +1,929 @@
+{
+  "metadata": {
+    "forum_id": "rJNwDjAqYX",
+    "review_id": "Ske_-TWah7",
+    "rebuttal_id": "HJx9J8YQA7",
+    "title": "Large-Scale Study of Curiosity-Driven Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJNwDjAqYX&noteId=HJx9J8YQA7",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 0,
+      "text": "The authors consider the setting of a RL agent that exclusively receives intrinsic reward during training that is intended to model curiosity; technically, \u2018curiosity\u2019 is quantified by the ability of the agent to predict its own forward dynamics [Pathak, et al., ICML17].",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 1,
+      "text": "This study primarily centers around an initially somewhat surprising result that non-trivial policies can be learned for many \u2019simpler\u2019 video games (e.g., Atari, Super Mario, Pong) using just curiosity as reward.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 2,
+      "text": "While this is primarily an empirical study, one aspect considered was the observation representation (raw pixels, random features, VAE, and inverse dynamics features [Pathak, et al., ICML17]).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 3,
+      "text": "In examining reward curves (generally extrinsic during testing), \u2018curiosity-based\u2019 reward generally works with the representation effectiveness varying across different testbeds.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 4,
+      "text": "They also conduct more in-depth experiments on specific testbeds to study the dynamics (e.g., Super Mario, Juggling, Ant Robot, Multi-agent Pong) \u2014 perhaps most interestingly showing representation-based transfer of different embeddings across levels in Super Mario.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 5,
+      "text": "Finally, they consider the Unity maze testbed, combining intrinsic rewards with the end-state goal reward to generate a more dense reward space.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 6,
+      "text": "From a high level perspective, this is an interesting result that ostensibly will lead to a fair amount of discussion within the RL community (and already has based on earlier versions of this work).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 7,
+      "text": "However, it isn\u2019t entirely clear if the primary contribution is showing that \u2018curiosity reward\u2019 is a potentially promising approach or if game environments aren\u2019t particularly good testbeds for practical RL algorithms \u2014 given the lack of significant results on more realistic domains, my intuition leans toward the later (the ant robot is interesting, but one can come up with \u2018simulator artifact\u2019 based explanations).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 8,
+      "text": "And honestly, I think the paper reads as if leaning toward the same conclusion.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 9,
+      "text": "Regardless, given the prevalence of these types of testbed environments, either is a useful discussion to have. Maybe the end result could minimally be a new baseline that can help quantify the \u2018difficulty\u2019 of a particular environment.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 10,
+      "text": "From the perspective of a purely technical contribution, there are fewer exciting results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 11,
+      "text": "The basic method is taken from [Parthak, et al., ICML17] (modulo some empirical choices such as using PPO).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 12,
+      "text": "The comparison of different observation representations doesn\u2019t include any analytical component, the empirical component is primarily inconclusive, and the position statements are fairly non-controversial (and not really conclusively supported).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 13,
+      "text": "The testbeds all existed previously and this is mostly the effort of pulling then together.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 14,
+      "text": "Even the \u2018focused experiments\u2019 can be explained with the intuitive narrative that in the state/action space, there is always more uncertainty the farther one goes from the starting point and this is more of a result of massive computation being applied primarily to problems that are designed to provide some level of novelly (the Roboschool examples are a bit more interesting, but also less conclusive).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 15,
+      "text": "Finally, Figure 5 is interesting in showing that \u2018curiosity + extrinsic\u2019 improves over extrinsic rewards \u2014 although this isn\u2019t particularly surprising for maze navigation that has such sparse rewards and can be viewed as something like \u2018active exploration\u2019.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 16,
+      "text": "With respect to this specific setting, the authors may want to consider [Mirowski, et al., Learning to Navigate in Complex Environments, ICLR17] with respect to auxiliary loss + RL extrinsic rewards to improve performance (in this case, also in maze environments).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 17,
+      "text": "In just considering the empirical results, they clearly entail a fair amount of effort and just a dump of the code and experiments on the community will likely lead to new findings (even if they are that game simulators are weaker testbeds than previously thought).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 18,
+      "text": "It is easy to ask for additional experiments (i.e., other mechanisms of uncertainty such as the count-based discussed in related work, other settings in 2.2) \u2014 but the quality seems high enough that I basically trust the settings and findings.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 19,
+      "text": "Beyond the core findings, the other settings are less convincingly supported by seem more like work in progress and this paper is really just a scaling-up of [Pathak, et al., ICML17] without generating any strong results regarding questions around representation, what to do about stochasticity (although the discussion regarding something like \u2018curiosity honeypots\u2019 is interesting).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 20,
+      "text": "Thus, it reads like one interesting finding around curiosity-driven RL working in games plus a bunch of preliminary findings trying to grasp at some explanations and potential future directions.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 21,
+      "text": "Evaluating the paper along the requested dimensions:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 22,
+      "text": "= Quality: The paper is well-written with a large set of experiments, making the case that exclusively using curiosity-based reward is very promising for the widely-used game RL testbeds.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 23,
+      "text": "Modulo a few pointers, the work is well-contextualized and makes reasonable assumptions in conducting its experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 24,
+      "text": "The submitted code and videos result in a high-quality presentation and trustworthiness of the results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 25,
+      "text": "(7/10)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 26,
+      "text": "= Clarity: The paper is very clearly written. (7/10)",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 27,
+      "text": "= Originality: The algorithmic approach is a combination of [Parthak, et al., ICML17] and [Schulman, et al. 2017] (with some experiments using [Kingma & Welling, 2013]).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 28,
+      "text": "All of the testbeds have been used previously.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 29,
+      "text": "Other than completely relying on curiously-based reward exclusively, there is little here.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 30,
+      "text": "In considering combining with extrinsic rewards, I would also consider [Mirowski, et al., ICLR17], which is actually more involved in this regard.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 31,
+      "text": "(4/10)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 32,
+      "text": "= Significance: Primarily, this \u2018finishes\u2019 [Parthak, et al., ICML17] to its logical conclusion for game-based environments and should spur interesting conversations and further research.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 33,
+      "text": "In terms of actual technical contributions, I believe much less significant.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 34,
+      "text": "(5/10)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 35,
+      "text": "=== Pros ===",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 36,
+      "text": "+ demonstrates that curiosity-based reward works in simpler game environments",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 37,
+      "text": "+ (implicitly) calls into question the value of these testbed environments",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 38,
+      "text": "+ well written, with a large set of experiments and some interesting observations/discussions",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 39,
+      "text": "=== Cons ===",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 40,
+      "text": "- little methodological innovation or analytical explanations",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 41,
+      "text": "- offers minimal (but some) evidence that curiosity-based reward works in more realistic settings",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 42,
+      "text": "- doesn\u2019t answer the one question regarding observation representation that it set out to evaluate",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 43,
+      "text": "- the more interesting problem, RL + auxiliary loss isn\u2019t evaluated in detail",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 44,
+      "text": "- presumably, the sample complexity is ridiculous",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 45,
+      "text": "Overall, I am ambivalent.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 46,
+      "text": "I think that more casual ML/RL researchers will find these results controversial and surprising while more experienced researchers will see curiosity-driven learning to be explainable primarily by the intuition of the \u201cThe fact that the curiosity reward is often sufficient\u201d paragraph of page 6, demanding more complex environments before accepting that this form of curiosity is particularly useful.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 47,
+      "text": "The ostensible goal of learning more about observation representations is mostly preliminary \u2014 and this direction holds promise of for a stronger set of findings.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 48,
+      "text": "Dealing with highly stochastic environments seems a potential fatal flaw of the assumptions of this method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "sentence_index": 49,
+      "text": "However, as I said previously, this is probably a discussion worth having given the popularity and visibility of game-based testbeds \u2014 so, coupled with the overall quality of the paper, I lean toward a weak accept.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 0,
+      "text": "We thank you for the  detailed and thoughtful review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 1,
+      "text": "We are glad that you found the paper well-contextualized and the presentation high-quality. Here we discuss some of your comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 2,
+      "text": "R2: \"this 'finishes' [Pathak et al., ICML17] to its logical conclusion for game-based environments and should spur interesting conversations and further research. In terms of actual technical contributions, I believe much less significant.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 3,
+      "text": "=> In the light of the comments on originality and significance, we would like to highlight our finding that random features perform quite well and at times as well as learned features across many environments.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 4,
+      "text": "This is a novel contribution since prior works have relied on learned features as a crucial requirement for good performance [Pathak et. al. ICML17].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 5,
+      "text": "We believe this investigation would allow random features to be seen as an easily reproducible and strong baseline for future investigations of feature learning in exploration.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 6,
+      "text": "Indeed, since the release of our paper, there has been some follow-ups on using random features for exploration in achieving state of the art results on hard exploration games when combined with extrinsic reward (in the interest of preserving anonymity, we don't include the references here).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 7,
+      "text": "R2: \"However, it isn't entirely clear if the primary contribution is showing that 'curiosity reward' is a potentially promising approach or if game environments aren't particularly good testbeds for practical RL algorithms\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 8,
+      "text": "=> We believe that both are valuable insofar as generating discussion within the community and leading to follow-up experimentation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 9,
+      "text": "In particular, we hope our paper stimulates both, an interest in trying out more realistic/stochastic environments, *and* further research on curiosity as a potential useful reward.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 10,
+      "text": "In addition to that, we have shown that curiosity could be a very strong baseline to compare against in future papers.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 11,
+      "text": "All these, we argue, are valuable to the progress and health of the field.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 12,
+      "text": "R2: \"Dealing with highly stochastic environments seems a potential fatal flaw of the assumptions of this method. However, as I said previously, this is probably a discussion worth having given the popularity and visibility of game-based testbeds\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 13,
+      "text": "=> We agree that significant amounts of stochasticity would break the method we used in the paper, and it is an important issue to be addressed by future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 14,
+      "text": "Our vivid demonstration of this issue in the maze environment has already inspired some recent papers to look into, in particular, by incentivizing episodic reachability (in the interest of preserving anonymity, we don't include references to these, but we will include them in the final version of the paper).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          48,
+          49
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 15,
+      "text": "R2: \"I think that more casual ML/RL researchers will find these results controversial and surprising while more experienced researchers will see curiosity-driven learning to be explainable primarily by the intuition...\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 16,
+      "text": "R2: \"Even the 'focused experiments' can be explained with the intuitive narrative that in the state/action space\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 17,
+      "text": "=> Indeed in our experience, although a few people were not surprised, most of them were very surprised at the agents being able to make progress without any any extrinsic rewards.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 18,
+      "text": "This suggests that the game designers (similar to architects, urban planners, gardeners, etc.) are purposefully setting up curricula to guide agents through the task by curiosity alone [Lazzaro, 2004].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 19,
+      "text": "R2: \"consider [Mirowski et al., ICLR17] with respect to auxiliary loss + RL extrinsic rewards to improve performance\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 20,
+      "text": "R2: \"RL + auxiliary loss isn't evaluated in detail\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 21,
+      "text": "=> We will add a discussion of recent works that deal with navigation tasks in maze environments [Mirowski et. al. ICLR 2017, Jaderberg et. al. ICLR 2017] in the related works section.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          43
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 22,
+      "text": "In contrast to these works, we don't assume privileged access to the maze environment in the form of depth estimation or loop closure supervision.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 23,
+      "text": "Auxiliary tasks are an important component of RL and exploration methods, however, in this work we chose to focus on the most generic setting with minimal assumptions about the environment: providing raw observations in response to actions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          43
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_-TWah7",
+      "rebuttal_id": "HJx9J8YQA7",
+      "sentence_index": 24,
+      "text": "In environments with privileged access we expect auxiliary tasks to benefit both curiosity-driven and extrinsic-reward-driven RL methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          43
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

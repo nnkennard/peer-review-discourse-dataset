@@ -1,0 +1,352 @@
+{
+  "metadata": {
+    "forum_id": "rygjmpVFvB",
+    "review_id": "HJe5Adneor",
+    "rebuttal_id": "r1efiwuroH",
+    "title": "Difference-Seeking Generative Adversarial Network--Unseen Sample Generation",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rygjmpVFvB&noteId=r1efiwuroH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 0,
+      "text": "This paper proposed the DSGAN model to generate unseen data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 1,
+      "text": "The intuition based on standard GAN is straightforward and makes sense.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 2,
+      "text": "The paper is well written, especially the case studies illustrate the idea clearly.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 3,
+      "text": "The designing of p_{\\bar{d}} also presented the limitation of this method.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 4,
+      "text": "Two main discussed applications, semi-supervised learning and novelty detection are important in machine learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 5,
+      "text": "In general, this is an interesting paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 6,
+      "text": "However, my concern is about the experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 7,
+      "text": "As a generative model for unseen data, I would like to see the generated results, which is more convincing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 8,
+      "text": "Only the 1/7 examples of MNIST dataset are provided in case studies.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "sentence_index": 9,
+      "text": "I am wondering for more complicated images, how is the performance?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 0,
+      "text": "Thanks for your comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 1,
+      "text": ">>> Only the 1/7 examples of MNIST dataset are provided in case studies.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 2,
+      "text": "I am wondering for more complicated images, how is the performance?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 3,
+      "text": "In responding to this comment and the first comment of Reviewer #2, we perform one more experiment on CelebA to demonstrate that DSGAN can work well even for complicated images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 4,
+      "text": "In this experiment, we generate the color images of size 64 $\\times$ 64.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 5,
+      "text": "Similar to 1/7 experiments on the MNIST dataset, we let $p_{\\bar{d}}$ be the distribution of face images with glasses and without glasses, and let $p_{d}$ be images without glasses.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 6,
+      "text": "We sample 10000 images with glasses and 10000 images without glasses from CelebA, and we set $\\alpha$ to 0.5.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 7,
+      "text": "In order to verify the generated image quality of DSGAN, we also train a GAN for comparison.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 8,
+      "text": "GAN is trained with the same amount of training images (but only using face images with glasses since GAN is to learn the distribution of training data).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 9,
+      "text": "In other words, we assume GAN can use complement data as training data directly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 10,
+      "text": "On the contrary, DSGAN only uses complement data indirectly (the difference between $p_{\\bar{d}}$ and $p_d$).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 11,
+      "text": "Figure 10 in Appendix G shows generated images and FID for both methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 12,
+      "text": "We can see that our DSGAN can generate images with glasses from the given $p_d$ and $p_{\\bar{d}}$, and the FID of DSGAN are comparable to that of GAN.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe5Adneor",
+      "rebuttal_id": "r1efiwuroH",
+      "sentence_index": 13,
+      "text": "The experiment validates that DSGAN still works well to create complement data for complicate images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,1348 @@
+{
+  "metadata": {
+    "forum_id": "B1gabhRcYX",
+    "review_id": "r1x8O_Sw3X",
+    "rebuttal_id": "H1gAMXd90X",
+    "title": "BA-Net: Dense Bundle Adjustment Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1gabhRcYX&noteId=H1gAMXd90X",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 0,
+      "text": "edit: the authors added several experiments (better evaluation of the predicted lambda, comparison with CodeSLAM), which address my concerns.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 1,
+      "text": "I think the paper is much more convincing now. I am happy to increase my rating to clear accept.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 2,
+      "text": "I also agree with the introduction of the Chi vector, and with the use of the term of \"photometric BA\", since it was used before, even if it is unfortunate in my opinion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 3,
+      "text": "I thank the authors to replace reprojection by alignment, which is much clearer.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 4,
+      "text": "---------------",
+      "suffix": "\n\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 5,
+      "text": "This paper presents a method for dense Structure-from-Motion using Deep Learning:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 6,
+      "text": "The input is a set of images; the output is the camera poses and the depth maps for all the images.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 7,
+      "text": "The approach is inspired by Levenberg-Marquardt optimization (LM): A pipeline extracting image features computes the Jacobian of an error function.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 8,
+      "text": "This Jacobian is used to update an estimate of the camera poses.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 9,
+      "text": "As in LM optimization, this update is done based on a factor lambda, weighting a gradient descent step and a Gauss-Newton step.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 10,
+      "text": "In LM optimization, this lambda evolves with the improvement of the estimate.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 11,
+      "text": "Here lambda is also predicted using a network based on the feature difference.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 12,
+      "text": "If I understand correctly, what is learned is how to compute image features that provide good updates, how to predict the depth maps from the features, and how to predict lambda.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 13,
+      "text": "The method is compared against DeMoN and other baselines with good results.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 14,
+      "text": "I like the fact that the method is based on LM optimization, which is the standard method in 'geometric bundle adjustment', while related works consider Gauss-Newton-like optimization steps.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 15,
+      "text": "The key was to include a network to predict lambda as well.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 16,
+      "text": "However, I have several concerns:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 17,
+      "text": "* the ablation study designed to compare with a Gauss-Newton-like approach does not seem correct.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 18,
+      "text": "The image features learned with the proposed method are re-used in an approach using a fixed lambda.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 19,
+      "text": "If I understand correctly, there are 2 things wrong with that:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 20,
+      "text": "- for GN optimization, lambda should be set to 0 - not a constant value.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 21,
+      "text": "Several constant values should also have been tried.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 22,
+      "text": "- the image features should be re-trained for the GN framework:  Since the features are learned for the LM iteration, they are adapted to the use of the predicted lambda, but they are not necessarily suitable to GN optimization.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 23,
+      "text": "Thus, the advantage of using a LM optimization scheme is not very convincing.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 24,
+      "text": "Since the LM-like approach is the main contribution, and the reported experiments do not show an advantage over GN-like approaches (already taken by previous work), this is my main reason for proposing rejection.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 25,
+      "text": "* CodeSLAM (best paper at CVPR'18) is referenced but there is no comparison with it, while a comparison on the EuRoC dataset should be possible.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 26,
+      "text": "Less critical concerns that still should be taken into account if the paper is accepted:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 27,
+      "text": "- the state vector Chi is not defined for the proposed method, only for the standard bundle adjustment approach. If I understand correctly is made of the camera poses.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 28,
+      "text": "- the name 'Bundle Adjustment' is actually not adapted to the proposed method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 29,
+      "text": "'Bundle Adjustment' in 'geometric computer vision' comes from the optimization of several rays to intersect at the same 3D point, which is done by minimizing the reprojection errors.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 30,
+      "text": "Here the objective function is based on image feature differences.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 31,
+      "text": "I thus find the name misleading.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 32,
+      "text": "The end of Section 3 also encourages the reader to think that the proposed method is based on the reprojection error.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 33,
+      "text": "The proposed method is more about dense alignment for multiple images.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 34,
+      "text": "More minor points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 35,
+      "text": "1st paragraph:",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 36,
+      "text": "Marquet -> Marquardt",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 37,
+      "text": "title of Section 3: revisitED",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 38,
+      "text": "1st paragraph of Section 3: audience -> reader",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 39,
+      "text": "caption of Fig 1: extractS",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 40,
+      "text": "Eq (2) cannot have Delta Chi on the two sides.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 41,
+      "text": "Typically, the left side should be \\hat{\\Delta \\Chi}",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 42,
+      "text": "before Eq (3): the 'photometric ..' -> a 'photometric ..'",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 43,
+      "text": "1st paragraph of Section 4.3: difficulties -> reason",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 44,
+      "text": "typo in absolute in caption of Fig 4",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 45,
+      "text": "Eq (6): Is B the same for all scenes?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 46,
+      "text": "It would be interesting to visualize it.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 47,
+      "text": "Section 4.5: applies -",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "sentence_index": 48,
+      "text": "> apply",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and appreciate that the reviewer likes our idea of including optimization in the network. But our contribution is beyond adopting Levenberg-Marquardt instead of Gauss-Newton.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 1,
+      "text": "We would like to clarify several things to address the reviewer's concerns:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 2,
+      "text": "Q1. The advantages of Levenberg-Marquardt over Gauss-Newton is unclear (the main reason for rejection):",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 3,
+      "text": "Firstly, we want to clarify that our contribution is beyond improving the Gauss-Newton optimization to Levenberg-Marquardt.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 4,
+      "text": "More importantly, our contribution is the combination of conventional multi-view geometry (i.e. joint optimization of depth and camera poses) and end-to-end deep learning (I.e. depth basis generator learning and feature learning).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 5,
+      "text": "This contribution is achieved by our differentiable LM optimization that allows end-to-end training.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 6,
+      "text": "Secondly, we agree with the reviewer that comparing with the Gauss-Newton algorithm will be interesting and have updated such a comparison in Appendix B in the revised version according to the reviewer\u2019s suggestions:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 7,
+      "text": "1. We retrained the whole pipeline with Gauss-Newton, to make sure the features are learned specifically for Gauss-Newton.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 8,
+      "text": "2. We compared with various constant lambda values to see how the performance varies along with lambda.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 9,
+      "text": "Note that we also fine-tune the network to make sure the features fit different lambda.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 10,
+      "text": "In Table 4 of the revised version (Appendix B), our method outperforms the Gauss-Newton algorithm in the last column.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 11,
+      "text": "This is because the objective function to be optimized is non-convex, and the vanilla Gauss-Newton method might get stuck at saddle point or local minimum.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 12,
+      "text": "This is why the Levenberg-Marquardt algorithm is the standard choice for conventional bundle adjustment.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 13,
+      "text": "In Figure 6 of the revised version (Appendix B), our method also consistently performs better than different constant lambda values.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 14,
+      "text": "This is because the value of lambda should be adapted to different data and optimization iterations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 15,
+      "text": "There is no \u2018optimal\u2019 constant lambda for all data and iterations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 16,
+      "text": "Q2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 17,
+      "text": "Comparison with CodeSLAM:",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 18,
+      "text": "We have included that in Figure 7 of the revised version (Appendix E).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 19,
+      "text": "Since there is no public code for CodeSLAM, we cite its results directly from the CodeSLAM paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 20,
+      "text": "Q3. The state vector Chi is not defined for the proposed method.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 21,
+      "text": "The Chi is defined in Section 3 as the vector containing all camera poses and point depths.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 22,
+      "text": "Since our method also solves for these unknowns as in classic methods, we did not redefine the Chi.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 23,
+      "text": "But in the revised version we have recapped the definition of Chi when introducing our method at the beginning of Section 4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 24,
+      "text": "Q4. Should the paper be called Bundle Adjustment?:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 25,
+      "text": "The term \u2018Bundle Adjustment\u2019 is originally used to refer to the joint optimization of 3D scene points and camera poses by minimizing the reprojection error.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 26,
+      "text": "The keyword Bundle comes from the fact that a bundle of camera view rays pass through each of the 3D scene points.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 27,
+      "text": "Multiple recent works, e.g. [Engel et al., 2017,Delaunoy and Pollefeys, 2014], have generalized it to \u201cphotometric BA\u201d where scene points and camera poses are optimized together by minimizing the photometric error.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 28,
+      "text": "Our method is along this line.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 29,
+      "text": "But we further improve the photometric error to featuremetric error.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 30,
+      "text": "Each 3D scene point is still constrained by a bundle of camera view rays, though the error function has been changed.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 31,
+      "text": "So we believe it is justified to call this method feature-metric BA.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 32,
+      "text": "But we agree with the reviewer that the word \u2018reprojection\u2019 is misleading when we introduce our feature-metric BA and the photometric BA.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 33,
+      "text": "So we use the word \u2018align\u2019 as the reviewer suggested and use \u2018reprojection\u2019 only for the geometric BA.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 34,
+      "text": "Q5. Is B the same for all scenes?:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 35,
+      "text": "In the revised version, We added Figure 8 to visualize of the term B in Equation 7 (Page 6) for different scenes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          45,
+          46
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 36,
+      "text": "We can clearly see that it is scene dependent.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          45,
+          46
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 37,
+      "text": "Q6.Typos:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          47,
+          47
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 38,
+      "text": "We have fixed all the typos as suggested in the revised version.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          47,
+          47
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 39,
+      "text": "We thank the reviewer for raising the score.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 40,
+      "text": "We submitted the response and the revision until the last minute because a lot of extra works have been done for the revision, and we want to ensure the correctness and completeness.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1x8O_Sw3X",
+      "rebuttal_id": "H1gAMXd90X",
+      "sentence_index": 41,
+      "text": "But we will have a better-planned schedule for the next ICLR to fit the purpose of openreview.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

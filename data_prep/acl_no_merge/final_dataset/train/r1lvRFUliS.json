@@ -1,0 +1,567 @@
+{
+  "metadata": {
+    "forum_id": "ByljMaNKwB",
+    "review_id": "r1lvRFUliS",
+    "rebuttal_id": "HklAo1JujB",
+    "title": "Domain Aggregation Networks for Multi-Source Domain Adaptation",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ByljMaNKwB&noteId=HklAo1JujB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 0,
+      "text": "This paper proposed an aggregation algorithm (DARN) for the multi-source domain adaptation problem which is highly useful in real-world applications.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 1,
+      "text": "The proposed method is based on the theoretical extension of the single-source domain discrepancy measure proposed by Mansour et al. 2009 to the multi-source setting.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 2,
+      "text": "This paper also showed the effectiveness of the proposed method on some real-world datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 3,
+      "text": "Strengths",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 4,
+      "text": "The paper introduces new technical insights to understand their bound, e.g. effective sample size.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 5,
+      "text": "The paper proposed the way to estimate coefficient, optimal \\alpha, with theoretical justification, and I think this is the biggest contribution of this paper and is interesting.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 6,
+      "text": "The proposed method is also able to be used in the regression task since it is based on the disc which can be estimated in the regression task.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 7,
+      "text": "Weakness",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 8,
+      "text": "The main theorem of this paper is an extension of existing methods, so the novelty of theoretical analysis is somewhat limited.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 9,
+      "text": "A naive approach to estimate coefficient with single-source domain discrepancy measures such as [1]Mansour (2009), [2,3] Ben-David(2007, 2010), [4] Kuroki et al (2019), and W1-distance is not considered.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 10,
+      "text": "Experimental results itself are fine but not complete.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 11,
+      "text": "- Although disc can be easily estimated in the regression task (differently from d_A distance which is a special case of disc), there are no experimental results of the regression task even in the synthetic data.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 12,
+      "text": "- It would be also better to show the coefficient of existing methods that have no theoretical justification.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 13,
+      "text": "- It would be better to compare with a naive approach that uses domain discrepancy between each source and target as (fixed) coefficient since this approach such as Mansour (2009), Ben-David(2007, 2010) and Kuroki et al (2019) which explicitly consider the hypothesis class has theoretical justification in the form of generalization error bound in the target domain.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 14,
+      "text": "Overall, I like the approach of the proposed method, especially tuning coefficient during training procedure although novelty in the theoretical analysis is somewhat limited.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 15,
+      "text": "So this work has to be supported with more detailed experimental results to express the potential of this approach fully.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 16,
+      "text": "For this reason, I think it is okay but not good enough at this time.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 17,
+      "text": "*",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 18,
+      "text": "***After the authors' response****",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 19,
+      "text": "Increase rating.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 20,
+      "text": "[1] Yishay Mansour, Mehryar Mohri, and Afshin Rostamizadeh. Domain adaptation: Learning bounds and",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 21,
+      "text": "algorithms. In COLT, 2009.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 22,
+      "text": "[2] Shai Ben-David, John Blitzer, Koby Crammer, and Fernando Pereira. Analysis of representations for",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 23,
+      "text": "domain adaptation. In NeurIPS, 2007.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 24,
+      "text": "[3] Shai Ben-David, John Blitzer, Koby Crammer, Alex Kulesza, Fernando Pereira, and Jennifer Wortman",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 25,
+      "text": "Vaughan. A theory of learning from different domains. Machine Learning, 2010.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 26,
+      "text": "[4] Seiichi Kuroki, Nontawat Charoenphakdee, Han Bao, Junya Honda, Issei Sato, and Masashi Sugiyama.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "sentence_index": 27,
+      "text": "Unsupervised domain adaptation based on source-guided discrepancy. In AAAI, 2019.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 0,
+      "text": "Thank you for your insightful feedback and suggestions! To address your comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 1,
+      "text": "- Following your suggestion, we have added one experiment on a synthetic regression task in Appendix C. Here, we show that our method can learn meaningful models for target domains, and also learn the source domain weights in a way that selects only relevant source domains for training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 2,
+      "text": "More importantly, we can learn the model and the domain weights simultaneously, unlike many existing works that use two-stage learning (learn the weights then the model).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 3,
+      "text": "- We also followed your suggestion and show the domain weights of MDMN on the Amazon dataset for comparison (see the new Section 5.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 4,
+      "text": "As you mentioned, our weights are theoretically justified while theirs are only heuristically computed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 5,
+      "text": "We see that the weights provided by MDMN are not very stable, changing from one source domain to another drastically during training.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 6,
+      "text": "This instability makes their weights difficult to interpret.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 7,
+      "text": "- W.r.t. the naive method of using (fixed) coefficients.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 8,
+      "text": "Note that whichever domain discrepancy is used, it has to depend on the data representation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 9,
+      "text": "For complicated models like deep neural networks, the feature representations (hidden layers) are changing constantly during training and arguably there is no \"right\" way to compute *fixed* coefficients/weights",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 10,
+      "text": "based on ever-changing representations",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 11,
+      "text": ".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 12,
+      "text": "Computing the coefficients directly from the images is extremely difficult, if not impossible, because calculating the domain discrepancy using such high-dimensional data is not feasible.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 13,
+      "text": "Note that MDMN DOES use W1-distance to compute domain weights, and our comparison in Section 5.4 shows that it is not very stable, as mentioned above.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 14,
+      "text": "To summarize, there is no easy way to compute meaningful fixed coefficients and our method is indeed suitable for dynamic representations during neural network training.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 15,
+      "text": "We hope our explanation and additional results address and resolve your concerns. If you have any other comments, we are happy to have further discussions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lvRFUliS",
+      "rebuttal_id": "HklAo1JujB",
+      "sentence_index": 16,
+      "text": "Thank you!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

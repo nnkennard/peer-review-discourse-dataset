@@ -1,0 +1,973 @@
+{
+  "metadata": {
+    "forum_id": "rylV-2C9KQ",
+    "review_id": "BJeYeRM0jm",
+    "rebuttal_id": "r1gzyKy_a7",
+    "title": "Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rylV-2C9KQ&noteId=r1gzyKy_a7",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 0,
+      "text": "The paper builds upon Deep Image Prior (DIP) - work which shows that one can optimize a neural generator to fit a single image without learning on any dataset, and the output of the generator (which approximates the image) can be used for denoising / super resolution / etc.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 1,
+      "text": "The paper proposes a new architecture for the DIP method which has much less parameters, but works on par with DIP.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 2,
+      "text": "Another contribution of the paper is theoretical treatment of (a simplified version of) the proposed architecture showing that it can\u2019t fit random noise (and thus maybe better suited for denoising).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 3,
+      "text": "The paper is clearly written, and the proposed architecture has too cool properties: it\u2019s compact enough to be used for image compression; and it doesn\u2019t overfit thus making early stopping notnesesary (which was crucial for the original DIP model).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 4,
+      "text": "I have two main concerns about this paper.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 5,
+      "text": "First, it is somewhat misleading about its contributions: it's not obvious from abstract/introduction that the whole model is the same as DIP except for the proposed architecture.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 6,
+      "text": "Specifically, the first contribution listed in the introduction makes it look like this paper introduces the idea of not learning the decoder on the dataset (the one that starts with \u201cThe network is not learned and itself incorporates all assumptions on the data.\u201d).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 7,
+      "text": "My second concern is about the theoretical contribution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 8,
+      "text": "On the one hand, I enjoyed the angle the authors tackled proving that the network architecture is underparameterized enough to be a good model for denoising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 9,
+      "text": "On the other hand, the obtained results are very weak: only one layered version of the paper is analysed and the theorem applies only to networks with less than some threshold of parameters.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 10,
+      "text": "Roughly, the theorem states that if for example we fix any matrix B of size e.g. 256 x k and matrix U of size 512 x 256 and then compute U relu(B C) where C is the vector of parameters of size k x 1, AND if k < 2.5 (i.e. if we use at most 2 parameters), then it would be very hard to fit 512 iid gaussian values (i.e. min_C ||U relu(B C) - eta|| where eta ~ N(0, 1)).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 11,
+      "text": "This restriction of the number of parameters to be small is only mentioned in the theorem itself, not in the discussion of its implications.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 12,
+      "text": "Also, the theorem only applies to the iid noise, while most natural noise patterns have structure (e.g. JPEG artifacts, broken pixels, etc) and thus can probably be better approximated with deep models.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 13,
+      "text": "Since the paper manages to use very few parameters (BTW, how many parameters in total do you have? Can you please add this number to the text?), it would be cool to see if second order methods like LBFGS can be applied here.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 14,
+      "text": "Some less important points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 15,
+      "text": "Fig 4 is very confusing.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 16,
+      "text": "First, it doesn\u2019t label the X axis.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 17,
+      "text": "Second, the caption mentions that early stopping is beneficial for the proposed method, but I can\u2019t see it from the figure.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 18,
+      "text": "Third, I don\u2019t get what is plotted on different subplots.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 19,
+      "text": "The text mentions that (a) is fitting the noisy image, (b) is fitting the noiseless image, and (c) is fitting noise. Is it all done independently with three different models?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 20,
+      "text": "Then why does the figure says test and train loss? And why DIP loss goes up, it should be able to fit anything, right? If not and it\u2019s a single model that gets fitted on the noisy image and tested on the noiseless image, then how can you estimate the level of noise fitting? ||G(C) - eta|| should be high if G(C) ~= x.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 21,
+      "text": "Also, in this quote \u201cIn Fig. 4(a) we plot the Mean Squared Error (MSE) over the number of iterations of the optimizer for fitting the noisy astronaut image x + \u03b7 (i.e., FORMULA ...\u201d the formula doesn\u2019t correspond to the text.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 22,
+      "text": "And finally, the discussion of this figure makes claims about the behaviour of the model that seems to be too strong to be based on a single image experiment.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 23,
+      "text": "I don\u2019t get the details of the batch normalization used: with respect to which axis the mean and variance are computed?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 24,
+      "text": "The authors claim that the model is not convolutional.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 25,
+      "text": "But first, it\u2019s not obvious why this would be a good thing (or a bad thing for that matter)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 26,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 27,
+      "text": "Second, it\u2019s not exactly correct (as noted in the paper itself): the architecture uses 1x1 convolutions and upsampling, which combined give a weak and underparametrized analog of convolutions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 28,
+      "text": "> The deep decoder is a deep image model G: R N \u2192 R n, where N is the number of parameters of the model, and n is the output dimension, which is typically much larger than the number of parameters (N << n).",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 29,
+      "text": "I think it should be vice versa, N >> n",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 30,
+      "text": "The following footnote",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 31,
+      "text": "> Specifically, we took a deep decoder G with d = 6 layers and output dimension 512\u00d7512\u00d73, and choose k = 64 and k = 128 for the respective compression ratios.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 32,
+      "text": "Uses unintroduced (at that point) notation and is very confusing.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 33,
+      "text": "It would be nice to have a version of Figure 6 with k = 6, so that one can see all feature maps (in contrast to a subset of them).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 34,
+      "text": "I\u2019m also wondering, is it harder to optimize the proposed architecture compared to DIP?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "sentence_index": 35,
+      "text": "The literature on distillation indicates that overparameterization can be beneficial for convergence and final performance.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 0,
+      "text": "Many thanks for the detailed review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 1,
+      "text": "Main comments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 2,
+      "text": "1/ The DIP approach critically relies on regularization in order to make the method work (both by adding random noise in each optimization step to the input, as well as early stopping).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 3,
+      "text": "As the first reviewer noted ``In fact, the DIP of Ulyanov et al. can hardly be considered \"a model\" (or a prior, for that matter), and instead should be considered \"an algorithm\", since it relies on the early stopping of a specific optimization algorithm''.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 4,
+      "text": "However we follow the reviewers' suggestion and made clear that the idea to use a deep network without learning as an image model is not new and rewrote the item to ``The network itself acts as a natural data model.  Not only does the network require no training (just as the DIP); it also does not critically rely on regularization, for example by early stopping (in contrast to the DIP).''",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 5,
+      "text": "Before that, in the introduction, in the original and revised version, we have a paragraph devoted to the DIP explaining that Ulyanov et al. introduced the idea of using a deep neural network without learning as an image model.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 6,
+      "text": "2/ Regarding the theoretical contribution: We fully agree that a limitation of the theorem is that it pertains to a one layered version of the decoder.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 7,
+      "text": "We are currently extending this to the multilayer case, but still have to address a technical difficulty in counting the number of different sign pattern matrices.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 8,
+      "text": "Regarding the assumptions: The proposition uses the assumption that k^2 log(n_0)  / n <= 1/32.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 9,
+      "text": "Here, the constant 1/32 is not optimal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 10,
+      "text": "k^2 is essentially the number of parameters of the model, and n is the output dimension.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 11,
+      "text": "The proposition is only interesting if k^2 log(n_0)  / n <= 1/20 even without this assumption (due to the right hand side of the lower bound) therefore this assumption is not restrictive.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 12,
+      "text": "The bound is applicable if the number of parameters, k^2 is smaller than a logarithmic term times the number of output parameters, i.e., it allows the number of parameters to scale almost linearly in the output dimension.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 13,
+      "text": "This is the regime in which the deep decoder operates throughout the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 14,
+      "text": "We agree that many natural noise patterns have structure, and that those can be better approximated with deep models, and are thus more difficult to remove.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 15,
+      "text": "3/ We have added the sentence ``In the default architectures with $d=6$ and $k=64$ or $k=128$, we have that N = 25,536 (for k=64) and N = 100,224 (k=128)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 16,
+      "text": "out of an RGB image space of dimensionality 512\\times512\\times3=786,432 parameters.'' to specify the number of parameters.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 17,
+      "text": "Thanks for the suggestion to try second order method like LBFGS; we have tried LBFGS as a response to the reviewer's comment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 18,
+      "text": "It converges in significantly fewer iterations, but each iterations is so much more expensive that overall it optimizes slower than ADAM or gradient descent.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 19,
+      "text": "Minor comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 20,
+      "text": "1/ Figure 4: We have added labels and the sentence ``Early stopping can mildly enhance the performance of DD; to see this note that in panel (a), the minimum is obtained at around 5000 iterations and not at 50,000.'' in the caption to clarify.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 21,
+      "text": "Also, we have added the sentence ``Models are fitted independently for the noisy image, the noiseless image, and the noise.'', and rewrote the paragraph",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 22,
+      "text": "Thanks for pointing this out!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 23,
+      "text": "We agree that here we present only results for one image, but we did carry out simulations for many images, and those plots are qualitatively the same for all the images considered.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 24,
+      "text": "Thus our conclusions about the model do not only hold for one image.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 25,
+      "text": "2/ Normalization is applied channel wise.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 26,
+      "text": "Let z{ij} be the j-th column in the i-th layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 27,
+      "text": "Then z{ij} is normalized independently of any of the other channels.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 28,
+      "text": "3/ We have reworded the corresponding paragraphs to make clear that while we do not use convolutions, and thus this is not strictly speaking a convolutional neural network, it shares many structural similarities with a conventional neural network, as pointed out by the reviewer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25,
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 29,
+      "text": "4/ The equation is correct in that the parameter choices in the paper are such that the deep decoder has much fewer model parameters N than its output dimension. Thus N is much less than n.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 30,
+      "text": "5/ We agree that it is not optimal to use unintroduced notation at this point, but we made this compromise so that we can illustrate the performance of the deep decoder without introducing its details, but wanted to give a reader the chance to later see exactly what parameters we used.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          31,
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 31,
+      "text": "6/ Unfortunately choosing k=6 is too small to have a small representation error, i.e., to represent the image well.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 32,
+      "text": "We have, however not hand-selected the 8 images shown out of the 64, and the other 64-8 images look very similar.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 33,
+      "text": "We have all the images in the jupyter notebook that comes with the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "BJeYeRM0jm",
+      "rebuttal_id": "r1gzyKy_a7",
+      "sentence_index": 34,
+      "text": "7/ Great question, it is faster to optimize the deep decoder since the adam/SGD steps are cheaper, but it indeed seems to require slightly more iterations for best performance than the DIP.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

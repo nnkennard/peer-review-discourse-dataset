@@ -1,0 +1,499 @@
+{
+  "metadata": {
+    "forum_id": "HygSq3VFvH",
+    "review_id": "SkxED7_nKS",
+    "rebuttal_id": "rkgrTHMcjB",
+    "title": "Self-Supervised State-Control through Intrinsic Mutual Information Rewards",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HygSq3VFvH&noteId=rkgrTHMcjB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 0,
+      "text": "I take issue with the usage of the phrase \"skill discovery\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 1,
+      "text": "In prior work (e.g. VIC, DIAYN), this meant learning a skill-conditional policy.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 2,
+      "text": "Here, there is only a single (unconditioned) policy, and the different \"skills\" come from modifications of the environment -- the number of skills is tied to the number of environments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 3,
+      "text": "This is not to say that this way of doing things is wrong, but rather that it is misleading in the context of prior work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 4,
+      "text": "Skill discovery in this context implies being able to have a single agent execute a variety of learned skills, rather than having one agent per environment with each environment designed to elicit a specific skill.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 5,
+      "text": "Rather than \"skill discovery\", I suggest the authors position MISC relative to earlier work on empowerment, wherein a single policy was used to maximize mutual information of the form I(a; s_t | s_{t-1}).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 6,
+      "text": "Modifying the objective to incorporate domain knowledge (as done in your DIAYN baseline) yields I(a; s_i | s_{t-1}) and is amenable to maximization by either of the lower bounds considered here.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 7,
+      "text": "Indeed, your DIAYN baseline with skill length set to 1 and the number of skills equal to the number of actions (or same parameterization in the case of continuous actions) should recover this approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 8,
+      "text": "I believe this would be a much more appropriate baseline, and I'd be curious to hear the intuition for why I(s_c ; s_i) should be superior.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 9,
+      "text": "Apart from this missing baseline, the experimental results seem convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 10,
+      "text": "However, it is unclear whether or not VIME and PER were modified to incorporate domain knowledge (i.e. s_i/s_c distinction).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 11,
+      "text": "Indeed, an appendix would be greatly appreciated, as many experimental details were omitted.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 12,
+      "text": "Ideally, an experimental setup with previously published results (e.g. control suite for DIAYN, Seaquest for DISCERN) would be considered, but I can understand why this wasn't done as incorporating domain knowledge is the main contribution of the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 13,
+      "text": "That said, the claims should be weakened to reflect this gap, and domain knowledge should be mentioned more prominently (e.g. states of interest vs context are given, not learned).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 14,
+      "text": "Rebuttal EDIT:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 15,
+      "text": "The language around skills and the extent of prior knowledge still downplays things a bit too much for my liking.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 16,
+      "text": "Needing new environment variations to obtain new skills is a large step backwards from things like DIAYN (the MISC/DIAYN combination needs more evidence to be considered a possible solution), and the s_i/s_c distinction is non-trivial to specify or learn for harder problems (e.g. pixel observations).",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 17,
+      "text": "That said, in the sort of settings under consideration (low dimensional state variables and environmental variations are simple to create) MISC does appear to be superior to prior work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "sentence_index": 18,
+      "text": "The empowerment baseline is much appreciated, and while modifications of PER and VIME that incorporate prior knowledge would've also been nice, the experimental results pass the bar for acceptance in my view.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 0,
+      "text": "Thank you for the comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 1,
+      "text": "To review\u2019s feedback:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 2,
+      "text": "- We pay attention to the term \u201cskill discovery\u201d and made it more clear about the connection between prior works and the current work in the revised version.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 3,
+      "text": "Our method can also be combined with DIAYN to learn the skill-conditioned policy as mentioned in the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 4,
+      "text": "- We added both a theoretical connection and new experimental results to compare MISC and the empowerment method in the revised version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 5,
+      "text": "In the navigation tasks, we show that our method outperforms the empowerment method.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 6,
+      "text": "- An intuition for why I(s_c, s_i) could be superior to I(a, s_i) is that in robotic tasks, the mutual information between the robotic sates, s_c, and the object states, s_i, could be easier to be estimated than the mutual information between the action, a, and the object states, s_i, as shown in Figure 4 in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 7,
+      "text": "Therefore, the agent receives a higher MI reward more easily and learns to control s_i more efficiently.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 8,
+      "text": "The context states can be seen as the summary information of the agent\u2019s action and the transition model of the environment, which could be more relevant in terms of estimating the object states in comparison to the agent\u2019s actions.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 9,
+      "text": "- VIME and PER are used as described in their original papers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 10,
+      "text": "- We have added an appendix to provide more information about experiment details.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 11,
+      "text": "- We also newly evaluated our method on gazebo-based robotic simulations, including the cases when there is no object, a single object of interest, and multiple objects of interests.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 12,
+      "text": "A video showing new experimental results is available at https://youtu.be/l5KaYJWWu70?t=104",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 13,
+      "text": "In this experiment, we also compare MISC with two additional baselines, including ICM and empowerment (with state of interest), see Figure 4 in the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 14,
+      "text": "- We now mention that the states of interests vs context are given in the revised paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 15,
+      "text": "However, when they are not given. They can also be automatically learned/selected by iterating over all possible combinations",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 16,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxED7_nKS",
+      "rebuttal_id": "rkgrTHMcjB",
+      "sentence_index": 17,
+      "text": "Afterwards, an optimal combination can be chosen by the user via testing in the task at hand.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

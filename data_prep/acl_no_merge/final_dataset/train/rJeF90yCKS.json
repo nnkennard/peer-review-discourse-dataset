@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "forum_id": "H1eWGREFvB",
+    "review_id": "rJeF90yCKS",
+    "rebuttal_id": "rJlvwS37sS",
+    "title": "Stein Self-Repulsive Dynamics: Benefits from Past Samples",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=H1eWGREFvB&noteId=rJlvwS37sS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 0,
+      "text": "This paper proposed another variant of Langevin dynamics, called \u201cStein self-repulsive dynamics,\u201d which simultaneously decreases the auto-correlation of Langevin dynamics and eliminates the need for running parallel chains in SVGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 1,
+      "text": "They combined Langevin dynamics with Stein variational gradient descent and theoretically justified that the proposed method successfully converges to the stationary distribution with only a single chain, unlike SVGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 2,
+      "text": "The proposed method decreases the auto-correlation of Langevin dynamics, so the proposed method increases the sample efficiency.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 3,
+      "text": "The paper is well-written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 4,
+      "text": "The idea of the proposed method is natural, which is incorporating the functionality of SVGD to reduce the auto-correlation of Langevin dynamics.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 5,
+      "text": "The idea is intuitive and justified by their theoretical analysis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 6,
+      "text": "The authors also well- placed their work in the literature, as described in Section 3.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 7,
+      "text": "The intuitive explanation of the proposed method is given in Section 3.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 8,
+      "text": "I have one technical question as follows. If the authors reply appropriately, I will raise the score to accept.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 9,
+      "text": "In Theorem 4.3",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 10,
+      "text": ", the result holds for any k and M. The authors claim that if we take a limit of M -> \u221e with fixed k, the practical dynamics converges to the discrete-time mean-field limit, in Section 4.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 11,
+      "text": "However, to state the result of Theorem 4.3, k should be bigger than M c_\\eta from the dentition of \\tilde{\\rho}_k^M, as shown under the equation (4).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 12,
+      "text": "How do we take a limit of M -> \u221e ? Does k also go \u221e?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 13,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 14,
+      "text": "- The definition of g should depend on only \\theta_k^I and \\hat{\\delta}_k^M, not \\theta_k^k.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 15,
+      "text": "- The equation (1) should hold for any \\theta\u2019, not \\theta.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "sentence_index": 16,
+      "text": "- The equation (1) should contain \\rho, not p.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 0,
+      "text": "Q1: In Theorem 4.3, the result holds for any $k$ and $M$. The authors claim that if we take a limit of $M \\to \\infty$ with fixed $k$, the practical dynamics converges to the discrete-time mean-field limit, in Section 4.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 1,
+      "text": "However, to state the result of Theorem 4.3, $k$ should be bigger than $M c_\\eta$ from the dentition of $\\tilde{\\rho}_k^M$, as shown under the equation (4).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 2,
+      "text": "How do we take a limit of $M \\to\\infty$ ? Does k also go $\\infty$?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 3,
+      "text": "A1: Thanks for pointing this out.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 4,
+      "text": "The result of this theorem holds uniformly for any $k$ (not a fixed $k$).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 5,
+      "text": "Besides, we do not require $k$ bigger than $M c_\\eta$ in the definition of $\\tilde{\\rho}_k^M$. When $k$ is no more than $M c_\\eta$, $\\tilde{\\rho}_k^M$ and $\\rho_k^M$ are stochastic processes with same distribution and thus the Wasserstein distance between them is 0.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 6,
+      "text": "And for any $k$ is greater than $M c_\\eta$, we have the uniform bound (w.r.t. $k$) as stated in the theorem 4.3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 7,
+      "text": "We are sorry for not stating this clearly in the theorem and we have revisited the present of the theorem. We will fix this issue in the next revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 8,
+      "text": "We also point out that, as our system is complicated, in taking the limit of $M\\to\\infty$, we need to ensure that the number of iteration we run is larger than $Mc_\\eta$. To be specific, the asymptotic convergence would be",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 9,
+      "text": "$$\\lim_{k,M \\to\\infty, \\eta \\to 0^+} \\mathbb{D}_{\\text{BL}} (\\rho_k, \\rho^*)=0$$",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 10,
+      "text": "where the joint limit of k and M requires that $k\\eta\\to\\infty$; $\\exp(C\\alpha^{2}k\\eta)\\eta^{2}=o(1)$; $(k\\eta)/(Mc)=q(1+o(1))$ with $q>1$. Here if $q \\leq 1$, we degenerate to Langevin. But when $q>1$ (intuitively that means, when $M$ is large, the number of iterations we run is larger), our dynamics is different from Langevin, which is what we do in the practice.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 11,
+      "text": "Also, we would like to remark that this seemingly strange things is in fact the \u2018artifact\u2019 caused by the using of Langevin dynamics at beginning to obtain the $M$ initial samples when we designed the practical implementation of the proposed methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 12,
+      "text": "However, it is not really necessary to use Langevin dynamics to get $M$ initial samples, as we can simply using some other initialization distribution and get the $M$ initial samples from that distribution (and by this setting, our dynamics is simply the second phases in Eq (3)).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 13,
+      "text": "All our theory can be easily generalized to this setting using almost identical argument, which can also address your concerns on this issue.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 14,
+      "text": "Q2: Regarding other minor comments",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJeF90yCKS",
+      "rebuttal_id": "rJlvwS37sS",
+      "sentence_index": 15,
+      "text": "A2: Thanks for your notification! We will polish our paper and rewrite the corresponding part in the next revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

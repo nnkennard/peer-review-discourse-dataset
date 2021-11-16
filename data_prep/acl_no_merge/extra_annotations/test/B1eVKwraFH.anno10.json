@@ -1,0 +1,617 @@
+{
+  "metadata": {
+    "forum_id": "SkgTR3VFvH",
+    "review_id": "B1eVKwraFH",
+    "rebuttal_id": "Sye1hVSDjS",
+    "title": "Pipelined Training with Stale Weights of Deep Convolutional Neural Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkgTR3VFvH&noteId=Sye1hVSDjS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 0,
+      "text": "In the paper, the authors propose a pipelined backpropagation algorithm faster than the traditional backpropagation algorithm.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 1,
+      "text": "The proposed method allows computing gradients using stale weights such that computations in different layers can be executed in parallel.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 2,
+      "text": "They also conduct experiments to evaluate the effect of staleness and show that the proposed method is faster than compared methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 3,
+      "text": "I have the following concerns:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 4,
+      "text": "1) There are several important works on model-parallelism and convergence guarantee of pipeline-based methods missing in this paper, for example [1][2].",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 5,
+      "text": "2) Does the proposed method store immediate activations or recompute the activations in the backward pass?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 6,
+      "text": "3) In the experiments, the accuracy values are too low for me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 7,
+      "text": "For example, resnet110 on cifar10 is 91.99% only, it should be around 93%, an example online",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 8,
+      "text": "https://github.com/akamaster/pytorch_resnet_cifar10.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 9,
+      "text": "4) In the experiments, more comparisons with methods in [1] or [2] should be conducted given they are all parallelizing the backpropagation algorithm and achieve speedup in the training.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 10,
+      "text": "5) Last but not least, convergence analysis of the proposed method should be provided given that asynchrony may lead to divergence in the optimization.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 11,
+      "text": "[1] Huo, Zhouyuan, et al. \"Decoupled parallel backpropagation with convergence guarantee.\" arXiv preprint arXiv:1804.10574 (2018).",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "sentence_index": 12,
+      "text": "[2] Huo, Zhouyuan, Bin Gu, and Heng Huang. \"Training neural networks using features replay.\" Advances in Neural Information Processing Systems. 2018.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 0,
+      "text": "1",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 1,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 2,
+      "text": "We thank the reviewer for pointing out papers [1] and [2].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 3,
+      "text": "We will definitely cite them in the paper and include a discussion in related work on how our scheme compares to that proposed in the two papers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 4,
+      "text": "In essence, our scheme is different than [1] in two key aspects: (1) we pipeline both the forward and backward passes of the backpropagation while [1] pipelines only the backward pass.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 5,
+      "text": "Further, equation (9) in [1] suggests that while weight updates use delayed gradients, the delayed weights (W^(t-K+k)) are used for the weight gradient calculation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 6,
+      "text": "This is essentially similar to weight stashing used in PipeDream, which we compared to in our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 7,
+      "text": "Thus, our scheme has the advantage of a smaller memory footprint.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 8,
+      "text": "The follow up work in [2] attempts to reduce the memory footprint through feature replay (i.e., re-computing activations during backward pass, similar to GPipe).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 9,
+      "text": "Our scheme saves the activations instead of re-computing them to eliminate pipeline bubble, thus achieving better utilization of the accelerators (GPUs).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 10,
+      "text": "We will edit the related work section to include the above discussion.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 11,
+      "text": "2.\tThe method proposed in our paper stores immediate activations, which is mentioned in Section 3 of the submission.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 12,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 13,
+      "text": "We appreciate the pointer to the better performance of ResNet-110.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 14,
+      "text": "We trained the network for only 164 epochs with a batch size of 100, which is probably the reason that its inference accuracy is lower than expected.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 15,
+      "text": "Should we adopt the hyperparameters (a batch size of 128) and more training epochs (200 epochs) as shown at https://github.com/akamaster/pytorch_resnet_cifar10 , our ResNet-110 baseline reached 93.59% in inference accuracy, and the pipelined ResNet-110 reached 92.88% in inference accuracy.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 16,
+      "text": "The speedup obtained is 1.73X, slightly higher than the 1.71X obtained in our paper, which could be caused by the batch size increase that makes the GPU process more efficient.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 17,
+      "text": "The exact inference accuracy of the model is somewhat orthogonal to our study.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 18,
+      "text": "It is the trend of the decline in inference accuracy with pipelining is what we study and this trend exists with both our hyperparameters and those at https://github.com/akamaster/pytorch_resnet_cifar10.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 19,
+      "text": "Nonetheless, it is relatively easy for us to update the results in the paper with these new hyperparameters.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 20,
+      "text": "4.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 21,
+      "text": "Indeed, comparisons to the results in [1][2] would be interesting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 22,
+      "text": "However, since the scheme in [1] employ weight stashing as PipeDream does and in [2] utilizes re-computing activations, as in GPipe, our comparisons to PipeDream and GPipe subsume comparisons to [1][2], particularly given the space limitations of submission.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 23,
+      "text": "5.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 24,
+      "text": "We appreciate such detailed and rigorous convergence analysis provided in [1] and [2].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 25,
+      "text": "The main goal of our submission is to experimentally show that our pipelined training, using stale weights without weight stashing or micro-batching, is simpler and does converge.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 26,
+      "text": "The paper does achieve this goal, on a number of networks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1eVKwraFH",
+      "rebuttal_id": "Sye1hVSDjS",
+      "sentence_index": 27,
+      "text": "Given the limited space provided, it would be difficult to fit a convergence analysis in our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

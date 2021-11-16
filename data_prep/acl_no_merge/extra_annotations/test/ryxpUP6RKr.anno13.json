@@ -1,0 +1,513 @@
+{
+  "metadata": {
+    "forum_id": "Byl8hhNYPS",
+    "review_id": "ryxpUP6RKr",
+    "rebuttal_id": "rJezfnmEoB",
+    "title": "Neural Machine Translation with Universal Visual Representation",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Byl8hhNYPS&noteId=rJezfnmEoB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 0,
+      "text": "Summary: This paper uses visual representation learned over monolingual corpora with image annotations, which overcomes the lack of large-scale bilingual sentence-image pairs for multimodal NMT.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 1,
+      "text": "Their approach enables visual information to be integrated into large-scale text-only NMT.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 2,
+      "text": "Experiments on four widely used translation datasets show that the proposed approach achieves significant improvements over strong baselines.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 3,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 4,
+      "text": "- This paper is well motivated and well written. I especially like how they use external paired sentence-image data from Multi30k to learn weak pairs for sentences in machine translation.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 5,
+      "text": "- Experimental results are convincing. I like how low-resource translation is included as a priority in their experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 6,
+      "text": "Weaknesses:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 7,
+      "text": "- Do you have any explanations as to why the number of images, if too large, actually hurts translation performance? Is it because more images also leads to a higher chance of noisy images?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 8,
+      "text": "- It would be nice to have an experiment that varies the size of the external paired sentence-image dataset and tested the impact on performance.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 9,
+      "text": "- Please comment on the extra computation required for obtaining image data for MT sentences and for learning image representations.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 10,
+      "text": "- Why are there missing BLEU scores and the number of parameters in Table 1?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 11,
+      "text": "### Post rebuttal",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 12,
+      "text": "#",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 13,
+      "text": "##",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "sentence_index": 14,
+      "text": "Thank you for your detailed answers to my questions.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 0,
+      "text": "Thanks so much for your constructive feedbacks. Please see our response below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 1,
+      "text": "1. Influence of the number of images:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 2,
+      "text": "Yes. The reason might be the higher chance of noise.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 3,
+      "text": "It would be very important to provide a group of images that share similar patterns or topics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 4,
+      "text": "However, too many images for a sentence would have greater chance of noise.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 5,
+      "text": "2. Impact of paired sentence-image dataset:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 6,
+      "text": "Yes. We add the external MS COCO image caption training set and evaluate on the EN-RO task for quick evaluation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 7,
+      "text": "The BLEU scores are 33.55 and 33.71 respectively for COCO only and Multi30K+COCO.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 8,
+      "text": "In addition, we are also interested in the influence of the number of sentence-image pairs inspired by your suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 9,
+      "text": "We randomly split the pairs of Multi30K into the proportion in [0.1, 0.3, 0.5, 0.7, 0.9], the corresponding BLEU scores are [33.07, 33.44, 34.01, 34.06, 33.80] respectively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 10,
+      "text": "These results indicate that a modest number of pairs would be beneficial.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 11,
+      "text": "3. The extra computation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 12,
+      "text": "The extra computation is negligible.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 13,
+      "text": "The time of obtaining image data for MT sentences for EN-RO dataset, for example, is approximately less than 1 minute by tensor operation in GPU.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 14,
+      "text": "The lookup table is formed as the mapping of token (only topic words) index to image id.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 15,
+      "text": "Then, the retrieval method is applied as the tensor indexing from the sentence token (only topic words) index to image ids, which is the same as the procedure of word embedding.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 16,
+      "text": "The retrieved image ids are then sorted by frequency.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 17,
+      "text": "Learning image representations takes only about 2 minutes for all the 29,000 images in Multi30K using 6G GPU memory for feature extraction and 8 threads of CPU for transforming images.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 18,
+      "text": "The extracted features are formed as the \u201cimage embedding layer\u201d with the size of (29000, 2400) for quick accessing in neural network.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 19,
+      "text": "4. Missing BLEU scores & the number of parameters:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxpUP6RKr",
+      "rebuttal_id": "rJezfnmEoB",
+      "sentence_index": 20,
+      "text": "Because those missing numbers (N/A) are not reported in the corresponding literature.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

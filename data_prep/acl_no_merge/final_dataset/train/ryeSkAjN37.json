@@ -1,0 +1,635 @@
+{
+  "metadata": {
+    "forum_id": "r1lrAiA5Ym",
+    "review_id": "ryeSkAjN37",
+    "rebuttal_id": "S1gcKOwqR7",
+    "title": "Backpropamine: training self-modifying neural networks with differentiable neuromodulated plasticity",
+    "reviewer": "AnonReviewer3",
+    "rating": 9,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1lrAiA5Ym&noteId=S1gcKOwqR7",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 0,
+      "text": "Paper summary - This paper extends the differentiable plasticity framework of Miconi et al. (2018) by dynamically modulating the plasticity learning rate.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 1,
+      "text": "This is accomplished via an output unit of the network which defines the plasticity learning rate for the next timestep.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 2,
+      "text": "A variation on this dynamic learning rate related to eligibility traces is also proposed.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 3,
+      "text": "Both dynamic modulation variations strikingly outperform non-plastic and plastic non-modulated recurrent networks on a cue-reward association task with high-dimensional cues.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 4,
+      "text": "The methods marginally outperform plastic non-modulated recurrent networks on a 9x9 water maze task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 5,
+      "text": "Finally, the authors show that adding dynamic plasticity to a small LSTM without dropout improves performance on Penn Treebank.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 6,
+      "text": "The paper motivates dynamic plasticity by analogy to the hypothesized role of dopamine in reward-driven learning in humans and animals.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 7,
+      "text": "Clarity -  The paper is very clear and well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 8,
+      "text": "The introduction provides useful insights, motivates the work convincingly, and provides interesting connections to past work.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 9,
+      "text": "Originality - I don't know of any other work that models the role of dopamine in quite this way, or that applies dynamic plasticity modulation in settings like these.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 10,
+      "text": "Quality - The experiments are well chosen and seem technically sound.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 11,
+      "text": "Significance - The results show that meta-learning by gradient descent to modulate the plasticity learning rate is a promising direction -- a significant contribution in my view.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 12,
+      "text": "Other Comments - The citation to Zaremba et al. in Table 1 made it seem like the perplexity result on that line of the table was directly from Zaremba et al's paper. I'd recommend removing the citation from that line to avoid confusion.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 13,
+      "text": "One thing I would have loved to see from this paper is a comparison of modulated-plasticity LSTMs with the sota from Melis et al., 2017.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 14,
+      "text": "I gather that Experiment 3 presents small LSTMs without recurrent dropout instead because combining plasticity and dropout proved challenging (or at least the authors haven't tried it yet).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 15,
+      "text": "I think the paper is solid as-is; positive results in this comparison would take it to the next level.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 16,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 17,
+      "text": "Why were zero-sequences necessary in Experiment 1?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 18,
+      "text": "This aspect of the task seems somewhat contrived, and it makes me wonder whether the striking failure of the non-modulated RNNs depends on this detail.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 19,
+      "text": "Perhaps the authors could clarify on what a confounding \"time-locked scheduling strategy\" would look like in this task?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 20,
+      "text": "Why does Experiment 1 present pairs of stimuli, rather than high-dimensional individual stimuli?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 21,
+      "text": "Why is non-plastic rnn left out of Figure 2b?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 22,
+      "text": "Typos",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 23,
+      "text": "\"However, in Nature,\" -- no caps",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "sentence_index": 24,
+      "text": "in appendix: \"(see Figure A.4)\" -- the figure is labeled \"Figure 3\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 0,
+      "text": "Thank you Reviewer 2 for your positive appraisal of our results and presentation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 1,
+      "text": "As documented below, we do our best to address your questions, which have helped us improve the paper.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 2,
+      "text": "Re: \"The citation to Zaremba et al. in Table 1 made it seem like the perplexity result on that line of the table was directly from Zaremba et al's paper. I'd recommend removing the citation from that line to avoid confusion.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 3,
+      "text": "We have added \u201csimilar to\u201d in order to emphasize that we adapted and re-ran their architecture (we still use some of their code, which we believe might warrant citation; we are happy to drop it altogether if it is found confusing).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 4,
+      "text": "Re: \"One thing I would have loved to see from this paper is a comparison of modulated-plasticity LSTMs with the sota from Melis et al., 2017.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 5,
+      "text": "We agree that, ideally, a comparison with SOTA architectures would be desirable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 6,
+      "text": "As explained in the response to Reviewer 1, despite all our efforts, we found the technical challenges insurmountable given our computational and engineering resources.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 7,
+      "text": "We will keep trying to investigate such massive architectures in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 8,
+      "text": "Re: \"Why were zero-sequences necessary in Experiment 1? [...] Perhaps the authors could clarify on what a confounding \"time-locked scheduling strategy\" would look like in this task?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 9,
+      "text": "The random zero-inputs make the timing of the cues unpredictable, forcing the network to be driven specifically by the stimuli - as opposed to learning a pre-programmed strategy at each given time step.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 10,
+      "text": "This is merely a convenient choice to make the task more challenging.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 11,
+      "text": "Re: \"Why does Experiment 1 present pairs of stimuli, rather than high-dimensional individual stimuli?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 12,
+      "text": "Again, this simply makes the task more challenging.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 13,
+      "text": "Non-target cues operate as distractors and having pairs of stimuli shown before each response increases the uncertainty in reward credit assignment (i.e. when receiving a reward, the network must still find out which of the two stimuli is the target).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 14,
+      "text": "To better describe the task, we have added a schema of an episode to Figure 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 15,
+      "text": "We hope this may facilitate understanding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 16,
+      "text": "Re: \"Why is non-plastic rnn left out of Figure 2b?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 17,
+      "text": "As documented in Miconi et al 2018, non-plastic networks are terrible at this task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 18,
+      "text": "We are happy to run this experiment and include it if the reviewer finds it useful.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 19,
+      "text": "Typos: \"However, in Nature,\" -- no caps",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 20,
+      "text": "in appendix: \"(see Figure A.4)\" -- the figure is labeled \"Figure 3\"\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryeSkAjN37",
+      "rebuttal_id": "S1gcKOwqR7",
+      "sentence_index": 21,
+      "text": "We thank the reviewer for noticing these typos and have fixed them in the text.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

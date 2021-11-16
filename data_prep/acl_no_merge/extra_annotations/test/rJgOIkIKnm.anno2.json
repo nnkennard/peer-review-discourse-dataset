@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "forum_id": "SklEEnC5tQ",
+    "review_id": "rJgOIkIKnm",
+    "rebuttal_id": "HJxRuUCz6Q",
+    "title": "DISTRIBUTIONAL CONCAVITY REGULARIZATION FOR GANS",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklEEnC5tQ&noteId=HJxRuUCz6Q",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgOIkIKnm",
+      "sentence_index": 0,
+      "text": "In this paper, the authors claim that they are able to update the generator better to avoid generator mode collapse and also increase the stability of GANs training by indirectly increasing the entropy of the generator until it matches the entropy of the original data distribution using functional gradient methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgOIkIKnm",
+      "sentence_index": 1,
+      "text": "The paper is interesting and well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgOIkIKnm",
+      "sentence_index": 2,
+      "text": "However, there is a lot of work coming out in the field of GANs currently, so I am not able to comment on the novelty of this regularization approach, and I am interested to know how this method performs when compared to other techniques to avoid mode collapse such as feature matching and mini-batch discrimination, etc.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgOIkIKnm",
+      "rebuttal_id": "HJxRuUCz6Q",
+      "sentence_index": 0,
+      "text": "Thank you very much for the comment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgOIkIKnm",
+      "rebuttal_id": "HJxRuUCz6Q",
+      "sentence_index": 1,
+      "text": "We believe that the core novelty of our work is in introducing a type of regularization based on a functional gradient.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgOIkIKnm",
+      "rebuttal_id": "HJxRuUCz6Q",
+      "sentence_index": 2,
+      "text": "Because we were able to conduct additional experiment in time, we also conducted feature matching as well and confirmed the superiority of DC-regularization over the method (Table 8).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

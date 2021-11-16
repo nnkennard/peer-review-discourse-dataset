@@ -1,0 +1,675 @@
+{
+  "metadata": {
+    "forum_id": "SkxzSgStPS",
+    "review_id": "HJgBCOT4Kr",
+    "rebuttal_id": "SkleInpWiS",
+    "title": "Exploration via Flow-Based Intrinsic Rewards",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkxzSgStPS&noteId=SkleInpWiS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 0,
+      "text": "Pros",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 1,
+      "text": "Solid technical innovation/contribution:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 2,
+      "text": "- The paper proposed a novel method FICM that bridged the intrinsic reward in DRL with optical flow loss in CV to encourage exploration in an environment with sparse rewards.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 3,
+      "text": "To the best of my knowledge, this was the first paper proposed to use moving patterns in two consecutive observations to motivate agent exploration.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 4,
+      "text": "Balanced view:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 5,
+      "text": "- The authors discussed both the advantages of FICM and settings that FICM might fail to perform well, and conducted experiments to better help the readers understand such nuances.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 6,
+      "text": "Such balanced view should be valuable to RL communities in both academia and industry.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 7,
+      "text": "Clarity:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 8,
+      "text": "- In general this was a very well-written paper, I had no difficulty in following the paper throughout.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 9,
+      "text": "The proposed method (FICM) was clearly motivated, and the authors provided good coverage of related works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 10,
+      "text": "Notably, the authors reviewed two relevant methods upon which FICM was motivated, which made the paper self-contained.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 11,
+      "text": "Cons",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 12,
+      "text": "Experiments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 13,
+      "text": "- Experiments were conducted only using a few recent results as baselines (ICM, forward dynamics, RND).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 14,
+      "text": "It would be interesting to compare FICM against simpler exploration baselines such as epsilon-greedy or entropy regularization.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 15,
+      "text": "- I\u2019d also like to see more extensive comparisons between FICM and ICM across different datasets, for example, Super Mario Bros. and the Atari games, instead of only comparing FICM against ICM on ViZDoom.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 16,
+      "text": "Significance of the innovation:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 17,
+      "text": "- The proposed exploration method seemed to be applicable with a particular RL setting: the environment changes could be represented through consecutive frames (e.g., video games), and optical flow could be used to interpret any object displacements in such consecutive frames.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 18,
+      "text": "And as the authors discussed, even under such constraints the applicability of proposed method depends on how much changes of the environment were relevant to the goal.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 19,
+      "text": "Reproducibility:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 20,
+      "text": "- Although the authors discussed the experiment setting in detail in supplements, I believe open-sourcing the code / software used to conduct the experiments would be greatly help with the reproducibility of the proposed method for researchers or practitioners.",
+      "suffix": "\n\n\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 21,
+      "text": "Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "sentence_index": 22,
+      "text": "A good paper overall, but the experiments were relatively weak (common for most ICLR submissions) and the novelty was somewhat limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 0,
+      "text": "The authors appreciate the reviewer\u2019s time and efforts for reviewing this paper and would like to respond to the questions in the following paragraphs.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 1,
+      "text": "[Comment]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 2,
+      "text": "Compare FICM against simpler exploration baselines such as epsilon-greedy or entropy regularization.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 3,
+      "text": "[Response]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 4,
+      "text": "We would like to thank the reviewer for raising this interesting question, and would like to bring to the reviewer's kind attention that in the original paper of our baseline \"ICM\" [1], the authors had provided a comparison against an \u2018A3C\u2019 baseline (using entropy regularization) with epsilon-greedy exploration method (Section 3 of [1]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 5,
+      "text": "According to the experimental results presented in Section 4 of [1], it has been demonstrated that ICM is superior to that baseline in a number of environments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 6,
+      "text": "This is the reason why we omit that baseline in our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 7,
+      "text": "As our primary interest and focus is prediction-based exploration methods using intrinsic reward signals (as discussed in Section 1 of our paper), we only compare our FICM with ICM [1], RND [2] and large-scale [3], concentrating on analyzing the pros and cons between our proposed method and the other prediction-based ones.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 8,
+      "text": "However, we would still be glad to include additional comparisons against the suggested methods in the final version of our paper, if the reviewer considers that is informative for the readers to comprehend the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 9,
+      "text": "[Comment]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 10,
+      "text": "More extensive comparisons between FICM and ICM across different datasets, for example, Super Mario Bros. and the Atari games, instead of only comparing FICM against ICM on ViZDoom.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 11,
+      "text": "[Response]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 12,
+      "text": "We appreciate the suggestions from the reviewer and would like to share with the reviewer our additional experimental results of ICM using the same hyper-parameter settings described in Section 4.1 in the following figure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 13,
+      "text": "(figure link: https://imgur.com/5pPl8PV )",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 14,
+      "text": "It is observed that ICM is only able to deliver comparable performance to our method in Atari game \"Seaquest\". We would definitely be glad to incorporate these new results in our manuscript in the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 15,
+      "text": "[Comment]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 16,
+      "text": "Reproducibility.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 17,
+      "text": "[Response]",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 18,
+      "text": "Thank you very much for the suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 19,
+      "text": "We have already uploaded our source codes as well as the demonstration videos to the following sites.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 20,
+      "text": "Our experimental results and statements presented in the manuscript are fully reproducible and verifiable.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 21,
+      "text": "Github: https://github.com/IclrPaperID2276/iclr_paper_2276",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 22,
+      "text": "Demo Video: https://youtu.be/JL68QFNj_N8",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 23,
+      "text": "We hope that we have adequately responded to your questions, and would be very glad to discuss with you if you have any further comments or suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 24,
+      "text": "[1] D. Pathak, P. Agrawal, A. A. Efros, and T. Darrell. Curiosity-driven exploration by self-supervised prediction. In Proc. Int. Conf. Machine Learning (ICML), pp. 2778\u20132787, May 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 25,
+      "text": "[2] Y. Burda, H. Edwards, A. Storkey, and O. Klimov. Exploration by random network distillation. In Proc. Int. Conf. Learning Representations (ICLR), May 2019b.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgBCOT4Kr",
+      "rebuttal_id": "SkleInpWiS",
+      "sentence_index": 26,
+      "text": "[3] Y. Burda, H. Edwards, D. Pathak, A. J. Storkey, T. Darrell, and A. A. Efros. Large-scale study of curiosity-driven learning. In Proc. Int. Conf. Learning Representation (ICLR), May 2019a.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

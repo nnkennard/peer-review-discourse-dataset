@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "forum_id": "B1fpDsAqt7",
+    "review_id": "r1eaptK5hm",
+    "rebuttal_id": "SJlY63MSpX",
+    "title": "Visual Reasoning by Progressive Module Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1fpDsAqt7&noteId=SJlY63MSpX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 0,
+      "text": "The paper proposes to learn task-level modules progressively to perform the task of VQA.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 1,
+      "text": "Such task-level modules include object/attribute prediction, image captioning, relationship detection, object counting, and finally VQA model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 2,
+      "text": "The benefit of using modules for reasoning allows one to visualize the reasoning process more easily to understand the model better.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 3,
+      "text": "The results are mainly shown on VQA 2.0 set, with a good amount of analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 4,
+      "text": "- I think overall this is a good paper, with clear organization, detailed description of the approach, solid analysis of the approach and cool visualization.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 5,
+      "text": "I especially appreciate that analysis is done taking into consideration of extra computation cost of the large model; the extra data used for visual relationship detection.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 6,
+      "text": "I do not have major comments about the paper itself, although I did not check the technical details super carefully.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 7,
+      "text": "- One thing I am confused about is the residual model, which seems quite important for the pipeline but I cannot find details describing it and much analysis on this component.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 8,
+      "text": "- I am in general curious to see if it will be beneficial to fine-tune the modules themselves can further improve performance. It maybe hard to do it entirely end-to-end, but maybe it is fine to fine-tune just a few top layers (like what Jiang et al did)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 9,
+      "text": "- One great benefit of having a module-based model is feed in the *ground truth* output for some of the modules.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 10,
+      "text": "For example, what benefit we can get if we have perfect object detection? Where can we get if we have perfect relationships?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "sentence_index": 11,
+      "text": "This can help us not only better understand the models, but also the dataset (VQA) and the task in general.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 1,
+      "text": "We will also include the suggested experiment that shows the plug-and-play nature of PMN.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 2,
+      "text": "1. Residual modules",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 3,
+      "text": "- Residual modules are small neural networks (e.g., an MLP for Mvqa, Sec. 3.4, (4)) that a task module may use when other lower level modules are incapable of providing a solution to a given query.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 4,
+      "text": "For example, consider the question \u201cis this person going to be happy?\u201d on an image of a person opening a present.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 5,
+      "text": "Lower level modules of Mvqa may not be sufficient to solve the question.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 6,
+      "text": "Therefore, Mvqa would make use of its residual module, which would essentially learn to \u201cpick up\u201d all queries that lower level modules cannot answer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 7,
+      "text": "2. Effect of fine-tuning",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 8,
+      "text": "- While it might be beneficial to fine-tune the modules for a specific parent task we want each module to be an expert for their own task as it facilitates a plug-and-play architecture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 9,
+      "text": "Fine-tuning may push the modules towards blindly improving parent module\u2019s performance but (i) badly affect interpretability of inputs and outputs; and (ii) may also reduce the lower module\u2019s performance on its own task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 10,
+      "text": "Most importantly, it would not scale with the number of tasks, as for each task the agent would need to keep several fine-tuned modules of the lower tasks in memory.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 11,
+      "text": "3. Feeding in the ground-truth",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 12,
+      "text": "- Thanks for this great suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 13,
+      "text": "We performed an experiment where we evaluate the benefits that the VQA model may achieve by using ground-truth captions instead of captions generated by the caption module.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 14,
+      "text": "Our preliminary experiments show a gain of about 2.0% which is a relatively high gain for VQA.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1eaptK5hm",
+      "rebuttal_id": "SJlY63MSpX",
+      "sentence_index": 15,
+      "text": "This points to important properties of the PMN allowing human-in-the-loop type of continual learning, where a human teacher can pinpoint flaws in the reasoning process and potentially help the model to fix them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

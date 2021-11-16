@@ -1,0 +1,381 @@
+{
+  "metadata": {
+    "forum_id": "HJzLdjR9FX",
+    "review_id": "HJe0Kq69h7",
+    "rebuttal_id": "H1l7nBc4pQ",
+    "title": "DeepTwist: Learning Model Compression via Occasional Weight Distortion",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJzLdjR9FX&noteId=H1l7nBc4pQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 0,
+      "text": "The paper does not really propose a new way of compressing the model weights, but rather a way of applying existing weight compression techniques.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 1,
+      "text": "Specifically, the proposed solution is to repeatedly apply weight compression and fine-tuning over the entire training process.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 2,
+      "text": "Unlike the existing work, weight compression is applied as a form of weight distortion, i.e. the model has the full degree of freedom during fine-tuning (to recover potential compression errors).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 3,
+      "text": "Pros:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 4,
+      "text": "- The proposed method is shown to work with existing methods like weight pruning, low-rank compression and quantization.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 5,
+      "text": "Cons:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 6,
+      "text": "- The idea is a simple extension of existing work.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "sentence_index": 7,
+      "text": "- In Table 4, it is hard to compare DeepTwist with the other methods because activation quantization is not used.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 0,
+      "text": "Thank you for the review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 1,
+      "text": "While the weight formats after model compression follow well known ones, our model compression method is significantly different from the existing ones.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 2,
+      "text": "Let us discuss some parts of reasons.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 3,
+      "text": "- Training models after compression in order to recover accuracy is as important (if not more) as compressing weights.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 4,
+      "text": "We have found that occasional distortions (not compressing weights for every mini-batch like previous techniques), relatively large learning rate, and training batches in full-precision (unlike previous ones which store compressed weights during entire training) would be the key to recovering or even increasing the accuracy.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 5,
+      "text": "- Exploring large search space in much wider area is suggested in this paper through large distortion step and large learning rate (note that many compression-aware techniques perform compression at every batch has distortion step of \u201c1\u201d while much smaller learning rate for retraining that normal training is chosen).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 6,
+      "text": "As we discussed in the paper, investigating various local minima is crucial for good model compression.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 7,
+      "text": "- Our pruning method is fundamentally different from the previous ones because we do not incorporate a masking layer.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 8,
+      "text": "While previous pruning ideas keep zero weights during training, we do not have any zero weights at any moment except at the weight distortion step.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 9,
+      "text": "- Our low-rank approximation is also unique one since 1) we do not alter the structure for training even after performing SVD, 2) very high learning rate associated with transient accuracy loss is allowed for DeepTwist, and 3) we change SV spectrum continuously while the previous ones perform SVD only once (in practice, retraining low-rank approximated model has been considered to be very difficult, if not impossible).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 10,
+      "text": "- Even though our pruning method is even simpler compared to the previous ones, compression rate is significantly better or very close to the one based on sophisticated Bayesian inference model.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 11,
+      "text": "- Low-rank approximation results on PTB (Figure 2) shows even higher compression rate compared with weight pruning (Table 3), which is surprising to us because pruning has been known to show much higher compression ratio compared with SVD (fine-grain vs. coarse-grain or structured).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 12,
+      "text": "- Quantization is performed also in a very different way.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 13,
+      "text": "Unlike previous ones, we do not consider quatization during",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 14,
+      "text": "training. \u201cDo not perform quantization at every batch, but instead recover accuracy through full-precision training, high learning rate, and occasional quantization\u201d is the key message.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 15,
+      "text": "- Overall, our occasional compression is a significant one since we can greatly reduce amount of computation overhead from compression.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 16,
+      "text": "If our technique is a simple extension from the previous ones, we could not obtain such impressive results with high compression rate and improved accuracy.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJe0Kq69h7",
+      "rebuttal_id": "H1l7nBc4pQ",
+      "sentence_index": 17,
+      "text": "We believe that our paper suggests a wide view on how model compression should be performed.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

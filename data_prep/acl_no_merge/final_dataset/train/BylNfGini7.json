@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "forum_id": "B14ejsA5YQ",
+    "review_id": "BylNfGini7",
+    "rebuttal_id": "S1x3ypEoCX",
+    "title": "Neural Causal Discovery with Learnable Input Noise",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B14ejsA5YQ&noteId=S1x3ypEoCX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 0,
+      "text": "In the manuscript entitled \"Neural Causal Discovery with Learnable Input Noise\" the authors describe a method for automated causal inference under the scenario of a stream of temporally structured random variables (with no missingness and a look-back window of given size).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 1,
+      "text": "The proposed approach combines a novel measure of the importance of fidelty in each variable to predictive accuracy of the future system state (\"learnable noise risk\") with a flexible functional approximation (neural network).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 2,
+      "text": "Although the setting (informative temporal data) is relatively restricted with respect to the general problem of causal inference, this is not unreasonable given the proposed direction of application to automated reasoning in machine learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 3,
+      "text": "The simulation and real data experiments are interesting and seem well applied.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 4,
+      "text": "A concern I have is that the manuscript as it stands is positioned somewhere between two distinct fields (sparse learning/feature selection, and causal inference for counterfactual estimation/decision making), but doesn't entirely illustrate its relationship to either.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 5,
+      "text": "In particular, the derived criterion is comparable to other sparsity-inducing penalities on variable inclusion in machine learning models; although it has motivation in causality it is not exclusively derived from this position, so one might wonder how alternative sparsity penalities might perform on the same challenge.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 6,
+      "text": "Likewise, it is not well explained what is the value of the learnt relationships, and how uncertainty and errors in the causal learning are relevant to the downstream use of the learnt model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 7,
+      "text": "In the ordinary feature selection regime one is concerned simply with improving the predictive capacity of models: e.g. a non-linear model might be fit using just the causal variables that might out-perform both a linear model and a non-linear model fit using all variables.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BylNfGini7",
+      "sentence_index": 8,
+      "text": "Here the end goal is less clear; this is understandable in the sense that the work is positioned as a piece in a grand objective, but it would seem valuable to nevertheless describe some concrete example(s) to elucidate this aspect of the algorithm (use case / error effects downstream).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 0,
+      "text": "Thank you for the review, and we really appreciate your suggestions!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 1,
+      "text": "In the revision, we have added analysis in section 4.2 and section 5 on how the learned causal matrix can be used downstream, for example in RL/IL and interpretability of neural nets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 2,
+      "text": "In the discussion in section 5, we also analyze how the error may affect the tasks downstream.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 3,
+      "text": "We are excited that various tasks may utilize or incorporate our algorithm, and benefit from the causal inference ability it enables.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 4,
+      "text": "We have also added comparison with sparse learning/feature selection methods in the \u201crelated works\u201d section.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BylNfGini7",
+      "rebuttal_id": "S1x3ypEoCX",
+      "sentence_index": 5,
+      "text": "In particular, we note that L1 and group L1 regularization is dependent on the model structure change and rescaling of input variables, while our learnable noise risk is invariant to both, making it suitable for causal discovery where the scale of data may span orders of magnitude and the model structure may vary.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

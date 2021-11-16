@@ -1,0 +1,759 @@
+{
+  "metadata": {
+    "forum_id": "BkgWHnR5tm",
+    "review_id": "HJg1qgpZTm",
+    "rebuttal_id": "S1x7SdplAX",
+    "title": "Neural Graph Evolution: Towards Efficient Automatic Robot Design",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BkgWHnR5tm&noteId=S1x7SdplAX",
+    "annotator": "anno4"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 0,
+      "text": "This paper discusses the optimization of robot structures, combined with their controllers.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 1,
+      "text": "The authors propose a scheme",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 2,
+      "text": "based on a graph representation of the robot structure, and a graph-neural-network as controllers.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 3,
+      "text": "The experiments show",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 4,
+      "text": "that the proposed scheme is able to produce walking and swimming robots in simulation.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 5,
+      "text": "The results in this paper are impressive, and the paper seems free of technical errors.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 6,
+      "text": "The main criticism I have is that I found the paper harder to read.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 7,
+      "text": "In particular, the exact difference between the proposed method and the ES baseline is not as clear as it could be.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 8,
+      "text": "This makes the contribution of this paper in terms of the method",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 9,
+      "text": "hard to judge. Please include further description of the ES cost function and algorithm in the main body of the paper.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 10,
+      "text": "The second point is that the proposed approach seems to modify a few things from the ES baseline.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 11,
+      "text": "The efficacy of the separate modifications should be tested.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 12,
+      "text": "Therefore I would like to see experiments with the ES cost function, but with",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "sentence_index": 13,
+      "text": "inclusion of the pruning step, and experiments with the AF-function but without the pruning step.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the reading and suggestions of our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 1,
+      "text": "Q1: The exact difference between the proposed method and the ES baseline is not as clear as it could be.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 2,
+      "text": "We agree and apologize for the lack of clarity in some parts of our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 3,
+      "text": "We renamed all the models based on the original papers and their properties.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 4,
+      "text": "We refer the reviewer to general response for further details of each baseline algorithms.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 5,
+      "text": "We also improved clarity in the revised version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 6,
+      "text": "Q2: The second point is that the proposed approach seems to modify a few things from the ES baseline.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 7,
+      "text": "We thank the reviewer for the insightful suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 8,
+      "text": "In the latest version, to test the efficacy of each submodule of NGE, the baselines now include the algorithm with the inclusion of the pruning step, and the algorithms with AF and without AF using MLP.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 9,
+      "text": "More specifically, the baselines are named:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 10,
+      "text": "1. ESS-Sims",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 11,
+      "text": "It is the baseline algorithm without the use of AF, as use by (Sims, 1994), (Cheney, 2014) and (Taylor, 2017).",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 12,
+      "text": "2. ESS-Sims-AF",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 13,
+      "text": "The modern variant of ESS-Sims with the inclusion of AF.",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 14,
+      "text": "3. ESS-GM-UC",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 15,
+      "text": "The modern variant of ESS-Sims with the inclusion of AF and graph mutation with uncertainty (pruning).",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 16,
+      "text": "For this baseline, we included the pruning module on top of ESS-Sims-AF.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 17,
+      "text": "Similar to the original baselines available, we performed a grid search of hyperparameters and plot the average performance of the best set of hyperparameters.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 18,
+      "text": "|        NGE         | ESS-Sims  |  ESS-Sims-AF  | ESS-GM-UC | ESS-BodyShare |  RGS",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 19,
+      "text": "fish        |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 20,
+      "text": "**70.21**",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 21,
+      "text": "|",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 22,
+      "text": "38.32      |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 23,
+      "text": "51.24         |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 24,
+      "text": "54.40",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 25,
+      "text": "|",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 26,
+      "text": "54.97         |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 27,
+      "text": "20.96",
+      "suffix": "\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 28,
+      "text": "Walker  |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 29,
+      "text": "**4157.9**  |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 30,
+      "text": "1804.4    |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 31,
+      "text": "2486.9        |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 32,
+      "text": "2458.19     |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 33,
+      "text": "2185.1       |",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 34,
+      "text": "1777.3",
+      "suffix": "\n\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 37,
+      "text": ".",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 40,
+      "text": "On the other hand, the use of AF can greatly affect the performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 41,
+      "text": "The previous approach ESS-Sims can only get 38.32 / 1804 average final reward for fish and walker, respectively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 42,
+      "text": "The performance of walker is even very close to random graph search with no evolution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJg1qgpZTm",
+      "rebuttal_id": "S1x7SdplAX",
+      "sentence_index": 43,
+      "text": "With the help of AF, the performance increases from 38.32 to 51.24 and 1804.4 to 2486.9, respectively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

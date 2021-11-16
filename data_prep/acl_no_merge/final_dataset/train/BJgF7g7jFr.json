@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "forum_id": "Hkx6hANtwH",
+    "review_id": "BJgF7g7jFr",
+    "rebuttal_id": "HyeEUJbMsr",
+    "title": "LambdaNet: Probabilistic Type Inference using Graph Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Hkx6hANtwH&noteId=HyeEUJbMsr",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 0,
+      "text": "= Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 1,
+      "text": "A method to predict likely type of program variables in TypeScript is presented.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 2,
+      "text": "It consists of a translation of a program's type constraints and defined objects into a (hyper)graph, and a specialised neural message passing architecture to learn from the generated graphs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 3,
+      "text": "Experiments show that the method substantially outperforms sound typing in the TypeScript compiler, as well as a recent method based on deep neural networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 4,
+      "text": "= Strong/Weak Points",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 5,
+      "text": "+ The graph representation of the problem is novel, and draws both on core ideas from Hindley-Milner typing (in the subtyping/assignment graph bits) as well as neural ideas (in name similiarity)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 6,
+      "text": "+ The neural message passing architecture is adapted to the problem, handling features not present in the standard GNN literature (hyperedges, ...)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 7,
+      "text": "+ Experiments compare with relevant baselines and consider interesting ablations, studying the effect of the GNN extensions in detail.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 8,
+      "text": "- The hyperparameter selection regime (and the experiments used to find them) is not described",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 9,
+      "text": "= Recommendation",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 10,
+      "text": "This is an application-driven paper with nice practical results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 11,
+      "text": "The fact that standard neural architectures are extended and adapted to the task, and the way domain knowledge is used to design the graph representation makes this interesting even to people outside the task-specific audience, and hence I strongly recommend acceptance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 12,
+      "text": "= Minor Comments",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 13,
+      "text": "- page 2: \"network's type to be class\" -> \"to be a class\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "sentence_index": 14,
+      "text": "- Evaluation Datasets: Did you take duplication in the crawled datasets into account? (Lopes et al. 2017 (D\u00e9j\u00e0Vu: a map of code duplicates on GitHub) suggests that this is particularly problematic for JavaScript/TypeScript)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 0,
+      "text": "Thank you very much for your review! Please see our responses below regarding your comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 1,
+      "text": "\u201cEvaluation Datasets: Did you take duplication in the crawled datasets into account? (Lopes et al. 2017 (D\u00e9j\u00e0Vu: a map of code duplicates on GitHub) suggests that this is particularly problematic for JavaScript/TypeScript)\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 2,
+      "text": "Response: We investigated this question by running jscpd (a popular code duplication detection tool, https://github.com/kucherenko/jscpd ) on our entire data set and found that only 2.7% code is duplicated.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 3,
+      "text": "Furthermore, most of these duplicates are intra-project.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 4,
+      "text": "Thus, we believe that code duplication is not a severe problem in our dataset, and we will include more details about this result in any future revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 5,
+      "text": "========",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 6,
+      "text": "\u201cThe hyperparameter selection regime (and the experiments used to find them) is not described\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 7,
+      "text": "Response: We selected hyperparameters in a standard way by tuning on a validation set as we were developing our model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJgF7g7jFr",
+      "rebuttal_id": "HyeEUJbMsr",
+      "sentence_index": 8,
+      "text": "We\u2019ll include more details about hyperparameters and hyperparameter selection in any future revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

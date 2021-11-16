@@ -1,0 +1,982 @@
+{
+  "metadata": {
+    "forum_id": "Hkx-ii05FQ",
+    "review_id": "B1l3zjA_h7",
+    "rebuttal_id": "SyxFgYgiTQ",
+    "title": "The Cakewalk Method",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hkx-ii05FQ&noteId=SyxFgYgiTQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 0,
+      "text": "## Summary ##",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 1,
+      "text": "The authors apply policy gradients to combinatorial optimization problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 2,
+      "text": "They suggest a surrogate reward function that mitigates the variance in the reward, and hence the update size.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 3,
+      "text": "They demonstrate performance on a clique-finding problem.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 4,
+      "text": "## Assessment ##",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 5,
+      "text": "I don't think Cakewalk is different enough from the cross-entropy method to warrant acceptance in ICLR.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 6,
+      "text": "I also have concerns about the independence assumption in their sampling distribution (Section 3.2), and the fact that their experiments use the same set of (untuned) hyperparameters for each method.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 7,
+      "text": "They both approximate the reward CDF from K samples and use this to construct a surrogate reward.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 8,
+      "text": "The difference is that Cakewalk uses the CDF directly, while CE uses a threshold function on the CDF.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 9,
+      "text": "## Specific Comments and Questions ##",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 10,
+      "text": "1. Cakewalk is *very* closely related to the cross-entropy method.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 11,
+      "text": "The authors acknowledge this connection, but I think they should begin by introducing CE and then explain how Cakewalk generalizes it.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 12,
+      "text": "Both Cakewalk and CE approximate the reward CDF from K samples and use this to construct a surrogate reward.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 13,
+      "text": "The difference is that Cakewalk uses the CDF directly, while CE uses a threshold function on the CDF.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 14,
+      "text": "2. The distribution proposed in section 3.2 assumes independence between the elements $x_j$. This seems problematic for some relatively simple problems.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 15,
+      "text": "Consider $x$ a binary vector and reward equal to the parity $S(x) = \\sum{x_j} % 2$.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 16,
+      "text": "3. In the experiments, there are large discrepancies between different optimizers on Cakewalk (e.g. SGA vs AdaGrad, Table 4).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 17,
+      "text": "Is there any explanation for this?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 18,
+      "text": "4. How were the hyperparameters (learning rate, AdaGrad $\\delta$, Adam $\\beta_1, \\beta_2$) chosen?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 19,
+      "text": "It seems like a large assumption that the same learning rate would work for different methods, especially when some of them are normalizing the objective function.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 20,
+      "text": "I would suggest tuning these values for each method independently.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 21,
+      "text": "5. It would be nice to see experimental results on more than one problem.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 22,
+      "text": "The authors discuss their results on k-medoids in the appendices, but it seems like these results aren't quite complete yet.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 23,
+      "text": "6. In Table 3, the figure in bold is not the lowest (best) in the table.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 24,
+      "text": "The reason for this is only given in a single sentence at the end of Section 6, so it is a little confusing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "sentence_index": 25,
+      "text": "I would replace these values with N/A or something similar.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 0,
+      "text": "Except for the learning rate, all the hyper-parameters were chosen according to the values suggested by the authors of AdaGrad, and Adam.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 1,
+      "text": "The learning rate was chosen as 1/K, with K=100 being the number of examples used to estimate the CDF.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 2,
+      "text": "As our stated goal is to present an algorithm which can be blindly applied with some fixed set of hyper-parameters to any possible objective, one of the goals of the experiments is to show that in such a setting some methods will work, while others will fail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 3,
+      "text": "Thus, as a controlled experiment for this hypothesis, we first fixed the set of all hyper-parameters for all methods, and then proceeded to apply them to various problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 4,
+      "text": "In this setting therefore, tuning the learning rate or any other hyper-parameter for that matter will compromise the validity of our results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 5,
+      "text": "Regarding table 3, we accept the reviewer\u2019s suggestion, this is a good point. We particularly like the suggestion of writing NA or some such value, and we will use it to correct the paper.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 6,
+      "text": "We thank the reviewer for the evaluation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 7,
+      "text": "Please see our detailed response to several recurring issues at https://openreview.net/forum?id=Hkx-ii05FQ&noteId=HygFbNmL6X.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 8,
+      "text": "In that response we address the following issues:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 9,
+      "text": "(1) We emphasize fundamental differences between Cakewalk and CE.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 10,
+      "text": "These go beyond the differences the reviewer mentions.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 11,
+      "text": "(2) How the sampling distribution should not be considered as a part of Cakewalk, and that it is mostly provided as an example, and a basis for the reported experiments.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 12,
+      "text": "(3) The experiments include results two tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 13,
+      "text": "Nonetheless, it appears the paper doesn\u2019t convey this clearly, and we suggest two possible ways how to update the paper in this regard.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 14,
+      "text": "Next, we try to answer the specific issues the reviewer mentions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 15,
+      "text": "First, we address the suggestion of introducing Cakewalk as a generalization of CE.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 16,
+      "text": "While we were writing the paper we in fact considered presenting Cakewalk as the reviewer suggests.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 17,
+      "text": "We eventually decided against this approach as CE is a method for adapting an importance sampler, and its convergence guarantees only apply when it is treated as such.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 18,
+      "text": "The convergence guarantees of REINFORCE on the other hand still apply under our surrogate objective framework.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 19,
+      "text": "This property allows us to explore various surrogates, where one such construction allows us to interpret CE as a policy gradient method, and another makes the basis for Cakewalk.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 20,
+      "text": "Second, we address the issue of using a sampling distribution that assumes independence between the different dimensions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 21,
+      "text": "As the author correctly states, such a distribution will not always be useful, and one can design a problem for which this distribution will lead to a poor local optimum.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 22,
+      "text": "Note however that a global maximizer for the objective suggested by the reviewer can be easily found just by random sampling: sampling such a maximizer has the same probably as sampling an odd integer - half.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 23,
+      "text": "Nonetheless, for the clique problem such a distribution can be effective.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 24,
+      "text": "Intuitively, if some node i is part of a large clique, then sampling x_i=1 is likely to result in a good objective as there are many nodes that are connected to i, and the chance of not sampling any of them decreases with the clique size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 25,
+      "text": "In this way, over time the probability for sampling such nodes becomes higher, and the chance of sampling all of them together increases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 26,
+      "text": "A similar reasoning applies for the k-medoids problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 27,
+      "text": "We note that these kind of factorized distributions have a long history of being useful in machine learning.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 28,
+      "text": "In a similar context to the one studied in the paper, such distributions have been studied by Rubinstein in his paper which discusses CE as an algorithm for combinatorial optimization, and in the classical bandit papers Exp3 is applied independently to several dimensions to study game theoretic problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 29,
+      "text": "In different contexts, such distributions have also been used as naive mean field approximations in variational inference.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 30,
+      "text": "Next, we address the question regarding the gradient update types.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 31,
+      "text": "One intuitive explanation for why an algorithm that maintains a \u2018memory\u2019 of previous gradient updates like AdaGrad or Adam is required",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 32,
+      "text": "is that they protect against sampling biases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 33,
+      "text": "Consider for example the case when the execution is at the start, and the sampling distribution still has maximum entropy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 34,
+      "text": "Due to the combinatorial nature of the solution space, the examples that have been sampled thus far create a distorted representation of the solution space.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 35,
+      "text": "In this case we could get that some x_i=j will occur few times, while some other x_k will not receive the value j at all.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 36,
+      "text": "Now if we apply vanilla gradient updates this can skew the sampling distribution in random directions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 37,
+      "text": "Gradient updates such as those of AdaGrad and Adam on the other hand will lessen the impact of such deviations as the importance of each case is inversely proportional to the number of previous observations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 38,
+      "text": "As such deviations will inevitably occur whenever we rely on polynomially sized samples to represent a combinatorial solution space, without such corrections a gradient based adaptive sampling algorithm will almost surely fail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 39,
+      "text": "Indeed, as can be seen in tables 1,2 and 4, SGA almost never leads to a locally optimal solution.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 40,
+      "text": "Furthermore, this reasoning explains why AdaGrad is superior to Adam: AdaGrad corrects against sampling biases that entail all the examples that have been encountered, while Adam does this only within some exponentially moving time window.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1l3zjA_h7",
+      "rebuttal_id": "SyxFgYgiTQ",
+      "sentence_index": 41,
+      "text": "Indeed, this phenomenon is studied in detail in the AdaGrad paper (though without assuming a data distribution), and sparse data like ours (one can say our data points are N indicator vectors of length M) is the first motivating example in their paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

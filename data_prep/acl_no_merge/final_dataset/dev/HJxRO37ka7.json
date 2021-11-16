@@ -1,0 +1,809 @@
+{
+  "metadata": {
+    "forum_id": "rkgwuiA9F7",
+    "review_id": "HJxRO37ka7",
+    "rebuttal_id": "HkggAGNHCm",
+    "title": "Cramer-Wold AutoEncoder",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkgwuiA9F7&noteId=HkggAGNHCm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 0,
+      "text": "The paper introduces a novel regularized auto-encoder architecture called the Cramer-Wold AutoEncoders (CWAE).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 1,
+      "text": "It's objective (Eq. 7) consists of two terms: (i) a standard reconstruction term making sure the the encoder-decoder pair aligns nicely to accurately reconstruct all the training images and (ii) the regularizer, which roughly speaking requires the encoded training distribution to look similar to the standard normal (which is a prior used in the generative model being trained).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 2,
+      "text": "The main novelty of the paper is in the form of this regularizer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 3,
+      "text": "The authors introduce what they call \"the Cramer-Wold distance\" (for definitions see Theorems 3.1 and 3.2) which is defined between two finite sets of D-dimensional points.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 4,
+      "text": "The authors provide empirical studies showing that the proposed CWAE method achieves the same quality of samples (measured with FID scores) as the WAE-MMD model [1] previously reported in the literature, while running faster (by up to factor of 2 reduction in the training time, as the authors report).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 5,
+      "text": "While on the AE model / architecture side I feel the contribution is very marginal, I still think that the improvement in the training speed is something useful. Otherwise it is a nicely written and polished piece of work.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 6,
+      "text": "Detailed comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 7,
+      "text": "(1) My main problem with this paper is that the novel objective proposed by the authors in Eq. 7 is equivalent to the objective of WAEs appearing in Eq. 4 of [1] (up to a heuristic of applying logarithm to the divergence measure, which is not justified but meant to \"improve the balance between two terms\", see footnote 2), where the authors use the newly introduced Cramer-Wold divergence as a choice of the penalty term in Eq. 4 of [1].",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 8,
+      "text": "(2) When viewed in this way, CW-distance introduced in Eq (2) closely resembles the unbiased U-statistic estimate of the MMD used in WAE-MMD [1, Algorithm 2].",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 9,
+      "text": "In other words: it may be the case that there is a choice of a reproducing kernel k such that Eq. 2 of this paper is an estimate of MMD_k between two distributions based on the i.i.d. samples X and Y.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 10,
+      "text": "Note that if it is indeed the case, this corresponds to the V-statistic and thus biased: in U-statistic the diagonal terms (that is i = i' and j = j' in forst two terms of eq 2) would be omitted.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 11,
+      "text": "If this all is indeed the case, it is not surprising that the numbers the authors get in the experiments are so similar to WAE-MMD, because CWAE would be exactly WAE-MMD with a specific choice of the kernel.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 12,
+      "text": "(3) The authors make a big deal out of their proposed divergence measure not requiring samples from the prior as opposed to WAE-MMD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 13,
+      "text": "However, WAE-MMD does not necessarily need to sample from the prior when used with Gaussian prior and Gaussian RBF kernel, because in this case the prior-related parts of the MMD can be computed analytically.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 14,
+      "text": "In other words, if the computational advantage of CWAE compared to WAE-MMD comes from CWAE not sampling Pz, the computational overhead of WAE-MMD can be eliminated at least in the above-mentioned setting.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 15,
+      "text": "(4) based on the name \"CW distance\" I would expect the authors to actually prove that it is indeed a distance (i.e. all the main axioms).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 16,
+      "text": "(5) The authors override the CW distance: first in Theorem 3.1 they define it as a distance between two finite point clouds, and later in Theorem 3.2 they redefine it as a distance between a point cloud and the Gaussian distribution.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 17,
+      "text": "(6) What is image(X) in Remark 4.1?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "sentence_index": 18,
+      "text": "[1] Tolstikhin et al., Wasserstein Auto-Encoders, 2017.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 0,
+      "text": "POINTS 1 AND 2 OF THE REVIEW",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 1,
+      "text": "The reviewer has noticed that the cw-distance resembles that of a U-statistic MMD estimate, and thus the proposed model very much resembles MMD itself.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 2,
+      "text": "We fully agree with the reviewer, that CWAE is a model based on the kernel as the divergence measure for distributions, and consequently can be seen as a modified variant of WAE-MMD (we have added the respective comments in the paper, see the extended introduction, and added a section B in the appendix, which discusses the comparison in more details).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 3,
+      "text": "However, there are some important, in our opinion, differences between those two models, which also result in an improved training speed and stability of CWAE compared to WAE-MMD (see refined experiments in section 5, as well as figures in the appendix showing comparisons between proposed CWAE and WAE and SWAE models in the Appendix).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 4,
+      "text": "The differences are:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 5,
+      "text": "Due to the properties of the constructed Cramer-Wold kernel, we are able to substitute in the distance the sample estimation d(X,Y) of d(X,N(0,I)) given by its exact formula.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 6,
+      "text": "Consequently, the CWAE has, while being trained, potentially less stochastic perturbation then WAE-MMD.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 7,
+      "text": "CWAE, as compared to WAE-MMD, has no parameters (while WAE-MMD has two).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 8,
+      "text": "We observed that in many cases (like log-likelihood), the logarithm of the probability function works better, since it increases the role of examples with low-probability.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 9,
+      "text": "Thus, instead of using an additional weighting parameter lambda (as in WAE-MMD) whose aim is to balance the MSE and divergence terms, we decided to automatically (independently of dimension) balance the two terms of the loss function, by taking the logarithm of the divergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 10,
+      "text": "Moreover, since our kernel is naturally introduced with the sliced approach and kernel smoothing, the choice of regularization parameter is given by the Silverman's rule of thumb, and depends on the sample size",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 11,
+      "text": "(contrary to WAE-MMD, where the parameters are chosen by hand, and in general do not depend on the sample size)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 12,
+      "text": ".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 13,
+      "text": "The appropriate clarifications are given in the appendix B.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 14,
+      "text": "Summarizing, in the proposed CWAE model, contrary to WAE-MMD, we do not have to choose parameters.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 15,
+      "text": "Additionally, since we do not have the noise in the learning process given by the random choice of the sample from normal density",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 16,
+      "text": ",  CWAE in generally learns faster than WAE-MMD, and has smaller dispersion of the cost-function during the learning process (see Figures 7 and 8, Appendix F).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 17,
+      "text": "POINT 3",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 18,
+      "text": "The reviewer notices that the WAE-MMD does not need to sample when used with Gaussian prior and a Gaussian RBF kernel.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 19,
+      "text": "We fully agree that the gaussian kernel has the close formula for the product of two gaussians.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 20,
+      "text": "However, the problem (see Tolstikhin et al\u2019s paper Wasserstein auto-encoders, https://arxiv.org/pdf/1711.01558.pdf, Section 4, also Bi\u0144kowski et al,  https://arxiv.org/pdf/1801.01401.pdf) that Gaussian kernel does not work well with the model, as its derivatives decrease too fast, and the model with Gaussian kernel is unable to learn to modify points which lie far from the center.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 21,
+      "text": "We have added a respective comment in Appendix A. As to the best knowledge of the authors, the introduced Cramer-Wold kernel is the unique characteristic kernel which has the closed form for spherical gaussians, and does not have exponential decrease of derivative (as the case of RBF kernel).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 22,
+      "text": "POINTS 4 AND 5",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 23,
+      "text": "As the reviewer accurately and carefully noticed, we have not formally proved that cw-distance is a true distance, and that the definition is introduced partially: first for two clouds of points, then a distribution and a cloud.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 24,
+      "text": "This is true.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 25,
+      "text": "We have added a respective proof in Appendix, Section A, where also the precise mathematical construction of the general form of Cramer-Wold metric is presented.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 26,
+      "text": "We have also added the comment at the beginning of Section 3 of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 27,
+      "text": "We hope clarifies our unintentionally imprecise original approach.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 28,
+      "text": "POINT",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 29,
+      "text": "6",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 30,
+      "text": "The reviewer asked \u201cwhat is image(X) in Remark 4.1?\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxRO37ka7",
+      "rebuttal_id": "HkggAGNHCm",
+      "sentence_index": 31,
+      "text": "By image(X) we understand the set of all possible values the random vector X can attain (we have included the footnote in Remark 4.1 explaining the notation).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

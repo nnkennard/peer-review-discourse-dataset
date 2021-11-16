@@ -1,0 +1,1288 @@
+{
+  "metadata": {
+    "forum_id": "rJVoEiCqKQ",
+    "review_id": "S1l5N7S53X",
+    "rebuttal_id": "SkxrcuFw6m",
+    "title": "Deep Perm-Set Net: Learn to predict sets with unknown permutation and cardinality using deep neural networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJVoEiCqKQ&noteId=SkxrcuFw6m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 0,
+      "text": "\u2014 Summary",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 1,
+      "text": "The method extends [21], which proposes an unordered set prediction model for multi-class classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 2,
+      "text": "For that problem, [21] can assume logistic outputs for all distinct classes.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 3,
+      "text": "This work extends set prediction to the object detection task, where box identity is not distinct \u2014 this is handled by an additional model output that reasons about the most likely object permutations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 4,
+      "text": "The permutation predictions are used during training, but are not needed at inference time \u2014 as shown in Fig1 and Eq 7.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 5,
+      "text": "Results are on detection of overlapping objects and a CAPTCHA toy summation example.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 6,
+      "text": "\u2014 Clarity",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 7,
+      "text": "The exposition is not particularly clear in several places:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 8,
+      "text": "- U^m in Eq 1 is undefined and un-discussed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 9,
+      "text": "What probability term does it correspond to? It is supposed to make probabilities of different cardinalities comparable, but the exact mechanism is unclear.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 10,
+      "text": "- The term p(w) disappears on the left hand side of Eq 2.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 11,
+      "text": "- Notation in Sec. 3.2 is very cumbersome, making it hard to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 12,
+      "text": "Furthermore, I found the description ambiguous, preventing me from understanding how exactly the permutation head output is used in Eq 5.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 13,
+      "text": "Specifically, there is some confusion about estimation of w~, which seems based on frequency estimation from past SGD iterations (Eq 3).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 14,
+      "text": "If so, why does term f2 in Eq 5 contain the permutation head output O2 and how do the two relate?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 15,
+      "text": "- The network architecture is never described, especially the transition from Conv to Dense and the layer sizes, making the work hard to reproduce.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 16,
+      "text": "The dimensions of the convolutional feature map matter (probably need to be kept tractable).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 17,
+      "text": "\u2014 Significance",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 18,
+      "text": "Key aspects of the model are not particularly clear, specifically about how the permutation prediction ( the key novelty here) is used to benefit training.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 19,
+      "text": "\u2014 Term f2 in Eq5 uses w~ estimates, which appeared to be based on statistics from past SGD runs, yet also depends on the output of the permutation head O2. Am I misinterpreting the method?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 20,
+      "text": "\u2014 In the paragraph right after Eq5, it\u2019s claimed that \u201cEmpirically, in our applications, we found out that estimation of the permutations from just f1 [in Eq5] is sufficient to train properly \u2026 by using the Hungarian algorithm\u201d. So then f2 term is not even used in. Eq5? If so, what is the significance of the permutation head other than adding an auxiliary loss?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 21,
+      "text": "Furthermore, there are no experimental results demonstrating the effect of the permutation head and the design choices above \u2014 if we could get by with only using the Hungarian algorithm, why bother classifying an exponential number of permutations? Do they help when added as an auxiliary loss?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 22,
+      "text": "While the failure of NMS to detect overlapping objects is expected, the experiments showing that perm-set prediction handles them well is interesting and promising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 23,
+      "text": "Solving the general case with larger images and many instances would increase the impact significantly \u2014 and likely require a combination of perm-set prediction and image tiling, although this is just a hypothesis.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 24,
+      "text": "The Captcha toy example also shows some interesting behavior emerging \u2014 without digit-specific annotations (otherwise it would be multi-class classification setup from [21]), the model can handle the majority of summations correctly.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 25,
+      "text": "\u2014 Experimental results",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 26,
+      "text": "The results are interesting proofs-of-concept but a few more experiments/answers would be helpful:",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 27,
+      "text": "- It still appears that PR curve in the high-precision regime (fig 3b) has lower precision than FRCNN/YOLO.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 28,
+      "text": "Any idea as to why?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 29,
+      "text": "- Ablation results on the effect of the permutation predictions vs Hungarian algorithm, etc would be helpful, as discussed above.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 30,
+      "text": "- How sensitive is the method to seeing a certain cardinality? What if it never sees 3 pedestrians in an image, but only 1,2,4 will it fail to predict 3? Or alternatively, if we train a model that can handle up to 5-6 entities with examples than have <=4? What is the right way of data augmentation for this model (was there any and should there be?)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 31,
+      "text": "- Given that values for U differ across applications, how sensitive is the output / how much sweeping did you have to do?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 32,
+      "text": "-- Related work",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 33,
+      "text": "To the best of my knowledge it's representative.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 34,
+      "text": "It would help to cite more recent work that decreases detector dependence on NMS.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "sentence_index": 35,
+      "text": "For example, \"Learning Non-Maximum Suppression\", Hosang, Benenson, Schiele, CVPR 2017 or \"Relation Networks for Object Detection\", by Hu et al, CVPR 2018 and references therein.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 0,
+      "text": "U^m in Eq 1:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 1,
+      "text": "This term is clearly defined at the beginning of section 3, first paragraph, line 6 \u201cU is the unit of hyper-volume in ...\u201d .",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 2,
+      "text": "U^m is simply U powered by the cardinality variable.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 3,
+      "text": "In section 3.3, in the paragraph after Eq.7 line 2, we explain the mechanism to obtain U. For each experiment, we also report the tuned value for U.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 4,
+      "text": "- The term p(w) in Eq 2:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 5,
+      "text": "Note Eq. 2 calculates the posterior, i.e., p(w|D) and according to the Bayes theorem, it is p(w|D)\u00a0\\propto\u00a0p(D|w)p(w)",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 6,
+      "text": "which\u00a0is\u00a0simply\u00a0Eq. 1.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 7,
+      "text": "- Eq 5 confusion :",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 8,
+      "text": "To explain Eq.5 and Eq. 6, the training works as follows:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 9,
+      "text": "At each iteration k-1, the network predicts the outputs, i.e., O1, O2 and \\alpha.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 10,
+      "text": "We first solve a discrete optimization to find the permutation (matching) between the predictions at k-1 and the ground truth (GT).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 11,
+      "text": "Then, we use this permutation to order GT and back-propagate the losses to update w at iteration k. Please note that cardinality loss does not depend on this permutation variable.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 12,
+      "text": "- The network architecture :",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 13,
+      "text": "Note that our described methodology can be applied to any network architecture.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 14,
+      "text": "In ALL our experiments, we use Res-net 101 (mentioned several times on page 6 and 8).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 15,
+      "text": "We\u00a0only\u00a0need to define the number of outputs and use the set loss defined in Eq. 5 and 6.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 16,
+      "text": "For example, for the set size with maximum cardinality 4, we need 5 outputs\u00a0( \\alpha)\u00a0for cardinality m = {0, 1,...4}.\u00a0If the state of each set is 5 for the detection experiment, we need 4*5=20 outputs for the state  loss (O1).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 17,
+      "text": "For the permutation (O2), we need 4!=24 outputs.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 18,
+      "text": "For each output we have a loss defined for each experiment\u00a0in the text.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 19,
+      "text": "- the permutation to benefit training:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 20,
+      "text": "We refer the reviewer to the experiment we have already included in Appendix titled \u201cAn additional baseline experiment\u201d, which unfortunately we could not include in the main manuscript due to space constraints.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 21,
+      "text": "We use a baseline model with no permutation, which is exactly same as [21], to train the network for the detection task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 22,
+      "text": "The results show the model is not able to learn this task, hence highlighting the need for permutation prediction for a complete set prediction network.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 23,
+      "text": "Even if we remove the permutation head, O2, from our model, we still need to calculate the permutation using Eq. 5 and use it for backpropagation in Eq. 6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 24,
+      "text": "However the model in [21] completely ignore the permutation in its formulation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 25,
+      "text": "Therefore, it cannot learn the detection task.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 26,
+      "text": "- Term f2 in Eq5 uses w~ estimates:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 27,
+      "text": "Your interpretation is indeed correct.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 28,
+      "text": "Given the predictions of O1 and O2 using statistics from past SGD runs, we want to find the best permutation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 29,
+      "text": "There are indeed m! way to assign GT set elements to the predictions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 30,
+      "text": "We solve this optimization to find the best one.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 31,
+      "text": "- the significance of the permutation:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 32,
+      "text": "Even if we don\u2019t use f2 for the estimation of the best permutation, we can use \\pi* as ground truth for updating its loss in Eq. 6.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 33,
+      "text": "- classifying permutations:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 34,
+      "text": "Classifying the permutations provides the extra information about the structure of the problem, e.g. there exist a single order which matters or it can be several different orders or the problem is orderless.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 35,
+      "text": "We simply do not ignore the permutations from Hungarian by allowing the network to learn them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 36,
+      "text": "We refer you to the experiment we have already included in Appendix titled \u201cDetection & Identification results\u201d, where we used the predicted permutations to identify the bounding boxes for similar looking objects across different test images",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 37,
+      "text": "-  larger images and many instances:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 38,
+      "text": "We agree.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 39,
+      "text": "We leave this as future work, as it would require an engineering effort that departs from the main purpose of our paper, which is to show theoretically how to construct a network that can work with sets instead of tensors.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 40,
+      "text": "- sensitivity to seeing a certain cardinality:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 41,
+      "text": "During the training, we do the data augmentation (by cropping, flipping etc) to ensure the network sees enough sample for each cardinality.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 42,
+      "text": "We will include this detail in the text.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          30
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 43,
+      "text": "- Related work",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 44,
+      "text": "We are happy to include these references.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 45,
+      "text": "But these works are orthogonal to the main subject of our paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 46,
+      "text": "In our paper the goal is to introduce a framework to output a set using neural networks and we used the detection task as one of the set prediction examples.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 47,
+      "text": "We would like to add few comment about these two works:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 48,
+      "text": "These approaches try to learn a pairwise relationship between the boxes outputted using the conventional proposal based detection approaches.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 49,
+      "text": "First a) they need to introduce extra pairwise network or heavier computation to learn these pairwise relationship b) they assume the relationship is pairwise between bounding boxes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 50,
+      "text": "Out framework is a single stage approach which uses a conventional convnet backbones with no extra computation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 51,
+      "text": "Since it is end-to-end prediction of boxes, we don\u2019t enforce any pairwise or higher order relationships between the outputs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1l5N7S53X",
+      "rebuttal_id": "SkxrcuFw6m",
+      "sentence_index": 52,
+      "text": "We all rely on the layer of neural nets to capture high level relationship between outputs before predicting them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

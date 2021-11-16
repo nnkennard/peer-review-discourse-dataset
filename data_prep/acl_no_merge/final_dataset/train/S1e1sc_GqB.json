@@ -1,0 +1,492 @@
+{
+  "metadata": {
+    "forum_id": "BJgd81SYwr",
+    "review_id": "S1e1sc_GqB",
+    "rebuttal_id": "ryg4oUWPsH",
+    "title": "Meta Dropout: Learning to Perturb Latent Features for Generalization",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=BJgd81SYwr&noteId=ryg4oUWPsH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 0,
+      "text": "This paper proposes meta dropout, which leverages adaptive dropout training for regularizing gradient based meta learning models, e.g., MAML and MetaSGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 1,
+      "text": "Experiments on few shot learning show that meta dropout achieves better performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 2,
+      "text": "Overally, I think this paper is well motivated and experiments on few shot learning are impressive.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 3,
+      "text": "I have only two major concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 4,
+      "text": "1. Sec 3.2. According to my understanding, Meta dropout introduces a learnable prior for latent $z$, but the training objective does not require posterior inference and thus no variational inference is needed.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 5,
+      "text": "I think it is ok to say that meta dropout tries to optimize a lower bound of log p(Y|X;\\theta,\\phi^*), but meta dropout does not regularize the variational framework because there is no variational inference framework.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 6,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 7,
+      "text": "Experiments on adversarial robustness can be further improved.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 8,
+      "text": "(1) the settings and the analysis of adversarial robustness experiment can be discussed in details.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 9,
+      "text": "For example, how to build ''adversarial learning baseline'' in meta learning settings and why the result implies the perturbation directions for generalization and robustness relates to each other; (2) how other regularization methods (e.g., Mixup, VIB and Information dropout) perform on adversarial robustness? Does Meta dropout performs better than them?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 10,
+      "text": "(3) FGSM is a quite weak adversarial attack method, which makes evaluating adversarial robustness on FGSM may be misleading.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 11,
+      "text": "I suggest trying some other STOA attack methods (e.g., iterative methods).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 12,
+      "text": "Some typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 13,
+      "text": "Page 3, Regularization methods, 3rd line, ````wwwdiscuss",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "sentence_index": 14,
+      "text": "Page 7, 2nd line from the bottom, FSGM->FGSM",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 0,
+      "text": "We really appreciate your constructive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 1,
+      "text": "We respond to each comment as follows.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 2,
+      "text": "1. Meta dropout does not regularize the variational framework because there is no variational inference framework.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 3,
+      "text": "- Thank you for your comment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 4,
+      "text": "We agree with you that the current lower bound is not a variational form due to the assumption of q=p. In Section 3.2, we toned down the original expression \u201cLearning to regularize variational inference\u201c into \u201cConnection to variational inference\u201d, and corrected the corresponding sentences.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 5,
+      "text": "Still, there exists a clear connection between standard variational inference and our learning framework.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 6,
+      "text": "Thus we believe that discussion in Section 3.2 will be helpful to readers who want to understand the meaning of learning objective Eq.(2) in depth.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 7,
+      "text": "2. Improving adversarial robustness experiment.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 8,
+      "text": "- Thank you for the helpful suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 9,
+      "text": "During the rebuttal period, we conducted additional experiments on adversarial robustness as you suggested:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 10,
+      "text": "a) We replaced the previous FGSM attack with stronger PGD attack (200 iter.), with $L_1$, $L_2$, and $L_\\infty$ norm constraints.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 11,
+      "text": "b) We included more baselines (e.g. Mixup, VIB, and information dropout), and show that our meta-dropout largely and consistently outperforms all of them.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 12,
+      "text": "c) We added more detailed descriptions of the adversarial meta-learning baseline and in-depth analysis on the results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 13,
+      "text": "d) We further show that the learned perturbation from our Meta-dropout also generalize across different types of adversarial attacks with $L_1$, $L_2$, and $L_\\infty$ attacks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 14,
+      "text": "The generalization to different types of attacks is an important problem in adversarial learning, and most existing models fail to achieve this goal.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 15,
+      "text": "Please see the corresponding section in the revision.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e1sc_GqB",
+      "rebuttal_id": "ryg4oUWPsH",
+      "sentence_index": 16,
+      "text": "We believe that the adversarial robustness part of our paper has become much stronger than before, thanks to your suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

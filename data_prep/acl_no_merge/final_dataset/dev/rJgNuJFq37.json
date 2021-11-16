@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "forum_id": "SklXvs0qt7",
+    "review_id": "rJgNuJFq37",
+    "rebuttal_id": "HylYBoAhTm",
+    "title": "Curiosity-Driven Experience Prioritization via Density Estimation",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklXvs0qt7&noteId=HylYBoAhTm",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 0,
+      "text": "The paper proposes a novel method for sampling examples for experience replay.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 1,
+      "text": "It addresses the problem of having inbalanced data (in the experience buffer during training).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 2,
+      "text": "The authors trained a density model and replay the trajectories that has a low density under the model.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 3,
+      "text": "Novelty:",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 4,
+      "text": "The approach is related to prioritized experience replay, PER is computational expensive because of the TD error update, in comparison, CDR only updates trajectory density once per trajectory.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 5,
+      "text": "Clarity:",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 6,
+      "text": "The paper seems to lack clarity on certain design/ architecture/ model decisions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 7,
+      "text": "For example, the authors did not justify why VGMM model was chosen and how does it compare to other density estimators.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 8,
+      "text": "Also, I had to go through a large chunk of the paper before coming across the exact setup.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 9,
+      "text": "I think the paper could benefit from having this in the earlier sections.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 10,
+      "text": "Other comments about the paper:",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 11,
+      "text": "-  I do like the idea of the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 12,
+      "text": "It also seems that curiosity in this context seems to be very related to surprise? There are neuroscience evidence indicating that humans turns to remember (putting more weights) on events that are more surprising.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 13,
+      "text": "- The entire trajectory needs to be stored, so the memory wold grow with episode length.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "sentence_index": 14,
+      "text": "I could see this being an issue when episode length is too long.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 0,
+      "text": "Thank you for the valuable feedback!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 1,
+      "text": "We uploaded a revised version of the paper based on the comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 2,
+      "text": "- To improve the clarity, we clarify why we chose to use V-GMM, among the three basic density estimation methods, including KDE, GMM, and V-GMM.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 3,
+      "text": "(in the revised version of the paper Section \u201c2.3 Density Estimation Methods\u201d)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 4,
+      "text": "The reasons are the following:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 5,
+      "text": "1. GMM can be trained reasonably fast for RL agents.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 6,
+      "text": "GMM is also much faster in inference compared to Kernel Density Estimate (KDE) (Rosenblatt, 1956).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 7,
+      "text": "2. Compared to GMM,  V-GMM has a natural tendency to set some mixing coefficients close to zero and generalizes better.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 8,
+      "text": "3. We only use a basic density estimation method, such as V-GMM, in our framework as a proof of concept for the idea \u201cCuriosity-Driven Experience Prioritization via Density Estimation\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 9,
+      "text": "Other destiny estimation methods can also be applied in this framework.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 10,
+      "text": "- We move the exact setup (Section \u201c2.1 Environments\u201d in the new version) in early sections to improve the clarity of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 11,
+      "text": "- We are glad that you like the idea of the paper. Yes, indeed the curiosity mechanism in our context is related to surprise.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 12,
+      "text": "The idea of our method is also related to neuroscience (Gruber et al., 2014).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 13,
+      "text": "- Yes, the entire trajectories need to stored in the replay buffer and the memory size increases as the trajectory length increases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 14,
+      "text": "However, this is a general issue with off-policy RL methods which uses experience replay, such as DQN and DDPG.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJgNuJFq37",
+      "rebuttal_id": "HylYBoAhTm",
+      "sentence_index": 15,
+      "text": "Our method CDP only uses the trajectories that are already in the memory, so CDP does not introduce additional memory usage.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

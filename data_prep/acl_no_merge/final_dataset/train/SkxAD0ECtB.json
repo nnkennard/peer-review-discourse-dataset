@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "forum_id": "HJlWWJSFDH",
+    "review_id": "SkxAD0ECtB",
+    "rebuttal_id": "BJgEvjdmsH",
+    "title": "Strategies for Pre-training Graph Neural Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJlWWJSFDH&noteId=BJgEvjdmsH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 0,
+      "text": "This paper proposes new pre-training strategies for GNN with both a node-level and a graph-level pretraining.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 1,
+      "text": "For the node-level pretraining, the goal is to map nodes with similar surrounding structures to nearby context (similarly to word2vec).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 2,
+      "text": "The main problem is that directly predicting the context is intractable because of combinatorial explosion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 3,
+      "text": "The main idea is then to use an additional GNN to encode the context and to learn simultaneously the main GNN and the context GNN via negative sampling.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 4,
+      "text": "Another method used is attribute masking where some masked node and edge attributes need to be predicted by the GNN.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 5,
+      "text": "For graph-level pretraining, some general graph properties need to be predicted by the graph.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 6,
+      "text": "Experiments are conducted on datasets in the chemistry domain and the biology domain showing the benefit of the pre-training.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 7,
+      "text": "The paper addresses an important and timely problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 8,
+      "text": "It is a pity that the code is not provided.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 9,
+      "text": "In particular, the node-level pretraining described in section 3.1.1. seems rather complicated to implement as a context graph needs to be computed for each node in the graph.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "sentence_index": 10,
+      "text": "In particular I do not think the satement 'all the pre-training methods are at most linear with respect to the number of edges' made in appendix F is correct.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for acknowledging the technical aspects of the paper and for noting that our\u200b \u200bresults\u200b \u200bare\u200b \u200bsolid\u200b \u200band\u200b \u200bour\u200b \u200banalysis\u200b \u200bis\u200b \u200bthorough.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 1,
+      "text": "RE: Source code",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 2,
+      "text": "The reviewer makes an important point about the availability of the source code.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 3,
+      "text": "To address this point, in the link privately shared with the reviewers, we have provided all of our code, datasets together with their train/test splits, as well as our pre-trained models, to help with the reproducibility of our results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 4,
+      "text": "We note that we will share PyTorch implementations of all pre-training methods and datasets with the community upon publication.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 5,
+      "text": "Please feel free to ask any further questions regarding our code and implementation.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 6,
+      "text": "RE: Linear time complexity in Appendix F",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 7,
+      "text": "We acknowledge that the time complexity of our pre-training methods was not well explained in Appendix F. In Figure 2 (a) we show that we only sample one node per graph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 8,
+      "text": "We then use breadth-first search to extract a K-hop neighborhood of the node, which takes at most linear time with respect to the number of edges in the graph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 9,
+      "text": "As a result, pre-training via context prediction has linear time complexity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 10,
+      "text": "We will edit Appendix F to include more detailed information and cover this important point.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SkxAD0ECtB",
+      "rebuttal_id": "BJgEvjdmsH",
+      "sentence_index": 11,
+      "text": "Please let us know if you have any further questions or comments!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

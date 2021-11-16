@@ -1,0 +1,680 @@
+{
+  "metadata": {
+    "forum_id": "rJehNT4YPr",
+    "review_id": "r1xYhv5J5H",
+    "rebuttal_id": "BJgfCUWlsB",
+    "title": "I Am Going MAD: Maximum Discrepancy Competition for Comparing Classifiers Adaptively",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehNT4YPr&noteId=BJgfCUWlsB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 0,
+      "text": "This paper points out that the traditional way of model selection is flawed due to that the validation/test set is often small.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 1,
+      "text": "The authors also attribute the existence of adversarial examples to the small validation/test set, which I agree to some degree.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 2,
+      "text": "Hence, the authors proposed an alternative approach to comparing different classification models by the notion of inter-model discrepancy.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 3,
+      "text": "The main idea is reasonable, but it requires that the models to compare all perform reasonably well.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 4,
+      "text": "Otherwise, some poorly performed models could lead to near-random or adversarial inter-model discrepancies, failing the proposed approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 5,
+      "text": "Another potential issue is that the proposed approach cannot handle training set bias. If all models are biased in similar ways (e.g., toward a particular class or domain), they will not reveal informative discrepancies for the images over which they all make similar mistakes.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 6,
+      "text": "Another question which is not answered in the paper is the number $k$ of images to select for each pair of classifiers. Is this number task-dependent? Is it related to the number of classes?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 7,
+      "text": "What is a general guideline for one to choose this number $k$ given a new application scenario?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 8,
+      "text": "The unlabeled set is not \"unlabeled\" in essence. If my understanding was correct, it cannot contain open-set images which do not belong to any of the classes of interest.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 9,
+      "text": "It is also nontrivial to control that the images contain only one salient object per image.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "sentence_index": 10,
+      "text": "Hence, while I agree with the authors that existing approaches to comparing deep neural network classifiers could be improved, I think the proposed solution is not a good alternative yet.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 0,
+      "text": "Regarding comment 1: Thanks for recognizing the merit of our idea.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 1,
+      "text": "As also mentioned by Reviewer #2, the proposed MAD implicitly assumes that classifiers in the competition are reasonably accurate.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 2,
+      "text": "Otherwise, the selected counterexamples may be less meaningful.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 3,
+      "text": "We will make this assumption explicit in the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 4,
+      "text": "From this perspective (and other reasons mentioned in the discussion section), MAD should be viewed as complementary to, rather than a replacement for, the conventional accuracy comparison for image classification.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 5,
+      "text": "When two classifiers perform at a reasonable level and achieve very close accuracy numbers (e.g., VGG16BN and ResNet34 on ImageNet validation set), MAD provides the most efficient way of differentiating the two models by maximizing their discrepancies over a large-scale image set.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 6,
+      "text": "We want to emphasize that MAD is especially useful on image classification tasks where most cutting-edge classifiers achieve very close performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 7,
+      "text": "In these situations, the MAD competition ranking, which is obtained by evaluating on corner examples searched from web-scale unlabeled dataset, is more convincing than something like 1% accuracy advantage on the validation set.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 8,
+      "text": "For problem domains where there are few sufficiently accurate models, we may still apply the underlying principle behind MAD to create adaptive test sets such that the strengths and weaknesses of the models are most easily revealed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 9,
+      "text": "In those scenarios, we conjecture that we need increase k to a reasonably larger number, thus at the cost of efficiency.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 10,
+      "text": "Regarding comment 2: Thanks for the comment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 11,
+      "text": "As long as two (or multiple) models differ (even in slightly different ways), MAD provides the highly efficient way of spotting such differences by exploring a large-scale unlabelled dataset.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 12,
+      "text": "However, these differences are less likely to be revealed using a fixed and small test set (i.e., they will probably have the same accuracy numbers as models to be compared are very similar and are biased in similar ways).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 13,
+      "text": "For the extreme case that two models are exactly the same (i.e, they are biased in identical ways and make identical prediction errors), both MAD and traditional accuracy-based methods will draw the same conclusion - the two models have the same performance.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 14,
+      "text": "Accuracy-based evaluation methods arrive at this conclusion by comparing model predictions with ground truth labels and outputting the same accuracy numbers.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 15,
+      "text": "In contrast, MAD arrives at the same conclusion without any human labeling since the set S for subjective testing is empty.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 16,
+      "text": "So in this extreme case, both MAD and accuracy fail to compare those two models.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 17,
+      "text": "In summary, to reliably compare the relative performance of computational models, all evaluation methodologies (including MAD) rely on the assumption that the models to be compared should be diverse to a certain extent, and the proposed MAD makes this assumption more explicit.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 18,
+      "text": "In fact, MAD makes the best use of model discrepancies (even if models are biased in very similar but not identical ways) to rank the model performance.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 19,
+      "text": "As a matter of fact, based on our experiments, we find that state-of-the-art ImageNet classifiers do have their own biases. (See figure 8 in the appendix.)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 20,
+      "text": "Regarding comment 3: Thanks for the excellent question.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 21,
+      "text": "We believe that the parameter k is task-dependent.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 22,
+      "text": "For problem domains where there are reasonably accurate models (e.g., imageNet classification in our example), we may obtain a stable ranking with a relative small k (e.g., k=15 in the imageNet classification example).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 23,
+      "text": "For problem domains where there are no good models, we may increase k to the limit of human labeling budget in order to obtain reasonable performance comparison.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 24,
+      "text": "Regarding comment 4: Thanks for the comment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 25,
+      "text": "In our current setting, we restrict the dataset D to the domain of interest that contain natural images of mainly 200 classes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 26,
+      "text": "However, as the construction of D is noisy and coarse, D contains plenty of open-set images, which do not belong to any class of interest.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 27,
+      "text": "Since we do not perform any manually data screening at this stage, some of the open-set images may even be selected to construct the dataset S.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 28,
+      "text": "This means that although the selected open-set image is out of the domain of interest, the associated two classifiers make different, high-confident (with threshold set to 0.8), but incorrect predictions (Case III).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 29,
+      "text": "As a result, we consider it as a strong counterexample of the two classifiers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 30,
+      "text": "Note that this situation rarely happens, at least in our experiments because the competing classifiers tend to give open-set images low-confidence, and therefore are automatically filtered out.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 31,
+      "text": "We agree with the reviewer that selecting images that contain only one salient object requires a lot of human effort.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xYhv5J5H",
+      "rebuttal_id": "BJgfCUWlsB",
+      "sentence_index": 32,
+      "text": "So we did not eliminate Case I. It turns out that keeping Case I does not seem to affect the comparison and analysis of competing models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

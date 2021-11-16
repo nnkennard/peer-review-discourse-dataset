@@ -1,0 +1,865 @@
+{
+  "metadata": {
+    "forum_id": "HJgOl3AqY7",
+    "review_id": "Ske_2A9d3m",
+    "rebuttal_id": "ryxdk0Yaa7",
+    "title": "Modulated Variational Auto-Encoders for Many-to-Many Musical Timbre Transfer",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJgOl3AqY7&noteId=ryxdk0Yaa7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 0,
+      "text": "This work proposes a hybrid VAE-based model (combined with an adversarial or maximum mean discrepancy (MMD) based loss) to perform timbre transfer on recordings of musical instruments.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 1,
+      "text": "Contrary to previous work, a single (conditioned) decoder is used for all instrument domains, which means a single model can be used to convert any source domain to any target domain.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 2,
+      "text": "Unfortunately, the results are quite disappointing in terms of sound quality, and feature many artifacts.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 3,
+      "text": "The instruments are often unrecognisable, although with knowledge of the target domain, some of its characteristics can be identified.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 4,
+      "text": "The many-to-many results are clearly better than the pairwise results in this regard, but in the context of musical timbre transfer, I don't feel that this model successfully achieves its goal -- the results of Mor et al. (2018), although not perfect either, were better in this regard.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 5,
+      "text": "I have several further concerns about this work:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 6,
+      "text": "* The fact that the model makes use of pitch class and octave labels also raises questions about applicability -- if I understood correctly, transfer can only be done when this information is present.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 7,
+      "text": "I think the main point of transfer over a regular generative model that goes from labels to audio is precisely that it can be done without label information.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 8,
+      "text": "* The use of fully connected layers also implies that it requires fixed length input, so windowing and stitching are necessary for it to be applied to recordings of arbitrary length. Why not train a convolutional model instead?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 9,
+      "text": "* I think the choice of a 3-dimensional latent space is poorly justified. Why not use more dimensions and project them down to 3 for visualisation and interpetation purposes with e.g. PCA or t-SNE?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 10,
+      "text": "This seems like an unnecessary bottleneck in the model, and could partly explain the relatively poor quality of the results.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 11,
+      "text": "I appreciated that the one-to-one transfer experiments are incremental comparisons, which provides valuable information about how much each idea contributes to the final performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 12,
+      "text": "Overall, I feel that this paper falls short of what it promises, so I cannot recommend acceptance at this time.",
+      "suffix": "\n\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 13,
+      "text": "Other comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 14,
+      "text": "* In the introduction, an adversarial criterion is referred to as a \"discriminative objective\", but \"adversarial\" (i.e. featuring a discriminator) and \"discriminative\" mean different things. I don't think it is correct to refer to an adversarial criterion as discriminative.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 15,
+      "text": "* Also in the introduction, it is implied that style transfer constitutes an advance in generative models, but style transfer does not make use of / does not equate to any generative model.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 16,
+      "text": "* Some turns of phrase like \"recently gained a flourishing interest\", \"there is still a wide gap in quality of results\", \"which implies a variety of underlying factors\", ... are vague / do not make much sense and should probably be reformulated to enhance readability.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 17,
+      "text": "* Introduction, top of page 2: should read \"does not learn\" instead of \"do not learns\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 18,
+      "text": "* Mor et al. (2018) do actually make use of an adversarial training criterion (referred to as a \"domain confusion loss\"), contrary to what is claimed in the introduction.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 19,
+      "text": "* The claim that training a separate decoder for each domain necessarily leads to prohibitive training times is dubious -- a single conditional decoder would arguably need more capacity than each individual separate decoder model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 20,
+      "text": "I think all claims about running time should be corroborated by controlled experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 21,
+      "text": "* I think Figure 1 is great and helps a lot to distinguish the different domain translation paradigms.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 22,
+      "text": "* I found the description in Section 3.1 a bit confusing as it initially seems that the approach requires paired data (e.g. \"matching samples\").",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 23,
+      "text": "* Section 3.1, \"amounts to optimizing\" instead of \"amounts to optimize\"",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 24,
+      "text": "* Higgins et al. (2016) specifically discuss the case where beta in formula (1) is larger than one.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 25,
+      "text": "As far as I can tell, beta is annealed from 0 to 1 here, which is an idea that goes back to \"Generating Sentences from a Continuous Space\" by Bowman et al. (2016).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 26,
+      "text": "This should probably be cited instead.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 27,
+      "text": "* \"circle-consistency\" should read \"cycle-consistency\" everywhere.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 28,
+      "text": "* MMD losses in the context of GANs have also been studied in the following papers:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 29,
+      "text": "- \"Training generative neural networks via Maximum Mean Discrepancy optimization\", Dziugaite et al. (2015)",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 30,
+      "text": "- \"Generative Models and Model Criticism via Optimized Maximum Mean Discrepancy\", Sutherland et al. (2016)",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 31,
+      "text": "- \"MMD GAN: Towards Deeper Understanding of Moment Matching Network\", Li et al. (2017)",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 32,
+      "text": "* The model name \"FILM-poi\" is only used in the \"implementation details\" section, it doesn't seem to be referred to anywhere else. Is this a typo?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 33,
+      "text": "* The differences between UNIT (GAN; C-po) and UNIT (MMD; C-po) in Table 1 seem very small and I'm not convinced that they are significant. Why does the MMD version constitute an improvement? Or is it simply more stable to train?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 34,
+      "text": "* The descriptor distributions in Figure 3 don't look like an \"almost exact match\" to me (as claimed in the text).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 35,
+      "text": "There are some clearly visible differences.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "sentence_index": 36,
+      "text": "I think the wording is a bit too strong here.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 0,
+      "text": "Thank you for the detailed review and constructive remarks.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 1,
+      "text": "Below are answers to the main points that were commented as well as updates on the current work.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 2,
+      "text": "* Sound quality is disappointing and with artifacts:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 3,
+      "text": "We are working on Fast Spectrogram Inversion using Multi-head Convolutional Neural Networks, arXiv:1808.06719, Sercan O. Arik et al. to replace Griffin-Lim inversion ; two possible improvements we expect are much faster (towards real-time) sound rendering and better audio quality.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 4,
+      "text": "We are also working on mini-batch MMD latent regularization (Wasserstein-AE) instead of per-sample KLD regularization (VAE) which may result in improved generalization power and generative quality.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 5,
+      "text": "* Not suited to transfer from audio without label:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 6,
+      "text": "If the audio carries a note information, it can be easily/automatically extracted in the form of pitch tracks as we did for transferring on instrument solos.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 7,
+      "text": "Some audio data do not have note qualities, which are out of the current training setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 8,
+      "text": "For that we have been training unconditioned one-to-one models or solely instrument conditional many-to-many models that do not require any note information.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 9,
+      "text": "But we are working on models which incorporate an unconditioned processing option (eg. training while zeroing the one-hot conditioning or adding an entry in the input embedding of FiLM which is the unconditional state) to be trained on a dataset that mixes conditional and non conditional audio (eg. adding instrument solo sections which in parts have a clear pitch track and in others none).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 10,
+      "text": "* A fully convolutional model would process arbitrary length of audio:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 11,
+      "text": "We use the linear layers to set the latent space dimensionality, when processing various length audio sequences, each encoding amounts to about 120ms context and we resynthesize with overlap-ad that mirrors the short-term input analysis ; this process was used when transferring on the instrument solos (a task that was beyond the training setting).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 12,
+      "text": "* Insufficient justification of the 3D latent space:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 13,
+      "text": "At first we validated that our models could perform well in term of training/test spectrogram reconstructions with only 3 latent dimensions, some reasons that we found interesting to enforce this are more related to a possible music/creative application of the model: less synthesis/control parameters for the user (and controls which may then be more expressive), direct visualization of the latent space which is turned into a 3D synthesis space from which users may draw and decode sound paths or create other interaction schemes, a denser latent space that may be better suited for random sampling/interpolations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 14,
+      "text": "The direct interaction with 3D latent space becomes even more interesting when we pipeline our model with fast-spectrogram inversion.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 15,
+      "text": "* Interesting incremental comparison in one-to-one transfers:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 16,
+      "text": "We keep working on more detailed benchmarks/comparisons that would equally cover one-to-one and many-to-many model variations and that would integrate the new features we are testing.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 17,
+      "text": "* All claims about running time should be corroborated by controlled experiments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 18,
+      "text": "Indeed we didn\u2019t benchmark yet our models on Nsyth and our approach differs from others such as Mor et al. that report using \u00ab\u00a0eight Tesla V100 GPUs for a total of 6 days",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 19,
+      "text": "\u00bb",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 20,
+      "text": ".",
+      "suffix": "",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 21,
+      "text": "From the beginning of our experiment we aim at a much lighter-weight system that could be trained/used more broadly (eg. with a single mid-range GPU).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 22,
+      "text": "The computational cost difference is not rigorously estimated on a same given dataset/task to learn but still we think it is relevent to point that the results we report can be achieved in less that a day on a single Tesla V100 GPU.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 23,
+      "text": "* Why does the MMD version constitute an improvement? Or is it simply more stable to train?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 24,
+      "text": "It is more stable to train, it does not require the extra \u2018cost\u2019 of an auxiliary network training and it can generalize to many-to-many transfer without requiring as many adversarial networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 25,
+      "text": "About the significance of score differences, we agree that it needs more details and comparisons, it was also noted by \"AnonReviewer1\" and we should make alternative tests to scale or give a few more references to the benchmark.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          33
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 26,
+      "text": "* \"FILM-poi\" .. is this a typo ?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 27,
+      "text": "Thank you for pointing this as well as your other remarks on the writing and use of precise terms/phrases.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 28,
+      "text": "Indeed this is right, we mixed poi/pod but both refer to many-to-many conditioning on pitch+octave+instrument/domain classes.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          32
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_2A9d3m",
+      "rebuttal_id": "ryxdk0Yaa7",
+      "sentence_index": 29,
+      "text": "We also thank you for pointing more literature to improve our references and discussions to related works.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          28,
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

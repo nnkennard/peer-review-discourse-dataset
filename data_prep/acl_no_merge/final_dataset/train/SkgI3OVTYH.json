@@ -1,0 +1,891 @@
+{
+  "metadata": {
+    "forum_id": "SJxjPxSYDH",
+    "review_id": "SkgI3OVTYH",
+    "rebuttal_id": "ryl1Y2nHoH",
+    "title": "Discriminative Variational Autoencoder for Continual Learning with Generative Replay",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJxjPxSYDH&noteId=ryl1Y2nHoH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 0,
+      "text": "In this paper, the authors focus on alleviating the catastrophic forgetting problem in continual learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 1,
+      "text": "The authors propose a discriminative variational autoencoder (DiVA) to solve this problem under the generative replay framework.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 2,
+      "text": "DiVA modifies the objective function of VAE by introducing an additional term that maximizes the mutual information between the latent variables and the class labels.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 3,
+      "text": "The authors do not thoroughly explain the motivation of this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 4,
+      "text": "The authors do not explicitly define continual learning, incremental learning, and catastrophic forgetting problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 5,
+      "text": "It is also not clear to me why these problems are important.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 6,
+      "text": "The idea that introduces labels in VAE is not novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 7,
+      "text": "For example, Narayanaswamy et al. [1] also propose to utilize labels to VAE.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 8,
+      "text": "I do not understand why making use of labels is important for solving the catastrophic forgetting problem and how the labels are useful in the generative replay process.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 9,
+      "text": "It is also not clear to me how domain translation is relevant to continual learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 10,
+      "text": "In terms of modeling, since the input into the prior network has finite possible discrete values, we do not need a fully connected network to generate $\\hat{\\mu}_c$ and $\\hat{\\sigma}_c$. Instead, we can directly optimize $\\hat{\\mu}_c$ and $\\hat{\\sigma}_c$ for each $c$ as parameters.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 11,
+      "text": "The paper provides some good experimental results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 12,
+      "text": "But the problem settings are not clear to me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 13,
+      "text": "I do not understand how the model is trained to solve multiple tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 14,
+      "text": "Do the same model is trained for multiple tasks? Is each of the tasks trained sequentially or simultaneously?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 15,
+      "text": "It is also not clear to me why CIFAR datasets involve two domains and how these domains are relevant in each of the tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 16,
+      "text": "In summary, since DiVA gives a good experimental performance, the proposed method might be promising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 17,
+      "text": "However, it looks to me that the authors need to better explain the motivation of DiVA, the differences of DiVA from existing supervised VAE, and the experimental settings, before the acceptance of this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 18,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "sentence_index": 19,
+      "text": "[1]Narayanaswamy, Siddharth, T. Brooks Paige, Jan-Willem Van de Meent, Alban Desmaison, Noah Goodman, Pushmeet Kohli, Frank Wood, and Philip Torr. \"Learning disentangled representations with semi-supervised deep generative models.\" In Advances in Neural Information Processing Systems, pp. 5925-5935. 2017.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 0,
+      "text": "We appreciate your constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 1,
+      "text": "Specifically, your comments about the motivation and problem definitions greatly help us to improve the quality of our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 2,
+      "text": "(Importance and motivation)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 3,
+      "text": "To step forward to artificial general intelligence, we should further consider making an agent that can learn and remember many tasks incrementally [1].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 4,
+      "text": "However, this is particularly challenging in real-world settings: the agent may observe different tasks sequentially, and an individual task may not recur for a long time.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 5,
+      "text": "In this settings, a learned model might overfit to the most recently seen data, forgetting the rest, a phenomenon referred to as catastrophic forgetting, which is a core issue CL systems aim to address [2].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 6,
+      "text": "Recently, GR-based methods, inspired by the generative nature of the hippocampus as a short-term memory system in the primate brain [3], have been widely studied to address the catastrophic forgetting problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 7,
+      "text": "In terms of GR, we are trying to address the two open questions mentioned above.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 8,
+      "text": "(Use of labels and novelty) In GR-based approaches, the quality of generated samples is crucial to keep the performance of previous tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 9,
+      "text": "If we use labels, we can construct a conditional generative model.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 10,
+      "text": "Generally, conditioning on a generative model yields higher quality samples than unconditional one and makes it possible to generate class-balanced samples [4]; the importance of conditional generation is also described in section 6.1 in our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 11,
+      "text": "In this paper, we showed that discriminative regularization could make VAE possible to conduct both class conditional generation and classification with one integrated model.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 12,
+      "text": "Thus, we do not need to train an additional classifier, e.g., deep CNN, which is necessary for other works, including Narayanaswamy et al. There is also classifier integrated VAE such as [6].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 13,
+      "text": "The difference with [6] is the use of class-conditional priors; more details are explained at the response (Difference with CDVAE) for reviewer 3 and section 4.1 in our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 14,
+      "text": "(Domain translation) Even though the conditional generation improves the quality of the generated samples, there is still a big difference between real and generated images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 15,
+      "text": "Because a deep neural network is vulnerable to even single-pixel perturbation [5], the difference can seriously affect the classification performance of GR-based algorithms.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 16,
+      "text": "Thus, we suggested applying the domain translation to address this issue.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 17,
+      "text": "By narrowing distribution discrepancy between real and generated images using the domain translation technique, we were able to alleviate the catastrophic forgetting problem successfully (Table 2).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 18,
+      "text": "(Modeling) Good point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 19,
+      "text": "Since we consider finite discrete conditions, we can directly optimize $\\mathrm{\\mu_c}$ and $\\mathrm{\\sigma_c}$ for each c as parameters without the prior network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 20,
+      "text": "However, introducing a prior network makes our model become a more general framework that can address continuous-valued conditions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 21,
+      "text": "Also, in our paper, we set the prior network as a single fully-connected layer for easy handling of conditions and simple implementation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 22,
+      "text": "Otherwise, we should keep an additional mapping table between class conditions and its $\\mathrm{\\mu_c}$ and $\\mathrm{\\sigma_c}$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 23,
+      "text": "(Experimental settings)",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 24,
+      "text": "Generally, CL systems assume that each task comes sequentially, and an agent can not directly access previous experience [2].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 25,
+      "text": "We exactly follow the assumption.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 26,
+      "text": "Also, we train DiVA sequentially for each task with one same model.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 27,
+      "text": "To clarify our training process, we provide a brief summarization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 28,
+      "text": "Firstly, we train DiVA with task 1 that consists of real images and labels.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 29,
+      "text": "Then, when new task 2 is coming, DiVA generates images and its labels of task 1 and learns both task 2 and the generated task 1 simultaneously.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 30,
+      "text": "We added an additional figure in Figure 6 in Appendix E, for helping conceptual understanding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 31,
+      "text": "(Domains of CIFAR dataset) Since current generative models are not perfect for generating complex natural images, there is always a discrepancy between generated images and real images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 32,
+      "text": "Thus, we can define two domains: real image domain (realistic) and generated image domain (blurry).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 33,
+      "text": "We used the domain translation for narrowing the gap.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 34,
+      "text": "[1] Legg, Shane, and Marcus Hutter. \"Universal intelligence: A definition of machine intelligence.\" Minds and machines 17.4 (2007): 391-444.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 35,
+      "text": "[2] https://sites.google.com/view/continual2018",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 36,
+      "text": "[3] Shin, Hanul, et al. \"Continual learning with deep generative replay.\" Advances in Neural Information Processing Systems. 2017.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 37,
+      "text": "[4] Lesort, Timoth\u00e9e, et al. \"Marginal Replay vs Conditional Replay for Continual Learning.\" International Conference on Artificial Neural Networks. Springer, Cham, 2019.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 38,
+      "text": "[5] Su, Jiawei, Danilo Vasconcellos Vargas, and Kouichi Sakurai. \"One pixel attack for fooling deep neural networks.\" IEEE Transactions on Evolutionary Computation (2019).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgI3OVTYH",
+      "rebuttal_id": "ryl1Y2nHoH",
+      "sentence_index": 39,
+      "text": "[6] Mundt, Martin, et al. \"Unified Probabilistic Deep Continual Learning through Generative Replay and Open Set Recognition.\" arXiv preprint arXiv:1905.12019 (2019).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,870 @@
+{
+  "metadata": {
+    "forum_id": "rklhqkHFDB",
+    "review_id": "rkxBU7f0qH",
+    "rebuttal_id": "rklIgxx5oH",
+    "title": "LARGE SCALE REPRESENTATION LEARNING FROM TRIPLET COMPARISONS",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rklhqkHFDB&noteId=rklIgxx5oH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 0,
+      "text": "The paper presents a Neural Network based method for learning ordinal embeddings only from triplet comparisons.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 1,
+      "text": "A nice, easy to read paper, with an original idea.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 2,
+      "text": "Still, there are some issues the authors should address:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 3,
+      "text": "- for the experiment with Imagenet images, it is not very clear how many pictures are used. Is this number 2500?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 4,
+      "text": "- the authors state that they use \"the power of DNNs\" while they are experimenting with a neural network with only 4 layers. While there is no clear line between shallow and deep neural networks, I would argue that a 4 layer NN is rather shallow.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 5,
+      "text": "- the authors fix the number of layers of the used network based on \"our experience\". For the sake of completeness, more experiments in this area would be nice.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 6,
+      "text": "- for Figure 6, there is not a clear conclusion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 7,
+      "text": "While, it supports that \" that logarithmic growth of the layer width respect to n is enough to obtain desirable performance.\"  I don't see a clear conclusion of how to pick the width of hidden layers, maybe a better representation could be used.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 8,
+      "text": "- I don't see a discussion about the downsides of the method (for example, the large number of triplet comparison examples needed for training; and possible methods to overcome this problem).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 9,
+      "text": "- in section 4.4",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 10,
+      "text": "when comparing the proposed approach with another methods why not use more complex datasets (like those used in section 4.3)",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 11,
+      "text": "- in section 4.3, there is no guarantee that the intersection between the training set and test set is empty.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 12,
+      "text": "- in section 4.3 how is the reconstruction built (Figure 3b)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 13,
+      "text": "A few typos found:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 14,
+      "text": "- In figure 3 (c) \"number |T of input\" should be  \"number |T| of input\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 15,
+      "text": "- In figure 5 (a) \"cencept\" should be \"concept\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 16,
+      "text": "- In figure 8 \"Each column corresponds to ...\" should be \"Each row corresponds to ...\".",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 17,
+      "text": "- In the last paragraph of A1 \"growth of the layer width respect\" should be \"growth of the layer width with respect\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 18,
+      "text": "- In the second paragraph of A2 \"hypothesize the that relation\" should be \"hypothesize that the relation\".",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "sentence_index": 19,
+      "text": "- In section 4.3 last paragraph, first sentence: \"with the maximunm number\" should be \"with the maximum number\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the insightful comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 1,
+      "text": "We address the questions in the following:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 2,
+      "text": "- How many images did you have in the experiment?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 3,
+      "text": "We had 7500 images in total.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 4,
+      "text": "We had 3 concept classes, and 2500 images for each concept.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 5,
+      "text": "We will mention the total number in the main text.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 6,
+      "text": "- The proposed network is not deep, but shallow",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 7,
+      "text": "We agree that a clear distinction line between shallow and deep networks does not exist.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 8,
+      "text": "So we will make a note on that issue.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 9,
+      "text": "- More experiments on the number of layers",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 10,
+      "text": "We had experimented with fewer layers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 11,
+      "text": "We realized that in this case the width of the network should be increased to compensate for the representation power of the network.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 12,
+      "text": "As we already had an extensive set of experiments, we decided not to report that.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 13,
+      "text": "As the proposed architecture already performs well to solve the ordinal embedding problem, we found it unnecessary to try deeper networks.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 14,
+      "text": "- \"I don't see a clear conclusion of how to pick the width of hidden layers, maybe a better representation could be used.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 15,
+      "text": "There exist three parameters in this experiment, which makes it hard to come up with the most conclusive representation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 16,
+      "text": "We also generated line plots (multiple curves in one plot) and 3D mesh plots to show the dependency.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 17,
+      "text": "In the end, we found the heat-map more informative.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 18,
+      "text": "In the revision, we will add the other plots to support the claim.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 19,
+      "text": "- \"I don't see a discussion about the downsides of the method\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 20,
+      "text": "One of the drawbacks is that our method needs GPUs, while the more traditional algorithms run on CPUs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 21,
+      "text": "This can be of disadvantage if non-machine learning experts want to use our method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 22,
+      "text": "However, this is the case for most recent ML methods based on neural nets.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 23,
+      "text": "The number of required triplets is theoretically lower bounded by nd log n, and this is also being confirmed by our experiments (our algorithm, as well as our competitors, break down when they get fewer triplets).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 24,
+      "text": "Therefore, in a setting with passive triplet answers, and without extra information, it is impossible to overcome this problem.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 25,
+      "text": "- \"in section 4.4",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 26,
+      "text": "when comparing the proposed approach with another method why not use more complex datasets (like those used in section 4.3)\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 27,
+      "text": "Independent of the dataset complexity, provided with enough triplet answers, all methods can yield less than 5% triplet error.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 28,
+      "text": "However, the computation time is significantly lower for our proposed method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 29,
+      "text": "Due to the iterative nature of all algorithms, the computation time does not depend on the data distribution, but on the number of input points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 30,
+      "text": "Thus, a simple uniform dataset could serve to show our intention in this section.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 31,
+      "text": "- \"in section 4.3, there is no guarantee that the intersection between the training set and the test set is empty.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 32,
+      "text": "Yes, in theory that is true, but in practice this is negligible: the total number of possible triplets is about 10^9. So the likelihood that two sets of size 1000 intersect is close to 0.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 33,
+      "text": "- \"in section 4.3",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 34,
+      "text": "how is the reconstruction built (Figure 3b)?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 35,
+      "text": "Figure 3b is the exact output of the ordinal embedding in two dimensions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 36,
+      "text": "The colors are the initial labels of the input items.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 37,
+      "text": "There are two or three labels assigned to demonstrate the quality of reconstruction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 38,
+      "text": "Note that the ordinal embedding output is unique only up to isometric transforms.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxBU7f0qH",
+      "rebuttal_id": "rklIgxx5oH",
+      "sentence_index": 39,
+      "text": "In other words, every valid output is still valid with rotation, scaling and translation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

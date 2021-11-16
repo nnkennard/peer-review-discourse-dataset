@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "forum_id": "SkgTR3VFvH",
+    "review_id": "SJgqHOk3cB",
+    "rebuttal_id": "rkeLnmSDiH",
+    "title": "Pipelined Training with Stale Weights of Deep Convolutional Neural Networks",
+    "reviewer": "AnonReviewer4",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkgTR3VFvH&noteId=rkeLnmSDiH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 0,
+      "text": "This paper proposes a new pipelined training approach to speedup the training for neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 1,
+      "text": "The approach separates forward and backpropagation processes into multiple stages, cache the activation and gradients between stages, processes stages simultaneously, and then uses the stored activations to compute gradients for updating the weights.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 2,
+      "text": "The approach leads to stale weights and gradients.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 3,
+      "text": "The authors studied the relation between weight staleness and show that the quality degradation mainly correlates with the percentage of the weights being stale in the pipeline.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 4,
+      "text": "The quality degradation can also be remedied by turning off the pipelining at the later training steps while overall training speed is still faster than without pipelined training.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 5,
+      "text": "Since this work takes the approach of allowing stale weight updates, the author should also compare with existing distributed training approaches that use asynchronous updates, with or without model parallelism, for example, Dean et al., 2012.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "sentence_index": 6,
+      "text": "Without the comparison it\u2019s not clear how much improvement this approach provides compared to existing work that perform stale updates.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for pointing out the potential similarity between our pipelined approach and the asynchronous update approach.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 1,
+      "text": "Pipelined backpropagation is similar to model parallelism but it addresses the resource underutilization issue in model parallelism.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 2,
+      "text": "However, asynchronous update (e.g., asycn-SGD in Dean et al. [1]) usually utilizes a parameter server to keep track of model parameters (weights) while our pipelined method does not use any parameter server.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 3,
+      "text": "Furthermore, each accelerator obtains a replica of a full model in asycn-SGD training while each accelerator contains only a part of the model in our pipelined method, on the assumption that the full model does not fit into the memory of a single accelerator.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 4,
+      "text": "The async-SGD in Dean et al. [1] still falls into data parallelism because each accelerator has a replica of the full model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 5,
+      "text": "On the other hand, our approach falls into pipelined parallelism.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 6,
+      "text": "Thus, we focused our comparison to related work on two similar approaches: PipeDream and GPipe, both utilizing pipelined parallelism.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 7,
+      "text": "Nonetheless, we will expand the related work section to more explicitly compare to data parallelism and non-pipelined approaches to model parallelism (i.e., expand on the first paragraph of related work).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SJgqHOk3cB",
+      "rebuttal_id": "rkeLnmSDiH",
+      "sentence_index": 8,
+      "text": "[1]  Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, and Andrew Y. Ng. 2012. Large scale distributed deep networks. In Proceedings of the 25th International Conference on Neural Information Processing Systems",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

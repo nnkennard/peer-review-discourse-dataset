@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "forum_id": "HJx7l309Fm",
+    "review_id": "B1xTnUUMhm",
+    "rebuttal_id": "S1gqkJrKTX",
+    "title": "Actor-Attention-Critic for Multi-Agent Reinforcement Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJx7l309Fm&noteId=S1gqkJrKTX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 0,
+      "text": "Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 1,
+      "text": "Authors present a decentralized policy, centralized value function approach (MAAC) to multi-agent learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 2,
+      "text": "They used an attention mechanism over agent policies as an input to a central value function.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 3,
+      "text": "Authors compare their approach with COMA (discrete actions and counterfactual (semi-centralized) baseline) and MADDPG (also uses centralized value function and continuous actions)",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 4,
+      "text": "MAAC is evaluated on two 2d cooperative environments, Treasure Collection and Rover Tower.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 5,
+      "text": "MAAC outperforms baselines on TC, but not on RT.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 6,
+      "text": "Furthermore, the different baselines perform differently: there is no method that consistently performs well.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 7,
+      "text": "Pro",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 8,
+      "text": "- MAAC is a simple combination of attention and a centralized value function approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 9,
+      "text": "Con",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 10,
+      "text": "- MAAC still requires all observations and actions of all other agents as an input to the value function, which makes this approach not scalable to settings with many agents.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 11,
+      "text": "- The centralized nature is also semantically improbable, as the observations might be high-dimensional in nature, so exchanging these between agents becomes impractical with complex problems.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 12,
+      "text": "- MAAC does not consistently outperform baselines, and it is not clear how the stated explanations about the difference in performance apply to other problems.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 13,
+      "text": "- Authors do not visualize the attention (as is common in previous work involving attention in e.g., NLP).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 14,
+      "text": "It is unclear how the model actually operates and uses attention during execution.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 15,
+      "text": "Reproducibility",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "sentence_index": 16,
+      "text": "- It seems straightforward to implement this method, but I encourage open-sourcing the authors' implementation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 1,
+      "text": "With respect to your concern over scalability, the need to input the actions and observations of all agents in the value function (i.e. centralized value function) limits scalability only during training time, and it is a necessary measure to reduce the non-stationarity of multi-agent environments, as discussed in previous work [1].",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 2,
+      "text": "We would also like to re-emphasize the fact that our final trained policies are decentralized and do not require any information exchange between agents.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 3,
+      "text": "This trait makes our approach (and other centralized-critic/decentralized-policy approaches) useful in situations where one can train in a simulation where communication is less taxing, but deploy in the real world, where communication may be more challenging.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 4,
+      "text": "We also compared to other methods demonstrating the better scalability of our approach, cf. Table 2.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 5,
+      "text": "Your thinking of \u2018semantically probable\u2019 exchange of information is interesting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 6,
+      "text": "We note that it is possible to compress each agent\u2019s actions/observations before they are sent to a central critic.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 7,
+      "text": "Our setup naturally allows for this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 8,
+      "text": "Consider a case with high-dimensional image observations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 9,
+      "text": "In our approach, each agent needs to embed these observations (along with their actions) before sharing with other agents.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 10,
+      "text": "In a situation where information exchange between agents is expensive, even during training, we can select a sufficiently small embedding space such that performance and efficiency are balanced.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 11,
+      "text": "This notion of compressing embeddings prior to sharing across agents does not fit as naturally into the competing methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 12,
+      "text": "Our experiments were especially designed to have two contrasting environments, so that we can illustrate two different aspects of multi-agent RL where we felt like the current approaches have not been able to address at the same time.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 13,
+      "text": "Thus, it is by design that different baselines perform differently on them, as every approach has its own strengths and weaknesses.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 14,
+      "text": "Our experiments demonstrate that our approach handles both environments well, which none of the baselines is able to do.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 15,
+      "text": "Our experiments on Cooperative Treasure Collection demonstrate that the general structure of our attention model (even without considering dynamic attention as in our uniform attention baseline) is able to handle large observation spaces (and relatively larger numbers of agents) better than existing approaches which concatenate observations and actions from all agents together.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 16,
+      "text": "Furthermore, our experiments on Rover-Tower demonstrate that the general model structure alone is not sufficient in all tasks, specifically those with separately coupled rewards for groups of agents, and dynamic attention becomes necessary.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 17,
+      "text": "We have added a new section 6.3  to the supplement that includes visualizations of the attention mechanism both over the course of training and within episodes.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 18,
+      "text": "Our code is available online and a link will be included in the paper once the anonymized review period is over.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "B1xTnUUMhm",
+      "rebuttal_id": "S1gqkJrKTX",
+      "sentence_index": 19,
+      "text": "[1] Ryan Lowe, Yi Wu, Aviv Tamar, Jean Harb, OpenAI Pieter Abbeel, and Igor Mordatch. Multi-agent actor-critic for mixed cooperative-competitive environments. In Advances in Neural Information Processing Systems, pp. 6382\u20136393, 2017.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

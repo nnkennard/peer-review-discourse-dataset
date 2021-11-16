@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "forum_id": "HylsTT4FvB",
+    "review_id": "B1gLu2Q1iS",
+    "rebuttal_id": "HyxKK7PvsS",
+    "title": "On the \"steerability\" of generative adversarial networks",
+    "reviewer": "AnonReviewer4",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HylsTT4FvB&noteId=HyxKK7PvsS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 0,
+      "text": "The paper explores and experiments on extrapolating attributes of images produced by GANs by manipulating their representations in latent space.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 1,
+      "text": "Attribute manipulation is done by predicting latent space walks (linear or non-linear) and is learned in a self-supervised way by using augmented outputs of a pretrained GAN as target images.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 2,
+      "text": "Authors experimentally show dependence of range of possible attribute manipulations on the diversity of the dataset in terms of that attribute as well as propose techniques to improve it.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 3,
+      "text": "Suggested concepts are explained in a clear way with extensive experiments confirming the findings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 4,
+      "text": "Techniques proposed for improving \"steerability\" of GANs are backed up by both qualitative and quantitative analysis, although missing experiments on more sophisticated datasets than MNIST.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 5,
+      "text": "Overall,  I recommend to accept this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 6,
+      "text": "Several questions I would like the authors to address to make some details more clear and the paper more complete:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 7,
+      "text": "1. Why the color distribution of generated images is evaluated on a sampled subset of pixels, not full images?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 8,
+      "text": "(\"Quantifying steerability\" section.)",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 9,
+      "text": "2. On Figure 6, which classes are outlying on transformation limitation / data variability plots (bottom-right corner) and how it may be explained?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 10,
+      "text": "3. While StyleGAN can not preserve geometry of objects for shift in location-based attributes, when walks are learned in the W space, have you experimented on manipulating those attributes with z space? What are the results?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 11,
+      "text": "Other minor flaws include",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 12,
+      "text": "1. Pictures in Fig. 2 are mixed up between G(z) and G(z + \\alpha w)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 13,
+      "text": "2. In Fig. 2 edit(G(z, \\alpha)) -> edit(G(z), \\alpha))",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 14,
+      "text": "3. In eq. (2) f^n(z) -> G(f^n(z))",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "sentence_index": 15,
+      "text": "4. In eq. (6) +\\alpha^* -> -\\alpha^*",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and questions; we have incorporated these in the revision and respond to your questions below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 1,
+      "text": "Q1: Why is the color distribution generated using a subset of pixels?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 2,
+      "text": "A1: We use a random subset of pixels simply for computational feasibility.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 3,
+      "text": "Each distribution is compiled over 1000  images, and drawing a distribution over all pixels per image increases that number by 256^2, causing the computation to be very slow.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 4,
+      "text": "In contrast for the remaining operations, we measure one statistic per image based on the bounding box, which is fast.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 5,
+      "text": "Q2: What are the classes in the bottom right of the transformation limitation / data variability plots?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 6,
+      "text": "A2: The classes in the bottom right corner of the plots are wooden spoon (shift x), cleaver (shift y), and computer keyboard (zoom).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 7,
+      "text": "These classes are more difficult for BigGAN to model accurately, and they deform easily or become unrecognizable under alpha transformations, which may prevent the object detector from reliably detecting them.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 8,
+      "text": "Q3: What are the results of manipulations in Stylegan z latent space?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 9,
+      "text": "A3: We experimented with manipulations in the Stylegan z space \u2014 in general the effects of these transformations are weaker, and may entangle other transformations along with the target transformation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 10,
+      "text": "For example, when recoloring a car using a walk in z, it may inadvertently also rotate or zoom the car.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 11,
+      "text": "On the other hand, in the w latent space we are better able to change the desired attribute without other side effects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 12,
+      "text": "We have added a new qualitative figure (Fig. 28) in the appendix illustrating these differences.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 13,
+      "text": "Minor Flaws: Thank you for your careful review in catching these mistakes.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 14,
+      "text": "We have updated the typos in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 15,
+      "text": "In Fig 2 we optimize for a z which approximates a shifted version of the original image x.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1gLu2Q1iS",
+      "rebuttal_id": "HyxKK7PvsS",
+      "sentence_index": 16,
+      "text": "Hence, the G(z+\\alpha w) image does not exactly match the original image G(z) or the shifted edit(G(z), \\alpha), but is intended to approximate the shifted image.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

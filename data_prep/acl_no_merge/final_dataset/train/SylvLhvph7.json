@@ -1,0 +1,596 @@
+{
+  "metadata": {
+    "forum_id": "SJNceh0cFX",
+    "review_id": "SylvLhvph7",
+    "rebuttal_id": "Skx3-KvOC7",
+    "title": "A   RECURRENT NEURAL CASCADE-BASED MODEL FOR CONTINUOUS-TIME DIFFUSION PROCESS",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJNceh0cFX&noteId=Skx3-KvOC7",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 0,
+      "text": "The authors of this paper are proposing a neural network approach for learning diffusion dynamics in networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 1,
+      "text": "The authors argue that the main advantage of their framework is that it incorporates the structure of independent cascades into the model which predicts the diffusion process.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 2,
+      "text": "The primary difficulty in reviewing this paper is the poor presentation of the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 3,
+      "text": "There are many typos and mistakes (e.g., the last paragraph of the paper starts with a sentence that does not make any sense), missing references (e.g., there is an empty parenthesis at the end of the second paragraph on the second page) and in at least two cases, there are references to a formula that is not in the manuscript (e.g., reference to formula 15 on line 3 of page 5).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 4,
+      "text": "This issues makes reviewing this paper very difficult.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 5,
+      "text": "In the modeling section, authors use p(I|D) as q^D(.) in the Eq. 12, where p(I|D) is the conditional probability that a particular node infected an observed infected node first.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 6,
+      "text": "Plugging p(I|D) in Eq. 12 and using decomposition of p(D ,I) used in Eq. 10, we arrive at a formulation which drops all p(I|D) terms.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 7,
+      "text": "This results in an objective function which only involves infected nodes (and no term associated with the parent node), weighted by likelihood of each node j infecting the node at step i. This should make the training more simplified than what is discussed in Algorithm 2.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 8,
+      "text": "Beyond this simplification, I am not clear if that is actually intended by the authors.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 9,
+      "text": "The experiments demonstrate a superior performance of the proposed model compared to alternative benchmarks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 10,
+      "text": "The authors explain how they trained their own model but there is no mention on how they trained benchmark models.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 11,
+      "text": "However, given that the datasets used in the experiments were not used in the associated benchmark papers, it is necessary for authors to explain how they trained competing models.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "sentence_index": 12,
+      "text": "Due to several shortcomings of the paper, most important of which is on presentation of the paper, this manuscript requires a significant revision by the authors to reach the necessary standards for publication, moreover it would be helpful to clarify the modeling choices and consequences of these choices more clearly.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 0,
+      "text": "Thanks for your valuable comments and feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 1,
+      "text": "We attempted to much  improve the clarity of our paper by adding further explanations and correcting typos in many places.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 2,
+      "text": "New experiments have also been added.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 3,
+      "text": "Please find bellow our answers to your specific remarks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 4,
+      "text": "R: \"In the modeling section, authors use p(I|D) as q^D(.) in the Eq. 12, ...  Beyond this simplification, I am not clear if that is actually intended by the authors.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 5,
+      "text": "A: You are totally right, eq.10 simplifies to $\\log p(D) \\geq",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 6,
+      "text": "\\mathbb{E}_{I \\sim",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 7,
+      "text": "q^D}",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 8,
+      "text": "\\left[ \\sum\\limits_{i=1}^{|D|-1} \\log p(D_i |D_{<i},I_{<i})  + \\sum\\limits_{v \\not\\in U^D} \\log p(v \\not\\in U^D| D_{\\leq |D|-1}, I)\\right]$. We were aware of this but for simplicity and the conciseness of presentation we chose to not give this final derivation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 9,
+      "text": "Also, this was because $P(D_i,I_i|D_{<i},I_{<i})$ is much easier to compute (and more efficient) than $P(D_i |D_{<i},I_{<i})$, given that the computation of $P(I_i| D_{\\leq i},I_{<i})$ is in both case required for sampling ($P(D_i,I_i|D_{<i},I_{<i})$ involves a simple product while $P(D_i|D_{<i},I_{<i})$ involves a sum of products).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 10,
+      "text": "But we agree this was not a good choice, since this simplification appears obvious to the reader.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 11,
+      "text": "We hesitated a lot on this, our decision was taken to present things as closely as possible to our implementation (by the way there was a mistake in the algorithm 2 resulting from this hesitation - the implementation for our experiments was correct however).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 12,
+      "text": "We agree that this may appear confusing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 13,
+      "text": "Particularly since it gives the feeling that parents of infections are not involved anymore in the computation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 14,
+      "text": "But there are actually, since there remains $P(I_i|D_{<i},I_{<i})$ terms in the expectation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 15,
+      "text": "The process learns parameters that tend to give high probabilities to the most likely parent vectors regarding infections from the episode.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 16,
+      "text": "In the revision of the paper, we gave the final derivation you suggested, since it is better for comprehension (It also allowed us to discuss more precisely on what is optimized by considering the given gradient update), and we discuss about its implementation in the appendix as an explanation for the algorithm 2 (that only slightly changed to correct the aforementioned mistake).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 17,
+      "text": "Thanks for this remark that helped us to much improve the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 18,
+      "text": "R: \"The authors explain how they trained their own model but there is no mention on how they trained benchmark models\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 19,
+      "text": "A: You are totally right, it is missing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 20,
+      "text": "Baseline models are trained on the same training set as our model following the methods proposed in their original paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 21,
+      "text": "Our model and the baselines were tuned by a grid search process on a validation set for each dataset (whose size is given in the description of the datasets),",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 22,
+      "text": "although the best hyper-parameters obtained for Arti1 remained near optimal for the other ones.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 23,
+      "text": "For every model with an embedding space (i.e., all except CTIC), we set its dimension to $d=50$ (larger dimensions induce a more difficult convergence of the learning without significant gain in accuracy).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylvLhvph7",
+      "rebuttal_id": "Skx3-KvOC7",
+      "sentence_index": 24,
+      "text": "We added this explanation in the new version of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

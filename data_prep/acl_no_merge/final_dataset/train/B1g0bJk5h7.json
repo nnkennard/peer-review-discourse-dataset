@@ -1,0 +1,763 @@
+{
+  "metadata": {
+    "forum_id": "Byx93sC9tm",
+    "review_id": "B1g0bJk5h7",
+    "rebuttal_id": "rylwcjykCX",
+    "title": "Deep Ensemble Bayesian Active Learning : Adressing the Mode Collapse issue in Monte Carlo dropout via Ensembles",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Byx93sC9tm&noteId=rylwcjykCX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 0,
+      "text": "The paper shows that Bayesian neural networks, trained with Dropout MC (Gal et al.) struggle to fully capture the posterior distribution of the weights.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 1,
+      "text": "This leads to over-confident predictions which is problematic particularly in an active learning scenario.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 2,
+      "text": "To prevent this behavior, the paper proposes to combine multiple Bayesian neural networks, independently trained with Dropout MC, to an ensemble.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 3,
+      "text": "The proposed method achieves better uncertainty estimates than a single Bayesian neural networks model and improves upon the baseline in an active learning setting for image classification.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 4,
+      "text": "The paper addresses active deep learning which is certainly an interesting research direction since in practice, labeled data is notoriously scarce.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 5,
+      "text": "However, the paper contains only little novelty and does not provide sufficiently new scientific insights.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 6,
+      "text": "It is well known from the literature that combining multiply neural networks to an ensemble leads to better performance and uncertainty estimates.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 7,
+      "text": "For instance, Lakshminarayanan et al.[1] showed that Dropout MC can produce overconfident wrong prediction and, by simply averaging prediction over multiple models, one achieves better performance and confidence scores.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 8,
+      "text": "Also, Huand et al. [2] showed that by taking different snapshots of the same network at different timesteps performance improves.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 9,
+      "text": "It would also be great if the paper could related to other existing work that uses Bayesian neural networks in an active learning setting such as Bayesian optimization [3, 4] or Bandits[5].",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 10,
+      "text": "Another weakness of the paper is that the empirical evaluation is not sufficiently rigorous:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 11,
+      "text": "1) Besides an comparison to the work by Lakshminarayanan et. al, I would also like to have seen a comparison to other existing Bayesian neural network approaches such as stochastic gradient Markov-Chain Monte-Carlo methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 12,
+      "text": "2) To provide a better understanding of the paper, it would also be interesting to see how sensitive it is with respect to the ensemble size M.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 13,
+      "text": "3) Furthermore, for the experiments only one neural network architecture was considered and it remains an open question, how the presented results translate to other architectures.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 14,
+      "text": "The same holds for the type of data, since the paper only shows results for image classification benchmarks.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 15,
+      "text": "4) Figure 3: Are the results averaged over multiple independent runs? If so, how many runs did you perform and could you also report confidence intervals? Since all methods are close to each other, it is hard to estimate how significant the difference is.",
+      "suffix": "\n\n\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 16,
+      "text": "[1] Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 17,
+      "text": "Balaji Lakshminarayanan, Alexander Pritzel, Charles Blundel",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 18,
+      "text": "NIPS 2017",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 19,
+      "text": "[2] Gao Huang and Yixuan Li and Geoff Pleiss and Zhuang Liu and John E. Hopcroft and Kilian Q. Weinberger",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 20,
+      "text": "Snapshot Ensembles: Train 1, get {M} for free}",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 21,
+      "text": "ICLR 2017",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 22,
+      "text": "[3] Bayesian Optimization with Robust Bayesian Neural Networks",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 23,
+      "text": "J. Springenberg and A. Klein and S.Falkner and F. Hutter",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 24,
+      "text": "NIPS 2016",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 25,
+      "text": "[4] J. Snoek and O. Rippel and K. Swersky and R. Kiros and N. Satish and N. Sundaram and M. Patwary and Prabhat and R. Adams",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 26,
+      "text": "Scalable Bayesian Optimization Using Deep Neural Networks",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 27,
+      "text": "ICML 2015",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 28,
+      "text": "[5] Deep Bayesian Bandits Showdown: An Empirical Comparison of Bayesian Deep Networks for Thompson Sampling",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 29,
+      "text": "Carlos Riquelme, George Tucker, Jasper Snoek",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "sentence_index": 30,
+      "text": "ICLR 2018",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 0,
+      "text": "We thank our second reviewer for his comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 1,
+      "text": "We first refer to your main comments and then answer each point in part.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 2,
+      "text": "The work of Lakshminarayanan et al. indeed showed that deterministic ensembles can improve on the performance of MC-dropout techniques and provides a foundation for ours.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 3,
+      "text": "And as Beluch et al. (2018) showed, this can be valuable in an active learning setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 4,
+      "text": "However, our work differs in two major ways:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 5,
+      "text": "i) We focus on showing the uncertainty representation in these methods suffer from overconfident predictions and that combining the two methods into a stochastic ensemble can be of great benefit and improve on the quality of the uncertainty.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 6,
+      "text": "ii) We believe the true novelty to be in applying them in an active learning setting, and in particular on a small dataset problem (i.e. the size of the final dataset acquired during AL is only a small fraction of the entire available unlabelled dataset).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 7,
+      "text": "As you mentioned, data is notoriously scarce and deep learning methods rarely work on small dataset problems.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 8,
+      "text": "We thank the reviewer for pointing us to the work of Huand et al. Indeed this is an interesting method that would allow us to most likely achieve similar or better results with less computational overhead.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 9,
+      "text": "This is definitely something we will consider for future work, but it is somehow out of the main scope of the paper, which was to show the power of combining MC-dropout with ensembles in the active learning setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 10,
+      "text": "Taking into account more advanced ensemble methods is definitely of interest.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 11,
+      "text": "In terms of the Bayesian Optimization literature, this is definitely of interest if we are to focus on hyper-parameter tuning for our models, but we fail to see the connection of the work you mentioned to our active learning examples.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 12,
+      "text": "Our focus was not on fine-tuning our models.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 13,
+      "text": "In relation to your specific points, we answer these below:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 14,
+      "text": "1) Gal has already showed in his PhD thesis that MC-Dropout almost always performs best in terms of prediction accuracy and uncertainty quality assessment when compared to alternative Bayesian neural network approaches such as Probabilistic Back Prop and other variants of stochastic gradient MCMC methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 15,
+      "text": "The aim of our paper was to improve upon MC-Dropout in the context of active learning, which would invariably translate into better performance w.r.t. other Bayesian NN approaches.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 16,
+      "text": "2) Beluch et al. (2018) showed that going beyond 3 networks in their deterministic ensemble method does not add any significant improvements in terms of performance.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 17,
+      "text": "Therefore, we used this number when benchmarking against their method.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 18,
+      "text": "3) The aim of the paper was to improve upon the state-of-the-art in active learning for the image classification task.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 19,
+      "text": "We specifically chose this task due to its relevance to the real world especially in the medical imaging industry.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 20,
+      "text": "We agree that a more comprehensive study could be done in order to asses the viability of our method for ML tasks other than image classification.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 21,
+      "text": "As for other neural network architectures, we chose the one used in the benchmarked methods.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 22,
+      "text": "4) Results are averaged over 5 multiple independent runs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "B1g0bJk5h7",
+      "rebuttal_id": "rylwcjykCX",
+      "sentence_index": 23,
+      "text": "We will include both this and confidence scores in a revised version of our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

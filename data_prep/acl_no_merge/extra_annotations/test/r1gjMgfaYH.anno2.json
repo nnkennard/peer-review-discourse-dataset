@@ -1,0 +1,541 @@
+{
+  "metadata": {
+    "forum_id": "HklkeR4KPB",
+    "review_id": "r1gjMgfaYH",
+    "rebuttal_id": "S1gw58DsjH",
+    "title": "ReMixMatch: Semi-Supervised Learning with Distribution Matching and Augmentation Anchoring",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HklkeR4KPB&noteId=S1gw58DsjH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 0,
+      "text": "This paper proposes two modifications for the MixMatch method [1] and achieves improved accuracy on a range of semi-supervised benchmarks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 1,
+      "text": "The first modification enforces the distribution of predicted labels to match the distribution of labeled data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 2,
+      "text": "The second modification is adding a learned data augmentation strategy, and adapting the method to work with strong data augmentation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 3,
+      "text": "The final method is titled ReMixMatch, and improves significantly over MixMatch, especially in low-data regime.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 4,
+      "text": "The main contribution of the paper is really strong empirical results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 5,
+      "text": "The method achieves state of the art results or close to that on multiple benchmarks, with especially large gains in settings with very scarce labeled data, like 40 labels on CIFAR-10.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 6,
+      "text": "Another important contribution is the learned data augmentation strategy, which as far as I understand is novel and overcomes some of the limitations of  existing learned data augmentation techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 7,
+      "text": "However, the explanation of the strategy wasn\u2019t very clear for me, and the authors didn\u2019t frame it as a major contribution.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 8,
+      "text": "The main drawback of the paper is that it seems to be more engineering-focused, and doesn\u2019t provide much insight into semi-supervised learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 9,
+      "text": "The paper can be summarized as adding two modifications to mix-match, and getting better results.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 10,
+      "text": "The final method becomes fairly involved.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 11,
+      "text": "Mix-Match is already an elaborate method, and ReMixMatch additionally introduces learned data augmentation, an additional loss term for matching label distributions between labeled and unlabeled data, consistency-loss, and a self-supervised loss (section 3.3).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 12,
+      "text": "For the reasons above, I think the paper is borderline, but I am currently voting for acceptance based on the strong empirical performance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 13,
+      "text": "At the same time, I think the paper can be made stronger and more interesting to read, if the authors added some experiments aimed at understanding the proposed modifications.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 14,
+      "text": "One set of experiments that I think would be interesting is aimed at understanding the distribution-matching part.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 15,
+      "text": "For example, it would be great if the author could demonstrate that without this loss term the distribution of the predicted classes is wrong in the experiments from Section 4.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 16,
+      "text": "It would also be interesting to see an experiment where the labeled data has a skewed distribution of classes, but we provide the method with information about the true class distribution, and demonstrating that this information helps predictive performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 17,
+      "text": "For the learnable data augmentation it would be great if the authors could provide more insight into the method, how it works, and why is it better than the alternatives.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 18,
+      "text": "Just analyzing the learned data augmentation in different settings and adding more intuition for what happens would make the paper more insightful and interesting to read.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 19,
+      "text": "On a more minor note, the paper [1] seems to report 4.95 accuracy for MixMatch on CIFAR-10 with 4k labels, while in this paper it\u2019s being reported as 6.24.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 20,
+      "text": "What is the reason for the difference?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 21,
+      "text": "Another paper, [2], reports very competitive results on CIFAR-10 for 4k labels.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 22,
+      "text": "I would recommend discussing these results briefly in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 23,
+      "text": "At the same time the empirical performance of ReMixMatch is really impressive, and I don\u2019t think the results in [1] and [2] affect their significance.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 24,
+      "text": "[1] MixMatch: A Holistic Approach to Semi-Supervised Learning",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 25,
+      "text": "David Berthelot, Nicholas Carlini, Ian Goodfellow, Nicolas Papernot, Avital Oliver, Colin Raffel",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 26,
+      "text": "[2] There Are Many Consistent Explanations of Unlabeled Data: Why You Should Average",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "sentence_index": 27,
+      "text": "Ben Athiwaratkun, Marc Finzi, Pavel Izmailov, Andrew Gordon Wilson",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 0,
+      "text": "1. One set of experiments that I think would be interesting is aimed at understanding the distribution-matching part.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 1,
+      "text": "For example, it would be great if the author could demonstrate that without this loss term the distribution of the predicted classes is wrong in the experiments from Section 4.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 2,
+      "text": "A: We actually ran this experiment, where we monitored the KL divergence between the marginal distribution of model predictions and the true marginal distribution of labeled data over the course of training (with and without distribution matching).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 3,
+      "text": "We added the results of this experiment to the appendix of the latest revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 4,
+      "text": "2. For the learnable data augmentation it would be great if the authors could provide more insight into the method, how it works, and why is it better than the alternatives.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 5,
+      "text": "A: For space reasons we provided only a short description of CTAugment, and how it differs from AutoAugment. We will include a longer treatment in the appendix.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 6,
+      "text": "3. On a more minor note, the paper [1] seems to report 4.95 accuracy for MixMatch on CIFAR-10 with 4k labels, while in this paper it\u2019s being reported as 6.24.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 7,
+      "text": "What is the reason for the difference?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 8,
+      "text": "A: The 4.95 error rate in the MixMatch paper is in Table 1 which is the result when using a larger model (26 million parameters).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 9,
+      "text": "Our results are comparable to the WRN-28-2 results (as used in the \"Realistic Evaluation of Semi-Supervised Learning Algorithms\" paper), as seen in Table 5 of the Appendix of the original MixMatch paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 10,
+      "text": "4. Another paper, [2], reports very competitive results on CIFAR-10 for 4k labels.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 11,
+      "text": "A: We will include a discussion of this paper in the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 12,
+      "text": "Similar to the comment on MixMatch above, we only use small models with 1.5 million parameters compared with the 26 million parameters in SWA.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1gjMgfaYH",
+      "rebuttal_id": "S1gw58DsjH",
+      "sentence_index": 13,
+      "text": "We chose this experimental setting because it simplifies comparison to existing results, as argued in \"Realistic Evaluation of Semi-Supervised Learning Algorithms\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

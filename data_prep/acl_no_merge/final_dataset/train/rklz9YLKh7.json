@@ -1,0 +1,800 @@
+{
+  "metadata": {
+    "forum_id": "ryf6Fs09YX",
+    "review_id": "rklz9YLKh7",
+    "rebuttal_id": "ryxx8ZbFa7",
+    "title": "GO Gradient for Expectation-Based Objectives",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryf6Fs09YX&noteId=ryxx8ZbFa7",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 0,
+      "text": "The paper design a low variance gradient for distributions associated with continuous or discrete random variables.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 1,
+      "text": "The gradient is designed in the way to approximate the  property of reparameterization gradient.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 2,
+      "text": "The paper is comprehensive and includes mathematical details.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 3,
+      "text": "I have following comments/questions",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 4,
+      "text": "1. What is the \\kappa in \u201cvariable-nabla\u201d stands for? What is the gradient w.r.t. \\kappa?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 5,
+      "text": "2. In Eq(8), does the outer expectation w.r.t . y_{-v} be approximated by one sample? If so, it is using the local expectation method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 6,
+      "text": "How does that differs from Titsias & Lazaro-Gredilla(2015) both mathematically and experimentally?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 7,
+      "text": "3. Assume y_v is M-way categorical distribution, Eq(8) evaluates f by 2*V*M times which can be computationally expensive.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 8,
+      "text": "What is the computation complexity of GO? How to explain the fast speed shown in the experiments?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 9,
+      "text": "4. A most simple way to reduce the variance of REINFORCE gradient is to take multiple Monte-Carlo samples at the cost of more computation with multiple function f evaluations.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 10,
+      "text": "Assume GO gradient needs to evaluate f N times, how does the performance compared with the REINFORCE gradient with N Monte-Carlo samples?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 11,
+      "text": "5. In the discrete VAE experiment, upon brief checking the results in Grathwohl(2017), it shows validation ELBO for MNIST as (114.32,111.12), OMNIGLOT as (122.11,128.20) from which two cases are better than GO.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 12,
+      "text": "Does the hyper parameter setting favor the GO gradient in the reported experiments?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 13,
+      "text": "Error bar may also be needed for comparison.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 14,
+      "text": "What about the performance of GO gradient in the 2 stochastic layer setting in Grathwohl(2017)?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "sentence_index": 15,
+      "text": "6. The paper claims GO has less parameters than REBAR/RELAX. But in Figure 9, GO has more severe overfitting. How to explain this contradicts between the model complexity and overfitting?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 0,
+      "text": "Thank you for your time and effort of reviewing our paper. Please see our response below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 1,
+      "text": "\\kappa is an assistant notation to remove the ambiguity of the two \\gammas in G_{\\gamma}^{q_{\\gamma} (y)}. \\kappa stands for the parameter/variable of which the gradient information is needed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 2,
+      "text": "For example,",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 3,
+      "text": "(i) g_{\\kappa}^{q_{\\gamma}(y)} = frac{-1}{q_{\\gamma}(y)} \\nabla_{\\kappa} Q_{\\gamma}(y)}, where \\kappa is \\gamma, as in Theorem 1;",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 4,
+      "text": "(ii) g_{\\kappa}^{q_{\\gamma}(y|\\lambda)} = frac{-1}{q_{\\gamma}(y|\\lambda)} \\nabla_{\\kappa} Q_{\\gamma}(y |\\lambda), where \\kappa could be \\gamma or \\lambda.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 5,
+      "text": "Eqs. (7) and (8) are the foundations GO is built on, but they are not our GO.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 6,
+      "text": "GO is defined in Eq. (9) of Theorem 1.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 7,
+      "text": "For Eq. (9), yes, y_{-v} is selected from one sample y in the experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 8,
+      "text": "But GO is not the local expectation gradient (Titsias & Lazaro-Gredilla, 2015), because GO uses different information (the derivative of the CDF and the difference of the expected function).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 9,
+      "text": "As pointed out in the last paragraph of Sec. 3, when y_v has finite support and the computational cost is acceptable, one could use the local idea from Titsias & Lazaro-Gredilla(2015) for lower variance, namely analytically evaluate a part of expectations in Eq. (9).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 10,
+      "text": "For a detailed example, please refer to Appendix I.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 11,
+      "text": "The main difference between the local expectation gradient and the proposed GO is that the latter is applicable to where the former might not be applicable, such as where y_v has infinite support or the computational cost for the local expectation is prohibitive.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 12,
+      "text": "Please note our GO is defined in Eq. (9).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 13,
+      "text": "As pointed out in the last paragraph of Sec. 3, calculating Dy[f(y)] (requiring V+1 f evaluations) could be computationally expensive.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 14,
+      "text": "We also stated there, \u201cfor f(y) often used in practice special properties hold that can be exploited for ef\ufb01cient parallel computing\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 15,
+      "text": "We took the VAE experiment in Sec 7.2 as an example and gave in Appendix I its detailed analysis/implementation, in which you might be interested.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 16,
+      "text": "More specifically, the two bullets after Table 4, should be able to address your question on fast speed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 17,
+      "text": "Also, as noted in the penultimate paragraph of Sec. 7.2, less parameters (without neural-network-parameterized control variant) could be another reason for GO\u2019s efficiency.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 18,
+      "text": "As for computation complexity, since different random variables (RVs) have different variable-nabla (as shown in Table 3 in Appendix), GO has different computation complexity for different RVs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 19,
+      "text": "After choosing a specific RV, one should be able to obtain GO\u2019s computation complexity straightforwardly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 20,
+      "text": "For quantitative evaluation, the running time for each experiment has been given in the corresponding Appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 21,
+      "text": "Please check there if interested.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 22,
+      "text": "Thank you for pointing out the concern on multi-sample-based REINFORCE.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 23,
+      "text": "We have added another curve labeled REINFORCE2 to the one-dimensional NB experiments (see Fig. 8 for complete results), where the number 2 means using 2 samples to estimate the REINFORCE gradient.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 24,
+      "text": "In this case, REINFORCE2 uses 2 samples and 2 f evaluations in each iteration, whereas GO uses 1 sample and 2 f evaluations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 25,
+      "text": "As expected, REINFORCE2 still exhibits higher variance than GO even in this simple one-dimensional setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 26,
+      "text": "Multi-sample-based REINFORCE for other experiments is believed unnecessary, because (i) the variance of REINFORCE is well-known to increase with dimensionality; (ii) after all, if multi-sample-based REINFORCE works well in practice, why we need variance-reduction techniques?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 27,
+      "text": "Please refer to Sec. 7.2 and Appendix I, the author released code from Grathwohl(2017) (github.com/duvenaud/relax) were run to obtain the results of REBAR and RELAX.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 28,
+      "text": "We adopted the same hyperparameter settings therein for our GO.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 29,
+      "text": "So, we do not think the hyperparameter settings favor our GO in the reported experiments.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 30,
+      "text": "Please refer to the first paragraph of Sec. 7.2, \u201cSince the statistical back-propagation in Theorem 3 cannot handle discrete internal variables, we focus on the single-latent-layer settings (1 layer of 200 Bernoulli random variables).\u201d",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 31,
+      "text": "If you are interested, as stated in the last paragraph of Sec 7.2, we presented in Appendix B.4 a procedure to assist our methods in handling discrete internal RVs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 32,
+      "text": "We believe that procedure might be useful for the inference of models with discrete internal RVs (like the multi-layer discrete VAE).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 33,
+      "text": "Please refer to the last paragraph of Appendix I, where we explained this misunderstanding in detail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 34,
+      "text": "In short, GO does not suffer more from overfitting; one reason is GO can provide higher validation ELBO.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 35,
+      "text": "Actually, we believe it is GO\u2019s efficiency that causes this misunderstanding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklz9YLKh7",
+      "rebuttal_id": "ryxx8ZbFa7",
+      "sentence_index": 36,
+      "text": "We hope your concerns have been addressed. If not, further discussion would be welcomed.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

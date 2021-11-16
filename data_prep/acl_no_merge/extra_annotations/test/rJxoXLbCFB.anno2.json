@@ -1,0 +1,861 @@
+{
+  "metadata": {
+    "forum_id": "BJe7h34YDS",
+    "review_id": "rJxoXLbCFB",
+    "rebuttal_id": "B1eU3tjcoS",
+    "title": "Understanding and Stabilizing GANs' Training Dynamics with Control Theory",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=BJe7h34YDS&noteId=B1eU3tjcoS",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 0,
+      "text": "Authors use control theory to analyze and stabilize GAN's training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 1,
+      "text": "Their method, effectively, adds an L2 regularization to the output of the discriminator.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 2,
+      "text": "I have some concerns regarding the novelty, analysis and also the experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 3,
+      "text": "- The analysis has focused on a very simple case of having a linear discriminator which for example in WGAN, forces the first moments to match. How does the analysis extend to more realistic cases?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 4,
+      "text": "- In eq 9 in the dynamics of WGAN section, the discriminator should be restricted to Lip functions.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 5,
+      "text": "This has not been considered in the analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 6,
+      "text": "- There are a few work in the literature that analyze local stability of GANs (e.g. https://arxiv.org/abs/1706.04156) as well as using some control theory for analyzing global stability of GANs (e.g. https://arxiv.org/abs/1710.10793).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 7,
+      "text": "The connections of the proposed approach with existing literature should be better explained.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "sentence_index": 8,
+      "text": "- In the empirical results, the performance of the proposed method and Reg-GAN (from the numerics of GAN paper) are quite similar. Are there instances that the proposed approach significantly improves the stability of practical GAN architectures?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 0,
+      "text": "Thanks for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 1,
+      "text": "Below we address the detailed comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 2,
+      "text": "In particular, we clarify the potential misunderstanding on the linearity of the discriminator and added new state-of-the-art results by applying negative feedback to SN-GAN.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 3,
+      "text": "Q1: About novelty and analysis:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 4,
+      "text": "A1: As agreed by both Reviewer #2 and Reviewer #3, in this paper, our contributions are twofold: (1) a unified and promising framework to model the stability of GANs using control theory, (2) we propose to use the negative feedback to stabilize GANs.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 5,
+      "text": "First, using control theory, the dynamics of GANs can be modeled as transfer functions with Laplacian transformation, and various existing methods (e.g., Negative Momentum and Reg-GAN) can be considered as certain controllers that are widely used in control theory.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 6,
+      "text": "Moreover, through control theory, the stability of GANs can be easily inferred from the poles of the transfer function, instead of analyzing the complicated jacobian matrix of the dynamics as discussed in Sec. 4.1 and Appendix A&C. We argue that our method is distinct from existing method, which is well-discussed in our response to Q4.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 7,
+      "text": "Second, our perspective also provides a promising direction that can further benefit the training dynamics of GANs using advanced control methods (e.g., nonlinear control and  modern control theory [*2]) to improve both the stability and the convergence speed of GAN.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 8,
+      "text": "As a concrete example, we propose to use the most widely-used negative feedback control method to stabilize GAN's dynamics and the empirical results demonstrate the effectiveness of NF-GAN as shown in Sec. 4&6.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 9,
+      "text": "Exploring advanced control methods is our important future work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 10,
+      "text": "We updated the empirical results on the state-of-the-art model in the revision, where we applied our proposed NF-GAN to the SN-GAN [*6].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 11,
+      "text": "We can see that NF-GAN can successfully address the potential unstable issues of SN-GAN and achieve state-of-the-art inception score on CIFAR-10.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 12,
+      "text": "More details can be found in our response to the common concern and our revised paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 13,
+      "text": "Q2: Linear discriminator and extending the analysis to realistic settings:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 14,
+      "text": "A2: Thanks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 15,
+      "text": "We indeed extended the analysis of Dirac GAN to the more realistic setting in Sec. 3.2, where the discriminator is NOT linear.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 16,
+      "text": "In this part, we analyzed the dynamics of WGAN in the function space following [*1], i.e., we directly modeled $D(t, x)$ and $G(t, z)$ for all $x$ and $z$. It avoids the nonlinearity issue caused by the neural network, and both G and D are linear dynamics, at least locally around the equilibrium, as discussed in Sec. 3.2 and Appendix D in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 17,
+      "text": "Fig. 2 (right) provides a diagram of the unregularized WGAN.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 18,
+      "text": "In practice, we use the gradient descent method in the parameter space to approximate the dynamics in the functional space to efficiently solve the optimization problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 19,
+      "text": "Recent advances in modeling GAN in the functional space [*5] provide powerful tools to bridge the gap and we leave it as our future work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 20,
+      "text": "We updated the discussion in Sec. 3.2 in the revision to make this clearer.",
+      "suffix": "\n\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 21,
+      "text": "Q3: The Lip constraints on the discriminator:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 22,
+      "text": "A3: Actually, our method also applies to WGAN with Lipschitz constraints (vanilla WGAN).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 23,
+      "text": "Existing work [*3] states that vanilla WGAN diverges and we provide theoretical and empirical evidence that our method helps vanilla WGAN converge.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 24,
+      "text": "Theoretically, to address this comment, we added Theorem 1 (See in the Appendix D) that states the dynamics of $D$ with Lipschitz constraint follows Eqn. (10) *around the equilibrium*. Therefore, the stability analysis and our proposed method in Sec. 4 still applies to vanilla WGAN because control theory mainly focuses on the stability *around the equilibrium* [*2].",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 25,
+      "text": "Empirically, as suggested by R#3, we built a vanilla WGAN baseline using the SN-GAN [*6] framework, whose Lipschitz constraints are satisfied through spectral normalizations.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 26,
+      "text": "We compared SN-GAN (WGAN loss) and NF-SN-GAN (WGAN loss) and obtained a significant improvement on both the stability and the final results (IS from 3.29 to 8.28, See details in our post for common concerns).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 27,
+      "text": "It demonstrates that our method helps vanilla WGAN converge, which is consistent with our theoretical analysis.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 28,
+      "text": "Q4: Related work:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 29,
+      "text": "A4: Thanks for pointing out the related work. In fact, our method is distinct from these methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 30,
+      "text": "For the first paper (i.e., Gradient descent GAN optimization is locally stable) analyzed the stability of GANs using the Jacobian matrix and adopted a regularization term to stabilize GANs similarly to [*4].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 31,
+      "text": "Instead, we adopted a different method to model the dynamics from control theory.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 32,
+      "text": "The difference has been discussed in Sec. 1 and Sec. 5",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 33,
+      "text": "For the second paper, the authors used the Lyapunov function, which is different from our framework, to analyze the stability of GANs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 34,
+      "text": "Besides, their method fails to scale-up to large datasets such as CIFAR-10 because of computational issues.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 35,
+      "text": "Q5: Empirical results:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 36,
+      "text": "A5: Theoretically, Reg-GAN is also a stable training method for GANs but it is computationally less efficient than NF-GAN (ours), as illustrated in Fig. 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 37,
+      "text": "Empirically, we can achieve better results compared to Reg-GAN as illustrated in Table 1 (top).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 38,
+      "text": "Moreover, we also also advanced the state-of-the-art results based on practical GANs (SN-GAN).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 39,
+      "text": "The inception score on CIFAR-10 is improved from 8.22 to 8.45.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 40,
+      "text": "See details in Table 1 (bottom) in the revision and our post about common concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 41,
+      "text": "[*1] Johnson, Rie, and Tong Zhang. \"Composite Functional Gradient Learning of Generative Adversarial Models.\" International Conference on Machine Learning. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 42,
+      "text": "[*2] Khalil, Hassan K. \"Nonlinear systems.\" Upper Saddle River (2002).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 43,
+      "text": "[*3] Mescheder, Lars, Andreas Geiger, and Sebastian Nowozin. \"Which Training Methods for GANs do actually Converge?.\" International Conference on Machine Learning. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 44,
+      "text": "[*4] Mescheder, Lars, Sebastian Nowozin, and Andreas Geiger. \"The numerics of gans.\" Advances in Neural Information Processing Systems. 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 45,
+      "text": "[*5] Johnson, Rie, and Tong Zhang. \"Composite Functional Gradient Learning of Generative Adversarial Models.\" International Conference on Machine Learning. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoXLbCFB",
+      "rebuttal_id": "B1eU3tjcoS",
+      "sentence_index": 46,
+      "text": "[*6] Miyato, Takeru, et al. \"Spectral Normalization for Generative Adversarial Networks.\" (2018).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

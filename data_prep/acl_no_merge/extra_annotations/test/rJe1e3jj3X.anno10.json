@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "forum_id": "HylTBhA5tQ",
+    "review_id": "rJe1e3jj3X",
+    "rebuttal_id": "BJlit-i1Rm",
+    "title": "The Limitations of Adversarial Training and the Blind-Spot Attack",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HylTBhA5tQ&noteId=BJlit-i1Rm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 0,
+      "text": "The paper is well written and the main contribution, a methodology to find \u201cblind-spot attacks\u201d well motivated and differences to prior work stated clearly.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 1,
+      "text": "The empirical results presented in Figure 1 and 2 are very convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 2,
+      "text": "The gain of using a sufficiently more complicated approach to assess the overall distance between the test and training dataset is not clear, comparing it to the very insightful histograms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 3,
+      "text": "Why for example not using a simple score based on the histogram, or even the mean distance?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 4,
+      "text": "Of course providing a single measure would allow to leverage that information during training.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 5,
+      "text": "However, in its current form this seems rather complicated and computationally expensive (KL-based).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 6,
+      "text": "As stated later in the paper the histograms themselves are not informative enough to detect such blind-spot transformation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 7,
+      "text": "Intuitively this makes a lot of sense given that the distance is based on the network embedding and is therefore also susceptible to this kind of data.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "sentence_index": 8,
+      "text": "However, it is not further discussed how the overall KL-based data similarity measure would help in this case since it seems likely that it would also exhibit the same issue.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 0,
+      "text": "Thank you for the encouraging comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 1,
+      "text": "First of all, we would like to mention that we add more experiments on two additional state-of-the-art strong and certified defense methods, and observe that they are also vulnerable to blind-spot attacks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 2,
+      "text": "Please see our reply to all reviewers.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 3,
+      "text": "We agree that the K-L based method is complicated and computationally extensive.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 4,
+      "text": "Fortunately, we only need to compute it once per dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 5,
+      "text": "To the best of our knowledge, currently, there is no perfect metric to measure the distance between a training set and a test set.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 6,
+      "text": "Ordinary statistical methods (like kernel two-sample tests) do not work well due to the high dimensionality and the complex nature of image data.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 7,
+      "text": "So the measurement we proposed is a best-effort attempt that can hopefully give us some insights into this problem.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 8,
+      "text": "As suggested by the reviewer, we added a new metric based on the mean of \\ell_2 distance on the histogram in Section 4.3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 9,
+      "text": "The results are shown in Table 1 (under column \u201cAvg. normalized l2 Distance\u201d).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 10,
+      "text": "The results align well with our conclusion: the dataset with significant better attack success rates has noticeably larger distance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 11,
+      "text": "It further supports the conclusion of our paper and indicates that our conclusion is distance metric agnostic.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 12,
+      "text": "We hope that we have made everything clear, and we again appreciate your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 13,
+      "text": "Let us know if you have any additional questions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 14,
+      "text": "Thank you!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJe1e3jj3X",
+      "rebuttal_id": "BJlit-i1Rm",
+      "sentence_index": 15,
+      "text": "Paper 1584 Authors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

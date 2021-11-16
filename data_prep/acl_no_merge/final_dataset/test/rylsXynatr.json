@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "forum_id": "H1gBsgBYwH",
+    "review_id": "rylsXynatr",
+    "rebuttal_id": "Hkee-HRoiH",
+    "title": "Generalization of Two-layer Neural Networks: An Asymptotic Viewpoint",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=H1gBsgBYwH&noteId=Hkee-HRoiH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 0,
+      "text": "Overview: This work is an interesting work to understand the generalization capabilities of a two layered neural network in a high dimensional setting (samples, features and neurons tend to infinity).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 1,
+      "text": "It studies the conditions under which the \"double descent phenomenon\" may be observed.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 2,
+      "text": "Summary: The work shows",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 3,
+      "text": "that in two layered neural networks with non-linearity",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 4,
+      "text": "1) the double descent phenomenon of the bias-variance decomposition may be observed when the second layer weights are optimized assuming that the first layer weights are constant.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 5,
+      "text": "2) the bias-variance decomposition does not exhibit double descent when optimizing only the first layer with both vanishing and non-vanishing initialization of weights.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 6,
+      "text": "3) For vanishing initalization of weights for the first layer with non-linear activation , the gradient flow solution is asymptotically close to a two layered linear network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 7,
+      "text": "It is independent of overparametrization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 8,
+      "text": "However, the condition for this is smooth activation and the result does not hold for ReLU activation.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 9,
+      "text": "4) For non-vanishing initilization of the weights for the first layer with non-linear activation, the gradient flow solution is well approximated by a kernel model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 10,
+      "text": "However, the risk is independent of overparametrization.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylsXynatr",
+      "sentence_index": 11,
+      "text": "I believe this is an interesting work that needs to be accepted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylsXynatr",
+      "rebuttal_id": "Hkee-HRoiH",
+      "sentence_index": 0,
+      "text": "Thank you for the comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylsXynatr",
+      "rebuttal_id": "Hkee-HRoiH",
+      "sentence_index": 1,
+      "text": "As you pointed out, our current result in Section 5 does not apply to non-smooth activations -- understanding the generalization of ReLU networks would be interesting future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylsXynatr",
+      "rebuttal_id": "Hkee-HRoiH",
+      "sentence_index": 2,
+      "text": "We have updated the manuscript with a few minor modifications: 1) Figure on the population risk of sigmoid network (first layer optimized) in addition to SoftPlus; 2) additional remarks on the population risk of network in the kernel regime in Section 5.2; 3) corrected typos.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

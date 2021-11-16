@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "forum_id": "BJGVX3CqYm",
+    "review_id": "SygQwnxPaX",
+    "rebuttal_id": "HkxOBWTQRX",
+    "title": "Mixed Precision Quantization of ConvNets via Differentiable Neural Architecture Search",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJGVX3CqYm&noteId=HkxOBWTQRX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 0,
+      "text": "The authors propose a network quantization approach with adaptive per layer bit-width.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 1,
+      "text": "The approach is based on a network architecture search (NAS) method.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 2,
+      "text": "The authors aim to solve the NAS problem through SGD.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 3,
+      "text": "Therefore, they propose to first reprametrize the the discrete random variable determining if an edge is computed or not to make it differentiable and then use Gumbel Softmax function as a way to effectively control the variance of the obtained unbiased estimator.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 4,
+      "text": "This variance can indeed make the convergence of the procedure hard.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 5,
+      "text": "The procedure is then adapted to the problem of network quantization with different band-widths.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 6,
+      "text": "The proposed approach is interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 7,
+      "text": "The differerentiable NAS procedure is particularly important and can have an important impact.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 8,
+      "text": "The idea of having an adaptive per layer precision is also well motivated, and shows competitive (if not better) results empirically.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 9,
+      "text": "Some additional experiments can make the paper stronger:",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 10,
+      "text": "* Compare the result of the procedure to an exhaustive search in a setting where the latter is feasible (shallow architecture on an easy task with few possible bit widths)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "sentence_index": 11,
+      "text": "* Compare the procedure to other state of the art NAS procedures (DARTS and ENAS) with the same search space adapted to the quantization problem, to empirically show that the proposed procedure is a compromise between these two methods as claimed by the authors.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 0,
+      "text": "We want to thank reviewer#4 for your review. Your summary correctly reflects the content of our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 1,
+      "text": "We want to comment on the suggestions for new experiments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 2,
+      "text": "Comparing with exhaustive search: This is a good idea.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 3,
+      "text": "However, one concern is that since the search space is combinatorial, even a shallow network (e.g., 5) with a smaller number of precisions (e.g., 32, 8, 1) can have a large search space of (e.g., 3^5 = 243 architectures) for which exhaustive search is intractable.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 4,
+      "text": "Comparing with DARTS and ENAS: ENAS is not open-sourced, so a direct comparison is difficult.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 5,
+      "text": "A more detailed analysis comparing DNAS with DARTS is discussed in the reply to reviewer#1, minor concern #2: https://openreview.net/forum?id=BJGVX3CqYm&noteId=S1lyG-h7A7",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 6,
+      "text": "We plan to perform the suggested experiments of comparing with exhaustive search and DARTS.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SygQwnxPaX",
+      "rebuttal_id": "HkxOBWTQRX",
+      "sentence_index": 7,
+      "text": "The results will be hopefully updated before the revision deadline and the camera-ready if the paper is accepted.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

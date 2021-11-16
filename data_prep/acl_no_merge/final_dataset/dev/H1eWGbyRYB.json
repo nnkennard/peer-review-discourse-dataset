@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "forum_id": "Syx79eBKwr",
+    "review_id": "H1eWGbyRYB",
+    "rebuttal_id": "r1xKd5Z7or",
+    "title": "A Mutual Information Maximization Perspective of Language Representation Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Syx79eBKwr&noteId=r1xKd5Z7or",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 0,
+      "text": "The paper proposes to make a clear connection between the InfoNCE learning objective (which is a lower bound of the mutual information) and multiple language models like BERT and XLN.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 1,
+      "text": "Then based on the observation that classical LM can be seen as instances of InfoNCE, they propose a new (InfoWord) model relying on the same principles, but taking inspiration from other models also based on InfoNCE.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 2,
+      "text": "Mainly, the proposed model  differs both in the nature of the a and b variables used in InfoNCE, and also on the fact that it uses negative sampling instead of softmax.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 3,
+      "text": "Experiments are made on two tasks and compared to a classical BERT model, and on the BERT-NCE model that is a BERT variant proposed by the authors which is somehow in-between BERT and InfoWord.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 4,
+      "text": "They show that their approach works quite well.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 5,
+      "text": "I have a very mitigated opinion on the paper.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 6,
+      "text": "I) First, I really like the idea of trying to unify different models under the same learning principles, and then show that these models can be seen as specific instances of generic principles.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 7,
+      "text": "But the way it is presented and explained lacks of clarity: for instance in Section 2, some notations are not well defined (e.g what is f?) .",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 8,
+      "text": "Moreover, the way classical models are casted under the InfoNCE principle is badly written: it assumes that readers have a very good knowledge of the models, and the paper does not show well the mapping between the loss function of each model and the InfoNCE criterion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 9,
+      "text": "It gives technical details that could (in my opinion) get ignored, and I would clearly prefer to catch the main differences between the different models that being flooded by technical details.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 10,
+      "text": "So, my suggestion would be to improve the writing of this section to make the message stronger and relevant for a larger audience.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 11,
+      "text": "II) The Infoword model can be seen as a simple instance of word masking based models, and as an extension of deep infomax for sequences (it would be certainly nice to describe a little bit what Deep InfoMax is to facilitate the reading).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 12,
+      "text": "Here again, the article moves from technical details (e.g \"hidden state of the first token (assumed to be a special start of sentence symbol \") without providing formal definitions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 13,
+      "text": "Having a first loss function after paragraph 4 could help to understand the principle of this model (before restricting the model to n-grams)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 14,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 15,
+      "text": "Moreover, the equation J_DIM seems to be wrong since it contains g_\\omega twice while I think (but maybe I am wrong) that it has also to be defined by g_\\psi.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 16,
+      "text": "J_MLM is also not clear since x_i is never defined (I assume it is x_{i:i}).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 17,
+      "text": "At last",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 18,
+      "text": ",  after unifying multiple models under one common learning objective, the authors propose to mix two different losses which is strange (the effect of the second term is slightly studied in the experimental section) without allowing us to understand why it is important to have this second loss function and why the first one is not sufficient enough.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 19,
+      "text": "At last, I am pretty sure to not be able to reproduce the model described in the paper (adding a section on that in the supplementary material would help), and many concrete aspects are described too fast (like the way to sample negative pairs).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 20,
+      "text": "Concerning the experimental section, experiments are convincing and show that the model is able to achieve a performance which is close to classical models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 21,
+      "text": "In my opinion, tis section has to be interpreted as  a proof that the proposed unified vision is a good way to easily define new and efficient models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 22,
+      "text": "To summarize, the unification under the InfoNCE principle is interesting,",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "sentence_index": 23,
+      "text": "but the way the paper is written makes it very difficult to follow, and the description of the proposed model is unclear (making the experiments difficult to reproduce) and lacks of a better discussion about the interest of mixing multiple loss.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 1,
+      "text": "We have updated the paper based on your comments to improve clarity and reproducibility.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 2,
+      "text": "We list a summary of our main changes below:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 3,
+      "text": "- In order to make it easier for readers to understand the differences between different models and how they are related to InfoNCE, we have added a summary in Table 1.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 4,
+      "text": "- We have improved notations by adding explicit definitions before they are used in Section 2 and Section 4, and added a short description of Deep InfoMax in Section 4.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 5,
+      "text": "- We have included model and training hyperparameter details in Section 5.1 and Appendix B.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 6,
+      "text": "- We added a motivation for mixing two different terms in the objective function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 7,
+      "text": "Our DIM is primarily designed to improve sentence and span representations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 8,
+      "text": "We combine it with MLM which is designed for learning (contextual) word representations, since our overall goal is to create better representations for both the sentence and each word in the sentence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 9,
+      "text": "We also note that Deep InfoMax for learning image representations mixes multiple terms in their objective function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 10,
+      "text": "We only take one of the terms from the full objective function and mix it with MLM.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 11,
+      "text": "Regarding equation I_{DIM}, it is supposed to contain two g_{\\omega} and no g_{\\psi} as we use one network for encoding both the sentence and n-grams.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eWGbyRYB",
+      "rebuttal_id": "r1xKd5Z7or",
+      "sentence_index": 12,
+      "text": "This is not a typo.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

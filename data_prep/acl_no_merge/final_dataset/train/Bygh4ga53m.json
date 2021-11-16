@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "forum_id": "ryeyti0qKX",
+    "review_id": "Bygh4ga53m",
+    "rebuttal_id": "SkeJUS6_0m",
+    "title": "On the Statistical and Information Theoretical Characteristics of DNN Representations",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryeyti0qKX&noteId=SkeJUS6_0m",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 0,
+      "text": "This paper makes concerted efforts to examine the existing beliefs about the significance of various statistical characteristics of hidden layer activations (or representations) in a DNN.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 1,
+      "text": "In the past, many works have argued for encouraging the certain statistical behavior of these representations (e.g., sparsity, low correlation etc) in order to have better classification accuracy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 2,
+      "text": "However, this paper tries to argue that such efforts are not very useful as these statistical characteristics don't provide any systematic explanation for the performance of DNNs across different settings.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 3,
+      "text": "First, the paper argues that given a DNN, it's possible to construct either an identical output network or a comparable network that can have very different behavior for some of the statistical characteristics.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 4,
+      "text": "This casts doubt on the usefulness of these characteristics in explaining the performance of the network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 5,
+      "text": "The paper conducts experiments with different regularizers associated with some of the standard statistical characteristics using the MNIST, CIFAR-10, and CIFAR-100 datasets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 6,
+      "text": "The paper claims that for each dataset the best performing network cannot be attributed to any single regularizer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 7,
+      "text": "For the same set of regularizers and the MNIST dataset, the paper then explores the mutual information between the inputs and the hidden layer activations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 8,
+      "text": "The paper observes that the best performing regularizer is the one which minimizes this mutual information.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 9,
+      "text": "Therefore, it is plausible that the mutual information regularization can consistently explain the performance of an NN.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 10,
+      "text": "The paper addresses an interesting problem and makes some good contributions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 11,
+      "text": "However, the reviewer feels that the brief treatment of mutual information regularizer leaves something to be desired.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 12,
+      "text": "Did the authors also examine the relationship between mutual information and generalization error for CIFAR data sets? Does it not make sense to examine this for all (most of) the setups considered in Table 4, 8, and 9.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 13,
+      "text": "In these tables, how do the authors decide which hidden layer representations should be explored for their statistical characteristics?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "sentence_index": 14,
+      "text": "The reviewer feels that for CIFAR-10 and 100, some regularizers do consistently give best or close to best networks. Could the authors comment on this?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 0,
+      "text": "Thank you for your review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 1,
+      "text": "We agree that further investigation is needed for mutual information, and we are currently working on it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 2,
+      "text": "As for the layer to investigate, we have presented the higher layer results because the representation regularizers showed the most improvements when applied to the higher (or even output) layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 3,
+      "text": "We believe the representations in the lower layers are inherently less structured and therefore representation shaping can be harmful.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 4,
+      "text": "The layer dependency is further explained in the following article.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 5,
+      "text": "Daeyoung Choi and Wonjong Rhee, Utilizing class information for deep network representation shaping, AAAI 2019   (https://arxiv.org/abs/1809.09307)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 6,
+      "text": ">> The reviewer feels that for CIFAR-10 and 100, some regularizers do consistently give best or close to best networks. Could the authors comment on this?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 7,
+      "text": "Response: In general, representation regularizers showed better performance than the others.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 8,
+      "text": "Among the representation regularizers, cw-VR and L1R frequently achieved the best performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Bygh4ga53m",
+      "rebuttal_id": "SkeJUS6_0m",
+      "sentence_index": 9,
+      "text": "Nonetheless, we were not able to identify any specific task condition that makes a specific regularizer consistently best performing regularizer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

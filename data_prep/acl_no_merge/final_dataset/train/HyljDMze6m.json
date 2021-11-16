@@ -1,0 +1,509 @@
+{
+  "metadata": {
+    "forum_id": "rkxtl3C5YX",
+    "review_id": "HyljDMze6m",
+    "rebuttal_id": "S1xqVig50Q",
+    "title": "Understanding & Generalizing AlphaGo Zero",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxtl3C5YX&noteId=S1xqVig50Q",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 0,
+      "text": "This paper seeks to understand the AlphaGo Zero (AGZ) algorithm and extend the algorithm to regular sequential decision-making problems.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 1,
+      "text": "Specifically, the paper answers three questions regarding AGZ: (i) What is the optimal policy that AGZ is trying to learn?",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 2,
+      "text": "(ii) Why is cross-entropy the right objective?",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 3,
+      "text": "(iii) How does AGZ extend to generic sequential decision-making problems?",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 4,
+      "text": "This paper shows that AGZ\u2019s optimal policy is a Nash equilibrium, the KL divergence bounds distance to optimal reward, and the two-player zero-sum game could be applied to sequential decision making by introducing the concept of robust MDP.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 5,
+      "text": "Overall the paper is well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 6,
+      "text": "However, there are several concerns about this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 7,
+      "text": "In fact, the key results obtained in this paper is that minimizing the KL-divergence between the parametric policy and the optimal policy (Nash equilibrium) (using SGD) will converge to the optimal policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 8,
+      "text": "It is based on a bound (2), which states that when the KL-divergence between a policy and the optimal policy goes to zero then the return for the policy will approach that of the optimal policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 9,
+      "text": "This bound is not so surprising because as long as certain regularity condition holds, the policies being close should lead to the returns being close.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 10,
+      "text": "Therefore, it is an overclaim that the KL-divergence bound (2) provides an immediate justification for AGZ\u2019s core learning algorithm.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 11,
+      "text": "As mentioned earlier, the actual conclusion in Section 4.2 is that minimizing the KL-divergence between the parametric policy and the optimal policy by SGD will converge to the optimal policy, which is straightforward and is not what AlphaGo Zero does.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 12,
+      "text": "This is because there is an important gap: the MCTS policy is not the same as the optimal policy.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 13,
+      "text": "The effect of the imperfection in the target policy is not taken into account in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 14,
+      "text": "A more interesting question to study is how this gap affect the iterative algorithm, and whether/how the error in the imperfect target policy accumulates/diminishes so that iteratively minimizing KL-divergence with imperfect \\pi* (by MCTS) could still lead to optimal policy (Nash equilibrium).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 15,
+      "text": "Furthermore, the robust MDP view of the AGZ in sequential decision-making problems is not so impressive either.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "sentence_index": 16,
+      "text": "It is more or less like a reformulation of the AGZ setting in the MDP problem. And it is commonly known that two-player zero-sum game is closely related to minimax robust control. Therefore, it cannot be called as \u201cgeneralizing AlphaGo Zero\u201d as stated in the title of the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 0,
+      "text": "Thank you for the detailed comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 1,
+      "text": "Our goal is to develop a quantitative understanding of AlphaGo Zero (AGZ), moving beyond the intuitive justification for the algorithms in the original work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 2,
+      "text": "We believe that a rigorous mathematical analysis is crucial to provide a solid foundation for understanding AGZ and similar algorithms.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 3,
+      "text": "This requires developing (i) a precise mathematical model, (ii) a quantitative performance bound within the model.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 4,
+      "text": "Our work takes an important step in this direction by modeling AGZ\u2019s self-play and its supervised learning algorithm accurately.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 5,
+      "text": "In particular, we use the turn-based game model to capture the self-play aspect.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 6,
+      "text": "We develop a quantitative bound in terms of cross-entropy loss in supervised learning, which is the \u201cmetric\u201d of choice in AGZ.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 7,
+      "text": "While the cross-entropy loss seems intuitive, using it as a quantitative performance measure requires careful thought.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 8,
+      "text": "For example, in Appendix F (page 19, 2nd paragraph), we discussed a scenario where this intuition is incorrect under a careless measure.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 9,
+      "text": "That is, seemingly \u201cobvious\u201d algorithms can fail in the absence of a rigorous mathematical proof.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 10,
+      "text": "We agree that there is a gap between AGZ and our model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 11,
+      "text": "As mentioned in our paper, MCTS converges to the optimal policy for both classical MDPs and stochastic games.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 12,
+      "text": "Hence in this paper, we model the AGZ\u2019s MCTS policy by the optimal policy, and mainly focus on the other two key ingredients of AGZ, self-play and supervised learning.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 13,
+      "text": "It will be interesting to study how the error between MCTS and the optimal policy affects the iterative algorithm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 14,
+      "text": "This is a research direction we think is worth pursuing in the future.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 15,
+      "text": "We also agree with the reviewer that some of our statements might be too strong.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 16,
+      "text": "We will revise accordingly. Instead of ``immediate justification``, we believe this work does provide a first-step, formal framework towards a better theoretical understanding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HyljDMze6m",
+      "rebuttal_id": "S1xqVig50Q",
+      "sentence_index": 17,
+      "text": "We will also revise the title, perhaps to ``applying AGZ`` so as to make the connection to MDP more clear in our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          16
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "forum_id": "S1lOTC4tDS",
+    "review_id": "r1lYlete9S",
+    "rebuttal_id": "BklFDSojir",
+    "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lOTC4tDS&noteId=BklFDSojir",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 0,
+      "text": "This paper presents a world model-based approach in which behaviours are optimised by rollouts (i.e. imagination) in latent space.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 1,
+      "text": "The paper achieves impressive results across a large selection of tasks, both in terms of sample efficiency and final performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 2,
+      "text": "I found the paper interesting to read and well written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 3,
+      "text": "The main contribution (backpropagating analytic gradients through imagined trajectories?) could potentially be highlighted more but otherwise the paper was clear.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 4,
+      "text": "I wonder if the authors ever looked at how much the size of the latent vector determines the performance of the system?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 5,
+      "text": "Is there an optional latent vector size across domains or is that optimal size task dependent?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 6,
+      "text": "Additionally, how much variance is there in the imagined trajectories from a certain starting state? In other words, are the endpoints of most imagined trajectories similar or very different?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 7,
+      "text": "There is actually not too much for me to critique and I would suggest this paper should be accepted.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 8,
+      "text": "Minor comment:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 9,
+      "text": "- On page 2 it says \u201cWe approach this limitation in latenby\u201d, which I assume is a typo?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 10,
+      "text": "###",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 11,
+      "text": "#After rebuttal#",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 12,
+      "text": "#",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 13,
+      "text": "##",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "sentence_index": 14,
+      "text": "The authors' response addressed my remaining questions.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 0,
+      "text": "> I found the paper interesting to read and well written.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 1,
+      "text": "The main contribution (backpropagating analytic gradients through imagined trajectories?) could potentially be highlighted more but otherwise the paper was clear.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 2,
+      "text": "Thank you.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 3,
+      "text": "Correct, our main contribution is to learn long-horizon behaviors by propagating analytic value gradients through imagined trajectories.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 4,
+      "text": "Moreover, we show that this yields a scalable algorithm that solves control tasks of higher difficulty than was previously possible using model-based agents.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 5,
+      "text": "> I wonder if the authors ever looked at how much the size of the latent vector determines the performance of the system? Is there an optional latent vector size across domains or is that optimal size task dependent?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 6,
+      "text": "For our experiments, we used the same hyper parameters across all tasks, including the state size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 7,
+      "text": "We conducted an additional experiment where we trained Dreamer with latent states of 100, 200, 300, 400, 500 deterministic units and 10, 20, 30, 50, 100 stochastic units.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 8,
+      "text": "We find that all sizes equal to or larger than the 200 and 30 used in our main experiments yield very similar performance, while smaller sizes result in suboptimal scores on some of the tasks, hinting at insufficient model capacity.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 9,
+      "text": "> Additionally, how much variance is there in the imagined trajectories from a certain starting state? In other words, are the endpoints of most imagined trajectories similar or very different?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 10,
+      "text": "We have not studied this quantitatively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 11,
+      "text": "Qualitatively, we find more diversity in the stochastic multi-step predictions near states that are more challenging to predict.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 12,
+      "text": "For example, this includes collisions with the ground, the unstable equilibrium of an upright balanced pendulum that could either rotate left or right, or cheetah balancing on its front feet which might flip over on its back or fall back on its feet.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 13,
+      "text": "> There is actually not too much for me to critique and I would suggest this paper should be accepted.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lYlete9S",
+      "rebuttal_id": "BklFDSojir",
+      "sentence_index": 14,
+      "text": "Thank you.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "metadata": {
+    "forum_id": "HJlQ96EtPr",
+    "review_id": "HJenC0h6FH",
+    "rebuttal_id": "BJe1TuCwiH",
+    "title": "FleXOR: Trainable Fractional Quantization",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJlQ96EtPr&noteId=BJe1TuCwiH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 0,
+      "text": "The paper proposes a new approach for quantizing neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 1,
+      "text": "It looks at binary codes for quantization instead of the usual lookup tables because quantization approaches that rely on lookup tables have the drawback that during inference, the network has to fetch the weights from the lookup table and work with the full precision values, which means that the computation cost is remains the same as the non-quantized network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 2,
+      "text": "The paper presents FleXOR gates, a fast and efficient logic gate for mapping bit sequences to binary weights.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 3,
+      "text": "The benefit of the gate is that the bit sequence can be shorter than the binary weights which means that the code length can be less than 1 bit per weight.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 4,
+      "text": "The paper also proposes an algorithm for end-to-end training of the quantized neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 5,
+      "text": "It proposes the use of tanh to approximate the non-differentiable Heaviside step function in the backward pass.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 6,
+      "text": "Novelty",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 7,
+      "text": "The idea of using logic gates for dequantization is interesting and (as far as I know) novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 8,
+      "text": "One can imagine, that specialized hardware build on this idea could very efficient for inference (in terms of energy cost).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 9,
+      "text": "Writing",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 10,
+      "text": "The paper is very well written and completed with great visualizations and pseudocode.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 11,
+      "text": "Kudos to the authors, I really enjoyed reading it.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 12,
+      "text": "However, I do not think it is justified to go over the 8 page soft limit.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 13,
+      "text": "I would recommend that the authors perhaps shorten section 3 or remove figure 9 to fit it into 8 pages.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 14,
+      "text": "Significance/Impact",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 15,
+      "text": "The paper is motivated by the high computation cost of working with full precision values.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 16,
+      "text": "But this paper also works with full precision weights, since it has a full precision scaling factor (alpha) and, as far as I understood, works with full precision values during forward propagation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 17,
+      "text": "This means that there likely are no computational savings when compared to lookup tables.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 18,
+      "text": "The evaluation section lacks experiments that evaluate the computational savings.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 19,
+      "text": "The baselines should include quantization methods based on lookup tables, and there should be a comparison of computational costs.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 20,
+      "text": "The baselines that are presented (BWN etc.) offer a tradeoff between accuracy and computational costs, yet they are only compared in accuracy.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 21,
+      "text": "I would strongly recommend including the computational cost of each method in the evaluation section.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 22,
+      "text": "Overall assessment:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "sentence_index": 23,
+      "text": "While I enjoyed reading this paper, I am leaning towards rejection due to the shortcomings of the evaluation section.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 0,
+      "text": "We would like to thank you for the review and comments.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 1,
+      "text": "We revised the manuscript to address your concerns.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 2,
+      "text": "Below we summarized your concerns/questions with our answers.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 3,
+      "text": "Q1: It is not justified to go over the 8 page soft limit.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 4,
+      "text": "A1: We removed some redundant information in the paper, moved a few paragraphs and figures to Appendix, and added discussions according to the review comments in the revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 5,
+      "text": "Now, the paper has full 8 pages that is a soft limit.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 6,
+      "text": "Q2: There likely no computational savings when compared to lookup tables.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 7,
+      "text": "A2: As we added in Section 1, if weights are quantized in binary codes, then the number of multiplications is significantly reduced (even though scaling factors have full precision) or most computations can be replaced with bit-wise operations, which have been introduced and discussed as unique advantages of using binary codes in previous works.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 8,
+      "text": "Since we do not suggest new computation methods using binary codes, computational savings using quantized weights become the same as those of previous binary-codes-based quantization techniques.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 9,
+      "text": "FleXOR, however, saves on- and off-chip memory requirements significantly if $N_{in}$ is smaller than $N_{out}$, and reducing memory bandwidth/footprint is crucial to designing energy-efficient inference systems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 10,
+      "text": "We included this discussion in the evaluation parts.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 11,
+      "text": "Q3: The evaluation section lacks experiments that evaluate the computational savings.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 12,
+      "text": "A3: Since binary codes and lookup table would be associated with vastly different inference architecture, computation methods, and storage design, it is difficult to analyze detailed comparisons on FleXOR and lookup-table methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 13,
+      "text": "We chose quantization schemes using binary codes in the experimental results because 1) binary codes are being widely studied and 2) we can focus on the practical issues on binary codes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 14,
+      "text": "Since all of quantization techniques in Table 1 and Table 2 follow the form of binary codes with the same q bits, comparisons have been made under the same computational savings (thus, model accuracy is emphasized).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 15,
+      "text": "FleXOR, however, provides not only higher model accuracy but also additional storage savings due to the proposed encryption algorithm/architecture using XOR logic.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJenC0h6FH",
+      "rebuttal_id": "BJe1TuCwiH",
+      "sentence_index": 16,
+      "text": "We added discussions on the same computational savings and additional storage savings of FleXOR in Section 4 and 5.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,917 @@
+{
+  "metadata": {
+    "forum_id": "H1gEP6NFwr",
+    "review_id": "BylSI7T6qr",
+    "rebuttal_id": "BJeO-ILxjB",
+    "title": "On the Tunability of Optimizers in Deep Learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=H1gEP6NFwr&noteId=BJeO-ILxjB",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 0,
+      "text": "This paper introduces a simple measure of tunability that allows to compare optimizers under varying resource constraints.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 1,
+      "text": "The tunability of the optimizer is a weighted sum of best performance at a given budget.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 2,
+      "text": "The authors found that in a setting with low budget for hyperparameter tuning, tuning only Adam optimizer\u2019s learning rate is likely to be a very good choice; it doesn\u2019t guarantee the best possible performance, but it is evidently the easiest to find well-performing hyperparameter configurations.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 3,
+      "text": "Comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 4,
+      "text": "The paper is easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 5,
+      "text": "The motivation of defining tunability of optimizer is a very interesting question, however, the study seems to preliminary and the conclusion is not quite convencing due to several reasons:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 6,
+      "text": "In section 3.2, to characterize its difficulties of finding best hyperparameters or tunability, the authors seem to try to connect the concept of \u201csharpness\u201d of a minima in loss surface to the tunability of an optimizer, which is similar to comparing the loss landscape of minimums.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 7,
+      "text": "However, while the authors made intuitive explanation about the tunability in section 2.2, I did not see the actual plot of the true hyperpaparameter loss surface of each optimizer to verify these intuitions.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 8,
+      "text": "Can the author be more specific about the x-axis in the illustration 1.a and 1.b? If I understand correctly, they are not the number of trails.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 9,
+      "text": "In addition, the proposed stability metric seems not quite related with the above intuitions, as the illustrations (1.a and 1b) define the tunability to be the flatness of hyperparameter space around the best configurations, but the proposed definition is a weighted sum of the incumbents in terms of the HPO budgets.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 10,
+      "text": "The definition of the tuning budgets is not clear, is it the number of trials or the time/computation budgets?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 11,
+      "text": "The authors seems interchangeably using \u201cruns\u201d and \u201citerations\u201d, which makes the concept more confusable.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 12,
+      "text": "The authors further proposed three weighting schemes to emphasize the tunability of different stage of HPO.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 13,
+      "text": "My concern is that is highly dependent  on the order of hyperparameter searched, which could impact the tunability significantly.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 14,
+      "text": "For instance, in case of grid search HPO and 0.1 is the best learning rate, different search order such as [10, 1, 0.01, 0.1] and [0.1, 0.01, 1, 10] could results in dramatic different CPE and CPL.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 15,
+      "text": "My major concern is the hyperparameter distributions for each optimizer highly requires prior knowledge.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 16,
+      "text": "A good prior of one optimizer could significantly affect the HPO cost or increase the tunability, i.e., the better understanding the optimizer, the less tuning cost.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 17,
+      "text": "My major concern is that the authors assume the hyperparameters to be independent (section 3.2), which is not necessarily true.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 18,
+      "text": "Actually hyperparameters are highly correlated, such as momentum, batch size and learning rate are correlated in terms of effective learning rate [1,2], so as weight decay and learning rate are [3], which means using non-zero momentum is equivalent to using large learning rate as long as the effective learning rate is the same.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 19,
+      "text": "This could significantly increase the tunability of SGDM.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 20,
+      "text": "Another concurrent submission [4] verified this equivalence and showed one can also just tune learning rate for SGDM.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 21,
+      "text": "The assumption of independent hyperparameters might be fine for black box optimization or with the assumption that practitioners have no knowledge of the importance of each hyperparameter, then the tunability of the optimizer could be different based on the prior knowledge of hyperparameter and their correlations. But it is not rigorous enough to make the conclusion that Adam is easier to tune than SGD.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 22,
+      "text": "The author states their method to determine the priors by training each task specified in the DEEPOBS with a large number of hyperparameter samplings and retain the hyperparameters which resulted in performance within 20% of the best performance obtained.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 23,
+      "text": "Could the authors be more specific on the hyperparameters searched? Is this process counted in the tunability measurement?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 24,
+      "text": "[1] Smith and Le, A Bayesian Perspective on Generalization and Stochastic Gradient Descent, https://arxiv.org/abs/1710.06451",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 25,
+      "text": "[2] Smith et al, Don't Decay the Learning Rate, Increase the Batch Size, https://arxiv.org/abs/1711.00489",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 26,
+      "text": "[3] van Laarhoven et al, L2 Regularization versus Batch and Weight Normalization, https://arxiv.org/abs/1706.05350",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 27,
+      "text": "[4] Rethinking the Hyperparameters for Fine-tuning",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "sentence_index": 28,
+      "text": "https://openreview.net/forum?id=B1g8VkHFPH",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 0,
+      "text": "Dear reviewer,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 1,
+      "text": "Thank you for your comment. Before we reply to the points you have made, we would kindly ask you to please add the references that are missing from your review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 2,
+      "text": "Thank you for your review of our work.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 3,
+      "text": "The following are your concerns of our work:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 4,
+      "text": "a. Prior distributions of hyperparameters",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 5,
+      "text": "b. Loss landscape plots and relation to tunability",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 6,
+      "text": "c. Importance of search order",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 7,
+      "text": "d. Details of the calibration procedure",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 8,
+      "text": "We address them as follows (in two parts):",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 9,
+      "text": "a. Prior distributions of hyperparameters:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 10,
+      "text": "We envisage an optimizer not merely as update equations, but as the conjunction of the update equations, the hyperparameters, and distributions of those hyperparameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 11,
+      "text": "Those distributions should be prescribed by the designers of the optimizer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 12,
+      "text": "This is crucial: For example, if we take Adam with LR between $10^1$ and $10^5$ and claim that Adam is less tunable than others, the evaluation is inherently faulty, as it doesn't capture where the mode of the distribution of LRs for which Adam is expected to work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 13,
+      "text": "These prescriptions are absent for the optimizers considered in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 14,
+      "text": "Therefore, we define them from either mathematical reasoning (say learning rate is non-negative, $\\beta_1, \\beta_2$ in Adam are between (0, 1) and close to 1) or using the calibration step, where we determine those distributions by fitting on the configurations that yielded reasonably good results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 15,
+      "text": "We choose simple priors for their ease of estimation, though given enough computation, arbitrarily complex priors can be computed and used.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 16,
+      "text": "We fail to see the explicit relationship between our work and the papers you have referenced.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 17,
+      "text": "Specifically [1] only proposes that there is an optimal batch size that is dependent on the momentum parameter.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 18,
+      "text": "We do not consider tuning the batch size, as we do not consider it a hyperparameter of the optimizer itself.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 19,
+      "text": "[2] shows that instead of using LR decay schedule, increasing batch size has a similar effects on training, but results in faster training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 20,
+      "text": "[3] talks about the existence of an effective learning rate as a function of learning rate and the norm of the weights, and proposes that the optimal learning rate is inversely proportional to the weight decay parameter.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 21,
+      "text": "This doesn\u2019t, however, trivially lend itself to modeling priors.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 22,
+      "text": "In summary, these papers show a complex interplay between the parameters giving rise to other notions, but not provide any methods to jointly model these hyperparameters.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 23,
+      "text": "In the absence of such knowledge, we use our calibration procedure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 24,
+      "text": "The distributions we use are justified in section 3.2 in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 25,
+      "text": "However, we accept the fact that a more complex distribution that might model the interaction between these hyperparameters might exist, and using that to sample for an HPO would be better.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 26,
+      "text": "b. Loss landscape plots and relation to tunability:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 27,
+      "text": "We show in figures 1.a, 1.b, as you rightly pointed out, the landscapes of loss function of the HPO objective as a function of the hypothetical hyperparameter $\\theta$. There seems to be a misunderstanding of the purpose of figures 1.a, and 1.b.: These figures do not show what we try to measure, but they merely illustrate by example what properties we would like a tunability metric to have.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 28,
+      "text": "We describe this in the beginning of Section 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 29,
+      "text": "In Section 5, we explain why existing measures of tunability are unable to make the distinction between the cases in Figure 1a.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 30,
+      "text": "We would like to emphasize that the point of Figures 1a, 1b is to illustrate the necessary properties that a proposed metric for tunability - it is not our intention to create such plots for our actual experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 31,
+      "text": "If you are interested in these nonetheless, a very recent publication by Asi & Duchi (2019) shows the plot of lr vs performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 32,
+      "text": "In summary, they show that the sensitivity of SGD to stepsize choices, which converges only for a small range of stepsizes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BylSI7T6qr",
+      "rebuttal_id": "BJeO-ILxjB",
+      "sentence_index": 33,
+      "text": "AdamLR exhibits better robustness when tested on CIFAR10.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

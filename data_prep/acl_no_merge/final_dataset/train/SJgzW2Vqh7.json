@@ -1,0 +1,872 @@
+{
+  "metadata": {
+    "forum_id": "Skf-oo0qt7",
+    "review_id": "SJgzW2Vqh7",
+    "rebuttal_id": "H1gfl1CtAX",
+    "title": "On Generalization Bounds of a Family of Recurrent Neural Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Skf-oo0qt7&noteId=H1gfl1CtAX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 0,
+      "text": "This paper studies the generalization properties of Recurrent Neural Networks (RNN) and its variants for the sequence to sequence multiclass prediction problem.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 1,
+      "text": "The problem is important to understand in the theoretical machine learning community.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 2,
+      "text": "The paper is written well overall, clearly explaining the results obtained.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 3,
+      "text": "I would like to raise several important points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 4,
+      "text": "1. Missing comparison with parameter counting bounds: there has been a long line of research on generalization bounds for RNNs by obtaining bounds on the VC dimension of the function class [1, 2] which provide generalization bounds for various non-linearities.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 5,
+      "text": "The bounds obtained are polynomial in the sequence length T (often sublinear or linear) and should be compared with the existing bounds for a thorough comparison.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 6,
+      "text": "2. Vacuous bounds in the regime \\beta >1: Most recurrent architectures with no restrictions on the transition matrices work in the regime where they are more expressive and \\beta >1.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 7,
+      "text": "A quick glance at Table 1 suggests that the bounds obtained through Theorem 3 are exponential in t and are mostly vacuous.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 8,
+      "text": "They can indeed be subsumed by generalization bounds based on VC theory.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 9,
+      "text": "The bound obtained in Theorem 2 comes rather easily from the bounded assumption on the non-linearity and is this not very interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 10,
+      "text": "3. Technical contribution: While the authors propose the first bounds for LSTMs and MGUs, most of the analysis seems to be a marginal contribution over the work of Bartlett et al. [3]",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 11,
+      "text": "4. Missing experiments to validate nature of bounds: Bartlett et al. [3] performed extensive experiments to exhibit the correct scaling of the generalization bounds with the \"model complexity\" introduced upto numerical constants.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 12,
+      "text": "It would be good to have some experiments in the sequence to sequence setting to understand if the obtained complexities are in fact what one would expect in practice.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 13,
+      "text": "[1] Koiran, Pascal, and Eduardo D. Sontag. \"Vapnik-Chervonenkis Dimension of Recurrent Neural Networks.\" Discrete Applied Mathematics 86.1 (1998): 63-79.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 14,
+      "text": "[2] Dasgupta, Bhaskar, and Eduardo D. Sontag. \"Sample complexity for learning recurrent perceptron mappings.\" Advances in Neural Information Processing Systems. 1996.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "sentence_index": 15,
+      "text": "[3] Bartlett, Peter L., Dylan J. Foster, and Matus J. Telgarsky. \"Spectrally-normalized margin bounds for neural networks.\" Advances in Neural Information Processing Systems. 2017.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 0,
+      "text": "1. Comment:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 1,
+      "text": "Missing comparison with parameter counting bounds [1, 2].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 2,
+      "text": "1. Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 3,
+      "text": "[1, 2] are early works on RNNs and their analysis is based on very simple network architectures, which is not directly comparable to our results.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 4,
+      "text": "Specifically, [1] only consider RNNs taking the first entry of the hidden state as output and restrict their discussion to polynomial or sigmoid activation functions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 5,
+      "text": "Moreover, their analysis is based on unwinding RNNs as feedforward neural networks and adopt a layer-wise analysis, which fails to incorporate the parameter sharing in RNNs, and the established bounds are far from satisfactory (O(d^8 t^2) for sigmoid activation).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 6,
+      "text": "[2] simply focus on linear RNNs for binary classification problems, its extension to general settings are quite unclear.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 7,
+      "text": "2. Comment:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 8,
+      "text": "Vacuous bounds in the regime \\beta >1.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 9,
+      "text": "2. Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 10,
+      "text": "We have clearly indicated that our bound is always polynomial in d and t in the introduction on page 3, which is not vacuous.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 11,
+      "text": "Moreover, both bounds of Theorem 3 are obtained under the same assumptions as in Theorem 2 with additional norm constraints on weight matrices.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 12,
+      "text": "The exponential term stems from the layer wise covering argument rather than the range of the output.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 13,
+      "text": "The bound in Theorem 2 is still polynomial in d and t, since we exploit the parametric form of RNNs and construct the covering by weight matrix coverings.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 14,
+      "text": "Existing literature has shown that keeping the spectral norm of weight matrix U close to 1 stabilizes the training of RNNs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 15,
+      "text": "This can be achieved by orthogonal initialization and imposing extra constraints or regularization [3-5].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 16,
+      "text": "We further discuss the trade-off between representation and generalization beneath Theorem 2 on page 4: \\beta \\approx 1 helps balance the generalization and representation of RNNs.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 17,
+      "text": "3. Comment:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 18,
+      "text": "Technical contribution: marginal.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 19,
+      "text": "3. Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 20,
+      "text": "We provide new understandings of RNNs by connecting their generalization properties to their empirical success.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 21,
+      "text": "We establish generalization bounds using the PAC-learning framework by instilling our simple but new complexity analysis for RNNs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 22,
+      "text": "In particular, we characterize the Lipschitz property of the output of RNNs with respect to weight matrices (Lemma 2).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 23,
+      "text": "This key step allows us to construct a covering on RNNs from simple coverings of weight matrices, which results in a complexity bound of RNNs polynomial in d and t.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 24,
+      "text": "We further extend our analysis to establish the first generalization bounds for MGU and LSTM RNNs.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 25,
+      "text": "The proposed analysis is quite different from [6], which adopts a layer-wise evaluation for neural networks and constructs the overall covering via a complicated matrix covering argument.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 26,
+      "text": "Moreover, as compared in Section 4 Table 1, our generalization bound is much tighter when \\beta > 1.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 27,
+      "text": "To sum up, the main contributions are listed as follows (see paragraphs 2 - 5 on page 3):",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 28,
+      "text": "1) We develop new techniques for effectively characterizing the model class of RNNs, which allows us to establish tight generalization bounds.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 29,
+      "text": "2) We establish generalization bounds for both MGU and LSTM RNNs, and demonstrate their advantages over vanilla RNNs in generalization (under Theorems 4 and 5).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 30,
+      "text": "Given very limited literature on RNNs and their variants (not even mentioning that most of existing theoretical results are negative, e.g., exponential complexities), we believe this paper has its novel contributions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 31,
+      "text": "4. Comment:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 32,
+      "text": "Missing experiments to validate nature of bounds.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 33,
+      "text": "4. Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 34,
+      "text": "Please refer to the revised version for numerical evaluations in Section 6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 35,
+      "text": "In particular, we illustrate that our obtained generalization bound (Theorem 2) is much smaller than existing bounds even for \\beta > 1.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 36,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 37,
+      "text": "[1] Koiran, Pascal, and Eduardo D. Sontag. \"Vapnik-Chervonenkis Dimension of Recurrent Neural Networks.\" Discrete Applied Mathematics 86, no. 1 (1998): 63-79.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 38,
+      "text": "[2] Dasgupta, Bhaskar, and Eduardo D. Sontag. \"Sample complexity for learning recurrent perceptron mappings.\" In Advances in Neural Information Processing Systems, pp. 204-210. 1996.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 39,
+      "text": "[3] Vorontsov, Eugene, Chiheb Trabelsi, Samuel Kadoury, and Chris Pal. \"On orthogonality and learning recurrent networks with long term dependencies.\" arXiv preprint arXiv:1702.00071 (2017).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 40,
+      "text": "[4] Arjovsky, Martin, Amar Shah, and Yoshua Bengio. \"Unitary evolution recurrent neural networks.\" In International Conference on Machine Learning, pp. 1120-1128. 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 41,
+      "text": "[5] Simonyan, Karen, and Andrew Zisserman. \"Very deep convolutional networks for large-scale image recognition.\" arXiv preprint arXiv:1409.1556 (2014).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgzW2Vqh7",
+      "rebuttal_id": "H1gfl1CtAX",
+      "sentence_index": 42,
+      "text": "[6] Bartlett, Peter L., Dylan J. Foster, and Matus J. Telgarsky. \"Spectrally-normalized margin bounds for neural networks.\" In Advances in Neural Information Processing Systems, pp. 6240-6249. 2017.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

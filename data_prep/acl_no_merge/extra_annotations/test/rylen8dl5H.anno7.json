@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "forum_id": "Sklgs0NFvr",
+    "review_id": "rylen8dl5H",
+    "rebuttal_id": "H1e7QnDciS",
+    "title": "Learning The Difference That Makes A Difference With Counterfactually-Augmented Data",
+    "reviewer": "AnonReviewer2",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Sklgs0NFvr&noteId=H1e7QnDciS",
+    "annotator": "anno7"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 0,
+      "text": "The authors propose a new way to augment textual datasets for the task of sentiment analysis, in order to help the learning methods to generalize better by concentrating on learning the different that makes a difference.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 1,
+      "text": "The main idea of the paper is to augment existing datasets with minimally counteractual versions of them, that change the sentiment of the documents.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 2,
+      "text": "In this way, all spurious factors will naturally cancel out.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 3,
+      "text": "The authors use the newly created datasets and show that indeed, the retrained algorithms on the augmented datasets generalize much better.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 4,
+      "text": "The main contribution of the paper is the introduction of the idea of counterfactual datasets for sentiment analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 5,
+      "text": "Overall, I find the idea of the paper quite interesting and I\u2019m excited to use the datasets they have created.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "sentence_index": 6,
+      "text": "However, I think the relative novelty of the paper does not meet ICLR standards, and it\u2019s better suited as a whitepaper attached to an open dataset release.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for taking the time to consider our paper and appreciate that you are excited to use our counterfactually-augmented dataset.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 1,
+      "text": "While degrees of novelty and the relevant sorts of novelty are a matter of opinion we respectfully assert our view that new ideas, the new resource that we present, and the scientific insights derived from our experiments, are precisely the sorts of novelty that should be sought by conferences.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 2,
+      "text": "We respectfully disagree with the reviewer\u2019s suggestion that a fundamentally distinct resource warrants only a whitepaper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 3,
+      "text": "We politely point out that many conferences have entire dedicated tracks, and even best paper awards for resources, and that many seminal papers of pivotal importance to the field make precisely this sort of contribution (e.g. ImageNet).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 4,
+      "text": "Additionally we point out that the resource is not the only novel idea here.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 5,
+      "text": "Of chief importance here is the intellectual contribution casting the problem of learning \u201csuperficial associations\u201d coherently in the language of intervention, and producing a dataset that addresses counterfactuals in a real sense (as pointed out more eloquently by R1).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 6,
+      "text": "Moreover, our experiments shed insights about the price to be paid for relying less on spurious associations and our updated experiments (inspired by R3\u2019s suggestions) show that our methods result in improved performance out-of-sample on a variety of datasets.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylen8dl5H",
+      "rebuttal_id": "H1e7QnDciS",
+      "sentence_index": 7,
+      "text": "We hope that you might be willing to reconsider our contributions in light of the significance and uniqueness of the dataset, the insights of our experiments and the demonstrated out-of-domain robustness.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

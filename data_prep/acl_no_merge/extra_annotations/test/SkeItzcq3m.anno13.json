@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "forum_id": "SkgToo0qFm",
+    "review_id": "SkeItzcq3m",
+    "rebuttal_id": "H1lU_ZlqaX",
+    "title": "Transferrable End-to-End Learning for Protein Interface Prediction",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkgToo0qFm&noteId=H1lU_ZlqaX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 0,
+      "text": "This manuscript applies transfer learning for protein surface prediction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 1,
+      "text": "The problem is important and  the idea is novel and interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 2,
+      "text": "However, the  transfer learning model is unclear.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 3,
+      "text": "Pros:  interesting and novel idea",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 4,
+      "text": "Cons:  unclear transfer learning model, insufficient experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 5,
+      "text": "Detail: section 4 describes the transfer learning model used in the work, but the description is unclear.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 6,
+      "text": "It is unknown the used model is a new model or existing model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 7,
+      "text": "Besides, in the experiments, the proposed method is not compared to other transfer learning methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "sentence_index": 8,
+      "text": "Thus, the evidence of the experiments is not enough.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 0,
+      "text": "Response: We thank the reviewer for their comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 1,
+      "text": "We would like to clarify one of the central points of this paper, as the cons presented are built upon a misunderstanding of this point.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_unknown",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 2,
+      "text": "We are not proposing a new transfer learning model -- we are demonstrating the transferrability of the atomic features we have learned.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 3,
+      "text": "We train our structural features on C_r and show that with no re-training they can achieve state-of-the-art results of C_p.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 4,
+      "text": "Applying a classical transfer learning algorithm might improve performance even further, as then we could fine-tune results on C_p.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 5,
+      "text": "Though this is an interesting direction, it is outside the scope of the work we present here, which concerns itself with the learned representations themselves.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkeItzcq3m",
+      "rebuttal_id": "H1lU_ZlqaX",
+      "sentence_index": 6,
+      "text": "Thus, instead of comparing transfer learning methods, we evaluate the transferrability of both our own structural features as well as those of competitors.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

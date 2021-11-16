@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "forum_id": "S1gd7nCcF7",
+    "review_id": "rylvbv_93Q",
+    "rebuttal_id": "B1esP4YtAm",
+    "title": "Self-Supervised Generalisation with Meta Auxiliary Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=S1gd7nCcF7&noteId=B1esP4YtAm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 1,
+      "text": "The role of auxiliary tasks is to improve the generalization performance of the principal task of interest.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 2,
+      "text": "So far, hand-crafted auxiliary tasks are generated, tailored for a problem of interest.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 3,
+      "text": "The current work addresses a meta-learning approach to automatically generate auxiliary tasks suited to the principal task, without human knowledge.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 4,
+      "text": "The key components of the method are: (1) meta-generator; (2) multi-task evaluator.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 5,
+      "text": "These two models are trained using the gradient-based meta-learning technique (for instance, MAML).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 6,
+      "text": "The problem of image classification is considered only, while authors claimed the method can be easily applied to other problems as well.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 7,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 8,
+      "text": "- To my best knowledge, the idea of applying the meta-learning to the automatic generation of auxiliary tasks is novel.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 9,
+      "text": "- The paper is well written and easy to read.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 10,
+      "text": "- The method nicely blends a few components such as self-supervised learning, meta-learning, auxiliary tasks into a single model to tackle the meta auxiliary learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 11,
+      "text": "Weakness:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 12,
+      "text": "- The performance gain is not substantial in experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 13,
+      "text": "I would like to suggest to use the state-of-the-arts classifier for the principal task and to evaluate how much gain your method can get with the help of auxiliary tasks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 14,
+      "text": "You can refer to the state-of-the-arts performance on CIFAR.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "sentence_index": 15,
+      "text": "- If the information on the hierarchy of sub-categories is not available, it will be an annoying hyperparameters that should be well tuned.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 0,
+      "text": "We thank for the reviewer for their positive comments on our work, and we share our responses below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 1,
+      "text": "The purpose of our work is not to achieve state-of-the-art performance simply by incorporating the latest network architectures and optimisers.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 2,
+      "text": "Instead, we provide a novel general framework for automating generalisation, and show that when used with standard classification networks across all baselines, our method performs the best.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 3,
+      "text": "Furthermore, as we also explained in Reviewer #3, the hyper-parameters for defining a hierarchy is not critical, and we can choose an arbitrary hierarchy whilst still achieving better performance than baselines.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 4,
+      "text": "In the future work, we would like to explore how to find the optimal hierarchy in an automatic manner, or provide an alternative solution on building a general type of auxiliary tasks (such as regression).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylvbv_93Q",
+      "rebuttal_id": "B1esP4YtAm",
+      "sentence_index": 5,
+      "text": "However, this is the first work to present a double-gradient method for auxiliary task generation, and we believe that it is important to present the success of this initial method now given how simple and general it is, and then fine-tune other aspects in future work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

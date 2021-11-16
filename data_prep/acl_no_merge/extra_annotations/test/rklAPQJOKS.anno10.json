@@ -1,0 +1,576 @@
+{
+  "metadata": {
+    "forum_id": "r1gfQgSFDr",
+    "review_id": "rklAPQJOKS",
+    "rebuttal_id": "r1gpl85tjH",
+    "title": "High Fidelity Speech Synthesis with Adversarial Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=r1gfQgSFDr&noteId=r1gpl85tjH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 0,
+      "text": "I want thank the authors for solving this long-standing GAN challenge in raw waveform synthesis.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 1,
+      "text": "With all due respect, previous GAN trials for audio synthesis are inspiring, but their audio qualities are far away from the state-of-the-art results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 2,
+      "text": "Although the speech fidelity of GAN-TTS is still worse than WaveNet and Parallel WaveNet from the posted sample, it has begun to close the significant performance gap that has existed between autoregressive models and GANs for raw audios.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 3,
+      "text": "Overall, this is a very good paper with significant contributions to the filed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 4,
+      "text": "Detailed comment:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 5,
+      "text": "1, In WaveNet, the conditional features (linguistic / mel-spectrogram) are added as bias terms in the convolutional layers.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 6,
+      "text": "Did the authors tried this alternative architecture for the generator, which uses the white noisy z as network input (similar as flow-based models, e.g., Parallel WaveNet) and the conditional features as bias term in the convolutional layers?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 7,
+      "text": "2, Could the authors comment the importance of serval architecture choices in this work?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 8,
+      "text": "From Table 1, it seems to me that the ensemble of random window discriminators is the most important (perhaps the only important) contributing factor for the success.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 9,
+      "text": "For example, the MOS score was boosted from 1.889 to 4.213 by replacing a single full discriminator to the ensemble of RWDs.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 10,
+      "text": "3, The notations in Eq. (1) and (2) are messy.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 11,
+      "text": "Although I can figure their meaning from the context, one may clarify certain notations if they appear at the first time.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 12,
+      "text": "4, The stable training (NO model collapses) is pretty impressive.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 13,
+      "text": "Could the authors shed some light on the potential reason? Does the ensemble of RWD regularizes the training?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 14,
+      "text": "What's your experience for training FullD (does not have random window ) and cRWD_1 (only has one random window discriminator)",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 15,
+      "text": "?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 16,
+      "text": "Are they still very stable?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 17,
+      "text": "Also, could the authors comment on the importance of large batch size -- 1024 for stable training of GAN-TTS?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 18,
+      "text": "5, Although there is a notable difference, one may properly mention previous work Yamamoto et al. (2019), which uses GAN as an auxiliary loss within ClariNet and obtains high-fidelity speech ( https://r9y9.github.io/demos/projects/interspeech2019/ ).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 19,
+      "text": "Yamamoto et al. Probability Density Distillation with Generative Adversarial Networks for High-Quality Parallel Waveform Generation.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 20,
+      "text": "2019.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 21,
+      "text": "=== update ===",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 22,
+      "text": "Thank you for the detailed response.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 23,
+      "text": "2,  Thanks for the elaboration.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "sentence_index": 24,
+      "text": "4,  It would be very interesting to see an analysis of model stability with smaller batch sizes.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 0,
+      "text": "Thank you for the detailed comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 1,
+      "text": "1. We did not do experiments with such generator architecture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 2,
+      "text": "Although we have considered other architectural choices for generator and ways of conditioning, our early experiments showed that our residual-upsampling scheme is more efficient than parallel wavenet\u2019s full-resolution scheme.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 3,
+      "text": "The correspondence between temporal dimensions of the conditioning and the waveform also seemed important and hence we decided to keep the proposed generator architecture throughout.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 4,
+      "text": "2. Indeed we believe that the use of the ensemble of random window discriminators was the main factor behind the performance we obtained.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 5,
+      "text": "This, however, breaks down to three steps:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 6,
+      "text": "(a) switching from full discriminator to random-window discriminator(s),",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 7,
+      "text": "(b) including unconditional random window discriminator(s),",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 8,
+      "text": "(c) including several different window sizes in the ensemble.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 9,
+      "text": "As can be seen in Table 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 10,
+      "text": ", (a) already brings a huge improvement (from ~1.9 to ~3.4 MOS).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 11,
+      "text": "(b) and (c) also seem to be important; we have considered fixing the window size or using only conditional RWDs, but all of such trials turned out considerably worse.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 12,
+      "text": "Only models combining all of (a) - (c) made it past MOS of 4.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 13,
+      "text": "3. Indeed D^c_k and D^u_k should have been clearly defined there; we clarified this notation in the updated version of the submission.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 14,
+      "text": "4. For the training stability, please see our joint response.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 15,
+      "text": "As for the role of the batch size, we fixed it throughout all experiments, but we will include analysis of model stability with smaller batch sizes in the final version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rklAPQJOKS",
+      "rebuttal_id": "r1gpl85tjH",
+      "sentence_index": 16,
+      "text": "5. Thank you for pointing out this related work. We refer to it in the updated version of the submission.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

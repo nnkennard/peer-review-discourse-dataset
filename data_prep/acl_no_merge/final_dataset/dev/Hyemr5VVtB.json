@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "forum_id": "Syx79eBKwr",
+    "review_id": "Hyemr5VVtB",
+    "rebuttal_id": "B1eMJ9-msH",
+    "title": "A Mutual Information Maximization Perspective of Language Representation Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Syx79eBKwr&noteId=B1eMJ9-msH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyemr5VVtB",
+      "sentence_index": 0,
+      "text": "The paper gives a big picture view on training objectives used to obtain static and contextualized word embeddings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyemr5VVtB",
+      "sentence_index": 1,
+      "text": "This is very handy since classical static word embeddings, such as SGNS and GloVe, have been studied theoretically in a number of works (e.g., Levy and Goldberg, 2014; Arora et al., 2016; Hashimoto et al., 2016; Gittens et al., 2017; Allen and Hospedales, 2019; Assylbekov and Takhanov, 2019), but not much has been done for the modern contextualized embedding models such ELMo and BERT - I personally know only the work of Wang and Cho (2019), and please correct me if I am wrong.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyemr5VVtB",
+      "sentence_index": 2,
+      "text": "\"There is nothing as practical as a good theory\", and the authors confirm this statement: their theory suggests them to modify the training objective of the masked language modeling in a certain way and this modification proves to benefit the embeddings in general when evaluated on standard tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyemr5VVtB",
+      "sentence_index": 3,
+      "text": "I don't have any major issues to raise.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyemr5VVtB",
+      "sentence_index": 4,
+      "text": "A minor comment is that the mutual information I(., .) being a function of two variables suddenly became a function of a single variable in Eq. (1) and in the text which precedes it.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyemr5VVtB",
+      "rebuttal_id": "B1eMJ9-msH",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyemr5VVtB",
+      "rebuttal_id": "B1eMJ9-msH",
+      "sentence_index": 1,
+      "text": "We have updated Equation 1 and the paragraph above so that I(...) is consistently a function of two variables.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

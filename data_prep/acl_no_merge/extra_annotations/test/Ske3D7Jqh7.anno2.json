@@ -1,0 +1,364 @@
+{
+  "metadata": {
+    "forum_id": "BkeU5j0ctQ",
+    "review_id": "Ske3D7Jqh7",
+    "rebuttal_id": "rJgh-YoWAQ",
+    "title": "CEM-RL: Combining evolutionary and gradient-based methods for policy search",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BkeU5j0ctQ&noteId=rJgh-YoWAQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 0,
+      "text": "The paper presents a combination of evolutionary search methods (CEM) and deep reinforcement learning methods (TD3).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 1,
+      "text": "The CEM algorithm is used to learn a Diagional Gaussian distribution over the parametes of the policy.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 2,
+      "text": "The population is sampled from the distribution.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 3,
+      "text": "Half of the population is updated by the TD3 gradient before evaluating the samples.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 4,
+      "text": "For filling the replay buffer of TD3, all state action samples from all members of the population are used.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 5,
+      "text": "The algorithm is compared against the plane variants of CEM and TD3 as well as against the evoluationary RL (ERL) algorithm.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 6,
+      "text": "Results are promising with a negative result on the swimmer_v2 task.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 7,
+      "text": "The paper is well written and easy to understand.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 8,
+      "text": "While the presented ideas are well motivated and it is certainly a good idea to combine deep RL and evoluationary search, novelty of the approach is limited as the setup is quite similar to the ERL algorithm (which is still on archive and not published, but still...).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 9,
+      "text": "See below for more comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 10,
+      "text": "- While there seems to be a consistent improvement over TD3, this improvement is in some cases small (e,g. ants).",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 11,
+      "text": "- We are learning a value function for each of the first half of the population.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 12,
+      "text": "However, the value function from the previous individual is used to initialize the learning of the current value function.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 13,
+      "text": "Does this cause some issues, e.g., do we need to set the number of steps so high that the initialization does not matter so much any more? Or would it make more sense to reset the value function to some \"mean value function\" after every individual?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "sentence_index": 14,
+      "text": "- The importance mixing does not seem to provide a better performance and could therefore be shortened in the paper",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for raising useful points which helped us a lot improving the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 1,
+      "text": "The main point of the reviewer is that the novelty of our approach is limited with respect to the Evolutionary RL (ERL) algorithm, and that improvement is sometimes small.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 2,
+      "text": "These remarks helped us realize that we had to better highlight the differences between our approach and ERL, both in terms of concepts and performance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 3,
+      "text": "We did so by replacing Figure 1, which was contrasting CEM-RL to CEM, with a figure directly contrasting CEM-RL to ERL.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 4,
+      "text": "We also added Figure 6 which better highlights the properties of the algorithms and we performed several additional studies, described either in the main text or in appendices.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 5,
+      "text": "By the way, the ERL paper is now published at NIPS, but it was not the case yet when we submitted ours. We updated the corresponding reference.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 6,
+      "text": "The reviewer seems to consider that each actor in our CEM-RL algorithm comes with its own critic (the reviewer says value function), which would raise a value function initialization issue.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 7,
+      "text": "Actually, this is not the case: there is a single TD3 critic over the whole process, and gradient steps are applied to all the selected actors from that single critic.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 8,
+      "text": "This has been clarified in the text by insisting on the unicity of this critic.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 9,
+      "text": "We agree with the reviewer that the importance mixing did not provide the sample efficiency improvement we expected, and we can only provide putative explanations of why so far.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske3D7Jqh7",
+      "rebuttal_id": "rJgh-YoWAQ",
+      "sentence_index": 10,
+      "text": "Nevertheless, we believe this mechanism still has some potential and is currently overlooked by most deep neuroevolution researchers, so we decided to keep the importance mixing study in Appendix B rather than just removing it.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

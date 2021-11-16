@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "forum_id": "B1gXWCVtvr",
+    "review_id": "HkxurON6FB",
+    "rebuttal_id": "SkeqobSuiH",
+    "title": "Adapting Behaviour for Learning Progress",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1gXWCVtvr&noteId=SkeqobSuiH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 0,
+      "text": "This paper presents an adaptive exploration scheme that can reduce the complexity of per-task tuning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 1,
+      "text": "This goal is achieve by formulating the adapting scheme as a multi-arm bandit problem with the actual \"learning progress\" as a feedback signal.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 2,
+      "text": "The paper is well written and easy to be understood.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 3,
+      "text": "The strength of this paper is that 1) the proposed method is new in the sense that it invents an automatic way for exploration.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 4,
+      "text": "2) The algorithm is simple yet effective by the experiment results the authors provide.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 5,
+      "text": "Weakness: the presentation of the tables/bar charts in the experiment is a bit unclear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "sentence_index": 6,
+      "text": "More explanations are needed.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 0,
+      "text": "Thank you for your constructive feedback!",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 1,
+      "text": "> Weakness: the presentation of the tables/bar charts in the experiment is a bit unclear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 2,
+      "text": "More explanations are needed.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 3,
+      "text": "Thank you for this suggestion (shared by other reviewers too): the updated version of the paper will clarify these things, and relegate less of the information to the appendix too.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 4,
+      "text": "Specifically for Figure 4, the performance outcome for each variant is measured on multiple independent runs (seeds).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 5,
+      "text": "All the outcomes are then jointly ranked, and the ranks are averaged across seeds.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 6,
+      "text": "Finally, these averaged ranks are normalized to fall between 0 and 1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 7,
+      "text": "A normalized rank of 1 corresponds to all the N outcomes (seeds) of a variant being ranked at the top N positions in the joint ranking.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 8,
+      "text": "Figure 4 then further aggregates these normalized ranks across 15 Atari games.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 9,
+      "text": "Note that these joining rankings are done separately per subplot (ie modulation class).",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkxurON6FB",
+      "rebuttal_id": "SkeqobSuiH",
+      "sentence_index": 10,
+      "text": "We think we could address all your concerns, but please let us know if you have further questions, the discussion period lasts until the end of the week!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,678 @@
+{
+  "metadata": {
+    "forum_id": "BJe7h34YDS",
+    "review_id": "SJx4v04YKS",
+    "rebuttal_id": "r1gWc5jqor",
+    "title": "Understanding and Stabilizing GANs' Training Dynamics with Control Theory",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=BJe7h34YDS&noteId=r1gWc5jqor",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 0,
+      "text": "This paper proposes a novel view for stabilising GANs from the perspective of control theory.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 1,
+      "text": "This view provides new insights into GAN training and may inspire future research along this direction.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 2,
+      "text": "This paper is overall well written, with a smooth introduction of background material that might be less familiar for machine learning researchers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 3,
+      "text": "There are places that need further clarification, but I think the proposed direction is promising.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 4,
+      "text": "Questions about the method:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 5,
+      "text": "- Since the proposed method starts from Laplace transform, it would be helpful to further discuss the connection between other methods that regularises the eigenvalues of the Jacobian (such as spectral-normalisation), which work in the frequency domain from a different perspective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 6,
+      "text": "For example, could the proposed regulariser be interpreted as imposing certain constraint on the spectrum of Jacobian?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 7,
+      "text": "- Does section 2.2 depend on the assumption of linear dynamics?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 8,
+      "text": "- Does the E in eq.7 come from eq. 4?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 9,
+      "text": "- Could you give some intuition for the paragraph above section 3.4, about the different form of inputs when treating D and G as dynamics?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 10,
+      "text": "For consistency, it is perhaps better to keep the dependency of p_D and p_G on x explicit (same for eq. 10), unless this is intended?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 11,
+      "text": "- My main concern about the analysis is that it shows why several methods (e.g., momentum, multiple update steps) are *not* helpful for stabilising GANs, but does not tell why training with these methods, as well as others such as gradient penalty, *do converge* in practice with properly chosen hyper-parameters?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 12,
+      "text": "Experiments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 13,
+      "text": "- About setup: the paper reports using ResNets for natural images as in Mescheder et al. (2018).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 14,
+      "text": "However, Mescheder et al. (2018) uses DCGAN for CIFAR10, which raises further questions about the scores on this dataset:",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 15,
+      "text": "- The baseline scores of Reg-SGAN and Reg-WGAN seem to be worse than those reported in Mescheder et al. (2018), which have inception scores above 6 according to Figure 6 of their paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 16,
+      "text": "In Figure 5 of this paper, they are clearly below 6.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "sentence_index": 17,
+      "text": "What\u2019s the reason for this discrepancy?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 0,
+      "text": "Thanks for your valuable comments. Below we address the detailed comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 1,
+      "text": "Q1: Connection to the Jacobian matrix:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 2,
+      "text": "A1: Thanks for the interesting suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 3,
+      "text": "Indeed, the proposed regularizer can be interpreted as certain constraints on the Jacobian at the equilibrium point.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 4,
+      "text": "Since at the equilibrium, $D(x)=0$ for all x, indicating that the equilibrium is a global optimal point of the negative feedback regularization $L = \\lambda \\int D^2(x)dx$. Therefore, the Hessian matrix $J = \\frac{\\partial^2 L}{\\partial \\phi^2}$ is positive-semidefinite.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 5,
+      "text": "Otherwise, $\\phi$ is a stationary point instead of the global optimal point of the regularization term.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 6,
+      "text": "Therefore, introducing the $L$ is equivalent to adding a negative-semidefinite matrix to the jacobian matrix of the original dynamics, which do help to stabilize the dynamics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 7,
+      "text": "We added the related discussion in Appendix E in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 8,
+      "text": "Q2: The linear assumption on the dynamics:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 9,
+      "text": "A2: Yes. The Laplacian transformation and the following discussions in Sec. 2.2 rely on linear dynamics, but it does not put any restriction on defining the discriminator as a nonlinear neural network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 10,
+      "text": "In Section 3, we can see that in the function space, the discriminator $D(x)$ and the generated samples $G(z)$ can be considered as integral parts which are also linear dynamics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 11,
+      "text": "The two non-linear operations are clearly denoted in Fig. 2(right), and we make an approximation to ignore these two non-linear operations which is widely adopted in control theory [*1].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 12,
+      "text": "Q3: Eqn. (7):",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 13,
+      "text": "A3: Actually, Eqn. (7) comes from Eqn. (6).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 14,
+      "text": "Letting $e = c - \\theta$, and taking Laplacian transformation on both side of Eqn. (6), we have $s\\mathcal{F}(D(t, x)) = x \\mathcal{F}(c-\\theta)$, which induces Eqn. (7).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 15,
+      "text": "We made this clearer in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 16,
+      "text": "Q4: The input and output of dynamics:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 17,
+      "text": "A4: For a dynamic, both the input and the output are functions of time $t$. We take $D$ as an example.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 18,
+      "text": "Since the dynamics of $D$ is equivalent to the integral part, the output of $D$ can be formulated as $D(t, x) = \\int_0^{t} g(u, x)du$, where $g$ is also a function of time t. In this setting, we say that the input of the dynamic is $g(t, x)$ and the output is $D(t, x)$, for all $x$. In Eqn. (10), we ignore the $x$ to emphasize that we modeling $D$ in the time-space.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 19,
+      "text": "We added an example for a better presentation in Sec. 3.1 in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 20,
+      "text": "Q5: The stability of previous methods:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 21,
+      "text": "A5: Indeed, many existing methods can *generate realistic images*, which, however, does not necessarily imply that these methods *are stable*. For example, in Fig. 4 (left), the inception score of SGAN and LS-GAN is high at the beginning but finally diverges after a period.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 22,
+      "text": "The early stopping in GAN's training is widely adopted otherwise the image quality will decrease, which indicates that these methods are not actually stable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 23,
+      "text": "Besides, NF-GAN can also boost the performance of SN-GAN to achieve new state-of-the-art performance (see details below).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 24,
+      "text": "It indicates that improvement on the stability also benefits the state-of-the-art methods.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 25,
+      "text": "Q6: Experiments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 26,
+      "text": "A6: For the experiments, we directly used the officially released code of Reg-GAN for fair comparison and it uses the ResNet instead of DCGAN architectures.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 27,
+      "text": "We provided a detailed explanation about the experimental setting and further experimental results of the state-of-the-art performance in our response to \"The Common concerns about experimental setting and results\".",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJx4v04YKS",
+      "rebuttal_id": "r1gWc5jqor",
+      "sentence_index": 28,
+      "text": "[*1] Khalil, Hassan K. \"Nonlinear systems.\" Upper Saddle River (2002).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

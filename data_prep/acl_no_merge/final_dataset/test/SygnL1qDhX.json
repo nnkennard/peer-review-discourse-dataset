@@ -1,0 +1,609 @@
+{
+  "metadata": {
+    "forum_id": "ryxhynC9KX",
+    "review_id": "SygnL1qDhX",
+    "rebuttal_id": "r1gpxB7w0X",
+    "title": "CNNSAT: Fast, Accurate Boolean Satisfiability using Convolutional Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryxhynC9KX&noteId=r1gpxB7w0X",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 0,
+      "text": "The aim of this paper is to solve SAT instances using a CNN architecture.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 1,
+      "text": "SAT instances are represented using an efficient encoding of boolean matrices.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 2,
+      "text": "The overall idea is to decompose an input SAT instance into simpler ones, and to train the neural model on simpler instances using an existing solver for labeling these instances.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 3,
+      "text": "Based on satisfaction probabilities induced from simpler formulas, the architecture predicts a partial assignment which is fed to the existing solver for deriving the satisfiability result.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 4,
+      "text": "Arguably, the topic of \u201clearning to solve SAT instances\u201d is very interesting, by coupling results from neural networks and SAT solvers.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 5,
+      "text": "This work is inspired from the landmark paper on NeuroSAT, and the experimental results look promising.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 6,
+      "text": "However, since the framework is focused on solving random SAT problems (especially random 3-SAT instances), the paper is missing a detailed description of this active research topic in AI and the SAT community (see e.g. [1,2]).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 7,
+      "text": "Notably, the problem of generating realistic random k-SAT instances has long been considered as one of the most important challenges in SAT research [3].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 8,
+      "text": "Importantly, modern random k-SAT instances are not only characterized by their number of variables, and their ratio  #clauses / #variables, but with an additional \u201cstructure\u201d which mimics real-world, industrial instances (see e.g. [4]).",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 9,
+      "text": "Furthermore, I had some trouble understanding how a SAT instance is solved using algorithm 1.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 10,
+      "text": "Specifically the text in Section 3.3 that explains Algorithm 1 is a bit confusing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 11,
+      "text": "How do \u201cwe choose a specific number of assignments based on prediction probabilities\u201d?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 12,
+      "text": "Unless I missed something, the output of the CNN architecture is a probability value that the input formula is SAT, so I don\u2019t really see how this can be related to prediction probabilities of assignments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 13,
+      "text": "This should be explained in detail since Line 15 is the main output of the algorithm, which is fed (Line 16) to an existing solver for completing the assignment.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 14,
+      "text": "The example at the end of section 3.3 is not very helpful: namely, the CNF formula $(x_2) \\land (\\neg x_2)$ is clearly unsatisfiable, so how can the model predict that it is satisfiable with 80% probability? And, if we try here $x_2 = 1$, we immediately get $\\bot$ (the unsat CNF), but not $x_1$ (which was already assigned to $0$).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 15,
+      "text": "Finally, the CNN architecture should be compared with modern SAT solvers which have been participating to SAT competitions.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 16,
+      "text": "The Z3 solver is mainly focused on solving SMT instances [5], not random k-SAT instances which, by the way, is a common track in annual SAT competitions (see e.g. [6]).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 17,
+      "text": "To this point, generic SAT solvers such as MiniSAT [7] and Glucose [8] are able to solve in few seconds some random 3-SAT instances with thousands of variables and tens of thousands of clauses (see e.g. [4]).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 18,
+      "text": "So, the motivating assertion \u201c[...] state-of-the-art solvers do not yet scale to large, difficult formulas, such as ones with hundreds of variables and thousands of clauses\u201d in the introduction of the paper, is not totally correct.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 19,
+      "text": "To sum up, I would recommend to compare the CNNSAT architecture with well-known SAT solvers such as MinSAT, Glucose, March, or Dimetheus [9] which has been one of the strongest solvers in recent years for tackling random instances.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 20,
+      "text": "Also, as mentioned above, it would be interesting to incorporate some structures (such as, for example, community attachments or popularity-similarities) in SAT instances, in order to estimate whether CNNSAT could handle pseudo-industrial problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 21,
+      "text": "[1] D. Mitchell, B. Selman, H. Levesque, Hard and easy distributions of SAT problems, in: Proceedings of the 10th National Conference on Artificial Intelligence, AAAI\u201992, 1992, pp. 459\u2013465.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 22,
+      "text": "[2] Nudelman, E., Leyton-Brown, K., Hoos, H. H., Devkar, A., & Shoham, Y. Understanding random SAT: Beyond the clauses-to-variables ratio. In 10th International Conference on Principles and Practice of Constraint Programming (CP\u201904), pp. 438\u2013452.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 23,
+      "text": "[3] B. Selman, H.A. Kautz, D.A. McAllester, Ten challenges in propositional reasoning and search, in: Proceedings of the 15th International Joint Conference on Artificial Intelligence, IJCAI\u201997, 1997, pp. 50\u201354.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 24,
+      "text": "[4] J. Gir\u00e1ldez-Cru and J. Levy. Generating sat instances with community structure. Artificial Intelligence, 238:119 \u2013 134, 2016.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 25,
+      "text": "[5] The 2014 SMT Competition https://satassociation.org/jsat/index.php/jsat/article/download/122/114",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 26,
+      "text": "[6] The 2018 SAT Competition",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 27,
+      "text": "http://sat2018.forsyte.tuwien.ac.at/index.php?cat",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 28,
+      "text": "=results",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 29,
+      "text": "[7] N. E\u00e9n, N. S\u00f6rensson, An extensible SAT-solver, in: Proceedings of the 6th International Conference on Theory and Applications of Satisfiability Testing, SAT\u201903, 2003, pp. 502\u2013518.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 30,
+      "text": "[8] ] G. Audemard, L. Simon, Predicting learnt clauses quality in modern SAT solvers, in: Proceedings of the 21st International Joint Conference on Artificial Intelligence, IJCAI\u201909, 2009, pp. 399\u2013404",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 31,
+      "text": "[9] Dimetheus",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "sentence_index": 32,
+      "text": "https://www.gableske.net/dimetheus",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 0,
+      "text": "Thank you for the helpful comments and suggestions.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 1,
+      "text": "Regarding the example, the goal of it is to help the reader understand",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 2,
+      "text": "the algorithm more easily.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 3,
+      "text": "The wrong assignment with 80% probability",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 4,
+      "text": "is used to illustrate the situation where some predictions are wrong.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 5,
+      "text": "\"if we try here $x_2 = 1$\" is based on the original formula, which is",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 6,
+      "text": "\"$x_1 \\lor x_2) \\land (\\lnot x_1 \\lor x_2) \\land ( x_1 \\lor \\lnot",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 7,
+      "text": "x_2)$\"",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 8,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 9,
+      "text": "Therefore, the assigned formula is $x_1$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 10,
+      "text": "We tested PicoSAT, MiniSAT, Dimetheus and CaDiCaL and reported the",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 11,
+      "text": "results in the updated paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 12,
+      "text": "CNNSAT outperformed all these solvers",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 13,
+      "text": "by",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SygnL1qDhX",
+      "rebuttal_id": "r1gpxB7w0X",
+      "sentence_index": 14,
+      "text": "at least two orders of magnitude over the \"Long Range\" dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

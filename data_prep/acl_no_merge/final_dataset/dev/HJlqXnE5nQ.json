@@ -1,0 +1,531 @@
+{
+  "metadata": {
+    "forum_id": "HJfQrs0qt7",
+    "review_id": "HJlqXnE5nQ",
+    "rebuttal_id": "SyeGJ1qEA7",
+    "title": "Convergence Properties of Deep Neural Networks on Separable Data",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJfQrs0qt7&noteId=SyeGJ1qEA7",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 0,
+      "text": "The authors study properties of the learning behavior of non-linear (ReLu) neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 1,
+      "text": "In particular, their main focus is on binary classification for the linear-separable case, when optimization is done using gradient descent minimizing either binary entropy or hinge loss.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 2,
+      "text": "There are 3 main results in the paper:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 3,
+      "text": "1) During learning, each neuron only activates on data points of one class: hence (due to ReLu), each neuron only updates its weights when seeing data points from that class.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 4,
+      "text": "The authors refer to this property as \"Independent modes of learning\", suggesting that the learning of parameters of the network is decoupled between the two classes.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 5,
+      "text": "2) The classification error, with respect to the number of iterations of gradient descent, exhibits a sigmoidal shape: slow improvement at the beginning, followed by a period of fast improvement, followed by another plateau.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 6,
+      "text": "3) Most frequent features, if discriminative, can prevent learning of other, less frequent, features.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 7,
+      "text": "Apart from the assumption H1 of linear separability of the data (which I don't mind), the results require very strong assumptions, in particular hypothesis H2 stating \"at the beginning of training data points from different classes do not activate the same neurons\".",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 8,
+      "text": "Even for a shallow net, the authors are essentially assuming that the first layer of weights W is such that each row w is already a hyperplane separating the two classes after initialization (wx > 0 for all x belonging to one class and wx' < 0 for x' in the other class).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 9,
+      "text": "In other words, at initialization, the first layer is already correctly classifying all data points.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 10,
+      "text": "This is of course an extremely stringent assumption that doesn't hold in practice (eg, the probability of such an initialization shrinks to zero exponentially in the number of dimensions and in the number of neurons).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 11,
+      "text": "Because of this concern, I believe the results in the paper can only really characterize the learning close to convergence, since the network is already able to provide correct classification.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 12,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 13,
+      "text": "- Authors consider a non-linear (ReLu) neural network, as opposed to the analysis of Save et al which only considers linear nets.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 14,
+      "text": "- The fundamentally different behavior between Hinge and binary entropy loss is interesting, and worth analyzing further.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 15,
+      "text": "- Sigmoidal shape of classification error as a function of number of iterations is inline with what is seen in practice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 16,
+      "text": "However, I believe the assumptions needed to show this point force the analysis to only characterize learning close to convergence.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 17,
+      "text": "Minor Cons (apart from major concern above):",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 18,
+      "text": "- Theorem 3.2: \"[...] converges at a speed proportional to [...]\". Isn't \\bar{u}_t logarithmic (non-linear) in t?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 19,
+      "text": "- Theorem 3.2: Even if strong, I don't mind the assumption on a dataset merely consisting of two (weighted) data points. I would suggest to simulate this case without putting any condition on the initialization of the weights (ie, without assumptions H1-H2), and compare the empirical shape of the classification error with the one you obtain analytically in Figure 2 Right.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 20,
+      "text": "- Theorem 3.2 Interpretation: unfinished sentence \"We can characterize the convergence speeds more quantitatively with the\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 21,
+      "text": "- Theorem 4.1: Can you give an intuition or lower/upper bounds for u(t) for the Hinge case, to make evident its difference from the binary entropy case (where u(t) ~ log(t))",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 22,
+      "text": "- Gradient starvation, Kaggle experiment: I'm not too convinced about the novelty/usefulness of this result. In the end, even a decision tree stump would stop growing after learning the dark/light feature as a discriminator.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 23,
+      "text": "What I'm trying to say is that \"gradient starvation\" is a more general problem that really doesn't have to do with gradient descent.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "sentence_index": 24,
+      "text": "Also, the fact that the accuracy on the Kaggle non-doctored test set is low is simply because the test set is not coming from the same distribution of the training set.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 0,
+      "text": "We thank you for your thorough review, which has undoubtedly helped improve the paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 1,
+      "text": "First, we agree that assumption (H2) is restrictive and have added some insights/results relaxing it in Section 3.4 in the latest version of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 2,
+      "text": "For more details, please see the comment above entitled: \u201cRelaxing Assumption (H2)\u201d.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 3,
+      "text": "Nevertheless, we wish to emphasize that even under Assumption (H2), learning can still fail.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 4,
+      "text": "Fig 2. Left and Section 3.3 show that any initialization in the top left red region will lead (after a finite number of updates) to a confidence of 0.5 on the corresponding class.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 5,
+      "text": "The network does not provide correct classification at the end of training even though it does at the beginning.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 6,
+      "text": "Here are responses to your other concerns:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 7,
+      "text": "- Indeed, our intent in the statement of Theorem 3.2 was to describe the scaling of the solution with respect to those two quantities, but it can be misinterpreted. We have clarified it in the new version of the paper.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 8,
+      "text": "- We have run that experiment and included it in Fig 3. Right among our other recent findings.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 9,
+      "text": "- Corrected in the new version.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 10,
+      "text": "- We have added a line in the last paragraph of Section 4 stating that for the Hinge loss, u(t) grows exponentially in t.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 11,
+      "text": "- We agree that the observed phenomenon can appear in other machine learning methods and is not specific to gradient descent.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 12,
+      "text": "However, in the case of deep neural networks, it is the prevalence of certain gradient directions that determine the final classifier.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 13,
+      "text": "Our results suggests that models converge to solutions that privilege the \u201csimplest\u201d explanation, in an Occam\u2019s razor fashion, which provides an explanation to the \u201cimplicit generalization\u201d of deep nets characterized by Zhang et al.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 14,
+      "text": "Our Kaggle experiment\u2019s aim is to emphasize potential failure modes of current architectures/algorithms (one can think of a self-driving car trained on a road with clear lane markings and operating on a road without such markings).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJlqXnE5nQ",
+      "rebuttal_id": "SyeGJ1qEA7",
+      "sentence_index": 15,
+      "text": "The ability to transfer knowledge to test sets coming from a different distribution is key to building more intelligent and robust systems.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

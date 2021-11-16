@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "forum_id": "HklAhi09Y7",
+    "review_id": "rkeUDe_i37",
+    "rebuttal_id": "BJlxyt63kN",
+    "title": "Question Generation using a Scratchpad Encoder",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HklAhi09Y7&noteId=BJlxyt63kN",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 0,
+      "text": "This paper tackles the question generation problem from a logical form and proposes an addition called Scratchpad Encoder to the standard seq2seq framework.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 1,
+      "text": "The new model has been tested on the WebQuestionsSP and the WikiSQL datasets, with both automatic and human evaluation, compared to the baselines with copy and coverage mechanisms.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 2,
+      "text": "Major points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 3,
+      "text": "Overall, I think this paper is not good enough for an ICLR paper and the presentation is confusing in both its contributions and its technical novelty.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 4,
+      "text": "I don\u2019t recommend to accept this paper, at least in the current format.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 5,
+      "text": "The paper states two major contributions (the last paragraph of Introduction), one is the new model Scratchpad Encoder, and the other is \u201cpossible to generate a large high quality (SPARQL query, local form) dataset\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 6,
+      "text": "For the second contribution, there isn\u2019t any evaluation/justification about the quality of the generated questions and how useful this dataset would be in any KB-QA applications.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 7,
+      "text": "I believe that this paper is not the first one to study question generation from logical form (cf. Guo et al, 2018 as cited), so it is unclear what is the contribution of this paper in that respect.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 8,
+      "text": "For the modeling contribution, although it shows some improvements on the benchmarks and some nice analysis, the paper really doesn\u2019t explain well the intuition of this \u201cwrite\u201d operation/Scratchpad (also the improvement of Scratchpad vs coverage is relatively limited). Is this something tailored to question generation? Why does it expect to improve on the question generation or it can improve any tasks which build on top of seq2seq+att framework (e.g., machine translation, summarization -- if some results can be shown on the most competitive benchmarks, that would be much more convincing)?",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 9,
+      "text": "In general I find Section 3 pretty difficult to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 10,
+      "text": "What does \u201ckeeping notes\u201d mean?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 11,
+      "text": "It seems that the goal of this model is to keep updating the encoder hidden vectors (h_0, .., h_T) instead of fixing them at the decoder stage.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 12,
+      "text": "I think it is necessary to make it clearer how s_{post_read} and attn_copy are computed with the updated {h^i_t} and what u^i is expected to encode.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 13,
+      "text": "\\alpha^i_t and u^i are also pretty complex and it would be good to conduct some ablation analysis.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 14,
+      "text": "Minor points:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 15,
+      "text": "- tau Yih et al, 2016 --> Yih et al, 2016",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 16,
+      "text": "- It is unclear why the results on WikiSQL is presented in Appendix. Combining the results on both datasets in the experiments section would be more convincing.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "sentence_index": 17,
+      "text": "- Table 1: Not sure why there is only one model that employs beam search (with beam size = 2) among all the comparisons. It looks strange.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkeUDe_i37",
+      "rebuttal_id": "BJlxyt63kN",
+      "sentence_index": 0,
+      "text": "Your interpretation of section 3 is exactly right.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "rebuttal_id": "BJlxyt63kN",
+      "sentence_index": 1,
+      "text": "Thank you for suggesting additional experiments to better understand the behavior of the scratchpad component.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "rebuttal_id": "BJlxyt63kN",
+      "sentence_index": 2,
+      "text": "We would like to note that beyond the gains across all evaluated quantitative metrics (bleu, rouge, meteor), our method shows substantial gains on human evaluations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "rebuttal_id": "BJlxyt63kN",
+      "sentence_index": 3,
+      "text": "In future work we propose to use our method to generate a large dataset and evaluate its performance.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkeUDe_i37",
+      "rebuttal_id": "BJlxyt63kN",
+      "sentence_index": 4,
+      "text": "We don\u2019t claim to be the first to generate questions from logical form, but the experiments within show that our approach is superior to standard approaches in the literature.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

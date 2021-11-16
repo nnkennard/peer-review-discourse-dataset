@@ -1,0 +1,513 @@
+{
+  "metadata": {
+    "forum_id": "ryepUj0qtX",
+    "review_id": "SyxO5eTc3X",
+    "rebuttal_id": "SkxlQv-m0X",
+    "title": "Conditional Network Embeddings",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryepUj0qtX&noteId=SkxlQv-m0X",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 0,
+      "text": "The authors propose a generative model of networks by learning embeddings and pairing the embeddings with a prior distribution over networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 1,
+      "text": "The idea is that the prior distribution may explain structure that the embeddings would not have to capture.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 2,
+      "text": "The motivation for doing this is that this structure is typically hard to model for network embeddings.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 3,
+      "text": "The authors propose a clean -if improper- prior on networks and proceed to perform maximum likelihood inference on it.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 4,
+      "text": "The experiments show that the approach works fine for link porediction and can be used for visualization.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 5,
+      "text": "Two points:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 6,
+      "text": "a) Why not try to do this with Variational inference? It should conceptually still work and be fast and potentially more robust.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 7,
+      "text": "b) The prior seems to be picked according to properties of the observed data and expressed in a product of constraints.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 8,
+      "text": "This seems clunky, I would have been more impressed with a prior structure that ties in closer with the embeddings and requires less hand-engineering.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 9,
+      "text": "A key point of interest is the following: very exciting recent work (GraphRNN: Generating Realistic Graphs with Deep Auto-regressive Models by You et al ICML2018) has proposed neural generative models of networks with a high degree of fidelity and much less hand-picked features.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 10,
+      "text": "The work here tries to not learn a lot of these structures but impose them.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 11,
+      "text": "Do the authors think that ultimately learning priors with models like GraphRNN might be more promising for certain applications?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 12,
+      "text": "The drawback in this model here is that ultimately networks are embedded, but not really generated during test time.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 13,
+      "text": "A more predictive generative model that makes less hard assumptions on graph data would be interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 14,
+      "text": "Update After rebuttal:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 15,
+      "text": "Given the authors' rebuttal to all reviews, I am upgrading my score to a 6.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "sentence_index": 16,
+      "text": "I still feel that more learning (as inGraphRNN) to build a fuller generative model of the graph would be interesting, but the authors make a strong case for the usefulness and practicality of their approach.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the thoughtful review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 1,
+      "text": "The reviewer points out that CNE works well for link prediction and visualization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 2,
+      "text": "We wish to point out that our experiments indicate CNE consistently outperforms the state-of-the-art not only for these tasks but also for multi-label classification.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 3,
+      "text": "Our responses:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 4,
+      "text": "a) Variational inference is useful in particular when the partition function is hard to compute, which is not the case here.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 5,
+      "text": "So we believe it would be overkill in this case.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 6,
+      "text": "In any case, it is not needed to achieve the performances CNE achieves at a very modest computational complexity and fast practical runtimes.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 7,
+      "text": "b) No hand-engineering is needed to use CNE even when using more informative priors modeling node degrees and block structure.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 8,
+      "text": "The degree of each node can simply be computed on the training set, so no hand-engineering is needed (just the choice to include it or not -- and it always better to include it).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 9,
+      "text": "The block structure, on the other hand, will often be part of the data specification or meta-data of the nodes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 10,
+      "text": "For example, the network may be a multi-partite network representing a relational database, or it may be a company social network where the nodes are employees, and generic job titles are known for each of the employees (as attributes of the nodes).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 11,
+      "text": "The entity types in the first example, and the job titles in the second example, would then define the blocks, and the density of the parts of the adjacency matrix between any two such blocks can again easily be computed on the network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 12,
+      "text": "Our method imposes no constraints on such blocks (e.g. they may even be partially overlapping).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 13,
+      "text": "Again, all that is needed is choosing whether to use a block prior for any specified attribute (in the two examples: entity type, and node attribute).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 14,
+      "text": "Again, empirically, including it always appears to be better, so one could even avoid having to make the choice.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 15,
+      "text": "Inferring structural properties of the graph to be used in the prior (e.g. using GraphRNN), as we understand the reviewer suggests, certainly sounds potentially interesting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 16,
+      "text": "However, while it may improve accuracy, we do not believe that it adds value in reducing the amount of hand-engineering needed, as the amount of hand-engineering needed is very minimal already.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 17,
+      "text": "The fact that CNE could be combined with such inferred structural properties increases its potential impact though, and this remark of the reviewer further underscores the need for methods such as CNE that can take such structural information into account.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxO5eTc3X",
+      "rebuttal_id": "SkxlQv-m0X",
+      "sentence_index": 18,
+      "text": "The boost in accuracy achieved by CNE, using a model that is arguably also a lot simpler than the state-of-the-art network embedding approaches, is thus achieved without any increased need for hand-engineering.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

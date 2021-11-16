@@ -1,0 +1,698 @@
+{
+  "metadata": {
+    "forum_id": "SklckhR5Ym",
+    "review_id": "HkeEorv1hm",
+    "rebuttal_id": "BJe0cdJfC7",
+    "title": "Improved Language Modeling by Decoding the Past",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklckhR5Ym&noteId=BJe0cdJfC7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 0,
+      "text": "In their abstract, the authors claim to provide state-of-the-art perplexity on Penn Treebank, which is not true.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 1,
+      "text": "As the authors state, their notion of \"state-of-the-art\" excludes exactly that earlier work, which does provide state-of-the-art perplexity on Penn Treebank (Yang et al. 2017), as stated in Sec. 4.1.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 2,
+      "text": "The question is, why one would exlude the mixture-of-softmax approach here?",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 3,
+      "text": "This is clearly misleading.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 4,
+      "text": "The authors introduce the idea of past decoding for the purpose of regularization.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 5,
+      "text": "It remains somewhat unclear, why this bigram-centered regularization would strongly contribute for prediction in general.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 6,
+      "text": "The results obtained show moderate improvements of approx. 1 point in perplexity on top of their best current result on Penn Treebank.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 7,
+      "text": "Considering the small size of the corpus for the evaluation of a regularization method, the results even seem optimistic - it remains unclear, if this approach would readily scale to larger datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 8,
+      "text": "The mode of language modeling evaluation presented here, without considering an actual language or speech processing task, provides limited insight w.r.t. its utility in actual applications.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 9,
+      "text": "Moreover, the very limited size of the language modeling tasks chosen here is highly advantageous for smoothing/regularization approaches.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "sentence_index": 10,
+      "text": "It remains totally unclear, how the presented approaches would perform on more realistically sized tasks and within actual applications.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for reading the paper and the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 1,
+      "text": "As already stated in the comments below, our claim of state-of-the-art in the original manuscript pertains to models with a single softmax, which we clearly state in section 4.1.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 2,
+      "text": "We will update the abstract to remove any confusion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 3,
+      "text": "As suggested by multiple reviewers, we have performed further experiments by incorporating our Past Decode Regularization (PDR) in the mixture-of-softmax (AWD-LSTM-MoS) model of (Yang et al. 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 4,
+      "text": "We use the same model sizes as used in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 5,
+      "text": "As shown below, we observe gains of 0.4 and 1.0 perplexity points for PTB and WT2, while with dynamic evaluation the gains are 0.4 in both cases.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 6,
+      "text": "AWD-LSTM-MoS+PDR  || AWD-LSTM-MoS (Yang et al. 2017)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 7,
+      "text": "Penn Treebank with finetuning -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 8,
+      "text": "56.2/53.8",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 9,
+      "text": "||  56.5/54.4",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 10,
+      "text": "Penn Treebank with dynamic evaluation -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 11,
+      "text": "48.0/47.3",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 12,
+      "text": "||  48.3/47.7",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 13,
+      "text": "WikiText-2 with finetuning -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 14,
+      "text": "63.0/60.5",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 15,
+      "text": "||  63.9/61.5",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 16,
+      "text": "WikiText-2 with dynamic evaluation -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 17,
+      "text": "42.0/40.3",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 18,
+      "text": "||  42.4/40.7",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 19,
+      "text": "Note that, we performed very limited hyperparameter tuning in the vicinity of the hyperparameters used by (Yang et al. 2017) and a more exhaustive search is likely to lead to better gains.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 20,
+      "text": "Thus, the gains due to PDR generalize to more complex models like AWD-LSTM-MoS+PDR.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 21,
+      "text": "We can justify PDR theoretically as an inductive bias on the language model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 22,
+      "text": "The observed bigrams in a language are not random and the distribution of the second word given the first word in a bigram is not uniform.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 23,
+      "text": "Similarly, the distribution of the first word given the second word will be far from uniform.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 24,
+      "text": "A RNN based language model models the first dependence (and more long range ones) and our proposed PDR tries to model the second one.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 25,
+      "text": "In a unidirectional language model, we cannot look into the future tokens and hence we use the output distribution as a proxy for the \"true second word\" and decode the distribution of the first word.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 26,
+      "text": "Thus the PDR term can be thought of as biasing the language model to retain more information about the distribution of the first word given the second word in a bigram.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 27,
+      "text": "We believe language modeling is a fundamental problem in NLP and our work continues a long stream of papers that have achieved steadily lower perplexities over the past few years.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 28,
+      "text": "We evaluated our approach on two standard datasets that have been used as a benchmark in most of these papers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 29,
+      "text": "As suggested by multiple reviewers, we have conducted further experiments on the Gigaword corpus to test PDR on larger corpora.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 30,
+      "text": "Specifically,  we use a 2-layer LSTM with hidden dimension 1024 and a word embedding dimension of 1024.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 31,
+      "text": "We truncated the vocabulary by keeping approximately 100k words with the highest frequency and used the same validation and test sets as (Yang et al. 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 32,
+      "text": "We obtained a valid/test perplexity of 44.0/42.5 for the model with PDR and 44.3/43.1 for the model without PDR, showing a gain of 0.6 points in the test perplexity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 33,
+      "text": "Note that we tuned the PDR loss coefficient very coarsely and tuning it further could lead to higher gains.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 34,
+      "text": "We will update the manuscript with these additional results and discussion and post it shortly.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HkeEorv1hm",
+      "rebuttal_id": "BJe0cdJfC7",
+      "sentence_index": 35,
+      "text": "Yang et al. 2017. Breaking the softmax bottleneck: A high-rank RNN language model. arXiv:1711.03953.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "forum_id": "HJgfDREKDB",
+    "review_id": "HyxflLtAYB",
+    "rebuttal_id": "r1gIbEt9jr",
+    "title": "Higher-Order Function Networks for Learning Composable 3D Object Representations",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HJgfDREKDB&noteId=r1gIbEt9jr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 1,
+      "text": "This paper describes a contextual encoding scheme for reconstruction of 3D pointclouds from 2D images.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 2,
+      "text": "An encoder outputs the parameters of a hierarchy of reconstruction networks that can be applied in succession to map random samples on a unit sphere to the surface of the reconstructed shape.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 3,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 4,
+      "text": "The author's model was quite novel in my opinion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 5,
+      "text": "Deep 2D->3D is becoming a crowded space and there are many other models that encode image inputs, and many others that perform recursive or composition-based decoding.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 6,
+      "text": "However, the particular link here was interesting, and I appreciate the small number of parameters resulting in solid reconstruction performance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 7,
+      "text": "While most related work was covered well, I believe the authors could have a more up-to-date list of recent work that reconstructs triangle-mesh representations from images [A-C] (especially since several of these methods has an architecture that involves encoding and subsequent compositional refinement).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 8,
+      "text": "Some of the reconstructions shown in this paper are quite impressive, and the quantitative results show outperforming 2 recent methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 9,
+      "text": "I did appreciate also the novel path-based evaluation of shape accuracy in the Appendix, although it would have been helpful to see more discussion of this in the main paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 10,
+      "text": "Areas for improvement:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 11,
+      "text": "I found that the core technical description was quite brief and would have benefited from simply more detail and space.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 12,
+      "text": "You have argued that your method is sensible to try (cog. sci motivations), and shown that one instance works, but what can we expect in a more mathematical or general sense? Can any sizes of encoder and mapping network fit together? How does the number of mapping layers effect performance? Won't we eventually expect vanishing/exploding gradients with particular activation and can one address this in some way?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 13,
+      "text": "I note that recent papers in this field tend to perform significantly more extensive experimental evaluation, typically selecting a wider range of competitors and using a number of more standardized metrics including IOU, F1 score and CD and typically repeating these at a variety of resolutions or on additional datasets or category splits etc.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 14,
+      "text": "Decision:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 15,
+      "text": "Weak reject because the idea is quite interesting, but I believe a more thorough explanation and expanded experimental comparison would be of great help to ensure the community can appreciate this work.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 16,
+      "text": "Additional citations suggested:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 17,
+      "text": "[A] Pixel2Mesh: Generating 3D Mesh Models from Single RGB Images. Wang, Zhang, Li, Fu, Liu and Jiang. ECCV 2018.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 18,
+      "text": "[B] MeshCNN: A Network with an Edge. Hanocka, Hertz, Fish, Giryes, Fleishman and Cohen-Or. SIGGRAPH 2019.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "sentence_index": 19,
+      "text": "[C] GEOMetrics: Exploiting Structure for Graph-Encoded Objects. Smith, Fujimoto, Romero and Meger. ICML 2019.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 1,
+      "text": "We have been hard at work to perform additional experiments to compare with other state of the art methods on a broader dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 2,
+      "text": "We summarize the changes here and will upload a revised the manuscript with complete quantitative evaluations before the revision deadline.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 3,
+      "text": "Q1: More extensive evaluations",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 4,
+      "text": "In response to your comments, we have trained and tested our method on the dataset provided in [1], using the F1 score rather than Chamfer Distance in accordance with the recommendations in that work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 5,
+      "text": "This dataset contains more than 4 times as many classes as our original dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 6,
+      "text": "We find that HOF is competitive with the performance of various state of the art methods reported in [1], showing the highest average F1 score out of all methods compared in [1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 7,
+      "text": "See Section 4.1.2 for added discussion, and the Appendix Sections A7 and A8 for complete class performance breakdowns for both our original experiments as well as the new comparison with [1].",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 8,
+      "text": "We hope this extended comparison provides a more convincing experimental evaluation of HOF.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 9,
+      "text": "Q2: Technical description and justification",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 10,
+      "text": "In the paper, we make the observation that codeword based approaches are equivalent to learning the biases of a fixed network, whereas the fast-weights-based HOF approach learns all of the weights.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 11,
+      "text": "Therefore, we conclude that HOF is mathematically at least as general as codeword based architectures.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 12,
+      "text": "We further show, with experiments, that the coding provided by HOF is more efficient than codeword-based approaches in terms of number of parameters in the decoder.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 13,
+      "text": "There is similar evidence in the literature which suggests that fast-weights based approaches can be more efficient than static networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 14,
+      "text": "However at this point, similar to our paper, the evidence is empirical and a theoretical justification of this phenomenon is missing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 15,
+      "text": "In response to your comments, in our concluding remarks, we mention this lack of theoretical analysis and note it as an important direction for future research",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 16,
+      "text": "Q3: Architecture of encoder/mapping network",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 17,
+      "text": "In addition to experiments on a new dataset, we have performed new evaluations of variants of HOF on our original dataset to demonstrate that HOF performs competitively even when we change the encoder architecture, decoder depth, decoder activation function, or input sampling for the decoder network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 18,
+      "text": "For example, using Resnet18 as the encoder network gives almost identical performance in terms of average chamfer distance on our original test set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 19,
+      "text": "The complete quantitative results of these comparisons will be included in an updated PDF before the end of the discussion period.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 20,
+      "text": "Q4: Number of mapping layers",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 21,
+      "text": "Our original results reported in Table 1 compare two different mapping function architectures.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 22,
+      "text": "HOF-1 has one hidden layer with 1024 units, HOF-3 has 3 hidden layers with 128 units each.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 23,
+      "text": "We have updated the text to clarify this distinction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 24,
+      "text": "In response to your comments, we have also conducted an additional experiment with a mapping network with 6 hidden layers with 128 units each; the test performance of this architecture is almost identical to that of HOF-3 (1.2485 average Chamfer distance with 6 layers compared with 1.247 average CD for 3 layers).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 25,
+      "text": "Q5: Vanishing/exploding gradients",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 26,
+      "text": "In all of our experiments, we address the problem of vanishing/exploding gradients by dividing by the square root of the in-degree of each neuron (as in [2]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 27,
+      "text": "Using the same initialization in the encoder network, we find that training a mapping function with 6 hidden layers (\"HOF-6\") trained easily with no modifications to our training code.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 28,
+      "text": "Another advantage of HOF over deeper, fixed decoder architectures is that it admits extremely shallow decoders, which require less careful tuning of hyperparameters such as initialization scaling and normalization compared with deeper networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 29,
+      "text": "For this work, our goal was not necessarily to find the optimal architecture for the decoder, but rather to demonstrate that the usage of the higher-order function paradigm allows for a much smaller decoder architecture than LVC methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 30,
+      "text": "Thank you for bringing the additional literature to our attention.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 31,
+      "text": "We have included it in our discussion of related work in a revised manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 32,
+      "text": "We have also updated the text to more clearly explain the path-based evaluation and its motivation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 33,
+      "text": "We hope that these additional experiments better demonstrate the effectiveness of HOF as a competitive, parameter-efficient 3d reconstruction paradigm.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 34,
+      "text": "Thank you again for your feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 35,
+      "text": "[1] M. Tatarchenko, S. R. Richter, R. Ranftl, Z. Li, V. Koltun, and T. Brox, \u201cWhat do single-view 3d reconstruction networks learn?,\u201d in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 3405\u2013 3414, 2019.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxflLtAYB",
+      "rebuttal_id": "r1gIbEt9jr",
+      "sentence_index": 36,
+      "text": "[2] K. He, X. Zhang, S. Ren, and J. Sun. Delving deep into rectifiers: Surpassing human-level performance on imagenet classification. In ICCV, 2015.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

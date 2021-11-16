@@ -1,0 +1,839 @@
+{
+  "metadata": {
+    "forum_id": "Sklv5iRqYX",
+    "review_id": "SkgS2HI5hQ",
+    "rebuttal_id": "SygyoFtapX",
+    "title": "Multi-Domain Adversarial Learning",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Sklv5iRqYX&noteId=SygyoFtapX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 1,
+      "text": "The manuscript proposes a multi-domain adversarial learning (MDL) method called MULANN, to leverage multiple datasets with overlapping but distinct class sets, in a semi-supervised setting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 2,
+      "text": "The authors define a new discrimination task to discriminate, within each domain, labeled samples from unlabeled ones that most likely belong to extra classes (classes with no labeled or unlabeled samples in the domain).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 3,
+      "text": "They also introduce a bound on the average- and worst-domain risk in MDL, obtained using the H-divergence.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 4,
+      "text": "Strengths:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 5,
+      "text": "-\u00a0The idea of using discriminators for separating the labeled samples from unlabeled ones that most likely belong\u00a0to extra classes is interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 6,
+      "text": "-\u00a0A new generalization bound for MDL is introduced.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 7,
+      "text": "-\u00a0The paper was clear, well written, well-motivated and nicely structured.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 8,
+      "text": "-\u00a0The authors perform numerous empirical experiments on several types of problems on various datasets (Digit, OFFICE,CELL) successfully showing how the MULANN can reduce the nasty effects of the adversarial domain\u00a0discriminator and repulse (a fraction of) unlabeled examples from labeled ones in each domain.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 9,
+      "text": "Weaknesses:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 10,
+      "text": "-\u00a0all the experiments except the last row of Table 2 concern adaptation between two domains.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 11,
+      "text": "Given the paper title, the reviewer would have expected more experiments in a multiple domain context.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 12,
+      "text": "More precisely, for the digit datasets, the reviewer was interested to see how the proposed MDL performs on jointly adapting SVHN, MNIST, MNIST-M, and USPS or jointly adapting DSLR, Amazon, and Webcam for OFFICE dataset.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 13,
+      "text": "Moreover, comparison with some of the DA baselines (ADDA[1], DSN[2]) is missing.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 14,
+      "text": "-\u00a0The authors propose to rank the unlabeled samples of each domain according to the entropy of their classification of the current classifier.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 15,
+      "text": "Obviously there must be some false ranking (specially at the initial stages of updating the classifier) for the unlabeled samples (e.g. the classifier may output high entropy for the unlabeled samples of the classes with labeled samples) and they may harm the performance of adaptation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 16,
+      "text": "It is not clear how MULANN can work in this situation and how its performance vary with the noisy signals conveyed in those false pseudolabeled samples.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 17,
+      "text": "-\u00a0Although the paper introduces the generalization bound for MDL, it does not give new formulation or algorithm to handle MDL (MULANN handles only the class asymmetry when domains involve distinct sets of classes and it has nothing to do with MDL).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 18,
+      "text": "hence, there is no connection between the theoretical results on MDL generalization bound and the proposed method MULANN.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 19,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 20,
+      "text": "Since each domain may have different number of classes, it is not clear how the number of classes (L) is set in the classification module (maximum number of classes in all domain?).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 21,
+      "text": "The reviewer is also interested to see how the the generalization bound introduced in this paper is related to the recent theoretical works [3],[4] on MDL.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 22,
+      "text": "[1]\u00a0Tzeng, Eric, et al. \"Adversarial discriminative domain adaptation.\"\u00a0Computer Vision and Pattern Recognition (CVPR). Vol. 1. No. 2. 2017.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 23,
+      "text": "[2]",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 24,
+      "text": "Bousmalis, Konstantinos, et al. \"Domain separation networks.\"\u00a0Advances in Neural Information Processing Systems. 2016.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 25,
+      "text": "[3]\u00a0Zhao, Han, et al. \"Multiple Source Domain Adaptation with Adversarial Learning.\" Advances in Neural Information Processing Systems. 2018.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "sentence_index": 26,
+      "text": "[4]\u00a0Hoffman, Judy, Mehryar Mohri, and Ningshan Zhang. \"Algorithms and Theory for Multiple-Source Adaptation.\"\u00a0\u00a0Advances in Neural Information Processing Systems. 2018.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their insightful comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 1,
+      "text": "Q1 \"all the experiments except the last row of Table 2 concern adaptation between two domains. Given the paper title, the reviewer would have expected more experiments in a multiple domain context.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 2,
+      "text": "A1 A main difference between domain adaptation and MDL is the fact that the former aims to minimize the target error, while the latter aims to minimize the average error.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 3,
+      "text": "In this sense, our goal (and the validation experiments on Cell) are focused on MDL.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 4,
+      "text": "Q2",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 5,
+      "text": "\"Although the paper introduces the generalization bound for MDL, it does not give new formulation or algorithm to handle MDL\" [...] \"There is no connection between the theoretical results on MDL generalization bound and the proposed method MULANN.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 6,
+      "text": "A2 This issue is related to the above: the new generalization bound extends that of Ben David et al. in the sense that it considers all pairs of domains involved, thus bounding the *average* risk; and this bound is the one underlying the proposed algorithm and its MDL experiments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 7,
+      "text": "We have clarified this in the manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 8,
+      "text": "Q3 \"the reviewer was interested to see how the proposed MDL performs on jointly adapting SVHN, MNIST, MNIST-M, and USPS or jointly adapting DSLR, Amazon, and Webcam for OFFICE dataset. \"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 9,
+      "text": "A3: We added 3 domain experiments for Office, which are now displayed in Appendix E.1 table 6.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 10,
+      "text": "As discussed in [3], we also find that the addition of a second source is not necessarily beneficial to target accuracy.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 11,
+      "text": "Q4: Comparison with some of the DA baselines (ADDA[1], DSN[2]) is missing.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 12,
+      "text": "A4: ADDA, an unsupervised DA method, proceeds by training sequentially a classifier on Source, then learning the Target feature space by making it indistinguishable from the Source one.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 13,
+      "text": "However this is not applicable to the semi-supervised setting: either target labels would not be used in the first training step, or they would be used but without any domain loss to account for the fact that two domains are being used at the same time.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 14,
+      "text": "Thus, the classifier would actually learn two sub-classifiers: one for each domain, which would turn counter-productive in the second step where this strong distinction between source and target would have to be un-learned.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 15,
+      "text": "We are re-programming DSN and experimental results will be added.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 16,
+      "text": "We thank the reviewer for the suggestion.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 17,
+      "text": "Q5: \"The reviewer is also interested to see how the the generalization bound introduced in this paper is related to the recent theoretical works [3],[4] on MDL.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 18,
+      "text": "A5 Zhao et al. [3] consider the multiple source context; they define a weighted scheme where the weight of a source depends on its H-divergence with the target, plus its own classification error.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 19,
+      "text": "The feature extractor is trained either from the best source only (in the sense of this weight), or from a weighted sum of the sources.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 20,
+      "text": "When interested in multi-domain learning (thus aiming to minimize the average risk), it seems that there are two possibilities: a single feature extractor; or a feature extractor per domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 21,
+      "text": "In the former case, the feature extractor might be overly conservative; in both cases, scalability w.r.t. the number of domains might be an issue.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 22,
+      "text": "Hoffman et al. [4] also consider the multiple source context, assuming that the target is a unknown mixture of the sources (or not too far thereof in terms of Renyi divergence).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 23,
+      "text": "Their experiments follow this assumption (using as target a mixture of sources Amazon, Webcam and DSLR).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 24,
+      "text": "In our case this assumption does not hold, e.g. the joint distribution of England(x,y) is *not* a mixture of Texas(x,y) and California(x,y) (as can be seen by eye, and confirmed by experiments).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 25,
+      "text": "The adversarial change of representation only enforces the merge of the marginals.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 26,
+      "text": "Q6 \"The authors propose to rank the unlabeled samples of each domain according to the entropy of their classification of the current classifier. Obviously there must be some false ranking (specially at the initial stages of updating the classifier) for the unlabeled samples\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 27,
+      "text": "A6",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 28,
+      "text": "As the reviewer suggests, there are indeed misclassifications of samples using their entropy ranking in early training stages.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 29,
+      "text": "We mention this section 4.3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 30,
+      "text": "This misclassification is the reason why it is better that hyper-parameter p slightly underestimates p* than is equal to it, as can be seen in Fig. 1, right (except when p*=1 as one could expect).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 31,
+      "text": "Q7",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 32,
+      "text": "\"Since each domain may have different number of classes, it is not clear how the number of classes (L) is set in the classification module (maximum number of classes in all domain?).\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgS2HI5hQ",
+      "rebuttal_id": "SygyoFtapX",
+      "sentence_index": 33,
+      "text": "A7 L is the cardinal of the union of classes with labeled examples in at least one domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

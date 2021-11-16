@@ -1,0 +1,643 @@
+{
+  "metadata": {
+    "forum_id": "rygjHxrYDB",
+    "review_id": "HJeBEdKvtr",
+    "rebuttal_id": "ByxcMLXSsS",
+    "title": "Deep Audio Priors Emerge From Harmonic Convolutional Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rygjHxrYDB&noteId=ByxcMLXSsS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 0,
+      "text": "In this paper, the authors introduce a new convolution-like operation, called a Harmonic Convolution, which operates on the STFT of an audio signal.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 1,
+      "text": "This Harmonic convolution are like a weighted combination of dilated convolutions with different dilation factors/anchors",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 2,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 3,
+      "text": "The authors show that for noisy audio signals, randomly initialized/untrained U-Nets with harmonic convolutions can yield cleaner recovered audio signals than U-Nets with plain convolutions or dilated convolutions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 4,
+      "text": "The authors beat a variety of audio denoising tasks on a variety of metrics for speech and music signals.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 5,
+      "text": "The authors also show that harmonic convolutions in U-Nets are better than plain and dilated convolutions in U-Nets for a particular sound separation task.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 6,
+      "text": "I recommend a weak accept for this paper because a new architecture for audio priors was presented, with reasonable empirical data supporting that this architectural choice an improvement over other more immediate alternatives.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 7,
+      "text": "It is important to extend the work on deep nets for imaging to other domains, such as audio.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 8,
+      "text": "My recommendation is not stronger because of the following concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 9,
+      "text": "I think the paper could be strengthened by",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 10,
+      "text": "(a) a comparison to other methods (outside the current framework) for sound separation",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 11,
+      "text": "(b) a significant clarification of Figure 4.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 12,
+      "text": "The authors claim that this data shows that Harmonic Convolutions produce a \"cleaner signal faster\" than other methods.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 13,
+      "text": "When I look at Figure 4abcd, it appears that the Convolution and Dilated Convolutions fit a clean signal faster (it is just not as clean.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 14,
+      "text": "Additionally, the Wave-U-Net appears to reach the same accuracy as the Harmonic Convolution with many fewer iterations (while also continuing to get much higher PSNRs).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 15,
+      "text": "Perhaps I am misreading this plot, but it is not obvious to me that this plot supports the claims the authors are making.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 16,
+      "text": "(c) The authors should present what they mean by a dilated convolution using the notation of the paper.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "sentence_index": 17,
+      "text": "(d) In Figure 2, it is unclear to me how the 1/f^2 law is observed in (a) but not in (c) or (e).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 0,
+      "text": "Thank you for your constructive comments! We would like to address your concerns as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 1,
+      "text": "1. Clarification on Fig. 4.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 2,
+      "text": "We rewrote the caption for Fig. 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 3,
+      "text": "Specifically, for Wave-U-Net, the green curve indicates the fitting result compared against the noisy target, and the red curve is the result evaluated against the clean signal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 4,
+      "text": "Therefore, Wave-U-Net fits the noisy target fast but does not produce the clean version of the signal during fitting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 5,
+      "text": "For Convolution and Dilated Convolution networks, they do fit faster but saturates with low-quality output.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 6,
+      "text": "Harmonic Convolution produces much better results, which is ~3.5 dB higher.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 7,
+      "text": "We highly recommend listening to examples at https://anyms-sbms.github.io to feel the difference.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 8,
+      "text": "2. Dilated convolution in paper\u2019s notation.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 9,
+      "text": "We have added a section in the appendix to include dilated convolution in the paper's formulation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 10,
+      "text": "3. Clarification on Fig. 2.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 11,
+      "text": "Since the plots in Fig. 2 are log-scale, one would expect nearly linear fall-off of energy from low-frequency components to high-frequency components, which is the case of (a).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 12,
+      "text": "But (c)(e) exhibit drastically different fall-offs of energies compared with (a).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 13,
+      "text": "We have modified the caption of Fig. 2 to be more specific.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 14,
+      "text": "We compared our model with unsupervised/supervised NMF for sound source separation, a common unsupervised baseline for this task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 15,
+      "text": "The evaluations are reported as follows:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 16,
+      "text": "----unsupervised----",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 17,
+      "text": "guitar:          SDR: 2.17   SIR: 2.78   SAR: 14.19",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 18,
+      "text": "congas:        SDR: -0.20  SIR: 0.23   SAR: 14.76",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 19,
+      "text": "xylophone:  SDR: 2.04   SIR: 3.61   SAR: 12.13",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 20,
+      "text": "----supervised----",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 21,
+      "text": "guitar:          SDR: 5.97   SIR: 7.56   SAR: 12.81",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 22,
+      "text": "congas:        SDR: 1.77  SIR: 2.76   SAR: 11.97",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 23,
+      "text": "xylophone:  SDR: 8.08   SIR: 12.33   SAR: 11.72",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 24,
+      "text": "Please let us know for any questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 25,
+      "text": "Thanks again for your suggestions, which have made this submission stronger.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 26,
+      "text": "Thanks,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJeBEdKvtr",
+      "rebuttal_id": "ByxcMLXSsS",
+      "sentence_index": 27,
+      "text": "Authors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

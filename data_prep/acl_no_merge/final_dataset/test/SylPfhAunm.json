@@ -1,0 +1,931 @@
+{
+  "metadata": {
+    "forum_id": "ByeWdiR5Ym",
+    "review_id": "SylPfhAunm",
+    "rebuttal_id": "SygnZzm7AX",
+    "title": "Adaptive Convolutional Neural Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByeWdiR5Ym&noteId=SygnZzm7AX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 0,
+      "text": "The paper introduces adaptive kernels (that adapts its weights as a function of image content) to the framework of CNN.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 1,
+      "text": "The benefit of adaptive kernels is the reduction of memory usage (at training and at the inference time) as well as training speedups (up to 2x).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 2,
+      "text": "The kernels are evaluated on two datasets MNIST and CIFAR10",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 3,
+      "text": "I like the idea of building models that are memory efficient at training and at evaluation time.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 4,
+      "text": "However, the evaluation of the proposed adaptive kernels is rather limited.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 5,
+      "text": "In order to improve the paper, the authors could take into consideration the following points:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 6,
+      "text": "1. Why there is still a need to combine adaptive convolutions with regular convolutions? What would the model performance be for a model with only adaptive kernels?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 7,
+      "text": "2. I might have missed it, but I couldn't find any motivation on why tanh is used as nonlinearity. Would the method work with relu?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 8,
+      "text": "3. Traditional convolutional kernels together with max pooling operations ensures some degree of translation invariance.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 9,
+      "text": "How big is the generalization gap for the tested models when adaptive kernel is used?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 10,
+      "text": "4. How sensitive are the results to the number of adaptive kernels in the layers.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 11,
+      "text": "5. Adaptive kernels have only been tested in the first convolutional layer, would the adaptive kernels work well also in different layers?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 12,
+      "text": "6. On CIFAR10 the results seem to be worse that other methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 13,
+      "text": "However, it is important to note that the Adaptive Kernels CNN has way less parameters.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 14,
+      "text": "It would be interesting to see how the performance of adaptive kernels based CNNs scales with the number of parameters.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 15,
+      "text": "7. The evaluation on two datasets seems to be rather limited, additional comparisons should be included.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 16,
+      "text": "8. The authors acknowledge the similarities (and some differences) with Brabandere et al (2016).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 17,
+      "text": "It might be beneficial to include comparison to this approach in the experimental section.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 18,
+      "text": "Moreover, given the similarities, it might be good to discuss the differences in the approaches in the introduction section.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 19,
+      "text": "9. The ideas presented in the paper seems related to general concept of hypernetworks, where one network learns (or helps to learn) paramenters of the other network.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 20,
+      "text": "It would be nice to position the ideas from the paper w.r.t. this line of research too.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 21,
+      "text": "10. Another related paper seems to be Spatial Transformer Networks (Jaderberg et al.).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 22,
+      "text": "I like the drawings, however, the font on the drawings is too small - making it hard to read.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 23,
+      "text": "Some typos:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 24,
+      "text": "1. the difficult to train the network",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 25,
+      "text": "2. table 2: Dynamic -> Adaptive?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 26,
+      "text": "Overall, the paper presents interesting ideas with some degree of originality.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "sentence_index": 27,
+      "text": "I'd encourage the authors to extend the intro and position the ideas w.r.t. existing works and extend the evaluation.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 0,
+      "text": "1. Why there is still a need to combine adaptive convolutions with regular convolutions? What would the model performance be for a model with only adaptive kernels?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 1,
+      "text": "R)It is possible to change all the layers to use Adaptive convolutions, we replaced only one to measure the unitary contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 2,
+      "text": "We chose the first one because it is where the feature extraction is performed, in addition fully connected layers can use this technique.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 3,
+      "text": "One Adaptive layer can replace two traditional layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 4,
+      "text": "(Added to the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 5,
+      "text": "2. I might have missed it, but I couldn't find any motivation on why tanh is used as nonlinearity. Would the method work with relu?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 6,
+      "text": "R) We can use any Activation function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 7,
+      "text": "We actually tested ReLu with good results, but we chose tanh because it generates weights in the range of (-1,1) avoiding large values given by ReLu.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 8,
+      "text": "(Added to the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 9,
+      "text": "3. Traditional convolutional kernels together with max pooling operations ensures some degree of translation invariance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 10,
+      "text": "How big is the generalization gap for the tested models when adaptive kernel is used?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 11,
+      "text": "R)we added an experiment to test the generalization",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 12,
+      "text": "4. How sensitive are the results to the number of adaptive kernels in the layers.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 13,
+      "text": "R) As in traditional CNNs, the increment of the number of kernels in a layer produces some saturation, with a marginal increment of accuracy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 14,
+      "text": "In our experiments it was observed that 5 dynamic kernels generates comparable level of abstraction than 30 traditional convolutional kernels.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 15,
+      "text": "(Added to the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 16,
+      "text": "5. Adaptive kernels have only been tested in the first convolutional layer, would the adaptive kernels work well also in different layers?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 17,
+      "text": "yes we have test several layers with adaptive kernels. but we focus on report the results on the first layer to highlight the contribution",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 18,
+      "text": "6. On CIFAR10 the results seem to be worse that other methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 19,
+      "text": "However, it is important to note that the Adaptive Kernels CNN has way less parameters.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 20,
+      "text": "It would be interesting to see how the performance of adaptive kernels based CNNs scales with the number of parameters.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 21,
+      "text": "R)We added a new experiment where we show how the performance of adaptive kernels improves with the increment of parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 22,
+      "text": "In order to make a fairer comparison we also added another experiment where we compare the accuracy of ResNet18 with 1 adaptive layer against ResNet18, ResNet50 and ResNet101 and it can be seen that the adaptive one performs even better than ResNet50.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 23,
+      "text": "7. The evaluation on two datasets seems to be rather limited, additional comparisons should be included.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 24,
+      "text": "R) Added another experiment, where we use DroNet as base to show the benefit of combine Adaptive layers with ResNet, in this experiment we test different configurations to compress the network up to 32X  (Added to the paper)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 25,
+      "text": "8. The authors acknowledge the similarities (and some differences) with Brabandere et al (2016).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 26,
+      "text": "It might be beneficial to include comparison to this approach in the experimental section.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 27,
+      "text": "Moreover, given the similarities, it might be good to discuss the differences in the approaches in the introduction section.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 28,
+      "text": "R)they train a NN to generate a model of another NN, we  have a ACNN that learns how to generate its filters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 29,
+      "text": "(in the intro)",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 30,
+      "text": "Some typos:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 31,
+      "text": "1. the difficult to train the network",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 32,
+      "text": "2. table 2: Dynamic -> Adaptive?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 33,
+      "text": "Very Good Catch",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 34,
+      "text": "\uf04a",
+      "suffix": "\n\n",
+      "coarse": "other",
+      "fine": "rebuttal_none",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 35,
+      "text": "Overall, the paper presents interesting ideas with some degree of originality.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 36,
+      "text": "I'd encourage the authors to extend the intro and position the ideas w.r.t. existing works and extend the evaluation.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SylPfhAunm",
+      "rebuttal_id": "SygnZzm7AX",
+      "sentence_index": 37,
+      "text": "We compared now against: mobileNet, ShuffleNet, HENet, SqueezeNet, we have less number of parameters or better accuracy or both (Added to the paper)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

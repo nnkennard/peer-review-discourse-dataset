@@ -1,0 +1,649 @@
+{
+  "metadata": {
+    "forum_id": "SklXvs0qt7",
+    "review_id": "H1g5Um_92m",
+    "rebuttal_id": "Byl5tiR3pX",
+    "title": "Curiosity-Driven Experience Prioritization via Density Estimation",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklXvs0qt7&noteId=Byl5tiR3pX",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 0,
+      "text": "This paper addresses a problem that arises in \"universal\" value-function approximation (that is, reinforcement-learning when a current goal is included as part of the input);  when doing experience replay, the experience buffer might have much more representation of some goals than others, and it's important to keep the training appropriately balanced over goals.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 1,
+      "text": "So, the idea is to a kind of importance weighting of the trajectory memory, by doing a density estimation on the goal distribution represented in the memory and then sample them for training in a way that is inversely related to their densities",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 2,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 3,
+      "text": "This method results in a moderate improvement in the effectiveness of DDPG, compared to the previous method for hindsight experience replay.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 4,
+      "text": "The idea is intuitively sensible, but I believe this paper falls short of being ready for publication for three major reasons.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 5,
+      "text": "First, the mechanism provided has no mathematical justification--it seems fairly arbitrary.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 6,
+      "text": "Even if it's not possible to prove something about this strategy, it would be useful to just state a desirable property that the sampling mechanism should have and then argue informally that this mechanism has that property.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 7,
+      "text": "As it is, it's just one point in a large space of possible mechanisms.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 8,
+      "text": "I have a substantial concern that this method might end up assigning a high likelihood of resampling trajectories where something unusual happened, not because of the agent's actions, but because of the world having made a very unusual stochastic transition.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 9,
+      "text": "If that's true, then this distribution would be very bad for training a value function, which is supposed to involve an expectation over \"nature\"'s choices in the MDP.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 10,
+      "text": "Second, the experiments are (as I understand it, but I may be wrong) in deterministic domains, which definitely does not constitute a general test of a proposed RL  method.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 11,
+      "text": "- I'm not sure we can conclude much from the results on fetchSlide (and it would make sense not to use the last set of parameters but the best one encountered during training)",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 12,
+      "text": "- What implementation of the other algorithms did you use?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 13,
+      "text": "Third, the writing in the paper has some significant lapses in clarity.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 14,
+      "text": "I was a substantial way through the paper before understanding exactly what the set-up was;  in particular, exactly what \"state\" meant was not clear.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 15,
+      "text": "I would suggest saying something like s = ((x^g, x^c), g) where s is a state from the perspective of value iteration, (x^g, x^c) is a state of the system, which is a vector of values divided into two sub-vectors, x^g is the part of the system state that involves the state variables that are specified in the goal, x^c (for 'context')",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 16,
+      "text": "is the rest of the system state, and g is the goal.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 17,
+      "text": "The dimensions of x^g and g should line up.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 18,
+      "text": "- This sentence  was particularly troublesome:  \"Each  state s_t also includes the state of the achieved goal, meaning the goal state is a subset of the normal state.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 19,
+      "text": "Here, we overwrite the notation s_t  as the achieved goal state, i.e., the state of the object.\"",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 20,
+      "text": "- Also, it's important to say what the goal actually is, since it doesn't make sense for it to be a point in a continuous space.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "sentence_index": 21,
+      "text": "(You do say this later, but it would be helpful to the reader to say it earlier.)",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 0,
+      "text": "Thank you for the valuable feedback!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 1,
+      "text": "We uploaded a revised version of the paper based on the comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 2,
+      "text": "- We added a mathematical justification paragraph in Section 3.3 \u201cAn Importance Sampling Perspective\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 3,
+      "text": "We argue that to estimate the integral of the loss function L(\u03c4) of the RL agent efficiently, we need to draw samples \u03c4 from the buffer in regions which have a high probability, p(\u03c4), but also where L|(\u03c4)| is large.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 4,
+      "text": "Since, p(\u03c4) is a uniform distribution, i.e., the agent replays trajectories at random, we only need to draw samples which has large errors L|(\u03c4)|.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 5,
+      "text": "The result can be highly efficient, meaning the agent needs less samples than sampling from the uniform distribution p(\u03c4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 6,
+      "text": "The CDP framework finds the samples that have large errors based on the \u2018surprise\u2019 of the trajectory.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 7,
+      "text": "Any density estimation method that can approximate the trajectory density can provide a more efficient proposal distribution q(\u03c4) than the uniform distribution p(\u03c4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 8,
+      "text": "The sampling mechanism should have a property of oversampling trajectories with larger errors/\u2018surprise\u2019.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 9,
+      "text": "- To mitigate the influence of very unusual stochastic transitions, we use the ranking instead of the density directly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 10,
+      "text": "The reason is that the rank-based variant is more robust because it is not affected by outliers nor by density magnitudes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 11,
+      "text": "Furthermore, its heavy-tail property also guarantees that samples will be diverse",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 12,
+      "text": "(Schaul et al., 2015b).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 13,
+      "text": "- Yes, the experiments are mostly in deterministic domains.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 14,
+      "text": "- In the FetchSlide environment, the best-learned policy of CDP outperforms the baselines and PER, as shown in Table 1.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 15,
+      "text": "Yes, we did not use the last set of parameters but used the best one encountered during training, as described in Section 4 \u201cExperiments\u201d: \u201cAfter training, we use the best-learned policy as the final policy and test it in the environment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 16,
+      "text": "The testing results are the final mean success rates.\u201c",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 17,
+      "text": "- Our implementation is based on \u201cOpenAI Baselines\u201d, which provides HER. We combined HER with PER in \u201cOpenAI Baselines\u201d.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 18,
+      "text": "OpenAI Baselines link: https://github.com/openai/baselines",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 19,
+      "text": "- To improve the clarity of the paper, we move the exact set-up into the earlier section, Section 2.1 \u201cEnvironments\u201d.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 20,
+      "text": "In this section, we also redefine the \u201cstate\u201d based on your suggestions.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 21,
+      "text": "We delete the \u201ctroublesome\u201d sentence and also clarify what the goal actually is in Section 2.1.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1g5Um_92m",
+      "rebuttal_id": "Byl5tiR3pX",
+      "sentence_index": 22,
+      "text": "For more detail, please read the revised paper, Section 2.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

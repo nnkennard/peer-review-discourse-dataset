@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "forum_id": "ryepUj0qtX",
+    "review_id": "HJly3bK2h7",
+    "rebuttal_id": "BJgraHZmRm",
+    "title": "Conditional Network Embeddings",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryepUj0qtX&noteId=BJgraHZmRm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJly3bK2h7",
+      "sentence_index": 0,
+      "text": "The paper proposed to use a prior distribution to constraint the network embedding.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "sentence_index": 1,
+      "text": "The paper used very restricted Gaussian distributions for the formulation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "sentence_index": 2,
+      "text": "The proposed approach should compared to other stronger methods such as graph convolution neural network/message passing neural networks/structure2vec.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 0,
+      "text": "The reviewer feels that the proposed model is too simple, and suggests comparing against more complex models, suggesting a few in particular.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 1,
+      "text": "Our response is twofold:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 2,
+      "text": "- The accuracy of the proposed simple model exceeds the accuracy of far more complex models by a wide margin, and this consistently over a range of networks (all commonly used networks in this literature), against a range of baselines (all either commonly used baselines, or methods known as achieving state-of-the-art accuracies), and on two important tasks (link prediction and multi-label classification).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 3,
+      "text": "We do not agree that its simplicity reduces its merit, we think it rather contributes to its merit.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 4,
+      "text": "- We thank the reviewer for suggesting additional comparisons with specific more complex models, although we feel that calling these methods 'stronger' requires some clarification or support.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 5,
+      "text": "Of the suggested methods, graph convolutional and message passing neural networks need attributed graphs as inputs, and are thus not applicable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 6,
+      "text": "We have in the meantime been able to include struc2vec in the evaluation, again showing superiority of CNE by a wide margin -- showing that it is maybe more complex but certainly not 'stronger' as in 'more accurate'.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 7,
+      "text": "The paper will be updated very soon to include these results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 8,
+      "text": "Perhaps the reviewer is incredulous regarding this large increase in performance a method as 'simple' as CNE achieves w.r.t. the state-of-the-art.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 9,
+      "text": "We believe that this is due to the conceptual advance made in CNE.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 10,
+      "text": "In our opinion a conceptual advance that achieves a strong boost in accuracy without increasing complexity, is at least as valuable as a method that achieves the same boost in accuracy while also increasing complexity.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJly3bK2h7",
+      "rebuttal_id": "BJgraHZmRm",
+      "sentence_index": 11,
+      "text": "Also note that all code is provided, and we invite the reviewer to replicate our experiments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

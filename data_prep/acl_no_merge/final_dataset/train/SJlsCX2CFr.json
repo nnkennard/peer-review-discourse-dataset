@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "forum_id": "SJlNnhVYDr",
+    "review_id": "SJlsCX2CFr",
+    "rebuttal_id": "S1eEulHdiH",
+    "title": "Soft Token Matching for Interpretable Low-Resource Classification",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJlNnhVYDr&noteId=S1eEulHdiH",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 0,
+      "text": "The authors propose PARCUS (\"Pattern Representations on Continuous Spaces\"), a model which computes a soft-matching probability for all words in an input sequence with so-called prototypes in order to predict a label for the input.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 1,
+      "text": "Furthermore, for training, PARCUS makes use of rationales.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 2,
+      "text": "Those are indicators of input importance, and help to boost the loss for relevant tokens.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 3,
+      "text": "The main motivation to use PARCUS is that it works better in a low-resource setting than recent state-of-the-art models for the high-resource case.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 4,
+      "text": "This is due to it having relatively few parameters and to it having a strong inductive bias.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 5,
+      "text": "However, the fact that models with less parameters perform better than BERT-based models in the low-resource case is not very surprising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 6,
+      "text": "Looking at the experiments, the results on HATESPEECH show less differences between models than for SPOUSE or MOVIEREVIEW.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 7,
+      "text": "Another selling point of PARCUS is that it's interpretable. While neural networks can also be analyzed in different ways, I agree with the authors that this is nice to have.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 8,
+      "text": "Overall, the paper seems solid.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 9,
+      "text": "==========",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "sentence_index": 10,
+      "text": "Update: After reading the other reviews and the responses by the authors, I lowered my score from 6 to 3.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for mentioning the benefits of the proposed model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 1,
+      "text": "We now clarify some of the reviewer\u2019s doubts:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 2,
+      "text": "**QUESTION**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 3,
+      "text": "BERT-based models in the low-resource case is not very surprising",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 4,
+      "text": "**ANSWER**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 5,
+      "text": "While this result may not look surprising, to the best of our knowledge it was not addressed before for the specific case of BERT.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 6,
+      "text": "In [1], the authors claim that a large pre-trained model can be very helpful in transfer learning scenarios, and they also suggest how to best fine-tune BERT.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 7,
+      "text": "We followed their guidelines and included the results to provide convincing evidence that, in this extreme scenario, our model can perform better (even without the use of rationales).",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 8,
+      "text": "**QUESTION**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 9,
+      "text": "Looking at the experiments, the results on HATESPEECH show less differences between models than for SPOUSE or MOVIEREVIEW.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 10,
+      "text": "**ANSWER**",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 11,
+      "text": "The reviewer is correct.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 12,
+      "text": "Apart from the reasons mentioned in the paper, it is possible to observe (by manual inspection) that the tweets of the HATESPEECH dataset are very noisy, short and often similar in meaning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 13,
+      "text": "This clearly helps models based on n-gram features, as we have argued in our work.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 14,
+      "text": "SPOUSE and MOVIEREVIEW are different in this sense.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 15,
+      "text": "SPOUSE, which is where PARCUS performs very well, contains sentences of very different nature and context, which makes it very important to focus on specific concepts (hence the use of prototypes seems appropriate).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 16,
+      "text": "MOVIEREVIEW, on the other hand, contains very long reviews that need \u201cfiltering\u201d to highlight the important concepts.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJlsCX2CFr",
+      "rebuttal_id": "S1eEulHdiH",
+      "sentence_index": 17,
+      "text": "This is another context in which PARCUS can be successfully applied, as training a complex model on few data points that contain \u201clengthy\u201d sentences can be a hard task to solve.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

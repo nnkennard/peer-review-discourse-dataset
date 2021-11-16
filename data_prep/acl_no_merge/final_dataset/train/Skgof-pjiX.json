@@ -1,0 +1,454 @@
+{
+  "metadata": {
+    "forum_id": "SJl8gnAqtX",
+    "review_id": "Skgof-pjiX",
+    "rebuttal_id": "r1eU8lgW67",
+    "title": "Prob2Vec: Mathematical Semantic Embedding for Problem Retrieval in Adaptive Tutoring",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJl8gnAqtX&noteId=r1eU8lgW67",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 0,
+      "text": "This paper proposes a new application of embedding techniques for mathematical problem retrieval in adaptive tutoring.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 1,
+      "text": "The proposed method performs much better than baseline sentence embedding methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 2,
+      "text": "Another contribution is on using negative pre-training to deal with an imbalanced training dataset.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 3,
+      "text": "To me this paper is just not good enough - the method essentially i) use \"a professor and two teaching assistants\" to build a \"rule-based concept extractor\" for problems, then ii) map problems into this \"concept space\" and simply treat them as words. There are several problems with this approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 4,
+      "text": "First, doing so does not touch the core of the proposed application.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 5,
+      "text": "For tutoring applications, the most important thing is to select a problem that can help students improve; even if you can indeed select a problem that is the most similar to another problem, is it the best one to show a student? There are no evaluations on real students in the paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 6,
+      "text": "Moreover, the main difference between math problems and other problems is that there are math expressions; I do not think that using words/concept labels only is enough without touching on the math expressions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 7,
+      "text": "Second, the proposed method does not sound scalable - the use of a professor and two teaching assistants to construct the concept extractor, and the use of an expert TA to select a small set of informative words.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 8,
+      "text": "I am not sure how this will generalize to a larger number of problem spanning many different domains.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 9,
+      "text": "I also had a hard time going through the paper - there aren't many details.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "sentence_index": 10,
+      "text": "Section 2.1 is where the method is proposed, yet most of the descriptions there are unclear. Without these details it is impossible to judge the novelty of the \"rule-based concept extractor\", which is the key technical innovation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 0,
+      "text": "1- We briefly mentioned the way problem embedding with similarity metric is used in the recommendation system in this work, but here is more explanation on that.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 1,
+      "text": "The most similar problem is not necessarily recommended to a student.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 2,
+      "text": "On a high level, if a student performs well on problems, we assume he/she performs well on similar problems as well, so we recommend a dissimilar problem and vice versa.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 3,
+      "text": "More specifically, we project the performance of students on problems they solved onto the problems that they have not solved.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 4,
+      "text": "This way, we have an evaluation of the performance of students on unseen problems.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 5,
+      "text": "A problem is recommended that is within the capacity of students close to their boundary to help them learn, and at the same time recommendation is done so that all the concepts necessary for students are practiced by them.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 6,
+      "text": "An evaluation on real students is presented in part 2 of the comment titled \u201cResponse to questions about Prob2Vec\u201d on this page, and we observed that similar problems are more likely to be solved correctly at the same time or wrong at the same time.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 7,
+      "text": "The math expressions are not ignored in our proposed Prob2Vec method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 8,
+      "text": "In the example given in the last paragraph on page 3 for example, math expressions are used to extract the concept n-choose-k.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 9,
+      "text": "We both use math expressions and text to label problems with appropriate concepts.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 10,
+      "text": "2- Prob2Vec only uses expert knowledge for rule-based concept extractor, but does not use selected informative words.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 11,
+      "text": "The effort put for rule-based concept extractor is negligible compared to effort needed for annotation of all problems with their corresponding concepts.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 12,
+      "text": "We both annotated all problems manually and used rule-based concept extractor for annotation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 13,
+      "text": "In the former method, we observed 100% accuracy in the similarity detection test and observed 96.88% accuracy in the latter method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 14,
+      "text": "However, the rule-based concept extractor needs much less manual effort than manual problem annotation and is capable to provide us with relatively high level of accuracy we need in our application.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 15,
+      "text": "Note that our method is scalable as long as problems are in the same domain as the rule-based concept extractor is automated for a single domain, but for the case that problems span many different domains, it is the natural complexity of the data set that requires a more sophisticated rule-based concept extractor.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 16,
+      "text": "Furthermore, in most realistic cases for education purposes, problems span a single domain not multiple ones.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 17,
+      "text": "We also like to grab your attention to the negative pre-training method proposed for training on imbalanced data sets.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skgof-pjiX",
+      "rebuttal_id": "r1eU8lgW67",
+      "sentence_index": 18,
+      "text": "You may want to refer to part 2 of comment titled \u201cResponse to Question on Negative Pre-Training\u201d and part 1 of our response to reviewer2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

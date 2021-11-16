@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "forum_id": "SJxUjlBtwB",
+    "review_id": "HyxRW6rTFr",
+    "rebuttal_id": "HkxVYD_jiH",
+    "title": "Reconstructing continuous distributions of 3D protein structure from cryo-EM images",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJxUjlBtwB&noteId=HkxVYD_jiH",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 0,
+      "text": "~The authors build a new method to recapitulate the 3D structure of a biomolecule from cryo-EM images that allows for flexibility in the reconstructed volume.~",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 1,
+      "text": "I thought this paper is very well written and tackles a difficult project.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 2,
+      "text": "There is a previous work that these authors should cite:",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 3,
+      "text": "Ullrich, K., Berg, R.V.D., Brubaker, M., Fleet, D. and Welling, M., 2019. Differentiable probabilistic models of scientific imaging with the Fourier slice theorem. arXiv preprint arXiv:1906.07582.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 4,
+      "text": "How does your method compare to this paper?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 5,
+      "text": "In Ullrich et al., they report \u201cTime until convergence, MSE [10^-3/voxel], and Resolution [Angstrom]).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 6,
+      "text": "I think these statistics would be useful to report in your work, as they are more familiar with folks in the cryoEM field.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 7,
+      "text": "In Equation 3, how does one calculate Z, the normalization constant?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 8,
+      "text": "For the decoder, how large of the 3D space are you generating? What are the units? Are you using voxels to represent atomic density? What is the voxel size? Is it the same as on Page 11?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "sentence_index": 9,
+      "text": "I think more description of the neural network architecture would be useful (more than what is reported on page 12).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 0,
+      "text": "1. Thank you for your comments and thank you in particular for pointing us to a reference we missed, which we have added to the manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 1,
+      "text": "Ullrich et al. introduce some of the same foundational building blocks for applying differentiable models to the cryoEM reconstruction task.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 2,
+      "text": "In particular, they propose a differentiable voxel-based representation for the volume and introduce a variational inference algorithm for learning the volume through gradient-based optimization.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 3,
+      "text": "Due to their voxel-based representation, they introduce a method to differentiate through the 2D projection operator.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 4,
+      "text": "In contrast, we parametrically learn a continuous function for volume via a coordinate-based MLP, which seamlessly allows differentiation through the slicing and rotation operators without having to deal with discretization.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 5,
+      "text": "Their method is able to learn a homogeneous volume with given poses, whereas we perform fully unsupervised reconstruction of heterogeneous volumes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 6,
+      "text": "They show empirical experiments that highlight many of the challenges for variational inference of these models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 7,
+      "text": "In particular, inference of the unknown pose is challenging with gradient-based optimization and contains many local minima (their Fig 6), which we address with a branch and bound algorithm.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 8,
+      "text": "We report a Fourier Shell Correlation (FSC) metric, which is a commonly used resolution metric in the cryoEM field.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 9,
+      "text": "Voxel-wise MSE is not typically used in the cryoEM literature as it is sensitive to background subtraction and data normalization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 10,
+      "text": "We have added training times for these methods to the SI.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 11,
+      "text": "2. The normalization constant in Eq. 3 is the partition function over all possible values of the latent pose and volume.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 12,
+      "text": "Instead of computing this (intractable) constant, coordinate ascent on the dataset log likelihood is used to refine estimates of pose and volume in traditional algorithms.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 13,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 14,
+      "text": "The extent of the 3D space is determined by the dataset\u2019s image size and resolution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 15,
+      "text": "We define a lengthscale such that image coordinates are modeled on a fixed lattice spanning [-0.5, 0.5]^2 with grid resolution determined by the image size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 16,
+      "text": "The absolute spatial extent is thus determined by the Angstrom/pixel ratio for each dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 17,
+      "text": "Similarly, final volumes for a given value of the latent are generated by evaluating a 3D lattice with extent [-0.5,0.5]^3 with grid resolution determined by the dataset image size.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 18,
+      "text": "We have added the absolute spatial extent to the description of each dataset in the revised manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HyxRW6rTFr",
+      "rebuttal_id": "HkxVYD_jiH",
+      "sentence_index": 19,
+      "text": "4. We have included additional architectural details in the revised manuscript, and we will be releasing the source code which will hopefully further clarify the architecture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

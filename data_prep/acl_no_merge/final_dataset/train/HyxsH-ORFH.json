@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "forum_id": "rylwJxrYDS",
+    "review_id": "HyxsH-ORFH",
+    "rebuttal_id": "BkxWkgY2sB",
+    "title": "vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rylwJxrYDS&noteId=BkxWkgY2sB",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 0,
+      "text": "The paper proposes a way to pre-train quantized representations for speech.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 1,
+      "text": "The approach proposed is a two-stage process: 1. train a quantized version of wav2vec [my understanding is that wav2vec is the same thing as CPC for Audio except for using a binary cross-entropy loss instead of InfoNCE softmax-cross entropy loss].",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 2,
+      "text": "the authors propose to use gumbel softmax / VQ codebook for the vector quantization.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 3,
+      "text": "2. once you have a discrete representation, you could train BERT (as if it were a seq of language tokens).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 4,
+      "text": "this makes a lot of sense especially given that CPC / wav2vec recovers phonemes and quantizing the phonemes will recover a language-like version of the raw audio. And running BERT across those tokens will allow you to capture the dependencies at the phoneme level.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 5,
+      "text": "After pre-training, the authors use the learned representations for speech recognition.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 6,
+      "text": "They compare this to using log-mel filterbanks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 7,
+      "text": "The results (WER / LER) is lower for the proposed pipeline compared to using dense wav2vec representation for n-gram and character LM.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 8,
+      "text": "It also makes sense that BERT helps for the k-means (vq) setting since the number of codes is large.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 9,
+      "text": "The authors also cleverly adopt/adapt span-BERT which is more suited to this setting.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HyxsH-ORFH",
+      "sentence_index": 10,
+      "text": "I think this paper presents a useful contribution as far as improving speech / phoneme recognition using self-supervised learning goes, and also has useful engineering aspects in terms of combining CPC and BERT. I would like to see this paper accepted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HyxsH-ORFH",
+      "rebuttal_id": "BkxWkgY2sB",
+      "sentence_index": 0,
+      "text": "Thank you for your comments!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

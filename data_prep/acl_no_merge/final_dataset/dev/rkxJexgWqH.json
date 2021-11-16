@@ -1,0 +1,674 @@
+{
+  "metadata": {
+    "forum_id": "HylsTT4FvB",
+    "review_id": "rkxJexgWqH",
+    "rebuttal_id": "HJl6phN2iS",
+    "title": "On the \"steerability\" of generative adversarial networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HylsTT4FvB&noteId=HJl6phN2iS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 0,
+      "text": "This paper propose to study the generalization properties of GANs through interpolation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 1,
+      "text": "They first propose to learn a linear (and non-linear) interpolation in the latent space for a specific type of image transformation for example zoom, translation, rotation, luminance, etc... They show that linear interpolation in GANs can produce really realistic images along the path and enable to control and transform generated images to some extent.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 2,
+      "text": "They then propose to measure to what extent the generated images can be transformed without \"breaking\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 3,
+      "text": "Finally they show that the quality of the interpolation can be improved by learning the interpolation and generator jointly.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 4,
+      "text": "I'm in favour of accepting this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 5,
+      "text": "The paper is well written and organized.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 6,
+      "text": "The experiments and observations are very interesting and really illustrate the generalization capacity of GANs.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 7,
+      "text": "Main argument:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 8,
+      "text": "- I think those observations are very valuable to the community and are a good way to get insight into the capabilities of GANs.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 9,
+      "text": "This also give interesting informations about the different bias present and learnt in the dataset.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 10,
+      "text": "This could also lead to very nice applications.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 11,
+      "text": "- The interpolation with StyleGAN and BigGAN seem to give qualitatively very different results.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 12,
+      "text": "It would have been very interesting to study the quality of interpolations on more models and datasets, and compare their generalization capabilities as well as the bias present in the different datasets.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 13,
+      "text": "- Does training the generator and interpolation jointly improve the quality of the generator in general ? It would have been nice to run this method on more complicated dataset like CIFAR10 and see if this method increase the overall FID score.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 14,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 15,
+      "text": "- In appendix A.2 the authors explain how the range of $\\alpha$ is set for the different experiments.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 16,
+      "text": "However it's not clear how is this range used in practice ? Do you sample uniformly $\\alpha$ in this range to train the linear interpolation ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 17,
+      "text": "Also how many steps are required to learn the linear interpolation ? How much the does it influence the quality of the interpolation ?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 18,
+      "text": "- There is a typo in equation 6",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "sentence_index": 19,
+      "text": "- In figure 6: What does the right figure represent ? especially what are the different colours ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and questions; we have incorporated these in the revision and respond to your questions below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 1,
+      "text": "Main Argument:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 2,
+      "text": "Q1: It would have been very interesting to study the quality of interpolations on more models and datasets, and compare their generalization capabilities as well as the bias present in the different datasets.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 3,
+      "text": "A1: We performed some additional experiments using the progressive gan generator [1] on CelebA-HQ dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 4,
+      "text": "One interesting property of the progressive gan interpolations is that they take much longer to train to have a visual effect -- for example for color, we could obtain drastic color changes in Stylegan W latent space using as few as 2k samples, but with progressive gan, we used 60k samples and still did not obtain as strong of an effect.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 5,
+      "text": "This points to the Stylegan w latent space being more \u201cflexible\u201d and generalizable for transformation, compared to the latent space of progressive GAN.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 6,
+      "text": "Moreover, we qualitatively observe some entanglement in the progressive gan transformations -- for example, changing the level of zoom also changes the lighting.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 7,
+      "text": "We did not observe large effects for the shift transformations, although perhaps more hyperparameter tuning may improve these results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 8,
+      "text": "We have added a section B.6 in the appendix and figures illustrating these results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 9,
+      "text": "Q2: Does training the generator and interpolation jointly improve the quality of the generator in general?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 10,
+      "text": "A2: This is an interesting question.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 11,
+      "text": "We are in the process of investigating this hypothesis to see if sampling from both the latent space and transformation alpha can help improve sample diversity and potentially FID.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 12,
+      "text": "We did not yet observe an improvement in preliminary experiments on Cifar10, but the experiments are ongoing and we will add complete results on this question to the final version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 13,
+      "text": "Minor Comments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 14,
+      "text": "Q1: In appendix A.2 the authors explain how the range of is set for the different experiments. However it's not clear how is this range used in practice ? Do you sample uniformly in this range to train the linear interpolation ?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 15,
+      "text": "Also how many steps are required to learn the linear interpolation ? How much the does it influence the quality of the interpolation ?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 16,
+      "text": "A1: We pick the ranges using two criteria: qualitatively acceptable and quantitatively under a fixed threshold for FID score.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 17,
+      "text": "We pick alpha steps uniformly within the ranges (shifts and rotations are integer steps).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 18,
+      "text": "For training, we have between 20k and 40k samples for all models, and beyond these numbers we don\u2019t see much improvement.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 19,
+      "text": "Q2: There is a typo in equation 6",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 20,
+      "text": "A2: Thank you for your careful review in catching these mistakes. We have updated the typo in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 21,
+      "text": "Q3: In figure 6: What does the right figure represent ? especially what are the different colours ?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 22,
+      "text": "A3: The right side of the figure has three rows: the top row shows the plot of per-class zoom variability; there are two black datapoints we chose as examples to show instances of low and high variability classes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 23,
+      "text": "The middle row shows the distribution of the low variability datapoint (\u201crobin\u201d class), and the bottom row shows the distribution of the high variability datapoint (\u201claptop\u201d class).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 24,
+      "text": "On the left of these plots we show qualitative results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 25,
+      "text": "In each of these two plots, we show dataset, -\\alpha^*, and +\\alpha^* distributions with black, green, red, respectively.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 26,
+      "text": "We have updated the revision to clarify these in the figure caption.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkxJexgWqH",
+      "rebuttal_id": "HJl6phN2iS",
+      "sentence_index": 27,
+      "text": "[1] Karras, Tero, et al. \"Progressive growing of gans for improved quality, stability, and variation.\" ICLR (2018).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,548 @@
+{
+  "metadata": {
+    "forum_id": "ByxPYjC5KQ",
+    "review_id": "rJg7SvH5hQ",
+    "rebuttal_id": "Skgb5H01TQ",
+    "title": "Improving Generalization and Stability of Generative Adversarial Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByxPYjC5KQ&noteId=Skgb5H01TQ",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 0,
+      "text": "The primary innovation of this paper seems focused towards increasing the generalization of GANs, while also maintaining convergence and preventing mode collapse.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 1,
+      "text": "The authors first discuss common pitfalls concerning the generalization capability of discriminators, providing analytical underpinnings for their later experimental results.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 2,
+      "text": "Specifically, they address the problem of gradient explosion in discriminators.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 3,
+      "text": "The authors then suggest that a zero-centered gradient penalty (0-GP) can be helpful in addressing this issue.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 4,
+      "text": "0-GPs are regularly used in GANs, but the authors point out that the purpose is usually to  provide convergence, not to increase generalizability.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 5,
+      "text": "Non-zero centered penalties can give a convergence guarantee but, the authors, assert, can allow overfitting.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 6,
+      "text": "A 0-GP can give the same guarantees but without allowing overfitting to occur.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 7,
+      "text": "The authors then verify these assertions through experimentation on synthetic data, as well as MNIST and ImageNet.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 8,
+      "text": "My only issue here is that very little information was given about the size of the training sets. Did they use all the samples?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 9,
+      "text": "Some portion? It is not clear from reading. This would be a serious impediment to reproducibility.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 10,
+      "text": "All in all, however, the authors provide a convincing  combination of analysis and experimentation.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 11,
+      "text": "I believe this paper should be accepted into ICLR.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 12,
+      "text": "Note: there is an error on page 9, in Figure 3.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 13,
+      "text": "The paragraph explanation should list that the authors' 0-GP is figure 3(e).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "sentence_index": 14,
+      "text": "They list (d) twice.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 0,
+      "text": "Thank you for your review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 1,
+      "text": "We will revise our paper according to your suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 2,
+      "text": "We would like to quickly address your question about the experiment here.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 3,
+      "text": "For MNIST and ImageNet experiment, the whole dataset was used.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 4,
+      "text": "For the ImageNet experiment, we used the code from [4].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 5,
+      "text": "Details about all experiments will be added to the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 6,
+      "text": "We thank you for pointing the typo in Figure 3.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 7,
+      "text": "We will also add an in-depth discussion about our method and other related works to our next revision as suggested by other reviewers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 8,
+      "text": "Thank you for your constructive review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 9,
+      "text": "We have updated our paper to address your concerns.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 10,
+      "text": "The changes are summarized as follow:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 11,
+      "text": "1. A background section is added with basic information about GANs and a definition of generalization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 12,
+      "text": "A table summarizing the referred gradient penalties is also added.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 13,
+      "text": "2. We extended the Related works section to include papers which address the mode collapse problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 14,
+      "text": "The writing of this part and the whole paper was revised.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 15,
+      "text": "3. Another MNIST experiment is added to Section 6.1 to further demonstrate the effectiveness of our method in preventing overfitting.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 16,
+      "text": "Specifically, our GAN-0-GP is the only GAN that could learn to generate realistic samples when the discriminator is updated 5 times per generator update.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 17,
+      "text": "4. WGAN-GP is included to our ImageNet experiment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 18,
+      "text": "Our GAN-0-GP outperforms WGAN-GP by a large margin.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 19,
+      "text": "5. Implementation details are added to the appendix.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 20,
+      "text": "The code for all experiments will be released after the review process.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 21,
+      "text": "6. We added the analysis for the 'mode jumping' problem to Section 6.2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 22,
+      "text": "We showed that GAN-0-GP-sample suffers from the problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 23,
+      "text": "On the other hand, our GAN-0-GP is robust to the problem and is able to produce better interpolation between modes.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJg7SvH5hQ",
+      "rebuttal_id": "Skgb5H01TQ",
+      "sentence_index": 24,
+      "text": "7. A new algorithm for finding a better path between a pair of samples is added to our paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

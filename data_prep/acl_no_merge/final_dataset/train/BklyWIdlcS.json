@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "forum_id": "S1lvn0NtwH",
+    "review_id": "BklyWIdlcS",
+    "rebuttal_id": "rklsz575oB",
+    "title": "Mutual Exclusivity as a Challenge for Deep Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=S1lvn0NtwH&noteId=rklsz575oB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 0,
+      "text": "This paper targets at studying the mutual exclusive bias which existed in children learning, to help understand whether there exists similar bias in deep networks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 1,
+      "text": "In general, the whole paper tries to tell a very interesting, and good story.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 2,
+      "text": "The paper is very well organized and written.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 3,
+      "text": "However, I have the following concerns.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 4,
+      "text": "1, the ME problem is quite similar to the concept ontology, e.g. , a \u201cDalmatian,\u201d a \u201cdog\u201d, or a \u201cmammal\u201d.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 5,
+      "text": "So what\u2019s the key difference? Hierarchical learners can avoid this problem.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 6,
+      "text": "2, I would say, the SOTA neural networks fundamentally are just representation learned, i.e., feature representation learning.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 7,
+      "text": "The learned features could in principle be employed to construct advanced learners, .e.g., hierarchical Bayesian.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 8,
+      "text": "It\u2019s probably a bit unfair or misleading to claim neural networks suffering from ME bias.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 9,
+      "text": "3, In Sec. 3, the first and section paragraph, I can not quite understand how the ME bias theory guide the following synthetic experiments.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 10,
+      "text": "Please give more explanations.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 11,
+      "text": "4, in Sec. 3.1, considering the small number of training instances, whether it is large enough to train the NN/ not overfitting issues?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 12,
+      "text": "5. Whether the ME bias mostly attributed to the one-hot representation? If one uses word2vec as the representation in NN",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 13,
+      "text": ", the ME bias will be solved.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 14,
+      "text": "Actually, this is the standard practice in some learning tasks, e.g., zero-shot learning.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 15,
+      "text": "6, the experimental design of Sec. 4.2 is also a bit unfair.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 16,
+      "text": "It seems to me that the tasks are organized as unbalanced instances of each classes, and asking the common NNs to learn this  task. Of course, this common NNs can not address it.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 17,
+      "text": "----",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "sentence_index": 18,
+      "text": "I read the rebuttal. the authors clarified and answered the questions. I would like to raise the score.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BklyWIdlcS",
+      "rebuttal_id": "rklsz575oB",
+      "sentence_index": 0,
+      "text": "Thanks for your feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BklyWIdlcS",
+      "rebuttal_id": "rklsz575oB",
+      "sentence_index": 1,
+      "text": "We reply to all reviewers jointly in our comments above.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

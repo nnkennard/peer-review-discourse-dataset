@@ -1,0 +1,584 @@
+{
+  "metadata": {
+    "forum_id": "SklckhR5Ym",
+    "review_id": "ryevn2r93m",
+    "rebuttal_id": "BJlh2rJGCm",
+    "title": "Improved Language Modeling by Decoding the Past",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklckhR5Ym&noteId=BJlh2rJGCm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 0,
+      "text": "This paper proposes an additional loss term to use when training an LSTM LM.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 1,
+      "text": "The authors argue that, intuitively, we want the output distribution to retain some information about the context, or \"past\".",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 2,
+      "text": "Given this, they use the output distribution as input to a one layer network that must predict the current token.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 3,
+      "text": "The loss for this network is incorporated as an additional term used when training the LM.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 4,
+      "text": "The authors show that by adding this loss term they can achieve SOTA (for single softmax model) perplexity on a number of LM benchmarks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 5,
+      "text": "The technical contribution is proposing a new loss term to use when training a language model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 6,
+      "text": "The idea is clear, simple, and well explained, and it seems to be effective in practice.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 7,
+      "text": "One drawback is that it is highly specific to language models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 8,
+      "text": "Other recent works which have demonstrated effective regularization of LSTM LMs have proposed methods that can be used in any LSTM model, but that is not the case here.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 9,
+      "text": "In addition, there is not much theoretical justification for it, it seems like a one-off trick.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 10,
+      "text": "The loss term is motivated by the idea that we want the output distribution to retain some information about the context, but why should that be the case?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 11,
+      "text": "Although it is specific to language models, there are a few reasons it might be of broader significance:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 12,
+      "text": "- It falls in the recent line of work in incorporating auxiliary losses for various tasks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 13,
+      "text": "This idea has touched many problems and seen success in practice.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 14,
+      "text": "- Perhaps it can be applied to other sequence models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 15,
+      "text": "For example in encoder-decoder models, the decoder can be thought of as a conditional LM.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 16,
+      "text": "Experiments are comprehensive and rigorous.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 17,
+      "text": "They might be more convincing if there were results on a very large corpus such as 1 billion word corpus.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 18,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 19,
+      "text": "- New SOTA for single softmax model on LM benchmarks.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 20,
+      "text": "- Simple, clearly explained idea.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 21,
+      "text": "- Demonstrates effectiveness of auxiliary losses.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 22,
+      "text": "- Rigorous experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 23,
+      "text": "Cons",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 24,
+      "text": "- Trick is specific to LM.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "sentence_index": 25,
+      "text": "- No large corpus results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for a careful reading of the paper and the constructive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 1,
+      "text": "Although we proposed Past Decode Regularization (PDR) with language modeling in mind to exploit the symmetry between the input and output vocabulary (and the corresponding word embedding and softmax layer), any model/task that has this symmetry can potentially use a PDR term.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 2,
+      "text": "As suggested by the reviewer, models for tasks like text summarization and neural machine translation (using a byte-pair encoding vocabulary as in Ofir & Wolf 2016) that use an encoder/decoder seq2seq architecture can benefit from PDR and is a topic of future research.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 3,
+      "text": "We will incorporate this discussion in the updated version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 4,
+      "text": "We can justify PDR theoretically as an inductive bias on the language model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 5,
+      "text": "The observed bigrams in a language are not random and the distribution of the second word given the first word in a bigram is not uniform.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 6,
+      "text": "Similarly, the distribution of the first word given the second word will be far from uniform.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 7,
+      "text": "A RNN based language model models the first dependence (and more long range ones) and our proposed PDR tries to model the second one.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 8,
+      "text": "In a unidirectional language model, we cannot look into the future tokens and hence we use the output distribution as a proxy for the \"true second word\" and decode the distribution of the first word.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 9,
+      "text": "Thus the PDR term can be thought of as biasing the language model to retain more information about the distribution of the first word given the second word in a bigram.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 10,
+      "text": "Finally, we have conducted further experiments on larger corpora, specifically the Gigaword corpus.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 11,
+      "text": "We use a 2-layer LSTM with a word embedding dimension of 1024 and hidden dimension of 1024.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 12,
+      "text": "We truncated the vocabulary by keeping approximately 100k words with the highest frequency.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 13,
+      "text": "We compare the performance of the model with and without PDR and using no other regularization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 14,
+      "text": "We used the same validation and test sets as (Yang et al. 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 15,
+      "text": "We obtained a valid/test perplexity of 44.0/42.5 for the model with PDR and 44.3/43.1 for the model without PDR, showing a gain of 0.6 in the test perplexity by using PDR.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 16,
+      "text": "We will incorporate these results in the experiments section and post the updated manuscript shortly.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 17,
+      "text": "Press, Ofir, and Lior Wolf. \"Using the output embedding to improve language models.\" arXiv preprint arXiv:1608.05859 (2016).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryevn2r93m",
+      "rebuttal_id": "BJlh2rJGCm",
+      "sentence_index": 18,
+      "text": "Yang, Zhilin, et al. \"Breaking the softmax bottleneck: A high-rank RNN language model.\" arXiv preprint arXiv:1711.03953 (2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

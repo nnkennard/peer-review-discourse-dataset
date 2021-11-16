@@ -1,0 +1,806 @@
+{
+  "metadata": {
+    "forum_id": "ryepUj0qtX",
+    "review_id": "rJldfOy-27",
+    "rebuttal_id": "ryezm5-70X",
+    "title": "Conditional Network Embeddings",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryepUj0qtX&noteId=ryezm5-70X",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 0,
+      "text": "This paper studied learning unsupervised node embeddings by considering the structural properties of networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 1,
+      "text": "Experimental results on a few data sets prove the effective of the proposed approaches over existing state-of-the-art approaches for unsupervised node embeddings.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 2,
+      "text": "Strength:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 3,
+      "text": "- important problem and interesting idea",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 4,
+      "text": "- the proposed approach seems to be effective according to the experiments",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 5,
+      "text": "Weakness:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 6,
+      "text": "- some parts of the paper are quite unclear",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 7,
+      "text": "- the complexity of the proposed algorithm seems to be very high",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 8,
+      "text": "- the data sets used in the experiments are very small",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 9,
+      "text": "Details:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 10,
+      "text": "-In the introduction, \"it is in general impossible to find an embedding in R^d such that ...\", why do we have to make v and v'(and u, and u') far from each other?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 11,
+      "text": "- In Equation (2), How is P_ij defined exactly, are they parameters? I am quite confused about this part",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 12,
+      "text": "- In Equation (6), the posterior distribution should be P(X|G) since X is the latent variable to be inferred, right",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 13,
+      "text": "\uff1f",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "sentence_index": 14,
+      "text": "- In Table 2 and 3, how are the degree and block information leveraged into the model?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the thoughtful review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 1,
+      "text": "Responses:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 2,
+      "text": "- We clarified the unclear parts, and will upload the revised version asap. (Also see below for specific responses.)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 3,
+      "text": "- It is unclear to us if the reviewer thinks the computational complexity is high, or the mathematical complexity.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 4,
+      "text": "With regards to mathematical complexity, we believe the model is actually rather simple (see also other reviews).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 5,
+      "text": "Thus, we assume computational complexity is meant.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 6,
+      "text": "Computational complexity is discussed in detail in the manuscript though, and is certainly not higher than competing methods (in part thanks to the low mathematical complexity of the model).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 7,
+      "text": "See also next point.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 8,
+      "text": "- The datasets we used are as large as the datasets used in other related work in the area.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 9,
+      "text": "To demonstrate CNE's superior scalability, we included another network with around 200.000 nodes and around 1.000.000 edges (http://snap.stanford.edu/data/loc-Gowalla.html), run on a basic single CPU laptop.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 10,
+      "text": "Again, CNE outperforms all other methods in accuracy by a wide margin, and is substantially faster as well.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 11,
+      "text": "The results are included in the revised manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 12,
+      "text": "Detailed comments:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 13,
+      "text": "- \"In the introduction, \"it is in general impossible to find an embedding in R^d such that ...\", [...]?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 14,
+      "text": "We apologize for having been a bit brief here, we will clarify this in the revision (uploaded asap).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 15,
+      "text": "We meant to say that in network embedding methods that aim to model first-order proximity (where proximity in the embedding space implies a higher probability of being linked), this is a requirement (otherwise, proximity of v and v' would imply they are likely to be linked).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 16,
+      "text": "Thus our argument only applies to such first-order proximity methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 17,
+      "text": "Methods that aim to model second-order proximities (where proximity in the embedding space implies a greater overlap between the sets of adjacent nodes), however, are similarly vulnerable.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 18,
+      "text": "For example, there can be a 50% overlap (which is highly significant in sparse networks) between the neighborhoods of nodes A and B, as well as between the neighborhoods of nodes B and C, but zero overlap between the neighborhoods of nodes A and C.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 19,
+      "text": "This would mean that nodes A and B need to be embedded close to each other, nodes B and C as well, but nodes A and C distant from each other.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 20,
+      "text": "The triangle inequality makes this hard.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 21,
+      "text": "Finally, these are but examples of how a Euclidean embedding on its own lacks representational power.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 22,
+      "text": "We believe that our empirical results also demonstrate this without having to refer to easy-to-identify problematic situations for pure embedding-based methods.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 23,
+      "text": "- \"In Equation (2), How is P_ij defined exactly [...]?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 24,
+      "text": "They are not parameters: they are numbers between 0 and 1 representing the prior probability of a link between nodes i and j (i.e. prior to seeing the embedding).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 25,
+      "text": "These numbers are such that the prior knowledge of the types described are satisfied in expectation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 26,
+      "text": "In other words, they are implied and can be computed automatically and highly efficiently based on prior work, after one has decided on which prior knowledge to use.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 27,
+      "text": "For details about how P_ij are fitted given such prior knowledge constraints, and how they can be represented efficiently, we have to refer to Adriaens et al. (2017) and van Leeuwen et al. (2016).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 28,
+      "text": "We have however summarized the relevant aspects: the fact that all probabilities P_ij, although there are n^2 of them, can be represented using much fewer parameters, and the fact that they can be fitted highly efficiently (in our experiments, even on the largest networks, this always took only a tiny proportion of the total computation time).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 29,
+      "text": "In the new version to be uploaded soon, this will be further clarified.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 30,
+      "text": "- \"In Equation (6), the posterior distribution should be P(X|G) [...]?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 31,
+      "text": "No, the equation is correct as stated.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 32,
+      "text": "Footnote 2 warned the reader about this, as we know it is unusual.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 33,
+      "text": "The posterior is a distribution for the network, such that finding the best embedding is indeed a maximum likelihood problem (not a maximum a posteriori problem), even though the likelihood function is computed as a posterior given a prior for the network and a conditional for the embedding given the network.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 34,
+      "text": "We suspect that it is this unusual aspect of the CNE formulation that makes it original with respect to the state-of-the-art.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 35,
+      "text": "- \"In Table 2 and 3, how are [...]?\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 36,
+      "text": "Equation (6) defines the posterior of the network given the embedding, which we maximize w.r.t. the embedding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 37,
+      "text": "It explicitly depends on the prior probabilities P_ij, which are computed based on the prior knowledge about the degrees or about the block density structure of the adjacency matrix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJldfOy-27",
+      "rebuttal_id": "ryezm5-70X",
+      "sentence_index": 38,
+      "text": "Thus, this information is brought into the model by considering the posterior distribution for the network, where the prior models the degrees of the nodes, or the block structure.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,934 @@
+{
+  "metadata": {
+    "forum_id": "rJl6M2C5Y7",
+    "review_id": "SJl8R-eTnQ",
+    "rebuttal_id": "Bkld8r3FRQ",
+    "title": "Online Hyperparameter Adaptation via Amortized Proximal Optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJl6M2C5Y7&noteId=Bkld8r3FRQ",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 0,
+      "text": "The paper proposes an approach to adapt hyperparameters online.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 1,
+      "text": "When learning rates are in focus, a convincing message would be to show that adaptation of learning rates is more efficient and simpler than their scheduling when tested on state-of-the-art architectures.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 2,
+      "text": "A. You demonstrate the results on CIFAR-10 for 10% error rates which corresponds to networks which are far from what is currently used in deep learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 3,
+      "text": "Thus, it is hard to say whether the results are applicable in practice.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 4,
+      "text": "B. You don't schedule learning rates for your baseline methods except for a single experiment for some initial learning rate.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 5,
+      "text": "C. Your method involves a hyperparameter to be tuned which affects the shape of the schedule.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 6,
+      "text": "This hyperparameter itself benefits from (requires?) some scheduling.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 7,
+      "text": "It would be interesting to see if the proposed method is competitive for training contemporary networks and w.r.t. simple schedule schemes.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 8,
+      "text": "Online tuning of  hyperparameters is an important functionality and I hope your paper will make it more straightforward to use it in practice.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 9,
+      "text": "* Minor notes:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 10,
+      "text": "You mention that \"APO converges quickly from different starting points on the Rosenbrock surface\" but 10000 iterations is not quick at all for the 2-dimensional Rosenbrock, it is extremely slow compared to 100-200 function evaluations needed for Nelder-Mead to solve it. I guess you mean",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "sentence_index": 11,
+      "text": "w.r.t. the original RMSprop.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 0,
+      "text": "Thank you for your helpful comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 1,
+      "text": "We have addressed your concern about the baseline models and learning rate schedules in our updated paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 2,
+      "text": "Q: It is hard to say whether the results are applicable in practice; need updates to baselines and comparison with learning rate schedules.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 3,
+      "text": "We have updated the baselines in our paper for CIFAR-10 and CIFAR-100, using a larger, modern network, ResNet34, in place of the VGG11 model used previously.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 4,
+      "text": "We also compared APO to manual learning rate decay schedules.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 5,
+      "text": "For CIFAR-10/100, we trained for 200 epochs, decaying the learning rate by a factor of 5 three times during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 6,
+      "text": "The ResNet34 with a custom learning rate decay schedule achieves 93-94% test accuracy on CIFAR-10 and ~74% test accuracy on CIFAR-100.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 7,
+      "text": "We believe that this is a strong baseline, and shows the applicability of APO in practical settings.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 8,
+      "text": "The final test accuracies of the updated model using SGD/SGDm with and without APO are:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 9,
+      "text": "| CIFAR-10 | CIFAR-100 |",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 10,
+      "text": "--------------------------+--------------+---------------+",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 11,
+      "text": "SGD (fixed lr)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 12,
+      "text": "92.97            72.69",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 13,
+      "text": "SGDm (fixed lr)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 14,
+      "text": "92.77            72.53",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 15,
+      "text": "SGD (decayed lr)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 16,
+      "text": "93.29            73.45",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 17,
+      "text": "SGDm (decayed lr)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 18,
+      "text": "93.53            73.80",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 19,
+      "text": "SGD-APO",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 20,
+      "text": "93.82            74.65",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 21,
+      "text": "SGDm-APO",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 22,
+      "text": "94.59            73.89",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 23,
+      "text": "The test accuracies using RMSprop and K-FAC with APO are shown in our response to all reviewers at the top.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 24,
+      "text": "The results in these tables show that APO is competitive with manual schedules in terms of test accuracy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 25,
+      "text": "The updated figures in our paper show that APO is competitive with manual schedules both in terms of test accuracy and training loss.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 26,
+      "text": "Q: Does the hyperparameter lambda itself benefit from some scheduling?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 27,
+      "text": "In our updated paper we show that APO with a fixed lambda achieves comparable performance to manual learning rate decay schedules.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 28,
+      "text": "While using a schedule for lambda can potentially further improve performance, a simple grid search over fixed lambda values already leads to strong performance, and has the advantage that it is easy to use in practice.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 29,
+      "text": "Q: You mention that \"APO converges quickly from different starting points on the Rosenbrock surface\" but 10000 iterations is not quick at all for the 2-dimensional Rosenbrock, it is extremely slow compared to 100-200 function evaluations needed for Nelder-Mead to solve it.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 30,
+      "text": "I guess you mean",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 31,
+      "text": "w.r.t. the original RMSprop.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 32,
+      "text": "Yes, we intended to say that on Rosenbrock, RMSprop-APO converges quickly compared to baseline RMSprop; we have updated the paper to clarify this.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 33,
+      "text": "Thank you for your helpful feedback. We have incorporated your suggestions into the updated paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 34,
+      "text": "Specifically, we have:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 35,
+      "text": "* Updated the baseline model for CIFAR-10/100 from VGG11 to ResNet34.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 36,
+      "text": "* Used manual learning rate decay schedules for the CIFAR-10/100 baselines.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 37,
+      "text": "We obtained 93-94% test accuracy on CIFAR-10 (SGD/SGDm/RMSprop/K-FAC) and 73-74% test accuracy on CIFAR-100 (SGD/SGDm).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 38,
+      "text": "All are compared to their APO variants, which performed as well or better.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 39,
+      "text": "The final results are shown in the table in the response to all reviewers at the top.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 40,
+      "text": "* Shown that APO is competitive with manual schedules both in terms of test accuracy and training loss with ResNet34.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 41,
+      "text": "This demonstrates the practical applicability of APO for contemporary networks.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 42,
+      "text": "* Updated Figure 2 on CIFAR-10 with SGD/SGDm/RMSprop, Figure 4 on CIFAR-100 with SGD/SGDm, and Figure 6 on CIFAR-10 with SGD.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 43,
+      "text": "We also added Figure 3 on CIFAR-10 with K-FAC.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 44,
+      "text": "Each figure compares the baseline optimizers with their APO variants.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJl8R-eTnQ",
+      "rebuttal_id": "Bkld8r3FRQ",
+      "sentence_index": 45,
+      "text": "Thank you for having helped us improve the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

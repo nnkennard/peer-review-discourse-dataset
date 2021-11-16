@@ -1,0 +1,643 @@
+{
+  "metadata": {
+    "forum_id": "rkgqm0VKwB",
+    "review_id": "BJeklIo0tr",
+    "rebuttal_id": "SyeYlggviB",
+    "title": "End-to-end named entity recognition and relation extraction using pre-trained language models",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rkgqm0VKwB&noteId=SyeYlggviB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 0,
+      "text": "The paper proposes a new joint learning algorithm that works for two tasks, NER and RE.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 1,
+      "text": "The model is based on a pre-trained BERT model, which provides the word vectors of the input word sequence.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 2,
+      "text": "Then it solves two tasks with two network branches: the first branch minimizes the loss for NER, and the second branch minimizes the loss for RE.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 3,
+      "text": "The second branch uses entity labels predicted by the first branch, so joint learning may benefit both tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 4,
+      "text": "The design of the architecture is novel, but it is also not groundbreaking.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 5,
+      "text": "Each network branch is from known structures, but the combination is not proposed before.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 6,
+      "text": "The submission has evaluated the proposed algorithms on four datasets and improved SOTA performances.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 7,
+      "text": "The ablation study justifies the design details.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 8,
+      "text": "The writing is generally clear.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 9,
+      "text": "Now critics:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 10,
+      "text": "Ablation study:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 11,
+      "text": "1. As pointed by one public comment, the ablation study should show how much improvement is from BERT vectors.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 12,
+      "text": "2. I'd like to see another ablation study of whether RE helps NER. If you remove the RE component, does the NER performance suffer?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 13,
+      "text": "Writing:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "sentence_index": 14,
+      "text": "3. how are predicted labels embedded? Do you learn a vector of each tag of BIOES and then take a weighted sum of these vectors with predicted probabilities as weights?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 0,
+      "text": "Hello,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 1,
+      "text": "Thank you for your review of our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 2,
+      "text": "We appreciate the positive assessment of the clarity of our writing.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 3,
+      "text": "Regarding the suggested ablations,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 4,
+      "text": "1. For reasons outlined in our response to the public comment you reference, we do not believe this ablation (as suggested) would be meaningful.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 5,
+      "text": "For convenience, we have copied that response here: In our model, BERT is more than a source of contextual word embeddings as we fine-tune all of its ~110M parameters during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 6,
+      "text": "Simply replacing BERT with distributed embeddings and a character-CNN or LSTM wouldn\u2019t allow us to determine the effect of contextualized embeddings because we would simultaneously be removing the majority of our model\u2019s trainable parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 7,
+      "text": "Nevertheless, we performed the suggested ablation by swapping BERT for GloVe embeddings (300 dimensional) and found that NER performance dropped from 89.46% to 40.33% and RE performance fell from 66.83% to 14.44% on the test set of the ConLL04 corpus (note that we had to increase the learning rate by 10X to get the model to converge).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 8,
+      "text": "If you were to somehow control for this drop in model capacity, say by adding in an LSTM network, the ablated model would closely match this paper [1], whom we outperform by ~3% overall on the CoNLL04 corpus.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 9,
+      "text": "This paper is not cited in Table 1 as they report macro-averaged F1 scores, while most other papers (including the current state-of-the-art [2]) report micro-averaged F1 scores, as we did.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 10,
+      "text": "Finally, it is well known that contextual embeddings outperform distributed embeddings on a wide range of NLP tasks, including NER [3].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 11,
+      "text": "The aim of our study wasn\u2019t to compare contextual vs. distributed embeddings but on how to successfully integrate BERT into a state-of-the-art joint NER and RE architecture.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 12,
+      "text": "2. Thank you for this suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 13,
+      "text": "We are currently performing the ablation, and will comment again once we have the results.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 14,
+      "text": "We will be performing the same ablation as used in [2] (see section 6.2).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 15,
+      "text": "Just note, because our manuscript is already at the page limit, we may have to place the results of this ablation in the appendix.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 16,
+      "text": "Regarding predicted entity label embeddings,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 17,
+      "text": "Before training, all unique entity labels (e.g. B-PER, I-PER, ... etc.) are embedded by assigning them to randomly initialized, continuous vectors of 128 dimensions (this hyperparam is mentioned in Table A.2 of the appendix).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 18,
+      "text": "The embeddings are then updated along with the rest of the models' parameters during training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 19,
+      "text": "Practically speaking, this is handled for us via the embedding layer in PyTorch [4].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 20,
+      "text": "This is the same method used in the works we compare to ([1], [5], [6]).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 21,
+      "text": "We have updated the text in the manuscript (under section 2) to make this more clear.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 22,
+      "text": "Thank you again for taking the time to review our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 23,
+      "text": "[1] https://link.springer.com/chapter/10.1007/978-3-030-15712-8_47",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 24,
+      "text": "[2] https://arxiv.org/abs/1905.05529",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 25,
+      "text": "[3] https://arxiv.org/abs/1802.05365",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 26,
+      "text": "[4] https://pytorch.org/docs/stable/nn.html#embedding",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 27,
+      "text": "[5] https://www.aclweb.org/anthology/P16-1105/",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJeklIo0tr",
+      "rebuttal_id": "SyeYlggviB",
+      "sentence_index": 28,
+      "text": "[6] https://www.sciencedirect.com/science/article/pii/S095741741830455X",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

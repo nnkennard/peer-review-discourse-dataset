@@ -1,0 +1,736 @@
+{
+  "metadata": {
+    "forum_id": "Hyewf3AqYX",
+    "review_id": "SyllU9Iq37",
+    "rebuttal_id": "ByxEFM-c0Q",
+    "title": "A Frank-Wolfe Framework for Efficient and Effective Adversarial Attacks",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hyewf3AqYX&noteId=ByxEFM-c0Q",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 0,
+      "text": "This paper provide a method to produce adversarial attack using a Frank-Wolfe inspired method.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 1,
+      "text": "I have some concerns about the motivation of this method:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 2,
+      "text": "- What are the motivations to use Frank-Wolfe ? Usually this algorithm is used when the constraints are to complicated to have a tractable projection (which is not the case for the L_2 and L_\\infty balls) or when one wants to have sparse iterates which do not seem to be the case here.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 3,
+      "text": "- Consequently why did not you compare simple projected gradient method ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 4,
+      "text": "(BIM) is not equivalent to the projected gradient method since the direction chosen is the sign of the gradient and not the gradient itself (the first iteration is actually equivalent because we start at the center of the box but after both methods are no longer equivalent).",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 5,
+      "text": "- There is no motivations for the use of $\\lambda >1$ neither practical or theoretical since the results are only proven for $\\lambda =1$ whereas the experiments are done with \\lambda = 5,20 or 30.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 6,
+      "text": "- What is the difference between the result of Theorem 4.3 and the result from (Lacoste-Julien 2016)?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 7,
+      "text": "Depending on the answer to these questions I'm planning to move up or down my grade.",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 8,
+      "text": "In the experiment there is no details on how you set the hyperparameters of CW and EAD.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 9,
+      "text": "They use a penalized formulation instead of a constrained one.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 10,
+      "text": "Consequently the regularization hyperparameters have to be set differently.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 11,
+      "text": "The only new result seem to be Theorem 4.7 which is a natural extension to theorem 4.3 to zeroth-order methods.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 12,
+      "text": "Comment:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 13,
+      "text": "- in the whole paper there is $y$ which is not defined.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 14,
+      "text": "I guess it is the $y_{tar}$ fixed in the problem formulation Sec 3.2.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 15,
+      "text": "In don't see why there is a need to work on any $y$. If it is true",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 16,
+      "text": ",  case assumption 4.5 do not make any sense since $y = y_{tar}$ (we just need to note $\\|\\nabla f(O,y_{tar})\\| = C_g$) and some notation could be simplified setting for instance $f(x,y_{tar})  = f(x)$.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 17,
+      "text": "- In Theorem 4.7 an expectation on g(x_a) is missing",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 18,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 19,
+      "text": "- Sec 3.1 theta_i -> x_i",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 20,
+      "text": "- Sec 3.3 the argmin is a set, then it is LMO $\\in$ argmin.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 21,
+      "text": "===== After rebuttal ======",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "sentence_index": 22,
+      "text": "The authors answered some of my questions but I still think it is a borderline submission.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 0,
+      "text": "Thank you for your helpful comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 1,
+      "text": "1. You are right that Frank-Wolfe would be advantageous over PGD when the constraints are more complicated and adversarial attack may not be such a case.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 2,
+      "text": "Yet it is also well-known that Frank-Wolfe has quite different optimization behavior compared with PGD even though they have the same order of convergence rate.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 3,
+      "text": "Therefore, it is interesting and important to examine the performance of Frank-Wolfe algorithm for adversarial attack, given the fact that PGD has been shown to be a very effective for adversarial attack.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 4,
+      "text": "In fact, from our work, we found that Frank-Wolfe based methods are generally more efficient than PGD method.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 5,
+      "text": "From another perspective, Frank-Wolfe solves the problem by calling Linear Minimization Oracle (LMO) over the constraint set at each iteration.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 6,
+      "text": "This LMO shares the same intuition as FGSM, which also tries to linearize the neural network loss function to find the adversarial examples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 7,
+      "text": "In this sense, it is a quite natural attempt to revisit FGSM under the Frank-Wolfe framework.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 8,
+      "text": "2. We are sorry maybe we didn\u2019t explain it very well in the paper, but this is a misunderstanding.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 9,
+      "text": "We indeed compared our method with generalized I-FGSM/BIM, which is exactly the same as PGD (In [Madry et al.] they also mentioned this in Section 2.1 and they refer it as FGSM^k).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 10,
+      "text": "We decide to just call it PGD in the revision to avoid confusion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 11,
+      "text": "We hope this remove your concern.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 12,
+      "text": "3",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 13,
+      "text": ".",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 14,
+      "text": "Indeed, theoretically we can only prove for $\\lambda$ = 1 case.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 15,
+      "text": "Yet we found that larger \\lambda brings us more speedup.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 16,
+      "text": "We have added further empirical evidence (performance comparison of our method with different \\lambda in Figure 1 in the revised paper) to justify it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 17,
+      "text": "Intuitively speaking, using lambda>1 is essentially a \u201crelax and tighten\u201d step by first relax the constraint to make the problem easier, and then tighten it back to the real constraint.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 18,
+      "text": "The \u201crelax and tighten\u201d idea has been widely used in constrained optimization, and in this paper we adapted this idea into Frank-Wolfe algorithm to make it even faster.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 19,
+      "text": "4. [Lacoste-Julien 2016] considered the general first-order Frank-Wolfe algorithm for nonconvex smooth optimization.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 20,
+      "text": "The result of Theorem 4.3 in our paper is almost the same as the result in (Lacoste-Julien 2016), except that the choices the learning rate in these two papers are different though.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 21,
+      "text": "We have made it clear in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 22,
+      "text": "5. We have added detailed hyperparameter settings for CW and EAD in the revision in the supplemental materials.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 23,
+      "text": "6. While Theorem 4.7 is new and may be of independent interest in the optimization community,  it is not the main contribution in this paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 24,
+      "text": "We would like to emphasize that our major contribution in this paper is a Frank-Wolfe based algorithm for adversarial attack, which is more efficient than PGD based adversarial attack algorithm and other baselines.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 25,
+      "text": "7. Sorry about the confusion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 26,
+      "text": "$y$ should be replace by $y_{tar}$. It is a simplified notation we mentioned in the proof in the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 27,
+      "text": "Thank you for your suggestion and we have revised the notation $f(x,y_{tar})$ to $f(x)$.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyllU9Iq37",
+      "rebuttal_id": "ByxEFM-c0Q",
+      "sentence_index": 28,
+      "text": "8. Thank you for pointing out several typos. We have fixed all of them in the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,603 @@
+{
+  "metadata": {
+    "forum_id": "rklklCVYvB",
+    "review_id": "SyeBhyrCKH",
+    "rebuttal_id": "BklfnX1KsH",
+    "title": "Time2Vec: Learning a Vector Representation of Time",
+    "reviewer": "AnonReviewer3",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rklklCVYvB&noteId=BklfnX1KsH",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 0,
+      "text": "## Summary",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 1,
+      "text": "The authors propose a method for encoding time features using a sine function with learned phase and frequency.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 2,
+      "text": "They apply this method to several synthetic and real-world datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 3,
+      "text": "Temporal and positional encoding is important to many applications, including NLP, sound understanding and time series modeling, so the topic is certainly of interest.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 4,
+      "text": "However, the method they propose offers very little that is new when compared to e.g. Vaswani (https://arxiv.org/pdf/1706.03762.pdf, section 3.5) (the authors acknowledge this work several times).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 5,
+      "text": "In addition, the authors compare to a baseline that seems to consist of passing time as a float.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 6,
+      "text": "This seems like a very weak baseline---there are any number of other reasonable ways to encode this.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 7,
+      "text": "Due to the incremental nature of the improvement and the weak baseline, I don't think this paper should be accepted to ICLR.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 8,
+      "text": "## Specific Comments",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 9,
+      "text": "1. In Section 2, I find the sentence \"We follow a similar intuition but instead of decomposing a 1D signal of time into its components, we transform the time itself and feed its transformation into the model that is to consume the time information\" really unclear. Could you rephrase it?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 10,
+      "text": "2. Often, positional encodings are used to encode ordering for a model architecture that is not inherently sequential.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 11,
+      "text": "This is the case for the positional encodings in the transformer model.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 12,
+      "text": "Did you try these encodings with non-recurrent architectures?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 13,
+      "text": "3. In Section 5.2, did you mean 'fixing t2v(\\tau)[n] = sin(2\\pi n \\tau / 16)'? i.e. I think it's missing a 'tau'",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 14,
+      "text": "4. In Section 5.2 \"Fixed frequencies and phase shifts\" you compare Time2Vec to a fixed set of frequencies.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 15,
+      "text": "Since positional encoding with Fourier transforms is well known, this seems like the relevant benchmark but it receives only a brief treatment.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 16,
+      "text": "The authors compare these methods only on Event-MNIST and only for 16 frequencies.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 17,
+      "text": "I would like to see this comparison expanded.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 18,
+      "text": "5. Could you clarify exactly how time is encoded for LSTM + T? Are you, in fact, just passing a float value? How is this encoded for each data set?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 19,
+      "text": "For example, the \"times\" for Event-MNIST is always [0, 783] while the SOF data has timestamps.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "sentence_index": 20,
+      "text": "What is the encoding scheme for each?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for valuable feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 1,
+      "text": "\u201cthe method they propose offers very little that is new when compared to e.g. Vaswani\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 2,
+      "text": "While the final representation of Time2Vec resembles that of positional encoding, the motivation behind Time2Vec is completely different than that of positional encoding.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 3,
+      "text": "The new things offered by Time2Vec compared to positional encoding and other previous work include:",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 4,
+      "text": "- Instead of using time as a scalar feature similar to other features (which as the reviewer also pointed out is a naive way of handling time), we identify the characteristics that differentiate \u201ctime\u201d from other features and propose a representation that enables exploiting those characteristics.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 5,
+      "text": "Note that using time as a scalar feature similar to other features is currently the prevalent choice (see the references in the last paragraph of section 2).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 6,
+      "text": "- Obviating the need for hand-crafting functions of time by instead enabling these functions to be learned from data, and backing up the representation theoretically as, according to Fourier sine series, it can approximate any function in a given interval (see the last paragraph of our response to reviewer 5).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 7,
+      "text": "- Providing a comprehensive set of experiments showing the merit of Time2Vec for time-series prediction problems where time is an important feature.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 8,
+      "text": "This includes, among other things, results for modeling periodic behaviors of signals which is not a goal in positional encoding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 9,
+      "text": "Although our representation resembles positional encoding on the surface, it has not been clear in the time-series community if/how/why positional encoding can be used to replace hand-crafted functions of time, and there has been no empirical evidence to show its merit.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 10,
+      "text": "\u201cWeak baseline\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 11,
+      "text": "Our goal is to propose a representation of time that can be used instead of merely a float notion of time (as opposed to beating the state-of-the-art on a particular dataset)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 12,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 13,
+      "text": "Therefore, all our comparisons are head-to-head comparisons between a model with and without Time2Vec.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 14,
+      "text": "This includes LSTM+T vs LSTM+Time2Vec, TimeLSTM1 vs TimeLSTM1 + Time2Vec, and TimeLSTM3 vs TimeLSTM3 + Time2Vec.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 15,
+      "text": "It would not be sensible to, e.g., compare LSTM+Time2Vec to TimeLSTM3 (or some other model) because the results of such an experiment do not provide evidence towards Time2Vec being useful or useless.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 16,
+      "text": "Specific comments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 17,
+      "text": "We will clarify the sentence in section 2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 18,
+      "text": "Except for the hand-crafted experiment, we did not use Time2Vec in non-recurrent architectures.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 19,
+      "text": "In Section 5.2, a \\tau is indeed missing; we\u2019ll fix this.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 20,
+      "text": "If the paper gets accepted, we will expand the experiments with fixed frequencies in the final version.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SyeBhyrCKH",
+      "rebuttal_id": "BklfnX1KsH",
+      "sentence_index": 21,
+      "text": "In both LSTM+T and LSTM+Time2Vec, for Event-MNIST \\tau is a feature between [0, 783], for NT-DIGITS and SOF \\tau corresponds to the Unix timestamps when events occurred, and in LastFM and CiteULike \\tau corresponds to the delta between the current and previous event.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

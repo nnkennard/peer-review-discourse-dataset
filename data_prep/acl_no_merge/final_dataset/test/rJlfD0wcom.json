@@ -1,0 +1,766 @@
+{
+  "metadata": {
+    "forum_id": "rket4i0qtX",
+    "review_id": "rJlfD0wcom",
+    "rebuttal_id": "HyxpQdUhp7",
+    "title": "The meaning of \"most\" for visual question answering models",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rket4i0qtX&noteId=HyxpQdUhp7",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 0,
+      "text": "The paper analyzes the strategy that a visual question answering model (FiLM) uses to verify statements containing the quantifier \"most\" (\"most of the dots are red\").",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 1,
+      "text": "It finds that the model is sensitive to the ratio of objects that satisfy the predicate (that are red) to objects that do not; as the ratio decreases (e.g. 10 red dots compared to 9 blue dots), the model's performance decreases too.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 2,
+      "text": "This is consistent with human behavior.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 3,
+      "text": "Strengths:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 4,
+      "text": "* The introduction lays out an ambitious program of comparing humans to deep neural networks.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 5,
+      "text": "* The experimental results are interesting (although of modest scope) and support the hypothesis that the network is not counting the objects but rather is using an approximation that is sensitive to the ratio between the red and non-red items.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 6,
+      "text": "Weaknesses:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 7,
+      "text": "* The architecture of the particular model is described very briefly, and at multiple points there\u2019s an implication that this is an investigation of \u201cdeep learning models\u201d more generally, even though those models may vary widely.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 8,
+      "text": "While the authors are using an existing model, they shouldn't assume that the reader has read the paper describing that model.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 9,
+      "text": "I would like to see more discussion of whether it is at all plausible for this model to acquire the pairing strategy, compared to alternative VQA models (e.g., using relation networks).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 10,
+      "text": "* I found it difficult to follow the theoretical motivation for performing the work.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 11,
+      "text": "The goal seems to be to test whether the network is performing the task in way that \"if not human-like, at least is cognitively plausible\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 12,
+      "text": "I don't understand what is meant by cognitively plausible but not human-like; perhaps an example of a cognitively implausible mechanism would help clarify this issue.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 13,
+      "text": "Later in the same paragraph, the authors argue that \"in the case of a human-centered domain like natural language, ultimately, some degree of comparability to human performance is indispensable\".",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 14,
+      "text": "This assertion is not justified, and seems surprising to me; we have very useful natural language processing systems that do not perform in a way that is comparable to humans (the hedge \"some degree of\" is really neither here nor there).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 15,
+      "text": "In general, I don't understand why we would want a visual question answering system that returns approximate answers --",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 16,
+      "text": "isn't it better to have it count exactly how many red dots there are compared to non-red dots?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 17,
+      "text": "* The authors assume that explicit counting is not \"likely to be learned by the 'one-glance' feed-forward-style neural network\" evaluated in the paper. What is this statement based on? Why would a \"one-glance\" network have trouble counting objects?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 18,
+      "text": "(What is a \u201cone-glance network\u201d?)",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 19,
+      "text": "* Another vague concept that is used without clarification: it is argued that if the network implements something like the Approximate Number System, that shows that it can \"learn and utilize higher-level concepts than mere pattern matching\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 20,
+      "text": "What is \"pattern matching\" and how does it differ from \"higher-level concepts\"?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 21,
+      "text": "* Why would the pairing strategy in a neural network be affected by the clustering of the objects?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 22,
+      "text": "I understand why a human who needs to saccade back and forth between the two groups of objects might lose track of the objects that have been paired so far, but I don't understand why that would affect the architecture in question.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 23,
+      "text": "Minor comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 24,
+      "text": "* Is the definition of \"most\" really a central piece of evidence for \"the apparent importance of a cardinality concept to human cognition\"? Our ability to count seems sufficient to me. Perhaps I'm not understanding what the authors have in mind here.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 25,
+      "text": "* Please use the terms \"interpretation\" and \"verification\" consistently.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 26,
+      "text": "* \"One over the other strategy\" -> \"one strategy over the other\".",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "sentence_index": 27,
+      "text": "* The paper is almost 9 pages long, but the contribution does not appear more substantial than a standard 8-page submission.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 0,
+      "text": "Many thanks for the valuable feedback! We uploaded a revised version of the paper, and in the following address the weaknesses you pointed out:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 1,
+      "text": "- We added a few sentences to the end of section 2.4 on our speculative intuition regarding what strategy a model may prefer, and we do indeed think that a pairing-based strategy is plausible for convolution-based networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 2,
+      "text": "When talking in more general terms about \"deep learning models\", we refer to the proposed methodology for \"investigating deep learning models\", and don't want to claim that we actually evaluate a representative number of models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 3,
+      "text": "We see this methodology, as illustrated by our experiments for one model, as the central part of our contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 4,
+      "text": "The first paragraph of section 3.2 describes this FiLM model and, given the focus on methodology, we considered the description (plus reference to the paper) sufficient here.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 5,
+      "text": "- There are a few points here:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 6,
+      "text": "*",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 7,
+      "text": "Since it was shown that humans seem to follow a cardinality-based strategy, the pairing-based one would be not human-like, but nonetheless cognitively plausible.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 8,
+      "text": "We use \"cognitively\" in the sense of \"algorithmically\" plausible, so a procedure that makes sense for solving the problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 9,
+      "text": "An example for an implausible method would be to rely on color/shape cues to solve instances involving \"most\", which doesn't make sense for the abstract meaning of \"most\".",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 10,
+      "text": "*",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 11,
+      "text": "Regarding the question whether comparability to human behavior is indispensable: On the one hand, acceptance of and reliance on systems which follow vastly different principles can be problematic; on the other hand, if the information a system uses to arrive at its conclusion doesn't make any sense to humans (in cases where humans have an intuition what is relevant, like the above example of \"most\" and color/shape cues), we doubt that good performance alone will justify using such a model, as opposed to instead doubting the quality of the underlying benchmark data.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 12,
+      "text": "* The question whether we want a VQA system which returns approximate answers is an interesting one, but we don't intend to claim that this is a desired property, just that it is desirable to know whether (and how exactly) our systems currently solve such tasks approximately.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 13,
+      "text": "A conclusion from our findings may well be that it is worth improving VQA models with respect to their counting capability, as they seem to rely on an approximate as opposed to an exact number system.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 14,
+      "text": "- We added a longer footnote to section 2.4 about the \"one-glance feed-forward-style networks\" for clarification.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 15,
+      "text": "In summary, general precise counting is an inherently recursive ability, and models which don't have an architectural module for recursive computations are not expected to be able to learn this capability, while they may stil learn to subitize or represent numbers approximately (which doesn't require recursion).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 16,
+      "text": "- You're right, this sentence was a bit vague, we rephrased it to: \"these models can indeed learn and utilize more abstract concepts (approximate numbers) than mere superficial pattern matching (\"red square\" etc)\".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 17,
+      "text": "The differences we want to point out is that, on the one hand, (approximate) numbers are a more abstract concept than, for instance, object types like \"cat\", \"chair\", etc as they can be combined with any object type. On the other hand, being able to utilize such representations to answer practical questions like whether \"most\" applies is more interesting than just being able to classify which representation applies.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 18,
+      "text": "- Good point, our reasoning here was mostly influenced by Pietroski et al.'s work and our intuition about the ability of convolutions to learn a local pairing strategy (see addition at the end of section 2.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 19,
+      "text": "Presumably, it could be possible to observe the behavior in our paper based on a pairing-based mechanism which works approximately, independent of clustering, as predicted by Weber's Law.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 20,
+      "text": "It's probably impossible to ultimately rule out a pairing-based strategy via experiments evaluating extrinsic behavior only, but we note that there is evidence for Weber's Law in other approximate systems where pairing-based strategies are no alternative, thus suggesting that similar mechanisms are at work here.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 21,
+      "text": "We added a footnote on this to section 2.4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 22,
+      "text": "- There are a few papers focusing solely on \"most\" in psycholinguistics (like the ones cited) and linguistics in general (e.g., formal semantics), many of which talk about cardinality as a \"core concept\" of human cognition, and many of which contrast a more subconscious concept of cardinality (like the approximate number system) with the conscious algorithmic ability for precise and infinite counting.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          24
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 23,
+      "text": "- We consistently use \"interpretation\" in the new version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          25
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 24,
+      "text": "- Fixed.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          26
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 25,
+      "text": "- We think that our approach and particularly its inspiration by experiments from psychology are a substantial contribution to evaluation methodology in the context of powerful deep learning models, which are not infrequently described by anthropomorphizing words like \"understand\" and compared to \"human-level\" performance (added a sentence to the introduction).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJlfD0wcom",
+      "rebuttal_id": "HyxpQdUhp7",
+      "sentence_index": 26,
+      "text": "The reason for exceeding 8 pages in length is likely due to the more elaborate introduction of the various concepts from Pietroski et al.'s work and experimental methodology in psychology in general, which we assume the audience of this conference is not very familiar with.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          27
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

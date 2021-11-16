@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "forum_id": "H1l-SjA5t7",
+    "review_id": "rklJyvKq3X",
+    "rebuttal_id": "HJem9qJxA7",
+    "title": "Explicit Information Placement on Latent Variables using Auxiliary Generative Modelling Task",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=H1l-SjA5t7&noteId=HJem9qJxA7",
+    "annotator": "anno8"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 0,
+      "text": "The paper proposes a method to disentangle latent variables for certain factors of interest in an image by considering the original input image and a transformation of the image where information about the factors of interest is removed.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 1,
+      "text": "The generative process is then modeled by having two latent variables --  the first responsible for generating the transformed image whereas both latent variables are responsible for generating the original input image.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 2,
+      "text": "This inductive bias naturally enforces that the second latent variable will not model the information which the first needs to reconstruct the transformed image, due to the VAE objective penalizing redundancy in information present in the latents.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 3,
+      "text": "The paper demonstrates this in one setting where the transformation is random shuffling of image patches, which should remove the global information of the original input image.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 4,
+      "text": "The methodology of the paper was concise and easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 5,
+      "text": "The simple inductive bias presented in the paper for disentangling local and global information is very interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 6,
+      "text": "It is not obvious that shuffling image patches at a particular scale would lead to complete loss of global information, but the paper does show results on SVHN and CIFAR10 for which global information is sufficiently disentangled.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 7,
+      "text": "The results for digit identity clustering were great for showing the correlation between their learnt global information and label information.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 8,
+      "text": "The paper introduced their model as a general purpose strategy for placing desired information in latent variables using auxiliary tasks, but focus was directed to the global vs local line of analysis.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 9,
+      "text": "While giving examples for what kind of information can be removed, the authors mentioned that color to gray-scale might be one possibility.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 10,
+      "text": "It would have been interesting to see this and other possibilities explored in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 11,
+      "text": "I feel that the idea deserves a broader analysis beyond just a single choice of disentanglement.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 12,
+      "text": "It is mentioned in the paper that having a single inference network for the posterior as opposed to the factorized one is conceivable.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 13,
+      "text": "I would be curious to see an analysis of how that works out as compared to the separate encoders case.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "sentence_index": 14,
+      "text": "Overall, the paper has a novel idea which is well motivated and executed in terms of experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rklJyvKq3X",
+      "rebuttal_id": "HJem9qJxA7",
+      "sentence_index": 0,
+      "text": "We thank reviewer2 for the kind and constructive review.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rklJyvKq3X",
+      "rebuttal_id": "HJem9qJxA7",
+      "sentence_index": 1,
+      "text": "We agree that broader analysis beyond global-local disentanglement is desirable and we hope to perform more experiments in a follow up work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

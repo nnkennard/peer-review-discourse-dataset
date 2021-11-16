@@ -1,0 +1,995 @@
+{
+  "metadata": {
+    "forum_id": "ByxAcjCqt7",
+    "review_id": "SyeS7CQ83m",
+    "rebuttal_id": "S1x_7qgLAX",
+    "title": "Point Cloud GAN",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByxAcjCqt7&noteId=S1x_7qgLAX",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 1,
+      "text": "This paper proposes a generative point cloud model based on adversarial learning and definitti\u2019s representation theorem of exchangeable variables.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 2,
+      "text": "The main focus in experiments and the exposition is on 3D point clouds representing object shapes (seems the surface, but could also be the interior of objects, please clarify).",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 3,
+      "text": "The main idea is to represent a point cloud using a global latent variable that captures the overall shape, and a collection of local latent variables that code for the position of a point on the shape.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 4,
+      "text": "The model consists of thee components:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 5,
+      "text": "(i) an \u201cencoder\u201d that takes a point cloud as input and maps it to a (point estimate of) the global latent variable of the shape represented by the input cloud, a point-net architecture is used here",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 6,
+      "text": "(ii) a \u201cdecoder\u201d that takes the estimated global latent variable, and a local latent variable, and maps it to an \u201coutput\u201d point in the cloud to be produced by the model.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 7,
+      "text": "(iii) a \u201cdiscriminator\u201d network that aims to distinguish points from a *given* shape, and the points produced by pipe-lining the encoder and decoder.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 8,
+      "text": "Critically different from conventional GANs, the discriminator is optimized *per shape*, ie each point cloud is considered as a *distribution* over R^3 specific to that shape.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 9,
+      "text": "(iv) a \u201cshape prior\u201d that, once the encoder-decoder model from above is trained, is used to model the distribution over the global latent variables.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 10,
+      "text": "This model is trained, presumably, in a conventional GAN style using the global latent variable representations inferred across the different training point clouds.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 11,
+      "text": "As compared to prior work by Achiloptas et al (2017), the proposed approach has the advantage to allow for sampling an arbitrary number of points from the target shape, rather than a fixed pre-defined number.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 12,
+      "text": "In addition, the authors propose to minimize a weighted average of a lower bound and upper bound on the Wasserstein distance between the distributions of points corresponding to given shapes.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 13,
+      "text": "This approach translates to improved quantitative evaluation measures,",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 14,
+      "text": "Experiments are conducted on a simple toy data set, as  a proof of concept, and on data from ModelNet10 and ModelNet40.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 15,
+      "text": "Two performance metrics are introduced to assess the auto-encoding ability of the model: to what extent does the encoder-decoder pipeline result in point clouds similar to the shape from which the input point-cloud is generated.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 16,
+      "text": "Overall I find the idea of the paper interesting and worth publishing, but the exposition of the paper is less than ideal and needs further work.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 17,
+      "text": "The experimental validation of the proposed approach can also be further improved, see more specific comments below.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 18,
+      "text": "Specific comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 19,
+      "text": "- The counter example at the bottom of page 2 is limited, in the sense that the oracle assumption seems highly non-realistic, casting doubt on the relevance of the argument.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 20,
+      "text": "- The notation in section 3 (before 3.1) is rather sloppy.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 21,
+      "text": "For example,",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 22,
+      "text": "- please define P and G, the elements of the divergence D(P||G) that appears in the first paragraph of section 3.",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 23,
+      "text": "- it is not defined in which space theta lives, it is not clear what the authors intend with the notation G_theta(u) \\sim p(theta).",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 24,
+      "text": "- what prior distributions p(z) and p(u) are used? What is the choice based on?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 25,
+      "text": "- abbreviation IPM is referred several times in the paper, but remains undefined in the paper until end of page 4, please define earlier.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 26,
+      "text": "- The model G_theta does not appear in the training objective function (4), how is this module trained precisely?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 27,
+      "text": "- Lack of clarity in the following passage: \u201cIn our setting, each point xi in the point cloud can be considered to correspond to single images when we train GANs over images\u201d",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 28,
+      "text": "- The notion of divergence D(P|G) is not made concrete in section 3 and 3.1, which makes the notation of rather little use.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 29,
+      "text": "- The following paper merits a discussion in the related work section:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 30,
+      "text": "\u201cTOWARDS A NEURAL STATISTICIAN\u201d, ICLR\u201917,",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 31,
+      "text": "https://openreview.net/pdf?id=HJDBUF5le",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 32,
+      "text": "- The manuscript contains many typos.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 33,
+      "text": "For example",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 34,
+      "text": "\u201cvedio\u201d op page 4, \u201ccircile\u201d on page 5, \u201ccondct\u201d on page 8, etc.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 35,
+      "text": "Please proof read your paper and fix these.",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 36,
+      "text": "The refenence to  Bengio 2018 is incomplete: what do you refer to precisely?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 37,
+      "text": "- There seems to be no mention of the dimension of the \u201clocal\u201d latent variables z_i.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 38,
+      "text": "Please comment on the choice, and its impact on the behavior of the model.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 39,
+      "text": "- The quantitative evaluation in table 1 is interesting and useful.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 40,
+      "text": "It is limited, however, in the sense that it (only) measures auto-encoding capabilities: to what extent can the shape be reproduced given a sample point cloud from the given shape.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 41,
+      "text": "Quantitative evaluation of generative modeling performance is unfortunately missing from this paper, as it is in much of the GAN literature.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 42,
+      "text": "Could you please comment on how this can/will be fixed?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 43,
+      "text": "- The toy data set experiments could be dropped  to make room for experiments suggested below.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 44,
+      "text": "- An experimental study of the effect of the mixing parameter \u201cs\u201d would be useful to include.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 45,
+      "text": "For example, by taking s on a grid from 0 to 1, one could plot the coverage and distance-to-face measures.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 46,
+      "text": "- Experimental evaluation of auto-encoding using a variable number of input points is interesting to add: ie how do the two evaluation measures evolve as a function of the number of points in the input point cloud?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 47,
+      "text": "- Similar, it is interesting to evaluate how auto encoding performs when non-uniform decimation of the input cloud is performed, eg what happens if we \u201cchop off\u201d part of the input point cloud (eg the legs of the chair), does the model recover and add the removed parts?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 48,
+      "text": "This is potentially useful to practitioners which have to deal with incomplete point clouds acquired by range scanners.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 49,
+      "text": "- Analysis of shapes with different genus and dimensions would be interesting.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 50,
+      "text": "Does the model manage to capture that some shapes have holes, or consists of a closed 2D surface (ball) vs an open surface (disk),",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "sentence_index": 51,
+      "text": "despite a simple prior on the local latent variables z?",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 0,
+      "text": "1. We apologize for typos and if any term is not defined at the appropriate places.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 1,
+      "text": "We  fixed all the typos and define the abbreviation for IPM at the first occurrence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 2,
+      "text": "Please check the revision.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 3,
+      "text": "P and G, the elements of the divergence D(P||G) that appears in the first paragraph of section 3, is defined in the subsequent two sentences in the same paragraph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 4,
+      "text": "By the notation G_theta(u) \\sim p(theta), we mean that we want to train the generator G_theta such that when fed a random variable u \\sim p(u), the distribution of G_theta(u) matches that of p(theta).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 5,
+      "text": "Sorry if it is confusing, but G_theta is not parameterized by theta, it just indicates that its the generator for theta. (Like G_x indicates that it is the generator for x).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 6,
+      "text": "2. The training of G_theta is described in the subsection titled \u201cHierarchical Sampling\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 7,
+      "text": "As correctly pointed out by the reviewer, that G_theta does not appear in the objective function (4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 8,
+      "text": "Using (4), we train G_x and Q networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 9,
+      "text": "After training G_x and Q, we use trained Q to collect inferred Q(X), for each point cloud X.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 10,
+      "text": "Then we train the generator G_theta using ordinary WGAN formulation to produce samples from same distribution as that of the samples Q(X) for each point cloud X. In addition to such two step training, a joint training also works, but is slower computationally, thus we report only the two step training in the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 11,
+      "text": "3. Quantitative evaluation of generative modeling performance is unfortunately very hard for real world problems like point clouds, which is the probable cause for it being missing from much of GAN literature.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 12,
+      "text": "Thus, to provide some quantitative results for generation, we resorted to the toy problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 13,
+      "text": "In the toy problem, we can accurately gauge the generation capabilities as can be seen from Figure 5.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 14,
+      "text": "(We did not explicitly provide numbers like KL divergence, as it is evident from the Figure that PC-GAN would be significantly better than AAEs if we evaluate the numbers.) The same protocol can be extended for measuring the quality of the final hierarchical sampling.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          41
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 15,
+      "text": "4. To showcase the effect of varying s, we chose the reasonable sized ModelNet10 dataset and ran for s=0, s=1, and three values s_1<s_2<s_3 in between.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 16,
+      "text": "The results are as follows:",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 17,
+      "text": "D2F (Distance to Face)       Coverage",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 18,
+      "text": "s=0                        6.03E+00                     3.36E-01",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 19,
+      "text": "s1",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 20,
+      "text": "6.06E+00                     3.41E-01",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 21,
+      "text": "s2",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 22,
+      "text": "5.77E+00                     3.47E-01",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 23,
+      "text": "s3",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 24,
+      "text": "6.85E+00                     3.56E-01",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 25,
+      "text": "s=1",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 26,
+      "text": "9.19E+00                     3.67E-01",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          44,
+          45
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeS7CQ83m",
+      "rebuttal_id": "S1x_7qgLAX",
+      "sentence_index": 27,
+      "text": "4. Yes the model nicely captures simple topological features of the object, like presence of holes versus being one solid object. Even in the latent space, objects with hole group together.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          46
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

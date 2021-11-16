@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "forum_id": "SJeLopEYDH",
+    "review_id": "rkgoA2UCKB",
+    "rebuttal_id": "ByeBzTMtiS",
+    "title": "V4D: 4D Convolutional Neural Networks for Video-level Representation Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJeLopEYDH&noteId=ByeBzTMtiS",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 0,
+      "text": "This paper presents 4D convolutional neural networks for video-level representations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 1,
+      "text": "To learn long-range evolution of spatio-temporal representation of videos, the authors proposed V4D convolution layer.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 2,
+      "text": "Benchmark on several video classification dataset shows improvement.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 3,
+      "text": "1. In section 3.1, the authors selected a snippet from each section, but this was not rigorously defined.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 4,
+      "text": "Same for action units.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 5,
+      "text": "It does intuitively makes sense, but more mathematical definition (e.g., dimensionality) may be needed.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 6,
+      "text": "2. In section 3.2, the authors argued that 3D kernel suffers from trade-off between receptive field and cost of computation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 7,
+      "text": "At the end of the subsection, the authors argue that 4D convolution is just k times larger than 3D kernels, which sounds like contradicting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 8,
+      "text": "3D convolution is already expensive and not scalable, but 4D operation sounds even more expensive and more prohibitive.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 9,
+      "text": "3. In the paper, the authors argued that clip-level feature learning is limited as it is hard to learn long-range spatio-temporal dependency.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 10,
+      "text": "It makes sense, and I expect the proposed model may benefit from its design for long-range spatio-temporal feature learning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 11,
+      "text": "However, what I see in the experiments is on ~300 frames for Mini-Kinetics and 36-72 frames for Something-Something dataset.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 12,
+      "text": "Assuming that a second is represented with 15-30 frames, this corresponds to 10-20 sec and 1-4 sec, respectively.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 13,
+      "text": "I'd say these short videos are still clips.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "sentence_index": 14,
+      "text": "The paper presents an interesting idea, but there are some issues that need to be addressed before published on ICLR.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 1,
+      "text": "We will address the issues you mentioned.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 2,
+      "text": "1.\tWe have added more details about sampling strategy to section 3.1 in the new version, with mathematical definition and dimensionality explicitly described.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 3,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 4,
+      "text": "We did not argue the computation cost of 3D kernels in section 3.2.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 5,
+      "text": "Instead, we argued that 3D kernels usually are not large enough to cover the holistic video so that Max Pooling operations are applied in most 3D CNNs to enlarge the receptive field.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 6,
+      "text": "Yet this causes the loss of detailed information.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 7,
+      "text": "But indeed, in order to preserve the details and increase the receptive field, simply enlarge the 3D kernels to cover the holistic video will bring enormous computation cost.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 8,
+      "text": "Considering a video of size UxTxHxW, where U is number of action units, and T,H,W means temporal length, height and width of each action unit.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 9,
+      "text": "In order to model the interaction of 1st frame and the (kT+1)th frame, a 3D kernel of at least (kT+1) x k x k has to be applied, which brings linear increasing of computation cost.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 10,
+      "text": "Yet with our 4D kernels, a simple k x k x k x k will cover the interaction from the 1st frame to the (kT+1)th frame, because 4D convolution can go beyond space and time, making the long range interaction possible.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 11,
+      "text": "For parameters, 4D kernels are k times larger than 3D kernels.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 12,
+      "text": "So in order to reduce the parameters, we apply k x k x 1 x 1 kernels in most experiments, as mentioned in section 3.2 and section 4.2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 13,
+      "text": "We also propose Residual 4D Blocks to ease the optimization and preserve short-term details.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 14,
+      "text": "3.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 15,
+      "text": "Yes, Mini-Kinetics and Kinetics contain videos about 10 seconds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 16,
+      "text": "For Something-Something-v1, they select one frame from every 12 frames so that the original video should be around 430 frames to 860 frames, which are of about half or one minute.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 17,
+      "text": "We agree that these are still too short to be called videos.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 18,
+      "text": "Yet here we call our method \u201cvideo-level\u201d mainly to stress that our V4D models the holistic duration instead of a certain part.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 19,
+      "text": "Additionally, we evaluated our V4D for untrimmed video classification on ActivityNet v1.3, which contains videos of 5 to 10 minutes and typically large time lapses of the videos are not related with any activity of interest.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 20,
+      "text": "The very competitive result is now reported in the appendix of the second version of paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rkgoA2UCKB",
+      "rebuttal_id": "ByeBzTMtiS",
+      "sentence_index": 21,
+      "text": "Hopefully our rebuttal could stress your concerns. If there are still any possible issues, please don\u2019t hesitate to tell us and we will response as soon as possible.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

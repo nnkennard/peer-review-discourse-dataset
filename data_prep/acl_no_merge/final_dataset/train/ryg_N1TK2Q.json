@@ -1,0 +1,511 @@
+{
+  "metadata": {
+    "forum_id": "rJNwDjAqYX",
+    "review_id": "ryg_N1TK2Q",
+    "rebuttal_id": "rJxwGHYQRm",
+    "title": "Large-Scale Study of Curiosity-Driven Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 9,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rJNwDjAqYX&noteId=rJxwGHYQRm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 0,
+      "text": "This paper studies the dynamics-based curiosity intrinsic reward where the agent is rewarded highly in states where the forward dynamic prediction errors are high in an embedding space (either due to complexity of the state or unfamiliarity).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 1,
+      "text": "Overall I like the paper, it's systematic and follows a series of practical considerations and step-by-step experimentations.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 2,
+      "text": "One of the main area which is missing in the paper is the comparison to two other class of RL methods: count-based exploration and novelty search.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 3,
+      "text": "While the section 4 has a discussion on related papers, there's no systematic experimental comparison across these methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 4,
+      "text": "In sec. 4, there's a reference to an initial set of experiments with count-based methods without much details.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 5,
+      "text": "Another area of improvement is the experiments around VAE.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 6,
+      "text": "While the paper shows experimentally that they aren't as successful as the RFs or IDFs, there's no further discussion on the reasons for poor performance.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 7,
+      "text": "Also it's not clear from the details in the paper what are the architectures for the VAE and RFs (there's a reference to the code but would've been better to have sufficient details in the paper).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 8,
+      "text": "An interesting area for future work could be on early stopping techniques for embedding training - it seems that RFs perform well without any training while in some scenarios the IDFs work overall the best.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 9,
+      "text": "So it would be interesting to explore how much training is needed for the embedding model.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 10,
+      "text": "RFs are never trained and IDFs are continuously trained.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "sentence_index": 11,
+      "text": "So maybe somewhere in between could be the sweet spot with training for a short while and then fixing the features.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 0,
+      "text": "We thank you for the constructive feedback and are glad that you enjoyed the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 1,
+      "text": "Here we discuss some of your comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 2,
+      "text": "R1: \"missing in the paper is the comparison to two other class of RL methods: count-based exploration... In sec. 4, there's a reference to an initial set of experiments with count-based methods without much details.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 3,
+      "text": "=> We chose to focus on dynamics-based approaches in this paper because we found them more straightforward to efficiently parallelize than the published pseudo-count methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 4,
+      "text": "This allows us to be able to run more and larger experiments on many environments.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 5,
+      "text": "Interestingly, increased parallelization also significantly helped the exploration strategies as shown in Figure 3(a).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 6,
+      "text": "Further, we will add the details of preliminary experiments using pseudo-count in the supplementary.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 7,
+      "text": "In particular, we were not able to find any official public implementation of the pseudo-count methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 8,
+      "text": "We experimented with a third party implementation trying to see if it could play Breakout without extrinsic rewards, but did not achieve sufficient success and found it to be too slow for scaling it up to a large-scale study.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 9,
+      "text": "R1: \"the experiments around VAE... While the paper shows experimentally that they aren't as successful... there's no further discussion on the reasons for poor performance.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 10,
+      "text": "=> We found that VAEs overall worked well and were sometimes better than other representation learning methods, but often were causing instability at training.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 11,
+      "text": "We don't claim such instability is an inherent property of the VAE feature learning method, but probably stems from the continually changing data distribution as agent makes progress.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 12,
+      "text": "Indeed modeling the density of a non-stationary distribution, with modes appearing and disappearing, is a challenging and an active research problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 13,
+      "text": "We will clarify this in the final version.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 14,
+      "text": "R1: \"An interesting area for future work could be on early stopping techniques for embedding training\u2026 maybe somewhere in between could be the sweet spot with training\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 15,
+      "text": "=> Thank you for the excellent suggestion.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 16,
+      "text": "We agree that there may be some optimal tradeoff between features that are stable and features that adapt to the environment.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 17,
+      "text": "Such tradeoffs would be interesting to investigate, and might be crucial to getting learned features to perform significantly better than fixed random features.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 18,
+      "text": "We will add this in the discussion/future work section of paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 19,
+      "text": "R1: \"What are the architectures for the VAE and RFs (there's a reference to the code but would've been better to have sufficient details in the paper).\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryg_N1TK2Q",
+      "rebuttal_id": "rJxwGHYQRm",
+      "sentence_index": 20,
+      "text": "=> Thank you. We will add more details on the architectures to the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

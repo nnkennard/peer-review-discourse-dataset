@@ -1,0 +1,701 @@
+{
+  "metadata": {
+    "forum_id": "rkgv9oRqtQ",
+    "review_id": "r1xXo7UF3m",
+    "rebuttal_id": "ryg0dWFrC7",
+    "title": "Compound Density Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkgv9oRqtQ&noteId=ryg0dWFrC7",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 0,
+      "text": "The paper addresses the problem of producing sensible (high) uncertainties on out of distribution (OOD) data along with accurate predictions on in-distribution data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 1,
+      "text": "The authors consider a model wherein the weights of the network (\\theta) are drawn from a matrix normal distribution whose parameters are in-turn a (non-linear; parameterized by a another network) function of the covariates (x).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 2,
+      "text": "Instead of inferring a posterior over theta that then induces the predictive uncertainties, uncertainties here arise from a regularizer that penalizes the distribution over theta from deviating too far from a standard Normal.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 3,
+      "text": "Experiments present results on toy data, MNIST/not MNIST as well as on adversarial perturbations of MNIST and CIFAR 10 datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 4,
+      "text": "The paper is clearly written and addresses an important problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 5,
+      "text": "The paper presents both an alternate model as well as an alternate objective function.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 6,
+      "text": "While the authors do report some interesting results, they do a poor job of motivating the proposed extensions.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 7,
+      "text": "It isn\u2019t clear why the particular proposals are necessary or to which of the proposed extensions the inflated OOD uncertainties can be attributed:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 8,
+      "text": "1. The proposed model? Is using a conditional weight prior p(\\theta | x) (Eq 3) instead of p(\\theta) (as in BNNs)  necessary for the inflated uncertainties on OOD data?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 9,
+      "text": "2. The  objective? The proposed objective,  Eq 5, trades off stochastically approximating the (conditional) marginal likelihood against not deviating too much from p(\\theta) =  MN(0, I, I) in the KL sense.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 10,
+      "text": "Depending on \\lambda, the objective either closely approximates the marginal likelihood or not.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 11,
+      "text": "It is unclear how important this particular objective is to the results.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 12,
+      "text": "-  Instead of relying on the KL regularizer, a standard approach to learning the model in Eq 3 would be to use well understood MCMC or variational methods that explicitly retain uncertainty in \\theta and induce predictive uncertainties.  Were they explored and found to be not effective?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 13,
+      "text": "It would be nice to see how a \u201cgold standard\u201d HMC based inference does on at least the small toy problem of Sec 5.1?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 14,
+      "text": "- There is also a closely related variant of Eq 3 which we can arrive at by switching the log and the expectation in the first term of Eq 5 and applying Jensen\u2019s inequality \u2014> E_p(\\theta| x)[ln p(y | x, \\theta)] - KL (p(\\theta | x) || p(\\theta)).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 15,
+      "text": "This would correspond to maximizing a valid lower bound to the marginal likelihood of a BNN model p(y | x, \\theta) p(\\theta), while interpreting p(\\theta | x) as an amortized variational approximation.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 16,
+      "text": "This variant has the advantage that it provides a valid lower bound on the marginal likelihood, and exploits the well understood variational inference machinery.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 17,
+      "text": "This also immediately suggests, that the variational approximation , p (\\theta | x)  should probably depend on both x and y rather than only on x and the flexibility of the hyper networks g would govern how well the true posterior over weights \\theta can be approximated.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 18,
+      "text": "Comparisons against these more standard inference algorithms is essential for understanding what advantages are afforded by the objective proposed in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 19,
+      "text": "3.  Or simply to a well tuned \\lambda, chosen on a per dataset basis? From the text it appears that \\lambda is manually selected to trade off accuracy against uncertainty on OOD data.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 20,
+      "text": "In the real world, one would not have access to OOD data during training, how is one to pick \\lambda in such cases?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 21,
+      "text": "Detailed comments about experiments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 22,
+      "text": "a) The uncertainties produced by CDN in Figure 2 seems strange.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 23,
+      "text": "Why does it go to nearly zero around x = 0, while being higher in surrounding regions with more data?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 24,
+      "text": "b) Down weighting the KL term by lambda for the VI techniques unfairly biases the comparison.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 25,
+      "text": "This forces the VI solution to tend to the MLE, sacrificing uncertainty in the variational distribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 26,
+      "text": "It would be good to include comparisons against VI with \\lambda = 1.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 27,
+      "text": "==========",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 28,
+      "text": "There are potentially interesting ideas in this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "sentence_index": 29,
+      "text": "However, as presented these ideas are poorly justified and careful comparisons against sensible baselines are missing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the valuable feedback!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 1,
+      "text": "The suggestion comments were very helpful and led to a clear improvement of our manuscript.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 2,
+      "text": "We reply to the answers and comments in the order they were raised:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 3,
+      "text": "(1) If one uses the same matrix-variate normal distribution that we use for p(\\theta | x) as approximate posterior p(\\theta) of a BNN in conjunction with the ELBO objective, one arrives at a BNN proposed by Louizos and Welling (2016) [1], i.e. the Variational Matrix Gaussian (VMG).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 4,
+      "text": "We found that VMG\u2019s results (obtained from their original code https://github.com/AMLab-Amsterdam/SEVDL_MGP) are not as good as that for the CDN, as shown in Figure 8 in the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 5,
+      "text": "This is further discussed in the newly added section 6.4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 6,
+      "text": "(2) Thank you for this valuable suggestion!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 7,
+      "text": "We have added a new section (Sec. 4) to discuss the differences between the objective used for CDN, when performing variational inference for BNNs, and in the variational information bottleneck (VIB) framework.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 8,
+      "text": "Furthermore, we present an experimental investigation of these different objectives (Sec. 6.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 9,
+      "text": "We found that the CDN objective leads to superior results, especially in the adversarial examples experiment.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 10,
+      "text": "(3) We observed that as \\lambda increases, in the validation set, the uncertainty is increasing, while the accuracy is decreasing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 11,
+      "text": "So",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 12,
+      "text": ", a simple heuristic that we use is to choose the highest \\lambda that allow high validation accuracy (e.g. > 0.97 on MNIST).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 13,
+      "text": "We found that this heuristic works very well in our experiments (the results have updated to reflect on this heuristic).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 14,
+      "text": "We have made this procedure clear in the revised manuscript.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 15,
+      "text": "Detailed comments about experiments:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 16,
+      "text": "(a) Thanks for catching this. Indeed this was due to a bug in the toy regression experiment which we have fixed now.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 17,
+      "text": "(b) We have revised the baselines so that they either use \\lambda = 1 or the settings that the original authors recommended.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 18,
+      "text": "We detail this in Appendix F.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 19,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xXo7UF3m",
+      "rebuttal_id": "ryg0dWFrC7",
+      "sentence_index": 20,
+      "text": "[1] Louizos, Christos, and Max Welling. \"Structured and efficient variational deep learning with matrix gaussian posteriors.\" International Conference on Machine Learning. 2016.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

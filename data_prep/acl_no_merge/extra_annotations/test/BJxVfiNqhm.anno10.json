@@ -1,0 +1,683 @@
+{
+  "metadata": {
+    "forum_id": "rkGG6s0qKQ",
+    "review_id": "BJxVfiNqhm",
+    "rebuttal_id": "H1e5hKOdTm",
+    "title": "The GAN Landscape: Losses, Architectures, Regularization, and Normalization",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkGG6s0qKQ&noteId=H1e5hKOdTm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 0,
+      "text": "(As a disclamer I want to point out I'm not an expert in GANs and have only a basic understanding of the sub-field, but arguably this would make me target audience of this paper).",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 1,
+      "text": "The authors presents a large scale study comparing a large number of GAN experiments, in this study they compare various choices of architechtures, losses and hyperparameters.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 2,
+      "text": "The first part of the paper describes the various losses, architectures, regularization and normalization schemes; and the second part describes the results of the comparison experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 3,
+      "text": "While I wish there were more such studies -- as I believe reproducing past results experimentally is important, and so is providing practical advice for practitioners -- this work in many parts hard to follow, and it is hard to get lot of new insight from the results, or a better understanding of GANs.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 4,
+      "text": "As far I can see the most important take home message of the paper can be summarized in \"one should consider non-saturating GAN loss and spectral normalization as default choices [...] Given additional computational budget, we suggest adding",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 5,
+      "text": "the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 6,
+      "text": "gradient penalty [...] and train the model until convergence\".",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 7,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 8,
+      "text": "- available source code",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 9,
+      "text": "- large number of experiments",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 10,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 11,
+      "text": "- the exposition could be improved, in particular the description of the plots is not very clear, I'm still not sure exactly what they show",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 12,
+      "text": "- not clear what the target audience of the first part (section 2) is, it is too technical for a survey intended for outsiders, and discusses subtle points that are not easy to understand without more knowledge, but at the same time seems unlikely to give additional insight to an insider",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 13,
+      "text": "- limited amount of new insight, which is limiting as new and better understanding of GANs and practical guidelines are arguably the main contribution of a work of this type",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 14,
+      "text": "Some suggestions that I think could make the paper stronger",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 15,
+      "text": "- I believe that in particular section 2 goes into too many mathematical details and subtleties that do not really add a lot.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 16,
+      "text": "I think that either the reader already understand those concepts well (which I admit, I don't really, I'm merely curious about GANs and have been following the action from a distance, hence my low confidence rating to this review), or if they does not, it will be very hard to get much out of it.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 17,
+      "text": "I would leave out some of the details, shortening the whole sections, and focus more on making a few of the concepts more understandable, and potentially leaving more space for a clearer description of the results",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 18,
+      "text": "- it is not really clear to be what data the graphs show: the boxplots show 5% of what data? does it also include the models obtained by gaussian process regression? and what about the line plots, is it the best model so far as you train more and more models? if so, how are those models chosen and ordered? are they the results of single models or average of multiple ones?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 19,
+      "text": "- \"the variance of models obtained by Guassian Process regression is handled implicitely so we tran each model once\"? I do not understand what this means, and I work with hyper-parameter tuning using gaussian processes daily.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 20,
+      "text": "It should probably be rephrased",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 21,
+      "text": "- at the start of section 3: what is an \"experiment\"?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 22,
+      "text": "- in 3.1 towards the end of the first paragraph, what is a \"study\", is that the same as experiment or something different?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 23,
+      "text": "- (minor) stating that lower is better in the graphs might be useful",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "sentence_index": 24,
+      "text": "- (minor) typo in page 5 \"We use a fixed the number\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 0,
+      "text": "Thank you for the comments, please find our responses to specific points below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 1,
+      "text": "[Q] \u201cAs far as I can see the most important take home message of the paper can be summarized in \"one should consider non-saturating GAN loss and spectral normalization as default choices [...] Given additional computational budget, we suggest adding the gradient penalty [...] and train the model until convergence.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 2,
+      "text": "[A] While we want this study to be approachable by non-experts, some level of formalism is required as our main audience are researchers working on or interested in GANs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 3,
+      "text": "The summary you provided is indeed correct -- coupled with our open-sourced code, it allows a non-expert to train a GAN with state-of-the-art methods without needing to understand the details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 4,
+      "text": "On the other hand, for more experienced researchers, we provide more details on which design choices generalize to new settings and identify the biggest obstacles towards fair and unbiased quantitative evaluation of generative models.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 5,
+      "text": "[Q] Limited amount of new insight.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 6,
+      "text": "[A] Our paper presents many useful insights, namely: NS-GAN performs well, spectral norm is a good default normalization technique, gradient penalty should also be considered, even in combination with spectral norm but will cost substantially more in terms of computational resources, popular metrics such as KID and FID result in the same relative ordering of the models so there is no point in computing both, most Resnet tricks do not matter, etc.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 7,
+      "text": "All of these insights are supported by a fair and unbiased rigorous experimental process.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 8,
+      "text": "On top of that, our experiments are reproducible (as already reported by other works), we shared the resulting code and the pre-trained models.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 9,
+      "text": "[Q] Clarification and exposition of plots.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 10,
+      "text": "[A] Say that you had access to a GPU and had to train a model (loss+penalty+architecture).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 11,
+      "text": "How many hyperparameter settings would you need to consider to achieve a certain quality?",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 12,
+      "text": "The FID from the plot is the estimate of the min FID computed by bootstrap estimation and the line-plots show this relationship.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 13,
+      "text": "In other words, given a computing budget, which model should you pick?",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 14,
+      "text": "We will provide additional details in the caption of the plot.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 15,
+      "text": "[Q] Bayesian optimization and variance.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 16,
+      "text": "[A] We agree and will provide more details.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 17,
+      "text": "When the sequential Bayesian optimization chooses the next set of hyperparameter combinations to test we run the model once (per hyperparameter combination) and report the scores to the optimizer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 18,
+      "text": "Then, the optimization algorithm takes these scores into account when selecting the next set of hyperparameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 19,
+      "text": "The algorithm itself trades-off exploration and exploitation and it can explore hyperparameters \"close\" to the existing ones if they seem promising.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 20,
+      "text": "Hence, the averaging happens implicitly during the search.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 21,
+      "text": "[Q]: Studies and experiments. Stating that lower is better in the plots.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 22,
+      "text": "[A]: Study is a set of experiments (say a study on the impact of the loss).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 23,
+      "text": "Experiment is a concrete run with certain hyperparameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJxVfiNqhm",
+      "rebuttal_id": "H1e5hKOdTm",
+      "sentence_index": 24,
+      "text": "Stating lower is better is a good idea, we will add this to the captions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

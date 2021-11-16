@@ -1,0 +1,567 @@
+{
+  "metadata": {
+    "forum_id": "rJehVyrKwH",
+    "review_id": "S1e82d0HqB",
+    "rebuttal_id": "rJlnnKJQiH",
+    "title": "And the Bit Goes Down: Revisiting the Quantization of Neural Networks",
+    "reviewer": "AnonReviewer4",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJehVyrKwH&noteId=rJlnnKJQiH",
+    "annotator": "anno12"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 0,
+      "text": "This paper proposes to use codes and codebooks to compress the weights.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 1,
+      "text": "The authors also try minimizing the layer reconstruction error instead of weight approximation error for better quantization results.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 2,
+      "text": "Distillation loss is also used for fine-tuning the quantized weight.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 3,
+      "text": "Empirical results on resnets show that the proposed method has a good compression ratio while maintaining competitive accuracy.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 4,
+      "text": "This paper is overall easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 5,
+      "text": "My main concern comes from the novelty of this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 6,
+      "text": "The two main contributions of the paper:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 7,
+      "text": "(1) using codes and codebooks to compress weights; and",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 8,
+      "text": "(2) minimizing layer reconstruction error instead of weight approximation error",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 9,
+      "text": "are both not new.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 10,
+      "text": "For instance, using codes and codebooks to compress the weights has already been used in [1,2].",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 11,
+      "text": "A weighted k-means solver is also used in [2], though the \"weighted\" in [2] comes from second-order information instead of minimizing reconstruction error.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 12,
+      "text": "In addition, minimizing reconstruction error has already been used in low-rank approximation[3] and network pruning[4].",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 13,
+      "text": "Clarification of the connections/differences, and comparison with these related methods should be made to show the efficacy of the proposed method.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 14,
+      "text": "It is not clear how the compression ratio in table 1 is obtained.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 15,
+      "text": "Say for block size d=4, an index is required for each block, and the resulting compression ratio is at most 4 (correct me if I understand it wrong).",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 16,
+      "text": "Can the authors provide an example to explain how to compute the compression ratio?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 17,
+      "text": "[1].",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 18,
+      "text": "Model compression as constrained optimization, with application to neural nets.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 19,
+      "text": "part ii: quantization.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 20,
+      "text": "[2]. Towards the limit of network quantization.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 21,
+      "text": "[3]. Efficient and Accurate Approximations of Nonlinear Convolutional Networks.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "sentence_index": 22,
+      "text": "[4]. ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 4 for stating that \u201cthe proposed method has a good compression ratio while maintaining competitive accuracy\u201d.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 1,
+      "text": "We provide clarification for the two main questions of the Reviewer below.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 2,
+      "text": "Novelty of the paper",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 3,
+      "text": "As we state in our introduction, using codebooks to compress networks is not new, as well as using a weighted k-means technique.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 4,
+      "text": "However, as we state in the paper: \u201cThe closest work we are aware of is the one by Choi et al. (2016), but the authors use a different objective (their weighted term is derived from second-order information) along with a different quantization technique (scalar quantization).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 5,
+      "text": "Our method targets a better in-domain reconstruction, as depicted by Figure 1\u201d.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 6,
+      "text": "Note that we already cite two of the suggested references by Reviewer 4, namely \u201cTowards the limit of network quantization\u201d and \u201cThiNet: A filter level pruning method for deep neural network compression\u201d in our work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 7,
+      "text": "We will further clarify our positioning in an updated version of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 8,
+      "text": "Compression ratio",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 9,
+      "text": "We provide an example of the computation of compression ratio in Section 4.1, paragraph \u201cMetrics\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 10,
+      "text": "Let us detail it further here.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 11,
+      "text": "The memory footprint of a compressed layer is split between the indexing cost (one index per block indicating the centroid used to encode the block) and the cost of storing the centroids.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 12,
+      "text": "Say we quantize a layer of size 128 \u00d7 128 \u00d7 3 \u00d7 3 with 256 centroids and a block size of 9.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 13,
+      "text": "Then, each block of size 9 is indexed by an integer between 0 and 255: such integer can be stored using 8 bits or 1 byte (as 2^8 = 256).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 14,
+      "text": "Thus, as we have 128 x 128 blocks, the indexing cost is 128 x 128 x 1 byte = 16,384 bytes = 16 kB.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 15,
+      "text": "Finally, we have to store 256 centroids of dimension 9 in fp16, which represents 256 x 9 floats (fp16) = 256 x 9 x 2 = 4,608 bits = 4.5 kB.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 16,
+      "text": "The size of the compressed model is the sum of the sizes of the compressed layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e82d0HqB",
+      "rebuttal_id": "rJlnnKJQiH",
+      "sentence_index": 17,
+      "text": "Finally, we deduce the overall compression ratio which is the size of the compressed model divided by the size of the non-compressed model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15,
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

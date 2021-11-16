@@ -1,0 +1,492 @@
+{
+  "metadata": {
+    "forum_id": "rklhqkHFDB",
+    "review_id": "rkgfiCmT5r",
+    "rebuttal_id": "ryln6geqiS",
+    "title": "LARGE SCALE REPRESENTATION LEARNING FROM TRIPLET COMPARISONS",
+    "reviewer": "AnonReviewer4",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rklhqkHFDB&noteId=ryln6geqiS",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 1,
+      "text": "Many prior works have found that the features output by the final layer of neural networks can often be used as informative representations for many tasks despite being trained for one in particular.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 2,
+      "text": "These feature representations, however, are learned transformations of low-level input representations, e.g. RGB values of an image.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 3,
+      "text": "In this paper, they aim to learn useful feature representations without meaningful low-level input representations, e.g. just an instance ID.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 4,
+      "text": "Instead, meaningful representations are learned through gathered triplet comparisons of these IDs, e.g. is instance A more similar to instance B or instance C? Similar existing techniques fall in the realm of learning ordinal embeddings, but this technique demonstrates speed-ups that allow it to scale to large real world datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 5,
+      "text": "The two primary contributions of the paper are given as:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 6,
+      "text": "- a showcase of the power of neural networks as a tool to approximately solve NP-hard optimization problems with discrete inputs",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 7,
+      "text": "- a scalable approach for the ordinal embedding problem",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 8,
+      "text": "After experimentation on synthetic data, they compare the effectiveness of their proposed method Ordinal Embedding Neural Network (OENN) against the baseline techniques of Local Ordinal Embedding (LOE) and t-distributed Stochastic Triplet Embedding (TSTE).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 9,
+      "text": "The test error given by the systems is comparable, but there are clear speed benefits to the proposed method OENN as the other techniques could not be run for a dataset size of 20k, 50k, or 100k.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 10,
+      "text": "Then, they gathered real-world data using MTurk applied to a subset of ImageNet and applied OENN to learning embeddings of different image instances using only the MTurk triplet information rather than the input RGB input features.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 11,
+      "text": "Decision: Weak Reject",
+      "suffix": "\n\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 12,
+      "text": "1. Interesting technique to take advantage of neural networks to efficiently learn ordinal embeddings from a set of relationships without a low-level feature representation, but I believe the experiments could be improved.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 13,
+      "text": "One of the main advantages of this approach is efficiency, which allows it to be used on large real-world datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 14,
+      "text": "The MTurk experiment gives a qualitative picture, but it could be improved with comparisons to pairwise distances learned through alternative means using the RGB image itself (given that images would permit such a comparison).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 15,
+      "text": "By this I mean, that you may be able to use relationships learned using conventional triplet methods which use input RGB features as ground truth, and test your learned relationships against those.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 16,
+      "text": "However, since quantitative exploration of large real-world datasets may be challenging and expensive to collect, the synthetic experiments could have been more detailed.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 17,
+      "text": "The message of synthetic experiments would be stronger if more of them were available and if the comparison between LOE, TSTE, and OENN was made on more of them.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 18,
+      "text": "2. I think that the claim that the use of neural networks with discrete inputs can approximately solve NP-hard optimization problems is an exciting one, which likely necessitates more experiments (or theoretical results), but as it stands I don't think it is a fundamentally different conclusion from the fact that this method provides a great scalable solution for the ordinal embedding problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 19,
+      "text": "This claim can be made secondarily or as motivation for continued exploration along this direction, but I think listing them as two distinct contributions is necessary.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 20,
+      "text": "Additional feedback:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 21,
+      "text": "Since quantitative real-world results are challenging to obtain, improved presentation of the qualitative results would be helpful as well.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 22,
+      "text": "You may be able to show more plots which help display the quality of the embedding space varying with the number of triplets used.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 23,
+      "text": "For example, an additional plot after Figure 5 (b) which shows a few scatter plots of points (color coded by class) for training with different numbers of collected triplets.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 24,
+      "text": "Also, since it should be fairly easy to distinguish between cars and animals or cars and food, it may be more interesting to focus on the heat-maps from along the block diagonal of Figure 5 (a) and talk about what relationships may have been uncovered within the animal or food subsets.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 25,
+      "text": "Very minor details:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 26,
+      "text": "In Figure 5, a legend indicating the relationship between color intensity and distance would be helpful.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "sentence_index": 27,
+      "text": "In Figure 6 there seem to be unnecessary discrepancies between the y-axis and colorbar of subplots (a) and (b), and keeping those more consistent would improve readability.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 1,
+      "text": "In the following, we address the comments individually:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 2,
+      "text": "-  Comparison with conventional triplet methods using images and their corresponding RGB images",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 3,
+      "text": "We did not consider comparisons with conventional triplet approaches: the message of our paper was not to demonstrate the utility of ordinal embedding approaches over conventional (representation-based) triplet approaches.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 4,
+      "text": "It was rather to show that when input representations are NOT available, we provide a scalable approach to solve the ordinal embedding problem.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 5,
+      "text": "We agree with the reviewer that such a comparison would be possible but the experiments, we believe, would not reflect the message of the paper.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 6,
+      "text": "-  More synthetic experiments comparing the various ordinal embedding approaches",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 7,
+      "text": "There is a large literature that compares existing ordinal embedding approaches, and in order to not overload the figures, we had decided to just compare against the most popular traditional algorithms. But we can definitely add more comparisons in the revision of the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 8,
+      "text": "-",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 9,
+      "text": "The \u201cclaim that the use of neural networks with discrete inputs can approximately solve NP-hard optimization problems\u201d",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 10,
+      "text": "We would like to clarify that our claim was merely that we use neural networks to address ONE instance of an NP-hard optimization problem.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgfiCmT5r",
+      "rebuttal_id": "ryln6geqiS",
+      "sentence_index": 11,
+      "text": "We want to bring attention to the generic idea of using neural networks as optimization toolboxes to directly solve non-convex optimization objectives instead of merely for learning problems.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

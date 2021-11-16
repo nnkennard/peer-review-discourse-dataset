@@ -1,0 +1,1085 @@
+{
+  "metadata": {
+    "forum_id": "ryxLG2RcYX",
+    "review_id": "rylm4WhLTQ",
+    "rebuttal_id": "r1eQOgK90m",
+    "title": "Learning Abstract Models for Long-Horizon Exploration",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryxLG2RcYX&noteId=r1eQOgK90m",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 0,
+      "text": "This paper deal with learning abstract MDPs for planning in tasks that require long-horizon due to sparse rewards.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 1,
+      "text": "This is an extremely important and timely topic in the RL community.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 2,
+      "text": "The paper is generally clear and well written.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 3,
+      "text": "The proposed algorithm seems reasonable and it is conceptually simple to understand.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 4,
+      "text": "In the current experimental results presented it also seems to outperform the alternative baselines.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 5,
+      "text": "Nonetheless, the paper has few flaws that significantly impact the stated contributions and reduced my rating.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 6,
+      "text": "1) a stated contribution are theoretical guarantees about the performance of the algorithm.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 7,
+      "text": "this analysis is not currently included in the main body of the manuscript, but rather in the appendix, which I find rather annoying.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 8,
+      "text": "Moreover, said the analysis is in my opinion not sufficiently rigorous, with hand-wavy arguments, no formal proof and unclear terms (e.g. how do you define near-optimal?)",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 9,
+      "text": ".",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 10,
+      "text": "Moreover, as observed by the authors this analysis currently rely on strong assumptions that might make it rather unrealistic.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 11,
+      "text": "Overall, if you want to claim theoretical guarantees you will have to significantly improve the manuscript.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 12,
+      "text": "2) Related work, although extensive in terms of the number of references, do not help to place this work in the literature.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 13,
+      "text": "Listing related work is no the same as describing similarities and differences compared to previous methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 14,
+      "text": "For example, a paper that obviously comes to mind is \"FeUdal Networks for Hierarchical Reinforcement Learning\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 15,
+      "text": "What are the differences to your approach?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 16,
+      "text": "Also, please place the related work earlier on in the paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 17,
+      "text": "Otherwise, it is impossible for a reader to correctly and objectively relate your proposed approach to previous literature.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 18,
+      "text": "3) In its current form, the experimental results are extremely cherry-picked, with a very small number of tasks evaluated, and for each task a single selected baseline used.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 19,
+      "text": "This needs to be changed: a) you should run all the baselines for each of the current tasks b) you should also expand the experiments evaluated to include tasks where it is not obvious that a hierarchy would help/is necessary c) you should include more baselines.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 20,
+      "text": "feudal RL should be one, Roderick et al 2017 should be another one (especially considering your discussion in Sec 8)",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 21,
+      "text": "Additional feedback:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 22,
+      "text": "- The paper is currently oriented towards discrete states. What can you say about continuous spaces?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "arg_other",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 23,
+      "text": "- The use of random exploration for the discoverer is underwhelming. Have you tried different approaches? Would more advanced exploration techniques work or improve the performance?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 24,
+      "text": "- Using only 4 seeds seems too little to provide accurate standard deviations.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 25,
+      "text": "Please run at least 10 experiments.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 26,
+      "text": "- The use of RAM is a fairly serious limitation of your experimental setting in my view. You should include results also for the pixel space, even if negative.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "sentence_index": 27,
+      "text": "Otherwise, this choice is incomprehensible.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 1 for their detailed comments and feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 1,
+      "text": "Reviewer 1\u2019s main concerns are 1) that the related works section does not sufficiently frame our work with previous literature, 2) that the proofs of theoretical guarantees are not sufficiently rigorous, and 3) that the experiments section is not comprehensive enough.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 2,
+      "text": "We have posted a significantly updated new draft to address these concerns.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 3,
+      "text": "-------------------------------------",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 4,
+      "text": "Experiments",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 5,
+      "text": "Reviewer 1 claims that we do not sufficiently compare with enough other methods, and specifically asks for comparisons with Feudal Networks (FuN) and Roderick et al., 2017.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 6,
+      "text": "We already comprehensively compare with the prior non-demonstration state-of-the-art, which use a comparable amount of prior knowledge, in each game.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 7,
+      "text": "Since we already compare with the prior state-of-the-art approaches, and other approaches perform significantly worse than the prior state-of-the-art approaches, we do not compare with the many other deep RL approaches.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 8,
+      "text": "In particular, FuN and Roderick et al., 2017 both report results on Montezuma\u2019s Revenge.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 9,
+      "text": "The prior state-of-the-art approach we compare against, SmartHash, outperforms these approaches by 1.75x and 4x respectively, at the number of frames they report (200M and 50M respectively).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 10,
+      "text": "Our approach further outperforms SmartHash by over 2x.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 11,
+      "text": "Reviewer 1 further asks for evaluation on more games.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 12,
+      "text": "We believe that we have already demonstrated a significant improvement over the prior state-of-the-art, and additional experiments could be prohibitively expensive.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 13,
+      "text": "In particular, we follow Aytar et al., 2018, and evaluate on 3 of the hardest exploration games from the Arcade Learning Environment.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 14,
+      "text": "We do not evaluate on many of the simpler other games (e.g., Breakout), because they do not require sophisticated exploration and can already be solved with current state-of-the-art methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 15,
+      "text": "We use the same set of minimally tuned hyperparameters (tuned only on Montezuma\u2019s Revenge) and obtain new state-of-the-art results by over 2x, suggesting that our approach can generalize to new tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 16,
+      "text": "Our results are not cherry-picked as R1 suggests: following many recent deep RL works, e.g., Ostrovski et al., 2017, Tang et al., 2017, we run 4 seeds on each task, and obtain statistically significant results.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 17,
+      "text": "Even our *worst seed* outperforms or is competitive with the prior state-of-the-art *best seed*.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 18,
+      "text": "We note that running 10 seeds would approximately cost $30,000 per additional game in compute.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 19,
+      "text": "Renting the appropriate equipment (e.g., via Google Cloud) to run a single seed to completion costs ~$1,500.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 20,
+      "text": "To run 20 seeds (10 for our approach, 10 for the prior state-of-the-art) would cost 20 x $1,500 = $30,000 or roughly the median US annual salary.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 21,
+      "text": "---------------------------------------",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 22,
+      "text": "Related Works",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 23,
+      "text": "We\u2019ve updated the related works section in our recently posted draft to more carefully compare  Please see Sections 1 and 7 for updated related work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 24,
+      "text": "The main critical difference between our work and other HRL works is that we build an abstract MDP, which enables us to plan for targeted exploration; other works also learn skills and operate in latent abstract state spaces, but not necessarily in a way that satisfies the property of an MDP, which can make effectively using the learned skills difficult.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 25,
+      "text": "--------------------------------------",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 26,
+      "text": "Theory",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 27,
+      "text": "In the updated draft of our paper, we have updated the rigor of the theory section: please see Section 5 and Appendix C for updated theory.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 28,
+      "text": "To summarize: we\u2019re interested in the sample complexity of RL algorithms, i.e., the number of samples required for the learned policy to become near-optimal (achieve reward at most epsilon less than the optimal policy).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 29,
+      "text": "Standard results (e.g., MBIE-EB, R-MAX) can guarantee a near-optimal policy, but they require so many samples (polynomial in the size of the state space) in deep RL settings, that the guarantees are effectively vacuous.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 30,
+      "text": "In contrast, for a subclass of MDPs, our approach provably learns a near-optimal policy in a number of samples polynomial in the size of the *abstract* MDP.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 31,
+      "text": "Responding to R1's additional feedback:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 32,
+      "text": "R1 asks if our method applies to continuous spaces.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 33,
+      "text": "Our method applies to continuous spaces with no changes, we can just discretize the abstract state (not the concrete state).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 34,
+      "text": "In particular, our method may be well-suited for many robotics tasks, which often have the full state (e.g., joint angles and object positions) available.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 35,
+      "text": "For example, in a task like stacking blocks with a robotic arm, a good state abstraction function would be the position of the end effector and blocks, which are directly available in the state (e.g., in Stacker from DM Control Suite).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 36,
+      "text": "R1 says that the randomized exploration used by the discoverer is underwhelming.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 37,
+      "text": "We view the simplicity of the discoverer as advantageous.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 38,
+      "text": "Fundamentally, exploration requires some degree of randomness, and we were already able to achieve state-of-the-art results without overcomplicating the discoverer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 39,
+      "text": "We note that this random exploration is only for locally discovering nearby abstract states.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 40,
+      "text": "Globally, we drive exploration by incrementally growing the safe set (renamed known set in the updated draft).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 41,
+      "text": "R1 asks for experiments that do not use RAM state information.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 42,
+      "text": "We clarify that we use the RAM state information for the state abstraction function, which is a fundamental component of our work, so it is not possible to run experiments without this RAM information.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 43,
+      "text": "However, we explore the robustness of our method to the exact chosen abstraction in section 7.4 and find that our method achieves state-of-the-art results over a wide range of state abstraction functions, suggesting that alternate state abstraction functions could be used.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylm4WhLTQ",
+      "rebuttal_id": "r1eQOgK90m",
+      "sentence_index": 44,
+      "text": "We also note that our experiments compare with state-of-the-art approaches, which also use prior knowledge comparable to our usage of RAM state information.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "forum_id": "HJx7l309Fm",
+    "review_id": "S1xzqlrChm",
+    "rebuttal_id": "SygCO0Nt6X",
+    "title": "Actor-Attention-Critic for Multi-Agent Reinforcement Learning",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJx7l309Fm&noteId=SygCO0Nt6X",
+    "annotator": "anno1"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 0,
+      "text": "The paper considers an actor-critic scheme for multiagent RL, where the critic is specific to each agent and has access to all other agents' embedded observations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 1,
+      "text": "The main idea is to use an attention mechanism in the critic that learns to selectively scale the contributions of the other agents.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 2,
+      "text": "The paper presents sufficient motivation and background, and the proposed algorithmic implementation seems reasonable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 3,
+      "text": "The proposed scheme is compared to two recent algorithms for centralized training of decentralized policies, and shows comparable or better results on two synthetic multiagent problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 4,
+      "text": "I believe that the idea and approach of the paper are interesting and contribute to the multiagent learning literature.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 5,
+      "text": "Regarding cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 6,
+      "text": "- The critical structural choices (such as the attention model in section 3.2) are presented without too much justification, discussion of alternatives, etc.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 7,
+      "text": "- The experiments show the learning results, but do not provide a peak \"under the hood\" to understand the way attention evolved and contributed to the results.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "sentence_index": 8,
+      "text": "- The experiments show good results compared to existing algorithms, but not impressively so.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 0,
+      "text": "Thank you for your comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 1,
+      "text": "With regard to the structural choices of the attention model, our decision was based on a survey of attention-based methods used across various applications and their suitability for our problem setting.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 2,
+      "text": "Our mechanism was designed such that, given a set of independent embeddings, each item in the set can be used to both extract a weighted sum of the other items as well as contribute to the weighted sums that other items extract.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 3,
+      "text": "When applied to multi-agent value-function approximation, each item can belong to an agent and the separate weighted sums can be used to estimate each agent\u2019s expected return.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 4,
+      "text": "Some other choices of attention mechanisms such as RNN-based ones (widely used in NLP), while interesting, do not naturally extend to our setting as our inputs (ie embeddings from agents) do not form a natural temporal order.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 5,
+      "text": "We have updated our draft to provide more insight into our choices.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 6,
+      "text": "We have included a new section 6.3 in the appendix of our revised draft that visualizes the behavior of our attention mechanism, as well as how it evolves over the course of training.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 7,
+      "text": "While our approach does not significantly outperform the best individual baseline in each environment, it consistently performs near the top in all environments --- other methods falter in at least one of the two settings.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 8,
+      "text": "Our experiments on Cooperative Treasure Collection demonstrate that the general structure of our attention model (even without considering dynamic attention as in our uniform attention baseline) is able to handle large observation spaces (and relatively larger numbers of agents) better than existing approaches which concatenate observations and actions from all agents together.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1xzqlrChm",
+      "rebuttal_id": "SygCO0Nt6X",
+      "sentence_index": 9,
+      "text": "Furthermore, our experiments on Rover-Tower demonstrate that the general model structure alone is not sufficient in all tasks, specifically those with separately coupled rewards for groups of agents, and dynamic attention becomes necessary.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

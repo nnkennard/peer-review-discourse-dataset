@@ -1,0 +1,525 @@
+{
+  "metadata": {
+    "forum_id": "SJNceh0cFX",
+    "review_id": "HJgQO5qAnQ",
+    "rebuttal_id": "B1gDcrvdCm",
+    "title": "A   RECURRENT NEURAL CASCADE-BASED MODEL FOR CONTINUOUS-TIME DIFFUSION PROCESS",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJNceh0cFX&noteId=B1gDcrvdCm",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 0,
+      "text": "The problem that the paper tackles is very important and the approach to tackle it id appealing.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 1,
+      "text": "The idea of regarding the history as a tree looks very promising.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 2,
+      "text": "However, it\u2019s noteworthy that embedding to a vector could be useful too if the embedding espace is representative of the entire history and the timing of the events.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 3,
+      "text": "Using neural network if an interesting choice for capturing the influence probability and its timing.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 4,
+      "text": "The authors need to be clear about their contribution. Is the paper only about replacing the traditional parametric functions of influence and probability with  deep neural networks?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 5,
+      "text": "The experimental sections look rather mechanical. I would have put some results on the learned embedding. Or some demonstration of the embedded history or probability to intuitively convey the idea and how it works.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 6,
+      "text": "This could have made the paper much stronger.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 7,
+      "text": "It was nice that the paper iterated and reviewed the possible inference and learning ways.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 8,
+      "text": "There is one more way.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 9,
+      "text": "Similar to [1] one can use MCMC with importance sampling on auxiliary variables to infer the hidden diffusion given the observed cascades in continuous-time independent cascade model.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 10,
+      "text": "The paper can benefit from a proofreading.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 11,
+      "text": "There are a few typos throughout the paper such as:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 12,
+      "text": "Reference is missing in section 2.1",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 13,
+      "text": "Page 2 paragraph 1: \u201can neural attention mechanism\u201d",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "sentence_index": 14,
+      "text": "[1] Back to the Past: Source Identification in Diffusion Networks from Partially Observed Cascades, AISTATS 2015",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 0,
+      "text": "Thanks for your valuable comments and feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 1,
+      "text": "R: \"The authors need to be clear about their contribution. Is the paper only about replacing the traditional parametric functions of influence and probability with  deep neural networks? \"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 2,
+      "text": "A: Yes but not only.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 3,
+      "text": "We propose to go beyond the classical markov hypothesis of cascade models that states that any infected node owns the same transmission probabilities whatever from whom comes the propagated content.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 4,
+      "text": "We indeed do this by replacing the traditional parametric functions with  deep neural networks, which enables to consider recurrent latent states for infected nodes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 5,
+      "text": "This allows us to embed the past in node states and hence to output different future diffusion distributions regarding the past trajectory of the propagated content, which is our main contribution (a cascade model with neural network was already proposed for instance in (bourigault et al., 2016) but without past inclusion).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 6,
+      "text": "While existing works on cascade models learn parameters by inferring the direct infector of every infected node (i.e., estimating $P(I_i|D_{\\leq i})$), we need to infer the whole past trajectory to compute node states (i.e., considering $P(I_i|D,I_{<i})$), which is greatly more difficult but the proposed learning approach allowed us to efficiently deal with it.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 7,
+      "text": "R: \"The experimental sections look rather mechanical. I would have put some results on the learned embedding. Or some demonstration of the embedded history or probability to intuitively convey the idea and how it works. This could have made the paper much stronger.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 8,
+      "text": "A: To give more clues about the good behavior of the algorithm, we added results about the accuracy of the sampled trajectories on the artificial datasets (for which we have the ground truth on who infected whom).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 9,
+      "text": "We report the rate of good infector choices (i.e., the rate of I_i that equal the ground truth) for our approach and the others.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 10,
+      "text": "Results show that our approach actually performs better infector choices than CTIC which does not consider the history of the diffusion in its infection probabilities.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 11,
+      "text": "The use of our recurrent architecture helps the process to distinguish some different diffusion contexts from the past.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 12,
+      "text": "We also added a second artificial dataset to further analyze the behavior of the approaches.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 13,
+      "text": "R: \"It was nice that the paper iterated and reviewed the possible inference and learning ways. There is one more way. Similar to [1] one can use MCMC with importance sampling on auxiliary variables to infer the hidden diffusion given the observed cascades in continuous-time independent cascade model.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 14,
+      "text": "A: Thanks for the proposal and the reference that we added in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 15,
+      "text": "The full computation of the posterior distributions could indeed be avoided by using an importance sampling MCMC procedure with auxiliary variables",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 16,
+      "text": "(such as done in [1] in the context of diffusion source detection), but in our context we think that the increased computation efficiency would be at the cost of a very higher variance in the learning process, due to the strong intrication of latent and observed variables.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 17,
+      "text": "In [1], the problem is easier: they do not have to perform optimization on the diffusion parameters (since relying on a diffusion model learned a priori), the problem is to sample hidden infection times to estimate likelihoods and then identifying the most probable source of diffusion.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 18,
+      "text": "R: \"The paper can benefit from a proofreading.\"",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJgQO5qAnQ",
+      "rebuttal_id": "B1gDcrvdCm",
+      "sentence_index": 19,
+      "text": "A: Thanks, we indeed corrected serveral typos like this in the new version of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

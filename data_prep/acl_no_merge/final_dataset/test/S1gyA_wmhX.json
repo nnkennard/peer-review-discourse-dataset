@@ -1,0 +1,495 @@
+{
+  "metadata": {
+    "forum_id": "SklckhR5Ym",
+    "review_id": "S1gyA_wmhX",
+    "rebuttal_id": "HylZSxkGAQ",
+    "title": "Improved Language Modeling by Decoding the Past",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SklckhR5Ym&noteId=HylZSxkGAQ",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 0,
+      "text": "The paper suggests a new regularization technique which can be added on top of those used in AWD-LSTM of Merity et al. (2017) with little overhead.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 1,
+      "text": "This is a well-written paper with a clear structure.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 2,
+      "text": "The experiments are presented in a clear and understandable fashion, and the evaluation seems thorough.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 3,
+      "text": "The methodology seems sound, and the authors present the reader with all the information needed to replicate the experiments.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 4,
+      "text": "I would only suggest evaluating this technique on AWD-LSTM-MoS of Yang et al. (2017) to get a more complete picture.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 5,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 6,
+      "text": "- Merity, S., Keskar, N.S. and Socher, R., 2017. Regularizing and optimizing LSTM language models. arXiv preprint arXiv:1708.02182.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 7,
+      "text": "- Yang, Z., Dai, Z., Salakhutdinov, R. and Cohen, W.W., 2017. Breaking the softmax bottleneck: A high-rank RNN language model.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "sentence_index": 8,
+      "text": "arXiv preprint arXiv:1711.03953.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer very much for reading the paper carefully and providing us with constructive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 1,
+      "text": "We have conducted further experiments applying our Past Decode Regularization (PDR) to the mixture-of-softmax (AWD-LSTM-MoS) model of (Yang et al. 2017).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 2,
+      "text": "We use the same model sizes as in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 3,
+      "text": "Even with the very limited hyperparameter search in the vicinity of those used in the paper and fixing the PDR loss coefficient to 0.001 (as used in the other models in our paper), we see consistent gains on the Penn Treebank and WikiText-2 datasets.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 4,
+      "text": "The validation/test perplexities are as follows -",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 5,
+      "text": "AWD-LSTM-MoS+PDR  || AWD-LSTM-MoS (Yang et al. 2017)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 6,
+      "text": "Penn Treebank with finetuning -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 7,
+      "text": "56.2/53.8",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 8,
+      "text": "||  56.5/54.4",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 9,
+      "text": "Penn Treebank with dynamic evaluation -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 10,
+      "text": "48.0/47.3",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 11,
+      "text": "||  48.3/47.7",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 12,
+      "text": "WikiText-2 with finetuning -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 13,
+      "text": "63.0/60.5",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 14,
+      "text": "||  63.9/61.5",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 15,
+      "text": "WikiText-2 with dynamic evaluation -",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 16,
+      "text": "42.0/40.3",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 17,
+      "text": "||  42.4/40.7",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 18,
+      "text": "Thus we observe gains of 0.6 and 1.0 points in test perplexity for PTB and WT2.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 19,
+      "text": "With dynamic evaluation, the gains for both datasets is 0.4 points.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 20,
+      "text": "Note again that we did a very limited hyperparameter search and more exhaustive experiments will likely lead to even better gains by using PDR.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 21,
+      "text": "We will update and reorganize the experiments section in the paper accordingly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 22,
+      "text": "The updated manuscript will be posted shortly.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "S1gyA_wmhX",
+      "rebuttal_id": "HylZSxkGAQ",
+      "sentence_index": 23,
+      "text": "Yang et al. 2017. Breaking the softmax bottleneck: A high-rank RNN language model. arXiv:1711.03953.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "forum_id": "rygjN3C9F7",
+    "review_id": "BkerznG53Q",
+    "rebuttal_id": "Syxm7-moAm",
+    "title": "The Variational Deficiency Bottleneck",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rygjN3C9F7&noteId=Syxm7-moAm",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 0,
+      "text": "This paper introduces deficiency bottleneck for learning a data representation and represent  complicated channels using simpler ones.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 1,
+      "text": "This problem has a natural variational form that can be easily implemented from VIB.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 2,
+      "text": "Experiments show good performance comparing to VIB.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 3,
+      "text": "This paper is well-written and easy to read.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 4,
+      "text": "The idea using KL divergence creating a deficiency channel to learn data representation is very natural.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 5,
+      "text": "It is interesting that this formulation could be understood as minimizing a regularized risk gap of statistical decision problems, which justifies the usage of deficiency bottleneck (eq.9).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 6,
+      "text": "My biggest concern is the lack of comparison with other representation learning methods, which is a very well studied problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 7,
+      "text": "However, it looks like authors only compared with VIB which is similar to the proposed method in terms of the objective function.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 8,
+      "text": "For example, how does the method compare with (variants of) Variational Autoencoder?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "sentence_index": 9,
+      "text": "A discussion on this or some empirical evaluations would be nice.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 0,
+      "text": "Thank you for your comments!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 1,
+      "text": "* We have enhanced Appendix E with a discussion on some variants of the VAE that generalize the standard evidence lower bound (ELBO) by incorporating different bottleneck constraints to learn better representations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 2,
+      "text": "In particular, we discuss how our unsupervised objective (p. 18, equation 38) relates to the beta-VAE and the importance weighted autoencoder (Appendix E.1, p. 17,18).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 3,
+      "text": "* Please note that our unsupervised objective (p. 18, equation 38) contains the beta-VAE as a special case when we use only one sample from the encoding distribution (M=1).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 4,
+      "text": "This means that we are naturally comparing with that method.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 5,
+      "text": "* Appendix E.2 (p. 18) now discusses implementation details of the unsupervised objective.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 6,
+      "text": "Finally, we have included some visualizations in Appendix E.3 for the MNIST and FMNIST datasets for different values of M and beta.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 7,
+      "text": "We agree that more comparisons will be beneficial in investigating the properties of the proposed method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkerznG53Q",
+      "rebuttal_id": "Syxm7-moAm",
+      "sentence_index": 8,
+      "text": "This is something we are actively working on.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

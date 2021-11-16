@@ -1,0 +1,825 @@
+{
+  "metadata": {
+    "forum_id": "ryxjH3R5KQ",
+    "review_id": "rylJA7G82Q",
+    "rebuttal_id": "S1xBci1FAm",
+    "title": "Single Shot Neural Architecture Search Via Direct Sparse Optimization",
+    "reviewer": "AnonReviewer1",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ryxjH3R5KQ&noteId=S1xBci1FAm",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 0,
+      "text": "The authors present an architecture search method where connections are removed with sparse regularization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 1,
+      "text": "It produces good network blocks relatively quickly that perform well on CIFAR/ImageNet.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 2,
+      "text": "There are a few grammatical/spelling errors that need ironing out.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 3,
+      "text": "e.g. \"In specific\" --> \"Specifically\" in the abstract, \"computational budge\" -> \"budget\" (page 6) etc.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 4,
+      "text": "A few (roughly chronological comments).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 5,
+      "text": "- Pioneering work is not necessarily equivalent to \"using all the GPUs\"",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 6,
+      "text": "- There are better words than \"decent\" to describe the performance of DARTS, as it's very similar to the results in this work!",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 7,
+      "text": "- From figure 2 it's not clear why all non-zero connections in (b) are then equally weighted in (c). Would keeping the non-zero weightings be at all helpful?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 8,
+      "text": "-  Why have you chosen the 4 operations at the bottom of page 4? It appears to be a subset of those used in DARTS.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 9,
+      "text": "- How do you specifically encode the number of surviving connections? Is it entirely dependent on budget?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 10,
+      "text": "- You should add DARTS 1st order to table 1.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 11,
+      "text": "- Measuring in GPU days is only meaningful if you use the same GPU make for every experiment. Which did you use?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 12,
+      "text": "- The ablation study is good, and the results are impressive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 13,
+      "text": "I propose a marginal acceptance for this paper as it produces impressive results in what appears to be a short amount of search time.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 14,
+      "text": "However, the implementation details are hazy, and some design choices (which operations, hyperparameters etc.) aren't well justified.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 15,
+      "text": "------------",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 16,
+      "text": "UPDATE: Score changed based on author resposne",
+      "suffix": "\n",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "sentence_index": 17,
+      "text": "------------",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 0,
+      "text": "Thanks for your thoughtful review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 1,
+      "text": "We have given serious considerations of your concerns and revise our manuscript to accommodate your suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 2,
+      "text": "Please see the details below.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 3,
+      "text": "Q1: \u201cThere are a few grammatical/spelling errors that need ironing out.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 4,
+      "text": "A1: We have fixed the typos and grammatical errors in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 5,
+      "text": "Q2: \u201cPioneering work is not necessarily equivalent to \"using all the GPUs\"\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 6,
+      "text": "A2: This claim is indeed not accurate we have delete this claim in the revision.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 7,
+      "text": "Q3: \u201cThere are better words than \"decent\" to describe the performance of DARTS, as it's very similar to the results in this work!\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 8,
+      "text": "A3: We have changed the word to \u201cimpressive\u201d in the revision. However, DSO-NAS indeed outperforms DARTS on ImageNet dataset as illustrated in Table2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 9,
+      "text": "Q4: \u201cFrom figure 2 it's not clear why all non-zero connections in (b) are then equally weighted in (c). Would keeping the non-zero weightings be at all helpful?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 10,
+      "text": "A4: In the search stage, the scaling factors are only used to indicate which operators should be pruned.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 11,
+      "text": "The value of scaling factors do not represent the importances of kept operators since they can be merged into the weights of convolution.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 12,
+      "text": "We also add experiments in CIFAR-10 to compare the performance between keeping the non-zero weightings and equal weightings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 13,
+      "text": "The result shows that both of them yield similar performances.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 14,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 15,
+      "text": "Architecture         \t                    params(M)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 16,
+      "text": "test error",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 17,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 18,
+      "text": "DSO-NAS-share+c/o",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 19,
+      "text": "3.0                        \t2.84",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 20,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 21,
+      "text": "DSO-NAS-share+c/o+k/w",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 22,
+      "text": "3.0                              2.88",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 23,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 24,
+      "text": "DSO-NAS-full+c/o",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 25,
+      "text": "3.0                        \t2.95",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 26,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 27,
+      "text": "DSO-NAS-full+c/o+k/w",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 28,
+      "text": "3.0                        \t2.96",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 29,
+      "text": "---------------------------------------------------------------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 30,
+      "text": "where \u201cc/o\u201d represents that training the searched architectures with cutout and \u201ck/w\u201d represents keeping the non-zero weightings in the architectures.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 31,
+      "text": "Q5: \u201cWhy have you chosen the 4 operations at the bottom of page 4?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 32,
+      "text": "A5: These four operations were used by ENAS and commonly included in the search space of most NAS papers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 33,
+      "text": "Q6: \u201cHow do you specifically encode the number of surviving connections?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 34,
+      "text": "A6: We don\u2019t directly encode the number of surviving connections.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 35,
+      "text": "Instead, the number of surviving connections is determined by the weight for L1 regularization, which can be incorporated with certain budget.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 36,
+      "text": "Q7: \u201cMeasuring in GPU days is only meaningful if you use the same GPU make for every experiment. Which did you use?\u201d",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 37,
+      "text": "A7: All of our experiments were conducted by NVIDIA GTX 1080Ti GPU, which was also used by ENAS and DARTS.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJA7G82Q",
+      "rebuttal_id": "S1xBci1FAm",
+      "sentence_index": 38,
+      "text": "We have added it in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "forum_id": "ryxMW6EtPB",
+    "review_id": "Hyx014dhFr",
+    "rebuttal_id": "r1ebBXO5jS",
+    "title": "DG-GAN: the GAN with the duality gap",
+    "reviewer": "AnonReviewer1",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ryxMW6EtPB&noteId=r1ebBXO5jS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 0,
+      "text": "I vote to reject the paper at this stage, mainly because of the following three points:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 1,
+      "text": "1) The motivation is unclear and overall structure of the paper is confusing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 2,
+      "text": "It should be better motivated why one should use the duality gap as an upper bound for the \"F-distance\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 3,
+      "text": "Minimizing the F-distance as is usually done seems like the more direct and simple approach.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 4,
+      "text": "Since the results are far from state of the art, a clean and neat presentation of the theoretical advantages and contributions is crucial.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 5,
+      "text": "2) The presentation is not professional, hard to follow and the submission overall looks very rushed:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 6,
+      "text": "- In equations, please use \\inf, \\sup, and \\text{...} for text such as distance, data, ...",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 7,
+      "text": "- I have trouble understanding the overall idea behind Algorithm 1 and Eq. (22).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 8,
+      "text": "What is the definition of f^* and g^* in Eq. (22)? Some explanatory text would be valuable.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 9,
+      "text": "- The set F in Definition 3.5 looks odd, as it appears to be recursive and might not be unique.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 10,
+      "text": "- The writing looks very rushed, and should be improved.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 11,
+      "text": "For example, I have trouble understanding the sentence \"So the existed algorithms should be heuristic or it can get a bad result even we train the neural networks with lots of datasets.\" in the introduction.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 12,
+      "text": "- The aspect ratio in Fig. 5 should be fixed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 13,
+      "text": "3) The experiments are completely preliminary and not reasonable:",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 14,
+      "text": "- The WGAN-GP baseline is very weak, i.e. does not show any reasonable generated images (Fig. 9).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 15,
+      "text": "There are countless open pytorch implementations on GitHub which out-of-the-box produce much better results.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 16,
+      "text": "- The shown inception scores are far from state-of-the-art.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "sentence_index": 17,
+      "text": "It is unclear, why one should use the proposed duality gap GAN.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 0,
+      "text": "Thanks for your attention to our work.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 1,
+      "text": "1) For the motivation, Because the traditional algorithms deal with GANs via a Markov chain:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 2,
+      "text": "$(f_0,g_0)\\rightarrow (f_1, g_0)\\rightarrow (f_1,g_1) \\rightarrow \\cdots\\rightarrow (f_{n},g_{n-1})\\rightarrow (f_n,g_n)$. It is like a kind of reinforcement learning--- but the environment (Here it is $f$) is changing. And we want to view it from the angle of game theory. And then we try to minimize the new loss.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 3,
+      "text": "2) For the presentation: we will try to modify it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 4,
+      "text": "And we apologize that there are some typos about the $f^*$ and $g^*$ in the Eq.(22).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 5,
+      "text": "The $f^*$ and $g^*$ means the dependent variable of duality gap.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 6,
+      "text": "And the $\\Leftrightarrow$ definition of $\\mathcal{F}$ means equivalence.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 7,
+      "text": "It can also be written as $f\\in \\mathcal{F}\\rightarrow 1-f\\in mathcal{F}$. And we will modify other improper presentation.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 8,
+      "text": "3)For the experiment: we will spend some time to train GANs with more iteration and modify it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyx014dhFr",
+      "rebuttal_id": "r1ebBXO5jS",
+      "sentence_index": 9,
+      "text": "Thanks",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,658 @@
+{
+  "metadata": {
+    "forum_id": "S1xcx3C5FX",
+    "review_id": "rJxoeNq92X",
+    "rebuttal_id": "rkgd_qCpTQ",
+    "title": "A Statistical Approach to Assessing Neural Network Robustness",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=S1xcx3C5FX&noteId=rkgd_qCpTQ",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 0,
+      "text": "Given a network and input model for generating adversarial examples, this paper presents an idea to quantitatively evaluate the robustness of the network to these adversarial perturbations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 1,
+      "text": "Although the idea is interesting, I would like to see more experimental results showing the scalability of the proposed method and for evaluating defense strategies against different types of adversarial attacks.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 2,
+      "text": "Detailed review below:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 3,
+      "text": "- How does the performance of the proposed method scale wrt scalability? It will be useful to do an ablation study, i.e. keep the input model fixed and slowly increase the dimension.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 4,
+      "text": "- Did you experiment with other MH proposal beyond a random walk proposal? Is it possible to measure the diversity of the samples using techniques such as the effective sample size (ESS) from the SMC literature?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 5,
+      "text": "- What is the performance of the proposed method against \"universal adversarial examples\"?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 6,
+      "text": "- The most interesting question is whether this method gives reasonable robustness estimates even for large networks such as AlexNet?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 7,
+      "text": "- Please provide some intuition for this line in Figure 3: \"while the robustness to perturbations of size \u000f = 0:3 actually starts to decrease after around 20 epochs.\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 8,
+      "text": "- A number of attack and defense strategies have been proposed in the literature.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "sentence_index": 9,
+      "text": "Isn't it possible to use the proposed method to quantify the increase in the robustness towards an attack model using a particular defense strategy? If it is possible to show that the results of the proposed method match the conclusions from these papers, then this will be an important contribution.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 0,
+      "text": "We thank you for your useful feedback and suggestions for additional experiments, and are glad you found the connection we draw between verification and rare event estimation to be an interesting idea.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 1,
+      "text": "1. \"How does the performance of the proposed method scale wrt scalability? It will be useful to do an ablation study, i.e. keep the input model fixed and slowly increase the dimension.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 2,
+      "text": "This is a great question and something we have been looking into.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 3,
+      "text": "As a first step, we have run a new experiment at a higher scale with the CIFAR-100 dataset and a far larger DenseNet-40/40 architecture as discussed in the response to Reviewer 1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 4,
+      "text": "We see our approach still performs very effectively on this larger problem, for which most existing verification approaches would struggle due to memory requirements (see also our new comparisons in Section 6.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 5,
+      "text": "We are now working on doing an ablation study on the size of the input dimension x, but it is unlikely we will be finished with this before the end of the rebuttal period due to the fact that it will require a very large number of runs to generate.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 6,
+      "text": "2. \"Did you experiment with other MH proposal beyond a random walk proposal?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 7,
+      "text": "That\u2019s an excellent idea and a topic for future research.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 8,
+      "text": "We didn\u2019t experiment with a MH proposal beyond a random walk because this was the simplest thing to try and it already worked well in practice.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 9,
+      "text": "As well as different proposals, we have also been thinking about the possibility to instead use a more advanced Langevin Monte Carlo approach to replace the MH, which we expect to mix more quickly as the chains are guided by the gradient information.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 10,
+      "text": "3. \"What is the performance of the proposed method against 'universal adversarial examples'?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 11,
+      "text": "\u201cUniversal adversarial examples\u201d refers to a method for constructing adversarial perturbations that generalize across data points for a given model, often generalizing across models too.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 12,
+      "text": "Our method does not give a measure of robustness with respect to a particular attack method - it is attack agnostic.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 13,
+      "text": "It measures in a sense the \u201cvolume\u201d of adversarial examples around a given input, and so if this is negligible then the network is robustness to any attack for that subset of the input space, whether by a universal adversarial example or another method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 14,
+      "text": "All the same, investigating the use of our approach in a more explicitly adversarial example setting presents an interesting opportunity for future work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 15,
+      "text": "4. \"The most interesting question is whether this method gives reasonable robustness estimates even for large networks such as AlexNet?\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 16,
+      "text": "This is an important point to address.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 17,
+      "text": "As previously mentioned, we have extended the experiment of section 6.3 to use the much larger DenseNet-40/40 architecture on CIFAR-100 and we see that our method still performs admirably.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 18,
+      "text": "See the updated paper and our response to Reviewer 1 above.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 19,
+      "text": "5. \"Please provide some intuition for this line in Figure 3: 'while the robustness to perturbations of size epsilon=0.3 actually starts to decrease after around 20 epochs.'\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 20,
+      "text": "The epsilon used during the training method of Wong and Kolter (ICML 2018) is annealed from 0.01 at epoch 0 to 0.1 at epoch 50.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 21,
+      "text": "It\u2019s interesting from Figure 5 that the network is made robust to epsilon = 0.1 and 0.2 by training to be robust using a much smaller epsilon.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 22,
+      "text": "The network appears to become less robust for epsilon = 0.3 as the training epsilon reaches 0.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 23,
+      "text": "So this a counterintuitive result that training using a smaller epsilon may be better for overall robustness.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 24,
+      "text": "One hypothesis for this is that the convex outer adversarial polytope is insufficiently tight for larger epsilon.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 25,
+      "text": "Another hypothesis may be that training with a lower epsilon has a greater effect on the adversarial gradient at an input, as the training happens on a perturbation closer to that input.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 26,
+      "text": "6. \"A number of attack and defense strategies have been proposed in the literature.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 27,
+      "text": "Isn't it possible to use the proposed method to quantify the increase in the robustness towards an attack model using a particular defense strategy? If it is possible to show that the results of the proposed method match the conclusions from these papers, then this will be an important contribution.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 28,
+      "text": "It is possible to quantify the increase in robustness using a particular defense strategy, as we do in section 6.4 for the robust training method of Wong and Kolter (ICML 2018).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 29,
+      "text": "We find that our method is in agreement with theirs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 30,
+      "text": "To quantify the increase in \u201crobustness\u201d with respect to a particular attack method, you can simply record the success of the attack method over samples from the test set as the training proceeds.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 31,
+      "text": "This will not, however, be a reliable measure of robustness as the network can be trained to be resistant to the attack method in question while not being resistant to attack methods yet-to-be devised (the adversarial \u201carms race\u201d).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxoeNq92X",
+      "rebuttal_id": "rkgd_qCpTQ",
+      "sentence_index": 32,
+      "text": "We believe that what we really desire is an attack agnostic robustness measure, such as the method in our work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    }
+  ]
+}

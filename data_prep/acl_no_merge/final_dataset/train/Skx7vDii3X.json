@@ -1,0 +1,993 @@
+{
+  "metadata": {
+    "forum_id": "SyVuRiC5K7",
+    "review_id": "Skx7vDii3X",
+    "rebuttal_id": "r1xNOL-uCX",
+    "title": "LEARNING TO PROPAGATE LABELS: TRANSDUCTIVE PROPAGATION NETWORK FOR FEW-SHOT LEARNING",
+    "reviewer": "AnonReviewer3",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SyVuRiC5K7&noteId=r1xNOL-uCX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 0,
+      "text": "This paper proposes to address few-shot learning in a transductive way by learning a label propagation model in an end-to-end manner.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 1,
+      "text": "Semi-supervised few-shot learning is important considering the limitation of the very few labeled instances.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 2,
+      "text": "This is an interesting work.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 3,
+      "text": "The merits of this paper lie in the following aspects: (1) It is the first to learn label propagation for transductive few-shot learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 4,
+      "text": "(2) The proposed approach produced effective empirical results.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 5,
+      "text": "The drawbacks  of the work include the following: (1) There is not much technical contribution.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 6,
+      "text": "It merely just puts the CNN representation learning and the label propagation together to perform end-to-end learning.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 7,
+      "text": "Considering the optimization problem involved in the learning process, it is hard to judge whether the effect of such a procedure from the optimization perspective.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 8,
+      "text": "(2) Empirically, it seems TPN achieved very small improvements over the very baseline label propagation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 9,
+      "text": "Moreover, the performance reported in this paper seems to be much inferior to the state-of-the-art results reported in the literature.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 10,
+      "text": "For example,  on miniImageNet, TADAM(Oreshkin et al, 2018) reported 58.5 (1-shot) and 76.7(5-shot), which are way better than the results reported in this work.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "sentence_index": 11,
+      "text": "This is a major concern.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 0,
+      "text": "Please refer to our main response in an above comment that addresses the primary and common questions amongst all reviewers.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 1,
+      "text": "Here we respond to your specific comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 2,
+      "text": "\"(1) There is not much technical contribution. It merely just puts the CNN representation learning and the label propagation together to perform end-to-end learning. Considering the optimization problem involved in the learning process, it is hard to judge whether the effect of such a procedure from the optimization perspective.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 3,
+      "text": ">>> As mentioned in the main response, the proposed TPN is not a mere combination of CNN representation learning and label propagation.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 4,
+      "text": "The original label propagation constructs a fixed graph (Eq (1)) to explore the correlation between examples.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 5,
+      "text": "While in our work, we adaptively construct the graph structure for each episode (training task) with a learnable graph construction module (Figure 4, Appendix A).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 6,
+      "text": "This leads to better generalization ability for test tasks.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 7,
+      "text": "In Table 1 and Table 2, the proposed TPN achieved much higher accuracy than the mere combination model (referred to as \"Label Propagation\").",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 8,
+      "text": "\"",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 9,
+      "text": "(2) Empirically, it seems TPN achieved very small improvements over the very baseline label propagation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 10,
+      "text": "Moreover, the performance reported in this paper seems to be much inferior to the state-of-the-art results reported in the literature.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 11,
+      "text": "For example,  on miniImageNet, TADAM(Oreshkin et al, 2018) reported 58.5 (1-shot) and 76.7(5-shot), which are way better than the results reported in this work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 12,
+      "text": "This is a major concern.\"",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 13,
+      "text": ">>> At first, we want to clarify the few-shot network architecture setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 14,
+      "text": "Currently, there are two common network architectures: 4-layer ConvNets (e.g., [1][2][3]) and 12-layer ResNet (e.g., [4][5][6][7]).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 15,
+      "text": "Our method belongs to the first one, which contains much fewer layers than the ResNet setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 16,
+      "text": "Thus, it is more reasonable to compare TADAM with ResNet version of our method.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 17,
+      "text": "To better relieve the reviewer's concern, we implemented our algorithm with ResNet architecture on miniImagenet dataset and show the results as follow:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 18,
+      "text": "Method",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 19,
+      "text": "1-shot    5-shot",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 20,
+      "text": "SNAIL [4]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 21,
+      "text": "55.71     68.88",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 22,
+      "text": "adaResNet [5]                        56.88     71.94",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 23,
+      "text": "Discriminative k-shot [6]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 24,
+      "text": "56.30     73.90",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 25,
+      "text": "TADAM [7]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 26,
+      "text": "58.50     76.70",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 27,
+      "text": "--------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 28,
+      "text": "Ours",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 29,
+      "text": "59.46     75.65",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 30,
+      "text": "--------------------------------------------------------",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 31,
+      "text": "It can be seen that we beat TADAM for 1-shot setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 32,
+      "text": "For 5-shot, we outperform all other recent high-performance methods except for TADAM.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 33,
+      "text": ">>> We want to clarify that \"Label Propagation\" in Table 1 and Table 2 is a strong baseline.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 34,
+      "text": "It combines label propagation method [8] with episodic meta-learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 35,
+      "text": "The usage of transductive inference makes this baseline outperform most published state-of-the-art methods.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 36,
+      "text": "Moreover, the performance of TPN over label propagation is not very small.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 37,
+      "text": "For example, in miniImagenet, TPN outperforms label propagation with 1.44% and 1.25% for 1-shot and 5-shot respectively, but this advantage grows to 3.20% and 1.68% with \"Higher Shot\" training.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 38,
+      "text": "The improvements are even larger for tieredImagenet with 4.68% and 2.87%.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 39,
+      "text": "We believe in few-shot learning, this is a large improvement.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 40,
+      "text": "[1] Finn, Chelsea, Pieter Abbeel, and Sergey Levine. \"Model-agnostic meta-learning for fast adaptation of deep networks.\" ICML. 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 41,
+      "text": "[2] Snell, Jake, Kevin Swersky, and Richard Zemel. \"Prototypical networks for few-shot learning.\" NIPS. 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 42,
+      "text": "[3] Yang, Flood Sung Yongxin et al. \"Learning to compare: Relation network for few-shot learning.\" CVPR. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 43,
+      "text": "[4] Mishra, Nikhil et al. \"A simple neural attentive meta-learner.\" ICLR. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 44,
+      "text": "[5] Munkhdalai, Tsendsuren et al. \"Rapid adaptation with conditionally shifted neurons.\" ICML. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 45,
+      "text": "[6] Bauer, Matthias et al. \"Discriminative k-shot learning using probabilistic models.\" arXiv. 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 46,
+      "text": "[7] Oreshkin, B.N., Lacoste, A. and Rodriguez, P., 2018. \"TADAM: Task dependent adaptive metric for improved few-shot learning.\" NIPS. 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx7vDii3X",
+      "rebuttal_id": "r1xNOL-uCX",
+      "sentence_index": 47,
+      "text": "[8] Zhou, Denny, et al. \"Learning with local and global consistency.\" NIPS. 2004.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

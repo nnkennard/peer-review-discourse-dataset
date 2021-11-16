@@ -1,0 +1,685 @@
+{
+  "metadata": {
+    "forum_id": "SyxD7lrFPH",
+    "review_id": "Skx-jEBr5B",
+    "rebuttal_id": "Hyl3QZqMjS",
+    "title": "Frequency Pooling: Shift-Equivalent and Anti-Aliasing Down Sampling",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyxD7lrFPH&noteId=Hyl3QZqMjS",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 0,
+      "text": "This paper proposed a new pooling method (Frequency pooling) which is strict shift equivalent and anti-aliasing in theory.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 1,
+      "text": "The authors first derived the theory of F-pooling to be optimal anti-aliasing down sampling and is shift-equivalent in sec 2, and then demonstrated the experimental results of 1D signals and image classification tasks.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 2,
+      "text": "The experimental results are actually less impressive than what are claimed in contribution and conclusion.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 3,
+      "text": "The authors stated that \"F-pooling remarkably increases accuracy and robustness w.r.t. shifts of moderns CNNs\"; however, in Table 1-3, the winning margin of accuracy is actually quite small (<2%), and the consistency (<3.5% compared to the second best baseline except resnet-18 on CIFAR 100 has large improvement ~7-8%).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 4,
+      "text": "Questions:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 5,
+      "text": "1. For the experiment of 1D signal on sine wave, the AA-pooling and F-pooling give the same result?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "none",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 6,
+      "text": "2. Compared to AA-pooling, it seems that F-pooling has a better theoretical guarantee (i.e. the optimal anti-aliasing down sampling operation given U).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 7,
+      "text": "But other than this, the empirical performance seem not showing particular advantage over AA-pooling.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 8,
+      "text": "Are there any other advantages for F-pooling s.t. people might want to use it as opposed to AA-pooling?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 9,
+      "text": "3. What are the limitations of the F-pooling? It is good to me that the authors discuss one limitation on the imaginary part of output and I would like to hear more on other potential limitations for this method.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "sentence_index": 10,
+      "text": "- also, if the authors can explain more on sec 2.5 it will be helpful. If we simply ignore the imaginary part, although the theory is not applicable, but what would the empirical performance be?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 0,
+      "text": "Thanks for your comments.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 1,
+      "text": "To our knowledge, close to 2% improvement of accuracy is not small in CIFAR100. Because we only change pooling layers while keeping others exactly the same.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 2,
+      "text": "Now, we respond to your questions one by one:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 3,
+      "text": "1.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 4,
+      "text": "The results of AA-pooling and F-pooling are not the same.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 5,
+      "text": "In Fig. 1, we show the results of average-pooling and F-pooling.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 6,
+      "text": "If you carefully look at the corner of curves, you can find the differences.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 7,
+      "text": "Without convolution, AA-pooling is similar to average-pooling (both of them are low-pass filters but with sightly different kernels.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 8,
+      "text": "So AA-pooling gives different results for sine waves.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 9,
+      "text": "2. We believe F-pooling plays a more important rule in applications where shift-equivalent is serious, such as object detection and object tracking.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 10,
+      "text": "Because we need to predict the location or shifts of an image object.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 11,
+      "text": "Moreover, F-pooling may be better for complex-valued CNNs, such as [1].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 12,
+      "text": "3. The limitation of imaginary part is easy to overcome: set the resolution of F-pooling\u2019s output to an odd number or padding it to an odd number when the resolution is an even number.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 13,
+      "text": "In this way, the imaginary part is zero.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 14,
+      "text": "Moreover, the word shift in this paper means circular shift.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 15,
+      "text": "So it is better to use circular padding in convolutional layers.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 16,
+      "text": "However, we find circular padding slower the training speed in PyTorch.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 17,
+      "text": "If we use zero paddings as in most situations, the beneficial of F-pooling is reduced.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 18,
+      "text": "Our current experiments use zero paddings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 19,
+      "text": "See our general response for what happens when we replace zero paddings with circular padding.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 20,
+      "text": "4. In all experiments of our current paper, the imaginary part is already ignored.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 21,
+      "text": "We can\u2019t directly measure how the imaginary part affects the performance unless we use complex-valued CNNs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 22,
+      "text": "Ignoring this part will destroy the reconstruction optimality, but the effect is small.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 23,
+      "text": "Suppose the output size of F-pooling is 2N+1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 24,
+      "text": "We first transform a signal into frequency domain and keep 2N+1 components with the lowest frequencies: f(-N), \u2026 , f(0), \u2026 ,f(N).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 25,
+      "text": "Then we transform it back into time domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 26,
+      "text": "In this case, the imaginary part in time domain is zero because of symmetry.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 27,
+      "text": "Now, suppose the output size is 2N+2: f(-N), \u2026 , f(0),",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 28,
+      "text": "\u2026 f(N), f(N+1)",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 29,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 30,
+      "text": "In this case, the imaginary part is not zero.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 31,
+      "text": "However, if we set f(N+1) to 0, it imaginary part becomes zero again.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 32,
+      "text": "Thus, the error of ignoring imaginary part is not larger than ||f(N+1)||.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 33,
+      "text": "Fig.4 shows an example of odd and even output size of F-pooling.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skx-jEBr5B",
+      "rebuttal_id": "Hyl3QZqMjS",
+      "sentence_index": 34,
+      "text": "[1] Deep complex networks, ICLR2018",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

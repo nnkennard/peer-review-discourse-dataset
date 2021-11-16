@@ -1,0 +1,768 @@
+{
+  "metadata": {
+    "forum_id": "HkezXnA9YX",
+    "review_id": "rylJdHwn2Q",
+    "rebuttal_id": "S1xJ92HIaX",
+    "title": "Systematic Generalization: What Is Required and Can It Be Learned?",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkezXnA9YX&noteId=S1xJ92HIaX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 0,
+      "text": "The paper explores how well different visual reasoning models can learn systematic generalization on a simple binary task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 1,
+      "text": "They create a simple synthetic dataset, involving asking if particular types of objects are in a spatial relation to others.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 2,
+      "text": "To test generalization, they lower the ratio of observed  combinations of objects in the training data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 3,
+      "text": "The authors show the result that tree structured neural module networks generalize very well, but other strong visual reasoning approaches do not.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 4,
+      "text": "They also explore whether appropriate structures can be learned.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 5,
+      "text": "I think this is a very interesting area to explore, and the paper is clearly written and presented.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 6,
+      "text": "As the authors admit, the main result is not especially surprising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 7,
+      "text": "I think everyone agrees that we can design models that show particular kinds of generalization by carefully building inductive bias into the architecture, and that it's easy to make these work on the right toy data.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 8,
+      "text": "However, on less restricted data, more general architectures seem to show better generalization (even if it is not systematic).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 9,
+      "text": "What I really want this paper to explore is when and why this happens.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 10,
+      "text": "Even on synthetic data, when do or don't we see generalization (systematic or otherwise) from NMNs/MAC/FiLM?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 11,
+      "text": "MAC in particular seems to have an inductive bias that might make some forms of systematic generalization possible.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 12,
+      "text": "It might be the case that their version of NMN can only really do well on this specific task, which would be less interesting.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 13,
+      "text": "All the models show very high training accuracy, even if they do not show systematic generalization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 14,
+      "text": "That suggests that from the point of view of training, there are many equally good solutions, which suggests a number of interesting questions. If you did large numbers of training runs, would the models occasionally find the right solution? Could you somehow test for if a given trained model will show systematic generalization?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 15,
+      "text": "Is there any way to help the models find the \"right\" (or better) solutions - e.g. adding regularization, or changing the model size?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 16,
+      "text": "Overall, I do think the paper has makes a contribution in experimentally showing a setting where tree-structured NMNs can show better systematic generalization than other visual reasoning approaches.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "sentence_index": 17,
+      "text": "However, I feel like the main result is a bit too predictable, and for acceptance I'd like to see a much more detailed exploration of the questions around systematic generalization.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 3 (R3) for their review and for clearly articulating their concerns regarding the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 1,
+      "text": "In our response below, we will clarify the design and results of our experiments as well as argue why we believe that these results should be of interest and are not, indeed, that predictable.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 2,
+      "text": "R3 asked why training performance of many models is 100% when they do not generalize and suggested us to perform a large number of training runs to see if occasionally the right solution is found.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 3,
+      "text": "First, we agree that from the point of view of training there are many equally good solutions, and in fact, this is the main and the only challenge of SQOOP.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 4,
+      "text": "We designed the task with the goal of testing which models are more likely to converge to the right solution, with which they can handle all possible combinations of objects, despite being trained only on a small subset of objects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 5,
+      "text": "We argued extensively in the introduction that such an ability to find the systematic solution despite other alternatives being available is highly desirable for language understanding approaches.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 6,
+      "text": "We fully agree with R3 that in investigations of whether or not a particular model converges to the right solution repeating every experiment several times is absolutely necessary, and we would like to emphasize that we did repeat each experiment 3, 5, or 10 times (see \u201cdetails\u201d in Table 1 and the paragraph \u201cParametrization Induction\u201d on page 8).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 7,
+      "text": "In most cases we saw a consistent success or consistent failure, one exception being the parametrization induction results, where 4 out of 10 runs were successful (see Table 4, row 1 for the mean and the confidence interval).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 8,
+      "text": "We hope that 3 takes this fact into account, and we will furthermore improve on the current level of rigor in the upcoming revision by repeating each experiment at least 5 times.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 9,
+      "text": "We are not sure if we fully understand the question \u201cCould you somehow test for if a given trained model will show systematic generalization?\u201d that R3 asked.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 10,
+      "text": "We test the systematic generalization of a model by evaluating it on all SQOOP questions that were not present in the training set.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 11,
+      "text": "We hope that this answers the question of R3 and we would be happy to engage in a further discussion regarding this and make edits to the paper if necessary.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 12,
+      "text": "We thank R3 for the suggestion to investigate the influence of model size and regularization on systematic generalization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 13,
+      "text": "It is indeed a very appropriate question in the  context of our study, however, we note that there exists a wide variety of regularization methods and trying them all (and all their combinations) would be infeasible.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 14,
+      "text": "In the upcoming update of the paper we will report results of an on-going ablation study for the MAC model, in which we vary the module size, the number of modules and experiment with weight decay.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 15,
+      "text": "We would welcome any other specific experiment requests R3 may have.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 16,
+      "text": "Finally, we would like to discuss the significance of our investigation and its results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 17,
+      "text": "While we agree that the results that we report may not shock the reader (although perhaps hindsight bias plays a role in what people find surprising or not after reading an article) we find them highly interesting and not at all easily predictable.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 18,
+      "text": "Reading prior work on visual reasoning may lead a researcher to conclude, roughly speaking, that NMNs are a lost cause, since a variety of generic models perform comparably or better.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 19,
+      "text": "In contrast, our rigorous investigation highlights their strong generalization capabilities and relates them to the specific design of NMNs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 20,
+      "text": "Notably, chain-structured NMNs were used in the literature prior to this work (e.g. in the model of Jonshon et al multiple filter_...[...] modules are often chained), so the fact that tree-structured NMNs show much stronger generalization was not obvious prior to this investigation and should be of a high interest to the research community.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 21,
+      "text": "Last but not least, an important part of our investigation (which the review does not discuss) is the systematic generalization analysis of popular end-to-end NMN versions, that shows how making NMNs more end-to-end makes them more susceptible to finding spurious solutions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 22,
+      "text": "As we argued in our conclusion, these findings should be of a highest importance to researchers working on end-to-end NMNs, which is a very popular research direction nowadays.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 23,
+      "text": "We conclude our response by announcing that an updated version of the paper, that among others incorporates valuable suggestions by R3, will soon be uploaded to OpenReview.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 24,
+      "text": "We are currently performing a lot of additional experiments, the results of which will make our investigation even more rigorous and complete.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 25,
+      "text": "We sincerely hope that R3 takes into account the arguments we have made here and the new results that we will publish soon and reevaluates our paper more positively.",
+      "suffix": "\n\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 26,
+      "text": "Dear Reviewer 3,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 27,
+      "text": "We thank you again for your informative review that you wrote before the revision period.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 28,
+      "text": "In our response and the revised version of the paper we tried our best to address your concerns.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 29,
+      "text": "We would highly appreciate to get some feedback from you regarding the changes that we have made and the arguments that we have presented.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 30,
+      "text": "In particular, we report that NMN-Chains (with a lot of inductive bias built-in and also used in prior work such as Johnson et al. 2017) generalize poorly compared to even generic modules, and that layout/parameterization induction often fails to converge to the correct solution.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 31,
+      "text": "We believe both these findings are quite surprising.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 32,
+      "text": "We also report new experiments with the MAC model, including a hyperparameter search, a comparison against end-to-end NMNs, and a qualitative exploration of the failure modes of this model.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 33,
+      "text": "All these experiments are repeated at least 5 times each, like you suggested in your review, although it\u2019s worth noting that results the original version of the paper also reported results after  multiple runs.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 34,
+      "text": "We would highly appreciate a response on our newest revision and suggestions on how it could be improved. If you still think that paper is uninteresting or not well executed, could you then suggest what specifically it is lacking?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rylJdHwn2Q",
+      "rebuttal_id": "S1xJ92HIaX",
+      "sentence_index": 35,
+      "text": "We are sincerely hoping to hear from you.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

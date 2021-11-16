@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "forum_id": "BkeU5j0ctQ",
+    "review_id": "Ske_YvI527",
+    "rebuttal_id": "r1lJmuibAQ",
+    "title": "CEM-RL: Combining evolutionary and gradient-based methods for policy search",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BkeU5j0ctQ&noteId=r1lJmuibAQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 0,
+      "text": "The contributions of this paper are in the domain of policy search, where the authors combine evolutionary and gradient-based methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 1,
+      "text": "Particularly, they propose a combination approach based on cross-entropy method (CEM) and TD3 as an alternative to existing combinations using either a standard evolutionary algorithm or a goal exploration process in tandem with the DDPG algorithm.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 2,
+      "text": "Then, they show that CEM-RL has several advantages compared to its competitors and provides a satisfactory trade-off between performance and sample efficiency.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 3,
+      "text": "The authors evaluate the resulting algorithm, CEM-RL, using a set of benchmarks well established in deep RL, and they show that CEM-RL benefits from several advantages over its competitors and offers a satisfactory trade-off between performance and sample efficiency.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 4,
+      "text": "It is a pity to see that the authors provide acronyms without explicitly explaining them such as DDPG and TD3, and this right from the abstract.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 5,
+      "text": "The parer is  in general interesting, however the clarity of the paper is hindered",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 6,
+      "text": "by the existence of several typos, and the writing in certain passages can be improved. Example of typos include  \u201can surrogate gradient\u201d, \u201c\"an hybrid algorithm\u201d,  \u201cmost fit individuals are used \u201d and so on\u2026",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 7,
+      "text": "In the related work the authors present the connection between their work and contribution to the state of the art in a detailed manner.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 8,
+      "text": "Similarly, in section 3 the authors provide an extensive background allowing to understand their proposed method.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 9,
+      "text": "In equation 1, 2 the updates of  \\mu_new and \\sigma_new uses \\lambda_i, however the authors provide common choices for \\lambda without any justification or references.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 10,
+      "text": "The proposed method is clearly explained and seems convincing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 11,
+      "text": "However the theoretical contribution is poor. And the experiment uses a very classical benchmark providing simulated data.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 12,
+      "text": "1. In the experimental study, the authors present the value of their tuning parameters (learning rate, target rate, discount rate\u2026) at the initialisation phase without any justifications. And the experiments are limited to simulated data obtained from MUJOCO physics engine - a very classical benchmark.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 13,
+      "text": "2. Although the experiments are detailed and interesting they support poor theoretical developments and use a very classical benchmark",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "sentence_index": 14,
+      "text": "The rebuttal provided by the authors is convincing.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for many positive comments about our paper.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 1,
+      "text": "The typos explicitly mentioned in the review have been corrected, and we did our best to spot other typos not mentioned.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 2,
+      "text": "Besides, all the acronyms have been explained.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 3,
+      "text": "We added the tutorial from Hansen (2016) as the reference for the common choices for setting \\lambda_i in Equation 1, 2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 4,
+      "text": "We agree with the reviewer that our paper is not theoretically oriented, nor does it address any real world application like robotics or other challenging domain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 5,
+      "text": "Our point is rather to provide a practical method performing well with respect to the state of the art, which is most often evaluated with the same widely used benchmarks.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Ske_YvI527",
+      "rebuttal_id": "r1lJmuibAQ",
+      "sentence_index": 6,
+      "text": "With respect to initialization of hyperparameters, as explicitly mentioned in the \"experimental setup\" section, \"Most of the TD3 and DDPG hyper-parameters were reused from Fujimoto et al. (2018).\" The justification for this choice is to facilitate comparison with previously published work.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,1693 @@
+{
+  "metadata": {
+    "forum_id": "SJz6MnC5YQ",
+    "review_id": "SkemSsMfpQ",
+    "rebuttal_id": "SJlugpiVaX",
+    "title": "DEEP GRAPH TRANSLATION",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJz6MnC5YQ&noteId=SJlugpiVaX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 0,
+      "text": "The paper presents a novel idea of generating discrete data such as graphs that is conditional on input data to control the graph structure that is being generated.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 1,
+      "text": "Given an input graph, the proposed method infers a target graph by learning their underlying translation mapping by using new graph convolution and deconvolution",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 2,
+      "text": "layers to learn the global and local translation mapping.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 3,
+      "text": "The idea of learning generic shared common and latent implicit patterns across different graph structure is brilliant.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 4,
+      "text": "Their method learns a distribution over graphs conditioned on the input graph whilst allowing the network to learn latent and implicit properties.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 5,
+      "text": "The authors claim that their method is applicable for large graphs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 6,
+      "text": "However, it seems the experiments do not seem to support this.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 7,
+      "text": "It is not clear how the noise is introduced in the graphs.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 8,
+      "text": "I would have expected to see some analysis and results on the translation quality over systematic noise applied to the input graph.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 9,
+      "text": "It is also not clear what are the assumptions made on the connectivity of the input graph and the target graph.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 10,
+      "text": "Do we know how does the connectedness of the  input graph affect the translation quality in the case of strongly connected directed graphs? Or what happens if the target graph has a strong connectivity?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 11,
+      "text": "Towards this, how does the computational complexity scale wrt to the connectedness?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 12,
+      "text": "A lot of clarity is required on the choice of evaluation metric; for example choice of distance measure ?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 13,
+      "text": "What is the L1 norm applied on?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 14,
+      "text": "I did not completely follow the arguments towards directed graph deconvolution operators.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 15,
+      "text": "There is lack of clarity and the explanation seems lacking in parts in this particular section; especially since this is the key contribution of this work",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "sentence_index": 16,
+      "text": "Typo:. The \u201cInf\u201d in Tabel 1",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 0,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 1,
+      "text": "Q\uff1aA lot of clarity is required on the choice of evaluation metric; for example, choice of distance measure?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 2,
+      "text": "What is the L1 norm applied on?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 3,
+      "text": "A: Answer about Evaluation metrics:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 4,
+      "text": "(1) We want to evaluate if the generated graphs are scale-free graphs in the direct evaluation for dataset scale-free graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 5,
+      "text": "If the degree distribution of generated graphs is the same to the degree distribution of real target graphs, the generated graphs are good.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 6,
+      "text": "(2) There are many classical evaluation metrics focusing on measuring the similarities or distance of two distributions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 7,
+      "text": "The four metrics in this paper are among the most authoritative and commonly used ones in existing works, e.g., [2][3][4][5].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 8,
+      "text": "Answer about L1 norm:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 9,
+      "text": "(1) L1 norm is applied to the weight adjacent matrix of the graph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 10,
+      "text": "Our methodology is achieved by a trade-off between L1 loss and adversarial loss (GAN-D).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 11,
+      "text": "Specifically, L1 makes generated graphs share the same rough outline of sparsity pattern like generated graphs, while under this outline, adversarial loss allows them to vary to some degree.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 12,
+      "text": "(2) L1 norm is commonly used in GAN in relevant domains, e.g., in image-translation domain, for example, reference [1] (with 600+ citations) and reference [6] (with 1300+ citations).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 13,
+      "text": "They have done extensive experiments to show the advantage of such a strategy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 14,
+      "text": "(3) The experiment demonstrates its effectiveness.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 15,
+      "text": "Specifically, the proposed GT-GAN that uses L1 norm outperformed all the other comparison methods shown in Table 2,3 and 4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 16,
+      "text": "-------[2",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 17,
+      "text": "]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 18,
+      "text": "Schieber, T. A., Carpi, L., D\u00edaz-Guilera, A., Pardalos, P. M., Masoller, C., & Ravetti, M. G. (2017).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 19,
+      "text": "Quantification of network structural dissimilarities.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 20,
+      "text": "Nature Communications, 8, 13928.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 21,
+      "text": "-------[3] Bauckhage, C., Kersting, K., & Hadiji, F. (2015, July). Parameterizing the Distance Distribution of Undirected Networks. In UAI (pp. 121-130).",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 22,
+      "text": "-------[4] Chiang, S., Cassese, A., Guindani, M., Vannucci, M., Yeh, H. J., Haneef, Z., & Stern, J. M. (2016).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 23,
+      "text": "Time-dependence of graph theory metrics in functional connectivity analysis. NeuroImage, 125, 601-615.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 24,
+      "text": "-------[5] You, J., Ying, R., Ren, X., Hamilton, W. L., & Leskovec, J. (2018). GraphRNN: A Deep Generative Model for Graphs. arXiv preprint arXiv:1802.08773.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 25,
+      "text": "-------[6",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 26,
+      "text": "] Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translation with conditional adversarial networks. arXiv preprint.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 27,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 28,
+      "text": "Q\uff1aI did not completely follow the arguments towards directed graph deconvolution operators.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 29,
+      "text": "There is lack of clarity and the explanation seems lacking in parts in this particular section; especially since this is the key contribution of this work.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 30,
+      "text": "A: (1) Our decoder is symmetric to the encoder in their architectures.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 31,
+      "text": "The encoder does n-hop edge information aggregation from the input graphs and learns the latent representation of nodes.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 32,
+      "text": "Then, we first decode the node embedding to get the n-hop aggregated information on edges by node-to-edge layer and then we further decode the n-hop aggregated information layer by layer by n-layers back to get the output adjacency matrix.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 33,
+      "text": "(2) Different from image deconvolution, for each hidden channel, we have two filters vertical to each other, i.e., one is a column vector while the other is a row vector.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 34,
+      "text": "To get the nth hop information of edge <i,j>, row filter decodes all the (n+1)-th hop information of outgoing edges of node i and column filter decodes all the (n+1)-th hop information of incoming edges of node j.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 35,
+      "text": "(3) To make our description clearer, we have updated our paper in Section 3.2.2, e.g, by adding \u201cTo get the nth hop information Aij, row filter decodes all the (n+1)-th hop information of outgoing edges of Vi and column filter decodes all the (n+1)-th hop information of incoming edges of Vj.\u201d",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 36,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 37,
+      "text": "Q: Typo:. The \u201cInf\u201d in Tabel 1",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 38,
+      "text": "A: As explained in Section 4.2.4 \u201cResults on Scale-Free Graphs\u201d, the \u201cInf\u201d in Tabel 1 represents the distance more than 1000.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 39,
+      "text": "We really hope that we have explained every confused point clearly and please let us know if there are any other points.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 40,
+      "text": "Thank you once again for your reviews.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 41,
+      "text": "Dear Reviewer:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 42,
+      "text": "Thank you very much for your comments and suggestions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 43,
+      "text": "We would like to answer your questions in detail as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 44,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 45,
+      "text": "Q: The authors claim that their method is applicable for large graphs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 46,
+      "text": "However, it seems the experiments do not seem to support this.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 47,
+      "text": "A: (1) We did not mention that we handle \u201clarge graph\u201d, but instead we only mention that we handle \u201clarger\u201d graph.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 48,
+      "text": "In the domain of graph generation, currently, the proposed graph generative models can typically only deal with graphs with dozens of nodes or less (except GraphRNN which can scale to 300).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 49,
+      "text": "Compared to them, our model handles relatively \u201clarger graph\u201d (6-10 times larger than most existing methods).",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 50,
+      "text": "(2) Translation in graphs is a new topic and we have not found many datasets in very large scale, so we do not test on much larger nodes. But the scalability experiments can still show the superiority of our model compared to others.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 51,
+      "text": "(3) We typically test small-size graphs because most of the comparison methods can only handle small-size graphs.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 52,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 53,
+      "text": "Q: It is not clear how the noise is introduced in the graphs. I would have expected to see some analysis and results on the translation quality over systematic noise applied to the input graph.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 54,
+      "text": "A: Thanks for the review comment.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 55,
+      "text": "(1) The noise is introduced by the dropout function in each convolution layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 56,
+      "text": "Dropout functions by randomly ignore 50% of neuron\u2019s output of a network in our mode by a uniform distribution.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 57,
+      "text": "(2) The way we add noise",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 58,
+      "text": "is well-recognized and commonly-used in generative deep learning models[1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 59,
+      "text": "The noises added in GANs aim to enable the diversities in the generated graphs to avoid the problem that GANs tend to favor producing same output rather than spreading it evenly over the domain.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 60,
+      "text": "(3) We have shown the analysis of the translation quality against noise in Figures 4 and 5.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 61,
+      "text": "In Figure 5 (see in the supplementary material), each logarithm plot in each column show the power-law trend of each randomly generated graph, which will look linear in such a logarithm plot.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 62,
+      "text": "It can be seen that the generated graphs show the similar randomness pattern as the real graphs.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 63,
+      "text": "Moreover, the larger the graph is (see the graph size of 150), the smaller the randomness is, and the clearer the power-law trend is, which verifies that the translation quality of our method.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 64,
+      "text": "------[1]",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 65,
+      "text": "Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translation with conditional adversarial networks. arXiv preprint.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 66,
+      "text": "-----------------------------------------------------------------------",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 67,
+      "text": "Q: It is also not clear what are the assumptions made on the connectivity of the input graph and the target graph.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 68,
+      "text": "Do we know how does the connectedness of the input graph affect the translation quality in the case of strongly connected directed graphs? Or what happens if the target graph has a strong connectivity?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 69,
+      "text": "Towards this, how does the computational complexity scale wrt to the connectedness?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 70,
+      "text": "A: (1) Similar to all the existing graph deep generative learning methods for generic graphs, we do not have additional assumptions on the graphs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 71,
+      "text": "The domain of graph deep generative learning methods typically do not require to distinguish or preprocess specific topological types of graphs before applying it, no matter it is strongly- or weakly- connected graph, complete graph, planar graph, scale-free graph, or graphs that have other specific patterns.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 72,
+      "text": "This is actually one of the core advantages of deep learning based models where the graph patterns are not extracted or pre-identified manually by the human but automatically discovered by the end-to-end deep models.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 73,
+      "text": "(2) This paper has given the time complexity in the worst case: O(n^2) as shown in 3.4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 74,
+      "text": "The worst case happens when the graph is a complete graph.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 75,
+      "text": "The time complexity of a strongly-connected graph will not be worse than that.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 76,
+      "text": "Dear Reviewer,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 77,
+      "text": "Thank you very much for your new and previous comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 78,
+      "text": "We have revised our paper again in order to address all of them in the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 79,
+      "text": "The modifications are listed as followings:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 80,
+      "text": "1. For graph deconvolution, we have modified and reorganized the content.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 81,
+      "text": "The Section 3.2.2 on \u201cGraph Deconvolution\u201d has been reorganized to two subsections \u201cnode-to-edge deconvolution\u201d and \u201cedge-to-edge deconvolution\u201d.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 82,
+      "text": "We also extended them to make the description on deconvolution operations clearer and more comprehensive.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 83,
+      "text": "2.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 84,
+      "text": "For graph deconvolution, we have also added a new figure and refined the equations\u2019 descriptions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 85,
+      "text": "Figure 3 is added to describe the mechanism of our proposed deconvolution operators as well as their correlation to the convolution operations.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 86,
+      "text": "Equation 6, Equation 7, and their descriptions have also been revised to make them clearer and concrete.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 87,
+      "text": "Specifically, Figure 3 describes how the node representation and edge representation are respectively decoded by our deconvolution layers, while Equation 6 and Equation 7 describe how to aggregate the decoded information into the final weighted adjacent matrix.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 88,
+      "text": "3. We have referred to all the figures in the body of text.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 89,
+      "text": "4. We have added statements to describe how to introduce random noises in the whole architecture, see in the 2nd paragraph of Section 3.1 in Page 4.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 90,
+      "text": "5. We have added statements of describing the reason to use L1 loss and how L1 loss is applied, please see in the paragraph before Equation 2 in Page 4.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 91,
+      "text": "Additionally, we also added the statements of how L1 norm and GAN loss function jointly, see in the paragraph after Equation 2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 92,
+      "text": "6. We have added the statements why the metrics are chosen to evaluate the scale-free dataset, please see in the 2nd Paragraph of Section 4.2.2.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 93,
+      "text": "Additionally, to improve the reproducibility of the proposed methodologies and experiments, we have already released our code in https://github.com/anonymous1025/Deep-Graph-Translation-.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 94,
+      "text": "More architecture parameters are also provided in Appendix E.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkemSsMfpQ",
+      "rebuttal_id": "SJlugpiVaX",
+      "sentence_index": 95,
+      "text": "Thank you very much again for the comments and please let us know if there are any other issues.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,993 @@
+{
+  "metadata": {
+    "forum_id": "HkezXnA9YX",
+    "review_id": "Hyere82c2m",
+    "rebuttal_id": "H1xbP6B8TX",
+    "title": "Systematic Generalization: What Is Required and Can It Be Learned?",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkezXnA9YX&noteId=H1xbP6B8TX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 0,
+      "text": "Summary: The paper focuses on comparing the impact of explicit modularity and structure on systematic generalization by studying neural modular networks and \u201cgeneric\u201d models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 1,
+      "text": "The paper studies one instantiation of this systematic generalization for the setting of binary \u201cyes\u201d or \u201cno\u201d visual question answering task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 2,
+      "text": "They introduce a new dataset called in which model has to answer questions that require spatial reasoning about pairs of randomly scattered letters and digits in the image.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 3,
+      "text": "While the models are evaluated on all possible object pairs, they are trained on a smaller subset.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 4,
+      "text": "They observe that NMNs generalize better than other neural models when an appropriate choice of layout and parametrization is made.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 5,
+      "text": "They also show that current end-to-end approaches for inducing model layout or learning model parametrization fail to generalize better than generic models.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 6,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 7,
+      "text": "- The conclusions of the paper regarding the generalization ability of neural modular networks is timely given the widespread interest in these class of algorithms.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 8,
+      "text": "- Additionally, they present interesting observations regarding how sensitive NMNs are to the layout of models.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 9,
+      "text": "Experimental evidence (albeit on specific type of question) of this behaviour will be helpful for the community and hopefully motivate them to incorporate regularizers or priors that steer the learning towards better layouts.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 10,
+      "text": "- The authors provide a nice summary of all the models analyzed in Section 3.1 and Section 3.2.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 11,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 12,
+      "text": "- While the results on SQOOP dataset are interesting, it would have been very exciting to see results on other synthetic datasets.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 13,
+      "text": "Specifically, there are two datasets which are more complex and uses templated language to generate synthetic datasets similar to this paper:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 14,
+      "text": "- CLEVR environment or a modification of that dataset to reflect the form of systematic the authors are studying in the paper.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 15,
+      "text": "- Abstract Scenes VQA dataset introduced in\u201cYin and Yang: Balancing and Answering Binary Visual Questions\u201d by Zhang and Goyal et al. They provide a balanced dataset in which there are a pairs of scenes for every question, such that the answer to the question is \u201cyes\u201d for one scene, and \u201cno\u201d for the other for the exact same question.",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 16,
+      "text": "- Perhaps because the authors study a very specific kind of question, they limit their analysis to only three modules and two structures (tree & chain).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 17,
+      "text": "However, in the most general setting NMN will form a DAG and it would have been interesting to see what form of DAGs generalize better than other.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 18,
+      "text": "- It is not clear to me how the analysis done in this paper will generalize to other more complex datasets where the network layout NMN might be more complex, the number of modules and type of modules might also be more.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 19,
+      "text": "Because, the results are only shown on one dataset, it is harder to see how one might extend this work to other form of questions on slightly harder datasets.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 20,
+      "text": "Other Questions / Remarks:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 21,
+      "text": "- Given that the accuracy drop is very significant moving from NMN-Tree to NMN-Chain, is there an explanation for this drop?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 22,
+      "text": "- While the authors mention multiple times that #rhs/#lhs = 1 and 2 are more challenging than #rhs/#lhs=18, they do not sufficiently explain why this is the case anywhere in the paper.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 23,
+      "text": "- Small typo in the last line of section 4.3 on page 7. It should say: This is in stark contrast with \u201cNMN-Tree\u201d \u2026",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 24,
+      "text": "..",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 25,
+      "text": "- Small typo in the \u201cLayout induction\u201d paragraph, line 6 on Page 7:",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 26,
+      "text": "\u2026",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "sentence_index": 27,
+      "text": "and for $p_0(tree) = 0.1$ and when we use the Find module",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 0,
+      "text": "We thank Reviewer 1 (R1) for their review and for asking interesting questions that helped us to understand where our paper may have been unclear.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 1,
+      "text": "In our response below we will try our best to better explain our motivation for building and using SQOOP, as well as address R1\u2019s other questions and concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 2,
+      "text": "A key concern that R1 expressed in their review is that we perform our study on the new SQOOP dataset, instead of using an available one (for example CLEVR or Abstract Scenes VQA).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 3,
+      "text": "Though we appreciate the concern (it has spurred us to rethink and rephrase how we justify SQOOP) we still believe that the SQOOP dataset is the best choice for precisely testing our ideas.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 4,
+      "text": "We kindly invite R1 to consider the following arguments in favor of doing so:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 5,
+      "text": "The goal of our study was to perform a thorough investigation of systematic generalization of language understanding models.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 6,
+      "text": "To that end, we wanted a setup that is as simple as possible, while still being challenging by testing the ability to extend the relational reasoning learned to unseen combinations of seen words.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 7,
+      "text": "We therefore choose to focus on simplest relational questions of the form XRY, as they also allow us to factor out challenges of discrete optimization in choosing the right module layout (required for Stochastic N2NMN).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 8,
+      "text": "The simplicity is also useful because most models get to 100% accuracy on the training set of SQOOP, which allowed us to put aside any remaining optimization challenges and just focus our study on systematic generalization.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 9,
+      "text": "In contrast, we find that the popular CLEVR dataset does not satisfy our requirements and if we did modify it sufficiently, we believe that it would only differ from SQOOP in the actual rendering and would not affect our conclusions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 10,
+      "text": "Though visually more complex, CLEVR has only 3 object types: cylinder, sphere and cube.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 11,
+      "text": "Therefore, it would only allow for 3x4x3=36 different XRY relational questions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 12,
+      "text": "This is arguably not enough to sufficiently represent real world situations, and would definitely hinder our experiments.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 13,
+      "text": "Specifically, we would not be able to sufficiently vary the difficulty of our generalization challenge when allowing 1,2,4,8 or 18 possible right hand-side objects in the questions (we clarify why splits with lower #rhs/lhs are more difficult than those with higher #rhs/lhs later in this response).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 14,
+      "text": "Hence, we did not find the original CLEVR readily appropriate for our study.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 15,
+      "text": "We could, in theory, introduce new object types to CLEVR and rerender a new dataset in 3D using Blender (the renderer that was used to create CLEVR) with different lighting conditions and partial occlusions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 16,
+      "text": "Though enticing, we believe that such a 3D version of SQOOP would lead to exactly same conclusions, because the vision required to recognize the objects in the scene would still be rather trivial.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 17,
+      "text": "The Ying and Yang dataset is clearly a valuable resource (and we thank the reviewer for the pointer), but we do not think it is readily suitable for the kind of study that we aim to perform.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 18,
+      "text": "The dataset, to the best of our understanding, uses crowd-sourced questions (as the questions are taken from Abstract VQA dataset, whose captions were entered by a human, according to the original VQA paper https://arxiv.org/pdf/1505.00468v6.pdf).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 19,
+      "text": "Using crowd-sourced questions would not allow us to control our experiments at the level of precision that we wanted to achieve (e.g. we would not know the ground-truth layouts, it would be harder to construct splits of varying difficulty, etc.).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 20,
+      "text": "As well, Abstract VQA contains only 50k scenes, and from our experience with SQOOP we know that this number would be not sufficient to rule out overfitting to training images as a factor.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 21,
+      "text": "We thank R1 for their constructive suggestion to consider NMNs that form a DAG.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 22,
+      "text": "We are currently investigating a chain-structured NMN with shortcuts from the output of the stem to each of the modules, and we will soon report these additional results in the upcoming revision of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 23,
+      "text": "We hope that these results, combined with further qualitative investigations we are conducting, will answer the legitimate question of R1 as to why Chain-NMN performs so much worse than Tree-NMN.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          21
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 24,
+      "text": "We acknowledge that the text of the paper can be improved to explain better why splits with lower #rhs/lhs are generally harder than those with higher #rhs/lhs, and we thank R1 for pointing this",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 25,
+      "text": "out",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 26,
+      "text": ".",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 27,
+      "text": "Our reasoning is that lower #rhs/lhs are harder because the training admits more spurious solutions in them.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 28,
+      "text": "In such spurious regimes models adapt to the specific lhs-rhs combinations from the training and can not generalize to unseen lhs-rhs combinations (i.e. generalizing from questions about \u201cA\u201d in relation with \u201cB\u201d to \u201cA\u201d in relation to \u201cD\u201d (as in #rhs/lhs=1) is more difficult than generalizing from questions about \u201cA\u201d in relation to \u201cB\u201d and \u201cC\u201d to the same \u201cA\u201d in relation to \u201cD\u201d (as in #rhs/lhs=2).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 29,
+      "text": "We will update the paper to be more explicit in explaining these considerations.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          22
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 30,
+      "text": "We would like to conclude our response by replying to the higher-level concern of R1 that the findings of our study may not \u201cgeneralize to other more complex datasets where the network layout NMN might be more complex, the number of modules and type of modules might also be more\u201d.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 31,
+      "text": "While we fully agree that more complex datasets with more complex questions would bring new challenges, these are ones we purposely put aside (such as the general unavailability of ground-truth layouts for vanilla NMN, the need to consider an exponentially large set of possible layouts for Stochastic N2NMN, etc.) We believe that it is highly valuable for the research community to know what happens in the simple ideal case of SQOOP, where we can precisely test our specific generalization criterion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 32,
+      "text": "This knowledge (e.g. the superiority of trees to chains, the sensitivity of layout induction to initialization, the emergence of spurious parameterization in end-to-end learning), will guide researchers in choosing, designing and troubleshooting their models, as they now know what to expect modulo the optimization challenges that they may face.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 33,
+      "text": "The field of language understanding with deep learning is not easily amenable to mathematical theoretical investigations and, with that in mind, rigorous minimalistic studies like ours are arguably very important.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 34,
+      "text": "To some extent, they play the role of the former: they inform researcher intuition and lay a solid foundation for scientific dialogue.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 35,
+      "text": "We purposely traded breadth for depth in our investigations, and we will go even deeper in the additional experiments that the upcoming revision will contain.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 36,
+      "text": "We believe that the total of our results makes a complete conference paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 37,
+      "text": "All that said, we would welcome specific suggestions of additional experiments that we could carry out in order to better validate our claims.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Hyere82c2m",
+      "rebuttal_id": "H1xbP6B8TX",
+      "sentence_index": 38,
+      "text": "We hope that this response has clarified to R1 what our paper was insufficiently clear about. A new revision with additional experiments and fixed typos will soon be uploaded to OpenReview, and we hope that R1 takes this response and the changes that we will make to the paper into account.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

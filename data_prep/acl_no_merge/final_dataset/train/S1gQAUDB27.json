@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "forum_id": "S1xLZ2R5KQ",
+    "review_id": "S1gQAUDB27",
+    "rebuttal_id": "Bye3WZB907",
+    "title": "Maximum a Posteriori on a Submanifold: a General Image Restoration Method with GAN",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=S1xLZ2R5KQ&noteId=Bye3WZB907",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 0,
+      "text": "This paper proposed a framework to incorporate GAN into MAP inference process for general image restoration.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 1,
+      "text": "First, the motivation of the proposed framework is not convincing for me.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 2,
+      "text": "That is, authors assumed that they have a degradation function F and all the inference process is just based on this known function.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 3,
+      "text": "However, in real world scenarios, it is actually challenging to obtain exact degradation information.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 4,
+      "text": "Thus we may only apply the proposed model on a few tasks with exactly known F.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 5,
+      "text": "Second, due to the norm based constraints, authors actually need to optimize a highly nonconvex optimization problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 6,
+      "text": "Moreover, due to the trace based loss function, the computational cost will also be very high.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 7,
+      "text": "Please notice that standard MAP based methods only need to solve a simple convex optimization model (e.g., TV) and these methods can also be applied for different restoration tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 8,
+      "text": "Actually, we only need to specify particular fidelity terms for different tasks.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 9,
+      "text": "Moreover, very recent works have also successfully incorporate both generative and discriminative network architectures (e.g., [1,2]) into the optimization process.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 10,
+      "text": "Therefore, I cannot find any advantage in the proposed method, compared with these existing MAP based image restoration approaches.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 11,
+      "text": "Finally, the experimental part is also too weak to evaluate the proposed method.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 12,
+      "text": "As I have mentioned above, actually a lot of methods have been developed to address general image restoration tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 13,
+      "text": "Some works actually also incorporate generative and/or discriminative networks into MAP inference process for these tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 14,
+      "text": "Thus I believe authors must compare their method with these state-of-the-art approaches.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 15,
+      "text": "Moreover, authors should conduct experiments on state-of-the-art benchmarks, including natural images.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 16,
+      "text": "This is because the digitals images in MNIST do not have rich texture and detail structures, thus are not very challenging for standard image restoration methods.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 17,
+      "text": "[1]. Kai Zhang, Wangmeng Zuo, Shuhang Gu, Lei Zhang: Learning Deep CNN Denoiser Prior for Image Restoration. CVPR 2017: 2808-2817",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "sentence_index": 18,
+      "text": "[2]. Jiawei Zhang, Jin-shan Pan, Wei-Sheng Lai, Rynson W. H. Lau, Ming-Hsuan Yang: Learning Fully Convolutional Networks for Iterative Non-blind Deconvolution. CVPR 2017: 6969-6977",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 0,
+      "text": "Thank you for your thoughtful review. We will address your concerns in turn.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 1,
+      "text": "Q1: The degradation function F is challenging to obtain in real world scenarios.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 2,
+      "text": "A1: Many state-of-the-art approach, including SRCNN and SRGAN, has their own implicitly defined degradation function.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 3,
+      "text": "They use their function F to generate training samples during their training process, while we use our explicitly defined function F during the inference process.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 4,
+      "text": "If the assumed degradation function F is not exactly the function in real scenarios, both these state-of-the-art approach and our method will suffer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 5,
+      "text": "So it is unfair to criticize our motivation just because we explicitly write out the degradation function F.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 6,
+      "text": "Q2: TV can also be applied for different restoration tasks, and it is easier to be optimized.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 7,
+      "text": "A2: We think you underestimate the difficulty of those restoration problems.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 8,
+      "text": "Please check the degraded images in Table 3.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 9,
+      "text": "These images are damaged so badly that TV cannot recover any meaningful thing.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gQAUDB27",
+      "rebuttal_id": "Bye3WZB907",
+      "sentence_index": 10,
+      "text": "As a handcrafted prior, TV performs much worse than our data-driven baseline method in these tasks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

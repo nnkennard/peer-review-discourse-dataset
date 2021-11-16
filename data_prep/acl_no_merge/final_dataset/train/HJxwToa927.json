@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "forum_id": "SylKoo0cKm",
+    "review_id": "HJxwToa927",
+    "rebuttal_id": "SJeVPpHQA7",
+    "title": "How Important is a Neuron",
+    "reviewer": "AnonReviewer2",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SylKoo0cKm&noteId=SJeVPpHQA7",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 0,
+      "text": "The authors propose a notion of conductance to attribute the deep neural network\u2019s prediction to its hidden units.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 1,
+      "text": "The conductance is the flow of attribution via the hidden unit(s) in consideration.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 2,
+      "text": "The paper proposes using conductance to not only evaluate importance of hidden unit to the prediction for a specific input but also over a set of inputs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 3,
+      "text": "The strongest part of the analysis of conductance is that conductance naturally couples  the path at the base features with that of the hidden layer.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 4,
+      "text": "The authors position their work well within the existing approaches in the community and generalizes the efficient use of measuring hidden activation wrt to specific input or set of inputs.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 5,
+      "text": "The analysis makes efficient use of mean value theorem in the context of  parametrization of the loss function.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 6,
+      "text": "Conductance seems to satisfy the completeness of hidden features.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 7,
+      "text": "Further, it also satisfies the layer-wise conservation principle with the outputs completely redistributed  to the inputs.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 8,
+      "text": "It would be good to see more analysis on the axioms 1 through to 4 for the sake of completeness in the light of partial axiomatization of conductance.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 9,
+      "text": "The authors provide empirical evaluation of conductance over a variety of tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "HJxwToa927",
+      "sentence_index": 10,
+      "text": "It would be good to see some more insight in order to relate to interpretability of the importance of neurons, although there has been no claims made on it as its hard to measure importance without interpretability.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for a detailed review.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 1,
+      "text": "We agree with the reviewer that a uniqueness result based on the axioms is desirable, but we don\u2019t have it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 2,
+      "text": "While we\u2019re able to show that the paths at the input and at the hidden layer must be coupled (i.e. non-oblivious), we just don\u2019t understand the space of non-oblivious methods that well.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 3,
+      "text": "Mathematically, we don\u2019t have a handle on how the path at the hidden layer can vary as the network below the hidden layer is changed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 4,
+      "text": "Partition consistency is the only axiom about the network below the hidden layer, but it is not applicable to all networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 5,
+      "text": "We probably need another axiom to prove uniqueness.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 6,
+      "text": "Another key observation made by the reviewer is the interpretability vs importance of neurons.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "HJxwToa927",
+      "rebuttal_id": "SJeVPpHQA7",
+      "sentence_index": 7,
+      "text": "While those are not the same, we demonstrate that conductance can give us some insights about the network (Sections 5.1 and 6.1).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

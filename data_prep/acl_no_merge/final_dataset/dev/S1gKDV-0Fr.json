@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "forum_id": "rygjmpVFvB",
+    "review_id": "S1gKDV-0Fr",
+    "rebuttal_id": "SyesrjuHsB",
+    "title": "Difference-Seeking Generative Adversarial Network--Unseen Sample Generation",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rygjmpVFvB&noteId=SyesrjuHsB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 0,
+      "text": "This paper proposed DSGAN which learns to generate unseen data from seen data distribution p_d and its somehow \u201cbroad\u201d version p_{\\hat d} (E.g., p_d convolved with Gaussian).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 1,
+      "text": "The \u201cunseen data\u201d is the one that appears in p_{\\hat d} but not in p_d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 2,
+      "text": "DSGAN is trained to generate such data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 3,
+      "text": "In particular, it uses samples from p_d as fake data and samples from p_{\\hat d} as the real one.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 4,
+      "text": "Although the idea seems to be interesting, the paper seems to be a bit incremental and is a simple application of existing GAN techniques.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 5,
+      "text": "The paper shows two applications (semi-supervised learning and novelty detection) and it is not clear that the proposed method outperforms existing GAN methods in the classification accuracy in MNIST/SVHN/CIFAR10 (Table 1) and existing sampling methods (Table. 3).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 6,
+      "text": "It seems that the sampled reconstruction results (Fig. 8) are not as good as VAE on CIFAR10.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 7,
+      "text": "I would also expect more ablation studies about how to pick p_{\\had d}, which seems to be the key of this approach, in MNIST and CIFAR10.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 8,
+      "text": "In terms of writing, the paper is a bit confusing in terms of motivations and notations.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 9,
+      "text": "Overall, the method looks incremental and experimental results are mixed on small datasets so I vote for rejection.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "sentence_index": 10,
+      "text": "Note that I am not an expert on GAN/VAE so I put low confidence here.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 0,
+      "text": "Thanks for your comments! First, we have to clarify some misunderstandings.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 1,
+      "text": ">>> it is not clear that the proposed method outperforms existing GAN methods in the classification accuracy in MNIST/SVHN/CIFAR10 (Table 1)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 2,
+      "text": "BadGAN has already theoretically proved that complement data are helpful for semi-supervised learning.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 3,
+      "text": "In this paper, we demonstrate",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 4,
+      "text": "that,  using our unseen data, the proofs in badGAN still can be satisfied but in a more concise way.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 5,
+      "text": "Therefore, compared to badGAN that requires extra PixelCNN, DSGAN saves more computational memory and is time-efficienct.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 6,
+      "text": ">>> It seems that the sampled reconstruction results (Fig. 8) are not as good as VAE on CIFAR10.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 7,
+      "text": "In Novelty detection, we use the reconstruction error as a criterion to determine whether an image comes from seen class or unseen class.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 8,
+      "text": "It is expected that images from the seen classes should be reconstructed better than those reconstructed from unseen classes.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 9,
+      "text": "However, VAE cannot force the unseen classes with high reconstructed error.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 10,
+      "text": "So, we combine DSGAN with VAE to deal with this issue.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 11,
+      "text": "Due to the above reason, it is expected that \"our sampled reconstruction results are not good as VAE\".",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 12,
+      "text": "Note that the seen class, car, still can be reconstructed well by our method in Fig 8 (at the last row).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 13,
+      "text": "The quantitative results in Table 3 further validate our approach.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 14,
+      "text": ">>> I would also expect more ablation studies about how to pick p_{\\had d}, which seems to be the key of this approach, in MNIST and CIFAR10.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 15,
+      "text": "In fact, how to design $p_{\\hat{d}}$ depends on applications  instead of datasets, as described in Sec. 4.1 and Sec. 4.2.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 16,
+      "text": "Please note that, in Section 5.2.1, we used the same $p_{\\bar{d}}$ for ALL datasets.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 17,
+      "text": "We also want to clarify the datasets used in our experiments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 18,
+      "text": "In semi-supervised learning, we follow our competitors to conduct experiments on MNIST, SVHN and CIFAR10.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 19,
+      "text": "In novelty detection, our method is evaluated on CIFAR10, which is also common in this application.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 20,
+      "text": "Furthermore, we also add additional experiments about generating complement data in CelebA, which is a more complex dataset.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1gKDV-0Fr",
+      "rebuttal_id": "SyesrjuHsB",
+      "sentence_index": 21,
+      "text": "We can see from Fig. 10 (Appendix G) that DSGAN can create complement data for complicate images well.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

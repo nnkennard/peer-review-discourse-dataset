@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "forum_id": "HkgqFiAcFm",
+    "review_id": "SJgG0gkChX",
+    "rebuttal_id": "S1eUaqUjTQ",
+    "title": "Marginal Policy Gradients: A Unified Family of Estimators for Bounded Action Spaces with Applications",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkgqFiAcFm&noteId=S1eUaqUjTQ",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 0,
+      "text": "In this paper the authors proposed a new policy gradient method, which is known as the angular policy gradient (APG), that aims to provide provably lower variance in the gradient estimate.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 1,
+      "text": "Here they presented a stochastic policy gradient method for directional control.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 2,
+      "text": "Under the set of parameterized Gaussian policies, they presented a unified analysis of the variance of APG and showed how it theoretically outperform (in terms of having lower variance) than other state-of-the art methods.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 3,
+      "text": "They further evaluated the APG algorithms on a grid-world navigation domain as well as the King of Glory task, and showed that the APG estimator significantly out-performs the standard policy gradient.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 4,
+      "text": "In general I think this paper addressed an important issue in policy gradient in terms of deriving a lower variance gradient estimate.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 5,
+      "text": "In particular the authors showed that under the parameterized marginal distribution, such as the angular Gaussian distribution, the corresponding APG estimate has a lower variance estimate than that of CAPG.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 6,
+      "text": "Furthermore, I also appreciate that they evaluated these results in realistic experiments such as the RTS game domains.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 7,
+      "text": "My only question is on the possibility of deriving realistic APG algorithms beyond the class of angular Gaussian policy.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "sentence_index": 8,
+      "text": "In terms of the layout of the paper, I would also recommend including the exact algorithm pseudo-code used in the main paper.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 0,
+      "text": "Thank you for the time and effort spent reviewing our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 1,
+      "text": "We are glad you liked the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 2,
+      "text": "We want to emphasize one point that we perhaps did not highlight enough in our paper: there are other existing algorithms that fall into the marginal policy gradients framework.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 3,
+      "text": "Specifically, researchers and practitioners both almost always clip actions for use in robotics control environments (read: MuJoCo tasks).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 4,
+      "text": "Recently, a reduced variance method was introduced by Fujita and Maeda (2018) for clipped action spaces.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 5,
+      "text": "Their algorithm is also a member of the marginal policy gradients family and our theoretical results for MPG significantly tighten existing analyses of variance reduction that can be achieved for clipped actions.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 6,
+      "text": "To respond to your question, yes it is possible (e.g. the example given above), but their is no general procedure that we know of to derive such methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgG0gkChX",
+      "rebuttal_id": "S1eUaqUjTQ",
+      "sentence_index": 7,
+      "text": "Rather, this would be done on an action space by action space basis",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

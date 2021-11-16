@@ -1,0 +1,669 @@
+{
+  "metadata": {
+    "forum_id": "B1esx6EYvr",
+    "review_id": "BkgPU07CFS",
+    "rebuttal_id": "BJx7C1bfjH",
+    "title": "A critical analysis of self-supervision, or what we can learn from a single image",
+    "reviewer": "AnonReviewer3",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1esx6EYvr&noteId=BJx7C1bfjH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 0,
+      "text": "The paper studies self-supervised learning from very few unlabeled images, down to the extreme case where only a single image is used for training.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 1,
+      "text": "From the few/single image(s) available for training, a data set of the same size as some unmodified reference data set (ImageNet, Cifar-10/100) is generated through heavy data augmentation (cropping, scaling, rotation, contrast changes, adding noise).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 2,
+      "text": "Three popular self-supervised learning algorithms are then trained on this data sets, namely (Bi)GAN, RotNet, and DeepCluster, and the linear probing accuracy on different blocks is compared to that obtained by training the same methods on the reference data sets.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 3,
+      "text": "The linear probing accuracy from the first few conv layers of the network trained on the single/few image data set is found to be comparable to or better than that of the same model trained on the full reference data set.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 4,
+      "text": "I enjoyed the paper; it addresses the interesting setting of an extremely small data set which complements the large number of studies on scaling up self-supervised learning algorithms.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 5,
+      "text": "I think it is not extremely surprising that using the proposed strategy allows to learn low level features as captured by the first few layers, but I think it is worth studying and quantifying.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 6,
+      "text": "The experiments are carefully described and presented, and the paper is well-written.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 7,
+      "text": "Here are a few questions and concerns:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 8,
+      "text": "- How much does the image matter for the single-image data set?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 9,
+      "text": "The selected images A and B are of very high entropy and show a lot of different objects (image A) and animals (image B). How do the results change if e.g. a landscape image or an abstract architecture photo is used?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 10,
+      "text": "- How general is the proposed approach? How likely is it to generalize to other approaches such as Jigsaw (Doersch et al., 2015) and Exemplar (Dosovitskiy et al., 2016)? It would be good to comment on this.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 11,
+      "text": "- [1] found that the network architecture for self-supervised learning can matter a lot, and that by using a ResNet architecture, performance of SSL methods can be significantly improved.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 12,
+      "text": "In particular, the linear probing accuracy appears to be often monotonic as a function of the depth of the layer it is computed from.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 13,
+      "text": "This is in contrast to what is observed for AlexNet in Tables 2 and 3, where the conv5 accuracy is lower than the conv4.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 14,
+      "text": "It would therefore be instructive to add experiments for ResNet to see how well the results generalize to other network architectures.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 15,
+      "text": "- Does the MonoGAN exhibit stable training dynamics comparable to training WGAN on CIFAR-10, or do the training dynamics change on the single-image data set?",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 16,
+      "text": "Overall, I\u2019m leaning towards accepting the paper, but it would be important to see how well the experiments generalize to i) ResNet and ii) other (lower entropy) input images.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 17,
+      "text": "[1] Kolesnikov, A., Zhai, X. and Beyer, L., 2019. Revisiting self-supervised visual representation learning.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 18,
+      "text": "arXiv preprint arXiv:1901.09005.",
+      "suffix": "\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 19,
+      "text": "---",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 20,
+      "text": "Update after rebuttal:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 21,
+      "text": "I thank the authors for their detailed response.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 22,
+      "text": "I appreciate the efforts of the authors into investigating the issues raised, the described experiments sound promising.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 23,
+      "text": "Unfortunately, the new results are not presented in the revision.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "sentence_index": 24,
+      "text": "I will therefore keep my rating.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their time and their clear understanding of the key aspects of the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 1,
+      "text": "We address the reviewer\u2019s questions in the following:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 2,
+      "text": ">  How much does the image matter for the single-image data set?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 3,
+      "text": "The reviewer raises an important point about the tested single images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 4,
+      "text": "Less crowded images could lead to many patches having no gradients (e.g. showing only the sky), leading to a failure of at least RotNet, if not also BiGAN on many samples of the augmented dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 5,
+      "text": "Our image choices were thus motivated by striving for simplicity and not further adding a pipeline that would, for example, extract only patches with sufficiently large image gradients.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 6,
+      "text": "We are training DeepCluster now on a significantly less busy image and will report results in the coming days.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 7,
+      "text": ">  How general is the proposed approach?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 8,
+      "text": "We believe that this method will work well for pretext tasks that rely on learning via detecting and learning invariances, such as Exemplar [1], Colorization [2], and Noise-as-targets [3].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 9,
+      "text": "Methods such as Context [4] and Jigsaw [5] could potentially work less well as they would potentially easily find a way to cheat given the limited amount of original data of one image.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 10,
+      "text": "However, as the authors note in the paper cited by the reviewer, the accuracy of a pretext task does not translate to downstream task performances, so even a method that is simple on one image\u2019s patches does not necessarily fail.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 11,
+      "text": "This is an interesting avenue for research and we hope that this paper could inspire follow-up work on this topic.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 12,
+      "text": "> [1] found that the network architecture for self-supervised learning can matter a lot, and that by using a ResNet architecture, performance of SSL methods can be significantly improved.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 13,
+      "text": "Indeed, the paper mentioned by the reviewer shows that the performance of various self-supervised methods for ResNets does not degrade with the depth as it does for VGG and AlexNets due to the skip-connections.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 14,
+      "text": "However, as ResNets have not been originally used to train the methods analyzed in our paper, we have stayed in the bounds that are required for fair comparisons and only used AlexNet.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 15,
+      "text": "We agree with the reviewer that it would be good to check if ResNets, in general, can also be trained in such a manner (e.g. could global pooling destroy the signal?), so we are running an experiment on a ResNet-18 and will report results in the upcoming days.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 16,
+      "text": "> Does the MonoGAN exhibit stable training dynamics comparable to training WGAN on CIFAR-10, or do the training dynamics change on the single-image data set?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 17,
+      "text": "MonoGAN trained without any exploding gradients or other problems frequently encountered by GANs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 18,
+      "text": "As we have suggested in the paper, this might be due to the fact that image-patches from one image follow a simpler distribution than in-the-wild images of a complete dataset.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 19,
+      "text": "\u2014",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 20,
+      "text": "[1] A. Dosovitskiy et al. \"Discriminative unsupervised feature learning with exemplar convolutional neural networks.\" TPAMI 2015",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 21,
+      "text": "[2] R. Zhang et al. \"Colorful image colorization.\" ECCV 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 22,
+      "text": "[3] P. Bojanowski et al. \"Unsupervised learning by predicting noise.\" ICML 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 23,
+      "text": "[4] D. Pathak et al. \u201cContext Encoders: Feature Learning by Inpainting\". CVPR 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgPU07CFS",
+      "rebuttal_id": "BJx7C1bfjH",
+      "sentence_index": 24,
+      "text": "[5] M. Noroozi \"Unsupervised learning for visual representations by solving jigsaw puzzles.\" ECCV 2016",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

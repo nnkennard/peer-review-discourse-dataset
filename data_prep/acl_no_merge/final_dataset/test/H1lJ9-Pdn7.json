@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "forum_id": "ByxZX20qFQ",
+    "review_id": "H1lJ9-Pdn7",
+    "rebuttal_id": "SJgnkDkMCm",
+    "title": "Adaptive Input Representations for Neural Language Modeling",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=ByxZX20qFQ&noteId=SJgnkDkMCm",
+    "annotator": "anno14"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 0,
+      "text": "This article presents experiments on medium- and large-scale language modeling when the ideas of adaptive softmax (Grave et al., 2017) are extended to input representations.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 1,
+      "text": "The article is well written and I find the contribution simple, but interesting.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 2,
+      "text": "It is a reasonable and well supported increment from adaptive softmax of Grave et al. (2017).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 3,
+      "text": "My question is a bit philosophical: The only thing which I was concerned about when reading the paper is projection of the embeddings back to the d-dimensional space.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 4,
+      "text": "I understand that for two matrices A and B we have rank(AB) <= min(rank(A), rank(B)), and we are not making the small-sized embeddings richer when backprojecting to R^d, but",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 5,
+      "text": "have you thought about how it would be possible to avoid this step and keep the original variable-size embeddings?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 6,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "sentence_index": 7,
+      "text": "Joulin, A., Ciss\u00e9, M., Grangier, D. and J\u00e9gou, H., 2017, July. Efficient softmax approximation for GPUs. In International Conference on Machine Learning (pp. 1302-1310).",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "rebuttal_id": "SJgnkDkMCm",
+      "sentence_index": 0,
+      "text": "The primary goal of the projections is to project all embeddings into the model dimension d so that we can have variable sized embeddings.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "rebuttal_id": "SJgnkDkMCm",
+      "sentence_index": 1,
+      "text": "Our goal was not to make the model model expressive.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "rebuttal_id": "SJgnkDkMCm",
+      "sentence_index": 2,
+      "text": "Compared to the rest of the model, these projections add very little overhead compared to the rest of the model.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lJ9-Pdn7",
+      "rebuttal_id": "SJgnkDkMCm",
+      "sentence_index": 3,
+      "text": "Doing without them is an interesting future direction though!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

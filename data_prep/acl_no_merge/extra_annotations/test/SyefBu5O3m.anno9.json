@@ -1,0 +1,602 @@
+{
+  "metadata": {
+    "forum_id": "Hye64hA9tm",
+    "review_id": "SyefBu5O3m",
+    "rebuttal_id": "r1gQHcar0X",
+    "title": "Measuring Density and Similarity of Task Relevant Information in Neural Representations",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Hye64hA9tm&noteId=r1gQHcar0X",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 0,
+      "text": "This paper proposes simple metrics for measuring the \"information density\" in learned representations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 1,
+      "text": "Overall, this is an interesting direction.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 2,
+      "text": "However there are a few key weaknesses in my view, not least that the practical utility of these metrics is not obvious, since they require supervision in the target domain.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 3,
+      "text": "And while there is an argument to be made for the inherent interestingness of exploring these questions, this angle would be more compelling if multiple encoder architectures were explored and compared.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 4,
+      "text": "+ The overarching questions that the authors set out to answer: How task-specific information is stored and to what extent this transfers, is inherently interesting and important.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 5,
+      "text": "+ The proposed metrics and simple and intuitive.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 6,
+      "text": "+ It is interesting that a few units seem to capture most task specific information.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 7,
+      "text": "- The envisioned scenario (and hence utility) of these metrics is a bit unclear to me here.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 8,
+      "text": "As noted by the authors, transfer is most attractive in low-supervision regimes, w.r.t. the target task.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 9,
+      "text": "Yet the metrics proposed depend on supervision in the target domain.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 10,
+      "text": "If we already have this, then -- as the authors themselves note -- it is trivial to simply try out different source datasets empirically on a target dev set.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 11,
+      "text": "It is argued that this is an issue because it requires training 2n networks, where n is the number of source tasks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 12,
+      "text": "I am unconvinced that one frequently enough has access to a sufficiently large set of candidate source tasks for this to be a real practical issue.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 13,
+      "text": "- The metrics are tightly coupled to the encoder used, and no exploration of encoder architectures is performed.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 14,
+      "text": "The LSTM architecture used is reasonable, but it would be nice to see how much results change (if at all) with alternative architectures.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 15,
+      "text": "- The CFS metric depends on a hyperparameter (the \"retention ratio\"), which here is arbitrarily set to 80% without any justification.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "sentence_index": 16,
+      "text": "- What is the motivation for the restriction to linear models? In the referenced probing paper, for example, MLPs were also used to explore whether attributes were coded for 'non-linearly'.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 0,
+      "text": "Thank you for your feedback. We are glad to know that you find the problem inherently interesting and important.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 1,
+      "text": "Re: no exploration of encoder architectures is performed",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 2,
+      "text": "> We are not sure if we understand this completely.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_followup",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 3,
+      "text": "Just to clarify, we do compare 4 different sentence encoders [1][2][3][4] which display a fair amount of variety in ways which sentence representations can be computed.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 4,
+      "text": "For instance, SkipThought vectors [1] use bi-GRU based encoder-decoder model to reconstruct the surrounding sentences.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 5,
+      "text": "ParaNMT [2] and InferSent [3] use different LSTM based architectures to perform back-translation and textual entailment respectively.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 6,
+      "text": "Lastly, SIF [4] is a tf-idf based weighted average of individual GloVe word representations.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 7,
+      "text": "One of the key findings of our work is that task-specific information is captured succinctly for a majority of 13 different NLP tasks across 4 different choices of encoder architectures.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 8,
+      "text": "1. Skip-Thought Vectors (https://arxiv.org/pdf/1506.06726.pdf)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 9,
+      "text": "2. PARANMT-50M: Pushing the Limits of Paraphrastic Sentence Embeddings with Millions of Machine Translations (https://arxiv.org/pdf/1711.05732.pdf)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 10,
+      "text": "3. Supervised Learning of Universal Sentence Representations from Natural Language Inference Data (https://arxiv.org/pdf/1705.02364.pdf)",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 11,
+      "text": "4. A Simple but Tough-to-Beat Baseline for Sentence Embeddings (https://openreview.net/forum?id=SyK00v5xx)",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13,
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 12,
+      "text": "Re: Utility of the methods is a bit unclear",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 13,
+      "text": "> We agree that our approach to estimate transfer potential reaps true benefits only when n is large.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 14,
+      "text": "However, this is not uncommon in scenarios like machine translation, where there are hundreds of potential language pairs that could be used as candidate tasks.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 15,
+      "text": "Furthermore, we believe (although acknowledge that this is subjective) that curiosity-driven questions about how the information is encoded are interesting: while they might not be useful in a way that is easily measurable by quantifiable metrics, they provide insights that can help guide future work.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 16,
+      "text": "Re: CFS metric depends on a hyperparameter (the \"retention ratio\")",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 17,
+      "text": "> Sorry about the lack of clarity!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 18,
+      "text": "To clarify, we used the elbow method (used to find an appropriate number of clusters for clustering) and observed that the \u2018elbow\u2019 in the accuracy vs dimensions plot was around the 80% accuracy mark for most tasks, and hence, we used 80% as the retention ratio.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 19,
+      "text": "We will discuss this process and test with different retention ratios in the final version.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 20,
+      "text": "Re: motivation for the restriction to linear models?",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 21,
+      "text": "> Our motivation to use linear models is to keep the setup simple and fast.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 22,
+      "text": "As the classifiers are able to extract task-specific information and reliably estimate transfer potential; changing to a different classifier like MLP, we believe, shouldn\u2019t affect our results in a significant way.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyefBu5O3m",
+      "rebuttal_id": "r1gQHcar0X",
+      "sentence_index": 23,
+      "text": "However, we will empirically verify this, and discuss this in the camera-ready/future versions of the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

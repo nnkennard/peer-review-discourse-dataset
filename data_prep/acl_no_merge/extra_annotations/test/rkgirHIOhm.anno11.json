@@ -1,0 +1,523 @@
+{
+  "metadata": {
+    "forum_id": "BJlMcjC5K7",
+    "review_id": "rkgirHIOhm",
+    "rebuttal_id": "HJx-sqxiC7",
+    "title": "Neural Random Projections for Language Modelling",
+    "reviewer": "AnonReviewer3",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJlMcjC5K7&noteId=HJx-sqxiC7",
+    "annotator": "anno11"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 0,
+      "text": "This paper studied a random projection of word embeddings in neural language modeling.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 1,
+      "text": "Instead of having |V| x m embeddings, the author(s) represented a word with a random, sparse, linear combination {1, 0, -1} of k vector of size m.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 2,
+      "text": "The experiment on PTB dataset showed that k had to be somewhat close to |V| in order to achieve the comparable perplexity to a feed-forward NLM.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 3,
+      "text": "Overall, I am not sure what we could gain from this research direction.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 4,
+      "text": "The advantage of this random encoding was to reduce the number of parameters for an embedding layer, but the results showed we gained much PPL from a 25% reduction in embedding size (Table 1).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 5,
+      "text": "In addition, the fact that the random projections preserved the inner product (centered at zero) was probably not desirable.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 6,
+      "text": "It might be more fruitful if these linear combinations were learned or sub-senses of words (e.g. [1]).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 7,
+      "text": "The experiments were quite extensive on the hyper-parameters and showed how the models performed under different settings.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 8,
+      "text": "However, these were done using 1 dataset and also a simple feed-forward network (rather than LSTM).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 9,
+      "text": "I can understand the point that training NNLM accelerates the experiments, but the author(s) should consider trying a simply LSTM model after the best settings had been discovered (e.g. Table 1).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 10,
+      "text": "PTB also has a very unnatural vocabulary distribution as pointed out in [2].",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 11,
+      "text": "Thus, it might be helpful to test the result on another dataset (e.g. WikiText).",
+      "suffix": "\n\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 12,
+      "text": "Other comments",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 13,
+      "text": "1. I do not get the point of bringing up NCE. Did you actually use NCE loss? Did you only refer to NCE as a weight tying which can be used in a standard XENT loss [3]? The first paragraph of 3.3 did not help clarify this point either.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 14,
+      "text": "2. In Figure 3, the baseline got different perplexity between 3(a) and 3(b).",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 15,
+      "text": "3. Shouldn't random indexing produce non-uniform numbers of non-zero entries depending on alpha? Why did you have an exact number of non-zero entries, s, in the experiments?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 16,
+      "text": "3. Some typos",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 17,
+      "text": "- \"... is that instead of trying to probability ...\" => \"... tying ...\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 18,
+      "text": "- \"... All models sare trained ...\" => \"... are",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 19,
+      "text": "...\"",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 20,
+      "text": "- \"... Tho get the feature ...\" => ?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 21,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 22,
+      "text": "[1] S. Arora et al., 2016. Linear Algebraic Structure of Word Senses, with Applications to Polysemy",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 23,
+      "text": "[2] S. Merity et al., 2016. Pointer Sentinel Mixture Models",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "sentence_index": 24,
+      "text": "[3] Y. Gal et al., 2015. A Theoretically Grounded Application of Dropout in Recurrent Neural Networks",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 0,
+      "text": "* the fact that the random projections preserved the inner product (centered at zero) was probably not desirable.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 1,
+      "text": "It might be more fruitful if these linear combinations were learned or sub-senses of words",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 2,
+      "text": "(e.g. [1])",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 3,
+      "text": ".",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 4,
+      "text": "Preserving the inner product means that the distribution of the features is not biased, if we keep adding words to the dictionary, the performance would degrade gracefully with the amount of compression.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 5,
+      "text": "Perhaps a non-orthonormal basis would also work if the network compensates for the different distortions in the inner products.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 6,
+      "text": "You are correct in assuming that other discrete building blocks could be more fruitful, but, we chose language modelling as a setting, not a task (see general response) as such, the building block chosen was the word. We could have chosen sub-words, or characters but the goal here is not the get the best possible language model but to understand a property of the mechanism.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 7,
+      "text": "An interesting idea would be to actually use other information and encode it as random projections (e.g. syntactic dependency patterns).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 8,
+      "text": "The amount of possible patterns is simply too large to be enumerated and as such the random projections would serve as unique \"fingerprints\" for unique \"dependency patterns\" that would be used as inputs.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 9,
+      "text": "1. I do not get the point of bringing up NCE...",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 10,
+      "text": "Approximations like NCE (in conjunction with random projections) would allow us to remove the restriction in the output layer.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 11,
+      "text": "We want to imply that our proposal is not incompatible with NCE, but we did not yet explore it so, to make the paper more self-contained it is probably best to leave this out.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 12,
+      "text": "2. In Figure 3, the baseline got different perplexity between 3(a) and 3(b).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 13,
+      "text": "we were trying to cram different experiments (with different regularization) in the same figure which is understandably confusing and needs to be corrected.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 14,
+      "text": "3. Shouldn't random indexing produce non-uniform numbers of non-zero entries depending on alpha? Why did you have an exact number of non-zero entries, s, in the experiments?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rkgirHIOhm",
+      "rebuttal_id": "HJx-sqxiC7",
+      "sentence_index": 15,
+      "text": "yes but not necessarily. Alpha can be used to control the expected proportion of non-zero entries, but as long as the probability of a sparse configuration is random uniform, our mechanism guarantees that any sampled index is almost orthogonal to any other sampled index, so it's easier achieve the same while guaranteeing the sparsity in the inputs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

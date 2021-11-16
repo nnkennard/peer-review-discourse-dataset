@@ -1,0 +1,1401 @@
+{
+  "metadata": {
+    "forum_id": "HyNmRiCqtm",
+    "review_id": "ryxtBh5_h7",
+    "rebuttal_id": "HyxLHfF7RQ",
+    "title": "CDeepEx: Contrastive Deep Explanations",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HyNmRiCqtm&noteId=HyxLHfF7RQ",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 0,
+      "text": "The paper addresses the problem of providing saliency-based visual explanations of deep models tasked at image classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 1,
+      "text": "More specifically, instead of generating visualizations directly highlighting the image pixels that support the the decision of an image belonging to class A, it generates \"contrastive\" visualizations indicating the pixels that should be added or suppressed in order to support the decision of a image belonging to class A and not to class B.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 2,
+      "text": "The method formulates the generation of these contrastive explanations through a generative adversarial network (GAN), where the discriminator D is the image classification model to be explained and the generator G is a generative model trained to produce images from the dataset used to train D.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 3,
+      "text": "Experiments on the MNIST and fashion-MNIST datasets compares the performance of the proposed method w.r.t. some methods from the literature.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 4,
+      "text": "Overall the manuscript is well written and its content is relatively easy to follow.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 5,
+      "text": "The idea of generating contrastive explanations through a GAN-based formulation is well motivated and seems novel to me.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 6,
+      "text": "My main concern with the manuscript are the following:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 7,
+      "text": "i) The proposed method seems to be specifically designed for the generation of contrastive explanations, i.e. why the model predicted class A and not class B.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 8,
+      "text": "While the generation of this type of explanations is somewhat novel, from the text it seems that the proposed method may not be able to indicate what part of the image content drove the model to predict class A. Is this indeed the case?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 9,
+      "text": "ii) Although the idea of generating contrastive explanations is quite interesting, it is not that novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 10,
+      "text": "See Kim et al., NIPS'16, Dhurandhar et al., arXiv:1802.07623.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 11,
+      "text": "Moreover, regarding the presented results on the MNIST dataset (Sec 4.1) where some of the generated explanations highlight gaps to point differences between digit classes.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 12,
+      "text": "The work from Samek et al., TNNLS'17 and  Oramas et al., arXiv:1712.06302 seem to display similar properties in their explanations without the need of explicit constractive pair-wise training/testing.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 13,
+      "text": "The manuscript would benefit from positioning the proposed method w.r.t. these works.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 14,
+      "text": "iii) Very related to the first point, in the evaluation section (Sec.4.1) the proposed method is compared against other methods in the literature.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 15,
+      "text": "Three of these methods, i.e. Lime, GradCam, PDA, are not designed for producing contrastive explanations, so I am not sure to what extend this comparison is appropriate.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 16,
+      "text": "iv) Finally, the reported results are mostly qualitative.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 17,
+      "text": "I find the set of provided qualitative examples quite reduced.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 18,
+      "text": "In this regard, I encourage the authors to update the supplementary material in order to show extended qualitative results of the explanations produced by their method.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 19,
+      "text": "In addition, I recommend complementing the presented qualitative comparisons with quantitative evaluations following protocols proposed in existing work, e.g. a) occlusion analysis (Zeiler et al., ECCV 2014, Samek et al.,2017), a pointing experiment (Zhang et al., ECCV 2016), or c) a measurement of explanation accuracy by feature coverage",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "sentence_index": 20,
+      "text": "(Oramas et al. arXiv:1712.06302).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 0,
+      "text": "Comment: The proposed method seems to be specifically designed for the",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 1,
+      "text": "generation of contrastive explanations, i.e.  why the model predicted class",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 2,
+      "text": "A and not class B. While the generation of this type of explanations",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 3,
+      "text": "is",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 4,
+      "text": "somewhat novel, from the text it seems that the proposed method may not",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 5,
+      "text": "be able to indicate what part of the image content drove the model to",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 6,
+      "text": "predict class A. Is this indeed the case?",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 7,
+      "text": "Response: The goal of this paper is not to answer \"why A?\" but rather",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 8,
+      "text": "\"why A and not B?\"  The visual answer to the two questions may be similar,",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 9,
+      "text": "but it may not.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 10,
+      "text": "We seek to highlight what in the image would need to",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 11,
+      "text": "change to make it a B and not an A, as a way of explaining this contrast.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 12,
+      "text": "There are other papers that seek to answer the question of \"why A?\" but",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 13,
+      "text": "that is not our focus.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 14,
+      "text": "Comment: Although the idea of generating contrastive explanations is",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 15,
+      "text": "quite interesting, it is not that novel. See Kim et al., NIPS\u201916,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 16,
+      "text": "Dhurandhar et al., arXiv:1802.07623.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 17,
+      "text": "Response: Dhurandhar et al. does use the term constrastive explanation.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 18,
+      "text": "However, they look at the question of \"why A?\"  Contrastive in their case",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 19,
+      "text": "refers to whether something is or is not present that drives the",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 20,
+      "text": "classification of \"A.\"  This is a different constrast than ours",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 21,
+      "text": "that",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 22,
+      "text": "contrasts \"A\" to \"B\" (rather than \"present for A\" to \"absent for A\").",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 23,
+      "text": "We think this is also an interesting form of explanation, but a different",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 24,
+      "text": "one.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 25,
+      "text": "Kim et al. also has a different form of model criticism; they look at the",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 26,
+      "text": "dataset as a whole for examples that help explain.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 27,
+      "text": "We look at a different",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 28,
+      "text": "problem: for a given example (perhaps not even from the training set),",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 29,
+      "text": "why is it not class B?",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 30,
+      "text": "Comment: The work from Samek et al., TNNLS\u201917 and Oramas et al.,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 31,
+      "text": "arXiv:1712.06302 seem to display similar properties in their explanations",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 32,
+      "text": "without the need of explicit constractive pair-wise training/testing.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 33,
+      "text": "The",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 34,
+      "text": "manuscript would benefit from positioning the proposed method w.r.t. these",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 35,
+      "text": "works.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 36,
+      "text": "Response: The work from Samek et al. is similar to PDA in its essence. We",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 37,
+      "text": "will add the comparison with this method to our work for sake of",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 38,
+      "text": "completeness.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 39,
+      "text": "In the experiment section of Oramas et al., they proposed",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 40,
+      "text": "a synthetic flowers dataset that can be used for our purpose.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 41,
+      "text": "Since it",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 42,
+      "text": "is synthetic and fine-grained, we can compare the method qualitatively",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 43,
+      "text": "and quantitatively.  We sent a request to the authors for accessing the",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 44,
+      "text": "dataset.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 45,
+      "text": "If we granted this access we will add quantitative comparisons",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 46,
+      "text": "to our paper.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 47,
+      "text": "Comment: In the evaluation section (Sec.4.1) the proposed method is",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 48,
+      "text": "compared against other methods in the literature.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 49,
+      "text": "Three of these methods,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 50,
+      "text": "i.e. Lime, GradCam, PDA, are not designed for producing contrastive",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 51,
+      "text": "explanations",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 52,
+      "text": ", so I am not sure to what extend this comparison is",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 53,
+      "text": "appropriate.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 54,
+      "text": "Response: The only method we found before submitting the paper which was",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 55,
+      "text": "able to answer the contrastive explanation was xGems.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 56,
+      "text": "However, other",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 57,
+      "text": "methods could be shoe-horned into trying to answer the question of \"why A",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 58,
+      "text": "and not B?\" and so we figured we should demonstrate that they were not",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 59,
+      "text": "sufficient and that a new method (like ours) was necessary.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 60,
+      "text": "Comment: The reported results are mostly qualitative. I find the set of",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 61,
+      "text": "provided qualitative examples quite reduced.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 62,
+      "text": "In this regard, I encourage",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 63,
+      "text": "the authors to update the supplementary material in order to show extended",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 64,
+      "text": "qualitative results of the explanations produced by their method.",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 65,
+      "text": "Response: We have added a supplementary section, adding more qualitative",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ryxtBh5_h7",
+      "rebuttal_id": "HyxLHfF7RQ",
+      "sentence_index": 66,
+      "text": "results. Thank you for your suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "forum_id": "SkxBUpEKwH",
+    "review_id": "Byxe5udgcS",
+    "rebuttal_id": "Hkx_-lO1oB",
+    "title": "Vid2Game: Controllable Characters Extracted from Real-World Videos",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SkxBUpEKwH&noteId=Hkx_-lO1oB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 0,
+      "text": "This paper presents  a controllable model from a video of a person performing a certain",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 1,
+      "text": "activity. It generates novel image sequences of that person, according",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 2,
+      "text": "to user-defined control signals, typically marking the displacement of the moving",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 3,
+      "text": "body. The generated video can have an arbitrary background, and effectively",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 4,
+      "text": "capture both the dynamics and appearance of the person.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 5,
+      "text": "It has two networks, Pose2Pose, and Pose2Frame.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 6,
+      "text": "The overall pipeline makes sense; and the paper is well written.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 7,
+      "text": "The main problems come from the experiments, which I would ask for more things.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 8,
+      "text": "It has two components, i.e., Pose2Pose and Pose2Frame.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 9,
+      "text": "So how importance of each component to the whole framework? I would ask for the ablation study/additional experiments of using each component.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "sentence_index": 10,
+      "text": "How about combining only Pose2Pose/ Pose2Frame  with pix2pixHD? Whether the performance can get improved?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 0,
+      "text": "Pose2Pose -- An ablation study for the P2P network can be found in Table 2, with quantitative results for each contribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 1,
+      "text": "We do not add a qualitative ablation study for the P2P network, since still-images (as opposed to videos) do not convey the temporal improvement in this case.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 2,
+      "text": "Pose2Frame -- A qualitative ablation study can be found in Fig. 16.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 3,
+      "text": "As can be seen, the results justify each component used.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 4,
+      "text": "pix2pixHD -- the Pose2Frame network can be directly compared with the pix2pixHD network, since they both act as mapping functions between dense-pose representations to realistic images.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 5,
+      "text": "A quantitative comparison can be found in Table 1, as well as a qualitative comparison in Fig. 14.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 6,
+      "text": "As can be seen, the use of our different components described in the P2F ablation study (blending mask and regularization, object channel, two pose inputs, discriminator attention on character, etc.), results in much fewer artifacts, making the Pose2Frame network suitable for this application.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Byxe5udgcS",
+      "rebuttal_id": "Hkx_-lO1oB",
+      "sentence_index": 7,
+      "text": "Combining the Pose2Pose and pix2pixHD networks, would yield significant artifacts (as seen in Fig. 14), and is not suitable for this kind of application.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

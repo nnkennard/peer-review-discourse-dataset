@@ -1,0 +1,611 @@
+{
+  "metadata": {
+    "forum_id": "SJfPFjA9Fm",
+    "review_id": "Sygv6hHya7",
+    "rebuttal_id": "rJlr5Z-t0Q",
+    "title": "ACCELERATING NONCONVEX LEARNING VIA REPLICA EXCHANGE LANGEVIN DIFFUSION",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SJfPFjA9Fm&noteId=rJlr5Z-t0Q",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 0,
+      "text": "The paper considers 'replica exchange' Langevin dynamics.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 1,
+      "text": "These methods are very popular among practitioners, and developing some theory backing the empirical successes is an important goal.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 2,
+      "text": "Unfortunately this paper offers only weak results.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 3,
+      "text": "- The first 6 pages set up the general formalism. This is textbook material adapted to the current problem.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 4,
+      "text": "- Page 7 offers a result (expression for the Dirichlet form), which is hardly more than an exercise for anybody familiar with Markov Chains theory.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 5,
+      "text": "- Page 8 gives a Poincare inequality.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 6,
+      "text": "Again, this follows from known results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 7,
+      "text": "More importantly: (1) It does not show any advantage of replica exchange over standard dynamics; (2) It does not provide any quantitative insight for high-dimensional problems.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 8,
+      "text": "- Similar comments hold for the following pages.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "sentence_index": 9,
+      "text": "They are an exercise in applying standard formalism to this problem, without really showing any significative advantage of replica exchange.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 0,
+      "text": "We appreciate your valuable comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 1,
+      "text": "As you have said, these methods are popular in practice and achieve good performance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 2,
+      "text": "However, most of them are done in the setting of MCMC, and people rarely use them in nonconvex optimization.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 3,
+      "text": "One contribution of this paper is to apply these techniques to optimization problems.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 4,
+      "text": "Our paper also tries to understand the acceleration effect of replica exchange.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 5,
+      "text": "We quantify it in both LDP and the convergence of chi^2 divergence.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 6,
+      "text": "Although in Dupuis\u2019s work, he also quantifies the acceleration effect via LDP, the LDP theory we use in this paper is different from that.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 7,
+      "text": "Specifically, his approach is based on the LDP variational theory, and ours is based on the theory of Donsker-Varadhan.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 8,
+      "text": "As a result, our rate function has different form from his.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 9,
+      "text": "In our paper, we also analyze the acceleration in the convergence of chi^2 divergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 10,
+      "text": "It is a new perspective and not discussed by Dupuis.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 11,
+      "text": "We emphasize that LDP and chi^2 divergence are two different approached to quantify convergence.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 12,
+      "text": "They have different meanings.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 13,
+      "text": "The first one characterizes the decay rate of the probability that the empirical measures deviate from the stationary measure and the second one characterizes the decay rate of the discrepancy between the transit distributions and limiting distribution.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 14,
+      "text": "Although the theory of LDP and convergence of chi^2 divergence for a general Markov process are well established and standard, to the best of our knowledge, our paper is the first to apply these tools in this specific problem.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 15,
+      "text": "In our paper, one contribution is that we demonstrate the acceleration effect of replica exchange mathematically.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 16,
+      "text": "We first show that the LDP rate function is boosted by replica exchange.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 17,
+      "text": "Dupuis\u2019s work includes similar results but in a different form.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 18,
+      "text": "We also show that the derivative of chi^2 divergence is boosted.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 19,
+      "text": "Specifically, we demonstrate that a strict positive term caused by the replica exchange is added, if the density ratio between current distribution and limiting distribution is not symmetric.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 20,
+      "text": "We say that a function is symmetric if we swap the positions of variables, the function value does not change.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 21,
+      "text": "In this case, the derivative of chi^2 divergence is strictly boosted, and hence, the convergence is accelerated strictly.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 22,
+      "text": "It reflects the benefits of replica exchange.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 23,
+      "text": "To the best of our knowledge, this phenomenon has never been observed by previous literature, including Dupuis\u2019s paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 24,
+      "text": "We think it is interesting and useful.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 25,
+      "text": "Another contribution of our paper is the discretization algorithm.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 26,
+      "text": "In practice, it is impossible to simulate the continuous process directly, and discretization is necessary.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 27,
+      "text": "To the best of our knowledge, no one has discussed the discretization of replica exchange Langevin diffusion before.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 28,
+      "text": "Our paper is the first one to analyze the discretization theoretically.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 29,
+      "text": "In this paper, we establish the linear convergence rate for the discretization error, which is highly trivial since the process has state-dependent jumps.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Sygv6hHya7",
+      "rebuttal_id": "rJlr5Z-t0Q",
+      "sentence_index": 30,
+      "text": "This result, combined with the acceleration effect, justifies the empirical success of the replica exchange Langevin diffusion in practice.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

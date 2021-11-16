@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "forum_id": "H1gX8C4YPr",
+    "review_id": "r1xyq2tnKB",
+    "rebuttal_id": "HkgFW5P5sB",
+    "title": "DD-PPO: Learning Near-Perfect PointGoal Navigators from 2.5 Billion Frames",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=H1gX8C4YPr&noteId=HkgFW5P5sB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 0,
+      "text": "The paper presents a novel scheme of distributing PPO reinforcement learning algorithm for hundreds of GPUs.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 1,
+      "text": "Proposed technique was validated for pointgoal visual navigation task on recently introduced Habitat challenge and sim.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 2,
+      "text": "Besides the technical contribution, paper shows that when have enough computational power of billions simulation runs, it is possible to learn nearly perfect visual navigation (given RGBD + GPS inputs) via reinforcement learning.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 3,
+      "text": "Authors also study the task itself and show that it is yet not possible to achieve a good results without dense (each step) GPS signal, while the \"Blind\" agent, which has only GPS+compass error achieves quite high results given the billion-scale training time.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 4,
+      "text": "This suggests that PointGoal navigation with dense GPS signal is might be a poor choice to benchmark RL algorithms and we should proceed to harder tasks.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 5,
+      "text": "Overall I like the paper a lot and think that it should be accepted.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 6,
+      "text": "***",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "sentence_index": 7,
+      "text": "I haven`t changed my mind after the rebuttal: the paper is good and should be accepted.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1xyq2tnKB",
+      "rebuttal_id": "HkgFW5P5sB",
+      "sentence_index": 0,
+      "text": "> This suggests that PointGoal navigation with dense GPS signal is might be a poor choice to benchmark RL algorithms and we should proceed to harder tasks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "rebuttal_id": "HkgFW5P5sB",
+      "sentence_index": 1,
+      "text": "Agreed.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xyq2tnKB",
+      "rebuttal_id": "HkgFW5P5sB",
+      "sentence_index": 2,
+      "text": "We hope that our algorithm, DD-PPO, and our pretrained models will help accelerate progress on harder tasks like PointGoal Navigation without GPS+Compass, ObjectGoal/RoomGoal Navigation, Instruction Following, etc.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

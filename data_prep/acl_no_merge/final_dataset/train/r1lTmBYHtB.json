@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "forum_id": "SyxD7lrFPH",
+    "review_id": "r1lTmBYHtB",
+    "rebuttal_id": "H1e6lQ9Mjr",
+    "title": "Frequency Pooling: Shift-Equivalent and Anti-Aliasing Down Sampling",
+    "reviewer": "AnonReviewer4",
+    "rating": 1,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyxD7lrFPH&noteId=H1e6lQ9Mjr",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 0,
+      "text": "This paper proposed \"F pooling\" for Frequency Pooling, which is a pooling operation satisfying shift equivalence and anti-aliasing properties.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 1,
+      "text": "The method is very simple: first, transform the input 1D/2D signal into the spectrum domain based on discrete Fourier transform (DFT), then cut the high-frequencies, then transform back to the time domain using the inverse DFT.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 2,
+      "text": "The method can be implemented using FFT and auto differentiation frameworks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 3,
+      "text": "The method is tested on Resnet/Desnet on CIFAR-100 and subsets of ImageNet, showing better performance than the original models.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 4,
+      "text": "The reviewer votes for rejection as the method has limited novelty.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 5,
+      "text": "Spectrum pooling has been used in the community of computer vision and machine learning.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 6,
+      "text": "Taking a random example (there are others by simple searching), in the ECCV paper \"DFT-based Transformation Invariant Pooling Layer for Visual Classification, Ryu et al., 2018\" The DFT magnitude pooling is almost the same as the authors' propositions, where the \"Fourier coefficients are cropped by cutting off high-frequency components\".",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "sentence_index": 7,
+      "text": "The reviewer encourages the authors to make further new developments and have a more comprehensive literature review. But in the current form, the paper has less value to be published in ICLR.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 0,
+      "text": "Thanks for your comments.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 1,
+      "text": "We are sorry to say that we miss some previous works, especially the ECCV one. And we will provide more literature review in our updated paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 2,
+      "text": "We admit that the computation process of F-pooling and the ECCV method is the same.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 3,
+      "text": "However, we defend the novelty of our work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 4,
+      "text": "The values of our work are not how the output of F-pooling is computed.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 5,
+      "text": "Instead, the values are the strict definition of shift-equivalence and the theoretical properties of F-pooling.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 6,
+      "text": "In previous works, they even don\u2019t give an operable definition shift-equivalence when down sampling involved.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 7,
+      "text": "Please refer to our general response for more of F-pooling\u2019s values.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 8,
+      "text": "Moreover, we discuss some practical problems of F-pooling.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 9,
+      "text": "Such as how to deal with the imaginary part and the zero-padding of convolutions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1lTmBYHtB",
+      "rebuttal_id": "H1e6lQ9Mjr",
+      "sentence_index": 10,
+      "text": "With suitable settings, the shift consistency of F-pooling is much better.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

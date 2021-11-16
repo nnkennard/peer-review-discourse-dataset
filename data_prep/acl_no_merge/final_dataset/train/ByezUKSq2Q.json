@@ -1,0 +1,1819 @@
+{
+  "metadata": {
+    "forum_id": "B1lwSsC5KX",
+    "review_id": "ByezUKSq2Q",
+    "rebuttal_id": "HJeWT9TbCQ",
+    "title": "D\u00e9j\u00e0 Vu: An Empirical Evaluation of the Memorization Properties of Convnets",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=B1lwSsC5KX&noteId=HJeWT9TbCQ",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 0,
+      "text": "Summary of the paper:",
+      "suffix": "\n\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 1,
+      "text": "The paper has two intertwined goals.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 2,
+      "text": "These goals are to illuminate the",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 3,
+      "text": "generalization/memorization properties of large and deep ConvNets in",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 4,
+      "text": "tandem with trying to develop procedures related to identifying",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 5,
+      "text": "whether an input to a trained ConvNet has actually been used to train the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 6,
+      "text": "network.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 7,
+      "text": "The latter task is generalized to detecting if a",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 8,
+      "text": "particular dataset has been used to train a ConvNet.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 9,
+      "text": "These goal are",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 10,
+      "text": "tackled empirically with multiple sets of experiments on largescale",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 11,
+      "text": "datasets such as ImageNet22k and modern deep ConvNets architectures",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 12,
+      "text": "such as VGG and ResNet.",
+      "suffix": "\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 13,
+      "text": "Paper's positive points",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 14,
+      "text": "+ The paper has a very comprehensive set of references in the areas it",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 15,
+      "text": "touches upon.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 16,
+      "text": "+ Some of the experimental results presented are quite",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 17,
+      "text": "interesting. They show that regularization data-augmentation helps",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 18,
+      "text": "prevent a network from explicit memorization and could be used as a",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 19,
+      "text": "way to help make training data more anonymous.",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 20,
+      "text": "+ Large scale experiments are reported on modern architectures.",
+      "suffix": "\n\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 21,
+      "text": "Paper's negative points",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 22,
+      "text": "- The paper makes use of a result from the David MacKay textbook",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 23,
+      "text": "which defines the capacity of a single layer network to memorize the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 24,
+      "text": "labelling of $n$ inputs in $d$-dimensional space.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 25,
+      "text": "If I'm not",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 26,
+      "text": "mistaken, from this result the authors extrapolate that the capacity",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 27,
+      "text": "of a (deep) neural network",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 28,
+      "text": "is proportional to the number of",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 29,
+      "text": "parameters in the network.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 30,
+      "text": "This is true, but there are a",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 31,
+      "text": "couple of caveats.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 32,
+      "text": "The first is that the coefficient of",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 33,
+      "text": "proportionality must depend very much on the number of layers in the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 34,
+      "text": "network.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 35,
+      "text": "Increasing the network's depth increases the efficiency of",
+      "suffix": "\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 36,
+      "text": "the representation (i.e. fewer total parameters needed to have the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 37,
+      "text": "same representational power as a shallow network). And as MacKay",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 38,
+      "text": "also says in his book (chapter 44 quoting findings from Radford",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 39,
+      "text": "Neal) that for MLPs what determines the complexity of the typical",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 40,
+      "text": "function (once the network has a large enough width) represented by",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 41,
+      "text": "the MLP is the \"characteristic magnitude of the weights\". So the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 42,
+      "text": "regularization technique applied is very significant in the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 43,
+      "text": "controlling the effective capacity of a network.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 44,
+      "text": "This paper",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 45,
+      "text": "experimentally shows that is the case multiple times as it is shown",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 46,
+      "text": "that with increasing degrees of regularization (figure 1, figure 2)",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 47,
+      "text": "it becomes harder and harder to memorize the positive training",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 48,
+      "text": "images. It would be great if the paper also made some attempt to",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 49,
+      "text": "consider these connections. Or at least comment on how these factors",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 50,
+      "text": "could be incorporated into a more sophisticated analysis of the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 51,
+      "text": "capacity of a network.",
+      "suffix": "\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 52,
+      "text": "- There is a slight oxymoron in the premise of the first set of",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 53,
+      "text": "experiments.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 54,
+      "text": "The network is forced to memorize a set of",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 55,
+      "text": "positive examples relative to the negative set it sees during",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 56,
+      "text": "training. What is memorized I presume depends a lot on the negative",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 57,
+      "text": "set used for training (its diversity, closeness to the positive set",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 58,
+      "text": "and how frequently each negative example is seen during",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 59,
+      "text": "training).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 60,
+      "text": "This issue is not really commented upon in the paper. Is",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 61,
+      "text": "there a training task which would allow one to more explicitly",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 62,
+      "text": "memorize the image (some sort of reconstruction task) as opposed to",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 63,
+      "text": "an in/out classification task?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 64,
+      "text": "- This paper is a slightly difficult read - not because of the",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 65,
+      "text": "language or the presentation of the material but more because there",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 66,
+      "text": "is not one main coherent argument or goal for the paper.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 67,
+      "text": "This is",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 68,
+      "text": "reflected in the \"Related work\" section where 4 different",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 69,
+      "text": "issues/tasks are referred to.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 70,
+      "text": "Each one of these topics is worthy of",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 71,
+      "text": "a paper in itself, but this paper dips into each one and then",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 72,
+      "text": "swiftly moves onto the next one.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 73,
+      "text": "For example in section 3 the paper",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 74,
+      "text": "explores if a network can be forced to explicitly memorize a set of",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 75,
+      "text": "images and how the size of this set is affected by the number of",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 76,
+      "text": "parameters in the network and data augmentation.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 77,
+      "text": "High-level",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 78,
+      "text": "conclusions are made: more parameters in the network implies more",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 79,
+      "text": "images can be memorized and data-augmentation makes explicit",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 80,
+      "text": "memorization more difficult. Then it is off to considering",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 81,
+      "text": "pre-trained networks and determining whether by analyzing",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 82,
+      "text": "the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 83,
+      "text": "statistics of the responses at different layers one can decide if a",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 84,
+      "text": "set of images was used for training or not (or similar tasks).",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 85,
+      "text": "Yes",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 86,
+      "text": "the different sections are related but it is does not feel like they",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 87,
+      "text": "build upon each other to help form a clearer picture of memorization",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 88,
+      "text": "within neural networks.",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 89,
+      "text": "- The conclusions focus on the importance of section 3 and",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 90,
+      "text": "the results of the experiments performed. Do the conclusions accurately",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 91,
+      "text": "reflect the opinions of the author? If yes, would",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 92,
+      "text": "it better to re-organize the paper and devote more of it to the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 93,
+      "text": "material presented in section 3 and filling this out with more",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 94,
+      "text": "analysis and experiments to perhaps explore the issue of the",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 95,
+      "text": "capacity of a network in more",
+      "suffix": "\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 96,
+      "text": "Queries/ points that need some clarification",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 97,
+      "text": "- I'm a little unclear when data-augmentation is included in the",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 98,
+      "text": "training phase whether the goal is to be able to also recognise",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 99,
+      "text": "perturbed versions of the input images at test time.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 100,
+      "text": "In section 3 is",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 101,
+      "text": "a perturbed positive image considered a positive training image? And",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 102,
+      "text": "in the testing phase are only unperturbed versions of the positive",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 103,
+      "text": "images given to the ConvNet as input?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 104,
+      "text": "- Last paragraph page 4: \"when the accuracy gets over 60\\% and again",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 105,
+      "text": "at 90\\%\". Is this training or validation accuracy?",
+      "suffix": "\n\n\n\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 106,
+      "text": "Typos possible errors spotted along the way:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 107,
+      "text": "* First paragraph page 5: \"more shallow\" --> \"shallower\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 108,
+      "text": "* Page 7, first paragraph of section 5.: \"is ran\" --> \"is run\"",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 109,
+      "text": "* Using \"scenarii\" for the plural of \"scenario\" I would say is pretty",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "sentence_index": 110,
+      "text": "non-standard and most people would use \"scenarios\"",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 1,
+      "text": "\u201cThe paper makes use of a result from the David MacKay textbook which defines the capacity of a single layer network to memorize the labelling of $n$ inputs in $d$-dimensional space. [...] It would be great if the paper also made some attempt to consider these connections. Or at least comment on how these factors could be incorporated into a more sophisticated analysis of the capacity of a network.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 2,
+      "text": "We agree with the reviewer that our analysis of capacity in section 3 does not take into account the magnitude of the weights, nor the dependence on the depth of the network.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_mitigate-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 3,
+      "text": "Our objective in this section was to provide a empirical lower-bound on the capacity by designing a setup where we can vary the quantity of information contained in a dataset (in our case, N choose n), and evaluate empirically the effect of data augmentation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 4,
+      "text": "In relation to section 5, we aim at seeing how much a network can remember if it is explicitly trained to remember a given set of images.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 5,
+      "text": "We understand the limitations of MacKay's analysis, which was presented to give a rough theoretical comparison point to our empirical evaluation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 6,
+      "text": "We will clarify this in the paper and improve the discussion along the lines discussed by the reviewer.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 7,
+      "text": "\u201cThere is a slight oxymoron in the premise of the first set of experiments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          52,
+          53
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 8,
+      "text": "The network is forced to memorize a set of positive examples relative to the negative set it sees during training. What is memorized I presume depends a lot on the negative set used for training (its diversity, closeness to the positive set and how frequently each negative example is seen during training).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          52,
+          53
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 9,
+      "text": "[...] Is there a training task which would allow one to more explicitly memorize the image (some sort of reconstruction task) as opposed to an in/out classification task?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 10,
+      "text": "In these experiments, the set of positive and negatives is fixed (when varying data augmentation and architectures).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 11,
+      "text": "During training, we feed to the network all positives and an equal number of negatives during each epoch.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 12,
+      "text": "The performance does indeed depend on the closeness of the positive and the negatives, but this is similar to the membership inference problem presented in section 5, where it is difficult for a network to tell apart a seen image from an unseen, very similar image.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 13,
+      "text": "A reconstruction task would suffer the same problems: the reconstruction is only approximate so we would need to evaluate the distance between our reconstruction, positives and negatives, which also depends on the closeness between positives and negatives.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 14,
+      "text": "Also, the reconstruction task would need to remember the values of all pixels which requires more capacity.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 15,
+      "text": "We agree that this specific deserves a short discussion and will add it to the paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          61,
+          62,
+          63
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 16,
+      "text": "\u201cThis paper is a slightly difficult read [...] because there is not one main coherent argument or goal for the paper.[...]. Yes the different sections are related but it is does not feel like they build upon each other to help form a clearer picture of memorization within neural networks.\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 17,
+      "text": "The general goal of the paper is to empirically assess memorization in neural networks, and in particular the important question of implicit memorization, which is important for privacy: does a network trained for classification remember an image, or a set of images ?",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 18,
+      "text": "This aspect is empirically evaluated in sections 4 and 5, and section 3 is a preliminary study of the memorization capabilities for systems explicitly trained to memorize (this serves as a qualitative upper-bound for implicit memorization).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 19,
+      "text": "We acknowledge that Section 3, which is a preliminary analysis, may confuse the reader in the first place.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 20,
+      "text": "We decided to move it to an appendix after reading the feedback from the three reviewers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 21,
+      "text": "\u201cThe conclusions focus on the importance of section 3 and the results of the experiments performed. Do the conclusions accurately reflect the opinions of the author?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 22,
+      "text": "We do not consider the conclusions of the experiments from Section 3  to be more important than those of the other sections, in fact quite the opposite.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 23,
+      "text": "As mentioned above, we will move it to appendices.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 24,
+      "text": "\u201c[...]In section 3 is a perturbed positive image considered a positive training image? And in the testing phase are only unperturbed versions of the positive images given to the ConvNet as input?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 25,
+      "text": "When data augmentation is used, we consider that perturbed positive images are also positive images.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 26,
+      "text": "In the testing phase, perturbed versions of the positive images are given to the ConvNet.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 27,
+      "text": "\u201cLast paragraph page 4: \"when the accuracy gets over 60\\% and at 90\\%\". Is this training or validation accuracy?\u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          104,
+          105
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 28,
+      "text": "We decrease the learning rate when the training accuracy reaches these thresholds.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          104,
+          105
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "ByezUKSq2Q",
+      "rebuttal_id": "HJeWT9TbCQ",
+      "sentence_index": 29,
+      "text": "We thank the reviewer for reporting typos, we will correct them in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          106,
+          107,
+          108,
+          109,
+          110
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

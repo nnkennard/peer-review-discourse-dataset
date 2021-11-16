@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "forum_id": "HkxTwkrKDB",
+    "review_id": "SyxwgLc0tB",
+    "rebuttal_id": "BJxuByU-oS",
+    "title": "On Universal Equivariant Set Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=HkxTwkrKDB&noteId=BJxuByU-oS",
+    "annotator": "anno3"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 0,
+      "text": "The paper presents proof that the DeepSets and a variant of PointNet are universal approximators for permutation equivariant functions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 1,
+      "text": "The proof uses an expression for equivariant polynomials and the universality of MLP.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 2,
+      "text": "It then shows that the proposed expression in terms of power-sum polynomials can be constructed in PointNet using a minimal modification to the architecture, or using DeepSets, therefore proving the universality of such deep models.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 3,
+      "text": "The results of this paper are important.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 4,
+      "text": "In terms of presentation, the notation and statement of theorems are precise, however, the presentation is rather dry, and I think the paper can be significantly more accessible.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 5,
+      "text": "For example, here is an alternative and clearer route presenting the same result: one may study the simple case of having single input channel, for which the output at index \"i\" of an equivariant polynomial is written as the sum of all powers of input multiplied by a polynomial function of the corresponding power-sum.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 6,
+      "text": "This second part is indeed what is used in the proof of the universality of the permutation invariant version of DeepSets, making the connection more visible.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 7,
+      "text": "Generalizing this to the multi-channel input as the next step could make the proof more accessible.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 8,
+      "text": "The second issue I would like to raise is related to discussions around the non-universality of the vanilla PointNet model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 9,
+      "text": "Given the fact that it applies the same MLP independently to individual set members, it is obvious that it is not universal equivariant (for example, consider a function that performs a fixed permutation to its input), and I fail to see why the paper goes into the trouble of having theorems and experiments just to demonstrate this point. If there were any other objectives beyond this in the experiments could you please clarify?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "sentence_index": 10,
+      "text": "Finally, could you give a more accurate citation (chapter-page number) for the single-channel version of Theorem 2.?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the review and the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 1,
+      "text": "Below we address the main concerns.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 2,
+      "text": "\u201cone may study the simple case of having single input channel, for which the output at index \"i\" of an equivariant polynomial is written as the sum of all powers of input multiplied by a polynomial function of the corresponding power-sum.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 3,
+      "text": "This second part is indeed what is used in the proof of the universality of the permutation invariant version of DeepSets, making the connection more visible.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 4,
+      "text": "Generalizing this to the multi-channel input as the next step could make the proof more accessible \u201d",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 5,
+      "text": ">> We will highlight the connection to the case of single input channel and DeepSets permutation invariance universality.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 6,
+      "text": "\u201cThe second issue I would like to raise is related to discussions around the non-universality of the vanilla PointNet model. ... if there were any other objectives beyond this in the experiments could you please clarify? \u201c",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 7,
+      "text": ">> We agree it is trivial (and indeed the proof is a one-liner).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 8,
+      "text": "If the reviewers feel strongly, we can move it to appendix, however we feel it helps to provide a complete picture.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 9,
+      "text": "We included it in the experiments as a naive baseline and to show that adding a single transmission layer indeed provides a significant improvement.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 10,
+      "text": "\u201cFinally, could you give a more accurate citation (chapter-page number) for the single-channel version of Theorem 2.?\u201c",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 11,
+      "text": ">> This result is Proposition 2.27 in Golubitsky&Stuart(2002).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxwgLc0tB",
+      "rebuttal_id": "BJxuByU-oS",
+      "sentence_index": 12,
+      "text": "We will update the paper to give a more accurate citation.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,729 @@
+{
+  "metadata": {
+    "forum_id": "HkfYOoCcYX",
+    "review_id": "SyxPPFpDhm",
+    "rebuttal_id": "SJxecAdFRX",
+    "title": "Double Viterbi: Weight Encoding for High Compression Ratio and Fast On-Chip Reconstruction for Deep Neural Network",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HkfYOoCcYX&noteId=SJxecAdFRX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 0,
+      "text": "This paper presents a new way to represent a dense matrix in a compact format.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 1,
+      "text": "First, the method prunes a dense matrix based on the Viterbi-based pruning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 2,
+      "text": "Then, the pruned matrix is quantized with alternating multi-bit quantization.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 3,
+      "text": "Finally, the binary vectors produced by the quantization algorithm are further compressed with the Viterbi-based algorithm.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 4,
+      "text": "It spots the problem of each existing approach and solve the problems by combining each method.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 5,
+      "text": "The combination is new and the result is encouraging.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 6,
+      "text": "I find this paper is interesting and I like the strong results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 7,
+      "text": "It is an interesting combination of methods.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 8,
+      "text": "However, the experiments are not enough to show that the proposed method is really needed to achieve the results. If these are answered well, I'd be happy to change my evaluation.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 9,
+      "text": "1. The method should be compared with other combinations of components.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 10,
+      "text": "At least, it should be compared with \"Multi-bit quantization only (Xu et al., 2018)\" and \"Multi-bit-quantization + Viterbi-based binary code encoding\".",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 11,
+      "text": "2. The experiments with \"Don't Care\" should go to the experiment section, and the end-to-end results should be present but not the ratio of incorrect bits.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 12,
+      "text": "3. Similarly, the paper will become stronger if it has some experimental results that compare quantization methods.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 13,
+      "text": "In Section 3.3.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 14,
+      "text": ", it mentions that the conventional k-bit quantization was tried and significant accuracy drops were observed.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 15,
+      "text": "I feel that this is a kind of things which support the proposed method if it is properly assessed.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 16,
+      "text": "4. When you say \"slow\" form something and propose a method to address it, I'd like to see some benchmark numbers. There is an experiment with simulation, but that does not seem to simulate the slow \"sequential sparse matrix decoding process\".",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 17,
+      "text": "Minor comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 18,
+      "text": "* It was a bit hard to understand how a matrix is processed through the flowchart in Fig. 1 at first glance.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "sentence_index": 19,
+      "text": "It would help readers to understand it better if it has a corresponding figure which shows how a matrix is processed through the flowchart.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 0,
+      "text": "Thank you very much for the constructive comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 1,
+      "text": "We tried to strengthen our claims by adding more experimental data which the Reviewer requested.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 2,
+      "text": "1. The proposed \"Multi-bit-quantization + Viterbi-based binary code encoding\" requires slightly larger memory footprint than \"Multi-bit quantization only ([4])\" because some of the Viterbi encoded bits have different indices from their corresponding quantization bits.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 3,
+      "text": "Hence, the \"Multi-bit quantization only\" requires 10 % to 20 % smaller memory footprint than \"Multi-bit-quantization + Viterbi-based binary code encoding\" case.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 4,
+      "text": "However, the main reason why we apply the Viterbi weight encoding is that parallel sparse-to-dense matrix conversion can be done by applying same Viterbi encoding process to the non-zero values and indices of the non-zero values in parallel.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 5,
+      "text": "This parallel sparse-to-dense conversion makes the speed of feeding parameters to PEs 10 % to 40 % faster compared to [1] (Figure 6c).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 6,
+      "text": "2. Per Reviewer\u2019s suggestion, the experimental results for the effectiveness of \"Don\u2019t Care\" term have been moved to Section 4.1.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 7,
+      "text": "3. Per Reviewer's suggestion, we measured accuracy differences before and after Viterbi encoding for several quantization methods such as linear quantization ([2]), logarithmic quantization ([3]), and alternating quantization ([4]) methods with the same quantization bits (3-bit).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 8,
+      "text": "The result shows that combination with alternating quantization and Viterbi weight encoding had only 2 % validation accuracy degradation after the Viterbi encoding was applied first right after the quantization and the accuracy was easily recovered with retraining.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 9,
+      "text": "On the other hand, the combination with the other quantization methods and Viterbi weight encoding showed accuracy degradation as much as 71 %, which was too large to recover the accuracy with retraining.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 10,
+      "text": "The accuracy difference mainly results from the uneven weight distribution.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 11,
+      "text": "Because weights of neural networks usually are normally distributed, the composition ratio of '0' and '1' is not equal when the linear or logarithmic quantization is applied to the weights of neural networks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 12,
+      "text": "As we stated in the manuscript, Viterbi encoder tends to produce similar number of '0' and '1'.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 13,
+      "text": "Therefore, we can conclude that under the same bit condition, alternating quantization method shows best accuracy and compatibility with our bit-by-bit Viterbi encoding scheme regardless of the type of neural networks.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 14,
+      "text": "4. We conducted additional simulations to compare sparse matrix reconstruction speed of [1] and the proposed method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 15,
+      "text": "We used a random 512-by-512 size matrix with various pruning rate ranging from 75 % to 95 %.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 16,
+      "text": "We conducted the simulations under the assumptions described in Figure 6c.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 17,
+      "text": "The simulation results are shown in Figure 6c in updated manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 18,
+      "text": "We could observe that the proposed method could feed 10 % to 40 % more nonzero weights and input activations to PEs in same 10000 cycles compared to [1].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 19,
+      "text": "Proposed method could also feed parameters to PEs 20 % to 106 % faster compared to baseline method, which reads dense weight and activation matrices directly from DRAM.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 20,
+      "text": "The improvement in the proposed scheme mainly comes from the parallelized process of assigning non-zero values to their corresponding indices in the weight matrix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 21,
+      "text": "While preparing addition data for the rebuttal, we realized that our simulation model did not fully exploit the parallelized weight and index decoding process of the proposed method.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 22,
+      "text": "After further optimization, we could observe that the parameter feeding rate of the proposed method increased compared to the reported data in original manuscript.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 23,
+      "text": "Therefore, we updated Figure 7 in original manuscript to Figure 6c in updated manuscript according to the new data.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 24,
+      "text": "5. We added the change of the exact weight representation at each process in Figure 1 to clarify the flowchart.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          18,
+          19
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 25,
+      "text": "Reference",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 26,
+      "text": "[1] Dongsoo Lee, Daehyun Ahn, Taesu Kim, Pierce I. Chuang, and Jae-Joon Kim. Viterbi-based pruning for sparse matrix with fixed and high index compression ratio. International Conference on Learning Representations (ICLR), 2018.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 27,
+      "text": "[2] Darryl D. Lin, Sachin S. Talathi, and V. Sreekanth Annapureddy. Fixed point quantization of deep convolutional networks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 28,
+      "text": "In Proceedings of the 33rd International Conference on International Conference on Machine Learning - Volume 48, ICML\u201916, pp. 2849\u20132858. 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 29,
+      "text": "[3] Daisuke Miyashita, Edward H. Lee, and Boris Murmann. Convolutional Neural Networks using Logarithmic Data Representation. CoRR, abs/1603.01025, 2016. URL https://arxiv.org/abs/1603.01025.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxPPFpDhm",
+      "rebuttal_id": "SJxecAdFRX",
+      "sentence_index": 30,
+      "text": "[4] Chen Xu, Jianqiang Yao, Zouchen Lin, Wenwu Qu, Yuanbin Cao, Zhirong Wang, and Hongbin Zha. Alternating multi-bit quantization for recurrent neural networks. International Conference on Learning Representations (ICLR), 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_none",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

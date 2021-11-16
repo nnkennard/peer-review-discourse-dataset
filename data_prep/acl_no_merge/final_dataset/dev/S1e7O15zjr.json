@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "forum_id": "SyeD0RVtvS",
+    "review_id": "S1e7O15zjr",
+    "rebuttal_id": "BJgsPzsPiB",
+    "title": "DeepSFM: Structure From Motion Via Deep Bundle Adjustment",
+    "reviewer": "AnonReviewer1",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SyeD0RVtvS&noteId=BJgsPzsPiB",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 1,
+      "text": "The authors propose a SfM model which integrates geometric consistency with a learned pose and depth network.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 2,
+      "text": "An initial estimate of depth and pose are used to construct pose and depth cost volumes, which are then fed into a pose regression and depth refinement network, to produce a new set of cost volumes, and so on.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 3,
+      "text": "In this manner, the pose and depth estimation are improved iteratively.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 4,
+      "text": "Strengths:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 5,
+      "text": "The proposed model is well motivated and shows strong performance and generalization ability on several datasets.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 6,
+      "text": "There are convincing experiments to show the importance of the P-CV network.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 7,
+      "text": "Weaknesses:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 8,
+      "text": "The authors claim that the LM optimization in BA-Net is memory inefficient and may lead to non-optimal solutions.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 9,
+      "text": "It\u2019s not clear to me that the proposed method can guarantee optimality any better.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 10,
+      "text": "It\u2019s also unclear if the proposed method is more memory efficient, since the authors only unroll 4 iterations of it.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 11,
+      "text": "Other comments:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 12,
+      "text": "It would be very interesting to see the test time behavior of the network when it is run with more iterations than it is trained with (say 10 or 20), especially since the depth error does not seem to have stopped decreasing at only 4 iterations.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 13,
+      "text": "It\u2019s not made entirely clear whether the training backpropagates through the update/construction of the pose and depth cost volumes.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "sentence_index": 14,
+      "text": "In equation 5, \u201cx\u201d should be \u201ci\u201d.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments and appreciation, and would like to answer the reviewer\u2019s questions as follows:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 1,
+      "text": "Q1:The authors claim that the LM optimization in BA-Net is memory inefficient and may lead to non-optimal solutions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 2,
+      "text": "It\u2019s not clear to me that the proposed method can guarantee optimality any better.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 3,
+      "text": "It\u2019s also unclear if the proposed method is more memory efficient, since the authors only unroll 4 iterations of it.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 4,
+      "text": "A1: Thanks for pointing this out and sorry for the confusion!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 5,
+      "text": "Here we don\u2019t mean that our method can fix the optimality problem in any way.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 6,
+      "text": "We wish to provide some of our analysis of the limitation of BA-Net, and hope our method could provide complementary perspectives to rethink the problem and mitigate the non-optimal issue in terms of performance with more ML component.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 7,
+      "text": "In terms of number of iterations, our method does not have a restriction, since our iteration happens outside the neural network and acts as an incremental improvement.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 8,
+      "text": "In contrast, BA_Net\u2019s iteration is part of the LM optimization and it is inside the network.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 9,
+      "text": "Thus if it unrolls more iteration steps, the memory cost will increase linearly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 10,
+      "text": "We have updated the paper for this.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 11,
+      "text": "Q2: Show the test time behavior of the network when it is run with more iterations than it is trained with (say 10 or 20)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 12,
+      "text": "A2: Thanks for the suggestion! We added Table 4 in Appendix C that shows performance of the network with more iterations(from 2 to 20).",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 13,
+      "text": "Q3:It\u2019s not made entirely clear whether the training back propagates through the update/construction of the pose and depth cost volumes.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 14,
+      "text": "A3: Gradients can back-propagate through cost volumes, and cost-volume construction does not affect any trainable parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 15,
+      "text": "We updated this point in the revised version.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 16,
+      "text": "Q4: In equation 5, \u201cx\u201d should be \u201ci\u201d.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1e7O15zjr",
+      "rebuttal_id": "BJgsPzsPiB",
+      "sentence_index": 17,
+      "text": "A4: Thanks for pointing out that! We have fixed the typo.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

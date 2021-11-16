@@ -1,0 +1,301 @@
+{
+  "metadata": {
+    "forum_id": "B1ldb6NKDr",
+    "review_id": "rJgHSAbAFH",
+    "rebuttal_id": "HyeW9eY5oB",
+    "title": "Multi-Agent Hierarchical Reinforcement Learning for Humanoid Navigation",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=B1ldb6NKDr&noteId=HyeW9eY5oB",
+    "annotator": "anno9"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 0,
+      "text": "This paper proposes a multi-agent hierarchical reinforcement learning algorithm so that multiple humanoid robots can navigate in multi-agent settings (e.g. avoid collisions, collaboration, chase and escape) in a physically simulated environment.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 1,
+      "text": "The key difference of this paper with the prior work on MARL is that it used an accurate physics simulation of humanoid robots.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 2,
+      "text": "This is the main reason of using the hierarchical RL.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 3,
+      "text": "In general, I like this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 4,
+      "text": "It is an important step towards multi-agent learning in complex physical environments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 5,
+      "text": "The results look appealing, too.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 6,
+      "text": "However, I voted for \"Weak Reject\" for two reasons.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 7,
+      "text": "First, the technical contribution is lean. Neither the multi-agent learning or the hierarchical learning of the algorithm is novel.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 8,
+      "text": "The combination of these two methods seems straightforward.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 9,
+      "text": "Once a low-level walking controller is trained, the high-level multi-agent navigation control is not much different from simple environments, e.g. point mass control, used in the previous works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 10,
+      "text": "I do not understand the \"deep integration of MARL and HRL\" that is claimed in the Introduction.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 11,
+      "text": "I also do not agree with another claim that \"We consider the simulation and training environment to be another novel contribution... few simulator support more than one agent, at most 2\".",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 12,
+      "text": "In most of the simulators that I am familiar with, such as Mujoco, Bullet, DART, it is straightforward to add multiple simulated robots.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 13,
+      "text": "Second, the writing can be greatly improved.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 14,
+      "text": "Almost half of the technical details are buried in \"8. Supplementary material\".",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 15,
+      "text": "Since it is not fair to use \"Supplementary material\" as a way to extend the page limit, I will make my judgement of the paper solely based on the contents up to Section 7.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 16,
+      "text": "In the main text (up to Section 7), there is no mentioning of how the low-level controllers are learned, and how to combine PPO in a MARL partial parameter sharing setting.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 17,
+      "text": "I think that these are important details and may also be the contributions of this paper.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 18,
+      "text": "Most of these should be moved to the main text.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 19,
+      "text": "Here are some more suggestions on writing:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 20,
+      "text": "1) Certain paragraphs in the main text can be significantly shortened, such as the reward shaping in Section 5.2.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 21,
+      "text": "2) It would be great if the paper can clearly define the experiments: \"waypoint\", \"oncoming\", \"mall\", and \"bottleneck\".",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 22,
+      "text": "3) The paper needs a thorough proof-reading. There are many grammar mistakes, typos, missing citations. For example,",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 23,
+      "text": "promiss->promise",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 24,
+      "text": "week signal->weak signal",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 25,
+      "text": "missing citation [?] in page 3",
+      "suffix": "\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJgHSAbAFH",
+      "sentence_index": 26,
+      "text": "reuse the same symbol v_{com} for agent's velocity and desired speed in eq(3)",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJgHSAbAFH",
+      "rebuttal_id": "HyeW9eY5oB",
+      "sentence_index": 0,
+      "text": "We appreciate your time and comments on the work.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

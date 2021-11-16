@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "forum_id": "BJg73xHtvr",
+    "review_id": "H1eQwEeRYS",
+    "rebuttal_id": "H1xjf2ILjr",
+    "title": "Constant Curvature Graph Convolutional Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=BJg73xHtvr&noteId=H1xjf2ILjr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 0,
+      "text": "In this paper, the authors address representation learning in non-Euclidean spaces.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 1,
+      "text": "The authors are motivated by constant curvature geometries, that can  provide a useful trade-off between Euclidean representations and Riemannian manifolds, i.e. arriving at more suitable representations than possible in the Euclidean space, while not sacrifising closed-form formulae for estimating distances, gradients and so on.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 2,
+      "text": "The authors point out that an extension of the gyrovector space formalization to spaces of constant positive curvature (spherical) is required, and with the corresponding formalization for hyperbolic spaces, one can arrive at a unified formalism that can interpolate smoothly between all geometries of constant curvature.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 3,
+      "text": "The authors propose to do so by replacing  the curvature while flipping the sign in the standard Poincare model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 4,
+      "text": "This is a strong point reagarding this work, as it seems that no such unification has been attempted in the past (although simply replacing the curvature in the Poincare model seems a bit too straightforward to not have been attempted, it seems to be the case).",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 5,
+      "text": "The authors also provide extensive supplementary material (around 20 pages) with detailed derivations and descriptions of experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 6,
+      "text": "This also makes me wonder if this paper is more suitable for a journal - both in terms of the extensive supplementary material (e.g., curvature sampling algorithm and other details can be found only in supplementary), as well as the more rigorous review process that a journal paper goes through.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 7,
+      "text": "In the main paper, only proof of concept experiments are provided (one experiment), that nevertheless show competitive performance under varying settings.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 8,
+      "text": "However, it seems to me that such contributions in the rising field of geometric deep learning, where several challenges are yet to be overcome, can be beneficial for future research.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "sentence_index": 9,
+      "text": "Since in the supplementary experiments also, it seems that curvature does have small variance in the results, how would the authors assess the robustness of the curvature sampling method with respect to the results?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1eQwEeRYS",
+      "rebuttal_id": "H1xjf2ILjr",
+      "sentence_index": 0,
+      "text": "We thank reviewer #2 for the useful feedback.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "rebuttal_id": "H1xjf2ILjr",
+      "sentence_index": 1,
+      "text": "We have significantly improved the exposition in this paper, ameliorated the discussion of the related work, added theorems and more formal statements in the main text,  compressed the appendix and enhanced the description of the experimental setup.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "rebuttal_id": "H1xjf2ILjr",
+      "sentence_index": 2,
+      "text": "We have updated the paper and kindly ask the reviewer to take another look.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "rebuttal_id": "H1xjf2ILjr",
+      "sentence_index": 3,
+      "text": "Robustness of the curvature sampling method: we provide confidence intervals in Table 2 of our results.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1eQwEeRYS",
+      "rebuttal_id": "H1xjf2ILjr",
+      "sentence_index": 4,
+      "text": "We learn curvatures for each of the component spaces and show learned values together with confidence intervals in Appendix E. It can be seen that these variances are in the low regime.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

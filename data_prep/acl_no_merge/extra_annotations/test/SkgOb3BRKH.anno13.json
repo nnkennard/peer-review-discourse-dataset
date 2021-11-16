@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "forum_id": "rJlqoTEtDB",
+    "review_id": "SkgOb3BRKH",
+    "rebuttal_id": "S1eCuflBiS",
+    "title": "PowerSGD: Powered Stochastic Gradient Descent Methods for Accelerated Non-Convex Optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=rJlqoTEtDB&noteId=S1eCuflBiS",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 0,
+      "text": "This paper proposes PowerSGD for improving SGD to train deep neural networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 1,
+      "text": "The main idea is to raise the stochastic gradient to a certain power.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 2,
+      "text": "Convergence analysis and experimental results on CIFAR-10/CIFAR-100/Imagenet and classical CNN architectures are given.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 3,
+      "text": "Overall, this is a clearly-written paper with comprehensive experiments.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 4,
+      "text": "My major concern is whether the results are significant enough to deserve acceptance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 5,
+      "text": "The proposed method PowerSGD is an extension of the method in Yuan et al. (extended to handle stochastic gradient and momentum).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "sentence_index": 6,
+      "text": "I am not sure how novel the convergence analysis for PowerSGD is, and it would be nice if the authors could discuss technical challenges they overcome in the introduction.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 1,
+      "text": "We justify the novelty and significance of the contributions made by this paper as follows.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 2,
+      "text": "1) Novelty of the convergence analysis: The paper by Yuan et al. did not present proof of convergence in the discrete-time setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 3,
+      "text": "The authors only provided convergence of the ODE models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 4,
+      "text": "On the other hand, convergence analysis of momentum methods in non-convex setting is an important but under-explored area  (Yan et al., 2018).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 5,
+      "text": "In the current paper, the convergence results are proved for non-convex objective functions satisfying mild assumptions.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 6,
+      "text": "Appropriate use of some sharp estimates allowed us to obtain concise bounds on convergence of the entire class of PoweredSGD methods for $\\gamma\\in[0,1]$ and the bounds continuously depend on parameters $\\gamma$ and $\\beta$. In the special cases ($\\gamma=0,1$, $\\beta=0$), these bounds matches the best known bounds for GD/SGD/SGDM in the non-convex setting.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 7,
+      "text": "More specifically, we would like to draw the reviewer's attention to the following two papers:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 8,
+      "text": "*",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 9,
+      "text": "[Yan18] Yan, Y., T. Yang, Z. Li, Q. Lin, and Y. Yang. \"A unified analysis of stochastic momentum methods for deep learning.\" In IJCAI International Joint Conference on Artificial Intelligence. 2018.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 10,
+      "text": "*  [Bernstein18] Bernstein, Jeremy, Yu-Xiang Wang, Kamyar Azizzadenesheli, and Animashree Anandkumar. \"SIGNSGD: Compressed Optimisation for Non-Convex Problems.\" In International Conference on Machine Learning, pp. 559-568. 2018. (Theorem 3)",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 11,
+      "text": "We emphasize that our theoretical analysis leads to significant more concise convergence bounds than those in the above papers.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 12,
+      "text": "Please take a look at Theorems 1 and 2 in [Yan18] and Theorem 3 in [Bernstein18].",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 13,
+      "text": "We have highlighted the technical challenges we overcome in order to obtain these results in the updated version (please see Remark 3.3).",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 14,
+      "text": "2) Novelty of experiments: The current paper presents substantially more comprehensive experiments for benchmarking the proposed class of optimizers against other popular optimization methods for deep learning tasks.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 15,
+      "text": "In particular, we highlight the experiments on vanishing gradients and learning rate schedules.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SkgOb3BRKH",
+      "rebuttal_id": "S1eCuflBiS",
+      "sentence_index": 16,
+      "text": "This, in addition to the potential to accelerate initial convergence, makes the proposed PoweredSGD methods useful in many potential applications.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

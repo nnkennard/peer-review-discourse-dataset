@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "forum_id": "rylV-2C9KQ",
+    "review_id": "S1llxt2cnQ",
+    "rebuttal_id": "HJea7OJdpX",
+    "title": "Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks",
+    "reviewer": "AnonReviewer3",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rylV-2C9KQ&noteId=HJea7OJdpX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 0,
+      "text": "In this paper, the authors propose a method for dimensionality reduction of image data.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 1,
+      "text": "They provide a structured and deterministic function G that maps a set of parameters C to an image X = G(C).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 2,
+      "text": "The number of parameters C is smaller than the number of free parameters in the image X, so this results in a predictive model that can be used for compression, denoising, inpainting, superresolution and other inverse problems.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 3,
+      "text": "The structure of G is as follows: starting with a small fixed, multichannel white noise image, linearly mix the channels, truncate the negative values to zero and upsample.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 4,
+      "text": "This process is repeated multiple times and finally the output is squashed through a sigmoid function for the output to remain in the 0..1 range.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 5,
+      "text": "This approach makes sense and the model is indeed more principled than the one taken by Ulyanov et al. In fact, the DIP of Ulyanov et al. can hardly be considered \"a model\" (or a prior, for that matter), and instead should be considered \"an algorithm\", since it relies on the early stopping of a specific optimization algorithm.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 6,
+      "text": "This means that we are not interested in the minimum of the cost function associated to the model, which contradicts the very concept of \"cost function\".",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 7,
+      "text": "If only global optimizers were available, DIP wouldn't work, showing its value is in the interplay of the \"cost\" function and a specific optimization algorithm.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 8,
+      "text": "None of these problems exist with the presented approach.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 9,
+      "text": "The exposition is clear and the presented inverse problems as well as demonstrated performance are sufficient.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 10,
+      "text": "One thing that I missed while reading the paper is more comment on negative results.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 11,
+      "text": "Did the authors tried any version of their model with convolutions or pooling and found it not to perform as well? Measuring the number of parameters when including pooling or convolutions can become tricky, was that part of the reason?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 12,
+      "text": "Minor:",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 13,
+      "text": "\"Regularizing by stopping early for regularization,\"",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "sentence_index": 14,
+      "text": "In this paper \"large compression ratios\" means little compression, which I found confusing.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1llxt2cnQ",
+      "rebuttal_id": "HJea7OJdpX",
+      "sentence_index": 0,
+      "text": "Many thanks for the review!",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "rebuttal_id": "HJea7OJdpX",
+      "sentence_index": 1,
+      "text": "Good point regarding the negative results; we have added a subsection in the revised paper entitled ``A non-convolutional network'', where we compare to a convolutional decoder and conclude that ``Our simulations indicate that, indeed, linear combinations, yield more concise representations, albeit not by a huge factor.''.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1llxt2cnQ",
+      "rebuttal_id": "HJea7OJdpX",
+      "sentence_index": 2,
+      "text": "Regarding the minor points, we have reworded the paragraph on regularizing, and changed `compression ratio' to `compression factor', and reworded such that `large compression factor' means large compression.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

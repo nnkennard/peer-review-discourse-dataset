@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "forum_id": "Skf-oo0qt7",
+    "review_id": "SklswyoFnX",
+    "rebuttal_id": "Hyx17yRtAQ",
+    "title": "On Generalization Bounds of a Family of Recurrent Neural Networks",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Skf-oo0qt7&noteId=Hyx17yRtAQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 0,
+      "text": "The paper focuses on the generalization performance of RNNs and its variant in a theoretical perspective.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 1,
+      "text": "Compared to the previous result (Zhang et al., 2018) for RNNs, this paper refines the generalization bounds for vanilla RNNs in all cases and fills the blank for RNN variants like MGU and LSTM.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 2,
+      "text": "Specifically, in the work of Zhang et al. (2018), the complexity term quadratically depends on the layer (or say, current sequence length, denoted by t in original paper), making it less instructive.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 3,
+      "text": "This paper improves it to at most linear dependence and can achieve at logarithmic dependence in some cases, which should be accredited.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 4,
+      "text": "The key step in the proof is Lemma 2.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 5,
+      "text": "In Lemma 2, the spectral norms of weight matrices and the number of weight parameters are decoupled.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 6,
+      "text": "With Lemma 2, it is natural to construct a epsilon-net for RNNs and then upper bound the empirical Rademacher complexity by Dudley\u2019s entropy integral, since such methodology is not so novel.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 7,
+      "text": "Bartlett, et al. (2017) developed this technique to analyze the generalization bound for neural networks in a margin-based multiclass classification.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 8,
+      "text": "However, it seems a little unexplainable to apply a technique developed from classification to analyze RNNs, since the main task of RNNs never should be classification.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "sentence_index": 9,
+      "text": "I wonder the motivation of analyzing generalization of RNNs by the techniques established by Bartlett.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 0,
+      "text": "1. Comment:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 1,
+      "text": "However, it seems a little unexplainable to apply a technique developed from classification to analyze RNNs, since the main task of RNNs never should be classification.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 2,
+      "text": "1. Response:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 3,
+      "text": "We study seq2seq classification tasks since they have been widely used in real world applications for RNNs.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 4,
+      "text": "To name a few, in speech recognition, [1] hybridizes hidden Markov model with RNNs to label unsegmented sequence data; In computer vision, [2, 3] demonstrate scene labeling with LSTM and RNNs, achieving higher accuracy than baseline methods; In healthcare, [4] proposes a model, Doctor AI, to perform multiple label prediction (one for each disease or medication category).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 5,
+      "text": "In addition, [5, 6] both apply RNNs to real-world healthcare datasets (MIMIC-III, PhysioNet, and ICU data) for mortality prediction and other multiple classifications tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 6,
+      "text": "We establish bounds for classification because it is typical in learning theory and is easy to compare among existing literature.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 7,
+      "text": "On the other hand, our analysis applies in other tasks as long as a suitable Lipschitz loss function is chosen.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 8,
+      "text": "Specifically, Lemma 4 establishes an upper bound for empirical Rademacher complexity of general Lipschitz loss functions (the last line in Appendix A.4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 9,
+      "text": "By replacing the loss function in Lemma 1, we can derive generalization bounds for various tasks other than classification.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 10,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 11,
+      "text": "[1] Graves, Alex, Santiago Fern\u00e1ndez, Faustino Gomez, and J\u00fcrgen Schmidhuber. \"Connectionist temporal classification: labelling unsegmented sequence data with recurrent neural networks.\" In Proceedings of the 23rd international conference on Machine learning, pp. 369-376. ACM, 2006.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 12,
+      "text": "[2] Byeon, Wonmin, Thomas M. Breuel, Federico Raue, and Marcus Liwicki. \"Scene labeling with lstm recurrent neural networks.\" In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 3547-3555. 2015.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 13,
+      "text": "[3] Socher, Richard, Cliff C. Lin, Chris Manning, and Andrew Y. Ng. \"Parsing natural scenes and natural language with recursive neural networks.\" In Proceedings of the 28th international conference on machine learning (ICML-11), pp. 129-136. 2011.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 14,
+      "text": "[4] Choi, Edward, Mohammad Taha Bahadori, Andy Schuetz, Walter F. Stewart, and Jimeng Sun. \"Doctor ai: Predicting clinical events via recurrent neural networks.\" In Machine Learning for Healthcare Conference, pp. 301-318. 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 15,
+      "text": "[5] Che, Zhengping, Sanjay Purushotham, Kyunghyun Cho, David Sontag, and Yan Liu. \"Recurrent neural networks for multivariate time series with missing values.\" Scientific reports 8, no. 1 (2018): 6085.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SklswyoFnX",
+      "rebuttal_id": "Hyx17yRtAQ",
+      "sentence_index": 16,
+      "text": "[6] Xu, Yanbo, Siddharth Biswal, Shriprasad R. Deshpande, Kevin O. Maher, and Jimeng Sun. \"RAIM: Recurrent Attentive and Intensive Model of Multimodal Patient Monitoring Data.\" In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, pp. 2565-2573. ACM, 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

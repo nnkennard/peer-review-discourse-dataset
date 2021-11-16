@@ -1,0 +1,845 @@
+{
+  "metadata": {
+    "forum_id": "rkgv9oRqtQ",
+    "review_id": "H1lZP6Jchm",
+    "rebuttal_id": "rJxslWKrCX",
+    "title": "Compound Density Networks",
+    "reviewer": "AnonReviewer1",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkgv9oRqtQ&noteId=rJxslWKrCX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 0,
+      "text": "This paper proposed Compound Density Networks (CDNs), a neural network architecture that parametrises conditional distributions as infinite mixtures, thus generalising the traditional finite mixture density networks (MDNs).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 1,
+      "text": "The authors realise CDNs by treating the weights of each neural network layer probabilistically, and letting them be matrix variate Gaussians (MVGs) with their parameters given as a function of the layer input via a hypernetwork.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 2,
+      "text": "CDNs can then be straightforwardly optimised with SGD for a particular task by using the reparametrization trick.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 3,
+      "text": "The authors further argue that in case that overfitting is present at CDNs, then an extra KL-divergence term can be employed such that the input dependent MVG distribution is close to a simple prior that is input agnostic.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 4,
+      "text": "They then proceed to evaluate the predictive uncertainty that CDNs offer on three tasks: a toy regression problem, out-of-distribution example detection on MNIST/notMNIST and adversarial example detection on MNIST and CIFAR 10.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 5,
+      "text": "The objective of this work is to provide a method for better uncertainty estimates from deep learning models.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 6,
+      "text": "This is an important research area and relevant for ICLR.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 7,
+      "text": "The paper is generally well written with a clear presentation of the proposed model.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 8,
+      "text": "The generalisation from the finite MDN to the continuous CDN seems straightforward, the model is relatively easy to implement and it is evaluated extensively against several modern baselines.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 9,
+      "text": "Nevertheless, I believe that it still has to address some points in order to be better suited for publication:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 10,
+      "text": "- It seems that the model is not very scalable; while the authors do provide a way of reducing the necessary parameters that the hypernetwork has to predict, minibatching can still be an issue as it is implied that you draw a separate random weight matrix for each datapoint due to the input specific distribution (as shown at Algorithm 1).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 11,
+      "text": "Is this how you implemented minibatching in practice? How easily is this applied to convolutional architectures?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 12,
+      "text": "- How many samples did you use from p(theta|x) during training?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 13,
+      "text": "It seems that with a single sample the method becomes an instance of VIB [1], only considering the weights of the network as latent variables rather than the hidden units.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 14,
+      "text": "- The experiments were entirely focused on uncertainty quality but we are always interested in both performance on the task at hand as as well as good uncertainty estimates. What was the performance based on e.g. classification accuracy on each of these tasks compared to the baselines? I believe that including these results will strengthen the paper and provide a more complete picture.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 15,
+      "text": "- Have you checked / visualised what type of weight distributions do CDNs capture? It would be interesting to see if e.g. the marginal (across the dataset) weight distribution at each layer has any multimodality as that could hint that the network learns to properly specialise to individual data points.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 16,
+      "text": "- The authors mention that in order to avoid overfitting they add an extra (weighted) KL-divergence term to the log-likelihood of the dataset, that encourages the weight distributions for specific points to be close to simple priors.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 17,
+      "text": "How influential is that extra term to the uncertainty quality that you obtain in the end?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 18,
+      "text": "How does this term affect the learned distributions in case of CDNs?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 19,
+      "text": "Furthermore, the way that CDNs are constructed seems to be more appropriate at capturing input specific uncertainty (i.e. aleatoric) rather than global uncertainty about the data (i.e. epistemic).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 20,
+      "text": "I believe that for the specific uncertainty evaluation tasks this paper considers the latter is more appropriate.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 21,
+      "text": "More discussion on both of these aspects can help in improving this paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 22,
+      "text": "-",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 23,
+      "text": "As a final point; the hyper parameters that were tuned for the MNF, noisy K-FAC and KFLA baselines are not on common ground.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 24,
+      "text": "For noisy K-FAC and MNF the lambda (which should be fixed to 1 for a correct Bayesian model) was tuned and in general lower than 1 lambdas lead to models that are overconfident and hence underperform on uncertainty tasks.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 25,
+      "text": "For KFLA a hyper parameter \u201ctau\u201d was tuned; this hyperparameter instead corresponds to the precision of the Gaussian prior on the parameters.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 26,
+      "text": "In this case, KFLA always optimises a \u201ccorrect\u201d Bayesian model for every value of the hyperparameter whereas MNF and noisy K-FAC do not.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 27,
+      "text": "Thus I believe that it would be better if you consider the same hyper parameter on all of these methods, e.g. the precision of the Gaussian prior.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "sentence_index": 28,
+      "text": "[1] Deep Variational Information Bottleneck",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the valuable feedback!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 1,
+      "text": "The suggestion comments were very helpful and led to a clear improvement of our manuscript.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 2,
+      "text": "We reply to the answers and comments in the order they were raised:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 3,
+      "text": "(1) While indeed we need more samples of weight matrices than e.g. for applying VI for BNNs for due to the input dependency, we do not believe this makes our method unscalable to real world scenarios.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 4,
+      "text": "Note, that input dependent samples are also needed in the variational training of VAEs (where the number of hidden variables is of course much smaller than the number of weight parameters in our setting).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 5,
+      "text": "While we present the training algorithm naively in an online version for clearness in Algorithm 1, in practice mini-batching can be done efficiently, due to the availability of batched linear algebra operations, at least in the framework we use (PyTorch), e.g. torch.bmm, broadcasting semantics, etc.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 6,
+      "text": "For convolution layers, we can simply use a different type of mixing distribution, e.g. a fully-factorized multivariate normal instead of matrix-variate normal.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 7,
+      "text": "(2) Thank you very much for the pointer to VIB!",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 8,
+      "text": "We have added a section in the updated manuscript to compare the objective of CDNs with that used in VIB and VI for Bayesian neural networks (see new Section 4).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 9,
+      "text": "Furthermore, while we  always used 1 sample during training in the original submission (which indeed makes the CDN an instance of VIB) we now added experiments using 10 samples (see Section 6.4) in an experimental analysis of the different objectives.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 10,
+      "text": "The results show that the CDN objective produces superior results compared to VI and VIB.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          12,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 11,
+      "text": "(3) Of course! We have moved the test accuracy (which previously was only given in the Appendix and thus hard to find) to the legends of the plots to make it more easily accessible.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 12,
+      "text": "CDNs give better uncertainty estimates while still having similar predictive power compared to the baselines.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 13,
+      "text": "(4) Thank you for the great suggestion.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 14,
+      "text": "We performed the following 2 experiments for the revised version: First, we picked a weight of a CDN trained on a toy regression experiment (with heteroscedastic  noise) at random and visualized its conditional distributions given different values of x. We found that the means and variances vary for different x.  Furthermore, we picked a weight of a CDN trained on a toy classification dataset (created by sampling x ~ 1/2*N(-3, 1) + 1/2*N(3, 1), and assign y=0 if x comes from the first Gaussian and y=1, otherwise) at random and visualized its marginal distributions.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 15,
+      "text": "We found that CDNs indeed capable of learning multimodal weight distribution and to learn input specific mixing distributions.. We detail this in Appendix G.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 16,
+      "text": "(5) We found that the regularization term has a significant impact on the quality of the prediction and the uncertainty estimate (we found that the uncertainty estimates are worse with small \\lambda).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 17,
+      "text": "It makes sure that the variance of \\theta is not shrinking too much, i.e. encouraging the mixing distribution to be close to the prior implies it should have similar variance to the prior (which was chosen to be large).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 18,
+      "text": "Naturally, the coefficient \\lambda controls this behavior: as \\lambda increases the validation accuracy is decreasing while the uncertainty is increasing (and vice versa).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 19,
+      "text": "This gives rise to the selection heuristic for \\lambda we applied: pick the highest \\lambda that still gives high accuracy on the validation set (e.g. > 0.97 in MNIST).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 20,
+      "text": "We found that this works very well in the experiments we did (on OOD and adversarial examples).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 21,
+      "text": "Furthermore, indeed CDNs are rather designed to capture the (heteroscedastic) aleatoric uncertainty.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 22,
+      "text": "We have revised the toy experiments to better account for that.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 23,
+      "text": "However, curiously, CDNs also work well in tasks that are usually shown as prime examples of epistemic uncertainty, e.g. OOD classification and adversarial attack.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 24,
+      "text": "(6) Thank you for this feedback.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 25,
+      "text": "You are right! We have revised the baseline experiments with Bayesian models so that they either use \\lambda = 1 or the settings that the original authors recommended, i.e. we only tune \\tau in KFLA and set \\tau = 0.01 in noisy-KFAC as these are the settings suggested in their respective publications.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 26,
+      "text": "Note, that the conclusions keep unchanged.",
+      "suffix": "\n\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          23,
+          24,
+          25,
+          26,
+          27
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 27,
+      "text": "References:",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 28,
+      "text": "[1] Louizos, Christos, and Max Welling. \"Structured and efficient variational deep learning with matrix gaussian posteriors.\" International Conference on Machine Learning. 2016.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "H1lZP6Jchm",
+      "rebuttal_id": "rJxslWKrCX",
+      "sentence_index": 29,
+      "text": "[2] Kingma, Diederik P., Tim Salimans, and Max Welling. \"Variational dropout and the local reparameterization trick.\" Advances in Neural Information Processing Systems. 2015",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

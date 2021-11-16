@@ -1,0 +1,682 @@
+{
+  "metadata": {
+    "forum_id": "r1eJssCqY7",
+    "review_id": "SJgssoHT27",
+    "rebuttal_id": "BJxckPclaQ",
+    "title": "TabNN: A Universal Neural Network Solution for Tabular Data",
+    "reviewer": "AnonReviewer1",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=r1eJssCqY7&noteId=BJxckPclaQ",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 0,
+      "text": "This paper proposes a hybrid machine learning algorithm using Gradient Boosted Decision Trees (GBDT) and Deep Neural Networks (DNN).",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 1,
+      "text": "The intended research direction on tabular data is essential and promising.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 2,
+      "text": "However, the proposed technique does not seem to be handling the problem foundationally well.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 3,
+      "text": "It seems heavily dependent on GBDT.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 4,
+      "text": "It also shows itself in the results that final algorithm is almost indistinguishable from GBDT regarding results.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 5,
+      "text": "Moreover, I  don't think that the data sets in experiments are good enough to cover the importance and the nature of the problem.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 6,
+      "text": "Pros:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 7,
+      "text": "-This is a crucial line of research direction that aims to make DNNs applicable to many real-world problems (beyond speech and vision) in which discrete data and heterogeneous features exist such as engagement prediction, recommendation, and search.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 8,
+      "text": "-The starting point of using GBDT seems like a good choice.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 9,
+      "text": "-The Paper is mostly well written except occasional repetitions and missing acronym definitions.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 10,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 11,
+      "text": "-The proposed technique does not seem to be original enough, and it does not handle the problem foundationally well.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 12,
+      "text": "I do not think that there is enough justification/demonstration for the fact that a general NN solution for Tabular Data invented.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 13,
+      "text": "The proposed technique is heavily dependent on GBDT (Indeed the algorithm and the learned trees are used at least three times).",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 14,
+      "text": "This shows itself in the results; i.e., the proposed algorithm is either negligibly performing better than GBDT or when  GBDT dependence removed, it performs worse. It seems to me",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 15,
+      "text": "that (except the minor small section of streaming data), the paper is more like a proper verification of how tree-based learning algorithms work very well in tabular data--which is far from the basis of the paper and does not make the paper novel enough for ICLR.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 16,
+      "text": "-The proposed technique seems to include very heavy feature engineering and several ad-hoc practical steps--that is far from the motivation of using NN in tabular data.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 17,
+      "text": "-In the provided benchmark data sets the depth of the analysis seems to be enough.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 18,
+      "text": "However, in the proposed domain of tabular data, often data sets are significantly more high dimensional in reality and include at least one set of sparse large dimensional features",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 19,
+      "text": "(e.g., unstructured raw text for the search queries.) In such scenarios, it had been showed that wide-and-deep NNs perform decently.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 20,
+      "text": "However such problems are entirely missing in the results section.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "sentence_index": 21,
+      "text": "I also think that this is a lost opportunity for the authors as they could be showing that it is the NN part contributing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 0,
+      "text": "Thanks for your efforts in reviewing our paper and the valuable comments, but we have different opinions about your comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 1,
+      "text": "1. Comments about the contributions and novelty",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 2,
+      "text": "As we emphasized many times in our paper, the success of DNN in domains such as image, speech and text, is built on the comprehensive exploration of the locality-based patterns, which motivates us to first find such patterns of features in tabular data automatically and then build up NN architecture based on these discovered patterns.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 3,
+      "text": "This is the core idea of this paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 4,
+      "text": "Thus, GBDT is just a tool we adopt to mine the patterns and do feature grouping since GBDT is an efficient and convenient method for these pre-processing tasks: 1) GBDT is very fast.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 5,
+      "text": "In most experiments, the total time cost of GBDT part in TabNN is about several minutes, while the NN part often needs several hours for training.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 6,
+      "text": "2) the learning of GBDT is just based on statistical information over full dataset.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 7,
+      "text": "Thus, GBDT can learn the stable and robust feature combinations.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 8,
+      "text": "We can definitively replace GBDT with other methods, such as feature correlations, as long as they can achieve better performance then GBDT.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 9,
+      "text": "Regarding the comments asking for the comparison with GBDT, we consider that they are not comparable since we are not inventing a model to beat GBDT, instead, we are developing a model to cover the scenarios not suitable for GBDT such as some applications need online updating.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 10,
+      "text": "This point has also been emphasized in our paper.",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 11,
+      "text": "2. Heavy feature engineering and ad-hoc practical steps",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 12,
+      "text": "We are not sure why you conclude this point.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 13,
+      "text": "TabNN is a fully end-to-end learning approach with no need of an extra feature engineering step.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 14,
+      "text": "And as stated in the paper, the design of TabNN follows two principles: \\emph{to explicitly leverages expressive feature combinations} and \\emph{to reduce model complexity}. We cannot agree there are ad-hoc parts in the proposed model. Could you explain this with more details?",
+      "suffix": "\n\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 15,
+      "text": "3. Benchmark Dataset and Compared with Deep and Wide (D&W) NNs",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 16,
+      "text": "As stated in Section 2, D&W NNs and many related models can work well with high dimensional sparse features, which are usually in the form of one-hot encoding converted from categorical features.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 17,
+      "text": "Actually, these NNs perform very well in such datasets, even better than GBDT.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 18,
+      "text": "In contrast, the proposed TabNN works better on another kinds of tabular data, with numerical features and low-cardinality categorical features.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 19,
+      "text": "Since there are many dummy dimensions in one-hot encoding, TabNN is hard to learn the useful features combinations from them.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 20,
+      "text": "Therefore, TabNN and D&W NNs are orthogonal with each other.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 21,
+      "text": "We can use them independently according to the feature types of data. And they can be used together for the data with mixed feature types.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 22,
+      "text": "Therefore, we did not conduct any experiment on data with high-cardinality categorical features.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SJgssoHT27",
+      "rebuttal_id": "BJxckPclaQ",
+      "sentence_index": 23,
+      "text": "We will state this clearer in the paper.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      ],
+      "details": {
+        "manuscript_change": true
+      }
+    }
+  ]
+}

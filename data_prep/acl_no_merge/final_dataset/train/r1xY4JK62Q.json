@@ -1,0 +1,497 @@
+{
+  "metadata": {
+    "forum_id": "HJeQbnA5tm",
+    "review_id": "r1xY4JK62Q",
+    "rebuttal_id": "ryxS38C_am",
+    "title": "Noisy Information Bottlenecks for Generalization",
+    "reviewer": "AnonReviewer3",
+    "rating": 7,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=HJeQbnA5tm&noteId=ryxS38C_am",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 0,
+      "text": "I read the paper and understand it, for the most part.",
+      "suffix": "",
+      "coarse": "arg_social",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 1,
+      "text": "The idea is to interpret some regularization technics as a from of noisy bottleneck, where the mutual information b tween learned parameters and the data is limited through the injection of noise.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 2,
+      "text": "While, the paper is a plaisant read, I find difficult to access its importance and the applicability of the ideas presented beyond the analogy with the capacity computation. Perhaps other referee will have a clearer opinion.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 3,
+      "text": "I'd be interested to hear if the authors see a connection between their formalism and the one of Reference prior in Bayesian inference (Bernardo et al https://arxiv.org/pdf/0904.0156)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 4,
+      "text": "Pro: nicely written, clear interpretation of regularization as a noise injection technics, explicit link with information theoery and Shanon capacity.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "sentence_index": 5,
+      "text": "Con: not clear to me how strong and wide the implications are, beyond the analogies and the reinterpretation",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 0,
+      "text": "Thank you very much for your encouraging review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 1,
+      "text": "> I read the paper and understand it, for the most part.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 2,
+      "text": "The idea is to interpret some regularization techniques as a form of noisy bottleneck, where the mutual information between learned parameters and the data is limited through the injection of noise.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          1
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 3,
+      "text": "While the paper is a pleasant read, I find difficult to access its importance and the applicability of the ideas presented beyond the analogy with the capacity computation.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 4,
+      "text": "Perhaps other referee will have a clearer opinion.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          2
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 5,
+      "text": "The main contribution of our paper is indeed to establish a connection between variational inference and regularization by observing that Gaussian mean field introduces an upper bound on the mutual information between data and model parameters.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 6,
+      "text": "Reinterpreting mean field as point estimation in a noisy model allows us to quantify observed regularizing effects.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 7,
+      "text": "We show links to existing regularization strategies and validate the usefulness for regularization in targeted experiments.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_accept-praise",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 8,
+      "text": "While the focus of our present work lies on establishing links between existing directions of research, we believe that our information-theoretic perspective on regularization opens up plenty of avenues for future work, both in supervised and unsupervised learning.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 9,
+      "text": "For example, we are interested in improving extraction of unsupervised representations by controlling the amount of extracted information.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 10,
+      "text": "In particular, we aim to mitigate latent collapse, a problem reported for example in language generation [1] and autoregressive image generation [2], which is currently mitigated with ad-hoc strategies such as KL annealing.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 11,
+      "text": "Intuitively, if all information can be stored in the model itself, there is little incentive to use a per-sample latent.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 12,
+      "text": "This is also known as the information preference problem, as briefly discussed at the end of section 2.1.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 13,
+      "text": "Therefore, limiting mutual information of the data with the model might offer a robust mitigation strategy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 14,
+      "text": "Additionally, we believe that the approach can lead to improved representations through disentanglement, as done by beta-VAE [3].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 15,
+      "text": "Our formal connection to beta-VAE derived in Appendix C offers a promising information-theoretic perspective on their empirical results.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 16,
+      "text": "More generally, we want to explore non-MAP inference on noise-injected models as this would allow for using highly expressive variational distributions while enjoying the information-theoretic guarantees of simpler approximate distributions, as motivated in section 3.3.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 17,
+      "text": "Since these directions are rather orthogonal, we think that sharing our theoretical framework with the community in an independent piece of work is the most effective way of communicating our ideas.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_error",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 18,
+      "text": "> I'd be interested to hear if the authors see a connection between their formalism and the one of Reference prior in Bayesian inference (Bernardo et al https://arxiv.org/pdf/0904.0156)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 19,
+      "text": "Reference priors are opposite to our work in the sense that they maximize the amount of information data provides about the parameters, while we aim to find models to limit it.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 20,
+      "text": "Also, see [4] for the relation of Fisher information to generalization.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 21,
+      "text": "References",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 22,
+      "text": "[1] Bowman, S. R., Vilnis, L., Vinyals, O., Dai, A. M., Jozefowicz, R. & Bengio, S. (2015). Generating sentences from a continuous space.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 23,
+      "text": "arXiv preprint arXiv:1511.06349.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 24,
+      "text": "[2] Gulrajani, I., Kumar, K., Ahmed, F., Taiga, A. A., Visin, F., Vazquez, D. & Courville, A. (2016). Pixelvae: A latent variable model for natural images. arXiv preprint arXiv:1611.05013.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 25,
+      "text": "[3] Burgess, C. P., Higgins, I., Pal, A., Matthey, L., Watters, N., Desjardins, G. & Lerchner, A. (2018). Understanding disentangling in beta-VAE.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 26,
+      "text": "arXiv preprint arXiv:1804.03599.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 27,
+      "text": "[4] Ly, A., Marsman, M., Verhagen, J., Grasman, R. P. & Wagenmakers, E. J. (2017). A tutorial on Fisher information.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "r1xY4JK62Q",
+      "rebuttal_id": "ryxS38C_am",
+      "sentence_index": 28,
+      "text": "Journal of Mathematical Psychology, 80, 40-55, page 30",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

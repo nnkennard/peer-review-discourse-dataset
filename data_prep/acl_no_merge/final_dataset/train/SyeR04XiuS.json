@@ -1,0 +1,388 @@
+{
+  "metadata": {
+    "forum_id": "ByxHJeBYDB",
+    "review_id": "SyeR04XiuS",
+    "rebuttal_id": "rkgeDR_ojB",
+    "title": "Forecasting Deep Learning Dynamics with Applications to Hyperparameter Tuning",
+    "reviewer": "AnonReviewer3",
+    "rating": 3,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=ByxHJeBYDB&noteId=rkgeDR_ojB",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 0,
+      "text": "This work focuses on learning a good policy for hyperparameters schedulers, for example learning rate or weight decay, using reinforcement learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 1,
+      "text": "The main contributions include 1) a discretization on the learning curves such that transformer can be applied to predict the them; 2) an empirical evaluations using the predicted learning curves to train the policy.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 2,
+      "text": "The main novelties are two folds.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 3,
+      "text": "On the methodology side, using predicted learning curves instead of real ones can speed up training significantly.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 4,
+      "text": "On the technical side, the author presented a discretization step to use transformer for learning curve predictions.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 5,
+      "text": "The results are mixed, we see slightly advantage over human baseline on one task but worse in the other.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 6,
+      "text": "Human baseline does not need any training!",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 7,
+      "text": "On the writing part, it would be nice to provide more context for both transformer, Proximal Policy Optimization and Simulated Policy Learning to make the paper more self-complete.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "arg_other",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 8,
+      "text": "I like the directions using surrogate to speed up HPO in general but I feel the learning curve prediction part can be improved. There are already some works, not using deep learning method, for example the following:",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 9,
+      "text": "* Baker, Bowen, et al. \"Accelerating neural architecture search using performance prediction.\" arXiv preprint arXiv:1705.10823 (2017).",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 10,
+      "text": "* Domhan, Tobias, Jost Tobias Springenberg, and Frank Hutter. \"Speeding up automatic hyperparameter optimization of deep neural networks by extrapolation of learning curves.\" Twenty-Fourth International Joint Conference on Artificial Intelligence. 2015.",
+      "suffix": "\n\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 11,
+      "text": "Why these methods are not considered in the beginning? In my opinion, transformer is good for modeling long term dependency and concurrent predictions which is not necessarily the case for learning curves.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "sentence_index": 12,
+      "text": "How does the transformer based method comparing to others?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 0,
+      "text": "Thank you for the insightful review.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 1,
+      "text": "We updated the paper with better results and more tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 2,
+      "text": "We show that our method outperforms the human baseline in terms of training speed and either matches or outperforms the human in terms of final accuracy on all tasks.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 3,
+      "text": "While it is true that the human baseline does not require any additional computational resources for training, it does require domain expertise acquired through years of learning, which is arguably even more costly.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 4,
+      "text": "Notably, in all 4 problems where we compare to the human baseline, we believe that human researchers used a similar or higher number of runs as our tuner to design the baseline schedules that we compare against.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 5,
+      "text": "We also updated the paper with more details regarding Transformer and Proximal Policy Optimization.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          7
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 6,
+      "text": "Thank you for mentioning the existing learning curve modeling methods.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 7,
+      "text": "We added an explanation of differences of our method with those works.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 8,
+      "text": "[1] learn a probabilistic model of one training curve using a handcrafted basis of nonlinear functions of shapes similar to the training curves being modelled.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 9,
+      "text": "Our method does not make any assumptions about the shape of the modelled curves and is able to jointly model many training curves - in our experiments, training and validation loss and accuracy.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 10,
+      "text": "[2] learn a deterministic model of a learning curve, while our method also models stochasticity, hence providing diverse experience for training a reinforcement learning agent.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 11,
+      "text": "Also in contrast to [1] and [2], our method allows the hyperparameters to change over the course of training and models the influence of those changes on the training metrics.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          9,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 12,
+      "text": "[1] Baker, Bowen, et al. \"Accelerating neural architecture search using performance prediction.\" arXiv preprint arXiv:1705.10823 (2017).",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyeR04XiuS",
+      "rebuttal_id": "rkgeDR_ojB",
+      "sentence_index": 13,
+      "text": "[2] Domhan, Tobias, Jost Tobias Springenberg, and Frank Hutter. \"Speeding up automatic hyperparameter optimization of deep neural networks by extrapolation of learning curves.\" Twenty-Fourth International Joint Conference on Artificial Intelligence. 2015.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "forum_id": "Ske31kBtPr",
+    "review_id": "rJxGlK6Ttr",
+    "rebuttal_id": "BJeoaTpujH",
+    "title": "Mathematical Reasoning in Latent Space",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=Ske31kBtPr&noteId=BJeoaTpujH",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 0,
+      "text": "The paper proposes a technique to perform reasoning on mathematical formulas in a latent space.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 1,
+      "text": "The model is trained to predict whether a rewrite rule can be applied to a formula given its latent representation.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 2,
+      "text": "When the rewrite is possible, the model also predicts the embedding of the resulting formula.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 3,
+      "text": "Experiments show that the network can be applied multiple steps in a row, while operating only in the embedding space.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 4,
+      "text": "1. As mentioned in the paragraph before Section 4.1, it would be much simpler to consider a single latent embedding space L. In that case, \\sigma and \\alpha become unnecessary and we only need to train \\omega.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 5,
+      "text": "Did you try to have a single network?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 6,
+      "text": "This seems a much more natural approach to me, and I'm surprised that you did not start with that.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 7,
+      "text": "From my experience, aligning embedding spaces is something that usually does not work very well, especially in high dimension.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 8,
+      "text": "The role of \\sigma seems very redundant given \\omega.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 9,
+      "text": "2. If you consider \\sigma, why do you also predict the rewrite success with \\omega? Couldn't it be simply a function from S x S -> L ?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 10,
+      "text": "3. The graph neural networks used in the model are not described in the paper, only a reference to Paliwal et al (2019) is given.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 11,
+      "text": "It would be helpful to have a brief paragraph describing this architecture, for readers not familiar with the referenced paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 12,
+      "text": "4. How large is the training set of (T, P) pairs? I don't think this is mentioned in the paper.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 13,
+      "text": "5. To train \\sigma and \\omega, the negative instances are selected randomly.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 14,
+      "text": "You mention that negative mining should improve over this strategy. What does negative mining correspond to in this context? Are there bad rewrites better than others?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_replicability",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 15,
+      "text": "6. Did you consider using an inverse function (say G), that maps an embedding in L / L' back to S (i.e. the inverse function of gamma / gamma').",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 16,
+      "text": "I would imagine that even if an embedding X is a bit noisy, because not exactly equal to gamma(P) where P is the expression it represents, you could consider doing the propagation with gamma(G(X)).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 17,
+      "text": "This could be a possibility to remove the noise you have when doing multi-step operations (and potentially go way beyond 4 steps).",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 18,
+      "text": "Also, G could be used to check whether you obtain the expected formula after 4 steps, which would be a more informative information than the L2 distance between the resulting embedding and the embedding of the final formula.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "sentence_index": 19,
+      "text": "Overall, the model is a bit complicated (e.g. question 1.), but the results are promising, the paper is well written, and the ability to manipulate formula embeddings is probably going to be useful in the context of theorem proving.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for the constructive feedback.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 1,
+      "text": "The use of a fixed embedding space $L$ and a separate space $L^\\prime$ was useful as it naturally prevents the collapse of embeddings.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 2,
+      "text": "However this could be counteracted by stopping the gradient at the right place in the simplified architecture  which was suggested in the original paper and is now described in the updated paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 3,
+      "text": "As suggested, we have added further analysis of failure cases, and describe strategies for negative mining from these examples.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 4,
+      "text": "In addition, we have included a brief description of the graph neural network architecture used in Paliwal et al (2019).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 5,
+      "text": "We also include further details on the construction of training set.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          12
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 6,
+      "text": "Training a decoder to predict the results of rewrites from the latent space is an interesting idea, but is technically challenging and we felt it was out of scope for this paper.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 7,
+      "text": "We managed to counteract the noisiness of predicted embedding by training on noisy embeddings which trains the network to be robust to random changes and improves the prediction of multi-step rewrites significantly.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "rJxGlK6Ttr",
+      "rebuttal_id": "BJeoaTpujH",
+      "sentence_index": 8,
+      "text": "We are grateful for the suggestions that contributed significantly to improving the quality of the paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

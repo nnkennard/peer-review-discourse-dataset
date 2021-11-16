@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "forum_id": "Bkeuz20cYm",
+    "review_id": "BJllmKgjn7",
+    "rebuttal_id": "rJx3ZW8HRm",
+    "title": "Double Neural Counterfactual Regret Minimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=Bkeuz20cYm&noteId=rJx3ZW8HRm",
+    "annotator": "anno0"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 0,
+      "text": "This paper proposes a pair of LSTM networks, one of which estimates the current strategy at iteration t+1 and the other estimates the average strategy after t iterations.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 1,
+      "text": "By using these networks within a CFR framework, the authors manage to avoid huge memory requirements traditionally needed to save cumulative regret and average strategy values for all information sets across many iterations.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 2,
+      "text": "The neural networks are trained via a novel sampling method with lower variance/memory-requirements that outcome/external sampling, and are amendable to continual improvement by warm-starting the networks based on cloned tabular regret values.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 3,
+      "text": "Overall, the paper is well-written with clear definitions/explanations plus  comprehensive ablation-analyses throughout, and thus constitutes a nice addition to the recent literature on leveraging neural networks for IIG.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 4,
+      "text": "I did not find many flaws to point out, except I believe the paper could benefit from more extensive  comparisons in Figure 4A against other IIG methods such as Deep Stack, as well as comparing on much larger IIG settings with many more states to see how the neural CFR methods hold up in the regime where they are most needed.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "sentence_index": 5,
+      "text": "Typo:  \"care algorithm design\" -> \"careful algorithm design\"",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 0,
+      "text": "Thanks for your effort in providing this detailed and useful review!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 1,
+      "text": "We present our clarification in the following:",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 2,
+      "text": "Q: I believe the paper could benefit from more extensive  comparisons in Figure 4A against other IIG methods such as Deep Stack, as well as comparing on much larger IIG settings with many more states to see how the neural CFR methods hold up in the regime where they are most needed.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 3,
+      "text": "A: To address this problem, we add three different kinds of experiments.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 4,
+      "text": "Use small batch size, only a small subset of infosets are sampled in each iteration.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 5,
+      "text": "In this case, we can present the generalization ability of the neural network.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 6,
+      "text": "Use small embedding size and let the number of parameters is much fewer than the number of infosets of the whole game tree.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 7,
+      "text": "In this case, we can present the compression ability of the neural network.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 8,
+      "text": "Use the larger stack to increase the size of the game tree.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 9,
+      "text": "In all these three kinds of experiments, we find the neural CFR can still converge to a good strategy.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 10,
+      "text": "Further details please see Figure 5(A), 5(B) and 5(C) in the revised paper.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BJllmKgjn7",
+      "rebuttal_id": "rJx3ZW8HRm",
+      "sentence_index": 11,
+      "text": "We fixed the typos in the revised paper accordingly.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    }
+  ]
+}

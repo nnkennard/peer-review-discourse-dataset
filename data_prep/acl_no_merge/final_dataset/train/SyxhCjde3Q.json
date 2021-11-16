@@ -1,0 +1,1047 @@
+{
+  "metadata": {
+    "forum_id": "rkle3i09K7",
+    "review_id": "SyxhCjde3Q",
+    "rebuttal_id": "Skx-bI5HCX",
+    "title": "Robust Determinantal Generative Classifier for Noisy Labels and Adversarial Attacks",
+    "reviewer": "AnonReviewer2",
+    "rating": 4,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkle3i09K7&noteId=Skx-bI5HCX",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 0,
+      "text": "The paper proposes a new method for robustifying a pre-trained model improving its decision boundaries.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 1,
+      "text": "The goal is to defend the model from mistakes in training labels and to be more robust to adversarial examples at test time.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 2,
+      "text": "The main idea is to train a LDA on top of the last-layer, or many layers in its ensemble version, making use of a small set of clean labels after training the main model.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 3,
+      "text": "Additionally, robustness to outliers is achieved by the minimum covariance determinant estimator for the LDA covariance matrix.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 4,
+      "text": "While I find this idea interesting and of potential practical use, I have concerns about novelty and the experimental results and overall I recommend rejection.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 5,
+      "text": "== Method",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 6,
+      "text": "At a high level, the idea of imposing a mixture of gaussian structure in the feature space of a deep neural network classifier is not new.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 7,
+      "text": "See for example [A, B].",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 8,
+      "text": "In particular, [B] performs experiments on adversarial examples.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 9,
+      "text": "Moreover, in spite of the authors writing that their goal is \u201ccompletely different\u201d from [Lee at al 18a, Ma et al 18a], I found the two cited papers having a similar intent and approach to the problem, but a comparison is completely missing.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 10,
+      "text": "Without a proper comparison (formal and experimental) with these lines of work, the paper is incomplete.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 11,
+      "text": "Theorem 1 well supports the proposed method and it is well explained. I did not check the proofs in appendix.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 12,
+      "text": "Regarding the presentation, I found odd having some experimental results (page 5) before the Section on experience even have started.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 13,
+      "text": "== Experiments",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 14,
+      "text": "The authors did not comment on the computational overhead of training their LDA.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 15,
+      "text": "But I assume it is very cheap compared to training e.g. the ResNet, correct?",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 16,
+      "text": "I also did not find an explanation of which version backward/forward losses [Patrini et al. 17] is used in the experiments: are the noise transition matrices estimated on the data or assumed to be known (for fair comparison, I would do the former).",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 17,
+      "text": "I disagree on the importance of the numbers reported on the abstract: DenseNet on Cifar10 with 60% goes from 53.34 to 74.72.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 18,
+      "text": "This is the improvement with the weakest possible baseline, i.e. no method to defend for noise!",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 19,
+      "text": "Looking at Table 3, which is on ResNets, I will make this point clear.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 20,
+      "text": "Noise 60% on CIFAR10, DDGC improves 60.05-> 71.38, while (hard) bootstrap and forward do better.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 21,
+      "text": "Even more, it seems that forward does always better than DDGC with noise 60% on every dataset.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 22,
+      "text": "Therefore, I don\u2019t find interesting to report how DDGC improve upon \u201cno baseline\u201d, because known methods do even better.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 23,
+      "text": "Yet, it is interesting --- and I find this to be a contribution of the paper --- that DDGC can be used in combination with prior work to boost performance even further.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 24,
+      "text": "A missing empirical analysis is on class-conditional noise (see for example Patrini et al. 17 for a definition).",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 25,
+      "text": "An additional column on the table showing that the algorithm can also work in this case would improve the confidence that the proposed method is useful in practice.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 26,
+      "text": "Uniform noise is the least realistic assumption for label noise.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 27,
+      "text": "Regarding the experiments on adversarial examples, I am not convinced of their relevance at all.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 28,
+      "text": "There are now dozens of defence methods that work (partially) for improving robustness.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 29,
+      "text": "I don\u2019t think it is of any practical use to show that a new algorithm (such at DDGD) provide some defence compared to no defence.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 30,
+      "text": "A proper baseline should have been compared.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 31,
+      "text": "One more unclear but important point: is Table 3 obtained by white-box attacks on the Resnet/Denset but oblivious of the MCD? Is so, I don\u2019t think such an experiment tells the whole story: as the the MCD would arguably also be deployed for classification, the attacker would also target it.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 32,
+      "text": "Additionally, the authors state \u201cwe remark that accessing the parameters of the generative classifiers [\u2026] is not a mild assumption since the information about training data is required to compute them\u201d.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_quote",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 33,
+      "text": "I don\u2019t follow this argument: this is just part of the classifier. White box attacks are by definition performed with the knowledge of the model, what",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 34,
+      "text": "is the difference here?",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 35,
+      "text": "Table 8 rises some concerns.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 36,
+      "text": "I appreciate the idea of testing full white-box adversarial attacks here. But I don\u2019t understand how it is possible that DDGC is more robust, with higher adversarial test accuracy, than in Table 3.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 37,
+      "text": "[A] Wen, Yandong, et al. \"A discriminative feature learning approach for deep face recognition.\" European Conference on Computer Vision. Springer, Cham, 2016.",
+      "suffix": "\n",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "sentence_index": 38,
+      "text": "[B] Wan, Weitao, et al. \"Rethinking feature distribution for loss functions in image classification.\" Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.",
+      "suffix": "",
+      "coarse": "arg_other",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 0,
+      "text": "We very much appreciate your valuable comments, efforts and times on our paper.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 1,
+      "text": "Our responses for all your questions are provided below. Our major revisions in the new draft are colored by red.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 2,
+      "text": "Q1. Comparison with [1, 2, 3, 4].",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 3,
+      "text": "The main difference between our method and [1, 2] is that we do not directly train the Gaussian mixture model, i.e., generative classifier but we post-process it on hidden feature spaces of pre-trained deep models.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 4,
+      "text": "In addition, we study a robust inference method to handle noisy labels in training samples, while they did not.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 5,
+      "text": "Next, [3,4] also assume clean training labels, and aim for detecting abnormal test samples after \u2019clean\u2019 training.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 6,
+      "text": "Therefore, a comparison with [1, 2, 3, 4] is not straightforward as our goal is different.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 7,
+      "text": "We clarified this in Section 2.1 of the revised draft.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 8,
+      "text": "Q2. Computational cost.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 9,
+      "text": "As you expect, estimating the parameters of LDA is very cheap compared to training original deep models like ResNet and DenseNet, since it requires only one forward pass to extract the hidden features.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14,
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 10,
+      "text": "Q3. Version of backward/forward losses.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 11,
+      "text": "As mentioned in Appendix B of the previous draft, we use the estimated noise transition matrices for backward/forward losses.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 12,
+      "text": "We clarified more details of experimental setups in Appendix B of the revised draft.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 13,
+      "text": "Q4. Updated abstract and performance evaluation.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 14,
+      "text": "As AnonReviewer 3 mentioned, our main contribution is developing a new inference method which can be used under any pre-trained deep model.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 15,
+      "text": "In other words, our goal is not outperforming the performance of prior training methods and complementary to them, i.e., our inference method can improve the performance of any prior training methods (see our common response to all reviewers).",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 16,
+      "text": "Nevertheless, we agree with your comments that it is more meaningful to emphasize our improvement over the state-of-the-art training methods.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 17,
+      "text": "In the abstract of the revised draft, we report our improvement over Co-teaching [5] which is the most recent and state-of-the-art training method.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 18,
+      "text": "Q5. Evaluation on adversarial attacks.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 19,
+      "text": "In the revised draft, we also consider optimization-based adaptive attacks against our method under the black-box setup (see Table 5) and the white-box setup (see Table 10).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 20,
+      "text": "In both setups, our inference method is shown to be more robust compared to the softmax inference.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 21,
+      "text": "We further show that our method further improves the robustness of deep models optimized by adversarial training (see Table 6 and 11).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 22,
+      "text": "Such experimental results support our claim that the proposed generative classifier can improve the robustness against adversarial attacks as it utilizes multiple hidden features (i.e., harder to attack all of them).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          27,
+          28,
+          29,
+          30
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 23,
+      "text": "We very much appreciate your valuable comments again.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 24,
+      "text": "[1] Wen, Y., Zhang, K., Li, Z. and Qiao, Y., A discriminative feature learning approach for deep face recognition. In ECCV, 2016.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 25,
+      "text": "[2] Wan, W., Zhong, Y., Li, T. and Chen, J., Rethinking feature distribution for loss functions in image classification. In CVPR, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 26,
+      "text": "[3] Lee, K., Lee, K., Lee, H. and Shin, J., A Simple Unified Framework for Detecting Out-of-Distribution Samples and Adversarial Attacks. In NIPS, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 27,
+      "text": "[4] Ma, X., Li, B., Wang, Y., Erfani, S.M., Wijewickrema, S., Houle, M.E., Schoenebeck, G., Song, D. and Bailey, J. Characterizing adversarial subspaces using local intrinsic dimensionality. In ICLR, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 28,
+      "text": "[5] Bo Han, Quanming Yao, Xingrui Yu, Gang Niu, Miao Xu, Weihua Hu, Ivor Tsang, and Masashi Sugiyama. Co-teaching: robust training deep neural networks with extremely noisy labels. In NIPS, 2018.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 29,
+      "text": "Thanks a lot,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 30,
+      "text": "Authors",
+      "suffix": "\n\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 31,
+      "text": "Dear AnonReviewer2,",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 32,
+      "text": "We hope that you found our rebuttal/revision for you and other reviewers in common.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 33,
+      "text": "If you have any remaining questions/concerns, please do not hesitate to let us know and we would be happy to answer.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 34,
+      "text": "Thank you very much,",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "SyxhCjde3Q",
+      "rebuttal_id": "Skx-bI5HCX",
+      "sentence_index": 35,
+      "text": "Authors",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

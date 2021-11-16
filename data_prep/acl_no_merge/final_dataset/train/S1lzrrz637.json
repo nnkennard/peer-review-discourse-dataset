@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "forum_id": "rkxciiC9tm",
+    "review_id": "S1lzrrz637",
+    "rebuttal_id": "rkxN4ktETm",
+    "title": "NADPEx: An on-policy temporally consistent exploration method for deep reinforcement learning",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=rkxciiC9tm&noteId=rkxN4ktETm",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 0,
+      "text": "The authors introduce a  novel  on-policy  temporally  consistent  exploration  strategy, named Neural  AdaptiveDropout Policy Exploration (NADPEx), for deep reinforcement learning agents.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 1,
+      "text": "The main idea is to sample from a distribution of plausible subnetworks modeling the temporally consistent exploration.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 2,
+      "text": "For this, the authors use the ideas of the standard dropout for deep networks.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 3,
+      "text": "Using the proposed  dropout transformation that is differentiable, the authors show that the KL regularizers on policy-space play an important role in stabilizing its learning.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 4,
+      "text": "The experimental validation is performed on continuous control learning tasks, showing the benefits of the proposed.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 5,
+      "text": "This paper is very well written, although very dense and not easy to follows, as many methods are referenced and assume that the reviewer is highly familiar with the related works.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 6,
+      "text": "This poses a challenge in evaluating this paper.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 7,
+      "text": "Nevertheless, this paper clearly explores and offers a novel approach for more efficient on-policy exploration which allows for more stable learning compared to traditional approaches.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 8,
+      "text": "Even though the authors answer positively to each of their four questions in the experiments section",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 9,
+      "text": ",",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "sentence_index": 10,
+      "text": "it would like that the authors provide more intuition why these improvements occur and also outline the limitations of their approach.",
+      "suffix": "",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 0,
+      "text": "Thank you very much for your strong recommendation!",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 1,
+      "text": "1) Intuition about the improvement",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 2,
+      "text": "Though not explained in Section 4.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 3,
+      "text": "The intuition for NADPEx is given in Section 3.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_refute-question",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 4,
+      "text": "Interpretation for as efficient or even faster exploration in dense environment (4.1) is that NADPEx could encourage more diverse exploration, while absorb experience from it in a relatively efficient way.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 5,
+      "text": "For sparse environments (4.2), where temporally consistent exploration is crucial for learning signal acquisition, NADPEx outperforms vanilla PPO.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 6,
+      "text": "It could also beat parameter noise if difficulty is increased, because intuitively low variance in gradients is a boon for faster learning.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 7,
+      "text": "Improvement in 4.3 and 4.4 are basically from the theoretical grounding of NADPEx, which we believe is one of our contributions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 8,
+      "text": "Specifically, improvement in 4.3 is from high level stochasticity's adaptation to the low level; while that in 4.4 could be interpreted with the idea of trust region, that policy should be updated to somewhere near the sampling policy in the policy space, such that collected experience are usable (on-policy).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 9,
+      "text": "In NADPEx, trust region also contains the meaning that dropout policies are close to each other for more efficient exploration.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 10,
+      "text": "2) Limitation of NADPEx",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 11,
+      "text": "One of the limitation we see from NADPEx is that dropout policies are not directly interpretable from their network structures, while interpretability and composibility are prerequisites for reusing them in more complicated tasks.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 12,
+      "text": "Luckily, modeled as latent random variables, an information term could be added to the objective as in [1, 2].",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 13,
+      "text": "This is also a direction for future research work.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_future",
+      "alignment": [
+        "context_sentences",
+        [
+          8,
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 14,
+      "text": "[1] Florensa et al., \"Stochastic neural networks for hierarchical reinforcement learning\", ICLR 2017.",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lzrrz637",
+      "rebuttal_id": "rkxN4ktETm",
+      "sentence_index": 15,
+      "text": "[2] Hausman et al., \"Learning an Embedding Space for Transferable Robot Skills\", ICLR 2018.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_other",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}

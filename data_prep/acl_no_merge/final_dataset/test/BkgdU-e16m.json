@@ -1,0 +1,1096 @@
+{
+  "metadata": {
+    "forum_id": "BJgK6iA5KX",
+    "review_id": "BkgdU-e16m",
+    "rebuttal_id": "ByeGCYgKTX",
+    "title": "AutoLoss: Learning Discrete Schedule for Alternate Optimization",
+    "reviewer": "AnonReviewer2",
+    "rating": 6,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=BJgK6iA5KX&noteId=ByeGCYgKTX",
+    "annotator": "anno13"
+  },
+  "review_sentences": [
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 0,
+      "text": "The authors proposed an AutoLoss controller that can learn to take actions of updating different parameters and using different loss functions.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 1,
+      "text": "Pros",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 2,
+      "text": "1. Propose a unified framework for different loss objectives and parameters.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 3,
+      "text": "2. An interesting idea in meta learning for learning loss objectives/schedule.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_originality",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 4,
+      "text": "Cons:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 5,
+      "text": "1. The formulation uses REINFORCE, which is often known with high variance.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 6,
+      "text": "Are the results averaged across different runs? Can you show the variance?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 7,
+      "text": "It is hard to understand the results without discussing it.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_clarification",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 8,
+      "text": "The sample complexity should be also higher than traditional approaches.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 9,
+      "text": "2. It is hard to understand what the model has learned compared to hand-crafted schedule. Are there any analysis other than the results alone?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_result",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 10,
+      "text": "3. Why do you set S=1 in the experiments? What\u2019s the importance of S?",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 11,
+      "text": "4. I think it is quite surprising the AutoLoss can resolve mode collapse in GANs.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 12,
+      "text": "I think more analysis is needed to support this claim.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 13,
+      "text": "5. The evaluation metric of multi-task MT is quite weird. Normally people report BLEU, whereas the authors use PPL.",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 14,
+      "text": "6. According to https://github.com/pfnet-research/chainer-gan-lib, I think the bested reported DCGAN results is not 6.16 on CIFAR-10 and people still found other tricks such as spectral-norm is needed to prevent mode-collapse.",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 15,
+      "text": "Minor:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 16,
+      "text": "1. The usage of footnote 2 is incorrect.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "sentence_index": 17,
+      "text": "2. In references, some words should be capitalized properly such as gan->GAN.",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_typo",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 0,
+      "text": "We have fixed the footnote and capitalization problems.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 1,
+      "text": "Below are replies to other comments.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          4
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 2,
+      "text": ">> Comment #1",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 3,
+      "text": "We agree vanilla REINFORCE can exhibit high variance.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_concede-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 4,
+      "text": "However, as we have elaborated in the text below Eq.2, to reduce the variance and stabilize the training, we have made the following adaptations referring to previous works [1,2]:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 5,
+      "text": "- Substitute a moving average B (defined in text) from the reward",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 6,
+      "text": "- Clip the final reward to a given range",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 7,
+      "text": "We empirically found the two techniques significantly stabilize the controller training.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 8,
+      "text": "Moreover, AutoLoss is not restricted to REINFORCE, but open to any off-the-shelf policy optimization method, e.g. for large-scale tasks such as NMT, we introduce PPO to replace REINFORCE, and adjust the reward generation scheme accordingly (see the paragraph \u201cDiscussion\u201d).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 9,
+      "text": "We\u2019ve also revised Appendix A.1 to cover details of how PPO is incorporated.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 10,
+      "text": "Empirically, with random parameter initialization most experiments manage to converge and give fairly good controllers.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 11,
+      "text": "Almost all main results are averaged over multiple runs as explicitly indicated in the main text and the table or figure captions (e.g. see captions of Table.1 and Fig.2).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 12,
+      "text": "See Fig.2 and Fig.3(R) where vertical bars indicate variances.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 13,
+      "text": "We have also updated Table.1 to show the variance.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 14,
+      "text": "We will release all code and trained models for reproducibility.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_by-cr",
+      "alignment": [
+        "context_sentences",
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "details": {
+        "manuscript_change": false
+      }
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 15,
+      "text": ">> Comment #2",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 16,
+      "text": "We have provided substantial analysis and visualizations on what AutoLoss has learned in our *initial submission*. Below, we summarize them for your reference:",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 17,
+      "text": "- d-ary regression and MLP classification",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 18,
+      "text": "*See sec 5.1, the 3rd paragraph in P6 for analysis, and Table.1 for comparisons to handcrafted schedules*: we observe AutoLoss optimizes L1 whenever needed during the optimization.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 19,
+      "text": "By contrast, linear combination objectives optimize both at each step while handcrafted schedules (e.g. S1-S3) optimize L1 strictly following the given schedule, ignoring the optimization status.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 20,
+      "text": "We believe AutoLoss manages to detect the potential risk of overfitting using designed features, and combat it by optimizing L1 only when necessary.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 21,
+      "text": "- GANs",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 22,
+      "text": "Per our observation, AutoLoss gives more flexible schedules than manually designed ones.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 23,
+      "text": "It can determine when to optimize G or D by being aware of the current optimization status (e.g. how G and D are balanced) using its parametric controller.",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 24,
+      "text": "- NMT",
+      "suffix": "\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 25,
+      "text": "*See sec 5.1, the 3rd paragraph in P7 and Fig.3(M)*: we have explicitly visualized in Fig.3(M) the softmax output of a learned controller and explain in text: \u201c...the controller meta-learns to up-weight the target NMT objective at later phase\u2026resemble the \u201cfine-tuning the target task\u201d strategy...\u201d.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 26,
+      "text": ">> Comment #3",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 27,
+      "text": "We experimented with S>1 and found the improvement marginal.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 28,
+      "text": "However, a large S requires more task model training steps to perform one PG (or PPO) update, meaning longer overall wallclock time for the controller to converge.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 29,
+      "text": "We hence use S=1 as it performs satisfactorily.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 30,
+      "text": "Note that some recent meta-learning literature uses policy gradient with batchsize 1, and report strong empirical results [3].",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 31,
+      "text": ">>",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 32,
+      "text": "Comment #4",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 33,
+      "text": "We\u2019d like to clarify that we have *not* claimed that \u201cAutoLoss can resolve mode collapse in GANs\u201d.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 34,
+      "text": "AutoLoss improves the performance of GANs by enabling an adaptive optimization schedule than a pre-fixed one.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 35,
+      "text": "Our point is better and faster convergence of the model training.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 36,
+      "text": "In the GAN experiments we *qualitatively* observed the generated images are of satisfying quality and exhibit no mode collapse.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 37,
+      "text": "But we never claimed we aim to or can resolve mode collapse.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_contradict-assertion",
+      "alignment": [
+        "context_sentences",
+        [
+          11,
+          12
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 38,
+      "text": ">> Comment #5",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 39,
+      "text": "We respectfully disagree with this comment.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 40,
+      "text": "The NMT experiments aim to verify that AutoLoss can guide the multi-task optimization toward faster and better convergence on the target task, i.e. our interest is to see how the optimization goes instead of how the MT performs.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 41,
+      "text": "Held-out PPL is the direct indicator of the quality of convergence, while BLEU evaluates the MT performance.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 42,
+      "text": "Hence we believe PPL suffices as a metric to evaluate the performance of AutoLoss.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          13
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 43,
+      "text": ">> Comment #6",
+      "suffix": "\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 44,
+      "text": "We acknowledge that there may exist DCGAN implementations that achieve higher IS on CIFAR-10, but note the following facts:",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 45,
+      "text": "- The link verifies in a table that the best official IS (reported in literature) is 6.16 (the number we report).",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 46,
+      "text": "- The self-implemented DCGAN 1:1 baseline used in our paper (see Fig.4(c)) achieves an IS=6.7, higher than 6.16.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 47,
+      "text": "- Still, AutoLoss-guided DCGAN achieves IS=7, higher than 6.16 reported in literature, our own implementation, and the result from your link.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 48,
+      "text": "Thanks again for mentioning spectral norm.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 49,
+      "text": "However, these techniques are *completely orthogonal* from the scope of this paper, where we focus on whether AutoLoss can improve the convergence instead of resolving mode collapse.",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 50,
+      "text": "[1] Device Placement Optimization with Reinforcement Learning. ICML\u201917",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 51,
+      "text": "[2] Neural Optimizer Search with Reinforcement Learning. ICML\u201917",
+      "suffix": "\n",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "BkgdU-e16m",
+      "rebuttal_id": "ByeGCYgKTX",
+      "sentence_index": 52,
+      "text": "[3] Efficient Neural Architecture Search via Parameter Sharing. ICML\u201918",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          14
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

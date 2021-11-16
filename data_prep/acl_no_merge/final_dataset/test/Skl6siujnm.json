@@ -1,0 +1,729 @@
+{
+  "metadata": {
+    "forum_id": "SkgToo0qFm",
+    "review_id": "Skl6siujnm",
+    "rebuttal_id": "BklQEZg5TX",
+    "title": "Transferrable End-to-End Learning for Protein Interface Prediction",
+    "reviewer": "AnonReviewer2",
+    "rating": 5,
+    "conference": "ICLR2019",
+    "permalink": "https://openreview.net/forum?id=SkgToo0qFm&noteId=BklQEZg5TX",
+    "annotator": "anno10"
+  },
+  "review_sentences": [
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 0,
+      "text": "Summary:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 1,
+      "text": "This paper uses siamese networks to define a discriminative function for predicting protein-protein interaction interfaces.",
+      "suffix": "",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 2,
+      "text": "They show improvements in predictive performance over some other recent deep learning methods.",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 3,
+      "text": "The work is more suitable for a bioinformatics audience though, as the bigger contribution is on the particular application, rather than the model / method itself.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 4,
+      "text": "Novelty:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 5,
+      "text": "The main contribution of this paper is the representation of the protein interaction data in the input layer of the CNN",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 6,
+      "text": "Clarity:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 7,
+      "text": "- The paper is well written, with ample background into the problem.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 8,
+      "text": "Significance:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 9,
+      "text": "- Their method improves over prior deep learning approaches to this problem.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 10,
+      "text": "However, the results are a bit misleading in their reporting of the std error.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 11,
+      "text": "They should try different train/test splits and report the performance.",
+      "suffix": "\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 12,
+      "text": "- This is an interesting application paper and would be of interest to computational biologists and potentially some other members of the ICLR community",
+      "suffix": "\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 13,
+      "text": "- Protein conformation information is not required by their method",
+      "suffix": "\n\n",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 14,
+      "text": "Comments:",
+      "suffix": "\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 15,
+      "text": "- The authors should include citations and motivation for some of their choices (what sequence identity is used, what cut-offs are used etc)",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_motivation-impact",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 16,
+      "text": "-  The authors should compare to at least some popular previous approaches that use a feature engineering based methodology such as - IntPred",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 17,
+      "text": "- The authors use a balanced ratio of positive and negative examples.",
+      "suffix": "",
+      "coarse": "arg_fact",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 18,
+      "text": "The true distribution of interacting residues is not balanced -- there are several orders of magnitude more non-interacting residues than interacting ones.",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 19,
+      "text": "Can they show performance at various ratios of positive:negative examples?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_experiment",
+      "asp": "asp_substance",
+      "pol": "pol_negative"
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "sentence_index": 20,
+      "text": "In case there is a consistent improvement over prior methods, then this would be a clear winner",
+      "suffix": "",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_substance",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 0,
+      "text": "We thank the reviewer for their comments.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 1,
+      "text": "We address their comments individually below.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 2,
+      "text": "> The work is more suitable for a bioinformatics audience though, as the bigger contribution is on the particular application, rather than the model / method itself.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 3,
+      "text": "The main contribution of this paper is the representation of the protein interaction data in the input layer of the CNN",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 4,
+      "text": "Response: The main contribution and novelty of this paper is the demonstration of the transferrability and power of the learned representation, and thus is a good fit for ICLR.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 5,
+      "text": "We use the application of protein interface prediction as a test case for this, but applications can range widely from drug discovery, to RNA folding, to small molecule quantum mechanical calculations.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 6,
+      "text": "As many of these tasks are very data-poor, this demonstrated transferrability opens up novel avenues through which these problems can be tackled.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          3,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 7,
+      "text": "> - Their method improves over prior deep learning approaches to this problem.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          9
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 8,
+      "text": "However, the results are a bit misleading in their reporting of the std error.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          10
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 9,
+      "text": "They should try different train/test splits and report the performance.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 10,
+      "text": "Response: We do use different subsets of the train set for different replicates.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 11,
+      "text": "However, the train and test sets cannot be mixed as they come from different data distributions (P_r and P_p) and we are trying to show we can transfer with no retraining from P_r to P_p.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 12,
+      "text": "Thus our reported metrics are correct and justified for this problem, though we have clarified the exact nature of the replicates in the text to ensure this is not misleading.",
+      "suffix": "\n\n",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 13,
+      "text": "> - The authors should include citations and motivation for some of their choices (what sequence identity is used, what cut-offs are used etc)",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 14,
+      "text": "Response: We do provide citations for these choices.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 15,
+      "text": "See the second and third paragraphs of section 3 on page 4 for motivation/citations for sequence identity and cut-offs used, respectively.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-criticism",
+      "alignment": [
+        "context_sentences",
+        [
+          15
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 16,
+      "text": "> -",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_in-rebuttal",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 17,
+      "text": "The authors should compare to at least some popular previous approaches that use a feature engineering based methodology such as - IntPred",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 18,
+      "text": "Response: Fout et al. and Sanchez-Garcia et al. are feature engineering approaches -- they both use high-level features as inputs to their models (not atomic coordinates).",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 19,
+      "text": "Sanchez-Garcia et al. use a tree ensemble model that has no end-to-end learning aspects at all.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 20,
+      "text": "Another popular pure feature engineering approach is PAIRPred (Minhas et al., Protein 2014), which uses an SVM trained on high-level features.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 21,
+      "text": "However, we do not compare to them as their performance on C_p^{test} (0.863)  was already superseded in Fout et al.\u2019s work.",
+      "suffix": "",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 22,
+      "text": "IntPred [Northey et al., Bioinformatics 2017] addresses the binding site prediction problem (given one protein, which residues can be interfacial with any other protein), which is different than the problem we present.",
+      "suffix": "\n\n",
+      "coarse": "dispute",
+      "fine": "rebuttal_reject-request",
+      "alignment": [
+        "context_sentences",
+        [
+          16
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 23,
+      "text": "> - The authors use a balanced ratio of positive and negative examples.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          17
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 24,
+      "text": "The true distribution of interacting residues is not balanced -- there are several orders of magnitude more non-interacting residues than interacting ones.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          18
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 25,
+      "text": "Can they show performance at various ratios of positive:negative examples?",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          19
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 26,
+      "text": "In case there is a consistent improvement over prior methods, then this would be a clear winner",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 27,
+      "text": "Response: We can demonstrate consistent performance at different ratios of positive:negative examples.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 28,
+      "text": "Running tests on C_p^{test} at 1:3, 1:5, and 1:10 ratios demonstrate no significant impact on performance (0.889 [0.882 +/- 0.012], 0.889 [0.882 +/- 0.011], and 0.895 [0.886 +/- 0.015], respectively).",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": false
+      }
+    },
+    {
+      "review_id": "Skl6siujnm",
+      "rebuttal_id": "BklQEZg5TX",
+      "sentence_index": 29,
+      "text": "The AUROC metric we use is insensitive to class imbalance, and thus is a good measure to use when evaluating on datasets with varying amounts of imbalance.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_summary",
+      "alignment": [
+        "context_sentences",
+        [
+          17,
+          18,
+          19,
+          20
+        ]
+      ],
+      "details": {}
+    }
+  ]
+}

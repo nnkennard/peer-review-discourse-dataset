@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "forum_id": "SJxUjlBtwB",
+    "review_id": "S1lOMkH6FH",
+    "rebuttal_id": "B1ewkdOijr",
+    "title": "Reconstructing continuous distributions of 3D protein structure from cryo-EM images",
+    "reviewer": "AnonReviewer2",
+    "rating": 8,
+    "conference": "ICLR2020",
+    "permalink": "https://openreview.net/forum?id=SJxUjlBtwB&noteId=B1ewkdOijr",
+    "annotator": "anno2"
+  },
+  "review_sentences": [
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 0,
+      "text": "The authors introduce cryoDRGN, a VAE neural network architecture to reconstruct 3D protein structure from 2D cryo-EM images.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_summary",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 1,
+      "text": "The paper offers for a good read and diagrams are informative.",
+      "suffix": "\n\n",
+      "coarse": "arg_evaluative",
+      "fine": "none",
+      "asp": "asp_clarity",
+      "pol": "pol_positive"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 2,
+      "text": "Below are comments for improvement and clarification.",
+      "suffix": "\n\n",
+      "coarse": "arg_structuring",
+      "fine": "arg-structuring_heading",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 3,
+      "text": "> Consider explaining cryoSPARC in detail given that is the state-of-the-art technique and to which all the cryoDGRN results are compared.",
+      "suffix": "\n\n",
+      "coarse": "arg_request",
+      "fine": "arg-request_edit",
+      "asp": "asp_meaningful-comparison",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 4,
+      "text": "> In Figure 4 and the related experiment",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_soundness-correctness",
+      "pol": "pol_neutral"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 5,
+      "text": ",  how are a) the cryoSPARK volumes related to cryoDRGN volumes, b) what do the clusters mean in cryoSPARK and how do they compare with the corresponding outputs of cryoDRGN",
+      "suffix": "\n\n",
+      "coarse": "none",
+      "fine": "none",
+      "asp": "none",
+      "pol": "none"
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "sentence_index": 6,
+      "text": "> What would runtime comparisons be for cryoSPARK and cryoDGRN, for an unsupervised heteregeneous reconstruction?",
+      "suffix": "",
+      "coarse": "arg_request",
+      "fine": "arg-request_explanation",
+      "asp": "asp_clarity",
+      "pol": "pol_neutral"
+    }
+  ],
+  "rebuttal_sentences": [
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 0,
+      "text": "Thank you for your comments and questions.",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 1,
+      "text": "Classical cryo-EM reconstruction algorithms (e.g. cryoSPARC) are described in Section 2.2 at a high level and we refer the reader to its reference (Punjani et al. 2017) for more details on their implementation.",
+      "suffix": "\n\n",
+      "coarse": "nonarg",
+      "fine": "rebuttal_structuring",
+      "alignment": [
+        "context_sentences",
+        [
+          3
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 2,
+      "text": "To clarify the relationship between the cryoSPARC and cryoDRGN heterogeneous reconstruction in Figure 4, CryoSPARC imposes a discrete model for heterogeneity, specifically a mixture model of K volumes.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 3,
+      "text": "The cryoSPARC results in Figure 4 are the volumes and the distribution of images over the 3 clusters from their unsupervised reconstruction.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 4,
+      "text": "In contrast, the continuous latent variable from cryoDRGN unsupervised reconstruction is able to reconstruct the continuous motion of the ground truth volume.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_answer",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {}
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 5,
+      "text": "We have clarified the text to reduce any confusion and added training times for these methods to the appendix.",
+      "suffix": "",
+      "coarse": "concur",
+      "fine": "rebuttal_done",
+      "alignment": [
+        "context_sentences",
+        [
+          4,
+          5
+        ]
+      ],
+      "details": {
+        "request_out_of_scope": true
+      }
+    },
+    {
+      "review_id": "S1lOMkH6FH",
+      "rebuttal_id": "B1ewkdOijr",
+      "sentence_index": 6,
+      "text": "Thank you for the recommendations!",
+      "suffix": "",
+      "coarse": "nonarg",
+      "fine": "rebuttal_social",
+      "alignment": [
+        "context_global",
+        null
+      ],
+      "details": {}
+    }
+  ]
+}
